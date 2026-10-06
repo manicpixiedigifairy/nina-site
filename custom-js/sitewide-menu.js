@@ -1,6 +1,5 @@
-<script>
 /* Sitewide navigation: hamburger MENU button + full-screen numbered overlay (matches the About page).
-   Paste into Squarespace: Settings > Developer Tools > Code Injection > Header (or Advanced > Code Injection). */
+   Loaded by custom-js/sitewide-menu.loader.html from GitHub. Edit LINKS to change the menu. */
 (function(){
   if(window.__nlMenu)return;window.__nlMenu=1;
   var LINKS=[["Home","https://www.byninaaustin.com/"],["Commercials","https://www.byninaaustin.com/commercials"],["Content","https://www.byninaaustin.com/content"],["Experiential","https://www.byninaaustin.com/experiential"],["Creative DNA","https://www.byninaaustin.com/creative-dna"],["About Me","https://www.byninaaustin.com/about-me"],["Contact","mailto:ninaaustincreative@gmail.com"]];
@@ -47,4 +46,3 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
-</script>
