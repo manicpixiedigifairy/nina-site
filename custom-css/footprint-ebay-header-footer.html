@@ -2,21 +2,17 @@
 /* The Footprint (eBay variant): white header and footer, black logo, icons, navigation and text. Page-level injection only. */
 body,#siteWrapper,#page,main,.page-section,.section-background{background:#fff!important}
 
-/* Header (Squarespace 7.1): white backgrounds */
+/* Header (Squarespace 7.1): white backgrounds on the containers only */
 .header,.header[data-section-theme],.header-inner,.header-background-solid,.header-background-gradient,.header-announcement-bar-wrapper,.header-menu,.header-menu-bg,.header-nav-folder-content,.header-dropdown,.header-menu-nav-folder-content{background:#fff!important;background-color:#fff!important}
 
-/* Header: every piece of text, link and icon in black */
-.header,.header *,.header a,.header a *,.header-menu,.header-menu *,.header-nav-item a,.header-nav-folder-item a,.header-title-text a,.header-actions a,.header-actions-action,.header-menu-nav-item a{color:#000!important;-webkit-text-fill-color:#000!important}
-.header svg,.header svg *,.header-menu svg,.header-menu svg *,.header-actions svg,.header-actions svg *{fill:#000!important;stroke:#000!important;color:#000!important}
-.header-burger-btn .top-bun,.header-burger-btn .patty,.header-burger-btn .bottom-bun,.header-burger-btn span{background:#000!important;background-color:#000!important}
-.header-nav-item a:after,.header-nav-item--active a:after,.header-nav-item a:before{background:#000!important;border-color:#000!important}
+/* Header: text and links in black */
+.header,.header a,.header-nav-item a,.header-nav-folder-item a,.header-title-text a,.header-actions a,.header-actions-action,.header-menu a,.header-menu-nav-item a{color:#000!important;-webkit-text-fill-color:#000!important}
 
-/* Logo: image logos forced to solid black (text logos follow the color rules above) */
-.header-title-logo img,.header img,.header picture img,.header-menu img{filter:brightness(0)!important;opacity:1!important}
+/* Header: logo and icons turned black with a filter, so their shapes are untouched */
+.header img,.header picture img,.header svg,.header-burger-btn,.header-actions-action svg,.header-menu img{filter:brightness(0)!important}
 
-/* Footer: white background, black logo, icons, links and text */
+/* Footer: white background, black text, logo and icons */
 footer,footer.sections,#footer-sections,footer .page-section,footer .section-background,footer .content-wrapper{background:#fff!important;background-color:#fff!important}
-footer,footer *,footer a,footer a *{color:#000!important;-webkit-text-fill-color:#000!important}
-footer svg,footer svg *{fill:#000!important;stroke:#000!important}
-footer img{filter:brightness(0)!important;opacity:1!important}
+footer,footer a,footer p,footer h1,footer h2,footer h3,footer h4{color:#000!important;-webkit-text-fill-color:#000!important}
+footer img,footer svg{filter:brightness(0)!important}
 </style>
