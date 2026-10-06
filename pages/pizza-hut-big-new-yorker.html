@@ -33,6 +33,8 @@ html,body{margin:0;background:#1C0808}
 .ph .hg{display:grid;grid-template-columns:1.3fr 1fr;gap:calc(var(--u)*4.4);align-items:center;padding-top:calc(var(--u)*5.2)}
 .ph .hero h1{font-size:calc(var(--u)*5.6);line-height:.96;margin:calc(var(--u)*1.5) 0 calc(var(--u)*1.7);text-shadow:.03em .03em 0 var(--ox),.06em .06em 0 var(--ox),.09em .09em 0 var(--ox),.12em .12em 0 var(--ik)}
 .ph .lead{font-size:calc(var(--u)*1.4);font-weight:800;line-height:1.42;max-width:calc(var(--u)*30)}
+.ph .skl{list-style:none;padding:0;margin:calc(var(--u)*1.9) 0 0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);max-width:calc(var(--u)*34)}
+.ph .skl li{font:900 calc(var(--u)*.78)/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;padding:.6em 1.15em;border-radius:99px;color:var(--cr);background:rgba(241,208,162,.16);border:calc(var(--u)*.2) solid rgba(241,208,162,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .ph .hw{position:relative}
 .ph .win{border:calc(var(--u)*.22) solid var(--ik);border-radius:calc(var(--u)*1.1);background:var(--cr);box-shadow:calc(var(--u)*.75) calc(var(--u)*.75) 0 var(--ik);overflow:hidden;transform:rotate(1.8deg)}
 .ph .wbar{display:flex;align-items:center;gap:calc(var(--u)*.5);padding:calc(var(--u)*.7) calc(var(--u)*.95);border-bottom:calc(var(--u)*.22) solid var(--ik);color:var(--ik);font-weight:900;font-size:calc(var(--u)*.85);letter-spacing:.05em}
@@ -144,6 +146,20 @@ html,body{margin:0;background:#1C0808}
 .ph .pn{font:900 calc(var(--u)*.78)/1.3 var(--ui);letter-spacing:.14em;text-transform:uppercase}
 .ph .cf{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none;z-index:6}
 .ph .cf i{position:absolute;left:0;top:0;font-style:normal;font-size:calc(var(--u)*1.7);line-height:1;animation:phcf 1.6s cubic-bezier(.15,.7,.3,1) forwards;animation-delay:var(--d,0s)}
+.ph .cf i.pc{width:calc(var(--u)*.55);height:calc(var(--u)*.95);font-size:0;border-radius:calc(var(--u)*.12);background:var(--k,#fff)}
+.ph .rg{position:absolute;left:0;top:0;width:calc(var(--u)*2.2);height:calc(var(--u)*2.2);margin:calc(var(--u)*-1.1) 0 0 calc(var(--u)*-1.1);border-radius:50%;border:calc(var(--u)*.2) solid var(--cr);opacity:0;animation:phrg .75s ease-out forwards;animation-delay:var(--d,0s)}
+.ph .rx{position:absolute;left:0;top:0;width:calc(var(--u)*3.7);height:calc(var(--u)*3.7);margin:calc(var(--u)*-5.7) 0 0 calc(var(--u)*-1.85);border-radius:50%;background:#fff;border:calc(var(--u)*.17) solid var(--ik);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ik);display:grid;place-items:center;transform-origin:15% 105%;animation:phrx 2s cubic-bezier(.2,1.2,.4,1) forwards}
+.ph .rx::before,.ph .rx::after{content:'';position:absolute;border-radius:50%;background:#fff;border:calc(var(--u)*.15) solid var(--ik)}
+.ph .rx::before{width:calc(var(--u)*1);height:calc(var(--u)*1);left:calc(var(--u)*-.35);bottom:calc(var(--u)*-.55)}
+.ph .rx::after{width:calc(var(--u)*.5);height:calc(var(--u)*.5);left:calc(var(--u)*-.85);bottom:calc(var(--u)*-1.15)}
+.ph .rx b{font-weight:400;font-size:calc(var(--u)*2);line-height:1;display:block;animation:phrxe .55s ease-in-out .3s 3}
+@keyframes phrg{0%{transform:scale(.2);opacity:.9}100%{transform:scale(3.4);opacity:0}}
+@keyframes phrx{0%{transform:scale(0) rotate(-28deg);opacity:0}14%{transform:scale(1.4) rotate(10deg);opacity:1}28%{transform:scale(.9) rotate(-7deg)}42%{transform:scale(1.06) rotate(4deg)}56%{transform:scale(1) rotate(0)}84%{transform:scale(1) rotate(0);opacity:1}100%{transform:translateY(calc(var(--u)*-1.2)) scale(.92);opacity:0}}
+@keyframes phrxe{0%,100%{transform:rotate(0) scale(1)}30%{transform:rotate(-16deg) scale(1.12)}70%{transform:rotate(14deg) scale(1.12)}}
+@keyframes phhap{0%,100%{transform:translate(0,0)}10%{transform:translate(calc(var(--u)*-.2),calc(var(--u)*.1))}20%{transform:translate(calc(var(--u)*.25),calc(var(--u)*-.1))}30%{transform:translate(calc(var(--u)*-.25),calc(var(--u)*.15))}40%{transform:translate(calc(var(--u)*.2),calc(var(--u)*-.15))}50%{transform:translate(calc(var(--u)*-.15),calc(var(--u)*.1))}62%{transform:translate(calc(var(--u)*.12),0)}75%{transform:translate(calc(var(--u)*-.08),calc(var(--u)*.05))}}
+@keyframes phcfr{0%{transform:translate(-50%,-50%);opacity:0}15%{opacity:1}60%{transform:translate(calc(var(--dx) - 50%),calc(var(--dy) - 50%));opacity:1}100%{transform:translate(calc(var(--dx) - 50%),calc(var(--dy) + var(--u)*2 - 50%));opacity:0}}
+@keyframes phrxr{0%{transform:scale(.6);opacity:0}15%{transform:scale(1);opacity:1}85%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:0}}
+.ph .poll.hap{animation:phhap .42s linear}
 @keyframes phcf{0%{transform:translate(-50%,-50%) scale(.3) rotate(0);opacity:0}12%{opacity:1}60%{transform:translate(calc(var(--dx) - 50%),calc(var(--dy) - 50%)) scale(1.1) rotate(var(--r));opacity:1}100%{transform:translate(calc(var(--dx) - 50%),calc(var(--dy) + var(--u)*6 - 50%)) scale(.9) rotate(calc(var(--r)*1.7));opacity:0}}
 @keyframes phwob{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.2deg)}75%{transform:rotate(1.2deg)}}
 @keyframes phpop{0%{transform:scale(1)}30%{transform:scale(1.09) rotate(-2deg)}60%{transform:scale(.97) rotate(1deg)}100%{transform:scale(1)}}
@@ -181,13 +197,15 @@ html,body{margin:0;background:#1C0808}
 .ph .dev:hover{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}
 .ph .btn:hover{background:var(--cr);color:var(--rd)}
 }
-@media(prefers-reduced-motion:reduce){.ph .pbox,.ph .poll.pop .pbox{animation:none!important}.ph .tkt{animation-duration:92s}.ph .cf{display:none}.ph *{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.ph .pbox,.ph .poll.pop .pbox{animation:none!important}.ph .tkt{animation-duration:92s}.ph .cf i{animation-name:phcfr}.ph .rx{animation-name:phrxr}.ph .rx b{animation:none}.ph .rg{display:none}.ph .poll.hap{animation:none}.ph *{transition:none!important}}
 
 @media(max-width:1000px){
 .ph{--u:16px}
 .ph .w{padding:0 calc(var(--u)*1.4)}
 .ph .hg{grid-template-columns:1fr;gap:calc(var(--u)*4.4);padding-top:calc(var(--u)*4.4)}
 .ph .hero h1{font-size:min(calc(var(--u)*4.6),13.2vw)}
+.ph .skl{gap:calc(var(--u)*.5);margin-top:calc(var(--u)*1.5)}
+.ph .skl li{font-size:calc(var(--u)*.66);letter-spacing:.1em;padding:.62em .95em}
 .ph .hw{padding:0 calc(var(--u)*.6) 0 0}
 .ph .hw .burst{left:calc(var(--u)*-.6);bottom:calc(var(--u)*-3.6);width:calc(var(--u)*8)}
 .ph .hero{padding-bottom:calc(var(--u)*8)}
@@ -233,9 +251,12 @@ html,body{margin:0;background:#1C0808}
   <div class="awW"><div class="aw"></div></div>
   <div class="w hg">
     <div class="ht">
-      <span class="tab">Case Study &middot; Pizza Hut</span>
+      <span class="tab">Pizza Hut</span>
       <h1>The Big<br>New Yorker</h1>
       <p class="lead">A fan-first organic campaign that turned years of documented demand into Pizza Hut&rsquo;s highest domestic quarterly sales growth in 13 years.</p>
+      <ul class="skl" aria-label="Skills">
+        <li>Copywriting</li><li>Channel Strategy</li><li>Niche Activations</li><li>Posting Cadence</li><li>Phase Roll-Out</li><li>Real-World Assets</li>
+      </ul>
     </div>
     <div class="hw">
       <div class="win">
@@ -372,10 +393,10 @@ html,body{margin:0;background:#1C0808}
     </ol>
     <div class="frs">
       <div class="fr" style="--r:-1.4deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-1.webp" width="500" height="890" loading="lazy" decoding="async" alt="Instagram Story with an Add Yours sticker asking who you would give the last slice to"></div>
-      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-2.webp?v=2" width="500" height="828" loading="lazy" decoding="async" alt="Instagram Story with an emoji slider asking what you are in the mood for right now"></div>
-      <div class="fr" style="--r:-.8deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-3.webp?v=2" width="500" height="813" loading="lazy" decoding="async" alt="Instagram Story sharing a feed post of a Big New Yorker cheese pull"></div>
+      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-2.webp?v=3" width="500" height="828" loading="lazy" decoding="async" alt="Instagram Story with an emoji slider asking what you are in the mood for right now"></div>
+      <div class="fr" style="--r:-.8deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-3.webp?v=3" width="500" height="813" loading="lazy" decoding="async" alt="Instagram Story sharing a feed post of a Big New Yorker cheese pull"></div>
       <div class="fr" style="--r:1.4deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-4.webp?v=2" width="500" height="857" loading="lazy" decoding="async" alt="Instagram Story of a hand lifting a slice with the prompt guess who's coming back"></div>
-      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-5.webp?v=2" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story with the Big New Yorker logo and a poll: bigger guest list or bigger bites"></div>
+      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-5.webp?v=3" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story with the Big New Yorker logo and a poll: bigger guest list or bigger bites"></div>
       <div class="fr" style="--r:-1.2deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-6.webp" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story quiz with the Statue of Liberty and the line no cheating"></div>
       <div class="fr" style="--r:.8deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-7.webp?v=2" width="468" height="822" loading="lazy" decoding="async" alt="Instagram Story poll asking how you eat your Big New Yorker: Team Hold or Team Fold"></div>
       <div class="fr tl">
@@ -401,17 +422,17 @@ html,body{margin:0;background:#1C0808}
     <div class="tcs">
       <article class="tc" style="--r:-2.4deg">
         <div class="tch"><h3>Crust Rollup</h3><span>No. 01</span></div>
-        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-1.webp?v=2" width="500" height="534" loading="lazy" decoding="async" alt="Pizza Hut Instagram post with four panels: the non-fold, the flop, crust taco and crust rollup"></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-1.webp?v=3" width="500" height="458" loading="lazy" decoding="async" alt="Pizza Hut Instagram post with four panels: the non-fold, the flop, crust taco and crust rollup"></div>
         <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div class="cap"><dt>Caption</dt><dd>&ldquo;tag someone who swears by the crust rollup&rdquo;</dd></div></dl>
       </article>
       <article class="tc" style="--r:1.6deg">
         <div class="tch"><h3>Lady Liberty</h3><span>No. 02</span></div>
-        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-2.webp?v=2" width="500" height="548" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of the Statue of Liberty holding a Big New Yorker box"></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-2.webp?v=3" width="500" height="501" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of the Statue of Liberty holding a Big New Yorker box"></div>
         <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div class="cap"><dt>Caption</dt><dd>&ldquo;real ones know a legendary pizza is about to make a comeback 2/1&rdquo;</dd></div></dl>
       </article>
       <article class="tc" style="--r:-1deg">
         <div class="tch"><h3>XL Era</h3><span>No. 03</span></div>
-        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-3.webp?v=2" width="500" height="547" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of a Big New Yorker cheese-pull slice"></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-3.webp?v=3" width="500" height="404" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of a Big New Yorker cheese-pull slice"></div>
         <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div class="cap"><dt>Caption</dt><dd>&ldquo;The Big New Yorker is back and in its XL era&rdquo;</dd></div></dl>
       </article>
     </div>
@@ -438,23 +459,34 @@ html,body{margin:0;background:#1C0808}
     }
     note.textContent='You are '+names[v];
   }
-  function burst(btn){
+  var paper=['#F1D0A2','#FFFFFF','#FFD25A','#1C0808','#F7A8A0'];
+  function burst(btn,ev){
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    poll.classList.remove('pop');void poll.offsetWidth;poll.classList.add('pop');
-    if(reduce)return;
-    var r=btn.getBoundingClientRect(),pr=poll.getBoundingClientRect(),d=poll.ownerDocument;
-    cf.style.left=(r.left+r.width/2-pr.left)+'px';cf.style.top=(r.top+r.height/2-pr.top)+'px';
-    var n=26,u=parseFloat(getComputedStyle(poll).fontSize)||16;
-    for(var i=0;i<n;i++){
-      var e=d.createElement('i'),a=Math.random()*Math.PI*2,dist=u*(3+Math.random()*7);
-      e.textContent=emo[Math.floor(Math.random()*emo.length)];
+    var d=poll.ownerDocument,pr=poll.getBoundingClientRect(),r=btn.getBoundingClientRect();
+    var px=r.left+r.width/2,py=r.top+r.height/2;
+    if(ev&&ev.detail>0&&typeof ev.clientX==='number'){px=ev.clientX;py=ev.clientY}
+    poll.classList.remove('pop','hap');void poll.offsetWidth;poll.classList.add('pop');
+    if(!reduce)poll.classList.add('hap');
+    try{if(navigator.vibrate)navigator.vibrate([14,40,22])}catch(e){}
+    var x=px-pr.left,y=py-pr.top,u=parseFloat(getComputedStyle(poll).fontSize)||16;
+    cf.innerHTML='';cf.style.left=x+'px';cf.style.top=y+'px';
+    if(!reduce){for(var g=0;g<2;g++){var rg=d.createElement('i');rg.className='rg';rg.style.setProperty('--d',(g*.13)+'s');cf.appendChild(rg)}}
+    var rx=d.createElement('div');rx.className='rx';
+    var bw=u*3.7,cx=Math.min(Math.max(x,bw/2+u*.8),pr.width-bw/2-u*.8);
+    rx.style.left=(cx-x)+'px';
+    var em=d.createElement('b');em.textContent='\uD83C\uDF89';rx.appendChild(em);cf.appendChild(rx);
+    var nE=reduce?7:14,nP=reduce?8:22,i,e,a,dist;
+    for(i=0;i<nE+nP;i++){
+      e=d.createElement('i');a=Math.random()*Math.PI*2;dist=u*(2.6+Math.random()*(reduce?4:7));
+      if(i<nE){e.textContent=emo[Math.floor(Math.random()*emo.length)]}
+      else{e.className='pc';e.style.setProperty('--k',paper[Math.floor(Math.random()*paper.length)])}
       e.style.setProperty('--dx',Math.round(Math.cos(a)*dist)+'px');
-      e.style.setProperty('--dy',Math.round(Math.sin(a)*dist-u*2.5)+'px');
-      e.style.setProperty('--r',Math.round((Math.random()-.5)*540)+'deg');
-      e.style.setProperty('--d',(Math.random()*.18).toFixed(2)+'s');
+      e.style.setProperty('--dy',Math.round(Math.sin(a)*dist-u*(reduce?1:2.2))+'px');
+      e.style.setProperty('--r',Math.round((Math.random()-.5)*(reduce?0:720))+'deg');
+      e.style.setProperty('--d',(Math.random()*.16).toFixed(2)+'s');
       cf.appendChild(e);
     }
-    setTimeout(function(){cf.innerHTML=''},2200);
+    setTimeout(function(){cf.innerHTML='';poll.classList.remove('hap')},2500);
   }
   var saved=null;try{saved=localStorage.getItem(K)}catch(e){}
   if(saved&&names[saved])mark(saved);
@@ -463,7 +495,7 @@ html,body{margin:0;background:#1C0808}
     if(!b||poll.classList.contains('voted'))return;
     var v=b.getAttribute('data-v');
     try{localStorage.setItem(K,v)}catch(e){}
-    mark(v);burst(b);
+    mark(v);burst(b,ev);
   });
 })();
 </script>
