@@ -42,12 +42,13 @@ html,body{margin:0;background:#000}
 .sv .duo{display:flex;align-items:flex-start;justify-content:center;gap:calc(var(--u)*2);position:relative;z-index:2}
 .sv .duo .pf{width:calc(var(--u)*16.5);flex:0 0 auto}
 .sv .duo .sf{width:calc(var(--u)*16.5);flex:0 0 auto;margin-top:calc(var(--u)*4.5)}
-.sv .slide{background:var(--sky);color:#0A1B33;display:grid;grid-template-columns:1.2fr 1fr;gap:calc(var(--u)*3);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);align-items:center}
+.sv .slide{background:var(--sky);color:#0A1B33;padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5)}
 .sv .slide h2{font-size:calc(var(--u)*7);line-height:.95;text-transform:uppercase;letter-spacing:-.01em;color:#0A1B33!important;-webkit-text-stroke:calc(var(--u)*.12) #0A1B33}
-.sv .slide .col{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*2.5)}
-.sv .slide .col p{font-size:calc(var(--u)*1.7);line-height:1.3;font-weight:700;max-width:14em;font-family:'PT Serif',Georgia,serif}
-.sv .slide .vid{border:calc(var(--u)*.4) solid #0A1B33;background:#0A1B33;align-self:center;width:calc(var(--u)*22);justify-self:center}
-.sv .slide .vid img{display:block;width:100%;height:auto}
+.sv .slide .top{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*3);margin-bottom:calc(var(--u)*3.5)}
+.sv .slide .top p{font-size:calc(var(--u)*1.7);line-height:1.3;font-weight:700;max-width:14em;font-family:'PT Serif',Georgia,serif;padding-bottom:calc(var(--u)*.8)}
+.sv .slide .panels{display:grid;grid-template-columns:repeat(3,calc(var(--u)*24));justify-content:space-between;gap:calc(var(--u)*1.6)}
+.sv .slide .vid{border:calc(var(--u)*.4) solid #0A1B33;background:#0A1B33}
+.sv .slide .vid img{display:block;width:100%;height:auto;aspect-ratio:415/739}
 /* hero */
 .sv .hero{position:relative;background:linear-gradient(160deg,var(--blue) 0%,var(--deep) 100%);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:calc(var(--u)*2);padding-top:calc(var(--u)*8);padding-bottom:calc(var(--u)*6);overflow:hidden}
 .sv .hero:before{content:"";position:absolute;right:-12%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 66%)}
@@ -128,7 +129,7 @@ html,body{margin:0;background:#000}
 .sv .roll .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:28px}.sv .roll .grid figcaption{font-size:11px;left:8px;bottom:8px}.sv .aes .pull q{font-size:28px}.sv .aes .pull span{font-size:11px}
 .sv .duo{gap:10px;justify-content:space-between}.sv .duo .pf{width:calc(50% - 5px)}.sv .duo .sf{width:calc(50% - 5px);margin-top:28px}
 .sv .pf .nm,.sv .tag{font-size:12px}.sv .sf .ch{bottom:44px;font-size:9px}.sv .sf .ac{bottom:14px;width:78%;gap:5px}.sv .sf .ac span{font-size:9px;padding:.4em .7em}.sv .pf .ft svg,.sv .sf .ac svg{width:20px;height:20px}
-.sv .slide{grid-template-columns:1fr;gap:24px;padding-top:44px;padding-bottom:44px;min-height:0}.sv .slide h2{font-size:48px}.sv .slide .col p{font-size:20px}.sv .slide .vid{width:min(240px,70%);justify-self:center}
+.sv .slide{padding-top:44px;padding-bottom:44px}.sv .slide h2{font-size:48px}.sv .slide .top{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:24px}.sv .slide .top p{font-size:20px;padding:0}.sv .slide .panels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;gap:12px;margin:0 -20px;padding:0 20px 8px;max-width:none;-webkit-overflow-scrolling:touch}.sv .slide .vid{flex:0 0 66%;scroll-snap-align:start}
 
 .sv .pad{padding-left:20px;padding-right:20px}
 .sv .hero{grid-template-columns:1fr;padding-top:48px;padding-bottom:40px;gap:20px}
@@ -159,7 +160,7 @@ html,body{margin:0;background:#000}
 <div class="tick" aria-hidden="true"><div><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i></div></div>
 
 
-<section class="slide pad" aria-labelledby="ins"><div class="col"><h2 id="ins">The<br>Insight:</h2><p>Women want to feel good in every inch of their skin, not just their face.</p></div><div class="vid"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-2.gif" alt="A creator smooths lotion down her leg beside a bathtub in warm sunlight" loading="lazy" decoding="async"></div></section>
+<section class="slide pad" aria-labelledby="ins"><div class="top"><h2 id="ins">The<br>Insight:</h2><p>Women want to feel good in every inch of their skin, not just their face.</p></div><div class="panels"><div class="vid"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-2.gif" alt="A creator smooths lotion down her leg beside a bathtub in warm sunlight" width="415" height="739" loading="lazy" decoding="async"></div><div class="vid"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-5.gif" alt="A creator in glasses rubs lotion between her hands toward the camera" width="415" height="739" loading="lazy" decoding="async"></div><div class="vid"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-6.gif" alt="A creator with curly hair talks to camera behind a lotion pump bottle" width="415" height="739" loading="lazy" decoding="async"></div></div></section>
 
 <section class="brief pad" aria-labelledby="brief"><span class="lbl">The Brief</span><h2 class="xl" id="brief">Every Inch.<br>Even the Skipped Ones.</h2>
 <div class="four">
