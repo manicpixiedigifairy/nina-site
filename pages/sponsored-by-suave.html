@@ -17,6 +17,37 @@ html,body{margin:0;background:#000}
 .sv .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .sv .ph b{position:absolute;left:50%;bottom:calc(var(--u)*1);transform:translateX(-50%);white-space:nowrap;background:#fff;color:var(--blue);border-radius:99px;padding:.5em 1.1em;font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.7);letter-spacing:.14em;text-transform:uppercase}
 
+
+/* frames */
+.sv .pf{background:var(--sky);color:#06357A;border-radius:calc(var(--u)*3) calc(var(--u)*3) 0 0;overflow:hidden;box-shadow:0 calc(var(--u)*1.5) calc(var(--u)*3.5) rgba(0,0,0,.28)}
+.sv .pf .hd{display:flex;align-items:center;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.1) calc(var(--u)*1.2)}
+.sv .pf .av{width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:calc(var(--u)*1.1);flex:0 0 auto}
+.sv .pf .nm{font-weight:700;font-size:calc(var(--u)*.95);line-height:1.15}.sv .pf .nm small{display:block;font-weight:400;font-size:.82em;opacity:.8}
+.sv .pf .dots{margin-left:auto;font-weight:700;letter-spacing:.1em}
+.sv .pf .md{position:relative;aspect-ratio:4/5;background:var(--deep)}
+.sv .pf .md img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.sv .tag{position:absolute;left:50%;bottom:calc(var(--u)*2.4);transform:translateX(-50%);background:#0A1B33;color:#fff;border-radius:calc(var(--u)*.7);padding:.55em 1.1em;font-weight:700;font-size:calc(var(--u)*.95);white-space:nowrap}
+.sv .tag:before{content:"";position:absolute;left:50%;top:-.35em;width:.7em;height:.7em;background:#0A1B33;transform:translateX(-50%) rotate(45deg)}
+.sv .pf .ft{display:flex;align-items:center;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1) calc(var(--u)*1.2) calc(var(--u)*1.3)}
+.sv .pf .ft svg,.sv .sf .ac svg{width:calc(var(--u)*1.7);height:calc(var(--u)*1.7);display:block}
+.sv .pf .ft svg:last-child{margin-left:auto}
+.sv .sf{position:relative;aspect-ratio:9/16;border-radius:calc(var(--u)*.8) calc(var(--u)*3) calc(var(--u)*3) calc(var(--u)*3);overflow:hidden;background:var(--deep);box-shadow:0 calc(var(--u)*1.5) calc(var(--u)*3.5) rgba(0,0,0,.28)}
+.sv .sf>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.sv .sf:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,47,110,0) 40%,rgba(6,47,110,.62) 100%)}
+.sv .sf .ov{position:absolute;z-index:2;left:6%;right:6%;bottom:calc(var(--u)*5.6);text-align:center;font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*1.9);line-height:1.12;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.sv .sf .ch{position:absolute;z-index:2;left:50%;bottom:calc(var(--u)*3.9);transform:translateX(-50%);background:#fff;color:var(--blue);border-radius:calc(var(--u)*.8);padding:.4em .9em;font-weight:700;font-size:calc(var(--u)*.78);white-space:nowrap}
+.sv .sf .ac{position:absolute;z-index:2;left:calc(var(--u)*1);right:calc(var(--u)*1);bottom:calc(var(--u)*1);display:flex;align-items:center;gap:calc(var(--u)*.9)}
+.sv .sf .ac span{flex:1;border:2px solid #fff;border-radius:99px;padding:.5em 1em;font-size:calc(var(--u)*.85)}
+.sv .sf .ac svg{color:#fff}
+.sv .duo{position:relative;height:calc(var(--u)*33);z-index:2}
+.sv .duo .pf{position:absolute;left:0;top:0;width:calc(var(--u)*16.5)}
+.sv .duo .sf{position:absolute;right:0;top:calc(var(--u)*4.5);width:calc(var(--u)*17)}
+.sv .slide{background:var(--sky);color:#0A1B33;display:grid;grid-template-columns:1.2fr 1fr;gap:calc(var(--u)*3);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);min-height:calc(var(--u)*46)}
+.sv .slide h2{font-size:calc(var(--u)*7);line-height:.95;text-transform:uppercase;letter-spacing:-.01em;color:#0A1B33!important;-webkit-text-stroke:calc(var(--u)*.12) #0A1B33}
+.sv .slide .col{display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*3)}
+.sv .slide .col p{font-size:calc(var(--u)*1.7);line-height:1.3;font-weight:700;max-width:14em;font-family:'PT Serif',Georgia,serif}
+.sv .slide .vid{border:calc(var(--u)*.4) solid #0A1B33;background:#0A1B33;align-self:end;width:calc(var(--u)*22);justify-self:center}
+.sv .slide .vid img{display:block;width:100%;height:auto}
 /* hero */
 .sv .hero{position:relative;background:linear-gradient(160deg,var(--blue) 0%,var(--deep) 100%);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:calc(var(--u)*2);padding-top:calc(var(--u)*8);padding-bottom:calc(var(--u)*6);overflow:hidden}
 .sv .hero:before{content:"";position:absolute;right:-12%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 66%)}
@@ -27,11 +58,6 @@ html,body{margin:0;background:#000}
 .sv .hero p{font-size:calc(var(--u)*1.3);line-height:1.55;max-width:22em;margin-top:calc(var(--u)*2)}
 .sv .tg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);margin-top:calc(var(--u)*2.4)}
 .sv .tg span{border:2px solid #fff;border-radius:99px;padding:.45em 1.2em;font-weight:700;font-size:calc(var(--u)*.98);line-height:1.2;white-space:nowrap}
-.sv .fan{position:relative;height:calc(var(--u)*34);z-index:2}
-.sv .fan .ph{position:absolute;width:calc(var(--u)*15.5);top:50%}
-.sv .fan .a{left:2%;transform:translateY(-46%) rotate(-7deg)}
-.sv .fan .b{left:50%;transform:translate(-50%,-54%);z-index:2;width:calc(var(--u)*17)}
-.sv .fan .c{right:2%;transform:translateY(-46%) rotate(7deg)}
 /* ticker */
 .sv .tick{background:#fff;color:var(--blue);overflow:hidden;white-space:nowrap;padding:calc(var(--u)*1.1) 0;border-bottom:1px solid var(--sky)}
 .sv .tick div{display:inline-block;animation:svt 38s linear infinite;font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*2);padding-left:0}
@@ -73,7 +99,7 @@ html,body{margin:0;background:#000}
 .sv .bub figcaption span{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.68);letter-spacing:.14em;text-transform:uppercase;margin-left:auto;opacity:.7}
 /* aesthetic */
 .sv .aes{background:linear-gradient(180deg,var(--deep),#021a42);display:grid;grid-template-columns:calc(var(--u)*19) 1fr;gap:calc(var(--u)*5);align-items:center;padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*6)}
-.sv .aes .ph{border:calc(var(--u)*.45) solid #fff;box-shadow:0 calc(var(--u)*2) calc(var(--u)*4) rgba(0,0,0,.5)}
+
 .sv .aes p{font-size:calc(var(--u)*1.2);line-height:1.7;opacity:.92;margin-top:calc(var(--u)*1.6);max-width:36em}
 .sv .aes p em{font-family:'Source Serif 4',Georgia,serif;color:var(--sky)}
 .sv .cap{display:inline-block;margin-top:calc(var(--u)*2.2);background:#fff;color:var(--blue);border-radius:calc(var(--u)*.9);padding:calc(var(--u)*1) calc(var(--u)*1.6);font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*3);line-height:1.15;max-width:15em}
@@ -87,17 +113,21 @@ html,body{margin:0;background:#000}
 .sv .foot a:hover{background:var(--blue);color:#fff}
 @media(max-width:1000px){
 .sv{--u:16px}
+.sv .duo{height:calc(100vw*.95)}.sv .duo .pf{width:46%}.sv .duo .sf{width:47%;top:6%}
+.sv .pf .nm,.sv .tag{font-size:12px}.sv .sf .ov{font-size:15px;bottom:62px}.sv .sf .ch{bottom:40px;font-size:9px}.sv .sf .ac{bottom:8px;gap:6px}.sv .sf .ac span{font-size:9px;white-space:nowrap;padding:.4em .7em}.sv .pf .ft svg,.sv .sf .ac svg{width:20px;height:20px}
+.sv .slide{grid-template-columns:1fr;gap:24px;padding-top:44px;padding-bottom:44px;min-height:0}.sv .slide h2{font-size:48px}.sv .slide .col p{font-size:20px}.sv .slide .vid{width:min(240px,70%);justify-self:center}
+
 .sv .pad{padding-left:20px;padding-right:20px}
 .sv .hero{grid-template-columns:1fr;padding-top:48px;padding-bottom:40px;gap:20px}
 .sv h1{font-size:50px}.sv .br{font-size:24px}.sv .hero p{font-size:18px}.sv .tg span{font-size:14px}
-.sv .fan{height:360px}.sv .fan .ph{width:150px}.sv .fan .b{width:164px}.sv .ph b{display:none}
+
 .sv .tick div{font-size:22px}
 .sv .xl{font-size:36px}
 .sv .brief{padding-top:48px;padding-bottom:48px}.sv .four{grid-template-columns:1fr;gap:12px}.sv .four h3{font-size:26px}.sv .four p{font-size:16px}.sv .chips span{font-size:11px}
 .sv .roll{padding-top:48px;padding-bottom:48px}.sv .roll li{flex-wrap:wrap;gap:2px 12px}.sv .roll .v{font-size:30px;flex:1}.sv .roll .v small{display:block;margin:0 0 4px;font-size:11px}.sv .roll .n{font-size:16px;flex:0 0 22px}
 .sv .concept{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .concept p{font-size:17px}.sv .concept li{font-size:16px}
 .sv .bub:nth-child(2){margin-left:24px}.sv .bub blockquote{font-size:26px}.sv .bub p{font-size:16px}.sv .bub figcaption{font-size:15px}
-.sv .aes{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .aes .ph{width:min(240px,70%);margin:0 auto}.sv .aes p{font-size:17px}.sv .cap{font-size:28px}
+.sv .aes{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .aes .sf{width:min(260px,72%);margin:0 auto}.sv .aes p{font-size:17px}.sv .cap{font-size:28px}
 .sv .role{grid-template-columns:1fr;gap:16px;padding-top:44px;padding-bottom:36px}.sv .role h2{font-size:34px}.sv .role p{font-size:18px}
 .sv .foot{font-size:13px}
 }
@@ -107,12 +137,16 @@ html,body{margin:0;background:#000}
 <div class="tx"><span class="br">Suave</span><h1>Sponsored<em>by</em>Suave</h1>
 <p>Proud sponsor of the body parts nobody thinks to thank. A social-first campaign that gave forgotten skin its spotlight.</p>
 <div class="tg"><span>Strategy</span><span>Copywriting</span><span>Social</span><span>Influencer</span><span>UGC</span></div></div>
-<div class="fan" aria-label="Creator content from the campaign">
-<div class="ph a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="A creator shows a Suave lotion bottle and rubs lotion into her hand" decoding="async"></div>
-<div class="ph c"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-3.gif" alt="A creator holding a Suave Nourishing pump bottle talks to camera" decoding="async"></div>
-<div class="ph b"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-2.gif" alt="A creator smooths lotion down her leg beside a bathtub in warm sunlight" decoding="async"><b>#SponsoredBySuave</b></div>
+<div class="duo" aria-label="Creator content from the campaign">
+<div class="pf"><div class="hd"><span class="av">S</span><span class="nm">suave<small>Paid partnership</small></span><span class="dots">&middot;&middot;&middot;</span></div>
+<div class="md"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="A creator shows a Suave lotion bottle and rubs lotion into her hand" style="object-position:50% 30%" decoding="async"><span class="tag">Calming Relief</span></div>
+<div class="ft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.500 12a8.500 8.500 0 0 1-12.300 7.600L3.500 20.500l1-4.500A8.500 8.500 0 1 1 20.500 12z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.500h12v17l-6-4.500-6 4.500z"/></svg></div></div>
+<div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-3.gif" alt="A creator holding a Suave Nourishing pump bottle talks to camera" decoding="async"><div class="ov">Body part details below</div><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
 </div></header>
 <div class="tick" aria-hidden="true"><div><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i></div></div>
+
+
+<section class="slide pad" aria-labelledby="ins"><div class="col"><h2 id="ins">The<br>Insight:</h2><p>Women want to feel good in every inch of their skin, not just their face.</p></div><div class="vid"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-2.gif" alt="A creator smooths lotion down her leg beside a bathtub in warm sunlight" loading="lazy" decoding="async"></div></section>
 
 <section class="brief pad" aria-labelledby="brief"><span class="lbl">The Brief</span><h2 class="xl" id="brief">Every Inch.<br>Even the Skipped Ones.</h2>
 <div class="four">
@@ -141,7 +175,7 @@ html,body{margin:0;background:#000}
 <figure class="bub"><blockquote>"Not me getting a knee deal &#129325;"</blockquote><p>Built an honest-style review around her long-term battle with dry patches and ashiness on her knees, pointing viewers directly to Walmart, where the new Calming Relief lotion is sold.</p><figcaption>@shaielexis<span>Lemon8 / TikTok</span></figcaption></figure>
 </div></section>
 
-<section class="aes pad" aria-labelledby="aes"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-2.gif" alt="A creator applying lotion to her leg in warm bathroom light" loading="lazy" decoding="async"></div>
+<section class="aes pad" aria-labelledby="aes"><div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="Close-up of a creator showing lotion on her hand" loading="lazy" decoding="async" style="object-position:50% 40%"><div class="ov">my driest zones finally got sponsored</div><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
 <div><span class="lbl">Aesthetic &amp; Framing</span><h2 class="xl" id="aes">Honest Close-Ups</h2>
 <p>Instead of heavily edited studio productions, lifestyle and beauty creators delivered native, casual GRWM and situational-comedy clips that fit their existing feeds. Across Instagram Reels and TikTok, assets featured zoomed-in, un-retouched closeups of dry skin changing into hydrated skin, the same honest register as the comedy and proof the product works.</p>
 <div class="cap">my driest zones finally got sponsored</div><span class="capl">Recurring on-screen text overlay</span>
