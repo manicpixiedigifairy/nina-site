@@ -73,7 +73,7 @@ html,body{margin:0}
 /* RESULTS */
 .sv .res{background:var(--crim);color:var(--cream);padding:calc(var(--u)*6) calc(var(--u)*5.5) calc(var(--u)*6)}
 .sv .res .mc.top{display:flex;justify-content:space-between;margin-bottom:calc(var(--u)*1.4)}
-.sv .row{display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*3);align-items:end;border-top:1px solid rgba(255,245,239,.5);padding:calc(var(--u)*1.2) 0 calc(var(--u)*2)}
+.sv .row{display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*3);align-items:end;border-top:1px solid rgba(255,245,239,.5);padding:calc(var(--u)*1.2) 0 calc(var(--u)*1.2)}
 .sv .row .big{font-family:var(--disp);font-weight:800;font-size:calc(var(--u)*17.5);line-height:.82;letter-spacing:-.04em;margin-left:calc(var(--u)*-.6)}
 .sv .row .cap{text-align:right;padding-bottom:calc(var(--u)*1.2)}
 .sv .row .cap b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:calc(var(--u)*2.3);letter-spacing:-.025em;line-height:1}
@@ -238,12 +238,12 @@ html,body{margin:0}
 .sv .film .pb{left:auto;right:30px;top:auto;bottom:calc(12.4vw + 36px);width:64px;height:64px}
 .sv .film .pb svg{width:22px;height:22px}
 .sv .res{padding-top:40px;padding-bottom:40px}
-.sv .row{grid-template-columns:1fr;gap:6px}
+.sv .row{grid-template-columns:1fr;gap:6px;padding:14px 0 14px}
 .sv .row .big{font-size:25vw;margin-left:-6px;letter-spacing:-.02em}
-.sv .row .cap{text-align:left;padding-bottom:6px}
+.sv .row .cap{text-align:left;padding-bottom:0}
 .sv .row .cap b{font-size:23px}
 .sv .row .cap span{font-size:15px}
-.sv .hue{grid-template-columns:1fr}
+.sv .hue{grid-template-columns:1fr;margin-top:36px}
 .sv .hue .q{border-right:0;border-bottom:1px solid rgba(42,13,16,.18);padding:22px}
 .sv .hue blockquote{font-size:30px}
 .sv .hue .c{padding:22px}
@@ -289,7 +289,8 @@ html,body{margin:0}
 .sv .sg{padding-top:44px;padding-bottom:48px}
 .sv .sg .hd{grid-template-columns:1fr;gap:14px}
 .sv .sg h2{font-size:16vw}
-.sv .sgs{--w:262px;margin:26px -20px 0;padding:0 20px 8px;gap:12px;scroll-padding-left:20px}
+.sv .sgs{margin:36px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:40px;justify-items:start;overflow:visible;scroll-snap-type:none;container-type:inline-size}
+.sv .sge{--w:min(369px,calc(100vw - 40px));flex:none;scroll-snap-align:none}
 .sv .sge .mc{margin-top:12px}
 .sv .ti{padding:14px 16px 14px 14px;border-radius:16px;gap:12px}
 .sv .av{width:38px;height:38px;font-size:15px}
@@ -300,6 +301,9 @@ html,body{margin:0}
 }
 @media(prefers-reduced-motion:reduce){.sv .cr.pop{animation:none}.sv .stg .arch img,.sv .cnm,.sv .ia,.sv .cn,.sv .cx,.sv .cq{transition:none!important}}
 @media(min-width:1001px) and (max-width:1180px){.sv .sgs{scrollbar-width:thin;scrollbar-color:rgba(253,246,240,.7) transparent}.sv .sgs::-webkit-scrollbar{display:block;height:6px}.sv .sgs::-webkit-scrollbar-thumb{background:rgba(253,246,240,.7);border-radius:6px}.sv .sgs::-webkit-scrollbar-track{background:transparent}}
+@supports (width:1cqw){@media(max-width:1000px){.sv .sge{--w:min(369px,100cqw)}}}
+@media(min-width:601px) and (max-width:1000px){.sv .sgs{grid-template-columns:repeat(2,max-content);justify-content:start;column-gap:20px;row-gap:40px}.sv .sge{--w:min(369px,calc((100vw - 60px)/2))}}
+@supports (width:1cqw){@media(min-width:601px) and (max-width:1000px){.sv .sge{--w:min(369px,calc((100cqw - 20px)/2))}}}
 
 </style></head><body>
 <main class="sv">
