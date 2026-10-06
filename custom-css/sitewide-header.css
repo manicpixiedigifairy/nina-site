@@ -1,0 +1,5 @@
+/* Sitewide: white header with black logo, navigation and icons.
+   Paste into Squarespace under Design > Custom CSS (no style tags). */
+.header,.header[data-section-theme],.header-inner,.header-background-solid,.header-background-gradient,.header-announcement-bar-wrapper,.header-menu,.header-menu-bg,.header-nav-folder-content,.header-dropdown,.header-menu-nav-folder-content{background:#fff!important;background-color:#fff!important}
+.header,.header a,.header-nav-item a,.header-nav-folder-item a,.header-title-text a,.header-actions a,.header-actions-action,.header-menu a,.header-menu-nav-item a{color:#000!important;-webkit-text-fill-color:#000!important}
+.header img,.header picture img,.header svg,.header-burger-btn,.header-actions-action svg,.header-menu img{filter:brightness(0)!important}
