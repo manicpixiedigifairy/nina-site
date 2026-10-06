@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nina Austin | Commercials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:wght@300;400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#000}
+
+.pg{--u:clamp(11px,1.1111vw,28px);--lime:#D7F34A;width:100%;background:#000;color:#fff;font-family:Marcellus,Georgia,serif;padding:calc(var(--u)*2) 0 calc(var(--u)*8)}
+.pg *{box-sizing:border-box}
+.pg a{color:inherit;text-decoration:none}
+.pg .sm{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*0.72);letter-spacing:.16em;text-transform:uppercase}
+.pg .rd{position:absolute;opacity:0;pointer-events:none}
+.pg .tabs{display:flex;gap:calc(var(--u)*2.2);padding:calc(var(--u)*2.5) calc(var(--u)*5.5) 0;flex-wrap:wrap}
+.pg .tabs a{color:rgba(255,255,255,.5);padding-bottom:.45em;border-bottom:1px solid transparent;transition:color .2s}
+.pg .tabs a:hover{color:#fff}
+.pg .tabs a.on{color:#fff;border-bottom-color:var(--lime)}
+.pg .q{padding:calc(var(--u)*3.5) calc(var(--u)*5.5) 0;max-width:calc(var(--u)*46);font-family:'Source Serif 4',Georgia,serif;font-weight:300;font-size:calc(var(--u)*1.35);line-height:1.5}
+.pg .q p{margin:0}.pg .q cite{display:block;margin-top:calc(var(--u)*0.8);font-style:normal;font-size:.62em;opacity:.65;letter-spacing:.04em}
+.pg .ft{position:relative;display:block;margin:calc(var(--u)*2.5) calc(var(--u)*5.5) 0;border-radius:calc(var(--u)*0.6);overflow:hidden}
+.pg .md{position:relative;overflow:hidden;display:block;background:linear-gradient(135deg,#1b1b1b,#0c0c0c);background-position:50% 50%;background-size:cover;background-repeat:no-repeat;aspect-ratio:16/9;width:100%;transition:transform .6s ease}
+.pg .md i{position:absolute;inset:0;display:block;background-position:50% 50%;background-size:cover;background-repeat:no-repeat;transform:scale(var(--z,1));transform-origin:var(--o,50% 50%);transition:transform .6s ease}
+.pg .md{isolation:isolate}
+.pg .cd .md{clip-path:inset(0 round calc(var(--u)*0.5))}
+.pg .ft{clip-path:inset(0 round calc(var(--u)*0.6))}
+.pg .cd .md{--r:calc(var(--u)*0.5)}
+.pg .ft .md{--r:calc(var(--u)*0.6)}
+.pg .md::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 100% 100%,transparent var(--r),#000 calc(var(--r) + .75px)) 0 0/var(--r) var(--r) no-repeat,radial-gradient(circle at 0 100%,transparent var(--r),#000 calc(var(--r) + .75px)) 100% 0/var(--r) var(--r) no-repeat,radial-gradient(circle at 100% 0,transparent var(--r),#000 calc(var(--r) + .75px)) 0 100%/var(--r) var(--r) no-repeat,radial-gradient(circle at 0 0,transparent var(--r),#000 calc(var(--r) + .75px)) 100% 100%/var(--r) var(--r) no-repeat}
+.pg .md img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 50%!important;display:block!important}
+.pg .ft .md{aspect-ratio:21/10}
+.pg .bg{position:absolute;z-index:3;top:calc(var(--u)*1.5);left:calc(var(--u)*1.5);display:inline-flex;align-items:center;gap:.65em;background:var(--lime);color:#0A0A0A;border-radius:99px;padding:.6em 1.25em .6em .8em;white-space:nowrap}
+.pg .ft:after{display:none}
+.pg .fo{position:static;padding:calc(var(--u)*2.2) calc(var(--u)*0.4) calc(var(--u)*0.4);display:grid;grid-template-columns:1.25fr 1fr;gap:calc(var(--u)*3);align-items:start}
+.pg .fo .bt{margin-top:calc(var(--u)*1.8)}.pg .fo .fm{margin-top:0}
+.pg .fo .lb{color:var(--lime);display:block;margin-bottom:calc(var(--u)*0.9)}
+.pg .fo h2{margin:0;font-weight:400;font-size:calc(var(--u)*3.8);line-height:1.04;letter-spacing:-.005em}
+.pg .fo .br{display:block;margin-bottom:calc(var(--u)*0.7);opacity:.8}
+.pg .fo p{margin:0 0 calc(var(--u)*1.6);font-size:calc(var(--u)*1.1);line-height:1.4;opacity:.92}
+.pg .bt{display:inline-block;background:var(--lime);color:#0A0A0A;border-radius:99px;padding:calc(var(--u)*0.9) calc(var(--u)*2.6);transition:transform .2s,background .2s}
+.pg .bt:hover{background:#fff;transform:translateX(.25rem)}
+@media(hover:hover){.pg .ft:hover .md i{transform:scale(calc(var(--z,1)*1.03))}}
+.pg .fb{display:flex;align-items:center;gap:calc(var(--u)*0.8);flex-wrap:wrap;padding:calc(var(--u)*4.5) calc(var(--u)*5.5) calc(var(--u)*1.8)}
+.pg .fb .ct{margin-left:auto;opacity:.5}
+.pg .fb label{cursor:pointer;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:calc(var(--u)*0.6) calc(var(--u)*1.4);transition:all .2s}
+.pg .fb label:hover{border-color:#fff}
+.pg #f0:checked~.fbw label[for=f0],.pg:has(#f0:checked) label[for=f0]{background:#D7F34A;color:#0A0A0A;border-color:#D7F34A}
+.pg .rd:focus-visible+*{outline:2px solid #fff}
+.pg .gr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.6) calc(var(--u)*1.75);padding:0 calc(var(--u)*5.5)}
+.pg .soon .md{background:#0A0A0A;border:1px dashed rgba(215,243,74,.45);border-radius:inherit}.pg .soon .qm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Marcellus,serif;font-weight:400;font-size:calc(var(--u)*9);color:var(--lime);opacity:.9}.pg .soon h3{opacity:.85}
+.pg .cd{display:block;min-width:0;content-visibility:auto;contain-intrinsic-size:auto 42rem}
+.pg .cd .mw{overflow:hidden;border-radius:calc(var(--u)*0.5);margin-bottom:calc(var(--u)*1.1)}
+.pg .cd .md{aspect-ratio:auto;height:0;padding-bottom:56.25%;border-radius:calc(var(--u)*0.5)}
+.pg .cd .br{display:block;opacity:.6;margin-bottom:calc(var(--u)*0.5)}
+.pg .cd h3{margin:0 0 calc(var(--u)*0.6);font-weight:400;font-size:calc(var(--u)*1.75);line-height:1.12;transition:color .2s}
+.pg .cd p{margin:0 0 calc(var(--u)*0.9);font-size:calc(var(--u)*0.95);line-height:1.4;opacity:.75}
+.pg .tg{display:flex;gap:calc(var(--u)*0.5);flex-wrap:wrap}
+.pg .tg span{border:1px solid rgba(255,255,255,.28);border-radius:99px;padding:.35em .9em;font-size:calc(var(--u)*0.62)}
+@media(hover:hover){.pg .cd:hover .md i{transform:scale(calc(var(--z,1)*1.05))}.pg .cd:hover h3{color:var(--lime)}}
+.pg a:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.pg:has(#f1:checked) .cd:not(.t1){display:none}.pg:has(#f1:checked) label[for=f1]{background:#D7F34A;color:#0A0A0A;border-color:#D7F34A}
+.pg:has(#f2:checked) .cd:not(.t2){display:none}.pg:has(#f2:checked) label[for=f2]{background:#D7F34A;color:#0A0A0A;border-color:#D7F34A}
+.pg:has(#f3:checked) .cd:not(.t3){display:none}.pg:has(#f3:checked) label[for=f3]{background:#D7F34A;color:#0A0A0A;border-color:#D7F34A}
+.pg .cd .md{padding-bottom:125%}
+.pg .fm{display:flex;flex-wrap:wrap;gap:calc(var(--u)*0.6);margin:calc(var(--u)*1.2) 0}.pg .fm .sm{display:inline-flex;align-items:center;gap:.6em;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:.55em 1.1em .55em .8em;font-size:calc(var(--u)*0.68)}
+.pg .mt{position:absolute;z-index:3;left:calc(var(--u)*0.9);right:calc(var(--u)*0.9);bottom:calc(var(--u)*0.9);display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*0.45)}
+.pg .mt .sm{display:inline-flex;align-items:center;gap:.6em;background:rgba(0,0,0,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:99px;padding:.55em 1.1em .55em .8em;font-size:calc(var(--u)*0.68);white-space:nowrap}
+.pg .mt b{font-size:1.35em;line-height:1;font-weight:400}
+@media(max-width:1000px){.pg .mt{left:.7rem;bottom:.7rem}.pg .mt .sm{font-size:.62rem}}
+@media(max-width:1000px){
+.pg{--u:16px;padding-bottom:4rem}
+.pg .tabs{padding:1.5rem 1.75rem 0;gap:1.4rem}
+.pg .q{padding:2rem 1.75rem 0;font-size:1.1rem}
+.pg .ft{margin:1.75rem 0 0;border-radius:0;clip-path:none}
+.pg .md img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 50%!important;display:block!important}
+.pg .ft .md{aspect-ratio:4/3}
+.pg .bg{top:1rem;left:1rem;font-size:.7rem}
+.pg .ft:after{display:none}
+.pg .fo{position:static;grid-template-columns:1fr;gap:1rem;padding:1.5rem 1.75rem 0}
+.pg .fo h2{font-size:2.4rem}.pg .fo p{font-size:1rem;margin-bottom:1.25rem}
+.pg .bt{padding:.85rem 2rem}
+.pg .fb{padding:2.5rem 1.75rem 1.25rem;gap:.6rem}
+.pg .fb label{padding:.55rem 1.2rem}
+.pg .fb .ct{display:none}
+.pg .gr{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1rem;padding:0 1.75rem}
+.pg .cd h3{font-size:1.4rem}.pg .cd p{font-size:.9rem}.pg .sm{font-size:.7rem}.pg .tg span{font-size:.62rem}
+}
+@media(max-width:600px){.pg .gr{grid-template-columns:1fr}.pg .cd h3{font-size:1.7rem}}
+</style></head><body>
+<div class="pg"><nav class="tabs" aria-label="Work categories"><a class="sm on" href="https://www.byninaaustin.com/commercials">Commercials</a><a class="sm" href="https://www.byninaaustin.com/content">Content</a><a class="sm" href="https://www.byninaaustin.com/experiential">Experiential</a></nav><a class="ft" href="https://www.byninaaustin.com/for-your-lifes-work"><span class="bg sm"><svg viewBox="0 0 24 24" width="1.3em" height="1.3em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m12 6.4.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 8.5l2-.3z"/><path d="M8.6 13.6 7 21l5-2.6 5 2.6-1.6-7.4"/></svg>Drum Award Winner</span><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/98789de6-b2a0-4fd7-942f-ef68ae1b4409/YTDown.com_YouTube_Family-Business-Notion-For-your-life-s-w_Media_Mf1-De_TWAk_001_1080p-high+%281%29.gif?format=1500w')"></i></span><div class="fo"><div><span class="sm lb">Featured</span><span class="sm br">Notion</span><h2>For Your Life's Work</h2><span class="bt sm">Explore</span></div><div><p>International brand campaign inspired by community stories blending work and life with Notion.</p></div></div></a><div class="fb"><input class="rd" type="radio" name="f" id="f0" checked><label class="sm" for="f0">All</label><input class="rd" type="radio" name="f" id="f1"><label class="sm" for="f1">Tech</label><input class="rd" type="radio" name="f" id="f2"><label class="sm" for="f2">Lifestyle</label><input class="rd" type="radio" name="f" id="f3"><label class="sm" for="f3">Health</label><span class="sm ct">8 more projects</span></div><div class="gr"><a class="cd t1 " href="https://www.byninaaustin.com/wtyw"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/59346cd4-d7b5-4758-b11d-4a438c57f365/WTYWM+HERO-high.gif?format=1000w')"></i></span></div><span class="sm br">Walmart</span><h3>Welcome To Your Walmart</h3><p>A personalized app launch campaign repositioning the world's largest retailer from the everything store to every shopper's store.</p><div class="tg"><span class="sm">Tech</span><span class="sm">Retail</span></div></a><a class="cd t2" href="https://www.byninaaustin.com/never-ever"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/5e030e9d-0c62-4735-b5f1-56ea500dc27b/dd1a92e4-ef0a-4f82-967b-2f622c3701b6-high.gif?format=1000w')"></i></span></div><span class="sm br">Butterfinger</span><h3>Never Ever</h3><p>A cinematic expansion of the Butterfinger Investigators universe with a comedic time-travel twist.</p><div class="tg"><span class="sm">Lifestyle</span></div></a><a class="cd t3" href="https://www.byninaaustin.com/plan-for-the-best"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/6093d320-7534-4dec-98b5-cf93bc56889a/Healthcaredotgov_30s-high+%281%29.gif?format=1000w')"></i></span></div><span class="sm br">Healthcare.gov</span><h3>Plan For The Best</h3><p>An anthemic campaign reframing health insurance as an empowering step towards owning your future.</p><div class="tg"><span class="sm">Health</span></div></a><a class="cd t2" href="https://www.byninaaustin.com/never-through"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/8ddf6f7a-4e02-431d-8fc0-51bcd4ef03b9/Under-Armour_Never-Through_Sizzle-Video_Final.mp4-high+%283%29.gif?format=1000w')"></i></span></div><span class="sm br">Under Armour</span><h3>Never Through</h3><p>A visual manifesto tapping into the collective urgency for better, better selves, better systems, better futures.</p><div class="tg"><span class="sm">Lifestyle</span></div></a><a class="cd t1" href="https://www.byninaaustin.com/tiny-wins"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/556fc34c-0b32-49ee-8e3b-ad2b1cd7b7a6/High+Five-high+%282%29.gif?format=1000w')"></i></span></div><span class="sm br">AT&amp;T</span><h3>Tiny Wins</h3><p>A warm, comedic TVC campaign turning the rush of scoring a great deal into relatable, everyday micro-celebrations.</p><div class="tg"><span class="sm">Tech</span></div></a><a class="cd t1" href="https://www.byninaaustin.com/how-you-moto"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/8ac5a8f7-8723-435d-aa60-519daf0fe8f3/Motorola+How+You+Moto+Hero-high+%281%29.gif?format=1000w')"></i></span></div><span class="sm br">Motorola</span><h3>How You Moto</h3><p>A relatable global tech campaign showing how the Moto G is not only a device, but an extension of who you are.</p><div class="tg"><span class="sm">Tech</span></div></a><a class="cd " href="https://www.byninaaustin.com/curls-just-wanna-have-fun"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/a39b6a37-c89e-441c-b7ed-a5fcad527e83/THE+SWITCH+UO_KMA-high+%282%29.gif?format=1000w')"></i></span></div><span class="sm br">Mielle</span><h3>Curls Just Wanna Have Fun</h3><p>A bouncy 30-second spot and multi-channel activation celebrating 4c textured hair, curl joy, and self-expression.</p><div class="tg"><span class="sm">Beauty</span></div></a><a class="cd t3" href="https://www.byninaaustin.com/people-not-profit"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/31d794e4-2435-4f7d-b9da-7d33ba7aa213/Anti_menthol_60_v9-high.gif?format=1000w');--z:1.5;--o:50% 50%"></i></span></div><span class="sm br">CTCP</span><h3>People Not Profit</h3><p>A bold public service campaign using emotionally charged visuals and personal storytelling to expose the deadly impact of menthol tobacco marketing.</p><div class="tg"><span class="sm">Health</span></div></a></div></div>
+</body></html>
