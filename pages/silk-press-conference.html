@@ -17,9 +17,9 @@ html,body{margin:0;background:#000}
 .sp .ht{padding-top:calc(var(--u)*6)}
 .sp .ht .br{font-family:Marcellus,serif;font-size:calc(var(--u)*2.2);line-height:1.1;margin-left:calc(var(--u)*.1)}
 .sp h1{font-size:calc(var(--u)*5.2);line-height:1.1;margin-top:calc(var(--u)*.6);letter-spacing:-.005em}
-.sp .hr{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*3);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*4)}
+.sp .hr{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*2.2);padding-top:calc(var(--u)*3);padding-bottom:calc(var(--u)*5)}
 .sp .hr p{font-size:calc(var(--u)*1.15);line-height:1.5;max-width:23em}
-.sp .tg{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.55);margin-right:calc(var(--u)*1.2)}
+.sp .tg{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:calc(var(--u)*.7);margin:0}
 .sp .tg span{border:1px solid #2f7a3f;border-radius:99px;padding:.45em 1.2em;font-weight:700;font-size:calc(var(--u)*.98);line-height:1.2;white-space:nowrap}
 .sp .ban{display:block;width:100%;height:auto}
 .sp .ask{padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*6)}
@@ -29,12 +29,12 @@ html,body{margin:0;background:#000}
 .sp .three>div{border-bottom:0}.sp .three .rule{border-top:3px solid var(--lime);padding-top:calc(var(--u)*1.6)}
 .sp .three h3{font-size:calc(var(--u)*2.2);margin-bottom:calc(var(--u)*.8)}
 .sp .three p{font-size:calc(var(--u)*1.12);line-height:1.65;opacity:.85}
-.sp .camp{position:relative;background:var(--lime);color:#0A0A0A;display:block;padding-right:calc(var(--u)*34)}
+.sp .camp{position:relative;min-height:calc(var(--u)*27.7);background:var(--lime);color:#0A0A0A;display:block;padding-right:calc(var(--u)*34)}
 .sp .camp .tx{padding:calc(var(--u)*5) 0 calc(var(--u)*5) calc(var(--u)*1.5)}
 .sp .camp .lbl{color:var(--dg)}
 .sp .camp h2{font-size:calc(var(--u)*4.6);line-height:1.1}
 .sp .camp p{font-size:calc(var(--u)*1.25);line-height:1.65;margin-top:calc(var(--u)*1.8);max-width:36em}
-.sp .camp .im{position:absolute;right:0;top:50%;transform:translateY(-50%);width:calc(var(--u)*30);z-index:2}.sp .camp .im img{display:block;width:100%;height:auto}
+.sp .camp .im{position:absolute;right:0;top:calc(var(--u)*4.5);transform:none;width:calc(var(--u)*30);z-index:2}.sp .camp .im img{display:block;width:100%;height:auto}
 .sp .film{position:relative;display:block;background:#0b0b0b;overflow:hidden;aspect-ratio:480/220}
 .sp .film img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.sp .film .ov{position:absolute;inset:0;background:rgba(10,10,10,.58);z-index:0}
 .sp .film:before,.sp .film:after{content:"";position:absolute;left:calc(var(--u)*6);width:calc(var(--u)*42);height:1px;background:var(--lime);opacity:.8;z-index:1}
@@ -80,7 +80,7 @@ html,body{margin:0;background:#000}
 .sp .flip{padding:calc(var(--u)*5) calc(var(--u)*1.5) 0;text-align:center}
 .sp .flip iframe{display:block;width:min(100%,calc(var(--u)*60));height:calc(var(--u)*42);border:0;margin:0 auto;background:#111}
 .sp .flip a{display:inline-block;margin-top:calc(var(--u)*1.2);font-weight:700;font-size:calc(var(--u)*.78);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
-.sp .foot{display:flex;justify-content:center;padding:calc(var(--u)*6) 24px calc(var(--u)*6)}
+.sp .foot{display:flex;justify-content:flex-start;padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*6)}
 .sp .foot a{display:inline-flex;align-items:center;gap:.8em;font-family:Jost,sans-serif;font-weight:500;font-size:clamp(12px,1vw,15px);letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:1.15em 3.2em;transition:background .25s,color .25s,border-color .25s}
 .sp .foot a:hover,.sp .foot a:focus-visible{background:var(--lime);border-color:var(--lime);color:#0A0A0A;outline:none}
 @media(max-width:1000px){.sp{--u:16px}
@@ -122,5 +122,5 @@ html,body{margin:0;background:#000}
 <div class="asn"><span class="lbl">As Seen In</span><div class="g"><span>PEOPLE</span><span>ELLE</span><span>Byrdie</span><span>InStyle</span><span>Cosmopolitan</span><span>Hypebae</span><span>Adweek</span><span>AdAge</span></div></div></div>
 <div class="r"><img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/2ef5a3e9-9959-48aa-8a85-3d9bdbf73eee/imgi_53_144459650.png?format=1500w" alt="SheaMoisture Silk Press in a Bottle" loading="lazy" decoding="async"></div></section>
 <section class="flip" aria-label="Online flipbook"><iframe src="https://heyzine.com/flip-book/599ae76771.html" title="Silk Press Conference online flipbook" loading="lazy" allowfullscreen></iframe></section>
-<div class="foot"><a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></div>
+<div class="foot pad"><a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></div>
 </main></body></html>
