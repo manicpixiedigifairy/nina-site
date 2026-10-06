@@ -3,10 +3,10 @@
 <meta name="description" content="Shea Us What You Got: a trivia-style game show that launched SheaMoisture's Curl Stretch Collection, with 4.8M hero episode views and 5.2M+ views across the series.">
 <title>Nina Austin | Shea Us What You Got</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,400&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0}
-.sv{--u:clamp(11px,1.1111vw,28px);--coral:#e06968;--crim:#a80a20;--terra:#d28c74;--teal:#066b7b;--ink:#2A0D10;--cream:#FFF5EF;--sand:#F3E4DA;--gray:#E9DFD7;--disp:"Bricolage Grotesque","Arial Black",Impact,sans-serif;--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;--bd:var(--sans);--ui:var(--sans);display:block;position:relative;overflow:hidden;background:var(--cream);color:var(--ink);font-family:var(--bd);font-size:calc(var(--u)*1.1);line-height:1.4;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;text-align:left;-webkit-font-smoothing:antialiased}
+.sv{--u:clamp(11px,1.1111vw,28px);--coral:#e06968;--crim:#a80a20;--terra:#d28c74;--teal:#066b7b;--ink:#2A0D10;--cream:#FFF5EF;--sand:#F3E4DA;--gray:#E9DFD7;--disp:"Bricolage Grotesque","Arial Black",Impact,sans-serif;--bd:"Source Serif 4",Georgia,serif;--ui:Jost,"Helvetica Neue",Arial,sans-serif;display:block;position:relative;overflow:hidden;overflow:clip;background:var(--cream);color:var(--ink);font-family:var(--bd);font-size:calc(var(--u)*1.1);line-height:1.4;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;text-align:left;-webkit-font-smoothing:antialiased}
 .sv *,.sv *:before,.sv *:after{box-sizing:border-box}
 .sv h1,.sv h2,.sv h3,.sv p,.sv ul,.sv figure{margin:0;padding:0}
 .sv ul{list-style:none}
@@ -15,14 +15,14 @@ html,body{margin:0}
 .sv button{font:inherit}
 .sv h1,.sv h2,.sv h3{font-family:var(--disp);font-weight:800;color:inherit;letter-spacing:-.028em;word-spacing:.07em;line-height:.92;text-transform:uppercase}
 .sv .pad{padding-left:calc(var(--u)*5.5);padding-right:calc(var(--u)*5.5)}
-.sv .mc,.sv .tg span,.sv .btn,.sv .num,.sv .lb,.sv .fl button,.sv .sf,.sv .mb{font-family:var(--ui)}
-.sv .mc{font-size:calc(var(--u)*.72);font-weight:700;letter-spacing:.035em;text-transform:uppercase;line-height:1.32}
+.sv .mc,.sv .tg span,.sv .btn,.sv .num,.sv .lb,.sv .sf,.sv .mb,.sv .sc{font-family:var(--ui)}
+.sv .mc{font-size:calc(var(--u)*.72);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.32}
 
 /* HERO */
 .sv .hero{position:relative;overflow:hidden;background:var(--crim);color:var(--cream);padding-bottom:calc(var(--u)*5)}
-.sv .hero{container-type:inline-size;--gp:calc(var(--u)*5.5);padding-top:calc(var(--u)*3.2)}
+.sv .hero{container-type:inline-size;--gp:0px;padding-top:calc(var(--u)*3.2)}
 .sv .gh{position:absolute;left:var(--gp);right:var(--gp);top:calc(var(--u)*2);pointer-events:none;user-select:none;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:calc(var(--u)*7.4);line-height:.96;letter-spacing:-.035em;color:var(--crim);-webkit-text-stroke:calc(var(--u)*.16) rgba(255,245,239,.14);paint-order:stroke fill;white-space:nowrap;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 50%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 50%,transparent 100%)}
-@supports (width:1cqw){.sv .gh{font-size:calc((100cqw - var(--gp)*2)*.0903)}}
+@supports (width:1cqw){.sv .gh{font-size:calc((100cqw - var(--gp)*2)*.0925)}}
 .sv .gl{display:flex;justify-content:space-between}
 .sv .gl span{display:block}
 .sv .gl span:last-child{margin-right:.035em}
@@ -36,9 +36,9 @@ html,body{margin:0}
 .sv .bub.r{right:calc(var(--u)*-7);top:calc(var(--u)*23);transform:rotate(3deg)}
 .sv .hero h1{position:relative;z-index:3;text-align:center;font-size:calc(var(--u)*9.4);line-height:.86;margin-top:calc(var(--u)*-4.2);color:var(--cream)}
 .sv .meta{position:relative;z-index:3;display:grid;grid-template-columns:1.2fr 1fr;gap:calc(var(--u)*3.5);align-items:start;margin-top:calc(var(--u)*3.4)}
-.sv .meta .ds{font-size:calc(var(--u)*1.5);font-weight:500;line-height:1.28;letter-spacing:-.012em}
+.sv .meta .ds{font-size:calc(var(--u)*1.45);font-weight:400;line-height:1.3;letter-spacing:0}
 .sv .tg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.55)}
-.sv .tg span{border:1px solid rgba(255,245,239,.75);border-radius:99px;padding:.42em 1em;font-size:calc(var(--u)*.86);font-weight:600;line-height:1.2}
+.sv .tg span{border:1px solid rgba(255,245,239,.75);border-radius:99px;padding:.42em 1em;font-size:calc(var(--u)*.9);font-weight:500;letter-spacing:.05em;line-height:1.2}
 
 /* DECK SLIDES */
 .sv .deck{background:var(--sand);padding:calc(var(--u)*5) calc(var(--u)*5.5);display:grid;gap:calc(var(--u)*1.4)}
@@ -47,7 +47,7 @@ html,body{margin:0}
 .sv .sl .md>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:92% 50%}
 .sv .sl .tx{display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*2.2);padding:calc(var(--u)*2.6);color:var(--crim)}
 .sv .sl h2{font-size:calc(var(--u)*5.4);color:var(--crim)}
-.sv .sl .lead{max-width:calc(var(--u)*25);font-size:calc(var(--u)*1.6);font-weight:500;line-height:1.27;letter-spacing:-.015em;color:var(--ink)}
+.sv .sl .lead{max-width:calc(var(--u)*25);font-size:calc(var(--u)*1.6);font-weight:400;line-height:1.3;letter-spacing:0;color:var(--ink)}
 .sv .sl .ft{display:flex;align-items:flex-end;justify-content:space-between;gap:calc(var(--u)*2)}
 .sv .num{font-weight:600;font-size:calc(var(--u)*2.6);letter-spacing:-.03em;line-height:1}
 .sv .sl .rt{margin-left:auto;width:calc(var(--u)*17);border-top:1px solid var(--crim);padding-top:calc(var(--u)*.8);text-align:right}
@@ -77,15 +77,15 @@ html,body{margin:0}
 .sv .row .big{font-family:var(--disp);font-weight:800;font-size:calc(var(--u)*17.5);line-height:.82;letter-spacing:-.04em;margin-left:calc(var(--u)*-.6)}
 .sv .row .cap{text-align:right;padding-bottom:calc(var(--u)*1.2)}
 .sv .row .cap b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:calc(var(--u)*2.3);letter-spacing:-.025em;line-height:1}
-.sv .row .cap span{display:block;margin-top:calc(var(--u)*.6);font-size:calc(var(--u)*1.15);font-weight:500;opacity:.9}
+.sv .row .cap span{display:block;margin-top:calc(var(--u)*.6);font-size:calc(var(--u)*1.15);font-weight:400;opacity:.9}
 .sv .hue{margin-top:calc(var(--u)*4.4);display:grid;grid-template-columns:1.25fr 1fr;background:var(--cream);color:var(--ink)}
 .sv .hue .q{padding:calc(var(--u)*3);border-right:1px solid rgba(42,13,16,.18)}
 .sv .hue blockquote{margin:calc(var(--u)*1.2) 0 calc(var(--u)*1.4);padding:0;font-family:var(--disp);font-weight:700;font-size:calc(var(--u)*3.7);line-height:1;letter-spacing:-.03em;word-spacing:.05em;color:var(--crim)}
 .sv .hue blockquote em{font-style:normal;color:var(--teal)}
 .sv .hue .q .mc{color:var(--ink)}
 .sv .hue .c{padding:calc(var(--u)*3);display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*2)}
-.sv .hue .c p.bd2{font-size:calc(var(--u)*1.2);line-height:1.38;font-weight:500}
-.sv .btn{display:inline-flex;align-items:center;gap:.6em;align-self:flex-start;background:var(--crim);color:var(--cream);border-radius:99px;padding:.8em 1.5em;font-weight:700;font-size:calc(var(--u)*.88);letter-spacing:.08em;text-transform:uppercase;transition:background .2s}
+.sv .hue .c p.bd2{font-size:calc(var(--u)*1.2);line-height:1.4;font-weight:400}
+.sv .btn{display:inline-flex;align-items:center;gap:.6em;align-self:flex-start;background:var(--crim);color:var(--cream);border-radius:99px;padding:.8em 1.5em;font-weight:500;font-size:calc(var(--u)*.88);letter-spacing:.14em;text-transform:uppercase;transition:background .2s}
 .sv .btn:hover{background:var(--teal)}
 .sv .btn.line{background:transparent;color:var(--teal);border:2px solid var(--teal)}
 .sv .btn.line:hover{background:var(--teal);color:var(--cream)}
@@ -94,11 +94,11 @@ html,body{margin:0}
 .sv .why{padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*7);background:var(--cream)}
 .sv .why .hd{display:grid;grid-template-columns:.85fr 1.15fr;gap:calc(var(--u)*3.5);align-items:end}
 .sv .why h2{font-size:calc(var(--u)*7.2);color:var(--crim)}
-.sv .why .st{font-size:calc(var(--u)*1.8);font-weight:500;line-height:1.26;letter-spacing:-.018em}
+.sv .why .st{font-size:calc(var(--u)*1.8);font-weight:400;line-height:1.28;letter-spacing:0}
 .sv .cards3{margin-top:calc(var(--u)*4.6);display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*1.5);align-items:start}
 .sv .pw{position:relative}
 .sv .pc{min-height:calc(var(--u)*17);padding:calc(var(--u)*1.8) calc(var(--u)*2) calc(var(--u)*4.4);display:flex;flex-direction:column;gap:calc(var(--u)*2.4)}
-.sv .pc p{font-size:calc(var(--u)*1.42);font-weight:600;line-height:1.26;letter-spacing:-.012em}
+.sv .pc p{font-size:calc(var(--u)*1.42);font-weight:500;line-height:1.28;letter-spacing:0}
 .sv .pc.c1{background:var(--coral);color:var(--ink)}
 .sv .pc.c2{background:var(--teal);color:var(--cream)}
 .sv .pc.c3{background:var(--terra);color:var(--ink)}
@@ -110,57 +110,65 @@ html,body{margin:0}
 .sv .cp{background:var(--terra);color:var(--ink);padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*7)}
 .sv .cp .hd{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*3);align-items:end}
 .sv .cp h2{font-size:calc(var(--u)*8.6);color:var(--ink)}
-.sv .cp .lead{max-width:calc(var(--u)*50);margin-top:calc(var(--u)*2.6);font-size:calc(var(--u)*1.7);font-weight:500;line-height:1.28;letter-spacing:-.015em}
+.sv .cp .lead{max-width:calc(var(--u)*50);margin-top:calc(var(--u)*2.6);font-size:calc(var(--u)*1.7);font-weight:400;line-height:1.3;letter-spacing:0}
 .sv .rows{margin-top:calc(var(--u)*4.4);border-top:2px solid var(--ink)}
 .sv .rw{display:grid;grid-template-columns:calc(var(--u)*5) 1fr calc(var(--u)*18);gap:calc(var(--u)*2.4);align-items:start;padding:calc(var(--u)*2.4) 0 calc(var(--u)*3);border-bottom:1px solid rgba(42,13,16,.55)}
-.sv .rw .ld{font-size:calc(var(--u)*1.55);font-weight:600;line-height:1.26;letter-spacing:-.012em;max-width:calc(var(--u)*34)}
+.sv .rw .ld{font-size:calc(var(--u)*1.55);font-weight:500;line-height:1.28;letter-spacing:0;max-width:calc(var(--u)*34)}
 .sv .chips{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.3)}
 .sv .chips span{background:var(--cream);color:var(--crim);border-radius:99px;padding:.34em .9em .4em;font-family:var(--disp);font-weight:800;font-size:calc(var(--u)*1.95);letter-spacing:-.025em;line-height:1.1;text-transform:uppercase}
-.sv .chips.k span{background:var(--crim);color:var(--cream)}
+.sv .chips.k span,.sv .chips.q span+span{background:var(--crim);color:var(--cream)}
+.sv .chips.q span{text-wrap:balance}
+.sv .rw .src{margin-top:calc(var(--u)*1.1);color:var(--ink);opacity:.75}
 .sv .rw .ti{margin:0;transform:rotate(1.2deg);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(42,13,16,.2)}
 .sv .rw:nth-child(2) .ti{transform:rotate(-1.2deg)}
 
 /* COMMENTS */
-.sv .cm{background:var(--cream);padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*3)}
-.sv .cm .hd{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*3);align-items:end}
+.sv .cm{background:var(--cream);padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*6.5)}
 .sv .cm h2{font-size:calc(var(--u)*7.4);color:var(--crim)}
-.sv .cm .hd .dk{max-width:calc(var(--u)*24);font-size:calc(var(--u)*1.3);font-weight:500;line-height:1.32;letter-spacing:-.008em;text-align:right}
 /* reaction ribbon */
-.sv .rib{position:relative;margin:calc(var(--u)*3.4) calc(var(--u)*-5.5) 0;background:var(--crim);padding:calc(var(--u)*1.5) 0;display:grid;gap:calc(var(--u)*.9);overflow:hidden}
+.sv .rib{position:relative;margin:calc(var(--u)*3.4) calc(var(--u)*-5.5) 0;background:var(--crim);color:var(--cream);padding:calc(var(--u)*1.5) 0;display:grid;gap:calc(var(--u)*.9);overflow:hidden}
 .sv .rr{overflow-x:auto;scrollbar-width:none}
 .sv .rr::-webkit-scrollbar{display:none}
 .sv .rib.js .rr{overflow:hidden}
 .sv .rtk{display:flex;gap:calc(var(--u)*.9);width:max-content;will-change:transform}
-.sv .rc{flex:0 0 auto;align-items:center;padding:calc(var(--u)*.75) calc(var(--u)*1.6) calc(var(--u)*.8) calc(var(--u)*.8);box-shadow:0 calc(var(--u)*.5) calc(var(--u)*1.4) rgba(42,13,16,.3)}
-.sv .rc .av{width:calc(var(--u)*2.6);height:calc(var(--u)*2.6)}
-.sv .rc .nm{font-size:calc(var(--u)*.82)}
-.sv .rc .ct{margin-top:calc(var(--u)*.12);font-size:calc(var(--u)*1.3);line-height:1.15;letter-spacing:.05em;white-space:nowrap}
-.sv .rpb{display:none;position:absolute;z-index:3;right:calc(var(--u)*1.2);top:50%;transform:translateY(-50%);width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);padding:0;border:0;border-radius:50%;background:var(--cream);color:var(--crim);cursor:pointer;place-items:center;box-shadow:0 calc(var(--u)*.4) calc(var(--u)*1.2) rgba(42,13,16,.35)}
-.sv .rib.js .rpb{display:grid}
-.sv .rpb svg{width:calc(var(--u)*1.1);height:calc(var(--u)*1.1)}
-.sv .rpb .pl{display:none}
-.sv .rpb[aria-pressed=true] .pl{display:block}
-.sv .rpb[aria-pressed=true] .ps{display:none}
-.sv .rpb:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-/* controls */
-.sv .ctl{display:none;margin-top:calc(var(--u)*3.4);justify-content:space-between;align-items:center;gap:calc(var(--u)*1.4);flex-wrap:wrap;scroll-margin-top:calc(var(--u)*6)}
-.sv .cmg.js .ctl{display:flex}
-.sv .fl{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6)}
-.sv .fl button,.sv .sf,.sv .mb{cursor:pointer;font-weight:700;font-size:calc(var(--u)*.88);letter-spacing:.09em;text-transform:uppercase;border-radius:99px;padding:.75em 1.45em;line-height:1.2;transition:background .2s,color .2s,transform .2s,border-color .2s}
-.sv .fl button{background:transparent;color:var(--crim);border:2px solid var(--crim)}
-.sv .fl button:hover{background:rgba(168,10,32,.1)}
-.sv .fl button[aria-pressed=true]{background:var(--crim);color:var(--cream)}
-.sv .sf{display:inline-flex;align-items:center;gap:.6em;background:var(--teal);color:var(--cream);border:2px solid var(--teal)}
+.sv .rb{flex:0 0 auto;display:flex;align-items:center;gap:calc(var(--u)*.8);border:1px solid rgba(255,245,239,.55);border-radius:99px;padding:calc(var(--u)*.45) calc(var(--u)*1.3) calc(var(--u)*.45) calc(var(--u)*1.1);white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.sv .rb:hover{background:var(--cream);color:var(--crim);border-color:var(--cream)}
+.sv .rb i{font-style:normal;font-size:calc(var(--u)*1.7);line-height:1.2;letter-spacing:.05em;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.sv .rb u{text-decoration:none;font-family:var(--ui);font-size:calc(var(--u)*.72);font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+/* hover-reveal index + image stage */
+.sv .ix{margin-top:calc(var(--u)*4);display:grid;grid-template-columns:calc(var(--u)*30) minmax(0,1fr);gap:calc(var(--u)*4.4);align-items:start}
+.sv .stg{align-self:stretch;min-width:0}
+.sv .stk{position:sticky;top:calc(var(--u)*2.4)}
+.sv .ix.pin .stk{position:relative;top:auto;will-change:transform}
+.sv .stg .arch{position:relative;aspect-ratio:4/5;width:min(100%,calc((100vh - var(--u)*9)*.8));min-width:calc(var(--u)*18);background:#2a0d10}
+.sv .stg .arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+.sv .stg .arch img.on{opacity:1}
+.sv .sc{display:flex;align-items:center;gap:.9em;margin-top:calc(var(--u)*1.1);font-size:calc(var(--u)*.74);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.3;color:var(--crim)}
+.sv .sc:before{content:"";flex:0 0 calc(var(--u)*1.8);height:2px;background:var(--crim)}
+.sv .sc span{transition:opacity .16s}
+.sv .lst{min-width:0}
+.sv .idx,.sv .ibar{display:none}
+.sv .cmg.js .idx{display:block;border-bottom:1px solid rgba(42,13,16,.25)}
+.sv .cmg.js .ibar{display:flex}
+.sv .ir{display:flex;width:100%;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.6);margin:0;padding:calc(var(--u)*1.3) 0 calc(var(--u)*1.35);background:none;border:0;border-top:1px solid rgba(42,13,16,.25);color:rgba(42,13,16,.52);cursor:pointer;text-align:left;transition:color .25s}
+.sv .it{font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.028em;word-spacing:.07em;line-height:.95;font-size:calc(var(--u)*3.1);text-wrap:balance;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.sv .ia{flex:0 0 auto;display:grid;place-items:center;width:calc(var(--u)*3.2);height:calc(var(--u)*3.2);border-radius:50%;border:2px solid currentColor;opacity:0;transform:translateX(calc(var(--u)*-1.2));transition:opacity .25s,transform .4s cubic-bezier(.2,.8,.2,1),background .2s,color .2s,border-color .2s}
+.sv .ia svg{width:46%;height:46%}
+.sv .ir.pk,.sv .ir.on{color:var(--crim)}
+.sv .ir.pk .it,.sv .ir.on .it{transform:translateX(calc(var(--u)*.9))}
+.sv .ir.pk .ia,.sv .ir.on .ia{opacity:1;transform:none}
+.sv .ir.on .ia{background:var(--crim);border-color:var(--crim);color:var(--cream)}
+.sv .ir:focus-visible,.sv .sf:focus-visible,.sv .mb:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+.sv .sf:focus-visible,.sv .mb:focus-visible{outline-offset:3px}
+.sv .ibar{margin-top:calc(var(--u)*1.8);align-items:flex-start;justify-content:space-between;gap:calc(var(--u)*2)}
+.sv .sd{max-width:calc(var(--u)*27);min-height:calc(var(--u)*3.9);font-size:calc(var(--u)*1.4);font-weight:400;line-height:1.3;transition:opacity .16s}
+.sv .sf,.sv .mb{cursor:pointer;font-weight:500;font-size:calc(var(--u)*.88);letter-spacing:.14em;text-transform:uppercase;border-radius:99px;padding:.75em 1.45em;line-height:1.2;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.sv .sf{flex:0 0 auto;display:inline-flex;align-items:center;gap:.6em;background:var(--teal);color:var(--cream);border:2px solid var(--teal)}
 .sv .sf:hover{background:var(--ink);border-color:var(--ink)}
 .sv .sf:active{transform:scale(.96)}
 .sv .sf svg{width:1.25em;height:1.25em}
-.sv .fl button:focus-visible,.sv .sf:focus-visible,.sv .mb:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-/* editorial caption */
-.sv .cap2{margin-top:calc(var(--u)*2.4);border-top:2px solid var(--crim);padding-top:calc(var(--u)*1.6);display:grid;grid-template-columns:1.1fr 1fr;gap:calc(var(--u)*3);align-items:end;transition:opacity .16s}
-.sv .cap2 h3{font-size:calc(var(--u)*4.4);color:var(--crim);max-width:8.2em;min-height:1.84em;text-wrap:balance}
-.sv .cap2 p{font-size:calc(var(--u)*1.5);font-weight:500;line-height:1.3;letter-spacing:-.012em;max-width:calc(var(--u)*32)}
 /* masonry wall */
-.sv .wall{--g:calc(var(--u)*1);margin-top:calc(var(--u)*2.4);column-count:4;column-gap:var(--g)}
+.sv .wall{--g:calc(var(--u)*1);margin-top:calc(var(--u)*2.2);column-count:2;column-gap:var(--g)}
 .sv .wall .ti,.sv .wall .fq{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 var(--g);width:100%;transition:transform .25s,box-shadow .25s}
 .sv .wall .ti:hover{transform:translateY(calc(var(--u)*-.3));box-shadow:0 calc(var(--u)*1.2) calc(var(--u)*2.8) rgba(168,10,32,.2),0 1px 2px rgba(42,13,16,.06)}
 .sv .wall .fq:hover{transform:translateY(calc(var(--u)*-.3))}
@@ -177,9 +185,9 @@ html,body{margin:0}
 .sv .fq.k4{background:var(--terra);color:var(--ink)}
 .sv .fq .qm{font-family:var(--disp);font-weight:800;font-size:calc(var(--u)*5);line-height:.55;height:calc(var(--u)*1.5);opacity:.4}
 .sv .fq .qt{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;word-spacing:.04em;line-height:1.02;overflow-wrap:anywhere}
-.sv .fq.s1 .qt{font-size:calc(var(--u)*2.7)}
-.sv .fq.s2 .qt{font-size:calc(var(--u)*2.2)}
-.sv .fq.s3 .qt{font-size:calc(var(--u)*1.85)}
+.sv .fq.s1 .qt{font-size:calc(var(--u)*3)}
+.sv .fq.s2 .qt{font-size:calc(var(--u)*2.4)}
+.sv .fq.s3 .qt{font-size:calc(var(--u)*2)}
 .sv .fq .mn{color:inherit;text-decoration:underline;text-underline-offset:.15em}
 .sv .fq figcaption{display:flex;align-items:center;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*.3);font-family:var(--ui);font-size:calc(var(--u)*.78);font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
 .sv .fq figcaption .vb{margin:0}
@@ -190,6 +198,25 @@ html,body{margin:0}
 .sv .cmg.js .mb{display:block}
 .sv .cmg.js .mb.hid{display:none}
 .sv .foot{background:var(--cream);padding:calc(var(--u)*3) calc(var(--u)*5.5) calc(var(--u)*5)}
+
+/* SEGMENTS */
+.sv .sg{background:var(--teal);color:var(--cream);padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*7)}
+.sv .sg .hd{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*3);align-items:end}
+.sv .sg h2{font-size:calc(var(--u)*7.4);color:var(--cream)}
+.sv .sgd{text-wrap:balance;max-width:calc(var(--u)*22);font-size:calc(var(--u)*1.3);font-weight:400;line-height:1.35;text-align:right}
+.sv .sgs{margin-top:calc(var(--u)*4);display:flex;gap:calc(var(--u)*1.4);align-items:flex-start}
+.sv .sgc{display:block;flex:var(--a) 1 0;min-width:0}
+.sv .sgm{position:relative;overflow:hidden;aspect-ratio:var(--a);border-radius:calc(var(--u)*1.2);background:#0b2a30}
+.sv .sgm img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.sv .sgc:hover .sgm img{transform:scale(1.05)}
+.sv .sgp{position:absolute;right:calc(var(--u)*1);bottom:calc(var(--u)*1);width:calc(var(--u)*3.2);height:calc(var(--u)*3.2);border-radius:50%;background:var(--cream);color:var(--crim);display:grid;place-items:center;box-shadow:0 calc(var(--u)*.5) calc(var(--u)*1.4) rgba(0,0,0,.3);transition:transform .25s}
+.sv .sgc:hover .sgp{transform:scale(1.1) rotate(-4deg)}
+.sv .sgp svg{width:42%;height:42%;margin-left:6%}
+.sv .sgt{margin-top:calc(var(--u)*1.4)}
+.sv .sgt h3{font-size:calc(var(--u)*2.5);color:var(--cream)}
+.sv .sgt p{margin-top:calc(var(--u)*.7);font-size:calc(var(--u)*1.15);font-weight:400;line-height:1.35;opacity:.94}
+.sv .sgt .mc{display:block;margin-top:calc(var(--u)*1);color:var(--cream);border-bottom:1px solid rgba(255,245,239,.55);padding-bottom:calc(var(--u)*.3);width:max-content;max-width:100%}
+.sv .sgc:focus-visible{outline:3px solid var(--cream);outline-offset:4px;border-radius:calc(var(--u)*1.2)}
 
 /* COMMENT CARD */
 .sv .ti{margin:0;display:flex;gap:calc(var(--u)*.9);align-items:flex-start;background:#fff;color:var(--ink);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*1) calc(var(--u)*1.3) calc(var(--u)*1.05) calc(var(--u)*1);box-shadow:0 calc(var(--u)*.9) calc(var(--u)*2.4) rgba(42,13,16,.13),0 1px 2px rgba(42,13,16,.06);font-family:var(--ui);font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;line-height:1.3}
@@ -204,14 +231,14 @@ html,body{margin:0}
 
 @media(max-width:1000px){
 .sv{--u:16px}
-.sv .pad,.sv .deck,.sv .res,.sv .why,.sv .cp,.sv .cm,.sv .foot{padding-left:20px;padding-right:20px}
-.sv .hero{--gp:20px;padding-top:20px}
+.sv .pad,.sv .deck,.sv .res,.sv .why,.sv .cp,.sv .cm,.sv .sg,.sv .foot{padding-left:20px;padding-right:20px}
+.sv .hero{--gp:0px;padding-top:20px}
 .sv .gh{top:10px}
 .sv .stage{width:100%;margin-top:66px}
 .sv .bub{display:none}
 .sv .hero h1{font-size:12.6vw;margin-top:-6.5vw}
 .sv .meta{grid-template-columns:1fr;gap:20px;margin-top:26px}
-.sv .meta .ds{font-size:19px}
+.sv .meta .ds{font-size:18px}
 .sv .tg span{font-size:13px}
 .sv .deck{padding-top:28px;padding-bottom:28px;gap:14px}
 .sv .sl{grid-template-columns:1fr;min-height:0}
@@ -261,29 +288,40 @@ html,body{margin:0}
 .sv .rw .ld{font-size:20px}
 .sv .chips span{font-size:21px}
 .sv .rw .ti{margin-top:6px}
-.sv .cm{padding-top:44px}
-.sv .cm .hd{grid-template-columns:1fr;gap:14px}
+.sv .cm{padding-top:44px;padding-bottom:44px}
 .sv .cm h2{font-size:16vw}
-.sv .cm .hd .dk{text-align:left;font-size:16px;max-width:none}
 .sv .rib{margin:26px -20px 0;padding:12px 0;gap:8px}
 .sv .rtk{gap:8px}
-.sv .rc{padding:9px 18px 9px 9px}
-.sv .rc .av{width:36px;height:36px}
-.sv .rc .nm{font-size:12px}
-.sv .rc .ct{font-size:19px}
-.sv .rpb{width:34px;height:34px;right:10px}
-.sv .rpb svg{width:14px;height:14px}
-.sv .ctl{margin-top:26px}
-.sv .fl button,.sv .sf,.sv .mb{font-size:12.5px}
-.sv .ctl{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:12px}
-.sv .fl{gap:8px;flex-wrap:nowrap;overflow-x:auto;margin:0 -20px;padding:2px 20px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.sv .fl::-webkit-scrollbar{display:none}
-.sv .fl button{flex:0 0 auto}
-.sv .sf{justify-content:center}
-.sv .cap2{grid-template-columns:1fr;gap:10px;margin-top:20px;padding-top:16px}
-.sv .cap2 h3{font-size:34px;max-width:none;min-height:0}
-.sv .cap2 p{font-size:17px;max-width:none}
+.sv .rb{padding:5px 14px 5px 12px;gap:8px}
+.sv .rb i{font-size:22px}
+.sv .rb u{font-size:11px}
+.sv .ix{grid-template-columns:1fr;gap:26px;margin-top:28px}
+.sv .stk{position:static}
+.sv .stg .arch{width:100%;max-width:440px;min-width:0;margin:0 auto;aspect-ratio:1/1}
+.sv .sc{font-size:11.5px;margin-top:12px;justify-content:center}
+.sv .sc:before{display:none}
+.sv .ir{padding:15px 0 16px;gap:12px}
+.sv .it{font-size:clamp(20px,6.3vw,30px)}
+.sv .ia{width:34px;height:34px;opacity:.45;transform:none}
+.sv .ir.on .it{transform:none}
+.sv .ibar{flex-direction:column;gap:14px;margin-top:16px}
+.sv .sd{font-size:17px;max-width:none;min-height:0}
+.sv .sf,.sv .mb{font-size:12.5px}
+.sv .sf{justify-content:center;width:100%}
 .sv .wall{--g:10px;margin-top:20px;column-count:1}
+.sv .sg{padding-top:44px;padding-bottom:48px}
+.sv .sg .hd{grid-template-columns:1fr;gap:14px}
+.sv .sg h2{font-size:16vw}
+.sv .sgd{text-align:left;font-size:17px;max-width:none}
+.sv .sgs{--h:172px;margin:26px -20px 0;padding:0 20px 8px;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sv .sgs::-webkit-scrollbar{display:none}
+.sv .sgc{flex:0 0 auto;width:calc(var(--h)*var(--a));scroll-snap-align:start}
+.sv .sgm{aspect-ratio:auto;height:var(--h);border-radius:16px}
+.sv .sgt{margin-top:14px}
+.sv .sgt h3{font-size:26px}
+.sv .sgt p{font-size:16px}
+.sv .sgt .mc{margin-top:12px}
+.sv .sgp{width:38px;height:38px;right:10px;bottom:10px}
 .sv .fq{padding:22px 22px 18px;gap:16px;border-radius:16px}
 .sv .fq .qm{font-size:80px;height:28px}
 .sv .fq.s1 .qt{font-size:38px}
@@ -299,7 +337,7 @@ html,body{margin:0}
 .sv .vb{width:14px;height:14px}
 
 }
-@media(prefers-reduced-motion:reduce){.sv .wall .pop{animation:none}.sv .cap2{transition:none}.sv .wall .ti,.sv .wall .fq{transition:none}}
+@media(prefers-reduced-motion:reduce){.sv .wall .pop{animation:none}.sv .wall .ti,.sv .wall .fq{transition:none}.sv .stg .arch img,.sv .it,.sv .ia,.sv .ir,.sv .sd,.sv .sc span,.sv .sgm img,.sv .sgp{transition:none}}
 
 </style></head><body>
 <main class="sv">
@@ -343,7 +381,7 @@ html,body{margin:0}
 <div class="ft"><div class="rt mc"><p>Distributed across digital platforms, leading with Instagram and adding TikTok for interactivity, boosted with endorsements from influencers like Serena Page.</p><p>By speaking the language of the consumer, we drove buzz and re-ignited the brand&rsquo;s base.</p></div></div>
 </div>
 <div class="md coral">
-<div class="ph a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-2.gif" alt="Clip from the show: Lellies answering a question" width="360" height="641" loading="lazy" decoding="async"></div>
+<div class="ph a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-4.gif" alt="Clip from the show: a contestant at her podium answering &ldquo;What MVP pair do you need for wash day?&rdquo;" width="360" height="640" loading="lazy" decoding="async"></div>
 <div class="ph b"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-3.gif" alt="Clip from the show: Grace, the scoreboard and the winner" width="360" height="641" loading="lazy" decoding="async"></div>
 <div class="lb mc">The cast: @noordinarynoire @naturallymelonie @goldynaps @grace_africa @lelliessantiago</div>
 </div>
@@ -382,28 +420,48 @@ html,body{margin:0}
 <p class="lead">The format had to teach the product without sounding like an ad. I translated each Curl Stretch benefit into a game category and a two-part tension question, so the science (anti-shrinkage, length, detangling, Kalahari melon) landed as comedy and competition, not a spec sheet.</p>
 <div class="rows">
 <div class="rw"><span class="num">(1)</span><div><p class="ld">Categories engineered around claims:</p><div class="chips"><span>Bring Me The Moisture</span><span>The Secret Sauce</span><span>Black Hair Essentials</span><span>Hang Time</span></div></div><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">N</span><div class="bd"><p class="nm">nnenab</p><p class="ct">Ahhhh!!! I LOVEEEE everything about this!!! This concept is tooo cayuteeeee!!! 😍😍😍😍</p></div></figure></div>
-<div class="rw"><span class="num">(2)</span><div><p class="ld">Two-part host questions with an IYKYK comedy beat baked in, answered by the product truth.</p></div><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">M</span><div class="bd"><p class="nm">mekayla.vibes</p><p class="ct">Tell me you’re in your Shea Moisture bag without telling me you’re in your Shea Moisture bag... OHH 🫖🔥🔥</p></div></figure></div>
+<div class="rw"><span class="num">(2)</span><div><p class="ld">Two-part host questions with an IYKYK comedy beat baked in, answered by the product truth.</p><div class="chips q"><span>Shrinkage had you down bad,</span><span>but what changed?</span></div><p class="mc src">Asked on the show</p></div><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">M</span><div class="bd"><p class="nm">mekayla.vibes</p><p class="ct">Tell me you’re in your Shea Moisture bag without telling me you’re in your Shea Moisture bag... OHH 🫖🔥🔥</p></div></figure></div>
 <div class="rw"><span class="num">(3)</span><div><p class="ld">Franchise one-liners for reuse across cut-downs:</p><div class="chips k"><span>Curly Q&rsquo;s</span><span>All Tea, No Shea&rsquo;d</span><span>The Mane Stage</span></div></div><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">N</span><div class="bd"><p class="nm">n.e.e.ks<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">PR team is working 🤏🏽🤏🏽🤏🏽</p></div></figure></div>
 </div>
 </section>
 
 <section class="cm" aria-labelledby="cmh">
-<div class="hd"><div><p class="mc" style="color:var(--teal)">The Audience</p><h2 id="cmh" style="margin-top:calc(var(--u)*1.2)">Caught In<br>The Comments</h2></div><p class="dk">Pick a lens, shuffle the wall, or just watch the reactions roll by.</p></div>
-<div class="rib" role="group" aria-label="Reactions from the comments"><div class="rr"><div class="rtk"><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">W</span><div class="bd"><p class="nm">whoismyac<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">🔥🔥🔥🔥🔥</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">W</span><div class="bd"><p class="nm">whoismyac<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">K</span><div class="bd"><p class="nm">kalani_mommy29</p><p class="ct">😍😍😍😍👏👏👏👏</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">T</span><div class="bd"><p class="nm">themodestnewyorker</p><p class="ct">🔥🔥🔥🔥😍😍😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p class="nm">lord0dd</p><p class="ct">😍😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p class="nm">lovewhitneyk</p><p class="ct">😍😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">R</span><div class="bd"><p class="nm">richh_toi</p><p class="ct">😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">D</span><div class="bd"><p class="nm">divinelydenia</p><p class="ct">😂😂😂</p></div></figure></div></div><div class="rr"><div class="rtk"><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">R</span><div class="bd"><p class="nm">rymdoor</p><p class="ct">😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">A</span><div class="bd"><p class="nm">azmareec</p><p class="ct">🤩🤩🤩</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">R</span><div class="bd"><p class="nm">rachelamyowens<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">U</span><div class="bd"><p class="nm">ursoskinnyadaeze</p><p class="ct">😍😍😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">D</span><div class="bd"><p class="nm">denicia.danielle</p><p class="ct">😍😍😍😍</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">V</span><div class="bd"><p class="nm">vueshowdesigngroup</p><p class="ct">🤩🤩🤩</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">O</span><div class="bd"><p class="nm">ohwawa_<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">❤️❤️❤️</p></div></figure><figure class="ti rc" data-b="1"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">T</span><div class="bd"><p class="nm">thecurlykid</p><p class="ct">🔥🔥🔥🔥</p></div></figure></div></div><button class="rpb" type="button" aria-label="Pause reactions" aria-pressed="false"><svg class="ps" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4.2" height="16" rx="1"/><rect x="13.8" y="4" width="4.2" height="16" rx="1"/></svg><svg class="pl" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg></button></div>
+<div class="hd"><p class="mc" style="color:var(--teal)">The Audience</p><h2 id="cmh" style="margin-top:calc(var(--u)*1.2)">Caught In<br>The Comments</h2></div>
+<div class="rib" role="group" aria-label="Reactions from the comments"><div class="rr"><div class="rtk"><span class="rb" data-b="1"><i>🔥🔥🔥🔥🔥</i><u>@whoismyac</u></span><span class="rb" data-b="1"><i>😍😍😍😍</i><u>@whoismyac</u></span><span class="rb" data-b="1"><i>😍😍😍😍👏👏👏👏</i><u>@kalani_mommy29</u></span><span class="rb" data-b="1"><i>🔥🔥🔥🔥😍😍😍😍😍😍</i><u>@themodestnewyorker</u></span><span class="rb" data-b="1"><i>😍😍😍😍😍</i><u>@lord0dd</u></span><span class="rb" data-b="1"><i>😍😍😍😍😍</i><u>@lovewhitneyk</u></span><span class="rb" data-b="1"><i>😍😍😍😍</i><u>@richh_toi</u></span><span class="rb" data-b="1"><i>😂😂😂</i><u>@divinelydenia</u></span></div></div><div class="rr"><div class="rtk"><span class="rb" data-b="1"><i>😍😍😍</i><u>@rymdoor</u></span><span class="rb" data-b="1"><i>🤩🤩🤩</i><u>@azmareec</u></span><span class="rb" data-b="1"><i>😍😍😍</i><u>@rachelamyowens</u></span><span class="rb" data-b="1"><i>😍😍😍😍😍😍</i><u>@ursoskinnyadaeze</u></span><span class="rb" data-b="1"><i>😍😍😍😍</i><u>@denicia.danielle</u></span><span class="rb" data-b="1"><i>🤩🤩🤩</i><u>@vueshowdesigngroup</u></span><span class="rb" data-b="1"><i>❤️❤️❤️</i><u>@ohwawa_</u></span><span class="rb" data-b="1"><i>🔥🔥🔥🔥</i><u>@thecurlykid</u></span></div></div></div>
 <div class="cmg">
-<div class="ctl" id="ctl">
-<div class="fl" role="group" aria-label="Filter comments">
-<button type="button" data-f="all" aria-pressed="true" data-h="Everybody Showed Up" data-d="Fans, creators, cast and a whole lot of fire emojis. Pick a lens above or shuffle the wall.">All</button>
-<button type="button" data-f="cast" aria-pressed="false" data-h="They Saw The Cast" data-d="Fans called the casting perfect. Creators tagged each other and cheered the contestants.">The Cast</button>
-<button type="button" data-f="craft" aria-pressed="false" data-h="They Noticed The Craft" data-d="Comments praised the set, the products, the concept and the creative direction behind it.">The Craft</button>
-<button type="button" data-f="more" aria-pressed="false" data-h="They Wanted More" data-d="&ldquo;MORE OF THISSSSS&rdquo; and a request for free product say it best.">More Please</button>
-<button type="button" data-f="ver" aria-pressed="false" data-h="Verified Voices" data-d="Verified accounts joined in too, including members of the cast.">Verified</button>
+<div class="ix">
+<div class="stg"><div class="stk">
+<div class="arch">
+<img class="on" data-k="all" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-idx-host.gif" alt="The host holding her cue cards, cut with the studio audience" width="420" height="525" loading="lazy" decoding="async" style="object-position:50% 8%">
+<img data-k="cast" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-idx-cast.jpg" alt="A contestant at her podium with her hand on the bell" width="576" height="720" loading="lazy" decoding="async" style="object-position:50% 20%">
+<img data-k="craft" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-idx-set.jpg" alt="The Shea Us What You Got set with the prize wheel, the host and the studio audience" width="576" height="720" loading="lazy" decoding="async" style="object-position:50% 30%">
+<img data-k="more" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-idx-more.jpg" alt="The Curl Stretch Collection on the prize table" width="576" height="720" loading="lazy" decoding="async" style="object-position:50% 40%">
+<img data-k="ver" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-idx-crowd.jpg" alt="The Shea Us What You Got title card over the studio audience" width="576" height="720" loading="lazy" decoding="async" style="object-position:50% 35%">
 </div>
-<button class="sf" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg><span>Shuffle</span></button>
+<p class="sc"><span>The host, cue cards in hand, and the studio crowd</span></p>
+</div></div>
+<div class="lst">
+<div class="idx" role="group" aria-label="Filter comments">
+<button class="ir on" type="button" data-f="all" aria-pressed="true" data-d="Fans, creators, cast and a whole lot of fire emojis." data-cap="The host, cue cards in hand, and the studio crowd"><span class="it">Everybody Showed Up</span><span class="ia" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></button>
+<button class="ir" type="button" data-f="cast" aria-pressed="false" data-d="Fans called the casting perfect. Creators tagged each other and cheered the contestants." data-cap="A contestant at her podium"><span class="it">They Saw The Cast</span><span class="ia" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></button>
+<button class="ir" type="button" data-f="craft" aria-pressed="false" data-d="Comments praised the set, the products, the concept and the creative direction behind it." data-cap="The set, the wheel and the audience"><span class="it">They Noticed The Craft</span><span class="ia" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></button>
+<button class="ir" type="button" data-f="more" aria-pressed="false" data-d="&ldquo;MORE OF THISSSSS&rdquo; and a request for free product say it best." data-cap="Curl Stretch on the prize table"><span class="it">They Wanted More</span><span class="ia" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></button>
+<button class="ir" type="button" data-f="ver" aria-pressed="false" data-d="Verified accounts joined in too, including members of the cast." data-cap="The studio audience"><span class="it">Verified Voices</span><span class="ia" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></button>
 </div>
-<div class="cap2" aria-live="polite"><h3>Everybody Showed Up</h3><p>Fans, creators, cast and a whole lot of fire emojis. Pick a lens above or shuffle the wall.</p></div>
+<div class="ibar"><p class="sd" aria-live="polite">Fans, creators, cast and a whole lot of fire emojis.</p><button class="sf" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg><span>Shuffle</span></button></div>
 <div class="wall"><figure class="fq k1 s3" data-t="cast more"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt"><span class="mn">@grace_africa</span> you gonna share some of them products or what? 🤫</p><figcaption><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">L</span><span>lelliessantiago</span></figcaption></figure><figure class="ti" data-t="cast craft ver"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">N</span><div class="bd"><p class="nm">naturallymelonie<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">I love this so muchhh 😍 the ladies, the set, the productss 👏🏽👏🏽</p></div></figure><figure class="ti" data-t="craft more"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">K</span><div class="bd"><p class="nm">kirahominique</p><p class="ct">This ate so baddddd 🔥🔥 tuned innnnn</p></div></figure><figure class="ti" data-t="cast craft ver"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">A</span><div class="bd"><p class="nm">asiakendra<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Wow the upgrade on marketing gooo <span class="mn">@lelliessantiago</span> 😍</p></div></figure><figure class="ti" data-t="craft"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">B</span><div class="bd"><p class="nm">brianna.who</p><p class="ct">This is golddddddddd</p></div></figure><figure class="fq k2 s1" data-t="more ver"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt">MORE OF THISSSSS</p><figcaption><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">M</span><span>mayjor.ki</span><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></figcaption></figure><figure class="ti" data-t="cast craft ver"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">M</span><div class="bd"><p class="nm">marshallglaze<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">This campaign is fire 🔥 I see you <span class="mn">@noordinarynoire</span></p></div></figure><figure class="ti" data-t="ver"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">I</span><div class="bd"><p class="nm">iamlolaco<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Love this down bad!! 👏</p></div></figure><figure class="ti" data-t="cast ver"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">M</span><div class="bd"><p class="nm">micaelaverrelien<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Awwww love this <span class="mn">@noordinarynoire</span> you killed this Queen ❤️ ❤️❤️❤️</p></div></figure><figure class="ti" data-t="more"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p class="nm">lord0dd</p><p class="ct">Oh girl I’m obsesseddddddd, hold awnnnnnn🔥🔥🔥🔥🔥🔥🔥</p></div></figure><figure class="fq k3 s3" data-t="craft"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt">Loved everything about this product launch! The creative team ate 💅🏾😏</p><figcaption><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">S</span><span>shaniah_laneiceee</span></figcaption></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">Y</span><div class="bd"><p class="nm">yisellll</p><p class="ct">ATEE W THIS 😍✨👏🏾</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">L</span><div class="bd"><p class="nm">lanece.a</p><p class="ct">Love this!! Yes!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">C</span><div class="bd"><p class="nm">chynambrose</p><p class="ct">Yesss🔥🔥🔥🔥</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">K</span><div class="bd"><p class="nm">_kaai</p><p class="ct">Oh yessssss😍😍😍😍😍</p></div></figure><figure class="fq k4 s2" data-t="cast ver"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt">Don’t worry big mamas got this 😏</p><figcaption><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">G</span><span>grace_africa</span><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></figcaption></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">C</span><div class="bd"><p class="nm">creativelykeila</p><p class="ct">🔥🔥🔥 love this!</p></div></figure><figure class="ti" data-t="craft"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">B</span><div class="bd"><p class="nm">blancoo</p><p class="ct">😍😍😍😍😍 love the content</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">S</span><div class="bd"><p class="nm">skinnywashere</p><p class="ct">This is so dope!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">B</span><div class="bd"><p class="nm">byautumnnikol</p><p class="ct">LOOOOVE THIS SO MUCH!!!!!</p></div></figure><figure class="fq k1 s1" data-t="craft"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt">The creative direction 🔥</p><figcaption><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">S</span><span>sarahbeatrizmendez</span></figcaption></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">A</span><div class="bd"><p class="nm">aseamae</p><p class="ct">Too cuteeee</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">M</span><div class="bd"><p class="nm">mrsnikitagibson</p><p class="ct">So cute!!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">C</span><div class="bd"><p class="nm">cotedivoireelevate</p><p class="ct">This is so good 👍🏻😊👏</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">I</span><div class="bd"><p class="nm">its.nicolecurls</p><p class="ct">😍😍!!! Wow</p></div></figure><figure class="fq k2 s1" data-t="cast"><span class="qm" aria-hidden="true">&ldquo;</span><p class="qt">BEEN THAT GIRL 😍</p><figcaption><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">S</span><span>_shaniecemarie</span></figcaption></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">T</span><div class="bd"><p class="nm">tayy_bayy7</p><p class="ct">Loveee this!!!😍</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">J</span><div class="bd"><p class="nm">jprcreate</p><p class="ct">🔥🔥🔥 <span class="mn">@lelliessantiago</span></p></div></figure><figure class="ti" data-t="cast ver"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">T</span><div class="bd"><p class="nm">therealgoldee<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">COME ON NIE!!!!!!👏👏👏👏 <span class="mn">#OH</span> 💗</p></div></figure><figure class="ti" data-t="cast ver"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">N</span><div class="bd"><p class="nm">n.e.e.ks<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">The contestant slayed 👏🏾🎉</p></div></figure><figure class="ti" data-t="ver"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">C</span><div class="bd"><p class="nm">colormecourtney<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Love love love 😍</p></div></figure><figure class="ti" data-t="ver"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">T</span><div class="bd"><p class="nm">tabriamajors<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Ok this is so dope!</p></div></figure><figure class="ti" data-t="ver"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">N</span><div class="bd"><p class="nm">naturallymelonie<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Sooo gooddd 🥹👏🏽👏🏽👏🏽</p></div></figure><figure class="ti" data-t="ver"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">F</span><div class="bd"><p class="nm">francescadidit<svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg></p><p class="ct">Yassss</p></div></figure><figure class="ti" data-t="craft"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">A</span><div class="bd"><p class="nm">ahliyah.michelle</p><p class="ct">this is CONTENT! 😮‍💨🤌🏾✨</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">P</span><div class="bd"><p class="nm">princess___ann</p><p class="ct">Omg yes 😍 this is so good. Congrats babes 💗</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">S</span><div class="bd"><p class="nm">sarahkategoesling</p><p class="ct">I couldn’t love this more!!!!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">A</span><div class="bd"><p class="nm">allthings.kassan</p><p class="ct">Oh this is perfect</p></div></figure><figure class="ti" data-t="more"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">G</span><div class="bd"><p class="nm">goldannfrancois</p><p class="ct">Waittt this is tooo cute, can’t wait 😍</p></div></figure><figure class="ti" data-t="cast"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">M</span><div class="bd"><p class="nm">mekayla.vibes</p><p class="ct">Still dat Girl, BEEN that GIRL... HELLOOOOOOOO 💕💕 period</p></div></figure><figure class="ti" data-t="cast"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">C</span><div class="bd"><p class="nm">_cjimages</p><p class="ct">Heeyyyyy!!!! Thats my friend <span class="mn">@oh.heyslim</span> 🙌🏾</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">S</span><div class="bd"><p class="nm">samiyahiam_</p><p class="ct">This was fun !!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">H</span><div class="bd"><p class="nm">her.as.in.her</p><p class="ct">OH!!!!! 👏🏿😍🔥💕</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">D</span><div class="bd"><p class="nm">_dajahunique</p><p class="ct">Yesss I know that’s right 🔥🔥</p></div></figure><figure class="ti" data-t="cast"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">I</span><div class="bd"><p class="nm">iambuttahcup</p><p class="ct">Always that girl ❤️😍</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">B</span><div class="bd"><p class="nm">brianna.who</p><p class="ct">So good 😍😍😍</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">V</span><div class="bd"><p class="nm">vivalakalifa</p><p class="ct">oh this is fab 😍</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">W</span><div class="bd"><p class="nm">where.is.malikah</p><p class="ct">I love this! You guys are killing it</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">H</span><div class="bd"><p class="nm">honeyolay</p><p class="ct">Ouuuuuuuuu love!</p></div></figure><figure class="ti" data-t=""><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">L</span><div class="bd"><p class="nm">larasousaartist</p><p class="ct">Love this 😍</p></div></figure></div>
 <button class="mb" type="button" aria-expanded="false"><span>More comments</span></button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sg" aria-labelledby="sgh">
+<div class="hd"><div><p class="mc">More From The Series</p><h2 id="sgh" style="margin-top:calc(var(--u)*1.2)">Explore More<br>Segments</h2></div><p class="sgd">Clips from the studio floor, one question and one product truth at a time.</p></div>
+<div class="sgs">
+<a class="sgc" href="https://vimeo.com/1124682718/811ddf4be1" target="_blank" rel="noopener" style="--a:1.7722" aria-label="Hang Time. Watch the full film on Vimeo"><div class="sgm"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-seg-hang.gif" alt="Clip from the show: the prize wheel lands on Hang Time and the question appears on screen" width="560" height="316" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="sgp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.8 5v14l10.4-7z"/></svg></span></div><div class="sgt"><h3>Hang Time</h3><p>The wheel lands on Hang Time. The question: shrinkage had you down bad, but what changed?</p><span class="mc">Full film on Vimeo &nearr;</span></div></a>
+<a class="sgc" href="https://vimeo.com/1124682718/811ddf4be1" target="_blank" rel="noopener" style="--a:.8" aria-label="Meet Lellies. Watch the full film on Vimeo"><div class="sgm"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-2.gif" alt="Clip from the show: Lellies at her podium, introduced as your favorite curl muse" width="360" height="641" loading="lazy" decoding="async" style="object-position:50% 74%"><span class="sgp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.8 5v14l10.4-7z"/></svg></span></div><div class="sgt"><h3>Meet Lellies</h3><p>Your favorite curl muse takes her podium.</p><span class="mc">Full film on Vimeo &nearr;</span></div></a>
+<a class="sgc" href="https://vimeo.com/1124682718/811ddf4be1" target="_blank" rel="noopener" style="--a:1.7747" aria-label="The Collection. Watch the full film on Vimeo"><div class="sgm"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-seg-curl.gif" alt="Clip from the show: the Curl Stretch Collection, the scoreboard calling a winner and a tower of product" width="520" height="293" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="sgp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.8 5v14l10.4-7z"/></svg></span></div><div class="sgt"><h3>The Collection</h3><p>The scoreboard calls a winner and the curtain pulls back on a tower of product.</p><span class="mc">Full film on Vimeo &nearr;</span></div></a>
 </div>
 </section>
 
@@ -415,14 +473,17 @@ html,body{margin:0}
 (function(){
 var cmg=document.querySelector('.sv .cmg');if(!cmg)return;
 var doc=cmg.ownerDocument,win=window,mq=function(q){return win.matchMedia?win.matchMedia(q).matches:false};
-var wall=cmg.querySelector('.wall'),items=[].slice.call(wall.children),chips=[].slice.call(cmg.querySelectorAll('.fl button')),
-sf=cmg.querySelector('.sf'),mb=cmg.querySelector('.mb'),cap=cmg.querySelector('.cap2'),ch=cap.querySelector('h3'),cd=cap.querySelector('p'),ctl=cmg.querySelector('.ctl'),
-pool=doc.createElement('div'),f='all',open=false,timer=null,vis=[];
+var ix=cmg.querySelector('.ix'),stk=cmg.querySelector('.stk'),wall=cmg.querySelector('.wall'),items=[].slice.call(wall.children),
+rows=[].slice.call(cmg.querySelectorAll('.ir')),idx=cmg.querySelector('.idx'),imgs=[].slice.call(cmg.querySelectorAll('.stg .arch img')),
+sc=cmg.querySelector('.sc span'),sd=cmg.querySelector('.sd'),sf=cmg.querySelector('.sf'),mb=cmg.querySelector('.mb'),
+pool=doc.createElement('div'),f='all',pk=null,open=false,tx=null,vis=[];
 pool.className='pool';wall.appendChild(pool);wall.classList.add('mas');
 function mobile(){return mq('(max-width:1000px)')}
 function lim(){return mobile()?10:20}
-function ncols(){return mobile()?(wall.clientWidth>=560?2:1):4}
+function ncols(){return mobile()?(wall.clientWidth>=560?2:1):2}
 function ok(el){if(f==='all')return true;return(' '+(el.getAttribute('data-t')||'')+' ').indexOf(' '+f+' ')>-1}
+
+/* wall: balanced columns */
 function pack(){
 items.forEach(function(el){el.classList.remove('pop');pool.appendChild(el)});
 [].slice.call(wall.querySelectorAll('.col')).forEach(function(c){wall.removeChild(c)});
@@ -430,8 +491,8 @@ var n=ncols(),cs=[],i;
 for(i=0;i<n;i++){var c=doc.createElement('div');c.className='col';wall.insertBefore(c,pool);cs.push(c)}
 vis.forEach(function(el){var b=cs[0],k;for(k=1;k<n;k++){if(cs[k].offsetHeight<b.offsetHeight)b=cs[k]}b.appendChild(el)})
 if(n>1&&vis.length>n){var H=vis.map(function(el){return el.offsetHeight}),gp=parseFloat(win.getComputedStyle(cs[0]).rowGap)||0,
-idx=vis.map(function(x,i){return i}).sort(function(p,q){return H[q]-H[p]}),sum=cs.map(function(){return 0}),as=cs.map(function(){return[]});
-idx.forEach(function(i){var t=0,k;for(k=1;k<n;k++){if(sum[k]<sum[t])t=k}sum[t]+=H[i]+gp;as[t].push(i)});
+ord=vis.map(function(x,i){return i}).sort(function(p,q){return H[q]-H[p]}),sum=cs.map(function(){return 0}),as=cs.map(function(){return[]});
+ord.forEach(function(i){var t=0,k;for(k=1;k<n;k++){if(sum[k]<sum[t])t=k}sum[t]+=H[i]+gp;as[t].push(i)});
 as.forEach(function(a,k){a.sort(function(x,y){return x-y}).forEach(function(i){cs[k].appendChild(vis[i])})})}}
 function render(anim){
 var m=items.filter(ok),n=open?m.length:lim();
@@ -440,20 +501,62 @@ if(anim)vis.forEach(function(el,k){void el.offsetWidth;el.style.animationDelay=(
 mb.classList.toggle('hid',m.length<=lim());
 mb.setAttribute('aria-expanded',open?'true':'false');
 mb.firstElementChild.textContent=open?'Fewer comments':'More comments'}
-function setCap(b){var h=b.getAttribute('data-h'),d=b.getAttribute('data-d');cap.style.opacity='0';clearTimeout(timer);timer=setTimeout(function(){ch.textContent=h;cd.textContent=d;cap.style.opacity='1'},170)}
-chips.forEach(function(b){b.addEventListener('click',function(){
-f=b.getAttribute('data-f');open=false;
-chips.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-setCap(b);render(true)})});
+
+/* index: hover or focus peeks, click selects */
+function rowFor(k){return rows.filter(function(r){return r.getAttribute('data-f')===k})[0]||rows[0]}
+function settle(){
+var r=rowFor(pk||f),cap=r.getAttribute('data-cap'),d=r.getAttribute('data-d');
+if(sc.textContent===cap&&sd.textContent===d)return;
+sc.style.opacity='0';sd.style.opacity='0';clearTimeout(tx);
+tx=setTimeout(function(){var q=rowFor(pk||f);sc.textContent=q.getAttribute('data-cap');sd.textContent=q.getAttribute('data-d');sc.style.opacity='1';sd.style.opacity='1'},150)}
+function view(){
+var k=pk||f;
+imgs.forEach(function(im){im.classList.toggle('on',im.getAttribute('data-k')===k)});
+rows.forEach(function(r){var key=r.getAttribute('data-f');r.classList.toggle('on',key===f);r.classList.toggle('pk',pk!==null&&key===pk&&key!==f)});
+settle()}
+function select(k){
+f=k;pk=null;open=false;
+rows.forEach(function(r){r.setAttribute('aria-pressed',r.getAttribute('data-f')===k?'true':'false')});
+view();render(true)}
+rows.forEach(function(b){
+var k=b.getAttribute('data-f');
+b.addEventListener('pointerenter',function(e){if(e.pointerType==='touch')return;pk=k;view()});
+b.addEventListener('focus',function(){var kb=false;try{kb=b.matches(':focus-visible')}catch(x){}if(kb){pk=k;view()}});
+b.addEventListener('blur',function(){if(pk===k){pk=null;view()}});
+b.addEventListener('click',function(){select(k)})});
+idx.addEventListener('pointerleave',function(e){if(e.pointerType==='touch')return;if(pk!==null){pk=null;view()}});
 sf.addEventListener('click',function(){
 for(var i=items.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=items[i];items[i]=items[j];items[j]=t}
 render(true)});
-mb.addEventListener('click',function(){open=!open;render(false);if(!open&&ctl.scrollIntoView){ctl.scrollIntoView({behavior:'smooth',block:'start'})}});
-cmg.classList.add('js');render(false);
+mb.addEventListener('click',function(){open=!open;render(false);if(!open&&idx.scrollIntoView){idx.scrollIntoView({behavior:'smooth',block:'start'})}});
 
-/* reaction carousel: seamless loop, measured so it can never run out of cards */
-var rib=document.querySelector('.sv .rib'),anims=[],userPaused=false,hov=false,pb=rib?rib.querySelector('.rpb'):null;
-function sync(){anims.forEach(function(a){if(userPaused||hov){a.pause()}else{a.play()}})}
+/* sticky stage: native sticky where it can work, scroll-pinned fallback where an ancestor clips it */
+function blocked(){
+var n=ix.parentElement,root=ix.getRootNode&&ix.getRootNode(),hops=0;
+while(hops++<60){
+if(!n){n=root&&root.host;root=null;if(!n)break}
+var cs=win.getComputedStyle(n);
+if(/(auto|scroll|hidden)/.test(cs.overflowX+' '+cs.overflowY))return true;
+n=n.parentElement}
+return false}
+var pinOn=false,raf=0;
+function pinPos(){
+raf=0;
+if(!pinOn||mobile()){stk.style.transform='';return}
+var r=ix.getBoundingClientRect(),h=stk.offsetHeight,u=(parseFloat(win.getComputedStyle(cmg).fontSize)||17.6)/1.1,off=Math.max(0,Math.min(r.height-h,u*2.4-r.top));
+stk.style.transform='translate3d(0,'+off+'px,0)'}
+function pinReq(){if(!raf)raf=win.requestAnimationFrame?win.requestAnimationFrame(pinPos):(pinPos(),1)}
+function pinSet(){
+pinOn=!mobile()&&blocked();
+ix.classList.toggle('pin',pinOn);
+pinPos()}
+win.addEventListener('scroll',pinReq,{passive:true});
+
+cmg.classList.add('js');view();render(false);pinSet();
+
+/* reaction carousel: seamless loop, measured so it can never run out of pills */
+var rib=document.querySelector('.sv .rib'),anims=[],hov=false;
+function sync(){anims.forEach(function(a){if(hov){a.pause()}else{a.play()}})}
 function loop(){
 anims.forEach(function(a){a.cancel()});anims=[];
 [].slice.call(rib.querySelectorAll('.rr')).forEach(function(row,ri){
@@ -468,9 +571,8 @@ anims.push(tr.animate([{transform:'translateX(0)'},{transform:'translateX('+(-S)
 sync()}
 if(rib){
 rib.classList.add('js');loop();
-rib.addEventListener('mouseenter',function(){hov=true;sync()});rib.addEventListener('mouseleave',function(){hov=false;sync()});
-if(pb)pb.addEventListener('click',function(){userPaused=!userPaused;pb.setAttribute('aria-pressed',userPaused?'true':'false');pb.setAttribute('aria-label',userPaused?'Play reactions':'Pause reactions');sync()})}
-var rt=null,lw=win.innerWidth;function again(){render(false);if(rib)loop()}
+rib.addEventListener('mouseenter',function(){hov=true;sync()});rib.addEventListener('mouseleave',function(){hov=false;sync()})}
+var rt=null,lw=win.innerWidth;function again(){render(false);if(rib)loop();pinSet()}
 win.addEventListener('resize',function(){if(win.innerWidth===lw)return;lw=win.innerWidth;clearTimeout(rt);rt=setTimeout(again,160)});
 var fonts=win.document&&win.document.fonts;if(fonts&&fonts.ready)fonts.ready.then(again);
 setTimeout(again,1600);
