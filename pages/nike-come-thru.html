@@ -105,13 +105,15 @@ html,body{margin:0;background:#1D0F3A}
 .ct .kns{display:flex;gap:calc(var(--u)*.8);justify-content:flex-end}
 .ct .kns i{display:block;width:calc(var(--u)*2.2);aspect-ratio:1;border-radius:50%;border:calc(var(--u)*.22) solid var(--ink);background:radial-gradient(circle at 34% 30%,#fff 0 11%,var(--pk) 12%)}
 .ct .kns i+i{background:radial-gradient(circle at 34% 30%,#fff 0 11%,var(--cy) 12%)}
-.ct .chs{display:grid;gap:calc(var(--u)*.6)}
-.ct .ch{appearance:none;-webkit-appearance:none;margin:0;cursor:pointer;display:flex;align-items:center;gap:.7em;width:100%;padding:.55em .8em;border-radius:calc(var(--u)*.9);border:calc(var(--u)*.18) solid var(--ink);background:#fff;color:var(--ink);box-shadow:calc(var(--u)*.25) calc(var(--u)*.25) 0 var(--ink);text-align:left;font-family:var(--df);transition:transform .15s,box-shadow .15s,background .15s}
-.ct .ch b{flex:none;font:700 calc(var(--u)*.85)/1 var(--mo);padding:.3em .45em;border-radius:calc(var(--u)*.35);background:var(--ink);color:var(--am)}
-.ct .ch span{min-width:0;font:800 calc(var(--u)*.6)/1.15 var(--df);letter-spacing:.05em;text-transform:uppercase}
-.ct .ch:hover{background:var(--pk)}
-.ct .ch[aria-pressed=true]{background:var(--lm);transform:translate(calc(var(--u)*.2),calc(var(--u)*.2));box-shadow:calc(var(--u)*.05) calc(var(--u)*.05) 0 var(--ink)}
-.ct .ch[aria-pressed=true] b{color:var(--lm)}
+.ct .rkr{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.55)}
+.ct .ca{appearance:none;-webkit-appearance:none;margin:0;padding:0;cursor:pointer;display:grid;place-items:center;width:calc(var(--u)*7.4);height:calc(var(--u)*4.6);border-radius:calc(var(--u)*1.2);border:calc(var(--u)*.2) solid var(--ink);background:#fff;color:var(--ink);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);transition:transform .15s,box-shadow .15s,background .15s}
+.ct .ca svg{display:block;width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);fill:none;stroke:currentColor;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.ct .cd svg{transform:rotate(180deg)}
+.ct .ca:hover{background:var(--pk)}
+.ct .ca:active{background:var(--lm);transform:translate(calc(var(--u)*.25),calc(var(--u)*.25));box-shadow:calc(var(--u)*.05) calc(var(--u)*.05) 0 var(--ink)}
+.ct .ca:focus-visible{outline:calc(var(--u)*.25) solid var(--ink);outline-offset:calc(var(--u)*.25)}
+.ct .chl{font:700 calc(var(--u)*.85)/1 var(--mo);letter-spacing:.24em;padding-left:.24em;color:var(--ink)}
+.ct .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .ct .grl{display:block;height:calc(var(--u)*2.4);border-radius:calc(var(--u)*.6);background:repeating-linear-gradient(90deg,var(--ink) 0 calc(var(--u)*.22),transparent calc(var(--u)*.22) calc(var(--u)*.7));opacity:.85}
 
 /* RESULTS */
@@ -241,10 +243,12 @@ html,body{margin:0;background:#1D0F3A}
 .ct .ant.a2{transform:translateX(calc(var(--u)*2)) rotate(26deg)}
 .ct .kns,.ct .grl{display:none}
 .ct .cp{gap:0}
-.ct .chs{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.5)}
-.ct .ch{padding:.5em .6em}
-.ct .ch b{font-size:calc(var(--u)*.7)}
-.ct .ch span{font-size:calc(var(--u)*.5)}
+.ct .rkr{flex-direction:row;justify-content:center;gap:calc(var(--u)*1.4);padding-top:calc(var(--u)*.2)}
+.ct .cd{order:1}.ct .chl{order:2}.ct .cu{order:3}
+.ct .ca{width:calc(var(--u)*7);height:calc(var(--u)*3.6);border-radius:calc(var(--u)*1)}
+.ct .ca svg{width:calc(var(--u)*2.2);height:calc(var(--u)*2.2)}
+.ct .cu svg{transform:rotate(90deg)}.ct .cd svg{transform:rotate(-90deg)}
+.ct .chl{font-size:calc(var(--u)*.7)}
 .ct .res{padding:calc(var(--u)*5) 0 calc(var(--u)*5.2)}
 .ct .sg{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*2.6)}
 .ct .st.big{grid-column:1/-1;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*.8);min-height:0;padding:calc(var(--u)*1.8)}
@@ -359,17 +363,11 @@ html,body{margin:0;background:#1D0F3A}
           <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nk-reel-1.webp?v=1" alt="Come Thru title card animation on a pink and mint gradient with the Nike swoosh" width="720" height="404" loading="lazy" decoding="async">
           <i class="nz" aria-hidden="true"></i>
           <span class="osd" aria-hidden="true">CH 01</span>
+          <span class="vh" aria-live="polite"></span>
         </div>
         <div class="cp">
           <div class="kns" aria-hidden="true"><i></i><i></i></div>
-          <ol class="chs">
-            <li><button type="button" class="ch" aria-pressed="true" data-ms="3700" data-alt="Come Thru title card animation on a pink and mint gradient with the Nike swoosh"><b>01</b><span>Title Card</span></button></li>
-            <li><button type="button" class="ch" aria-pressed="false" data-ms="3500" data-alt="Come Thru b-roll collage of pottery, basketball and dance clips beside a participant seated in a blue chair"><b>02</b><span>B-Roll</span></button></li>
-            <li><button type="button" class="ch" aria-pressed="false" data-ms="5000" data-alt="Come Thru interview clips of participants on bright gradient backgrounds"><b>03</b><span>Interviews</span></button></li>
-            <li><button type="button" class="ch" aria-pressed="false" data-ms="3900" data-alt="Animated come lettering and the line This is Come Thru on a lilac and green gradient"><b>04</b><span>This Is Come Thru</span></button></li>
-            <li><button type="button" class="ch" aria-pressed="false" data-ms="4000" data-alt="A neon-lit retro room with a glowing Nike swoosh and a CRT television showing the Come Thru logo"><b>05</b><span>Neon Room</span></button></li>
-            <li><button type="button" class="ch" aria-pressed="false" data-ms="5000" data-alt="Come Thru interview with a participant seated in a blue chair on a golden yellow set"><b>06</b><span>Interview</span></button></li>
-          </ol>
+          <div class="rkr" role="group" aria-label="Change channel"><button type="button" class="ca cu" aria-label="Next channel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg></button><span class="chl" aria-hidden="true">CH</span><button type="button" class="ca cd" aria-label="Previous channel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg></button></div>
           <i class="grl" aria-hidden="true"></i>
         </div>
       </div>
@@ -494,30 +492,41 @@ html,body{margin:0;background:#1D0F3A}
 (function(){
   var tv=document.querySelector('.ct #reel');
   if(!tv)return;
-  var base=tv.getAttribute('data-base'),img=tv.querySelector('.cs img'),osd=tv.querySelector('.osd'),btns=tv.querySelectorAll('.ch');
+  var base=tv.getAttribute('data-base'),img=tv.querySelector('.cs img'),osd=tv.querySelector('.osd'),say=tv.querySelector('.vh');
+  var up=tv.querySelector('.cu'),dn=tv.querySelector('.cd');
+  var CH=[
+    {f:'nk-reel-1.webp',ms:3700,alt:'Come Thru title card animation on a pink and mint gradient with the Nike swoosh'},
+    {f:'nk-reel-2.webp',ms:3500,alt:'Come Thru b-roll collage of pottery, basketball and dance clips beside a participant seated in a blue chair'},
+    {f:'nk-reel-3.webp',ms:5000,alt:'Come Thru interview clips of participants on bright gradient backgrounds'},
+    {f:'nk-reel-6.webp',ms:5000,alt:'Come Thru interview with a participant seated in a blue chair on a golden yellow set'},
+    {f:'nk-reel-7.webp',ms:7600,alt:'The Skin You\u2019re In title card in white italic type on a yellow and purple gradient, followed by a statistic card about Gen Z young women'},
+    {f:'nk-reel-8.webp',ms:6200,alt:'A 1 in 2 statistic card on a red and orange gradient about Gen Z becoming the first majority minority generation'},
+    {f:'nk-reel-9.webp',ms:14200,alt:'Come Thru interviews, a four-up grid of participants on bright gradient backgrounds followed by a participant seated in a blue chair on a studio set'},
+    {f:'nk-reel-5.webp',ms:4000,alt:'A neon-lit retro room with a glowing Nike swoosh and a CRT television showing the Come Thru logo'}
+  ];
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cur=0,timer=0,auto=true,seen=false,vis=false;
   function pad(n){return n<10?'0'+n:''+n}
-  function show(i,flash){
+  function show(i,flash,speak){
     cur=i;
-    for(var k=0;k<btns.length;k++)btns[k].setAttribute('aria-pressed',k===i?'true':'false');
-    img.alt=btns[i].getAttribute('data-alt');
+    img.alt=CH[i].alt;
     img.removeAttribute('loading');
-    img.src=base+'nk-reel-'+(i+1)+'.webp?v=1';
+    img.src=base+CH[i].f+'?v=1';
     osd.textContent='CH '+pad(i+1);
+    if(speak&&say)say.textContent='Channel '+(i+1)+' of '+CH.length+'. '+CH[i].alt;
     if(flash&&!reduce){tv.classList.remove('sw');void tv.offsetWidth;tv.classList.add('sw')}
   }
   function sched(){
     clearTimeout(timer);
     if(!auto||!vis||reduce)return;
-    timer=setTimeout(function(){show((cur+1)%btns.length,true);sched()},parseInt(btns[cur].getAttribute('data-ms')||'4000',10));
+    timer=setTimeout(function(){show((cur+1)%CH.length,true);sched()},CH[cur].ms);
   }
-  for(var b=0;b<btns.length;b++)(function(i){
-    btns[i].addEventListener('click',function(){auto=false;clearTimeout(timer);show(i,true)});
-  })(b);
+  function step(d){auto=false;clearTimeout(timer);show((cur+d+CH.length)%CH.length,true,true)}
+  if(up)up.addEventListener('click',function(){step(1)});
+  if(dn)dn.addEventListener('click',function(){step(-1)});
   function preload(){
     if(seen)return;seen=true;
-    for(var i=1;i<btns.length;i++){var im=new Image();im.src=base+'nk-reel-'+(i+1)+'.webp?v=1'}
+    for(var i=1;i<CH.length;i++){var im=new Image();im.src=base+CH[i].f+'?v=1'}
   }
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){
