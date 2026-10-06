@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Shea Us What You Got: a tropical trivia-style game show that launched SheaMoisture's Curl Stretch Collection in the language of curly girl culture.">
+<title>Nina Austin | Shea Us What You Got</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#FFF5EF}
+.sh{--u:clamp(11px,1.1111vw,28px);--coral:#e06968;--crim:#a80a20;--terra:#d28c74;--teal:#066b7b;--ink:#2A0D10;--cream:#FFF5EF;--sand:#F6E3D8;width:100%;background:var(--cream);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;overflow:hidden}
+.sh *{box-sizing:border-box}.sh a{color:inherit;text-decoration:none}
+.sh h1,.sh h2,.sh h3{font-family:Marcellus,Georgia,serif;font-weight:400;margin:0;color:inherit!important;text-transform:none;letter-spacing:normal}
+.sh p,.sh blockquote,.sh ul,.sh ol,.sh figure,.sh dl,.sh dd{margin:0;padding:0}
+.sh .in{padding-left:calc(var(--u)*5.5);padding-right:calc(var(--u)*5.5)}
+.sh .sm{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.74);letter-spacing:.16em;text-transform:uppercase}
+.sh .xl{font-size:calc(var(--u)*5);line-height:1.04;letter-spacing:-.01em}
+.sh .back{display:inline-flex;align-items:center;gap:.7em;padding-top:calc(var(--u)*2.6);color:var(--ink);opacity:.7;transition:opacity .2s}.sh .back:hover{opacity:1}
+.sh .md{position:relative;display:block;overflow:hidden;background:var(--sand)}
+.sh .md img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* hero */
+.sh .hero{display:grid;grid-template-columns:minmax(0,.44fr) minmax(0,1fr);gap:calc(var(--u)*6);align-items:center;padding-top:calc(var(--u)*2.4);padding-bottom:calc(var(--u)*5)}
+.sh .ph{aspect-ratio:415/739;border-radius:calc(var(--u)*1.4);box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*4) rgba(168,10,32,.28)}
+.sh .head .br{color:var(--crim);margin-bottom:calc(var(--u)*.6)}
+.sh h1{font-size:calc(var(--u)*6.4);line-height:1.02;color:var(--crim)!important;margin-bottom:calc(var(--u)*1.6)}
+.sh .head p{font-size:calc(var(--u)*1.3);line-height:1.5;max-width:32em}
+.sh .tg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.6)}
+.sh .tg span{border:2px solid var(--teal);color:var(--ink);border-radius:99px;padding:.45em 1.2em;font-weight:700;font-size:calc(var(--u)*.98);line-height:1.2;white-space:nowrap}
+.sh .stripe{height:calc(var(--u)*.55);background:linear-gradient(90deg,var(--coral) 0 25%,var(--crim) 25% 50%,var(--terra) 50% 75%,var(--teal) 75% 100%)}
+/* brief */
+.sh .brief{padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*2)}
+.sh .brief .lb{color:var(--crim);margin-bottom:calc(var(--u)*1.4)}
+.sh .four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1)}
+.sh .card{border-radius:calc(var(--u)*.8);padding:calc(var(--u)*2) calc(var(--u)*1.8);display:flex;flex-direction:column;gap:calc(var(--u)*.9)}
+.sh .card .n{font-family:Marcellus,serif;font-size:calc(var(--u)*3.2);line-height:1}
+.sh .card h3{font-size:calc(var(--u)*1.7);line-height:1.1}
+.sh .card p{font-size:calc(var(--u)*1.02);line-height:1.5}
+.sh .c1{background:var(--coral);color:var(--ink)}.sh .c2{background:var(--teal);color:#fff}.sh .c3{background:var(--terra);color:var(--ink)}.sh .c4{background:var(--crim);color:#fff}
+/* film */
+.sh .film{padding-top:calc(var(--u)*4);padding-bottom:calc(var(--u)*5)}
+.sh .film a{display:block;position:relative;border-radius:calc(var(--u)*.9);overflow:hidden}
+.sh .film .md{aspect-ratio:16/8.6}
+.sh .film a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,13,16,0) 45%,rgba(42,13,16,.55) 100%)}
+.sh .play{position:absolute;left:calc(var(--u)*1.8);bottom:calc(var(--u)*1.8);z-index:2;display:flex;align-items:center;gap:calc(var(--u)*.9);color:#fff}
+.sh .play i{width:calc(var(--u)*3.6);height:calc(var(--u)*3.6);border-radius:50%;display:grid;place-items:center;background:var(--crim);color:#fff;transition:transform .25s,background .25s}
+.sh .film a:hover .play i{transform:scale(1.08);background:var(--coral)}
+.sh .play svg{width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);margin-left:.15em}
+/* inside the show */
+.sh .show{background:var(--teal);color:#fff;padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*6);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:calc(var(--u)*5);align-items:center}
+.sh .show .lb{color:var(--terra);margin-bottom:calc(var(--u)*.8)}
+.sh .show p{font-size:calc(var(--u)*1.25);line-height:1.6;margin-top:calc(var(--u)*1.6);max-width:30em}
+.sh .show ul{list-style:none;margin-top:calc(var(--u)*2)}
+.sh .show li{display:flex;gap:calc(var(--u)*1);align-items:baseline;padding:calc(var(--u)*.8) 0;border-top:1px solid rgba(255,255,255,.28);font-size:calc(var(--u)*1.1)}
+.sh .show li:last-child{border-bottom:1px solid rgba(255,255,255,.28)}
+.sh .show li b{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.74);letter-spacing:.16em;text-transform:uppercase;color:var(--terra);flex:0 0 calc(var(--u)*7)}
+.sh .duo{display:flex;gap:calc(var(--u)*1.6);justify-content:center;align-items:flex-start}
+.sh .duo .ph{width:calc(var(--u)*17);flex:0 0 auto}.sh .duo .ph+.ph{margin-top:calc(var(--u)*4)}
+.sh .duo .ph{box-shadow:0 calc(var(--u)*1.4) calc(var(--u)*3.5) rgba(0,0,0,.35)}
+/* frames */
+.sh .frames{padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5)}
+.sh .frames .lb{color:var(--crim);margin-bottom:calc(var(--u)*1)}
+.sh .frames .md{aspect-ratio:4686/2640;border-radius:calc(var(--u)*.8);margin-top:calc(var(--u)*1.6)}
+/* role */
+.sh .role{background:var(--sand);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);display:grid;grid-template-columns:1fr 1.3fr;gap:calc(var(--u)*4)}
+.sh .role .lb{color:var(--crim);margin-bottom:calc(var(--u)*.8)}.sh .role h2{font-size:calc(var(--u)*4);line-height:1.1;color:var(--crim)!important}
+.sh .role p{font-size:calc(var(--u)*1.3);line-height:1.6;align-self:center}
+/* performance */
+.sh .perf{background:var(--crim);color:#fff;padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*6)}
+.sh .perf .lb{color:var(--terra);margin-bottom:calc(var(--u)*.8)}
+.sh .pq{margin-top:calc(var(--u)*3);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:end}
+.sh .pq q{display:block;font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*3.6);line-height:1.12;quotes:none}
+.sh .pq q em{font-family:'Source Serif 4',serif;font-style:italic;color:var(--terra)}
+.sh .pq .src{margin-top:calc(var(--u)*1.2);color:var(--terra)}
+.sh .pq p{font-size:calc(var(--u)*1.1);line-height:1.55;opacity:.92}
+.sh .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1);margin-top:calc(var(--u)*4)}
+.sh .stat{border-top:calc(var(--u)*.3) solid var(--terra);padding-top:calc(var(--u)*1)}
+.sh .stat b{display:block;font-family:Marcellus,serif;font-weight:400;font-size:calc(var(--u)*5.4);line-height:1}
+.sh .stat span{display:block;margin-top:calc(var(--u)*.7);font-size:calc(var(--u)*.98);line-height:1.4;opacity:.92}
+.sh .cast{margin-top:calc(var(--u)*3.2);display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);align-items:center}
+.sh .cast .sm{margin-right:calc(var(--u)*.6);color:var(--terra)}
+.sh .cast span.h{border:1.5px solid rgba(255,255,255,.55);border-radius:99px;padding:.35em 1em;font-size:calc(var(--u)*.95);font-weight:600}
+/* audience */
+.sh .aud{padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*5)}
+.sh .aud .lb{color:var(--teal);margin-bottom:calc(var(--u)*.8)}
+.sh .themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1);margin:calc(var(--u)*2.4) 0 calc(var(--u)*2.4)}
+.sh .th{border-radius:calc(var(--u)*.8);padding:calc(var(--u)*1.6)}
+.sh .th b{display:block;font-family:Marcellus,serif;font-weight:400;font-size:calc(var(--u)*1.9);line-height:1.1;margin-bottom:calc(var(--u)*.7)}
+.sh .th p{font-size:calc(var(--u)*1.02);line-height:1.5}
+.sh .th:nth-child(1){background:var(--coral);color:var(--ink)}.sh .th:nth-child(2){background:var(--teal);color:#fff}.sh .th:nth-child(3){background:var(--terra);color:var(--ink)}
+.sh .wall{column-count:3;column-gap:calc(var(--u)*1)}
+.sh .ti{break-inside:avoid;margin:0 0 calc(var(--u)*1);background:#fff;border:1px solid rgba(42,13,16,.08);border-radius:calc(var(--u)*1.1);padding:calc(var(--u)*1.1) calc(var(--u)*1.2);display:flex;gap:calc(var(--u)*.9);align-items:flex-start;box-shadow:0 2px 12px rgba(168,10,32,.07);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.sh .av{flex:0 0 auto;width:calc(var(--u)*2.7);height:calc(var(--u)*2.7);border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:600;font-size:calc(var(--u)*1.1)}
+.sh .bd{flex:1;min-width:0}
+.sh .bd p{font-size:calc(var(--u)*.98);line-height:1.38;overflow-wrap:anywhere}
+.sh .bd b{font-weight:600}
+.sh .vb{width:calc(var(--u)*.95);height:calc(var(--u)*.95);vertical-align:-.12em;margin:0 .1em 0 .35em}
+.sh .tm{font-style:normal;color:#737373;margin-left:.45em;font-size:.9em}
+.sh .tx{margin-top:calc(var(--u)*.2)}
+.sh .mn{color:#3A56D4}
+.sh .mt{margin-top:calc(var(--u)*.4);font-size:calc(var(--u)*.82);font-weight:600;color:#737373}
+.sh details.more{margin-top:calc(var(--u)*1.6)}
+.sh details.more summary{list-style:none;cursor:pointer;display:inline-block;border:2px solid var(--crim);color:var(--crim);border-radius:99px;padding:.7em 1.6em;font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.85);letter-spacing:.14em;text-transform:uppercase;transition:background .25s,color .25s}
+.sh details.more summary::-webkit-details-marker{display:none}
+.sh details.more summary:hover{background:var(--crim);color:#fff}
+.sh details.more[open] summary .o{display:none}.sh details.more:not([open]) summary .c{display:none}
+.sh details.more .wall{margin-top:calc(var(--u)*1.4)}
+.sh .note{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*.85);opacity:.65}
+.sh .foot{padding-bottom:calc(var(--u)*4);font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.85);letter-spacing:.14em;text-transform:uppercase}
+.sh .foot a{display:inline-block;border:2px solid var(--teal);color:var(--teal);border-radius:99px;padding:.7em 1.5em;transition:background .25s,color .25s}
+.sh .foot a:hover{background:var(--teal);color:#fff}
+@media(max-width:1000px){
+.sh{--u:16px}
+.sh .in{padding-left:20px;padding-right:20px}
+.sh .hero{grid-template-columns:1fr;gap:28px;padding-top:12px;padding-bottom:36px}
+.sh .hero .ph{width:min(260px,72%);margin:0 auto}
+.sh h1{font-size:44px}.sh .head p{font-size:18px}.sh .tg span{font-size:14px}
+.sh .xl{font-size:38px}
+.sh .brief{padding-top:40px}
+.sh .four{grid-template-columns:1fr;gap:10px}
+.sh .card{padding:22px 20px}.sh .card .n{font-size:36px}.sh .card h3{font-size:22px}.sh .card p{font-size:16px}
+.sh .film{padding-top:28px;padding-bottom:36px}.sh .film .md{aspect-ratio:16/10}.sh .play{left:50%;bottom:auto;top:50%;transform:translate(-50%,-50%);flex-direction:column;gap:10px}.sh .play i{width:56px;height:56px}.sh .play svg{width:16px;height:16px}
+.sh .show{grid-template-columns:1fr;gap:32px;padding-top:44px;padding-bottom:44px}
+.sh .show p{font-size:17px}.sh .show li{font-size:16px}.sh .show li b{flex:0 0 96px;font-size:11px}
+.sh .duo{gap:10px}.sh .duo .ph{width:calc(50% - 5px)}.sh .duo .ph+.ph{margin-top:28px}
+.sh .frames{padding-top:36px;padding-bottom:36px}
+.sh .role{grid-template-columns:1fr;gap:16px;padding-top:40px;padding-bottom:40px}.sh .role h2{font-size:32px}.sh .role p{font-size:17px}
+.sh .perf{padding-top:44px;padding-bottom:44px}
+.sh .pq{grid-template-columns:1fr;gap:20px}.sh .pq q{font-size:30px}.sh .pq p{font-size:16px}
+.sh .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}.sh .stat b{font-size:44px}.sh .stat span{font-size:14px}
+.sh .cast span.h{font-size:14px}
+.sh .aud{padding-top:44px;padding-bottom:36px}
+.sh .themes{grid-template-columns:1fr;gap:10px}.sh .th{padding:20px}.sh .th b{font-size:24px}.sh .th p{font-size:16px}
+.sh .wall{column-count:1}
+.sh .ti{padding:14px}.sh .av{width:38px;height:38px;font-size:15px}.sh .bd p{font-size:15px}.sh .vb{width:14px;height:14px}.sh .mt{font-size:13px}
+.sh .foot{font-size:13px}
+.sh .sm{font-size:11px}
+}
+</style></head><body>
+<main class="sh">
+<div class="stripe"></div>
+<div class="in"><a class="back sm" href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></div>
+
+<header class="in hero">
+<span class="md ph" role="img" aria-label="Contestants and host on the Shea Us What You Got game show set"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-1.gif" alt="" width="415" height="739" decoding="async"></span>
+<div class="head"><span class="sm br">SheaMoisture</span><h1>Shea Us What You Got</h1>
+<p>A tropical trivia-style game show that launched the Curl Stretch Collection in the language of curly girl culture, and gave a skeptical audience a reason to show up for the brand again.</p>
+<div class="tg"><span>Social Strategy</span><span>Scriptwriting</span><span>Campaign Voice</span><span>Influencer</span></div></div>
+</header>
+<div class="stripe"></div>
+
+<section class="in brief" aria-labelledby="brief"><span class="sm lb" id="brief">The Brief</span>
+<div class="four">
+<div class="card c1"><span class="n">1</span><h3>Who</h3><p>SheaMoisture, a Unilever-owned personal care brand focused on textured hair, seeking to rebrand and reinforce authenticity amid waning support.</p></div>
+<div class="card c2"><span class="n">2</span><h3>What</h3><p>A digital trivia-style game show inspired by family game nights to promote the new Curl Stretch Collection, using classic elements of curly girl culture to articulate product benefits from an insider&rsquo;s point of view.</p></div>
+<div class="card c3"><span class="n">3</span><h3>Where</h3><p>Distributed across digital platforms, leading with Instagram and adding TikTok for interactivity, boosted with endorsements from influencers like Serena Page.</p></div>
+<div class="card c4"><span class="n">4</span><h3>Why It Matters</h3><p>Post acquisition, SheaMoisture needed a way to rebuild trust with a more skeptical audience. By speaking the language of the consumer, we drove buzz and re-ignited the brand&rsquo;s base.</p></div>
+</div></section>
+
+<section class="in film" aria-label="Watch the film"><a href="https://vimeo.com/1124682718/811ddf4be1" target="_blank" rel="noopener"><span class="md" role="img" aria-label="Lellies, your favorite curl muse, from the Shea Us What You Got film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-poster.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="play"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></i><span class="sm">Watch the film &middot; 1:12</span></span></a></section>
+
+<section class="in show" aria-labelledby="show"><div><span class="sm lb">The Format</span><h2 class="xl" id="show">Game Night, Curl Edition</h2>
+<p>Three contestants, one bell and a wheel of curl facts, played the way a family game night actually plays. Every question was written from an insider&rsquo;s point of view, so product benefits arrived as culture before they arrived as claims.</p>
+<ul><li><b>The host</b>Trivia cards and a spinning wheel set the tone</li><li><b>The cast</b>Creators answering as themselves, on camera</li><li><b>The score</b>A live scoreboard that made every answer count</li></ul></div>
+<div class="duo"><span class="md ph" role="img" aria-label="Contestant Lellies answering a question"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-2.gif" alt="" width="360" height="641" loading="lazy" decoding="async"></span><span class="md ph" role="img" aria-label="Scoreboard and the winner reveal"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-reel-3.gif" alt="" width="360" height="641" loading="lazy" decoding="async"></span></div>
+</section>
+
+<section class="in frames" aria-labelledby="fr"><span class="sm lb">The Set</span><h2 class="xl" id="fr" style="color:var(--ink)!important">Frame By Frame</h2>
+<span class="md" role="img" aria-label="Grid of frames from the Shea Us What You Got film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/shea-frames.jpg" alt="" width="2400" height="1352" loading="lazy" decoding="async"></span></section>
+
+<section class="in role" aria-labelledby="role"><div><span class="sm lb">My Role</span><h2 id="role">ACD Copy &amp; Script Writer</h2></div>
+<p>I crafted the scripts, messaging and copy that gave the game show and the rebrand cultural resonance and authentic storytelling.</p></section>
+
+<section class="in perf" aria-labelledby="perf"><span class="sm lb">Performance</span><h2 class="xl" id="perf">How It Landed</h2>
+<div class="pq"><div><q>there&rsquo;s no denying that this campaign was a <em>10/10</em></q><span class="sm src">Olivia Hancock, Senior Beauty Editor at Byrdie, founder of The Hue</span></div>
+<p>The campaign earned its own episode of The Hue Report podcast, where SheaMoisture&rsquo;s creative director and content lead broke down the Curl Stretch campaign and why fun, culture-forward storytelling matters in the brand&rsquo;s new era. The host called out the stacked influencer cast and the Black family game night energy.</p></div>
+<div class="stats"><div class="stat"><b>5</b><span>creators on the cast</span></div><div class="stat"><b>1</b><span>podcast episode devoted to the campaign</span></div><div class="stat"><b>8</b><span>verified accounts commenting on the Instagram post</span></div><div class="stat"><b>39</b><span>comments captured, none negative</span></div></div>
+<div class="cast"><span class="sm">The cast</span><span class="h">@noordinarynoire</span><span class="h">@naturallymelonie</span><span class="h">@goldynaps</span><span class="h">@grace_africa</span><span class="h">@lelliessantiago</span></div>
+</section>
+
+<section class="in aud" aria-labelledby="aud"><span class="sm lb">Audience</span><h2 class="xl" id="aud">Caught In The Comments</h2>
+<div class="themes"><div class="th"><b>They saw the cast</b><p>Creators and fans tagged each other, cheered the contestants and claimed the win.</p></div><div class="th"><b>They noticed the craft</b><p>Comments praised the set, the products and the creative team behind it.</p></div><div class="th"><b>They wanted more</b><p>&ldquo;MORE OF THISSSSS&rdquo; and a request for free product say it best.</p></div></div>
+<div class="wall"><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">M</span><div class="bd"><p><b>mekayla.vibes</b><i class="tm">60w</i></p><p class="tx">Tell me you’re in your Shea Moisture bag without telling me you’re in your Shea Moisture bag... OHH 🫖🔥🔥</p><div class="mt">8 likes</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p><b>lelliessantiago</b><i class="tm">60w</i></p><p class="tx"><span class="mn">@grace_africa</span> you gonna share some of them products or what? 🤫</p><div class="mt">10 likes</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">N</span><div class="bd"><p><b>naturallymelonie</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">I love this so muchhh 😍 the ladies, the set, the productss 👏🏽👏🏽</p><div class="mt">4 likes</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">S</span><div class="bd"><p><b>shaniah_laneiceee</b><i class="tm">60w</i></p><p class="tx">Loved everything about this product launch! The creative team ate 💅🏾😏</p><div class="mt">2 likes</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">M</span><div class="bd"><p><b>marshallglaze</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">This campaign is fire 🔥 I see you <span class="mn">@noordinarynoire</span></p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">T</span><div class="bd"><p><b>therealgoldee</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">COME ON NIE!!!!!!👏👏👏👏 <span class="mn">#OH</span> 💗</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">N</span><div class="bd"><p><b>n.e.e.k.s</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">The contestant slayed 👏🏾🎉</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">M</span><div class="bd"><p><b>mayjor.ki</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">MORE OF THISSSSS</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">A</span><div class="bd"><p><b>ahliyah.michelle</b><i class="tm">60w</i></p><p class="tx">this is CONTENT! 😮‍💨🤌🏾✨</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p><b>lord0dd</b><i class="tm">61w</i></p><p class="tx">Oh girl I’m obsesseddddddd, hold awnnnnnn🔥🔥🔥🔥🔥🔥🔥</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">P</span><div class="bd"><p><b>princess___ann</b><i class="tm">60w</i></p><p class="tx">Omg yes 😍 this is so good. Congrats babes 💗</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">S</span><div class="bd"><p><b>sarahkategoesling</b><i class="tm">60w</i></p><p class="tx">I couldn’t love this more!!!!</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">B</span><div class="bd"><p><b>brianna.who</b><i class="tm">60w</i></p><p class="tx">This is golddddddddd</p><div class="mt">2 likes</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">N</span><div class="bd"><p><b>_nycprincesa</b><i class="tm">61w</i></p><p class="tx">Hold on my show is on!!</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">I</span><div class="bd"><p><b>iamlolaco</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">Love this down bad!! 👏</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">A</span><div class="bd"><p><b>allthings.kassan</b><i class="tm">60w</i></p><p class="tx">Oh this is perfect</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">G</span><div class="bd"><p><b>goldannfrancois</b><i class="tm">60w</i></p><p class="tx">Waittt this is tooo cute, can’t wait 😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">Y</span><div class="bd"><p><b>yisellll</b><i class="tm">60w</i></p><p class="tx">ATEE W THIS 😍✨👏🏾</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">M</span><div class="bd"><p><b>mekayla.vibes</b><i class="tm">60w</i></p><p class="tx">Still dat Girl, BEEN that GIRL... HELLOOOOOOOO 💕💕 period</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">C</span><div class="bd"><p><b>colormecourtney</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">Love love love 😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">C</span><div class="bd"><p><b>_cjimages</b><i class="tm">60w</i></p><p class="tx">Heeyyyyy!!!! Thats my friend <span class="mn">@oh.heyslim</span> 🙌🏾</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">S</span><div class="bd"><p><b>samiyahiam_</b><i class="tm">60w</i></p><p class="tx">This was fun !!</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">H</span><div class="bd"><p><b>her.as.in.her</b><i class="tm">60w</i></p><p class="tx">OH!!!!! 👏🏿😍🔥💕</p></div></figure></div>
+<details class="more"><summary><span class="o">More comments</span><span class="c">Fewer comments</span></summary><div class="wall"><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">D</span><div class="bd"><p><b>_dajahunique</b><i class="tm">60w</i></p><p class="tx">Yesss I know that’s right 🔥🔥</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">L</span><div class="bd"><p><b>lanece.a</b><i class="tm">61w</i></p><p class="tx">Love this!! Yes!</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">S</span><div class="bd"><p><b>_shaniecemarie</b><i class="tm">61w</i></p><p class="tx">BEEN THAT GIRL 😍</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">C</span><div class="bd"><p><b>chynambrose</b><i class="tm">61w</i></p><p class="tx">Yesss🔥🔥🔥🔥</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">K</span><div class="bd"><p><b>_kaai</b><i class="tm">61w</i></p><p class="tx">Oh yessssss😍😍😍😍😍</p><div class="mt">1 like</div></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">I</span><div class="bd"><p><b>iambuttahcup</b><i class="tm">60w</i></p><p class="tx">Always that girl ❤️😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">W</span><div class="bd"><p><b>whoismyac</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">🔥🔥🔥🔥🔥</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">W</span><div class="bd"><p><b>whoismyac</b><svg class="vb" viewBox="0 0 24 24" aria-label="Verified"><path fill="#0095F6" d="M12 1.6l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.4l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.3l3 3 5.6-6"/></svg><i class="tm">60w</i></p><p class="tx">😍😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">K</span><div class="bd"><p><b>kalani_mommy29</b><i class="tm">60w</i></p><p class="tx">😍😍😍😍👏👏👏👏</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">T</span><div class="bd"><p><b>themodestnewyorker</b><i class="tm">60w</i></p><p class="tx">🔥🔥🔥🔥😍😍😍😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">L</span><div class="bd"><p><b>lord0dd</b><i class="tm">60w</i></p><p class="tx">😍😍😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">L</span><div class="bd"><p><b>lovewhitneyk</b><i class="tm">60w</i></p><p class="tx">😍😍😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#a80a20,#6e0716)">R</span><div class="bd"><p><b>richh_toi</b><i class="tm">60w</i></p><p class="tx">😍😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#e06968,#a80a20)">D</span><div class="bd"><p><b>divinelydenia</b><i class="tm">60w</i></p><p class="tx">😂😂😂</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#066b7b,#0a8ea3)">R</span><div class="bd"><p><b>rymdoor</b><i class="tm">60w</i></p><p class="tx">😍😍😍</p></div></figure><figure class="ti"><span class="av" style="background:linear-gradient(135deg,#d28c74,#e06968)">B</span><div class="bd"><p><b>brianna.who</b><i class="tm">61w</i></p><p class="tx">So good 😍😍😍</p></div></figure></div></details>
+<p class="note">Comments from the campaign&rsquo;s Instagram post, shown as posted.</p>
+</section>
+
+<div class="in foot"><a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></div>
+</main>
+</body></html>
