@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pizza Hut, The Big New Yorker: a fan-first organic social campaign that delivered the brand's highest domestic quarterly sales growth in 13 years.">
+<title>Nina Austin | The Big New Yorker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#1C0808}
+.ph{--u:clamp(11px,1.1111vw,28px);--cr:#F1D0A2;--rd:#B42323;--cm:#840F0F;--ox:#650909;--ik:#1C0808;--df:Caprasimo,'Cooper Black','Hoefler Text',Georgia,serif;--ui:Nunito,'Trebuchet MS',system-ui,sans-serif;--star:polygon(50% 0%,59.1% 10%,71.7% 5%,75.6% 17.9%,89.1% 18.8%,86.9% 32.2%,98.7% 38.9%,91% 50%,98.7% 61.1%,86.9% 67.8%,89.1% 81.2%,75.6% 82.1%,71.7% 95%,59.1% 90%,50% 100%,40.9% 90%,28.3% 95%,24.4% 82.1%,10.9% 81.2%,13.1% 67.8%,1.3% 61.1%,9% 50%,1.3% 38.9%,13.1% 32.2%,10.9% 18.8%,24.4% 17.9%,28.3% 5%,40.9% 10%);--spark:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);display:block;position:relative;overflow:hidden;width:100%;background:var(--ik);color:var(--cr);font-family:var(--ui);font-size:calc(var(--u)*1.05);font-weight:600;line-height:1.55;letter-spacing:normal;text-transform:none;text-align:left}
+.ph *,.ph *::before,.ph *::after{box-sizing:border-box}
+.ph a{color:inherit;text-decoration:none}
+.ph h1,.ph h2,.ph h3{font-family:var(--df);font-weight:400;margin:0;color:inherit!important;text-transform:none;letter-spacing:normal;line-height:1.02}
+.ph p,.ph ol,.ph ul,.ph dl,.ph dd{margin:0}
+.ph img{display:block;max-width:100%;height:auto}
+.ph .w{width:100%;max-width:calc(var(--u)*72);margin:0 auto;padding:0 calc(var(--u)*2)}
+.ph .tab{display:inline-block;font:900 calc(var(--u)*.78)/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;padding:.6em 1.15em;border-radius:99px;background:var(--cr);color:var(--ik);border:calc(var(--u)*.2) solid var(--ik)}
+.ph .sub{font-weight:800;font-size:calc(var(--u)*1.35);line-height:1.35}
+.ph .spk{display:inline-block;flex:none;width:calc(var(--u)*1.1);height:calc(var(--u)*1.1);background:currentColor;clip-path:var(--spark)}
+.ph .pp,.ph .mech li::before{display:grid;place-items:center;flex:none;width:calc(var(--u)*3.2);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 28%,#D55252 0 13%,transparent 14%),var(--rd);border:calc(var(--u)*.2) solid var(--ik);color:var(--cr);font-family:var(--df);font-size:calc(var(--u)*1.3);line-height:1;box-shadow:calc(var(--u)*.2) calc(var(--u)*.2) 0 var(--ik)}
+
+/* starburst sticker */
+.ph .burst{position:absolute;z-index:3;display:grid;place-items:center;width:calc(var(--u)*9.6);aspect-ratio:1;text-align:center;font-family:var(--df);line-height:1.04;color:var(--rd)}
+.ph .burst::before,.ph .burst::after{content:'';position:absolute;clip-path:var(--star)}
+.ph .burst::before{inset:0;background:var(--ik)}
+.ph .burst::after{inset:calc(var(--u)*.28);background:var(--cr)}
+.ph .burst span{position:relative;z-index:1;font-size:calc(var(--u)*1.3)}
+.ph .burst small{display:block;font:900 calc(var(--u)*.62)/1.15 var(--ui);letter-spacing:.08em;text-transform:uppercase;margin-top:.25em}
+
+/* HERO */
+.ph .hero{background-color:var(--rd);background-image:radial-gradient(circle,rgba(101,9,9,.2) 0 calc(var(--u)*.9),transparent calc(var(--u)*.9 + .5px));background-size:calc(var(--u)*3.6) calc(var(--u)*3.6);padding-bottom:calc(var(--u)*7)}
+.ph .awW{filter:drop-shadow(0 calc(var(--u)*.45) 0 var(--ox))}
+.ph .aw{height:calc(var(--u)*4.6);background:repeating-linear-gradient(90deg,var(--cr) 0 calc(var(--u)*2.5),var(--cm) 0 calc(var(--u)*5));-webkit-mask:linear-gradient(#000,#000) 0 0/100% calc(100% - var(--u)*1.25) no-repeat,radial-gradient(circle at 50% 0,#000 calc(var(--u)*1.25 - .5px),transparent calc(var(--u)*1.25)) 0 100%/calc(var(--u)*2.5) calc(var(--u)*1.25) repeat-x;mask:linear-gradient(#000,#000) 0 0/100% calc(100% - var(--u)*1.25) no-repeat,radial-gradient(circle at 50% 0,#000 calc(var(--u)*1.25 - .5px),transparent calc(var(--u)*1.25)) 0 100%/calc(var(--u)*2.5) calc(var(--u)*1.25) repeat-x}
+.ph .hg{display:grid;grid-template-columns:1.3fr 1fr;gap:calc(var(--u)*4.4);align-items:center;padding-top:calc(var(--u)*5.2)}
+.ph .hero h1{font-size:calc(var(--u)*5.6);line-height:.96;margin:calc(var(--u)*1.5) 0 calc(var(--u)*1.7);text-shadow:.03em .03em 0 var(--ox),.06em .06em 0 var(--ox),.09em .09em 0 var(--ox),.12em .12em 0 var(--ik)}
+.ph .lead{font-size:calc(var(--u)*1.4);font-weight:800;line-height:1.42;max-width:calc(var(--u)*30)}
+.ph .meta{list-style:none;padding:0;margin:calc(var(--u)*2.2) 0 0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7)}
+.ph .meta li{border:calc(var(--u)*.16) solid var(--cr);border-radius:calc(var(--u)*.9);padding:.55em .95em;font-weight:800;font-size:calc(var(--u)*.92);line-height:1.25}
+.ph .meta b{display:block;font-weight:900;font-size:.72em;letter-spacing:.16em;text-transform:uppercase;opacity:.78;margin-bottom:.2em}
+.ph .hw{position:relative}
+.ph .win{border:calc(var(--u)*.22) solid var(--ik);border-radius:calc(var(--u)*1.1);background:var(--cr);box-shadow:calc(var(--u)*.75) calc(var(--u)*.75) 0 var(--ik);overflow:hidden;transform:rotate(1.8deg)}
+.ph .wbar{display:flex;align-items:center;gap:calc(var(--u)*.5);padding:calc(var(--u)*.7) calc(var(--u)*.95);border-bottom:calc(var(--u)*.22) solid var(--ik);color:var(--ik);font-weight:900;font-size:calc(var(--u)*.85);letter-spacing:.05em}
+.ph .wbar i{width:calc(var(--u)*.95);height:calc(var(--u)*.95);border-radius:50%;border:calc(var(--u)*.15) solid var(--ik);background:var(--rd)}
+.ph .wbar i:nth-child(2){background:var(--cm)}.ph .wbar i:nth-child(3){background:var(--ox)}
+.ph .wbar span{margin-left:calc(var(--u)*.6)}
+.ph .win img{width:100%;background:var(--ox)}
+.ph .hw .burst{left:calc(var(--u)*-4);bottom:calc(var(--u)*-3.4);transform:rotate(-12deg)}
+
+/* gingham + ticker */
+.ph .gh{height:calc(var(--u)*2);background-color:var(--cr);background-image:linear-gradient(90deg,rgba(180,35,35,.62) 50%,transparent 50%),linear-gradient(rgba(180,35,35,.62) 50%,transparent 50%);background-size:calc(var(--u)*2) calc(var(--u)*2)}
+.ph .tkr{background:var(--ik);color:var(--cr);overflow:hidden;padding:calc(var(--u)*1.1) 0}
+.ph .tkt{display:flex;width:max-content;animation:phtk 46s linear infinite}
+.ph .tkh{display:flex;flex:none}
+.ph .tkg{display:flex;align-items:center;flex:none}
+.ph .tkg span{font-family:var(--df);font-size:calc(var(--u)*1.9);line-height:1.2;white-space:nowrap;padding:0 calc(var(--u)*1.3)}
+.ph .tkg i{display:block;flex:none;width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);background:var(--rd);clip-path:var(--spark)}
+@keyframes phtk{to{transform:translateX(-50%)}}
+
+/* scallop divider */
+.ph .scal{position:absolute;z-index:2;top:0;left:0;right:0;height:calc(var(--u)*1.5);background:radial-gradient(circle at 50% 0,var(--c) calc(var(--u)*.75 - .5px),transparent calc(var(--u)*.75)) 0 0/calc(var(--u)*1.5) 100% repeat-x}
+
+/* BRIEF */
+.ph .brief{background-color:var(--cr);background-image:radial-gradient(circle,rgba(180,35,35,.09) 0 calc(var(--u)*.9),transparent calc(var(--u)*.9 + .5px));background-size:calc(var(--u)*3.6) calc(var(--u)*3.6);color:var(--ik);padding:calc(var(--u)*7) 0 calc(var(--u)*7.5)}
+.ph .sec-h{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.1)}
+.ph .sec-h h2{font-size:calc(var(--u)*4.4)}
+.ph .brief .sec-h h2{color:var(--ox)!important}
+.ph .bg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:calc(var(--u)*3.4) calc(var(--u)*2.6);margin-top:calc(var(--u)*3.6)}
+.ph .card{position:relative;border:calc(var(--u)*.22) solid var(--ik);border-radius:calc(var(--u)*1.6);padding:calc(var(--u)*3) calc(var(--u)*2.4) calc(var(--u)*2.4);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ik);color:var(--cr);transform:rotate(var(--r,0deg));transition:transform .25s ease}
+.ph .card .ct{position:absolute;top:calc(var(--u)*-1.15);left:calc(var(--u)*1.8)}
+.ph .card h3{font-size:calc(var(--u)*2.1);margin-bottom:calc(var(--u)*.8)}
+.ph .card p{font-size:calc(var(--u)*1.05);line-height:1.62}
+.ph .c1{background:var(--rd);--r:-.6deg}
+.ph .c2{background:var(--cm);--r:.5deg}
+.ph .c3{background:var(--ox);--r:.5deg}
+.ph .c4{background:var(--ik);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--rd);--r:-.5deg}
+.ph .chips{list-style:none;padding:0;margin:calc(var(--u)*1.5) 0 0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}
+.ph .chips li{background:var(--cr);color:var(--ox);font-weight:900;font-size:calc(var(--u)*.85);line-height:1.2;padding:.45em .9em;border-radius:99px}
+
+/* RESULTS */
+.ph .res{position:relative;background:var(--cm);color:var(--cr);padding:calc(var(--u)*8) 0 calc(var(--u)*7.5)}
+.ph .w2{margin-top:calc(var(--u)*3.4);border:calc(var(--u)*.22) solid var(--ik);border-radius:calc(var(--u)*.7);background:var(--cr);color:var(--ik);box-shadow:calc(var(--u)*.85) calc(var(--u)*.85) 0 var(--ik);overflow:hidden}
+.ph .w2b{display:flex;align-items:center;justify-content:space-between;background:var(--ox);color:var(--cr);padding:calc(var(--u)*.6) calc(var(--u)*.9);font-weight:900;font-size:calc(var(--u)*.98);letter-spacing:.08em}
+.ph .w2b div{display:flex;gap:calc(var(--u)*.4)}
+.ph .w2b i{display:grid;place-items:center;width:calc(var(--u)*1.5);height:calc(var(--u)*1.5);background:var(--cr);color:var(--ik);border:calc(var(--u)*.15) solid var(--ik);font-style:normal;font-weight:900;font-size:calc(var(--u)*.95);line-height:1}
+.ph .w2b i.sq::before{content:'';width:calc(var(--u)*.6);height:calc(var(--u)*.6);border:calc(var(--u)*.15) solid var(--ik)}
+.ph .sg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.ph .sx{position:relative;padding:calc(var(--u)*2.6) calc(var(--u)*2.8);border-right:calc(var(--u)*.16) dashed var(--ik);border-bottom:calc(var(--u)*.16) dashed var(--ik)}
+.ph .sx:nth-child(2n){border-right:0}
+.ph .sx:nth-child(n+3){border-bottom:0}
+.ph .sn{font-family:var(--df);font-size:calc(var(--u)*5.6);line-height:1;color:var(--rd)}
+.ph .sl{font-weight:800;font-size:calc(var(--u)*1.1);line-height:1.4;max-width:calc(var(--u)*25);margin-top:calc(var(--u)*.7)}
+.ph .sx.hi{background:var(--rd);color:var(--cr)}
+.ph .sx.hi .sn{color:var(--cr)}
+.ph .cmp{margin-top:calc(var(--u)*1.5);display:grid;grid-template-columns:auto 1fr;align-items:center;gap:calc(var(--u)*.55) calc(var(--u)*.9);font-weight:900;font-size:calc(var(--u)*.82);letter-spacing:.06em;text-transform:uppercase}
+.ph .cmp .tr{height:calc(var(--u)*1.3);border:calc(var(--u)*.17) solid var(--ik);border-radius:99px;overflow:hidden}
+.ph .cmp .tr i{display:block;height:100%;background:var(--rd)}
+.ph .sx.hi .burst{right:calc(var(--u)*1.4);top:calc(var(--u)*1);width:calc(var(--u)*8.6);transform:rotate(10deg)}
+.ph .sx.hi .sl{max-width:calc(var(--u)*20.5)}
+
+/* WORK: menu + tiktok */
+.ph .wk{position:relative;background-color:var(--cr);background-image:radial-gradient(circle,rgba(180,35,35,.09) 0 calc(var(--u)*.9),transparent calc(var(--u)*.9 + .5px));background-size:calc(var(--u)*3.6) calc(var(--u)*3.6);color:var(--ik);padding:calc(var(--u)*8.5) 0 calc(var(--u)*8)}
+.ph .menu{max-width:calc(var(--u)*47);margin:0 auto;background:var(--rd);color:var(--cr);border:calc(var(--u)*.22) solid var(--ik);border-radius:calc(var(--u)*1.7);padding:calc(var(--u)*.9);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--ik);transform:rotate(-.6deg)}
+.ph .menu .in{border:calc(var(--u)*.17) dashed var(--cr);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*2.8) calc(var(--u)*3.2) calc(var(--u)*3)}
+.ph .menu .top{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*1.2);font:900 calc(var(--u)*.85)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase}
+.ph .menu h2{font-size:calc(var(--u)*5);text-align:center;margin:calc(var(--u)*1) 0 calc(var(--u)*2.2);text-shadow:.04em .04em 0 var(--ox)}
+.ph .menu ol{list-style:none;padding:0}
+.ph .menu li{display:flex;align-items:baseline;gap:calc(var(--u)*.7);font-weight:800;font-size:calc(var(--u)*1.3);line-height:1.3;padding:.4em 0}
+.ph .menu li i{flex:1;min-width:calc(var(--u)*2);border-bottom:calc(var(--u)*.2) dotted var(--cr);transform:translateY(-.28em)}
+.ph .menu li b{font-family:var(--df);font-weight:400}
+.ph .blk{color:var(--ox)}
+.ph .blk .sec-h h2{font-size:calc(var(--u)*4.2)}
+.ph .blk .sub{color:var(--ik)}
+.ph .phs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*4);align-items:start}
+.ph .phs>div{position:relative}
+.ph .phs>div:nth-child(even){margin-top:calc(var(--u)*3.2)}
+.ph .dev{position:relative;background:var(--ik);border:calc(var(--u)*.2) solid var(--ik);border-radius:calc(var(--u)*2.6);padding:calc(var(--u)*.6);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--rd);transition:transform .25s ease}
+.ph .dev::before{content:'';position:absolute;z-index:2;top:calc(var(--u)*.6);left:50%;width:34%;height:calc(var(--u)*1.05);background:var(--ik);border-radius:0 0 calc(var(--u)*.8) calc(var(--u)*.8);transform:translateX(-50%)}
+.ph .dev img{width:100%;aspect-ratio:300/534;border-radius:calc(var(--u)*2);background:var(--cm)}
+.ph .phs .pp{position:absolute;z-index:3;top:calc(var(--u)*-1.1);left:calc(var(--u)*-1)}
+.ph .tt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*2.8);margin-top:calc(var(--u)*5.6)}
+.ph .tt .burst{top:calc(var(--u)*-4.2);right:calc(var(--u)*-1.4);transform:rotate(12deg)}
+
+/* STORIES */
+.ph .stor{position:relative;background:var(--ox);color:var(--cr);padding:calc(var(--u)*9) 0 calc(var(--u)*8.5)}
+.ph .stor .sec-h .tab{border-color:var(--cr)}
+.ph .intro{margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*54);font-size:calc(var(--u)*1.12);line-height:1.62}
+.ph .mech{list-style:none;padding:0;margin:calc(var(--u)*1.8) 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.1);counter-reset:m}
+.ph .mech li{display:flex;align-items:center;gap:calc(var(--u)*1.1);background:var(--cm);border:calc(var(--u)*.17) solid var(--cr);border-radius:calc(var(--u)*1.3);padding:calc(var(--u)*1.1) calc(var(--u)*1.3);font-weight:800;font-size:calc(var(--u)*1.02);line-height:1.3}
+.ph .mech li::before{counter-increment:m;content:counter(m);width:calc(var(--u)*2.6)}
+.ph .frs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.6) calc(var(--u)*2.2);margin-top:calc(var(--u)*4.4);align-items:start}
+.ph .fr{border:calc(var(--u)*.18) solid var(--cr);border-radius:calc(var(--u)*2.4);padding:calc(var(--u)*.55);transform:rotate(var(--r,0deg));transition:transform .25s ease}
+.ph .fr img{width:100%;aspect-ratio:500/880;object-fit:cover;object-position:50% 0;border-radius:calc(var(--u)*1.9);background:var(--cm)}
+.ph .fr.tl{border-style:dashed;background:var(--rd)}
+.ph .tli span{white-space:nowrap}
+.ph .tli{aspect-ratio:500/880;border-radius:calc(var(--u)*1.9);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*.55);text-align:center;font-family:var(--df);font-size:calc(var(--u)*2.4);line-height:1}
+.ph .tli .spk{width:calc(var(--u)*1);height:calc(var(--u)*1);color:var(--ox)}
+.ph .tli span:last-child{color:var(--ik)}
+
+/* FEED */
+.ph .feed{position:relative;background:var(--ik);color:var(--cr);padding:calc(var(--u)*9) 0 calc(var(--u)*10)}
+.ph .feed .sec-h .tab{border-color:var(--cr)}
+.ph .tcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.8);margin-top:calc(var(--u)*4.8);align-items:start}
+.ph .tcs>article:nth-child(2){margin-top:calc(var(--u)*3)}
+.ph .tc{background:var(--cr);color:var(--ik);border-radius:calc(var(--u)*1.8);padding:calc(var(--u)*.9);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--rd);transform:rotate(var(--r,0deg));transition:transform .25s ease}
+.ph .tch{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*.8);background:var(--rd);color:var(--cr);border:calc(var(--u)*.2) solid var(--ik);border-radius:calc(var(--u)*1) calc(var(--u)*1) 0 0;padding:calc(var(--u)*.75) calc(var(--u)*1.1)}
+.ph .tch h3{font-size:calc(var(--u)*1.55)}
+.ph .tch span{font-weight:900;font-size:calc(var(--u)*.74);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ph .tci{border:calc(var(--u)*.2) solid var(--ik);border-top:0;background:#fff;overflow:hidden}
+.ph .tci img{width:100%}
+.ph .tcd{margin-top:calc(var(--u)*.85);border:calc(var(--u)*.2) solid var(--ik);border-radius:calc(var(--u)*.9);overflow:hidden}
+.ph .tcd div{display:flex;justify-content:space-between;align-items:baseline;padding:.6em 1em;font-size:calc(var(--u)*.95)}
+.ph .tcd div+div{border-top:calc(var(--u)*.15) dashed var(--ik)}
+.ph .tcd dt{font-weight:900;font-size:.78em;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.ph .tcd dd{font-weight:900;color:var(--rd)}
+
+/* FOOTER */
+.ph .foot{background:var(--rd);text-align:center;padding:calc(var(--u)*5) calc(var(--u)*2) calc(var(--u)*5.5)}
+.ph .btn{display:inline-flex;align-items:center;gap:.6em;border:calc(var(--u)*.2) solid var(--cr);color:var(--cr);border-radius:99px;padding:.9em 1.9em;font-weight:900;font-size:calc(var(--u)*.95);letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
+
+@media(hover:hover){
+.ph .card:hover,.ph .tc:hover,.ph .fr:hover{transform:rotate(0) translateY(calc(var(--u)*-.4))}
+.ph .dev:hover{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}
+.ph .btn:hover{background:var(--cr);color:var(--rd)}
+}
+@media(prefers-reduced-motion:reduce){.ph .tkt{animation:none}.ph *{transition:none!important}}
+
+@media(max-width:1000px){
+.ph{--u:16px}
+.ph .w{padding:0 calc(var(--u)*1.4)}
+.ph .hg{grid-template-columns:1fr;gap:calc(var(--u)*4.4);padding-top:calc(var(--u)*4.4)}
+.ph .hero h1{font-size:min(calc(var(--u)*4.6),13.2vw)}
+.ph .hw{padding:0 calc(var(--u)*.6) 0 0}
+.ph .hw .burst{left:calc(var(--u)*-.6);bottom:calc(var(--u)*-3.6);width:calc(var(--u)*8)}
+.ph .hero{padding-bottom:calc(var(--u)*8)}
+.ph .sec-h h2,.ph .blk .sec-h h2{font-size:calc(var(--u)*3.1)}
+.ph .bg{grid-template-columns:minmax(0,1fr)}
+.ph .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.6) calc(var(--u)*1.8)}
+.ph .card h3{font-size:calc(var(--u)*1.8)}
+.ph .sg{grid-template-columns:minmax(0,1fr)}
+.ph .sx{border-right:0!important;border-bottom:calc(var(--u)*.16) dashed var(--ik)!important;padding:calc(var(--u)*1.8) calc(var(--u)*1.6)}
+.ph .sx:last-child{border-bottom:0!important}
+.ph .sn{font-size:calc(var(--u)*4.4)}
+.ph .sx.hi .burst{width:calc(var(--u)*6.2);right:calc(var(--u)*.8);top:calc(var(--u)*.8)}
+.ph .sx.hi .burst span{font-size:calc(var(--u)*.92)}
+.ph .sx.hi .sl{max-width:none}
+.ph .menu .in{padding:calc(var(--u)*2.2) calc(var(--u)*1.4) calc(var(--u)*2.2)}
+.ph .menu h2{font-size:calc(var(--u)*3.2)}
+.ph .menu li{font-size:calc(var(--u)*1.05)}
+.ph .phs{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2) calc(var(--u)*1.4)}
+.ph .phs>div:nth-child(even){margin-top:calc(var(--u)*2)}
+.ph .dev{border-radius:calc(var(--u)*2);padding:calc(var(--u)*.45)}
+.ph .dev img{border-radius:calc(var(--u)*1.55)}
+.ph .phs .pp{width:calc(var(--u)*2.6);font-size:calc(var(--u)*1.1)}
+.ph .tt{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*4)}
+.ph .tt .burst{width:calc(var(--u)*7.4);top:calc(var(--u)*-3.4);right:calc(var(--u)*-.4)}
+.ph .mech{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ph .frs{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.8) calc(var(--u)*1.2)}
+.ph .fr{border-radius:calc(var(--u)*1.8);padding:calc(var(--u)*.4)}
+.ph .fr img,.ph .tli{border-radius:calc(var(--u)*1.4)}
+.ph .tli{font-size:calc(var(--u)*1.45)}
+.ph .tcs{grid-template-columns:minmax(0,1fr);max-width:calc(var(--u)*24);margin-left:auto;margin-right:auto;gap:calc(var(--u)*3)}
+.ph .tcs>article:nth-child(2){margin-top:0}
+.ph .intro{font-size:calc(var(--u)*1.05)}
+.ph .sub{font-size:calc(var(--u)*1.15)}
+.ph .lead{font-size:calc(var(--u)*1.2)}
+.ph .tkg span{font-size:calc(var(--u)*1.5)}
+}
+@media(max-width:600px){
+.ph .mech{grid-template-columns:minmax(0,1fr)}
+}
+</style></head><body>
+<div class="ph">
+
+<header class="hero">
+  <div class="awW"><div class="aw"></div></div>
+  <div class="w hg">
+    <div class="ht">
+      <span class="tab">Case Study &middot; Pizza Hut</span>
+      <h1>The Big<br>New Yorker</h1>
+      <p class="lead">A fan-first organic campaign that turned years of documented demand into Pizza Hut&rsquo;s highest domestic quarterly sales growth in 13 years.</p>
+      <ul class="meta">
+        <li><b>Client</b>Pizza Hut</li>
+        <li><b>Role</b>ACD, Copy</li>
+        <li><b>Channels</b>TikTok &middot; Instagram &middot; X &middot; Reddit &middot; Pinterest</li>
+      </ul>
+    </div>
+    <div class="hw">
+      <div class="win">
+        <div class="wbar"><i></i><i></i><i></i><span>more-cheese.gif</span></div>
+        <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-hero.gif" width="600" height="337" alt="Close-up of a pepperoni pizza with the words More Cheese and the Pizza Hut logo">
+      </div>
+      <div class="burst"><span>Back in<br>its XL era</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="gh" aria-hidden="true"></div>
+<div class="tkr" aria-hidden="true"><div class="tkt">
+  <div class="tkh">
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+  </div>
+  <div class="tkh">
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+    <div class="tkg"><span>More Cheese</span><i></i><span>Bigger Slices</span><i></i><span>Team Hold</span><i></i><span>Team Fold</span><i></i><span>XL Era</span><i></i></div>
+  </div>
+</div></div>
+
+<section class="brief">
+  <div class="w">
+    <div class="sec-h"><span class="tab">Pizza Hut</span><h2>The Brief</h2></div>
+    <div class="bg">
+      <article class="card c1">
+        <span class="tab ct">01 &middot; Who</span>
+        <h3>The Client</h3>
+        <p>One of the most recognized fast food brands on the planet, fighting to earn back their cultural relevance by bringing back one of their most beloved menu staples since 1999.</p>
+      </article>
+      <article class="card c2">
+        <span class="tab ct">02 &middot; What</span>
+        <h3>The Campaign</h3>
+        <p>We launched a fan-first organic campaign across Pizza Hut&rsquo;s owned social channels that turned years of documented consumer demand into an energetic launch strategy. We seeded creator-led TikTok challenges and used Pizza Hut platforms as a hub for the audience to engage in debates and share reactions, converting loyal customers into earned mouthpieces.</p>
+      </article>
+      <article class="card c3">
+        <span class="tab ct">03 &middot; Where</span>
+        <h3>Channels</h3>
+        <p>The campaign ran across TikTok, Instagram (Reels, Stories, and In-Feed), X/Twitter, Reddit, and Pinterest. By breaking out of standard fast-food advertising silos, our multi-channel strategy compounded organic reach and engagement.</p>
+        <ul class="chips"><li>TikTok</li><li>IG Reels</li><li>IG Stories</li><li>IG In-Feed</li><li>X/Twitter</li><li>Reddit</li><li>Pinterest</li></ul>
+      </article>
+      <article class="card c4">
+        <span class="tab ct">04 &middot; Me</span>
+        <h3>My Role</h3>
+        <p>Besides writing clever and hilarious, thumb-stopping copy, as ACD, Copy on this project I worked closely with social strategists to define unique channel strategies, deploying tailored activations across distinct, niche digital enclaves grounded in a deep understanding of platform-specific consumer behaviors. Partnering with community managers, I helped shape an effective posting cadence and also identified real-world assets that could stretch the campaign further, extending its shelf-life well beyond the initial launch window.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="res">
+  <div class="scal" style="--c:var(--cr)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">Results</span><h2>How It Did</h2></div>
+    <div class="w2">
+      <div class="w2b"><span>results.exe</span><div><i>_</i><i class="sq"></i><i>&times;</i></div></div>
+      <div class="sg">
+        <div class="sx">
+          <div class="sn">7.1M</div>
+          <p class="sl">Monthly social media engagement at peak, a 5x increase over the prior month.</p>
+          <div class="cmp"><span>Prior month 1.4M</span><div class="tr"><i style="width:19.7%"></i></div><span>Peak 7.1M</span><div class="tr"><i style="width:100%"></i></div></div>
+        </div>
+        <div class="sx">
+          <div class="sn">128.7M</div>
+          <p class="sl">Impressions generated within the primary launch window.</p>
+        </div>
+        <div class="sx">
+          <div class="sn">47%</div>
+          <p class="sl">Month-over-month spike in earned, non-paid social traction.</p>
+        </div>
+        <div class="sx hi">
+          <div class="sn">8%</div>
+          <p class="sl">Jump in U.S. same-store sales in a single quarter, Pizza Hut&rsquo;s highest domestic quarterly sales growth in 13 years.</p>
+          <div class="burst"><span>13-year<br>high</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wk">
+  <div class="w">
+    <div class="menu"><div class="in">
+      <div class="top"><i class="spk"></i><span>On the menu</span><i class="spk"></i></div>
+      <h2>The Big<br>New Yorker</h2>
+      <ol>
+        <li><span>TikTok Taste Tests / UGC</span><i></i><b>01</b></li>
+        <li><span>Interactive Stories</span><i></i><b>02</b></li>
+        <li><span>In-Feed Social</span><i></i><b>03</b></li>
+      </ol>
+    </div></div>
+
+    <div class="blk" style="margin-top:calc(var(--u)*8)">
+      <div class="sec-h"><span class="tab">01</span><h2>TikTok Taste Tests / UGC</h2><p class="sub">A creator-led initiative that turned casual fans into grassroots evangelists.</p></div>
+      <div class="phs">
+        <div><span class="pp">1</span><div class="dev"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-tt-1.gif" width="300" height="534" loading="lazy" decoding="async" alt="A hand holding up a folded slice of Big New Yorker pizza"></div></div>
+        <div><span class="pp">2</span><div class="dev"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-tt-2.gif" width="300" height="534" loading="lazy" decoding="async" alt="A TikTok creator in a navy sweatshirt holding up a floppy slice of pizza"></div></div>
+        <div><span class="pp">3</span><div class="dev"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-tt-3.gif" width="300" height="534" loading="lazy" decoding="async" alt="A TikTok creator in an orange cap with a Big New Yorker pizza box"></div></div>
+        <div><span class="pp">4</span><div class="dev"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-tt-4.gif" width="300" height="534" loading="lazy" decoding="async" alt="A TikTok creator holding an open pizza box and a slice"></div></div>
+      </div>
+      <div class="tt">
+        <article class="card c1" style="--r:-.5deg">
+          <span class="tab ct">The Fold-Test</span>
+          <h3>Fold or flop</h3>
+          <p>Food influencers and everyday consumers held up the massive 16-inch slices to record the natural &ldquo;flop&rdquo; and their individual fold techniques.</p>
+        </article>
+        <article class="card c2" style="--r:.5deg">
+          <span class="tab ct">Video Formats</span>
+          <h3>&ldquo;Pizza Math&rdquo;</h3>
+          <p>Creators used relatable audio trends regarding the low $0.08 per square inch economy of the pie, which sparked high-velocity social sharing.</p>
+          <div class="burst"><span>$0.08<small>per sq. inch</small></span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stor">
+  <div class="scal" style="--c:var(--cr)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">02</span><h2>Interactive Stories</h2><p class="sub">Owned-channel mechanic for low-friction consumer co-creation</p></div>
+    <p class="intro">Interactive Stories were the campaign&rsquo;s conversion engine, deployed with a clear intention: to convert passive viewers into active participants. We did this through things like:</p>
+    <ol class="mech">
+      <li>Two-option polling stickers (#TeamHold vs. #TeamFold)</li>
+      <li>Sliding scale &ldquo;pizza hunger level&rdquo; meters</li>
+      <li>Embedded tap-forward/swipe-up links</li>
+      <li>Sequential &ldquo;this or that&rdquo; preference quizzes</li>
+      <li>&ldquo;Add Yours&rdquo; sticker prompts</li>
+      <li>Open-ended feedback boxes/stickers</li>
+    </ol>
+    <div class="frs">
+      <div class="fr" style="--r:-1.4deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-1.webp" width="500" height="890" loading="lazy" decoding="async" alt="Instagram Story with an Add Yours sticker asking who you would give the last slice to"></div>
+      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-2.webp" width="500" height="828" loading="lazy" decoding="async" alt="Instagram Story with an emoji slider asking what you are in the mood for right now"></div>
+      <div class="fr" style="--r:-.8deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-3.webp" width="500" height="813" loading="lazy" decoding="async" alt="Instagram Story sharing a feed post of a Big New Yorker cheese pull"></div>
+      <div class="fr" style="--r:1.4deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-4.webp" width="500" height="857" loading="lazy" decoding="async" alt="Instagram Story of a hand lifting a slice with the prompt guess who's coming back"></div>
+      <div class="fr" style="--r:1deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-5.webp" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story with the Big New Yorker logo and a poll: bigger guest list or bigger bites"></div>
+      <div class="fr" style="--r:-1.2deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-6.webp" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story quiz with the Statue of Liberty and the line no cheating"></div>
+      <div class="fr" style="--r:.8deg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-story-7.webp" width="500" height="880" loading="lazy" decoding="async" alt="Instagram Story poll asking how you eat your Big New Yorker: Team Hold or Team Fold"></div>
+      <div class="fr tl" aria-hidden="true"><div class="tli"><span>Vote.</span><i class="spk"></i><span>Slide.</span><i class="spk"></i><span>Quiz.</span><i class="spk"></i><span>Add yours.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="feed">
+  <div class="scal" style="--c:var(--ox)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">03</span><h2>In-Feed Social</h2><p class="sub">Driving conversion by amplifying consumption rituals.</p></div>
+    <p class="intro">In-Feed Social was where product context helped manufacture demand. The creative married nostalgia to mobile-first aesthetics, using pop-culture anchors and high-contrast visual cues to create mid-scroll cravings.</p>
+    <div class="tcs">
+      <article class="tc" style="--r:-2.4deg">
+        <div class="tch"><h3>Crust Rollup</h3><span>No. 01</span></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-1.webp" width="500" height="672" loading="lazy" decoding="async" alt="Pizza Hut Instagram post with four panels: the non-fold, the flop, crust taco and crust rollup"></div>
+        <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div><dt>Likes</dt><dd>4,558</dd></div></dl>
+      </article>
+      <article class="tc" style="--r:1.6deg">
+        <div class="tch"><h3>Lady Liberty</h3><span>No. 02</span></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-2.webp" width="500" height="694" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of the Statue of Liberty holding a Big New Yorker box"></div>
+        <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div><dt>Likes</dt><dd>595</dd></div></dl>
+      </article>
+      <article class="tc" style="--r:-1deg">
+        <div class="tch"><h3>XL Era</h3><span>No. 03</span></div>
+        <div class="tci"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ph-feed-3.webp" width="500" height="678" loading="lazy" decoding="async" alt="Pizza Hut Instagram post of a Big New Yorker cheese-pull slice"></div>
+        <dl class="tcd"><div><dt>Platform</dt><dd>Instagram</dd></div><div><dt>Placement</dt><dd>In-Feed</dd></div><div><dt>Likes</dt><dd>149</dd></div></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="gh" aria-hidden="true"></div>
+<footer class="foot"><a class="btn" href="https://www.byninaaustin.com/content">&larr; Back to Content</a></footer>
+
+</div>
+</body></html>
