@@ -134,8 +134,10 @@ html,body{margin:0;background:#1C0808}
 /* POLL */
 .ph .poll{position:relative;aspect-ratio:500/880;border-radius:calc(var(--u)*1.9);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*1.1);padding:calc(var(--u)*1);text-align:center;color:var(--cr)}
 .ph .pq{background:var(--ik);color:var(--cr);font:900 calc(var(--u)*.78)/1.3 var(--ui);letter-spacing:.06em;text-transform:uppercase;padding:.8em 1.05em;border-radius:calc(var(--u)*1.1)}
-.ph .pbox{width:100%;background:var(--cr);border-radius:calc(var(--u)*1.3);padding:calc(var(--u)*.7);display:grid;gap:calc(var(--u)*.55);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--ik)}
+.ph .pbox{width:100%;grid-template-columns:minmax(0,1fr);background:var(--cr);border-radius:calc(var(--u)*1.3);padding:calc(var(--u)*.7);display:grid;gap:calc(var(--u)*.55);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--ik)}
 .ph .po{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:space-between;gap:.5em;width:100%;margin:0;border:calc(var(--u)*.17) solid var(--ik);background:rgba(255,255,255,.5);color:var(--ik);border-radius:calc(var(--u)*.95);padding:.8em .9em;font:400 calc(var(--u)*1.12)/1.1 var(--df);text-align:left;cursor:pointer;transition:transform .15s ease,background .2s ease,color .2s ease,opacity .2s ease}
+.ph .po{min-width:0}
+.ph .pl{min-width:0}
 .ph .po:focus-visible{outline:calc(var(--u)*.2) solid var(--rd);outline-offset:calc(var(--u)*.15)}
 .ph .ck{flex:none;position:relative;width:calc(var(--u)*1.3);height:calc(var(--u)*1.3);border-radius:50%;border:calc(var(--u)*.17) solid var(--ik)}
 .ph .po.on{background:var(--rd);color:var(--cr)}
@@ -208,7 +210,21 @@ html,body{margin:0;background:#1C0808}
 .ph .skl li{font-size:calc(var(--u)*.66);letter-spacing:.1em;padding:.62em .95em}
 .ph .hw{padding:0 calc(var(--u)*.6) 0 0}
 .ph .hw .burst{left:calc(var(--u)*-.6);bottom:calc(var(--u)*-3.6);width:calc(var(--u)*8)}
-.ph .hero{padding-bottom:calc(var(--u)*8)}
+.ph .hero{padding-bottom:calc(var(--u)*6)}
+.ph .brief{padding:calc(var(--u)*4.6) 0 calc(var(--u)*4.6)}
+.ph .res{padding:calc(var(--u)*5) 0 calc(var(--u)*4.6)}
+.ph .wk{padding:calc(var(--u)*5) 0 calc(var(--u)*4.8)}
+.ph .stor{padding:calc(var(--u)*5.2) 0 calc(var(--u)*5)}
+.ph .feed{padding:calc(var(--u)*5.2) 0 calc(var(--u)*5.5)}
+.ph .foot{padding:calc(var(--u)*3.6) calc(var(--u)*2) calc(var(--u)*4)}
+.ph .poll{padding:calc(var(--u)*.6);gap:calc(var(--u)*.8)}
+.ph .pq{font-size:calc(var(--u)*.62);padding:.75em .8em;border-radius:calc(var(--u)*.9)}
+.ph .pbox{padding:calc(var(--u)*.5);gap:calc(var(--u)*.45);border-radius:calc(var(--u)*1.1)}
+.ph .po{font-size:min(calc(var(--u)*.78),3.2vw);padding:.78em .7em;gap:.3em;border-radius:calc(var(--u)*.8)}
+.ph .pl{white-space:nowrap}
+.ph .ck{width:calc(var(--u)*1.05);height:calc(var(--u)*1.05)}
+.ph .po.on .ck::after{width:calc(var(--u)*.3);height:calc(var(--u)*.58);border-width:0 calc(var(--u)*.16) calc(var(--u)*.16) 0}
+.ph .pn{font-size:calc(var(--u)*.6);letter-spacing:.1em}
 .ph .sec-h h2,.ph .blk .sec-h h2{font-size:calc(var(--u)*3.1)}
 .ph .bg{grid-template-columns:minmax(0,1fr)}
 .ph .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.6) calc(var(--u)*1.8)}
@@ -255,7 +271,7 @@ html,body{margin:0;background:#1C0808}
       <h1>The Big<br>New Yorker</h1>
       <p class="lead">A fan-first organic campaign that turned years of documented demand into Pizza Hut&rsquo;s highest domestic quarterly sales growth in 13 years.</p>
       <ul class="skl" aria-label="Skills">
-        <li>Organic Social</li><li>Audience Engagement</li><li>Performance Marketing</li><li>QSR Product Launch</li>
+        <li>Copywriting</li><li>Channel Strategy</li><li>Organic Social</li><li>Audience Engagement</li><li>Performance Marketing</li><li>QSR Product Launch</li><li>Phased Roll-Out</li>
       </ul>
     </div>
     <div class="hw">
@@ -444,6 +460,24 @@ html,body{margin:0;background:#1C0808}
 
 </div>
 <script>
+(function(){
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var od=host.ownerDocument,de=od.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var fit=function(){
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      set('background','none');
+    };
+    fit();
+    window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+    window.addEventListener('load',fit);
+    setTimeout(fit,700);
+  }
+})();
 (function(){
   var poll=document.querySelector('.ph .poll');
   if(!poll)return;
