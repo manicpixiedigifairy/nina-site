@@ -167,7 +167,7 @@ html,body{margin:0}
 .sv .cmg.js .cr:not(.open) .cq{opacity:0;transform:translateY(calc(var(--u)*-.6)) rotate(var(--tl))}
 .sv .cr .cq .ct{font-size:calc(var(--u)*1.25);line-height:1.38;color:var(--ink)}
 .sv .cr .cq .av{width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);font-size:calc(var(--u)*1)}
-.sv .cn:focus-visible,.sv .sf:focus-visible,.sv .mb:focus-visible,.sv .sgb:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+.sv .cn:focus-visible,.sv .sf:focus-visible,.sv .mb:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
 .sv .sf:focus-visible,.sv .mb:focus-visible{outline-offset:3px}
 .sv .cr.pop{animation:pp .45s cubic-bezier(.2,.8,.2,1) both}
 @keyframes pp{from{opacity:0;transform:translateY(calc(var(--u)*1))}to{opacity:1;transform:none}}
@@ -189,14 +189,6 @@ html,body{margin:0}
 .sv .sg{background:var(--teal);color:var(--cream);padding:calc(var(--u)*6.5) calc(var(--u)*5.5) calc(var(--u)*7)}
 .sv .sg .hd{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*3);align-items:end}
 .sv .sg h2{font-size:calc(var(--u)*7.4);color:var(--cream)}
-.sv .sgr{display:grid;gap:calc(var(--u)*1.4);justify-items:end}
-.sv .sgd{text-wrap:balance;max-width:calc(var(--u)*22);font-size:calc(var(--u)*1.3);font-weight:400;line-height:1.35;text-align:right}
-.sv .sga{display:none;gap:calc(var(--u)*.8)}
-.sv .sg.ov .sga{display:flex}
-.sv .sgb{display:grid;place-items:center;width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);padding:0;border-radius:50%;border:2px solid var(--cream);background:transparent;color:var(--cream);cursor:pointer;transition:background .2s,color .2s}
-.sv .sgb:hover{background:var(--cream);color:var(--teal)}
-.sv .sgb svg{width:46%;height:46%}
-.sv .sgb.pv svg{transform:scaleX(-1)}
 .sv .sgs{--w:min(369px,max(240px,calc(var(--u)*18.4)));margin:calc(var(--u)*4) calc(var(--u)*-5.5) 0;padding:0 calc(var(--u)*5.5) calc(var(--u)*.6);display:flex;gap:calc(var(--u)*1.4);align-items:flex-start;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-left:calc(var(--u)*5.5);scrollbar-width:none}
 .sv .sgs::-webkit-scrollbar{display:none}
 .sv .sge{flex:0 0 var(--w);width:var(--w);scroll-snap-align:start}
@@ -297,9 +289,6 @@ html,body{margin:0}
 .sv .sg{padding-top:44px;padding-bottom:48px}
 .sv .sg .hd{grid-template-columns:1fr;gap:14px}
 .sv .sg h2{font-size:16vw}
-.sv .sgr{justify-items:start}
-.sv .sgd{text-align:left;font-size:17px;max-width:none}
-.sv .sga{display:none!important}
 .sv .sgs{--w:262px;margin:26px -20px 0;padding:0 20px 8px;gap:12px;scroll-padding-left:20px}
 .sv .sge .mc{margin-top:12px}
 .sv .ti{padding:14px 16px 14px 14px;border-radius:16px;gap:12px}
@@ -310,6 +299,7 @@ html,body{margin:0}
 
 }
 @media(prefers-reduced-motion:reduce){.sv .cr.pop{animation:none}.sv .stg .arch img,.sv .cnm,.sv .ia,.sv .cn,.sv .cx,.sv .cq{transition:none!important}}
+@media(min-width:1001px) and (max-width:1180px){.sv .sgs{scrollbar-width:thin;scrollbar-color:rgba(253,246,240,.7) transparent}.sv .sgs::-webkit-scrollbar{display:block;height:6px}.sv .sgs::-webkit-scrollbar-thumb{background:rgba(253,246,240,.7);border-radius:6px}.sv .sgs::-webkit-scrollbar-track{background:transparent}}
 
 </style></head><body>
 <main class="sv">
@@ -469,7 +459,7 @@ html,body{margin:0}
 </section>
 
 <section class="sg" aria-labelledby="sgh">
-<div class="hd"><div><p class="mc">More From The Series</p><h2 id="sgh" style="margin-top:calc(var(--u)*1.2)">Explore More<br>Segments</h2></div><div class="sgr"><p class="sgd">More clips from the series, live from Instagram.</p><div class="sga"><button class="sgb pv" type="button" aria-label="Previous clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button><button class="sgb nx" type="button" aria-label="Next clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button></div></div></div>
+<div class="hd"><div><p class="mc">More From The Series</p><h2 id="sgh" style="margin-top:calc(var(--u)*1.2)">Explore More<br>Segments</h2></div></div>
 <div class="sgs" role="region" aria-label="Instagram clips from the series" tabindex="0">
 <div class="sge"><div class="sgf"><iframe src="https://www.instagram.com/reel/DM-du5RRQt9/embed/" title="Instagram reel 1 from Shea Us What You Got" loading="lazy" scrolling="no" frameborder="0" allowfullscreen></iframe></div><a class="mc" href="https://www.instagram.com/reel/DM-du5RRQt9/" target="_blank" rel="noopener">Watch on Instagram &nearr;</a></div>
 <div class="sge"><div class="sgf"><iframe src="https://www.instagram.com/reel/DNA64RhxzRc/embed/" title="Instagram reel 2 from Shea Us What You Got" loading="lazy" scrolling="no" frameborder="0" allowfullscreen></iframe></div><a class="mc" href="https://www.instagram.com/reel/DNA64RhxzRc/" target="_blank" rel="noopener">Watch on Instagram &nearr;</a></div>
@@ -563,16 +553,7 @@ if(rib){
 rib.classList.add('js');loop();
 rib.addEventListener('mouseenter',function(){hov=true;sync()});rib.addEventListener('mouseleave',function(){hov=false;sync()})}
 
-/* segments rail: arrows appear only when the clips overflow */
-var sg=document.querySelector('.sv .sg'),rail=sg?sg.querySelector('.sgs'):null;
-function railSet(){if(rail)sg.classList.toggle('ov',rail.scrollWidth>rail.clientWidth+8)}
-if(rail){
-var step=function(d){var c=rail.querySelector('.sge'),w=c?c.getBoundingClientRect().width:326,g=parseFloat(win.getComputedStyle(rail).columnGap)||0;rail.scrollBy({left:d*(w+g),behavior:'smooth'})};
-sg.querySelector('.sgb.pv').addEventListener('click',function(){step(-1)});
-sg.querySelector('.sgb.nx').addEventListener('click',function(){step(1)});
-railSet()}
-
-var rt=null,lw=win.innerWidth,wm=mobile();function again(){if(rib)loop();pinSet();railSet();if(mobile()!==wm){wm=mobile();cnt=lim()}paint(false)}
+var rt=null,lw=win.innerWidth,wm=mobile();function again(){if(rib)loop();pinSet();if(mobile()!==wm){wm=mobile();cnt=lim()}paint(false)}
 win.addEventListener('resize',function(){if(win.innerWidth===lw)return;lw=win.innerWidth;clearTimeout(rt);rt=setTimeout(again,160)});
 var fonts=win.document&&win.document.fonts;if(fonts&&fonts.ready)fonts.ready.then(again);
 setTimeout(again,1600);
