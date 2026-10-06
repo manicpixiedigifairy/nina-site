@@ -3,7 +3,7 @@
 <meta name="description" content="Shea Us What You Got: a trivia-style game show that launched SheaMoisture's Curl Stretch Collection, with 4.8M hero episode views and 5.2M+ views across the series.">
 <title>Nina Austin | Shea Us What You Got</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,400&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0}
 .sv{--u:clamp(11px,1.1111vw,28px);--coral:#e06968;--crim:#a80a20;--terra:#d28c74;--teal:#066b7b;--ink:#2A0D10;--cream:#FFF5EF;--sand:#F3E4DA;--gray:#E9DFD7;--disp:"Bricolage Grotesque","Arial Black",Impact,sans-serif;--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;--bd:var(--sans);--ui:var(--sans);display:block;position:relative;overflow:hidden;background:var(--cream);color:var(--ink);font-family:var(--bd);font-size:calc(var(--u)*1.1);line-height:1.4;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;text-align:left;-webkit-font-smoothing:antialiased}
@@ -201,6 +201,39 @@ html,body{margin:0}
 .sv .mn{color:var(--teal);font-weight:600}
 .sv .vb{flex:0 0 auto;width:calc(var(--u)*.95);height:calc(var(--u)*.95);margin:0}
 
+/* THEME: site fonts (Marcellus, Jost, Source Serif 4) */
+.sv{--disp:Marcellus,"Cormorant Garamond",Georgia,serif;--bd:"Source Serif 4",Georgia,serif;--ui:Jost,"Helvetica Neue",Arial,sans-serif}
+.sv h1,.sv h2,.sv h3{font-weight:400;letter-spacing:.012em;word-spacing:.04em;line-height:.98}
+.sv .mc{font-weight:500;letter-spacing:.14em}
+.sv .gh{font-weight:400;letter-spacing:-.01em}
+@supports (width:1cqw){.sv .gh{font-size:calc((100cqw - var(--gp)*2)*.0794)}}
+.sv .gl span:last-child{margin-right:.01em}
+.sv .hero h1{font-size:calc(var(--u)*7.5);line-height:.98;margin-top:calc(var(--u)*-2.8)}
+.sv .meta .ds{font-weight:400;font-size:calc(var(--u)*1.45);line-height:1.3;letter-spacing:0}
+.sv .tg span{font-weight:500;letter-spacing:.05em;font-size:calc(var(--u)*.9)}
+.sv .sl h2{font-size:calc(var(--u)*4.7)}
+.sv .sl .lead,.sv .cp .lead,.sv .why .st{font-weight:400;letter-spacing:0}
+.sv .film h2{font-size:calc(var(--u)*8.6);margin-top:calc(var(--u)*-4.4)}
+.sv .row .big{font-weight:400;font-size:calc(var(--u)*15);letter-spacing:-.01em}
+.sv .row .cap b{font-weight:400;font-size:calc(var(--u)*2.05);letter-spacing:.02em}
+.sv .row .cap span{font-weight:400}
+.sv .hue blockquote{font-weight:400;font-size:calc(var(--u)*3.2);letter-spacing:-.005em;line-height:1.05}
+.sv .hue .c p.bd2{font-weight:400}
+.sv .btn,.sv .fl button,.sv .sf,.sv .mb{font-weight:500;letter-spacing:.14em}
+.sv .why h2{font-size:calc(var(--u)*6)}
+.sv .pc p,.sv .rw .ld{font-weight:500;letter-spacing:0}
+.sv .num{font-weight:400}
+.sv .cp h2{font-size:calc(var(--u)*7.2)}
+.sv .chips span{font-weight:400;font-size:calc(var(--u)*1.7);letter-spacing:.02em;padding:.4em .9em .45em}
+.sv .cm h2{font-size:calc(var(--u)*6.2)}
+.sv .cap2 h3{font-size:calc(var(--u)*3.7)}
+.sv .cap2 p{font-weight:400;letter-spacing:0}
+.sv .cm .hd .dk{font-weight:400}
+.sv .fq .qt{font-weight:400;letter-spacing:-.005em;line-height:1.1;word-spacing:0}
+.sv .fq .qm{font-weight:400}
+.sv .fq.s1 .qt{font-size:calc(var(--u)*2.3)}
+.sv .fq.s2 .qt{font-size:calc(var(--u)*1.9)}
+.sv .fq.s3 .qt{font-size:calc(var(--u)*1.6)}
 
 @media(max-width:1000px){
 .sv{--u:16px}
@@ -297,6 +330,23 @@ html,body{margin:0}
 .sv .nm{font-size:15px}
 .sv .ct{font-size:15px}
 .sv .vb{width:14px;height:14px}
+.sv .hero h1{font-size:10.2vw;margin-top:-2.2vw}
+.sv .meta .ds{font-size:18px}
+.sv .tg span{font-size:13px}
+.sv .sl h2{font-size:13.2vw}
+.sv .film h2{font-size:10.4vw;margin-top:-6vw}
+.sv .film .pb{bottom:calc(10.4vw + 36px)}
+.sv .row .big{font-size:21vw}
+.sv .row .cap b{font-size:21px}
+.sv .hue blockquote{font-size:26px}
+.sv .why h2{font-size:14vw}
+.sv .cp h2{font-size:12.6vw}
+.sv .chips span{font-size:18px}
+.sv .cm h2{font-size:13.4vw}
+.sv .cap2 h3{font-size:29px}
+.sv .fq.s1 .qt{font-size:32px}
+.sv .fq.s2 .qt{font-size:26px}
+.sv .fq.s3 .qt{font-size:22px}
 
 }
 @media(prefers-reduced-motion:reduce){.sv .wall .pop{animation:none}.sv .cap2{transition:none}.sv .wall .ti,.sv .wall .fq{transition:none}}
