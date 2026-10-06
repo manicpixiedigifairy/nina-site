@@ -42,19 +42,19 @@ html,body{margin:0;background:#000}
 .sv .duo{position:relative;height:calc(var(--u)*33);z-index:2}
 .sv .duo .pf{position:absolute;left:0;top:0;width:calc(var(--u)*16.5)}
 .sv .duo .sf{position:absolute;right:0;top:calc(var(--u)*4.5);width:calc(var(--u)*17)}
-.sv .slide{background:var(--sky);color:#0A1B33;display:grid;grid-template-columns:1.2fr 1fr;gap:calc(var(--u)*3);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);min-height:calc(var(--u)*46)}
+.sv .slide{background:var(--sky);color:#0A1B33;display:grid;grid-template-columns:1.2fr 1fr;gap:calc(var(--u)*3);padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);align-items:center}
 .sv .slide h2{font-size:calc(var(--u)*7);line-height:.95;text-transform:uppercase;letter-spacing:-.01em;color:#0A1B33!important;-webkit-text-stroke:calc(var(--u)*.12) #0A1B33}
-.sv .slide .col{display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*3)}
+.sv .slide .col{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*2.5)}
 .sv .slide .col p{font-size:calc(var(--u)*1.7);line-height:1.3;font-weight:700;max-width:14em;font-family:'PT Serif',Georgia,serif}
-.sv .slide .vid{border:calc(var(--u)*.4) solid #0A1B33;background:#0A1B33;align-self:end;width:calc(var(--u)*22);justify-self:center}
+.sv .slide .vid{border:calc(var(--u)*.4) solid #0A1B33;background:#0A1B33;align-self:center;width:calc(var(--u)*22);justify-self:center}
 .sv .slide .vid img{display:block;width:100%;height:auto}
 /* hero */
 .sv .hero{position:relative;background:linear-gradient(160deg,var(--blue) 0%,var(--deep) 100%);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:calc(var(--u)*2);padding-top:calc(var(--u)*8);padding-bottom:calc(var(--u)*6);overflow:hidden}
 .sv .hero:before{content:"";position:absolute;right:-12%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 66%)}
 .sv .hero .tx{position:relative;z-index:2}
 .sv .br{font-family:Marcellus,serif;font-size:calc(var(--u)*2.2);line-height:1.1;display:block}
-.sv h1{font-size:calc(var(--u)*8.4);line-height:.98;margin-top:calc(var(--u)*.8);letter-spacing:-.01em}
-.sv h1 em{display:block;font-family:'Source Serif 4','PT Serif',serif;font-style:italic;font-size:.5em;color:var(--sky);margin:.2em 0 .1em}
+.sv h1{font-size:calc(var(--u)*7.6);line-height:.98;margin-top:calc(var(--u)*.8);letter-spacing:-.01em}
+.sv h1 em{font-family:'Source Serif 4','PT Serif',serif;font-style:italic;font-size:.62em;color:var(--sky)}
 .sv .hero p{font-size:calc(var(--u)*1.3);line-height:1.55;max-width:22em;margin-top:calc(var(--u)*2)}
 .sv .tg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);margin-top:calc(var(--u)*2.4)}
 .sv .tg span{border:2px solid #fff;border-radius:99px;padding:.45em 1.2em;font-weight:700;font-size:calc(var(--u)*.98);line-height:1.2;white-space:nowrap}
@@ -119,7 +119,7 @@ html,body{margin:0;background:#000}
 
 .sv .pad{padding-left:20px;padding-right:20px}
 .sv .hero{grid-template-columns:1fr;padding-top:48px;padding-bottom:40px;gap:20px}
-.sv h1{font-size:50px}.sv .br{font-size:24px}.sv .hero p{font-size:18px}.sv .tg span{font-size:14px}
+.sv h1{font-size:46px}.sv .br{font-size:24px}.sv .hero p{font-size:18px}.sv .tg span{font-size:14px}
 
 .sv .tick div{font-size:22px}
 .sv .xl{font-size:36px}
@@ -134,14 +134,14 @@ html,body{margin:0;background:#000}
 </style></head><body>
 <main class="sv">
 <header class="hero pad">
-<div class="tx"><span class="br">Suave</span><h1>Sponsored<em>by</em>Suave</h1>
+<div class="tx"><span class="br">Suave</span><h1>Sponsored <em>by</em><br>Suave</h1>
 <p>Proud sponsor of the body parts nobody thinks to thank. A social-first campaign that gave forgotten skin its spotlight.</p>
 <div class="tg"><span>Strategy</span><span>Copywriting</span><span>Social</span><span>Influencer</span><span>UGC</span></div></div>
 <div class="duo" aria-label="Creator content from the campaign">
 <div class="pf"><div class="hd"><span class="av">S</span><span class="nm">suave<small>Paid partnership</small></span><span class="dots">&middot;&middot;&middot;</span></div>
 <div class="md"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-4.gif" alt="A creator talks to camera with her hand on her chest" style="object-position:50% 25%" decoding="async"><span class="tag">soft, glowing neck</span></div>
 <div class="ft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.500 12a8.500 8.500 0 0 1-12.300 7.600L3.500 20.500l1-4.500A8.500 8.500 0 1 1 20.500 12z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.500h12v17l-6-4.500-6 4.500z"/></svg></div></div>
-<div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-3.gif" alt="A creator holding a Suave Nourishing pump bottle talks to camera" decoding="async"><div class="ov">Body part details below</div><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
+<div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-3.gif" alt="A creator holding a Suave Nourishing pump bottle talks to camera" decoding="async"><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
 </div></header>
 <div class="tick" aria-hidden="true"><div><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i><span>#SponsoredBySuave</span><i>&#9679;</i><span>Proud sponsor of soft, glowing neck</span><i>&#9679;</i><span>calm, relieved elbows</span><i>&#9679;</i><span>irresistibly smooth thighs</span><i>&#9679;</i><span>your most forgotten zone</span><i>&#9679;</i><span>dewy, nourished back</span><i>&#9679;</i></div></div>
 
@@ -175,7 +175,7 @@ html,body{margin:0;background:#000}
 <figure class="bub"><blockquote>"Not me getting a knee deal &#129325;"</blockquote><p>Built an honest-style review around her long-term battle with dry patches and ashiness on her knees, pointing viewers directly to Walmart, where the new Calming Relief lotion is sold.</p><figcaption>@shaielexis<span>Lemon8 / TikTok</span></figcaption></figure>
 </div></section>
 
-<section class="aes pad" aria-labelledby="aes"><div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="Close-up of a creator showing lotion on her hand" loading="lazy" decoding="async" style="object-position:50% 40%"><div class="ov">my driest zones finally got sponsored</div><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
+<section class="aes pad" aria-labelledby="aes"><div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="Close-up of a creator showing lotion on her hand" loading="lazy" decoding="async" style="object-position:50% 40%"><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
 <div><span class="lbl">Aesthetic &amp; Framing</span><h2 class="xl" id="aes">Honest Close-Ups</h2>
 <p>Instead of heavily edited studio productions, lifestyle and beauty creators delivered native, casual GRWM and situational-comedy clips that fit their existing feeds. Across Instagram Reels and TikTok, assets featured zoomed-in, un-retouched closeups of dry skin changing into hydrated skin, the same honest register as the comedy and proof the product works.</p>
 <div class="cap">my driest zones finally got sponsored</div><span class="capl">Recurring on-screen text overlay</span>
