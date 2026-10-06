@@ -51,6 +51,7 @@ html,body{margin:0;background:#1C0808}
 .ph .tkg span{font-family:var(--df);font-size:calc(var(--u)*1.9);line-height:1.2;white-space:nowrap;padding:0 calc(var(--u)*1.3)}
 .ph .tkg i{display:block;flex:none;width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);background:var(--rd);clip-path:var(--spark)}
 @keyframes phtk{to{transform:translateX(-50%)}}
+.ph .tkr:hover .tkt{animation-play-state:paused}
 
 /* scallop divider */
 .ph .scal{position:absolute;z-index:2;top:0;left:0;right:0;height:calc(var(--u)*1.5);background:radial-gradient(circle at 50% 0,var(--c) calc(var(--u)*.75 - .5px),transparent calc(var(--u)*.75)) 0 0/calc(var(--u)*1.5) 100% repeat-x}
@@ -180,7 +181,7 @@ html,body{margin:0;background:#1C0808}
 .ph .dev:hover{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}
 .ph .btn:hover{background:var(--cr);color:var(--rd)}
 }
-@media(prefers-reduced-motion:reduce){.ph .tkt,.ph .pbox,.ph .poll.pop .pbox{animation:none!important}.ph .cf{display:none}.ph *{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.ph .pbox,.ph .poll.pop .pbox{animation:none!important}.ph .tkt{animation-duration:92s}.ph .cf{display:none}.ph *{transition:none!important}}
 
 @media(max-width:1000px){
 .ph{--u:16px}
