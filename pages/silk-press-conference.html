@@ -83,14 +83,14 @@ html,body{margin:0;background:#000}
 .sp .cmt{padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*7)}
 .sp .cmhd{margin-bottom:calc(var(--u)*2.5)}
 .sp .cmg{display:flex;flex-direction:column;gap:calc(var(--u)*.5);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.sp .cmr{display:flex;gap:calc(var(--u)*.5)}
-.sp .cmr:nth-child(odd){padding-left:calc(var(--u)*5)}.sp .cmr:nth-child(even){padding-right:calc(var(--u)*5)}
-.sp .ti{position:relative;margin:0;flex:1 1 auto;min-width:calc(var(--u)*12);display:flex;align-items:center;padding:calc(var(--u)*1.1) calc(var(--u)*1.4);border-radius:calc(var(--u)*1.1);color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,box-shadow .3s;outline:none;cursor:default}
+.sp .cmr{display:flex;justify-content:center;align-items:center;gap:calc(var(--u)*.5)}
+.sp .cmr:nth-child(odd){padding-left:calc(var(--u)*3)}.sp .cmr:nth-child(even){padding-right:calc(var(--u)*3)}
+.sp .ti{position:relative;margin:0;flex:0 1 auto;max-width:calc(var(--u)*50);display:flex;align-items:center;padding:calc(var(--u)*.75) calc(var(--u)*1.1);border-radius:calc(var(--u)*.9);color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,box-shadow .3s;outline:none;cursor:default}
 .sp .ti.w{background:#fff;color:#0A0A0A;border-color:#fff}
 .sp .ti .tb{display:flex;flex-direction:column;gap:calc(var(--u)*.3);min-width:0}
-.sp .ti .un{font-weight:600;font-size:calc(var(--u)*.85);line-height:1.2;opacity:.6;letter-spacing:.01em}
+.sp .ti .un{white-space:nowrap;font-weight:600;font-size:calc(var(--u)*.85);line-height:1.2;opacity:.6;letter-spacing:.01em}
 .sp .ti .vb{width:calc(var(--u)*.8);height:calc(var(--u)*.8);margin-left:.3em;vertical-align:-.1em}
-.sp .ti p{font-size:calc(var(--u)*1.05);line-height:1.35;overflow-wrap:break-word}
+.sp .ti p{font-size:calc(var(--u)*1);line-height:1.35;overflow-wrap:break-word}
 .sp .ti .lk{position:absolute;right:calc(var(--u)*.8);bottom:calc(var(--u)*-.7);background:var(--lime);color:#0A0A0A;font-weight:700;font-size:calc(var(--u)*.8);line-height:1;padding:calc(var(--u)*.45) calc(var(--u)*.8);border-radius:99px;opacity:0;transform:translateY(calc(var(--u)*.4));transition:opacity .25s,transform .25s;pointer-events:none;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.4)}
 .sp .ti:hover,.sp .ti:focus-visible{transform:scale(1.045);z-index:3;box-shadow:0 10px 30px rgba(0,0,0,.55)}
 .sp .ti:not(.w):hover,.sp .ti:not(.w):focus-visible{background:rgba(255,255,255,.18)}
