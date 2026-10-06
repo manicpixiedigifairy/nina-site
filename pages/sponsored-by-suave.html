@@ -60,7 +60,7 @@ html,body{margin:0;background:#000}
 .sv .tg span{border:2px solid #fff;border-radius:99px;padding:.45em 1.2em;font-weight:700;font-size:calc(var(--u)*.98);line-height:1.2;white-space:nowrap}
 /* ticker */
 .sv .tick{background:#fff;color:var(--blue);overflow:hidden;white-space:nowrap;padding:calc(var(--u)*1.1) 0;border-bottom:1px solid var(--sky)}
-.sv .tick div{display:inline-block;animation:svt 38s linear infinite;font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*2);padding-left:0}
+.sv .tick div{text-transform:lowercase;display:inline-block;animation:svt 38s linear infinite;font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*2);padding-left:0}
 .sv .tick span{padding:0 calc(var(--u)*1.4)}.sv .tick i{font-style:normal;color:var(--sky)}
 @keyframes svt{to{transform:translateX(-50%)}}
 /* brief */
@@ -83,6 +83,17 @@ html,body{margin:0;background:#000}
 .sv .roll li:hover .n{color:var(--blue)}
 .sv .roll .v{font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*4.4);line-height:1.1}
 .sv .roll .v small{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.72);letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-right:calc(var(--u)*1.2);vertical-align:middle}
+.sv .roll .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*3)}
+.sv .roll .grid figure{position:relative;overflow:hidden;border-radius:calc(var(--u)*.8);aspect-ratio:4/5;background:var(--deep)}
+.sv .roll .grid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.sv .roll .grid figure:hover img{transform:scale(1.04)}
+.sv .roll .grid figcaption{position:absolute;left:calc(var(--u)*.9);bottom:calc(var(--u)*.9);display:inline-flex;align-items:center;gap:.6em;background:rgba(6,47,110,.82);color:#fff;border-radius:99px;padding:.35em 1em .35em .4em;font-size:calc(var(--u)*.85);backdrop-filter:blur(4px)}
+.sv .roll .grid figcaption span{display:inline-flex;width:1.9em;height:1.9em;border-radius:50%;background:#fff;color:var(--blue);align-items:center;justify-content:center;font-family:'Source Serif 4',Georgia,serif;font-style:italic}
+.sv .roll ol{margin-top:calc(var(--u)*3.5)}
+.sv .aes .pull{margin:calc(var(--u)*2.6) 0 calc(var(--u)*2);padding:calc(var(--u)*1.6) 0;border-top:1px solid rgba(191,221,255,.55);border-bottom:1px solid rgba(191,221,255,.55);max-width:calc(var(--u)*38)}
+.sv .aes .pull q{display:block;quotes:none;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:calc(var(--u)*3.4);line-height:1.18;color:#fff}
+.sv .aes .pull q em{color:var(--sky)}
+.sv .aes .pull span{display:block;margin-top:calc(var(--u)*1.1);font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.72);letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
 /* concept */
 .sv .concept{padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*6);display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*4);align-items:center}
 .sv .concept p{font-size:calc(var(--u)*1.2);line-height:1.7;opacity:.9;margin-top:calc(var(--u)*1.6)}
@@ -102,8 +113,8 @@ html,body{margin:0;background:#000}
 
 .sv .aes p{font-size:calc(var(--u)*1.2);line-height:1.7;opacity:.92;margin-top:calc(var(--u)*1.6);max-width:36em}
 .sv .aes p em{font-family:'Source Serif 4',Georgia,serif;color:var(--sky)}
-.sv .cap{display:inline-block;margin-top:calc(var(--u)*2.2);background:#fff;color:var(--blue);border-radius:calc(var(--u)*.9);padding:calc(var(--u)*1) calc(var(--u)*1.6);font-family:Marcellus,Georgia,serif;font-size:calc(var(--u)*3);line-height:1.15;max-width:15em}
-.sv .capl{display:block;margin-top:calc(var(--u)*.8);font-weight:700;font-size:calc(var(--u)*.72);letter-spacing:.16em;text-transform:uppercase;color:var(--sky)}
+
+
 /* role */
 .sv .role{background:#fff;color:#0A1B33;padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*5);display:grid;grid-template-columns:1fr 1.3fr;gap:calc(var(--u)*4)}
 .sv .role .lbl{color:var(--blue)}.sv .role h2{font-size:calc(var(--u)*4);line-height:1.1;color:var(--blue)!important}
@@ -113,6 +124,7 @@ html,body{margin:0;background:#000}
 .sv .foot a:hover{background:var(--blue);color:#fff}
 @media(max-width:1000px){
 .sv{--u:16px}
+.sv .roll .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:28px}.sv .roll .grid figcaption{font-size:11px;left:8px;bottom:8px}.sv .aes .pull q{font-size:28px}.sv .aes .pull span{font-size:11px}
 .sv .duo{height:calc(100vw*.95)}.sv .duo .pf{width:46%}.sv .duo .sf{width:47%;top:6%}
 .sv .pf .nm,.sv .tag{font-size:12px}.sv .sf .ov{font-size:15px;bottom:62px}.sv .sf .ch{bottom:40px;font-size:9px}.sv .sf .ac{bottom:8px;gap:6px}.sv .sf .ac span{font-size:9px;white-space:nowrap;padding:.4em .7em}.sv .pf .ft svg,.sv .sf .ac svg{width:20px;height:20px}
 .sv .slide{grid-template-columns:1fr;gap:24px;padding-top:44px;padding-bottom:44px;min-height:0}.sv .slide h2{font-size:48px}.sv .slide .col p{font-size:20px}.sv .slide .vid{width:min(240px,70%);justify-self:center}
@@ -127,7 +139,7 @@ html,body{margin:0;background:#000}
 .sv .roll{padding-top:48px;padding-bottom:48px}.sv .roll li{flex-wrap:wrap;gap:2px 12px}.sv .roll .v{font-size:30px;flex:1}.sv .roll .v small{display:block;margin:0 0 4px;font-size:11px}.sv .roll .n{font-size:16px;flex:0 0 22px}
 .sv .concept{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .concept p{font-size:17px}.sv .concept li{font-size:16px}
 .sv .bub:nth-child(2){margin-left:24px}.sv .bub blockquote{font-size:26px}.sv .bub p{font-size:16px}.sv .bub figcaption{font-size:15px}
-.sv .aes{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .aes .sf{width:min(260px,72%);margin:0 auto}.sv .aes p{font-size:17px}.sv .cap{font-size:28px}
+.sv .aes{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}.sv .aes .sf{width:min(260px,72%);margin:0 auto}.sv .aes p{font-size:17px}
 .sv .role{grid-template-columns:1fr;gap:16px;padding-top:44px;padding-bottom:36px}.sv .role h2{font-size:34px}.sv .role p{font-size:18px}
 .sv .foot{font-size:13px}
 }
@@ -151,21 +163,10 @@ html,body{margin:0;background:#000}
 <section class="brief pad" aria-labelledby="brief"><span class="lbl">The Brief</span><h2 class="xl" id="brief">Every Inch.<br>Even the Skipped Ones.</h2>
 <div class="four">
 <div><span class="k">1</span><h3>Who</h3><p>Suave, a mass-market personal care brand historically associated with budget basics, launching a new Advanced Skin Solutions line and looking to reposition as a credible body care authority without abandoning its accessible roots.</p></div>
-<div><span class="k">2</span><h3>What</h3><p>Grounded in an insight that women want to feel good in every inch of their skin, not just their face, the campaign reframed Suave as the proud sponsor of every body part people consistently skip. Each execution adopted the visual language of prestige skincare while reclaiming overlooked skin with wit and warmth.</p></div>
-<div><span class="k">3</span><h3>Where</h3><p>Social-first, leading on Instagram and TikTok, with #SponsoredBySuave built as a participatory hashtag. A hybrid UGC and influencer model paired brand-directed creator content with an open invitation for consumers to tag their own overlooked spots.</p><div class="chips"><span>Instagram</span><span>TikTok</span><span>UGC</span><span>360</span></div></div>
-<div><span class="k">4</span><h3>Why It Matters</h3><p>Body care has long defaulted to aspirational fantasy. This campaign met consumers in the reality of their skin care experience. By building a UGC mechanic into the concept itself, participation became a foundation of the campaign rather than a best-case outcome.</p></div>
+<div><span class="k">2</span><h3>What</h3><p>Grounded in the insight that women want to feel good in every inch of their skin, the campaign reframed Suave as the proud sponsor of every body part people skip, using the visual language of prestige skincare with wit and warmth.</p></div>
+<div><span class="k">3</span><h3>Where</h3><p>Social-first, leading on Instagram and TikTok, with #SponsoredBySuave built as a participatory hashtag. A hybrid UGC and influencer model paired brand-directed creator content with an open invitation to tag your own overlooked spots.</p></div>
+<div><span class="k">4</span><h3>Why It Matters</h3><p>Body care has long defaulted to aspirational fantasy. This campaign met consumers in the reality of their skin, building a UGC mechanic into the concept itself so participation became its foundation, not merely a best-case outcome.</p></div>
 </div></section>
-
-<section class="roll pad" aria-labelledby="roll"><span class="lbl">The Sponsorships</span><h2 class="xl" id="roll">Proud Sponsor Of</h2>
-<ol>
-<li><span class="n">1</span><span class="v">soft, glowing neck</span></li>
-<li><span class="n">2</span><span class="v">intensely hydrated, oh-so-smooth calves</span></li>
-<li><span class="n">3</span><span class="v">irresistibly smooth thighs</span></li>
-<li><span class="n">4</span><span class="v">calm, relieved elbows</span></li>
-<li><span class="n">5</span><span class="v">dewy, nourished back</span></li>
-<li><span class="n">6</span><span class="v">radiant shoulders</span></li>
-<li><span class="n">7</span><span class="v">your most forgotten zone</span></li>
-</ol></section>
 
 <section class="concept pad" aria-labelledby="concept"><div><span class="lbl">The Creative Concept</span><h2 class="xl" id="concept">Neglected Body Parts</h2>
 <p>Built to launch Suave's Advanced Skin Solutions body lotion lineup, the Calming Relief and moisturizing collections, the strategy ran entirely on satire and humor. Often-overlooked zones, from crusty elbows to dry knees, the back of the neck and the tops of the thighs, became individual personalities finally stepping into the spotlight. Creators joked about their body parts entering their <em>"influencer era"</em> or landing a <em>"knee deal"</em> via Suave.</p>
@@ -175,10 +176,16 @@ html,body{margin:0;background:#000}
 <figure class="bub"><blockquote>"Not me getting a knee deal &#129325;"</blockquote><p>Built an honest-style review around her long-term battle with dry patches and ashiness on her knees, pointing viewers directly to Walmart, where the new Calming Relief lotion is sold.</p><figcaption>@shaielexis<span>Lemon8 / TikTok</span></figcaption></figure>
 </div></section>
 
+<section class="roll pad" aria-labelledby="roll"><span class="lbl">The Sponsorships</span><h2 class="xl" id="roll">Proud Sponsor Of</h2>
+<div class="grid"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-1.jpg" alt="Close-up of a soft, glowing neck and collarbones with the Suave logo" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-2.jpg" alt="Smooth, hydrated calves against a warm neutral backdrop" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-3.jpg" alt="Deep-toned thighs with the Suave logo" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-4.jpg" alt="Cream smoothed along an elbow and upper arm" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-5.jpg" alt="Side profile of a bare, dewy back with the Suave logo" width="1000" height="1250" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-sp-6.jpg" alt="Radiant upper arms and shoulders with the Suave logo" width="1000" height="1250" loading="lazy" decoding="async"></figure></div>
+<ol><li><span class="n">1</span><span class="v">soft, glowing neck</span></li><li><span class="n">2</span><span class="v">intensely hydrated, oh-so-smooth calves</span></li><li><span class="n">3</span><span class="v">irresistibly smooth thighs</span></li><li><span class="n">4</span><span class="v">calm, relieved elbows</span></li><li><span class="n">5</span><span class="v">dewy, nourished back</span></li><li><span class="n">6</span><span class="v">radiant shoulders</span></li><li><span class="n">7</span><span class="v">your most forgotten zone</span></li></ol></section>
+
+
+
 <section class="aes pad" aria-labelledby="aes"><div class="sf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/suave-reel-1.gif" alt="Close-up of a creator showing lotion on her hand" loading="lazy" decoding="async" style="object-position:50% 40%"><div class="ch">#SponsoredBySuave</div><div class="ac"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.700 4.6 4.6 0 0 1 20 9.500c0 6.100-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.500 3 10.500 14M21.500 3l-7 18-4-7-7-4z"/></svg></div></div>
 <div><span class="lbl">Aesthetic &amp; Framing</span><h2 class="xl" id="aes">Honest Close-Ups</h2>
 <p>Instead of heavily edited studio productions, lifestyle and beauty creators delivered native, casual GRWM and situational-comedy clips that fit their existing feeds. Across Instagram Reels and TikTok, assets featured zoomed-in, un-retouched closeups of dry skin changing into hydrated skin, the same honest register as the comedy and proof the product works.</p>
-<div class="cap">my driest zones finally got sponsored</div><span class="capl">Recurring on-screen text overlay</span>
+<div class="pull"><q>my driest zones finally got <em>sponsored</em></q><span>Recurring on-screen text overlay</span></div>
 <p>Every laugh had a destination. Content carried direct retail intent toward <em>Walmart</em> for the Calming Relief lotion, connecting the joke to a concrete place to buy.</p></div></section>
 
 <section class="role pad" aria-labelledby="role"><div><span class="lbl">My Role</span><h2 id="role">ACD Copywriter &amp; Social Strategist</h2></div>
