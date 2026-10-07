@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Nike, Come Thru: a first-of-its-kind long-form YouTube series for Gen Z Black women athletes. The first two episodes each exceeded 1M views.">
+<meta name="description" content="Nike, Come Thru: a first-of-its-kind long-form YouTube series for Gen Z women athletes. The first two episodes each exceeded 1M views.">
 <title>Nina Austin | Nike Come Thru</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,900&family=Space+Mono:wght@400;700&family=Unbounded:wght@600;800;900&display=swap" rel="stylesheet">
@@ -159,6 +159,16 @@ html,body{margin:0;background:#1D0F3A}
 .ct .tvb .np::before{content:'';flex:none;display:block;width:.75em;height:.75em;border-radius:50%;background:var(--mg);margin-right:.7em;animation:ctBl 1.6s steps(2,jump-none) infinite}
 .ct .tvb .kn{flex:none;width:calc(var(--u)*1.7);aspect-ratio:1;border-radius:50%;border:calc(var(--u)*.2) solid var(--ink);background:radial-gradient(circle at 34% 30%,#fff 0 12%,var(--am) 13%)}
 .ct .tvb .kn+.kn{background:radial-gradient(circle at 34% 30%,#fff 0 12%,var(--cy) 13%)}
+.ct .tvb .um{appearance:none;-webkit-appearance:none;margin:0;cursor:pointer;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-width:9.2em;color:var(--ink);font:800 calc(var(--u)*.8)/1 var(--df);letter-spacing:.14em;text-transform:uppercase;padding:.8em 1.4em .8em 1.1em;border-radius:99px;border:calc(var(--u)*.2) solid var(--ink);background:#fff;box-shadow:calc(var(--u)*.25) calc(var(--u)*.25) 0 var(--ink);visibility:hidden;transition:background .2s,transform .15s,box-shadow .15s}
+.ct .tvb .um.rdy{visibility:visible}
+.ct .tvb .um svg{flex:none;width:1.5em;height:1.5em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ct .tvb .um svg .b{fill:currentColor}
+.ct .tvb .um .w{display:none}
+.ct .tvb .um.snd .w{display:inline}
+.ct .tvb .um.snd .x{display:none}
+.ct .tvb .um:hover{background:var(--lm)}
+.ct .tvb .um:active{transform:translate(calc(var(--u)*.2),calc(var(--u)*.2));box-shadow:calc(var(--u)*.05) calc(var(--u)*.05) 0 var(--ink)}
+.ct .tvb .um:focus-visible{outline:calc(var(--u)*.25) solid var(--ink);outline-offset:calc(var(--u)*.25)}
 .ct .eps h3{font:400 calc(var(--u)*2.4)/1 var(--cn);text-transform:uppercase;letter-spacing:.02em;margin-bottom:calc(var(--u)*1.2)}
 .ct .eps ol{display:grid;gap:calc(var(--u)*.7)}
 .ct .eps a{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:calc(var(--u)*1);padding:calc(var(--u)*.85) calc(var(--u)*1.2);border-radius:calc(var(--u)*1.4);border:calc(var(--u)*.2) solid var(--ink);background:rgba(255,255,255,.2);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);transition:transform .2s,background .2s,color .2s,box-shadow .2s}
@@ -176,8 +186,9 @@ html,body{margin:0;background:#1D0F3A}
 .ct .stg{position:relative;height:calc(var(--u)*34);border:calc(var(--u)*.25) solid var(--ink);border-radius:calc(var(--u)*2.8);overflow:hidden;box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--ink);background:linear-gradient(165deg,var(--cy) 0%,var(--pw) 46%,var(--mg) 100%)}
 .ct .stg .grain{opacity:.25}
 .ct .stg img{position:absolute;z-index:3;bottom:0;width:auto;max-width:none;filter:drop-shadow(calc(var(--u)*.3) calc(var(--u)*.3) 0 rgba(29,15,58,.45))}
+.ct .stg .s1{left:calc(50% + var(--u)*2.6);bottom:calc(var(--u)*-1.5);transform:translateX(-50%);height:calc(var(--u)*34);z-index:2}
 .ct .stg .s2{left:calc(var(--u)*-.4);height:calc(var(--u)*28)}
-.ct .stg .s3{right:calc(var(--u)*-.4);height:calc(var(--u)*21.5);z-index:4}
+.ct .stg .s3{right:calc(var(--u)*-4.2);bottom:calc(var(--u)*-.6);height:calc(var(--u)*17);z-index:4}
 .ct .stg .sp{z-index:5}
 .ct .rt p{font-size:calc(var(--u)*1.5);font-weight:600;line-height:1.5}
 .ct .rt p mark{background:var(--am);color:var(--ink);border-radius:calc(var(--u)*.4);padding:.02em .3em .06em;font-weight:800}
@@ -276,12 +287,14 @@ html,body{margin:0;background:#1D0F3A}
 .ct .scr{border-radius:calc(var(--u)*1.2)}
 .ct .tvb .np{font-size:calc(var(--u)*.62)}
 .ct .tvb .kn{display:none}
+.ct .tvb .um{font-size:calc(var(--u)*.62)}
 .ct .eps .et{font-size:calc(var(--u)*.9)}
 .ct .role{padding:calc(var(--u)*6.2) 0 calc(var(--u)*5)}
 .ct .rg3{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*3)}
-.ct .stg{height:calc(var(--u)*25)}
+.ct .stg{height:calc(var(--u)*25);width:100%;max-width:calc(var(--u)*25);justify-self:center}
+.ct .stg .s1{height:calc(var(--u)*25.5);bottom:calc(var(--u)*-1)}
 .ct .stg .s2{height:calc(var(--u)*21.5)}
-.ct .stg .s3{height:calc(var(--u)*16.5)}
+.ct .stg .s3{right:calc(var(--u)*-3.6);height:calc(var(--u)*13)}
 .ct .rt p{font-size:calc(var(--u)*1.2)}
 .ct .chp li{font-size:calc(var(--u)*.62)}
 .ct .up{padding:calc(var(--u)*5) 0 calc(var(--u)*5.4)}
@@ -315,7 +328,7 @@ html,body{margin:0;background:#1D0F3A}
     <div class="ht">
       <span class="tab">Nike</span>
       <h1><span class="cm">come</span><span class="th">THRU</span></h1>
-      <p class="lead">A first-of-its-kind long-form YouTube series empowering Gen Z Black women athletes through mentorship and representation.</p>
+      <p class="lead">A first-of-its-kind long-form YouTube series empowering Gen Z women athletes through mentorship and representation.</p>
       <ul class="skl" aria-label="Skills"><li>Long-Form Content</li><li>Story Producing</li><li>Editorial Production</li><li>Narrative Development</li></ul>
     </div>
     <div class="hf">
@@ -345,11 +358,11 @@ html,body{margin:0;background:#1D0F3A}
       <article class="bc b1">
         <i class="sp" style="--s:9;right:-1%;bottom:-5%;--c:rgba(255,255,255,.3);animation-duration:6s" aria-hidden="true"></i>
         <div class="lb"><h3>Who</h3><span>(The Client)</span></div>
-        <p>Nike, a global sportswear brand, aiming to showcase consistent support for BIPOC women and empower Gen Z Black women athletes through mentorship and representation.</p>
+        <p>Nike, a global sportswear brand, aiming to showcase consistent support for BIPOC women and empower Gen Z women athletes through mentorship and representation.</p>
       </article>
       <article class="bc b2">
         <div class="lb"><h3>What</h3><span>(The Campaign)</span></div>
-        <p>Launched &ldquo;Come Thru,&rdquo; a first-of-its-kind long-form <mark>YouTube</mark> series featuring hand-picked talent across three impact pillars: <mark>Community Catalysts</mark>, <mark>Elite Athletes</mark>, <mark>Gen Z Makers</mark>, guided by our host for real, personal conversations on issues impacting Black women.</p>
+        <p>Launched &ldquo;Come Thru,&rdquo; a first-of-its-kind long-form <mark>YouTube</mark> series featuring hand-picked talent across three impact pillars: <mark>Community Catalysts</mark>, <mark>Elite Athletes</mark>, <mark>Gen Z Makers</mark>, guided by our host for real, personal conversations on issues impacting women.</p>
       </article>
       <article class="bc b3">
         <div class="lb"><h3>Where</h3><span>(Channels)</span></div>
@@ -358,7 +371,7 @@ html,body{margin:0;background:#1D0F3A}
       <article class="bc b4">
         <i class="sp" style="--s:8;right:0;bottom:-4%;--c:rgba(255,255,255,.2);animation-duration:6s" aria-hidden="true"></i>
         <div class="lb"><h3>Why It Matters</h3><span>(Cultural Impact)</span></div>
-        <p>Born from necessity in 2021 to create accessible, inspiring spaces for Gen Z Black women, addressing real issues, fostering empowerment, and changing career trajectories amid broader unprecedented societal pressures.</p>
+        <p>Born from necessity in 2021 to create accessible, inspiring spaces for Gen Z women, addressing real issues, fostering empowerment, and changing career trajectories amid broader unprecedented societal pressures.</p>
       </article>
     </div>
   </div>
@@ -420,7 +433,7 @@ html,body{margin:0;background:#1D0F3A}
       <h2 class="ttl">Watch</h2>
       <div class="tv">
         <div class="scr"><a class="pst" href="https://vimeo.com/905723084" target="_blank" rel="noopener" aria-label="Play EP 01 Money Moves"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nk-reel-5.webp?v=1" alt="" width="720" height="404" loading="lazy" decoding="async"></a></div>
-        <div class="tvb"><span class="np" aria-live="polite">Up next: EP 01 Money Moves</span><i class="kn" aria-hidden="true"></i><i class="kn" aria-hidden="true"></i></div>
+        <div class="tvb"><span class="np" aria-live="polite">Up next: EP 01 Money Moves</span><i class="kn" aria-hidden="true"></i><i class="kn" aria-hidden="true"></i><button type="button" class="um" aria-label="Unmute the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="b" d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path class="x" d="M15.5 9.5l5 5M20.5 9.5l-5 5"/><path class="w" d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg><span>Unmute</span></button></div>
       </div>
     </div>
     <div class="eps">
@@ -448,6 +461,7 @@ html,body{margin:0;background:#1D0F3A}
         <i class="sp" style="--s:2.8;--c:#fff;left:44%;top:7%" aria-hidden="true"></i>
         <i class="sp" style="--s:1.8;--c:var(--am);--d:1s;right:7%;top:30%" aria-hidden="true"></i>
         <i class="sp" style="--s:2.2;--c:var(--lm);--d:.5s;left:6%;top:10%" aria-hidden="true"></i>
+        <img class="s1" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nk-sticker-1.webp?v=1" alt="Portrait of a Come Thru participant in a white lace top with pearl-trimmed tulle sleeves, one arm raised overhead" width="780" height="835" loading="lazy" decoding="async">
         <img class="s2" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nk-sticker-2.webp?v=1" alt="Portrait of a Come Thru participant in a bright blue top with long braids, hand on hip" width="651" height="901" loading="lazy" decoding="async">
         <img class="s3" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nk-sticker-3.webp?v=1" alt="Portrait of a Come Thru participant in a green patterned jacket" width="765" height="649" loading="lazy" decoding="async">
       </div>
@@ -535,10 +549,10 @@ html,body{margin:0;background:#1D0F3A}
   var scr=wat&&wat.querySelector('.scr');
   var pst=scr&&scr.querySelector('.pst');
   if(!pst)return;
-  var tv=wat.querySelector('.tv'),np=wat.querySelector('.tvb .np');
+  var tv=wat.querySelector('.tv'),np=wat.querySelector('.tvb .np'),um=wat.querySelector('.tvb .um'),umt=um&&um.querySelector('span');
   var links=wat.querySelectorAll('.eps a');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var cur=0,playing=-1,frame=null;
+  var cur=0,playing=-1,frame=null,snd=false;
   function info(i){var a=links[i];return{id:a.getAttribute('href').replace(/\/+$/,'').split('/').pop(),ep:a.querySelector('.ep').textContent,et:a.querySelector('.et').textContent}}
   function mark(i){
     cur=i;
@@ -546,6 +560,20 @@ html,body{margin:0;background:#1D0F3A}
       if(k===i){links[k].className='on';links[k].setAttribute('aria-current','true')}
       else{links[k].removeAttribute('class');links[k].removeAttribute('aria-current')}
     }
+  }
+  function ui(){
+    if(!um)return;
+    um.classList.toggle('snd',snd);
+    umt.textContent=snd?'Mute':'Unmute';
+    um.setAttribute('aria-label',snd?'Mute the video':'Unmute the video');
+  }
+  function say(m,v){
+    try{frame.contentWindow.postMessage(JSON.stringify({method:m,value:v}),'https://player.vimeo.com')}catch(e){}
+  }
+  function apply(){
+    if(!frame)return;
+    if(snd){say('setMuted',false);say('setVolume',1)}
+    else{say('setVolume',0);say('setMuted',true)}
   }
   function reveal(){
     var r=tv.getBoundingClientRect(),vh=window.innerHeight||document.documentElement.clientHeight;
@@ -557,7 +585,10 @@ html,body{margin:0;background:#1D0F3A}
     scr.innerHTML='<iframe allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
     frame=scr.querySelector('iframe');
     frame.title='Nike\u2019s Come Thru, '+d.ep+' '+d.et;
-    frame.src='https://player.vimeo.com/video/'+d.id+'?app_id=122963&autoplay=1&title=0&byline=0&portrait=0&playsinline=1&dnt=1';
+    frame.src='https://player.vimeo.com/video/'+d.id+'?app_id=122963&autoplay=1&muted=1&unmute_button=0&title=0&byline=0&portrait=0&playsinline=1&dnt=1';
+    var f=frame;
+    f.addEventListener('load',function(){if(f===frame&&snd)apply()});
+    if(um){um.classList.add('rdy');ui()}
     playing=i;
     np.textContent='Now playing: '+d.ep+' '+d.et;
     reveal();
@@ -569,6 +600,7 @@ html,body{margin:0;background:#1D0F3A}
     if(frame&&playing===i){mark(i);resume();reveal();return}
     play(i);
   }
+  if(um)um.addEventListener('click',function(){snd=!snd;ui();apply()});
   function plain(e){return e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1}
   pst.addEventListener('click',function(e){
     if(plain(e))return;
