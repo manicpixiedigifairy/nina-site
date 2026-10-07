@@ -156,14 +156,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .st{background:var(--cob);color:#fff;padding:calc(var(--u)*7) 0 calc(var(--u)*8.4);overflow:hidden}
 .th .st .dots{--dc:rgba(255,255,255,.12)}
 .th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);list-style:none;margin:0;padding:0}
-.th .fv{position:relative;display:flex;flex-direction:column;gap:calc(var(--u)*1.4);padding:calc(var(--u)*1.4);background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
-.th .fp{position:relative;aspect-ratio:1;background:#000;border:calc(var(--u)*.2) solid rgba(255,255,255,.9)}
-.th .fp iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.th .fv{position:relative;display:flex;flex-direction:column;gap:0;padding:0;background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
+.th .fp{position:relative;aspect-ratio:9/16;background:#000}
+.th .fp .fc{position:absolute;inset:0;width:100%;height:100%}
+.th .fc.ld iframe{z-index:0}
+.th .fc.ld>img{z-index:6}
 .th .fv:nth-child(even){box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 #000}
-.th .fh{display:flex;align-items:center;gap:calc(var(--u)*.7);color:#fff;font-size:calc(var(--u)*.74)}
+.th .fh{display:flex;align-items:center;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.2) calc(var(--u)*1.4);color:#fff;font-size:calc(var(--u)*.74)}
 .th .fh .rec{flex:none;width:calc(var(--u)*.9);aspect-ratio:1;border-radius:50%;background:var(--red);box-shadow:0 0 0 calc(var(--u)*.14) #fff}
 .th .fh b{margin-left:auto;font:700 1em/1 var(--ty);color:var(--ink);background:#fff;padding:.35em .6em;letter-spacing:.06em}
-.th .fn{display:block;font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
+.th .fn{display:block;padding:calc(var(--u)*1.3) calc(var(--u)*1.4) calc(var(--u)*1.5);font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
 .th .fn span{display:block;white-space:nowrap}
 .th .fn i{display:inline-block;margin:calc(var(--u)*.6) 0;padding:.3em .62em;font:700 calc(var(--u)*1)/1 var(--ty);font-style:normal;text-transform:lowercase;background:var(--red);color:#fff;transform:rotate(-4deg)}
 
@@ -306,9 +308,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .prg{gap:calc(var(--u)*.7)}
 .th .prg figure{flex-basis:calc((100% - var(--u)*.7)/2)}
 .th .fl{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
-.th .fv{gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
+.th .fv{box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
 .th .fv:nth-child(even){box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
-.th .fn{font-size:calc(var(--u)*2.5)}
+.th .fh{padding:calc(var(--u)*1) calc(var(--u)*1.1)}
+.th .fn{padding:calc(var(--u)*1.1) calc(var(--u)*1.1) calc(var(--u)*1.3);font-size:calc(var(--u)*2.5)}
 .th .fn i{margin:calc(var(--u)*.5) 0;font-size:calc(var(--u)*.9)}
 .th .tl{grid-template-columns:1fr 1fr}
 .th .tl li{aspect-ratio:1/.9;padding:calc(var(--u)*1.1)}
@@ -495,9 +498,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <section class="st" aria-label="Famebox"><div class="dots"></div>
   <div class="w">
     <ol class="fl">
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/788150108?app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 01, Travis Barker x Lady Bunny" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></div></li>
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/824516987?h=f2f3723173&amp;app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 02, Tommy Hilfiger x Jon Batiste" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></div></li>
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/788149995?app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 03, Anthony Ramos x Mr. Brainwash" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></div></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></div><div class="fp"><button class="fc" type="button" data-v="788149940" data-t="Famebox 01, Travis Barker x Lady Bunny" aria-label="Play Famebox 01, Travis Barker x Lady Bunny"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-fame-1.gif?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div><div class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></div></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></div><div class="fp"><button class="fc" type="button" data-v="824516987" data-h="f2f3723173" data-t="Famebox 02, Tommy Hilfiger x Jon Batiste" aria-label="Play Famebox 02, Tommy Hilfiger x Jon Batiste"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-fame-2.gif?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div><div class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></div></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></div><div class="fp"><button class="fc" type="button" data-v="788150072" data-t="Famebox 03, Anthony Ramos x Mr. Brainwash" aria-label="Play Famebox 03, Anthony Ramos x Mr. Brainwash"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-fame-3.gif?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div><div class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></div></li>
     </ol>
   </div>
 </section>
@@ -567,12 +570,38 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     var vo=new IntersectionObserver(function(es){if(es[0].isIntersecting){vo.disconnect();armFilm()}},{rootMargin:'600px 0px'});
     vo.observe(vw);
   }else{armFilm()}
-  /* Vimeo facades: nothing loads until a click */
+  /* Vimeo facades: nothing loads until a click. Famebox covers stay up until the video is actually playing */
+  var held=[];
+  window.addEventListener('message',function(e){
+    if(String(e.origin).indexOf('vimeo.com')<0)return;
+    var d=e.data;
+    if(typeof d==='string'){try{d=JSON.parse(d)}catch(x){return}}
+    if(!d||!d.event)return;
+    held.forEach(function(p){
+      if(e.source!==p.f.contentWindow)return;
+      if(d.event==='ready'){listen(p)}
+      else if(d.event==='play'||d.event==='playing'){reveal(p)}
+    });
+  });
+  function listen(p){
+    try{['play','playing'].forEach(function(n){p.f.contentWindow.postMessage(JSON.stringify({method:'addEventListener',value:n}),'https://player.vimeo.com')})}catch(x){}
+  }
+  function reveal(p){
+    if(p.done)return;p.done=1;
+    p.b.classList.remove('ld');p.b.classList.add('on');
+  }
   qa('.fc').forEach(function(b){
     b.addEventListener('click',function(){
-      if(b.classList.contains('on'))return;
-      b.classList.add('on');
-      b.insertAdjacentHTML('beforeend','<iframe src="https://player.vimeo.com/video/'+b.getAttribute('data-v')+'?'+(b.getAttribute('data-h')?'h='+b.getAttribute('data-h')+'&':'')+'app_id=122963&autoplay=1&playsinline=1&dnt=1" title="'+b.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+      if(b.getAttribute('data-p'))return;
+      b.setAttribute('data-p','1');
+      var hold=b.parentNode&&b.parentNode.classList.contains('fp');
+      if(hold)b.classList.add('ld');else b.classList.add('on');
+      b.insertAdjacentHTML('beforeend','<iframe src="https://player.vimeo.com/video/'+b.getAttribute('data-v')+'?'+(b.getAttribute('data-h')?'h='+b.getAttribute('data-h')+'&amp;':'')+'app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" title="'+b.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+      if(!hold)return;
+      var p={b:b,f:b.querySelector('iframe'),done:0};
+      held.push(p);
+      p.f.addEventListener('load',function(){listen(p);setTimeout(function(){reveal(p)},3500)});
+      setTimeout(function(){reveal(p)},9000);
     });
   });
 })();
