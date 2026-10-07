@@ -152,20 +152,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .ro li:nth-child(3n+1) .n{color:var(--red)}
 .th .ro li:nth-child(3n+2) .n{color:var(--ink)}
 .th .ro li:nth-child(3n) .n{color:var(--cob)}
-.th .ro .r{font:700 calc(var(--u)*.72)/1 var(--ty);letter-spacing:.16em;text-transform:uppercase;border:calc(var(--u)*.12) solid currentColor;padding:.45em .7em;flex:none}
 .th .pr{margin-top:calc(var(--u)*6.4)}
 .th .prh{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-bottom:calc(var(--u)*1.8)}
 .th .prh::after{content:'';flex:1;height:calc(var(--u)*.14);background:var(--ink)}
-.th .prg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*.9)}
-.th .prg figure{position:relative;background:var(--ink)}
+.th .prg{display:flex;flex-wrap:wrap;justify-content:center;gap:calc(var(--u)*.9)}
+.th .prg figure{position:relative;background:var(--ink);flex:0 0 calc((100% - var(--u)*2.7)/4)}
 .th .prg img{width:100%;aspect-ratio:3/4;object-fit:cover}
 .th .prg figure::after{content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.55;background-image:radial-gradient(circle,rgba(5,23,53,.8) 0 calc(var(--u)*.14),transparent calc(var(--u)*.16));background-size:calc(var(--u)*.55) calc(var(--u)*.55)}
 .th .prg figcaption{position:absolute;z-index:2;left:calc(var(--u)*.7);bottom:calc(var(--u)*.7);background:#fff;color:var(--ink);padding:.5em .8em}
 .th .st{background:var(--cob);color:#fff;padding:calc(var(--u)*7) 0 calc(var(--u)*8.4);overflow:hidden}
 .th .st .dots{--dc:rgba(255,255,255,.12)}
-.th .st .bgw{position:absolute;z-index:1;left:50%;top:calc(var(--u)*1.2);transform:translateX(-50%);font:400 calc(var(--u)*23)/1 var(--cn);text-transform:uppercase;color:transparent;-webkit-text-stroke:calc(var(--u)*.12) rgba(255,255,255,.35);white-space:nowrap;pointer-events:none}
-.th .sth{position:relative;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:calc(var(--u)*2);margin-bottom:calc(var(--u)*3.6)}
-.th .sth h2{font:400 calc(var(--u)*4.4)/.95 var(--cn);text-transform:uppercase;max-width:calc(var(--u)*30)}
 .th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);list-style:none;margin:0;padding:0}
 .th .fv{position:relative;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*1.4);padding:calc(var(--u)*1.4);background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
 .th .fv:nth-child(odd){transform:rotate(-1.4deg)}
@@ -182,7 +178,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rs .dots{--dc:rgba(5,23,53,.18)}
 .th .rs .t2{--sc:#fff;--zc:var(--ink);font-size:calc(var(--u)*6.8);margin-bottom:calc(var(--u)*3.4)}
 .th .tl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:calc(var(--u)*.25) solid var(--ink);background:var(--ink)}
-.th .tl li{position:relative;aspect-ratio:2.1/1;padding:calc(var(--u)*1.6);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-right:calc(var(--u)*.25) solid var(--ink)}
+.th .tl li{position:relative;aspect-ratio:2.1/1;padding:calc(var(--u)*1.6);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:calc(var(--u)*1.2);overflow:hidden;border-right:calc(var(--u)*.25) solid var(--ink)}
 .th .tl li:last-child{border-right:0}
 .th .tl li::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(5,23,53,.28) 0 calc(var(--u)*.17),transparent calc(var(--u)*.19));background-size:calc(var(--u)*.75) calc(var(--u)*.75)}
 .th .tl .nm{position:relative;z-index:2;font:400 calc(var(--u)*9.6)/.9 var(--cn);text-transform:uppercase;letter-spacing:.005em}
@@ -199,24 +195,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rl2{background:var(--ink);color:#fff;padding:calc(var(--u)*7.6) 0 calc(var(--u)*8)}
 .th .rl2 .dots{--dc:rgba(255,255,255,.06)}
 .th .rog{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*5);align-items:center}
-.th .rl2 .kk{background:#fff;color:var(--ink)}
 .th .rl2 .big{font:400 calc(var(--u)*13)/.86 var(--cn);text-transform:uppercase;color:#fff!important;text-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--red)}
 .th .rl2 .big span{display:block}
 .th .rl2 .big span:nth-child(2){color:transparent!important;-webkit-text-stroke:calc(var(--u)*.14) #fff;text-shadow:none}
-.th .rl2 .ttl{font:400 calc(var(--u)*3.1)/1.05 var(--sl);text-transform:uppercase;color:var(--red)!important;margin-bottom:calc(var(--u)*1.6)}
 .th .rl2 p{font-size:calc(var(--u)*1.4);line-height:1.58;font-weight:500;max-width:calc(var(--u)*40)}
-.th .chp{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);margin-top:calc(var(--u)*2.2)}
-.th .chp li{font:700 calc(var(--u)*.74)/1 var(--ty);letter-spacing:.14em;text-transform:uppercase;padding:.9em 1.2em;border:calc(var(--u)*.14) solid #fff;color:#fff}
-.th .chp li:nth-child(odd){background:var(--red);border-color:var(--red)}
 
 /* FOOTER */
 .th .ft{background:var(--paper);border-top:calc(var(--u)*.4) solid var(--ink);padding:calc(var(--u)*2.6) 0}
 .th .ft .w{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*2)}
 .th .btn{display:inline-block;font:700 calc(var(--u)*.9)/1 var(--ty);letter-spacing:.14em;text-transform:uppercase;padding:1em 1.5em;background:var(--red);color:#fff;border:calc(var(--u)*.2) solid var(--ink);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--ink);transition:transform .15s,box-shadow .15s}
 .th .btn:hover{transform:translate(calc(var(--u)*.2),calc(var(--u)*.2));box-shadow:calc(var(--u)*.2) calc(var(--u)*.2) 0 var(--ink)}
-.th .ft .sg2{text-align:right}
-.th .ft .sg2 b{display:block;font:400 calc(var(--u)*2.2)/1 var(--cn);text-transform:uppercase;letter-spacing:.03em}
-.th .ft .sg2 span{color:var(--red)}
 
 
 /* TEXTURE: paper grain, torn edges, graffiti */
@@ -253,25 +241,18 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .sx{background:#fff;clip-path:polygon(0.0% 0.2%,7.1% 1.1%,14.3% 0.1%,21.4% 0.8%,28.6% 0.1%,35.7% 0.3%,42.9% 1.1%,50.0% 0.2%,57.1% 0.7%,64.3% 0.5%,71.4% 0.5%,78.6% 0.5%,85.7% 0.2%,92.9% 0.9%,99.9% 0.0%,99.7% 10.0%,100.0% 20.0%,99.7% 30.0%,99.6% 40.0%,99.0% 50.0%,99.6% 60.0%,99.9% 70.0%,99.7% 80.0%,98.9% 90.0%,100.0% 99.9%,92.9% 99.3%,85.7% 99.6%,78.6% 99.3%,71.4% 99.6%,64.3% 99.2%,57.1% 99.5%,50.0% 99.3%,42.9% 99.0%,35.7% 99.4%,28.6% 99.8%,21.4% 99.9%,14.3% 99.0%,7.1% 99.5%,0.2% 100.0%,1.0% 90.0%,0.6% 80.0%,0.8% 70.0%,1.0% 60.0%,0.3% 50.0%,0.4% 40.0%,1.0% 30.0%,0.1% 20.0%,0.8% 10.0%)}
 .th .sx img{width:100%;aspect-ratio:1080/849}
 .th .mgt{position:relative;padding-top:calc(var(--u)*2.2)}
-.th .ivl{display:block;width:calc(var(--u)*25);margin:0 0 0 calc(var(--u)*-.8);transform:rotate(-3deg);transform-origin:20% 60%;transition:transform .25s ease;filter:drop-shadow(calc(var(--u)*.3) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
+.th .ivl{display:block;width:calc(var(--u)*38);margin:0 0 0 calc(var(--u)*-.8);transform:rotate(-3deg);transform-origin:20% 60%;transition:transform .25s ease;filter:drop-shadow(calc(var(--u)*.3) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
 .th .ivl:hover,.th .ivl:focus-visible{transform:rotate(-1deg) scale(1.04)}
 .th .ivl:focus-visible{outline:calc(var(--u)*.2) solid #fff;outline-offset:calc(var(--u)*.3)}
 .th .ivl img{display:block;width:100%;height:auto}
 .th .mgt p{font:600 calc(var(--u)*1.3)/1.58 var(--gr);margin-bottom:calc(var(--u)*1.8)}
 .th .mgt .btn{background:#fff;color:var(--ink)}
-.th .mgl{position:relative;z-index:5;aspect-ratio:68/42;margin-top:calc(var(--u)*-1.5)}
-.th .cu{position:absolute;bottom:0;left:var(--cl);width:var(--cw);max-width:none;height:auto;transform:rotate(var(--cr));transform-origin:50% 100%;filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
-.th .cuw{position:absolute;bottom:0;left:var(--cl);width:var(--cw);transform:rotate(var(--cr));transform-origin:50% 100%}
-.th .cuw .cu{position:static;display:block;width:100%;transform:none}
-.th .g15{left:29.5%;top:-19.5%;width:40%;--gc:#fff;--gw:.46;transform:rotate(-6deg)}
-.th .g15b{left:61%;top:6%;width:calc(var(--u)*3.2);--gc:#fff;--gw:.36}
+.th .mgl{position:relative;z-index:5;aspect-ratio:68/42;margin-top:calc(var(--u)*-1.5);clip-path:inset(calc(var(--u)*-8) calc(var(--u)*-8) 0 calc(var(--u)*-8))}
+.th .cu{position:absolute;bottom:var(--cb,0);left:var(--cl);width:var(--cw);max-width:none;height:auto;transform:rotate(var(--cr));transform-origin:50% 100%;filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
 /* cast, strips, results, role */
 .th .sxw .tp.a{left:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
 .th .sxw .tp.b{right:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
-.th .g18{right:calc(var(--u)*-4);top:calc(var(--u)*-1.6);width:calc(var(--u)*3.6);--gc:var(--ink);--gw:.4}
-.th .g18b{right:calc(var(--u)*-6.4);top:calc(var(--u)*3);width:calc(var(--u)*2.2);--gc:#fff;--gw:.34}
 .th .rog{position:relative}
-.th .rs .t2 .gf,.th .ca .t2 .gf{z-index:9}
 
 @media(prefers-reduced-motion:reduce){
 .th .stp{animation:none}
@@ -333,17 +314,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .ro{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
 .th .ro li:nth-child(6){border-bottom:0}
 .th .ro .n{font-size:calc(var(--u)*2.6)}
-.th .ro .r{font-size:calc(var(--u)*.58)}
 .th .pr{margin-top:calc(var(--u)*3.6)}
-.th .prg{grid-template-columns:1fr 1fr;gap:calc(var(--u)*.7)}
-.th .st .bgw{font-size:calc(var(--u)*11);top:calc(var(--u)*.6)}
-.th .sth{flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1);margin-bottom:calc(var(--u)*2.4)}
+.th .prg{gap:calc(var(--u)*.7)}
+.th .prg figure{flex-basis:calc((100% - var(--u)*.7)/2)}
 .th .fl{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
 .th .fv{aspect-ratio:auto;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
 .th .fv:nth-child(even){margin-top:0;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
 .th .fn{font-size:calc(var(--u)*2.5)}
 .th .fn i{margin:calc(var(--u)*.5) 0;font-size:calc(var(--u)*.9)}
-.th .sth h2{font-size:calc(var(--u)*3);max-width:none}
 .th .tl{grid-template-columns:1fr 1fr}
 .th .tl li{aspect-ratio:1/.9;padding:calc(var(--u)*1.1)}
 .th .tl .nm{font-size:clamp(calc(var(--u)*3.9),15vw,calc(var(--u)*7.4))}
@@ -353,9 +331,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rt p{font-size:calc(var(--u)*1.12)}
 .th .rl2 .big{font-size:min(calc(var(--u)*7.6),20vw)}
 .th .rl2 .big span{display:inline}
-.th .rl2 .ttl{font-size:calc(var(--u)*2)}
 .th .rl2 p{font-size:calc(var(--u)*1.05)}
-.th .chp li{font-size:calc(var(--u)*.6)}
 .th .ft .w{flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.6)}
 .th .tr{height:calc(var(--u)*2.4);margin-top:calc(var(--u)*-2.4)}
 .th .tr i{background-position:0 calc(var(--u)*2.4),0 calc(var(--u)*2.4)}
@@ -363,18 +339,13 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .mgh{margin-bottom:calc(var(--u)*2)}
 .th .mgb{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
 .th .mgt{padding-top:0}
-.th .ivl{width:calc(var(--u)*15);margin-left:calc(var(--u)*-.2)}
+.th .ivl{width:calc(var(--u)*20);margin-left:calc(var(--u)*-.2)}
 .th .mgt p{font-size:calc(var(--u)*1.05)}
 .th .mgl{margin-top:calc(var(--u)*1)}
 .th .gf{--gw:.3}
 .th .g6{display:none}
 .th .g10{left:auto;right:0;top:calc(var(--u)*-.2);width:calc(var(--u)*2.2)}
-.th .g15{--gw:.3}
-.th .g15b{left:62.6%;top:7%;width:calc(var(--u)*1.8)}
-.th .g18{right:calc(var(--u)*-1);top:calc(var(--u)*-1.2);width:calc(var(--u)*2.2)}
-.th .g18b{display:none}
 
-.th .ft .sg2{text-align:left}
 .th .btn{font-size:calc(var(--u)*.78)}
 }
 @supports (width:1cqw){@media(max-width:1000px){
@@ -439,12 +410,12 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <svg class="gf g10" viewBox="0 0 110 110" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L85.3 94.5 L6.0 40.0 L104.0 41.4 L23.8 97.1 L55.3 4.4 L84.4 93.3"/></svg>
       <div class="kk">The idea</div>
       <h2 class="t2"><span>Q &amp; Andy</span></h2>
-      <p class="ld">To create a storytelling device for Monogram we started by uncovering its meaning: a signature stamp used to identify a someone. We evolved this definition, leaning into the tension between person and public persona, through a social “Q &amp; Andy” inspired series that cast the campaign’s lead talent.</p>
+      <p class="ld">To create a storytelling device for Monogram we started by uncovering its meaning: a signature stamp used to identify a someone. We evolved this definition, leaning into the tension between person and public persona, through a social “Q &amp; Andy” inspired series.</p>
       <p>Set in our “famebox,” a physical manifestation of Warhol’s FACTORY confined to the 1x1 dimensions of social media, we asked talent questions that were inspired by Andy Warhol’s classic interviews.</p>
-      <blockquote><p>“We’re here at the Tommy Factory, where creativity collides with excellence. It gets a little weird in here sometimes, not gonna lie.”</p><cite class="ty">Subtitles from the Q &amp; Andy reels</cite></blockquote>
+      <blockquote><p>“We’re here at the Tommy Factory, where creativity collides with excellence. It gets a little weird in here sometimes, not gonna lie.”</p><cite class="ty">Anthony Ramos, subtitles from the Q &amp; Andy reels</cite></blockquote>
     </div>
     <div class="vf"><button class="fc" type="button" data-v="824446083" data-t="TH_Factory, the Q &amp; Andy film" aria-label="Play the TH_Factory film">
-      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-reel-4-still.webp?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"><span class="pb" aria-hidden="true"></span><span class="cp ty">TH_Factory. Play the film</span></button></div>
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-reel-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-film.webp?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div>
   </div>
   <div class="rls">
     <div class="rlh ty"><span class="sp"></span>Tommy Factory footage</div>
@@ -474,8 +445,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     </div>
     <div class="mgl">
       <img class="cu" style="--cw:33.1%;--cl:1.5%;--cr:-3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-1.webp?v=1" alt="A person with voluminous dark curls, one hand raised to their head, in a mustard cropped cardigan, a blue monogram scarf and a burgundy leather skirt, cut out against the page" width="662" height="1000" loading="lazy" decoding="async">
-      <img class="cu" style="--cw:20.9%;--cl:38.5%;--cr:2.4deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-2.webp?v=1" alt="A person with long straight hair in a burgundy monogram-print scarf and matching leggings, seen from the side, cut out against the page" width="348" height="1000" loading="lazy" decoding="async">
-      <div class="cuw" style="--cw:34.5%;--cl:62.3%;--cr:3deg"><img class="cu" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-4.webp?v=1" alt="A person with feathered black hair, red lipstick, a blue and black striped scarf and a camel monogram jacket, cut out against the page" width="677" height="1000" loading="lazy" decoding="async"><svg class="gf g15" viewBox="0 0 200 120" aria-hidden="true" focusable="false"><path pathLength="1" d="M8.0 110.0 L13.2 34.9 L55.9 73.4 L98.0 12.7 L143.9 75.4 L187.5 32.3 L189.1 111.2 L8.9 109.7 M8.0 118.0 Q100.0 126.0 194.0 116.0"/></svg></div><svg class="gf g15b" viewBox="0 0 110 110" style="--gd:0.4s" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L85.3 94.5 L6.0 40.0 L104.0 41.4 L23.8 97.1 L55.3 4.4 L84.4 93.3"/></svg>
+      <img class="cu" style="--cw:20.9%;--cl:38.5%;--cr:2.4deg;--cb:-6.5%" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-2.webp?v=1" alt="A person with long straight hair in a burgundy monogram-print scarf and matching leggings, seen from the side, cut out against the page" width="348" height="1000" loading="lazy" decoding="async">
+      <img class="cu" style="--cw:34.5%;--cl:62.3%;--cr:3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-4.webp?v=1" alt="A person with feathered black hair, red lipstick, a blue and black striped scarf and a camel monogram jacket, cut out against the page" width="677" height="1000" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -501,8 +472,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     <div class="fx"><h3>Fact box</h3><dl>
         <dt>When</dt><dd>Fall 2022, NYFW</dd>
         <dt>Where</dt><dd>Skyline Drive-In, Brooklyn</dd>
-        <dt>Format</dt><dd>Phygital runway experience</dd>
-        <dt>The mark</dt><dd>TH Monogram, with illustrator Fergus Purcell</dd></dl></div>
+        <dt>Format</dt><dd>Phygital runway experience</dd></dl></div>
     <figure class="s5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-scene-5.webp?v=1" alt="Four people in a white concrete room, one throwing a patterned jacket into the air" width="1400" height="762" loading="lazy" decoding="async"></figure>
   </div>
   </div>
@@ -512,20 +482,20 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <section class="ca"><div class="dots"></div>
   <div class="w">
     <div class="chd"><h2 class="t2">The cast
-      </h2><p class="ty">Twelve names on the talent list</p></div>
+      </h2></div>
     <ol class="ro">
-      <li><span class="n">Anthony Ramos</span><span class="r">Actor</span></li>
-      <li><span class="n">Jon Batiste</span><span class="r">Entertainer</span></li>
-      <li><span class="n">Travis Barker</span><span class="r">Entertainer</span></li>
-      <li><span class="n">Alexis Chaparro</span><span class="r">Model</span></li>
-      <li><span class="n">Alton Mason</span><span class="r">Model</span></li>
-      <li><span class="n">Amber Later</span><span class="r">Model</span></li>
-      <li><span class="n">Antonio Macek</span><span class="r">Model</span></li>
-      <li><span class="n">Georgia Palmer</span><span class="r">Model</span></li>
-      <li><span class="n">Kate Moss</span><span class="r">Model</span></li>
-      <li><span class="n">Lila Moss</span><span class="r">Model</span></li>
-      <li><span class="n">Soo Joo Park</span><span class="r">Model</span></li>
-      <li><span class="n">Zhang Wenhui</span><span class="r">Model</span></li>
+      <li><span class="n">Anthony Ramos</span></li>
+      <li><span class="n">Jon Batiste</span></li>
+      <li><span class="n">Travis Barker</span></li>
+      <li><span class="n">Alexis Chaparro</span></li>
+      <li><span class="n">Alton Mason</span></li>
+      <li><span class="n">Amber Later</span></li>
+      <li><span class="n">Antonio Macek</span></li>
+      <li><span class="n">Georgia Palmer</span></li>
+      <li><span class="n">Kate Moss</span></li>
+      <li><span class="n">Lila Moss</span></li>
+      <li><span class="n">Soo Joo Park</span></li>
+      <li><span class="n">Zhang Wenhui</span></li>
     </ol>
     <div class="pr">
       <div class="prh ty"><span class="sp"></span>Factory prints</div>
@@ -533,16 +503,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
         <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-print-1.webp?v=1" alt="Red and black high-contrast print of a man with twisted hair in a pinstripe jacket and patterned collar" width="720" height="960" loading="lazy" decoding="async"><figcaption class="ty">Print 01</figcaption></figure>
         <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-print-2.webp?v=1" alt="Cobalt and black high-contrast print of a man in a monogram hoodie with his hands on his head" width="720" height="960" loading="lazy" decoding="async"><figcaption class="ty">Print 02</figcaption></figure>
         <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-print-3.webp?v=1" alt="Silver and black high-contrast print of a blonde woman in a shearling-collar cardigan and striped tie" width="720" height="960" loading="lazy" decoding="async"><figcaption class="ty">Print 03</figcaption></figure>
-        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-print-4.webp?v=1" alt="The red and navy TH monogram on a cream card with a handwritten Tommy signature" width="720" height="960" loading="lazy" decoding="async"><figcaption class="ty">The mark</figcaption></figure>
       </div>
     </div>
   </div>
 </section>
 
 <div class="tr b" style="--tc:var(--cob);--dc:rgba(255,255,255,.12)" aria-hidden="true"><b></b><i></i></div>
-<section class="st"><div class="dots"></div><div class="bgw" aria-hidden="true">Famebox</div>
+<section class="st" aria-label="Famebox"><div class="dots"></div>
   <div class="w">
-    <div class="sth"><h2>In the famebox</h2></div>
     <ol class="fl">
       <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></div><div class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></div></li>
       <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></div><div class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></div></li>
@@ -554,8 +522,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <div class="tr c" style="--tc:var(--red);--dc:rgba(5,23,53,.18)" aria-hidden="true"><b></b><i></i></div>
 <section class="rs"><div class="dots"></div>
   <div class="w">
-    <h2 class="t2">How it did
-      <svg class="gf g18" viewBox="0 0 110 110" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L85.3 94.5 L6.0 40.0 L104.0 41.4 L23.8 97.1 L55.3 4.4 L84.4 93.3"/></svg><svg class="gf g18b" viewBox="0 0 110 110" style="--gd:0.4s" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L86.8 96.8 L6.1 41.1 L104.1 37.4 L24.5 96.1 L54.7 4.4 L85.9 95.5"/></svg></h2>
+    <h2 class="t2">How it did</h2>
     <ul class="tl">
       <li><span class="nm">4.3M</span><span class="lb">Total views</span></li>
       <li><span class="nm">8.6M</span><span class="lb">In reach</span></li>
@@ -567,18 +534,15 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <div class="tr a" style="--tc:var(--ink);--dc:rgba(255,255,255,.06)" aria-hidden="true"><b></b><i></i></div>
 <section class="rl2"><div class="dots"></div>
   <div class="w"><div class="rog">
-    <div><div class="kk">Credits</div><h2 class="big"><span>My</span> <span>Role</span></h2></div>
+    <div><h2 class="big"><span>My</span> <span>Role</span></h2></div>
     <div>
-      <h3 class="ttl">Associate Creative Director</h3>
       <p>I guided the campaign’s creative direction, developing social concepts and interview frameworks to highlight authentic stories, ensuring alignment with the brand’s prep heritage while targeting culturally savvy consumers.</p>
-      <ul class="chp"><li>Creative direction</li><li>Social concepts</li><li>Interview frameworks</li><li>Authentic stories</li></ul>
     </div>
   </div></div>
 </section>
 
 <footer class="ft"><div class="w">
   <a class="btn" href="https://www.byninaaustin.com/content">&larr; Back to Content</a>
-  <p class="sg2"><b>Nina Austin</b><span class="ty">Associate Creative Director. TH Monogram, Tommy Factory Fall ’22</span></p>
 </div></footer>
 
 </div>
@@ -612,6 +576,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     var ro=new IntersectionObserver(function(es){if(es[0].isIntersecting){ro.disconnect();armAll()}},{rootMargin:'600px 0px'});
     ro.observe(rr);
   }else if(rr){armAll()}
+  /* the film card is a looping animation, the player opens on click */
+  var vi=document.querySelector('.vf .fc>img'),vw=document.querySelector('.vf');
+  function armFilm(){
+    if(reduce||!vi)return;
+    var a=new Image();a.onload=function(){vi.src=vi.getAttribute('data-a')};a.src=vi.getAttribute('data-a');
+  }
+  if(vw&&'IntersectionObserver' in window){
+    var vo=new IntersectionObserver(function(es){if(es[0].isIntersecting){vo.disconnect();armFilm()}},{rootMargin:'600px 0px'});
+    vo.observe(vw);
+  }else{armFilm()}
   /* Vimeo facades: nothing loads until a click */
   qa('.fc').forEach(function(b){
     b.addEventListener('click',function(){
