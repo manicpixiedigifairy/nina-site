@@ -166,6 +166,12 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
 .bc .st.s3 .tx p,.bc .st.s4 .tx p{grid-column:2;grid-row:2;margin-top:calc(var(--u)*2.4)}
 .bc .exh h2 .a{letter-spacing:-.025em}
 
+.bc .mfl{position:relative;z-index:2;max-width:calc(var(--u)*58);margin:calc(var(--u)*8) auto 0;filter:drop-shadow(0 calc(var(--u)*1.6) calc(var(--u)*2.4) rgba(5,20,80,.4))}
+.bc .mfc{background:#86AEF4;color:#0B1B4A;padding:calc(var(--u)*5.4) calc(var(--u)*6.4) calc(var(--u)*6);clip-path:polygon(0 1.2%,4% .2%,9% 1.5%,15% .4%,22% 1.6%,30% .5%,38% 1.7%,46% .3%,54% 1.4%,62% .2%,70% 1.6%,78% .5%,86% 1.5%,93% .3%,100% 1.2%,100% 98.6%,94% 99.7%,87% 98.5%,80% 99.6%,72% 98.4%,64% 99.7%,55% 98.5%,47% 99.8%,39% 98.4%,30% 99.7%,22% 98.6%,14% 99.8%,7% 98.5%,0 99.6%)}
+.bc .mfc p{margin:0 0 calc(var(--u)*2.2);font-family:var(--serif);font-weight:400;font-size:calc(var(--u)*1.75);line-height:1.5;letter-spacing:-.005em}
+.bc .mfc p.lede{font-weight:300;font-size:calc(var(--u)*2.9);line-height:1.14;letter-spacing:-.02em;margin-bottom:calc(var(--u)*3);font-variation-settings:"opsz" 144}
+.bc .mfc p.end{margin:calc(var(--u)*3.4) 0 0;font-style:italic;font-weight:300;font-size:calc(var(--u)*4.4);line-height:1;letter-spacing:-.03em;color:var(--blue2)}
+
 @media(max-width:1000px){
 .bc .sw{--u:clamp(10.5px,2.9vw,16.5px)}
 .bc .bar{padding:calc(var(--u)*1.1) calc(var(--u)*2.4)}
@@ -223,6 +229,11 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
 .bc .cl .tag{font-size:calc(var(--u)*2.8);max-width:none}
 .bc .ft{padding:calc(var(--u)*2.6) calc(var(--u)*2.4)}
 .bc .bk{font-size:calc(var(--u)*1.25)}
+.bc .mfl{margin-top:calc(var(--u)*4.5)}
+.bc .mfc{padding:calc(var(--u)*3.4) calc(var(--u)*2.6) calc(var(--u)*3.8)}
+.bc .mfc p{font-size:calc(var(--u)*1.4);margin-bottom:calc(var(--u)*1.6)}
+.bc .mfc p.lede{font-size:calc(var(--u)*2.2);margin-bottom:calc(var(--u)*2)}
+.bc .mfc p.end{font-size:calc(var(--u)*3.4);margin-top:calc(var(--u)*2.2)}
 
 }
 @supports (width:1cqw){@container (max-width:1000px){
@@ -282,6 +293,11 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
 .bc .cl .tag{font-size:calc(var(--u)*2.8);max-width:none}
 .bc .ft{padding:calc(var(--u)*2.6) calc(var(--u)*2.4)}
 .bc .bk{font-size:calc(var(--u)*1.25)}
+.bc .mfl{margin-top:calc(var(--u)*4.5)}
+.bc .mfc{padding:calc(var(--u)*3.4) calc(var(--u)*2.6) calc(var(--u)*3.8)}
+.bc .mfc p{font-size:calc(var(--u)*1.4);margin-bottom:calc(var(--u)*1.6)}
+.bc .mfc p.lede{font-size:calc(var(--u)*2.2);margin-bottom:calc(var(--u)*2)}
+.bc .mfc p.end{font-size:calc(var(--u)*3.4);margin-top:calc(var(--u)*2.2)}
 
 }}
 @media(max-width:560px){
@@ -366,9 +382,16 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
       <span class="mono rv">02 / The platform</span>
       <h2 class="rv"><span class="a ln"><span>The</span></span><span class="b ln"><span>It girl</span></span><span class="c ln"><span>manifesto</span></span></h2>
       <p class="sub rv">Our platform was meant to act as a defiant, inclusive, expansive take on beauty challenging yesterday’s beauty standards, and highlighting the next generation of it girls in the making.</p>
-      <p class="pull rv">The place for every it girl.</p>
     </div>
     <figure class="pol rv fx" data-rot="-5" data-par="3" style="margin-left:auto;margin-right:auto"><span class="tape"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-manifesto.gif?v=1" width="620" height="620" alt="" loading="lazy"><figcaption class="mono">It girl manifesto</figcaption></figure>
+  </div>
+  <div class="mfl fx" data-par="1.5" data-rot="2">
+    <div class="mfc">
+      <p class="lede rv">The days when being an it girl meant “wearing your worth” are finally over. Today, the true it girls knows exclusivity is the least original way to stand out.</p>
+      <p class="rv">Real originality is taking something anyone can have and making it uniquely your own. It’s knowing how to use a 6 dollar eyeshadow palette to create a runway-worthy smokey eye. It’s having the vision to transform an everyday oversized t-shirt into a trendy two-piece set. It’s knowing how to look past the price and see the value in everything around you.</p>
+      <p class="rv">And when you’re looking for an affordable foundation in your shade or self-care that doesn’t cost you all your coin, our beauty aisles have always been the place to turn. Whether it’s the most affordable long-wear lip liner ever or the newest wash day remedy, the girls that get it, get “it” at Walmart.</p>
+      <p class="end rv">The place for every it girl.</p>
+    </div>
   </div>
 </section>
 
