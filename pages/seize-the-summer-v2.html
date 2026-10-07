@@ -87,7 +87,8 @@ section,header,footer{position:relative}
 
 /* ticker bands */
 .sts .band{overflow:hidden;background:var(--gold);color:var(--forest);padding:calc(var(--u)*1.4) 0 calc(var(--u)*1.2)}
-.sts .band .bi{display:flex;justify-content:center;align-items:center;gap:calc(var(--u)*2.4);white-space:nowrap;font-family:var(--cond);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*7);line-height:.9;letter-spacing:.01em}
+.sts .band .bi{display:flex;width:max-content;align-items:center;white-space:nowrap;will-change:transform;animation:stsTick 46s linear infinite;font-family:var(--cond);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*7);line-height:.9;letter-spacing:.01em}
+.sts .band .bi>*{flex:0 0 auto;margin-right:calc(var(--u)*2.4)}
 .sts .band .sun{width:.62em;height:.62em}
 .sts .band.sm{background:var(--forest);color:var(--gold);padding:calc(var(--u)*1.1) 0 calc(var(--u)*.9)}
 .sts .band.sm .bi{font-size:calc(var(--u)*4.4)}
@@ -152,14 +153,6 @@ section,header,footer{position:relative}
 .sts .tb{position:relative;margin:calc(var(--u)*5) 0 0}
 .sts .tb .pp{position:absolute;left:0;right:0;top:calc(var(--u)*-1.2);bottom:calc(var(--u)*-1.2);background:#EAE4D4;clip-path:var(--tp)}
 .sts .tb .ph{border-radius:0;clip-path:var(--ta);aspect-ratio:21/9;position:relative}
-.sts .act{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2);margin-top:calc(var(--u)*7);align-items:start}
-.sts .act li{position:relative}
-.sts .act li.a{grid-column:1/5}
-.sts .act li.b{grid-column:5/9;margin-top:calc(var(--u)*7)}
-.sts .act li.c{grid-column:9/13;margin-top:calc(var(--u)*2.5)}
-.sts .act .mono{display:block;margin-top:calc(var(--u)*1);color:var(--gold)}
-.sts .act b{display:block;font-family:var(--disp);font-weight:400;font-size:calc(var(--u)*3.4);letter-spacing:-.035em;line-height:1;margin-top:calc(var(--u)*.2)}
-.sts .act .fg{opacity:.8}
 
 /* where */
 .sts .ol{position:relative;background:var(--olive);color:var(--gold);padding:calc(var(--u)*9) 0 calc(var(--u)*8)}
@@ -193,7 +186,7 @@ section,header,footer{position:relative}
 .sts .bars{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*2)}
 .sts .bars li{padding:calc(var(--u)*.4) calc(var(--u)*1);border:1px solid var(--ink);border-radius:calc(var(--u)*2);font-family:var(--mono);font-size:max(10px,calc(var(--u)*.7));letter-spacing:.12em;text-transform:uppercase}
 .sts .pgr{background:var(--lime);padding:calc(var(--u)*3.4);display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*2);position:relative}
-.sts .wyp{position:relative;margin:0 auto;width:68%}
+.sts .wyp{position:relative;margin:auto;width:68%}
 .sts .wyp .ph{border-radius:0;background:#7f8f2c}
 .sts .wyp .ph img{filter:grayscale(1) contrast(1.15) brightness(1.28);mix-blend-mode:multiply}
 .sts .wyp .fg{color:var(--ink)}
@@ -346,23 +339,135 @@ section,header,footer{position:relative}
 .sts .tnh .hw{max-width:calc(100% - var(--u)*.8)}
 .sts .tb .fg{position:absolute;left:calc(var(--u)*5);bottom:calc(var(--u)*-4);margin:0;color:var(--cream)}
 
-/* illustrated activity graphics (solid shapes, no outlines) */
-.sts .gx svg{position:absolute;inset:0;width:100%;height:100%}
-.sts .gx .bob,.sts .gx .wv,.sts .gx .dr,.sts .gx .dl,.sts .gx .dr2,.sts .gx .sdr{transform-box:fill-box}
-.sts .gx .bob{animation:sg-bob 4.6s ease-in-out infinite}
-.sts .gx .w1{animation:sg-sway 7s ease-in-out infinite}
-.sts .gx .w2{animation:sg-sway 5.6s ease-in-out -1.5s infinite}
-.sts .gx .w3{animation:sg-sway 4.4s ease-in-out -2.2s infinite reverse}
-.sts .gx .w4{animation:sg-sway 6.2s ease-in-out -.8s infinite}
-.sts .gx .dr,.sts .gx .sdr{animation:sg-drift 14s ease-in-out infinite alternate}
-.sts .gx .dl{animation:sg-drift 16s ease-in-out -4s infinite alternate-reverse}
-.sts .gx .dr2{animation:sg-drift 18s ease-in-out -6s infinite alternate}
-@keyframes sg-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes sg-sway{0%,100%{transform:translateX(-8px)}50%{transform:translateX(8px)}}
-@keyframes sg-drift{from{transform:translateX(-14px)}to{transform:translateX(18px)}}
-@media (prefers-reduced-motion:reduce){.sts .gx *{animation:none!important}}
 
 .sts .cl .pill{margin-top:calc(var(--u)*2.2)}
+
+@keyframes stsTick{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media (prefers-reduced-motion:reduce){.sts .band .bi{animation:none}}
+
+/* ===== partner scrollytelling: vertical by default, horizontal and pinned once the script says so ===== */
+.sts .hs{position:relative;--k:var(--u);--sp:calc(var(--k)*6.6);background:#38502F;color:var(--cream)}
+.sts .hs.h{--k:min(var(--u),calc(100vh/50))}
+@supports (height:100svh){.sts .hs.h{--k:min(var(--u),calc(100svh/50))}}
+.sts .hs-kp{position:absolute;left:0;top:0;width:var(--k);height:0;visibility:hidden;pointer-events:none}
+.sts .hs-stage,.sts .hs-track{position:relative}
+.sts .hs-sc{position:relative;isolation:isolate;overflow:clip;padding:calc(var(--k)*5) calc(var(--k)*1.6) calc(var(--k)*5);scroll-margin-top:calc(var(--k)*3.8)}
+.sts .hs-sc.t1,.sts .hs-sc.t2{background:#38502F}
+.sts .hs-sc.bv{background:#D9CFBD;color:var(--ink)}
+.sts .hs-sc.hb{background:var(--olive)}
+.sts .hs-sc .mt{opacity:.3}
+.sts .hs-sc.bv .mt{opacity:.07}
+.sts .hs-ci{position:relative;z-index:1;max-width:calc(var(--k)*58);margin:0 auto}
+.sts .hs-ci>*+*{margin-top:calc(var(--k)*3)}
+.sts .hs .rb .no{color:var(--gold)}
+.sts .hs-sc.bv .rb .no{color:var(--moss)}
+.sts .hs .rb h3{font-size:calc(var(--k)*5.4);font-size:min(calc(var(--k)*8),calc((100cqw - var(--k)*3.4)/4.1));font-variation-settings:"opsz" 144}
+.sts .hs-sc.bv .rb h3{font-style:italic;font-weight:300;letter-spacing:-.05em}
+.sts .hs:not(.h) .hs-tt.sm .rb h3{font-size:calc(var(--k)*5);font-size:min(calc(var(--k)*6.4),calc((100cqw - var(--k)*3.4)/5.4));overflow-wrap:anywhere}
+.sts .hs .lead{font-size:calc(var(--k)*1.7);margin-top:calc(var(--k)*2);max-width:calc(var(--k)*34)}
+.sts .hs .hw{font-size:calc(var(--k)*2.3);margin-top:calc(var(--k)*2);color:var(--gold)}
+.sts .hs-gw{position:absolute;z-index:0;left:calc(var(--k)*1);bottom:calc(var(--k)*1);margin:0;font-family:var(--disp);font-weight:500;font-size:calc(var(--k)*8);line-height:.82;letter-spacing:-.05em;color:rgba(247,241,220,.08);white-space:nowrap;pointer-events:none;font-variation-settings:"opsz" 144}
+.sts .hs-sc.bv .hs-gw{color:rgba(31,42,20,.08);font-style:italic;font-weight:300}
+.sts .hs-sc.hb .hs-gw{color:rgba(247,241,220,.07)}
+/* spine */
+.sts .hs-spine{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:calc(var(--k)*1.4);padding:calc(var(--k)*.9) calc(var(--k)*1.5);background:rgba(20,32,14,.96);color:var(--cream)}
+.sts .hs-lab,.sts .hs-cnt{display:none}
+.sts .hs-nav{display:flex;gap:calc(var(--k)*1.6);flex-wrap:wrap}
+.sts .hs-nav a{display:flex;align-items:baseline;gap:calc(var(--k)*.5);opacity:.6;transition:opacity .3s,color .3s}
+.sts .hs-nav a b{font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:calc(var(--k)*1.05);line-height:1}
+.sts .hs-nav a .mono{font-size:max(9px,calc(var(--k)*.62))}
+.sts .hs-nav a.on{opacity:1;color:var(--gold)}
+.sts .hs-bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(247,241,220,.14)}
+.sts .hs-bar i{display:block;height:100%;width:calc(var(--p,0)*100%);background:var(--gold)}
+/* travel noire */
+.sts .hs-st{position:relative;height:calc(var(--k)*30)}
+.sts .hs-st figure{position:absolute;margin:0}
+.sts .hs-st img{width:100%;height:auto;border-radius:calc(var(--k)*.9)}
+.sts .hs-sa{left:0;top:0;width:calc(var(--k)*13)}
+.sts .hs-sb{left:calc(var(--k)*11);top:calc(var(--k)*8);width:calc(var(--k)*11)}
+.sts .hs-deck{position:relative}
+.sts .hs-dc{display:block;background:var(--cream);color:var(--ink);border-radius:calc(var(--k)*.9);padding:calc(var(--k)*1.1);box-shadow:0 calc(var(--k)*1) calc(var(--k)*2.6) rgba(0,0,0,.28)}
+.sts .hs-et{display:block;margin-top:calc(var(--k)*.9)}
+.sts .hs-et .mono{display:block;color:var(--moss)}
+.sts .hs-et b{display:block;font-family:var(--disp);font-weight:400;font-size:calc(var(--k)*1.5);line-height:1.2;letter-spacing:-.02em;margin-top:calc(var(--k)*.4)}
+.sts .hs-et i{display:block;margin-top:calc(var(--k)*.5);font-family:var(--disp);font-size:calc(var(--k)*.95);opacity:.7}
+.sts .hs-dc .th{border-radius:calc(var(--k)*.5)}
+.sts .hs-dc.fe{padding:calc(var(--k)*1.8)}
+.sts .hs-dc.fe .mono{display:block;color:var(--moss)}
+.sts .hs-dc.fe b{display:block;font-family:var(--disp);font-weight:400;font-size:calc(var(--k)*1.7);line-height:1.18;letter-spacing:-.025em;margin-top:calc(var(--k)*.6)}
+.sts .hs-dc.fe i{display:block;margin-top:calc(var(--k)*.9);font-family:var(--disp);font-size:calc(var(--k)*1);color:var(--moss)}
+/* blavity */
+.sts .hs .prog{margin-top:calc(var(--k)*1.4);color:#6b5a38}
+.sts .hs .bvt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--k)*2)}
+.sts .hs .bvt .mono{display:block;color:var(--moss);margin-bottom:calc(var(--k)*.6)}
+.sts .hs .bvt p{font-size:calc(var(--k)*1.3);line-height:1.55}
+.sts .hs-fls{display:grid;grid-template-columns:repeat(auto-fit,minmax(calc(var(--k)*15),1fr));gap:calc(var(--k)*1.6)}
+.sts .hs-flp{perspective:calc(var(--k)*80);aspect-ratio:3/2}
+.sts .hs-fi{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(calc(var(--a,0)*1deg))}
+.sts .hs-ff,.sts .hs-fb{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(var(--k)*1.5);border-radius:calc(var(--k)*1);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 calc(var(--k)*.8) calc(var(--k)*2.2) rgba(31,42,20,.22)}
+.sts .hs-ff{background:var(--paper);color:var(--ink)}
+.sts .hs-fb{background:var(--blue);color:var(--cream);transform:rotateY(180deg)}
+.sts .hs-ff .mono{color:var(--moss)}
+.sts .hs-ff b,.sts .hs-fb b{font-family:var(--disp);font-weight:300;letter-spacing:-.045em;line-height:.95;font-variation-settings:"opsz" 144}
+.sts .hs-ff b{font-size:calc(var(--k)*4.4);color:var(--blue)}
+.sts .hs-fb span{font-family:var(--disp);font-weight:400;font-size:calc(var(--k)*1.7);line-height:1.15;letter-spacing:-.02em}
+.sts .hs-fb b{font-size:calc(var(--k)*2.2);color:var(--gold2)}
+/* hypebeast */
+.sts .hs-pcs{position:relative}
+.sts .hs-pc{margin:0;width:calc(var(--k)*10)}
+.sts .hs-pc .ph{border-radius:calc(var(--k)*.8);box-shadow:0 calc(var(--k)*.8) calc(var(--k)*2.2) rgba(0,0,0,.28)}
+.sts .hs-pcs .cdn{position:absolute;left:0;bottom:calc(var(--k)*-3)}
+/* horizontal pinned mode */
+.sts .hs.h .hs-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.sts .hs.h .hs-track{display:flex;height:100%;width:max-content;will-change:transform}
+.sts .hs.h .hs-sc{flex:0 0 auto;width:auto;min-width:var(--sw);height:100%;display:flex;align-items:center;padding:0 calc(var(--k)*4) 0 calc(var(--sp) + var(--k)*4);scroll-margin:0}
+.sts .hs.h .hs-sc.wide{min-width:calc(var(--sw)*1.28)}
+.sts .hs.h .hs-ci{display:flex;align-items:center;gap:calc(var(--k)*4);max-width:none;margin:0;width:auto}
+.sts .hs.h .hs-ci>*+*{margin-top:0}
+.sts .hs.h .hs-ci>*{flex:0 0 auto}
+.sts .hs.h .hs-tt{width:calc(var(--k)*34)}
+.sts .hs.h .hs-sc.bv .hs-tt{width:calc(var(--k)*27)}
+.sts .hs.h .hs-tt.sm{width:calc(var(--k)*20)}
+.sts .hs.h .rb h3{font-size:calc(var(--k)*8)}
+.sts .hs.h .hs-gw{font-size:calc(var(--k)*26);left:calc(var(--sp) + var(--k)*3);bottom:calc(var(--k)*-1.5)}
+.sts .hs.h .hs-st{width:calc(var(--k)*25);height:calc(var(--k)*36);margin-left:calc(var(--k)*2)}
+.sts .hs.h .hs-sa{width:calc(var(--k)*15)}
+.sts .hs.h .hs-sb{left:calc(var(--k)*11);top:calc(var(--k)*13);width:calc(var(--k)*13)}
+.sts .hs.h .hs-deck{width:calc(var(--k)*40);height:calc(var(--k)*36)}
+.sts .hs.h .hs-deck.f{width:calc(var(--k)*32);height:calc(var(--k)*30)}
+.sts .hs.h .hs-dc{position:absolute;left:0;top:calc(var(--k)*5);width:calc(var(--k)*27);transform-origin:50% 100%;transform:translate(calc((1 - var(--e,0))*var(--k)*34 + var(--i)*var(--k)*3.2),calc(var(--i)*var(--k)*-1.1)) rotate(calc((1 - var(--e,0))*9deg + var(--r,0)*1deg)) scale(var(--s,1));opacity:calc(var(--e,0)*4)}
+.sts .hs.h .hs-dc.fe{top:calc(var(--k)*3);width:calc(var(--k)*26)}
+.sts .hs.h .hs-dc.fe[style*="--i:1"]{top:calc(var(--k)*17.5)}
+.sts .hs.h .bvt{width:calc(var(--k)*40)}
+.sts .hs.h .hs-fls{display:flex;gap:calc(var(--k)*2.2)}
+.sts .hs.h .hs-flp{width:calc(var(--k)*17);height:calc(var(--k)*24);aspect-ratio:auto;flex:0 0 auto}
+.sts .hs.h .hs-flp:nth-child(2n){margin-top:calc(var(--k)*5)}
+.sts .hs.h .hs-pcs{width:calc(var(--k)*27);height:calc(var(--k)*34)}
+.sts .hs.h .hs-pc{position:absolute;left:calc(var(--x)*var(--k));top:calc(var(--y)*var(--k));width:calc(var(--k)*10.6)}
+.sts .hs.h .hs-spine{position:absolute;left:0;top:0;bottom:0;width:var(--sp);flex-direction:column;justify-content:space-between;align-items:center;gap:0;padding:calc(var(--k)*2.2) 0}
+.sts .hs.h .hs-lab{display:block;writing-mode:vertical-rl;transform:rotate(180deg);opacity:.65;white-space:nowrap}
+.sts .hs.h .hs-nav{flex-direction:column;gap:calc(var(--k)*2.2);align-items:center}
+.sts .hs.h .hs-nav a{flex-direction:column;align-items:center;gap:calc(var(--k)*.6)}
+.sts .hs.h .hs-nav a b{writing-mode:vertical-rl;transform:rotate(180deg);font-size:calc(var(--k)*1.7);letter-spacing:.06em}
+.sts .hs.h .hs-bar{position:relative;left:auto;right:auto;bottom:auto;flex:1;width:3px;height:auto;margin:calc(var(--k)*1.8) 0;border-radius:2px;overflow:hidden}
+.sts .hs.h .hs-bar i{width:100%;height:calc(var(--p,0)*100%)}
+.sts .hs.h .hs-cnt{display:block;text-align:center}
+.sts .hs.h .hs-cnt b{display:block;color:var(--gold);font-weight:500}
+/* vertical read: stacked deck, two-up flips */
+.sts .hs:not(.h) .hs-st{overflow-x:clip;max-width:calc(var(--k)*24);margin-left:auto;margin-right:auto;height:calc(var(--k)*27)}
+.sts .hs:not(.h) .hs-deck{max-width:calc(var(--k)*28);margin-left:auto;margin-right:auto}
+.sts .hs:not(.h) .hs-dc{position:sticky;top:calc(var(--k)*4.8 + var(--i)*var(--k)*1.2);margin-bottom:calc(var(--k)*2.4);transform:scale(var(--s,1));transform-origin:50% 0}
+.sts .hs:not(.h) .hs-pcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--k)*1.4);max-width:calc(var(--k)*24);margin-left:auto;margin-right:auto}
+.sts .hs:not(.h) .hs-pc:nth-child(2n){margin-top:calc(var(--k)*3)}
+.sts .hs:not(.h) .hs-pc{width:auto}
+.sts .hs:not(.h) .hs-pcs .cdn{position:static;grid-column:1/3;margin-top:calc(var(--k)*1)}
+.sts .hs:not(.h) .bvt{grid-template-columns:1fr}
+/* calm: no pinned scrub, no flips, nothing sticky */
+.sts .hs.calm .hs-dc{position:relative;top:auto;transform:none;opacity:1}
+.sts .hs.calm .hs-fi{transform:none;display:grid;gap:calc(var(--k)*.8);height:auto}
+.sts .hs.calm .hs-flp{aspect-ratio:auto}
+.sts .hs.calm .hs-ff,.sts .hs.calm .hs-fb{position:relative;transform:none;backface-visibility:visible;-webkit-backface-visibility:visible;min-height:calc(var(--k)*9)}
+.sts .hs.calm .hs-gw{display:none}
 
 @media(max-width:1000px){
 /* single column, up to 1000px */
@@ -387,7 +492,8 @@ section,header,footer{position:relative}
 .sts .cls{margin:calc(var(--u)*1.4) 0 calc(var(--u)*1.8)}
 .sts .sk{width:calc(var(--u)*6.4);height:calc(var(--u)*6.4);right:calc(var(--u)*-.2);top:calc(var(--u)*-2.6)}
 .sts .band{padding:calc(var(--u)*1) 0 calc(var(--u)*.8)}
-.sts .band .bi{font-size:calc(var(--u)*4.6);gap:calc(var(--u)*1.4)}
+.sts .band .bi{font-size:calc(var(--u)*4.6)}
+.sts .band .bi>*{margin-right:calc(var(--u)*1.4)}
 .sts .band.sm .bi{font-size:calc(var(--u)*3.2)}
 /* contents */
 .sts .cgx{display:block}
@@ -537,7 +643,8 @@ section,header,footer{position:relative}
 .sts .cls{margin:calc(var(--u)*1.4) 0 calc(var(--u)*1.8)}
 .sts .sk{width:calc(var(--u)*6.4);height:calc(var(--u)*6.4);right:calc(var(--u)*-.2);top:calc(var(--u)*-2.6)}
 .sts .band{padding:calc(var(--u)*1) 0 calc(var(--u)*.8)}
-.sts .band .bi{font-size:calc(var(--u)*4.6);gap:calc(var(--u)*1.4)}
+.sts .band .bi{font-size:calc(var(--u)*4.6)}
+.sts .band .bi>*{margin-right:calc(var(--u)*1.4)}
 .sts .band.sm .bi{font-size:calc(var(--u)*3.2)}
 /* contents */
 .sts .cgx{display:block}
@@ -666,10 +773,16 @@ section,header,footer{position:relative}
 }}
 @media(max-width:560px){
 .sts .h1{margin-top:calc(var(--u)*2)}
+.sts .hs-nav{flex-wrap:nowrap;gap:calc(var(--u)*1.1)}
+.sts .hs-nav a .mono{display:none}
+.sts .hs-nav a b{font-size:calc(var(--u)*.95)}
 
 }
 @supports (width:1cqw){@container (max-width:560px){
 .sts .h1{margin-top:calc(var(--u)*2)}
+.sts .hs-nav{flex-wrap:nowrap;gap:calc(var(--u)*1.1)}
+.sts .hs-nav a .mono{display:none}
+.sts .hs-nav a b{font-size:calc(var(--u)*.95)}
 
 }}
 @media(min-width:561px) and (max-width:1000px){
@@ -753,7 +866,7 @@ section,header,footer{position:relative}
   </div>
 </header>
 
-<div class="band g" aria-hidden="true"><div class="bi"><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span></div></div>
+<div class="band g" aria-hidden="true"><div class="bi"><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i><span>Surf</span><i class="sun"></i><span>Hike</span><i class="sun"></i><span>Roam</span><i class="sun"></i></div></div>
 
 <section class="ct" id="contents">
   <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
@@ -766,14 +879,14 @@ section,header,footer{position:relative}
         <li><a href="#what" data-go><span class="n">02</span><span class="t">What</span><span class="s">The campaign</span></a></li>
         <li><a href="#where" data-go><span class="n">03</span><span class="t">Where</span><span class="s">Channels</span></a></li>
         <li><a href="#why" data-go><span class="n">04</span><span class="t">Why It Matters</span><span class="s">Cultural impact</span></a></li>
-        <li><a href="#role" data-go><span class="n">05</span><span class="t">My Role</span><span class="s">Creative lead</span></a></li>
-        <li><a href="#films" data-go><span class="n">06</span><span class="t">The Films</span><span class="s">Two talent profiles</span></a></li>
-        <li><a href="#partners" data-go><span class="n">07</span><span class="t">Media Partners</span><span class="s">Travel Noire, Blavity, Hypebeast</span></a></li>
+        <li><a href="#films" data-go><span class="n">05</span><span class="t">The Films</span><span class="s">Two talent profiles</span></a></li>
+        <li><a href="#partners" data-go><span class="n">06</span><span class="t">Media Partners</span><span class="s">Travel Noire, Blavity, Hypebeast</span></a></li>
+        <li><a href="#role" data-go><span class="n">07</span><span class="t">My Role</span><span class="s">Creative lead</span></a></li>
       </ol>
     </div>
     <div class="cr">
       <i class="blk" aria-hidden="true"></i>
-      <figure class="ctp"><div class="ph" style="--ar:4/5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-1.webp?v=1" alt="" width="1200" height="800" loading="lazy" decoding="async" style="object-position:58% 50%"></div></figure>
+      <figure class="ctp"><div class="ph" style="--ar:4/5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-beach.webp?v=1" alt="" width="900" height="1125" loading="lazy" decoding="async" style="object-position:50% 40%"></div></figure>
       <aside class="fn">
         <span class="mono kick">Field notes</span>
         <dl class="kv">
@@ -794,7 +907,7 @@ section,header,footer{position:relative}
   <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
   <div class="in whi">
     <figure class="sc a rv"><div class="ph" style="--ar:3/4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hunter-2.webp?v=1" alt="" width="1080" height="1080" loading="lazy" decoding="async"></div></figure>
-    <figure class="sc b rv"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-1.webp?v=1" alt="" width="1200" height="800" loading="lazy" decoding="async" style="object-position:30% 50%"></div></figure>
+    <figure class="sc b rv"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-plane.gif?v=1" alt="" width="340" height="340" loading="lazy" decoding="async"></div></figure>
     <div class="cen">
       <div class="rb c"><span class="mono no">01 / The Client</span><h2>Who</h2></div>
       <p class="pq rv">A new <em>generation of explorers</em></p>
@@ -815,14 +928,7 @@ section,header,footer{position:relative}
     <p class="hw">stories of outdoor exploration</p>
     <div class="bt rv"><p>We launched the “Seize The Summer” adventure series, a video content program profiling inspirational talents like pro surfer Hunter Jones and travel creator N’Dea Irvin-Choy, sharing their stories of outdoor exploration to encourage young audiences to embrace activities such as surfing, hiking, and solo travel.</p></div>
   </div>
-  <figure class="tb rv"><div class="pp"></div><div class="ph" style="--ar:739/317"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-surf-band.gif?v=1" alt="" width="739" height="317" loading="lazy" decoding="async"></div><figcaption class="fg mono">Fig. 02</figcaption></figure>
-  <div class="in">
-    <ul class="act">
-      <li class="rv a"><figure><div class="ph gx" style="--ar:4/5"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="400" height="500" fill="#F7F1DC"/><circle cx="268" cy="168" r="96" fill="#FFC220"/><circle cx="268" cy="168" r="64" fill="#FFD768"/><g class="sdr"><circle cx="70" cy="90" r="9" fill="#F0E6C4"/><circle cx="92" cy="86" r="13" fill="#F0E6C4"/><circle cx="116" cy="92" r="8" fill="#F0E6C4"/></g><g class="wv w1"><path d="M0 300 C50 268 110 326 190 296 S330 262 400 296 V500 H0Z" fill="#A8CCF6"/></g><g class="wv w2"><path d="M0 338 C60 300 130 360 214 330 S340 300 400 334 V500 H0Z" fill="#2F7BE8"/></g><g class="bob"><g transform="translate(205 346) rotate(-10)"><path d="M-86 0 Q-70 -10 0 -10 Q70 -10 92 0 Q70 10 0 10 Q-70 10 -86 0Z" fill="#F7F1DC"/><path d="M-86 0 Q-70 -10 -44 -10 L-44 10 Q-70 10 -86 0Z" fill="#FFC220"/><g fill="none" stroke="#001E60" stroke-linecap="round" stroke-linejoin="round"><path d="M-26 -8 L-10 -38 L6 -66" stroke-width="15"/><path d="M32 -8 L26 -40 L10 -66" stroke-width="15"/><path d="M8 -66 L16 -112" stroke-width="30"/><path d="M12 -108 L-20 -128 L-52 -116" stroke-width="12"/><path d="M18 -108 L50 -132 L78 -146" stroke-width="12"/></g><circle cx="22" cy="-138" r="15" fill="#001E60"/></g></g><g class="wv w3"><path d="M0 372 C70 340 140 398 230 366 S350 344 400 370 V500 H0Z" fill="#0053E2"/><circle cx="64" cy="360" r="7" fill="#F7F1DC"/><circle cx="86" cy="350" r="4" fill="#F7F1DC"/><circle cx="46" cy="346" r="3" fill="#F7F1DC"/><circle cx="318" cy="352" r="6" fill="#F7F1DC"/><circle cx="340" cy="344" r="3" fill="#F7F1DC"/></g><g class="wv w4"><path d="M0 420 C80 392 160 446 250 418 S350 400 400 420 V500 H0Z" fill="#001E60"/></g></svg></div><figcaption class="fg mono">Fig. 03</figcaption></figure><span class="mono">01</span><b>Surfing</b></li>
-      <li class="rv b"><figure><div class="ph gx" style="--ar:3/2"><svg viewBox="0 0 400 267" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="400" height="267" fill="#F7F1DC"/><circle cx="318" cy="64" r="34" fill="#FFC220"/><g class="dr"><circle cx="60" cy="50" r="8" fill="#EDE3C2"/><circle cx="80" cy="46" r="12" fill="#EDE3C2"/><circle cx="102" cy="52" r="7" fill="#EDE3C2"/></g><path d="M0 196 L58 120 L108 168 L170 92 L242 184 L304 128 L400 196 V267 H0Z" fill="#B9C46B"/><path d="M0 232 L88 150 L150 210 L232 118 L312 214 L400 158 V267 H0Z" fill="#5B7A33"/><path d="M232 118 L212 150 L225 146 L233 158 L242 146 L254 152Z" fill="#F7F1DC"/><path d="M88 150 L72 172 L84 168 L92 178 L102 168 L110 174Z" fill="#F7F1DC"/><path d="M0 267 V228 C70 212 130 222 210 236 S340 212 400 230 V267Z" fill="#46612A"/><g fill="#1F2D17"><path d="M30 238 L46 196 L62 238Z"/><path d="M34 220 L46 184 L58 220Z"/><path d="M42 204 L50 172 L58 204Z" transform="translate(-4 0)"/><path d="M70 244 L88 200 L106 244Z"/><path d="M75 224 L88 188 L101 224Z"/><path d="M356 240 L372 200 L388 240Z"/><path d="M360 222 L372 188 L384 222Z"/></g><g class="bob"><g fill="#1F2D17"><circle cx="222" cy="186" r="7"/><path d="M214 194 L232 194 L236 222 L212 222Z"/><path d="M216 222 L222 246 L214 246 L208 222Z"/><path d="M226 222 L234 246 L226 246 L224 222Z"/></g><path d="M208 196 L216 194 L216 220 L206 218Z" fill="#FFC220"/><path d="M236 192 L246 250 L242 250 L232 196Z" fill="#1F2D17"/></g><path d="M0 267 V250 C90 240 200 258 400 244 V267Z" fill="#1F2D17"/></svg></div><figcaption class="fg mono">Fig. 04</figcaption></figure><span class="mono">02</span><b>Hiking</b></li>
-      <li class="rv c"><figure><div class="ph gx" style="--ar:1/1"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="400" height="400" fill="#0053E2"/><circle cx="200" cy="470" r="330" fill="#2F7BE8"/><circle cx="330" cy="78" r="46" fill="#FFC220"/><g class="dr"><circle cx="66" cy="92" r="14" fill="#F7F1DC"/><circle cx="92" cy="84" r="20" fill="#F7F1DC"/><circle cx="122" cy="94" r="14" fill="#F7F1DC"/><rect x="62" y="92" width="64" height="14" rx="7" fill="#F7F1DC"/></g><g class="dl"><circle cx="290" cy="300" r="12" fill="#A8CCF6"/><circle cx="312" cy="292" r="17" fill="#A8CCF6"/><circle cx="338" cy="302" r="12" fill="#A8CCF6"/><rect x="286" y="300" width="58" height="12" rx="6" fill="#A8CCF6"/></g><g class="bob"><g transform="translate(200 200) rotate(-9)"><path d="M-30 4 L-74 74 L-44 74 L24 10Z" fill="#E0A410"/><path d="M-90 0 C-90 -16 -50 -24 12 -24 C72 -24 102 -8 108 0 C102 10 72 20 12 20 C-50 20 -90 14 -90 0Z" fill="#FFC220"/><path d="M-84 -4 L-114 -46 L-92 -46 L-58 -10Z" fill="#FFC220"/><path d="M-80 6 L-122 18 L-82 18Z" fill="#E0A410"/><path d="M22 -22 C36 -42 60 -40 66 -20Z" fill="#A8CCF6"/><path d="M-6 -16 L-34 -72 L-10 -72 L34 -18Z" fill="#FFD768"/><circle cx="108" cy="0" r="7" fill="#F7F1DC"/><rect x="108" y="-34" width="6" height="68" rx="3" fill="#F7F1DC"/></g></g><g class="dr2"><circle cx="40" cy="352" r="26" fill="#F7F1DC"/><circle cx="84" cy="344" r="34" fill="#F7F1DC"/><circle cx="134" cy="356" r="28" fill="#F7F1DC"/><circle cx="300" cy="360" r="30" fill="#F7F1DC"/><circle cx="350" cy="350" r="34" fill="#F7F1DC"/><rect x="10" y="352" width="400" height="60" fill="#F7F1DC"/></g></svg></div><figcaption class="fg mono">Fig. 05</figcaption></figure><span class="mono">03</span><b>Solo travel</b></li>
-    </ul>
-  </div>
+  <figure class="tb rv"><div class="pp"></div><div class="ph" style="--ar:739/317"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-surf-band.gif?v=1" alt="" width="739" height="317" loading="lazy" decoding="async"></div></figure>
 </section>
 
 <section class="wh" id="where">
@@ -856,28 +962,8 @@ section,header,footer{position:relative}
         <div class="bt"><p>The series tackles underrepresentation in outdoor adventures, where Black and marginalized groups face barriers like lack of visibility, safety concerns, and accessibility.</p><p>By spotlighting diverse stories, the campaign helped foster the spirit of discovery aligning making Walmart a conduit to adventure.</p></div>
       </div>
       <div class="pgr">
-        <figure class="wyp"><div class="ph" style="--ar:332/415"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-smile.gif?v=1" alt="" width="332" height="415" loading="lazy" decoding="async"></div><figcaption class="fg mono">Fig. 06</figcaption></figure>
+        <figure class="wyp"><div class="ph" style="--ar:4/5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hunter-2.webp?v=1" alt="" width="1080" height="1080" loading="lazy" decoding="async"></div><figcaption class="fg mono">Fig. 02</figcaption></figure>
         <h2>Why <em>It</em> Matters</h2>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="rl" id="role">
-  <div class="bg" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-1.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"><i class="ov dim"></i><i class="ov gl"></i></div>
-  <div class="in">
-    <div class="card rv">
-      <div class="cl2">
-        <div class="rb"><span class="mono no">05 / Creative Lead</span><h2>My Role</h2></div>
-        <div class="bt dc"><p>As creative lead, I crafted the narratives for each episode and developed the treatment for the docu-style capture of each video profile.</p><p>Each interview guide was designed to balance authentic capture of talent’s voice and organic infusion of brand messaging.</p><p>The outcome were relatable stories of personal triumphs, perseverance, packaged to resonate with Gen Z.</p></div>
-      </div>
-      <div class="cr2">
-        <p class="pq">Packaged to resonate with <em>Gen Z</em></p>
-        <ul class="kit">
-          <li>Narratives for each episode</li>
-          <li>A treatment for the docu-style capture of each video profile</li>
-          <li>An interview guide for each talent, balancing authentic voice with organic brand messaging</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -886,11 +972,11 @@ section,header,footer{position:relative}
 <section class="fl" id="films">
   <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
   <div class="in">
-    <div class="flh rb"><span class="mono no">06 / On Screen</span><h2>The Films</h2><p class="fld">Two talent profiles from the series. Press play.</p></div>
+    <div class="flh rb"><span class="mono no">05 / On Screen</span><h2>The Films</h2><p class="fld">Two talent profiles from the series. Press play.</p></div>
     <div class="fms">
       <article class="fm rv">
         <div class="fmh"><span class="chp g">Film 01</span><span class="mono">Travel creator</span></div>
-        <div class="fp"><button class="fc" type="button" data-v="845955176" data-t="N’Dea Irvin-Choy, Seize The Summer" aria-label="Play the N’Dea Irvin-Choy film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-1.webp?v=1" alt="" width="1200" height="800" loading="lazy" decoding="async"><span class="pb" aria-hidden="true"></span></button></div>
+        <div class="fp"><button class="fc" type="button" data-v="845955176" data-t="N’Dea Irvin-Choy, Seize The Summer" aria-label="Play the N’Dea Irvin-Choy film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-corn.gif?v=1" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="pb" aria-hidden="true"></span></button></div>
         <h3>N’Dea <span class="nb">Irvin-Choy</span></h3>
       </article>
       <article class="fm rv">
@@ -905,75 +991,135 @@ section,header,footer{position:relative}
 <section class="mph" id="partners">
   <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
   <div class="in">
-    <div class="rb c"><span class="mono no">07 / In Partnership</span><h2>Media Partners</h2></div>
+    <div class="rb c"><span class="mono no">06 / In Partnership</span><h2>Media Partners</h2></div>
     <p class="dek"><em>Travel Noire</em>, <em>Blavity</em>, and <em>Hypebeast</em> carried the series to their audiences through co-branded editorials, creator content, and talent features.</p>
-    <nav class="mpn" aria-label="Media partners"><a href="#tn" data-go>Travel Noire</a><a href="#bv" data-go>Blavity</a><a href="#hb" data-go>Hypebeast</a></nav>
+    <nav class="mpn" aria-label="Media partners"><a href="#tn" data-ch="0">Travel Noire</a><a href="#bv" data-ch="1">Blavity</a><a href="#hb" data-ch="2">Hypebeast</a></nav>
   </div>
 </section>
 
-<section class="pn tn" id="tn">
-  <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
-  <div class="in tng">
-    <div class="tnh">
-      <div class="rb"><span class="mono no">Partner 01</span><h3>Travel Noire</h3></div>
-      <p class="lead">Travel Noire, Blavity’s travel vertical, ran five co-branded editorials around the series, on connecting with the outdoors and the products that help you be prepared.</p>
-      <p class="hw">paid partnership stories</p>
-    </div>
-    <div class="sto">
-      <figure class="ph2 a"><div class="in2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-clip-1.webp?v=1" alt="" width="372" height="552" loading="lazy" decoding="async"></div></figure>
-      <figure class="ph2 b"><div class="in2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-clip-2.webp?v=1" alt="" width="313" height="382" loading="lazy" decoding="async"></div></figure>
-    </div>
-    <div class="eds">
-        <a href="https://travelnoire.com/these-4-black-businesses-will-help-plan-your-next-adventure" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-1.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="et"><span class="mono">Editorial 01</span><b>These 4 Black Businesses Will Help Plan Your Next Adventure</b><i>Read on Travel Noire</i></span></a>
-        <a href="https://travelnoire.com/ride-the-wave-black-people-are-connecting-to-the-ocean-one-surfboard-at-a-time" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-2.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="et"><span class="mono">Editorial 02</span><b>Ride The Wave: Black People Are Connecting To The Ocean One Surfboard At A Time</b><i>Read on Travel Noire</i></span></a>
-        <a href="https://travelnoire.com/back-to-our-roots-why-wellness-begins-with-connecting-to-nature" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-3.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="et"><span class="mono">Editorial 03</span><b>Back To Our Roots: Why Wellness Begins With Connecting to Nature</b><i>Read on Travel Noire</i></span></a>
-        <a href="https://travelnoire.com/its-a-vibe-how-black-people-are-connecting-to-nature" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-4.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="et"><span class="mono">Editorial 04</span><b>It’s A Vibe: How Black People Are Connecting to Nature</b><i>Read on Travel Noire</i></span></a>
-        <a href="https://travelnoire.com/walmart-has-what-all-campers-need-to-live-their-best-lives-outside" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-5.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="et"><span class="mono">Editorial 05</span><b>Walmart Has What All Campers Need to Live Their Best Lives Outside</b><i>Read on Travel Noire</i></span></a>
-    </div>
-  </div>
-</section>
+<section class="hs" id="hs" aria-label="Media partner coverage">
+  <i class="hs-kp" aria-hidden="true"></i>
+  <div class="hs-stage">
+    <nav class="hs-spine" aria-label="Media partner chapters">
+      <span class="mono hs-lab">Media partners</span>
+      <ol class="hs-nav">
+        <li><a href="#tn" data-ch="0"><span class="mono">01</span><b>Travel Noire</b></a></li>
+        <li><a href="#bv" data-ch="1"><span class="mono">02</span><b>Blavity</b></a></li>
+        <li><a href="#hb" data-ch="2"><span class="mono">03</span><b>Hypebeast</b></a></li>
+      </ol>
+      <span class="hs-bar" aria-hidden="true"><i></i></span>
+      <span class="mono hs-cnt" aria-hidden="true"><b>01</b> / 03</span>
+    </nav>
+    <div class="hs-track">
 
-<section class="pn bv" id="bv">
-  <div class="tr" aria-hidden="true"></div>
-  <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
-  <div class="in bvg">
-    <div class="bvl">
-      <div class="rb"><span class="mono no">Partner 02</span><h3>Blavity</h3></div>
-      <p class="mono prog">Program: Wonder-Lust With Us x Walmart</p>
-      <div class="bvt">
+      <article class="hs-sc t1" id="tn" data-ch="0">
+        <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
+        <p class="hs-gw" aria-hidden="true" data-par="-.5,70">Travel<br>Noire</p>
+        <div class="hs-ci">
+          <div class="hs-tt">
+            <div class="rb"><span class="mono no">Partner 01</span><h3>Travel Noire</h3></div>
+            <p class="lead">Travel Noire, Blavity’s travel vertical, ran five co-branded editorials around the series, on connecting with the outdoors and the products that help you be prepared.</p>
+            <p class="hw">paid partnership stories</p>
+          </div>
+          <div class="hs-st">
+            <figure class="hs-sa" data-par=".75,3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-clip-1.webp?v=1" alt="" width="372" height="552" loading="lazy" decoding="async"></figure>
+            <figure class="hs-sb" data-par="1.35,4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-clip-2.webp?v=1" alt="" width="313" height="382" loading="lazy" decoding="async"></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="hs-sc t2" data-ch="0">
+        <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
+        <div class="hs-ci">
+          <div class="hs-tt sm">
+            <div class="rb"><span class="mono no">Partner 01</span><h3>Five editorials</h3></div>
+          </div>
+          <div class="hs-deck" data-fx="stack">
+        <a class="hs-dc" style="--i:0;--r:-1.6" href="https://travelnoire.com/these-4-black-businesses-will-help-plan-your-next-adventure" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-1.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="hs-et"><span class="mono">Editorial 01</span><b>These 4 Black Businesses Will Help Plan Your Next Adventure</b><i>Read on Travel Noire</i></span></a>
+        <a class="hs-dc" style="--i:1;--r:1.2" href="https://travelnoire.com/ride-the-wave-black-people-are-connecting-to-the-ocean-one-surfboard-at-a-time" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-2.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="hs-et"><span class="mono">Editorial 02</span><b>Ride The Wave: Black People Are Connecting To The Ocean One Surfboard At A Time</b><i>Read on Travel Noire</i></span></a>
+        <a class="hs-dc" style="--i:2;--r:-0.8" href="https://travelnoire.com/back-to-our-roots-why-wellness-begins-with-connecting-to-nature" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-3.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="hs-et"><span class="mono">Editorial 03</span><b>Back To Our Roots: Why Wellness Begins With Connecting to Nature</b><i>Read on Travel Noire</i></span></a>
+        <a class="hs-dc" style="--i:3;--r:1.8" href="https://travelnoire.com/its-a-vibe-how-black-people-are-connecting-to-nature" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-4.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="hs-et"><span class="mono">Editorial 04</span><b>It’s A Vibe: How Black People Are Connecting to Nature</b><i>Read on Travel Noire</i></span></a>
+        <a class="hs-dc" style="--i:4;--r:-1.1" href="https://travelnoire.com/walmart-has-what-all-campers-need-to-live-their-best-lives-outside" target="_blank" rel="noopener"><span class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-tn-5.webp?v=1" alt="" width="760" height="548" loading="lazy" decoding="async"></span><span class="hs-et"><span class="mono">Editorial 05</span><b>Walmart Has What All Campers Need to Live Their Best Lives Outside</b><i>Read on Travel Noire</i></span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hs-sc bv" id="bv" data-ch="1">
+        <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
+        <p class="hs-gw" aria-hidden="true" data-par="-.5,70">Blavity</p>
+        <div class="hs-ci">
+          <div class="hs-tt">
+            <div class="rb"><span class="mono no">Partner 02</span><h3>Blavity</h3></div>
+            <p class="mono prog">Program: Wonder-Lust With Us x Walmart</p>
+          </div>
+          <div class="bvt">
         <p><span class="mono">The challenge</span>Walmart wanted to grow awareness of its Black and Unlimited program with African American Gen Z and Millennial audiences. Heading into summer, the focus turned to outdoor adventure, a space that has historically left Black explorers out.</p>
         <p><span class="mono">The approach</span>Blavity built a custom program around its travel vertical: the annual Travel Noire Awards, three outdoorsy influencers, and five co-branded editorials on the importance of being outside, with products to help you be prepared.</p>
       </div>
+        </div>
+      </article>
+
+      <article class="hs-sc bv fit" data-ch="1">
+        <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
+        <div class="hs-ci">
+          <div class="hs-tt sm">
+            <div class="rb"><span class="mono no">Partner 02</span><h3>Program results</h3></div>
+          </div>
+          <ul class="hs-fls">
+        <li class="hs-flp" data-fx="flip"><div class="hs-fi"><div class="hs-ff"><span class="mono">01</span><b>6.7M</b></div><div class="hs-fb"><span>Media impressions across all custom content</span><b>6.7M</b></div></div></li>
+        <li class="hs-flp" data-fx="flip"><div class="hs-fi"><div class="hs-ff"><span class="mono">02</span><b>679,097</b></div><div class="hs-fb"><span>Influencer video views</span><b>679,097</b></div></div></li>
+        <li class="hs-flp" data-fx="flip"><div class="hs-fi"><div class="hs-ff"><span class="mono">03</span><b>4.98%</b></div><div class="hs-fb"><span>Travel Noire Awards engagement rate</span><b>4.98%</b></div></div></li>
+        <li class="hs-flp" data-fx="flip"><div class="hs-fi"><div class="hs-ff"><span class="mono">04</span><b>132</b></div><div class="hs-fb"><span>Social posts</span><b>132</b></div></div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="hs-sc hb wide" id="hb" data-ch="2">
+        <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
+        <p class="hs-gw" aria-hidden="true" data-par="-.5,70">Hypebeast</p>
+        <div class="hs-ci">
+          <div class="hs-tt">
+            <div class="rb"><span class="mono no">Partner 03</span><h3>Hypebeast</h3></div>
+            <p class="lead">Hypebeast ran a feature on each talent, presented by Walmart, and shared product picks for the summer adventure.</p>
+          </div>
+          <div class="hs-deck f" data-fx="stack">
+        <a class="hs-dc fe" style="--i:0;--r:-1.2" href="https://hypebeast.com/2023/8/ndea-irvin-choy-walmart-black-and-unlimited-adventure-series" target="_blank" rel="noopener"><span class="mono">Aug 23, 2023</span><b>Globetrotting Creator N’Dea Irvin-Choy Emboldens Marginalized Groups Through Travel</b><i>Read on Hypebeast</i></a>
+        <a class="hs-dc fe" style="--i:1;--r:1.4" href="https://hypebeast.com/2023/8/walmart-hunter-jones-black-unlimited-adventure-series" target="_blank" rel="noopener"><span class="mono">Sep 11, 2023</span><b>Walmart Spotlights Pro Surfer Hunter Jones for Its “Black &amp; Unlimited Adventure Series”</b><i>Read on Hypebeast</i></a>
+          </div>
+          <div class="hs-pcs">
+        <figure class="hs-pc" style="--x:0;--y:0" data-par=".6,3.5"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-1.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
+        <figure class="hs-pc" style="--x:12.4;--y:5.5" data-par="1.5,3.5"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-2.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
+        <figure class="hs-pc" style="--x:1.4;--y:17.2" data-par="1.35,3.5"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-3.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
+        <figure class="hs-pc" style="--x:13.8;--y:22.4" data-par=".55,3.5"><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-4.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
+            <p class="hw cdn">product picks</p>
+          </div>
+        </div>
+      </article>
+
     </div>
-    <ul class="stats">
-      <li><b>6.7M</b><span>Media impressions across all custom content</span></li>
-      <li><b>679,097</b><span>Influencer video views</span></li>
-      <li><b>4.98%</b><span>Travel Noire Awards engagement rate</span></li>
-      <li><b>132</b><span>Social posts</span></li>
-    </ul>
   </div>
 </section>
 
-<section class="pn hbp" id="hb">
-  <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gl"></i></div>
-  <div class="in hbg">
-    <div class="hbl">
-      <div class="rb"><span class="mono no">Partner 03</span><h3>Hypebeast</h3></div>
-      <p class="lead">Hypebeast ran a feature on each talent, presented by Walmart, and shared product picks for the summer adventure.</p>
-      <div class="feat">
-        <a href="https://hypebeast.com/2023/8/ndea-irvin-choy-walmart-black-and-unlimited-adventure-series" target="_blank" rel="noopener"><span class="mono">Aug 23, 2023</span><b>Globetrotting Creator N’Dea Irvin-Choy Emboldens Marginalized Groups Through Travel</b><i>Read on Hypebeast</i></a>
-        <a href="https://hypebeast.com/2023/8/walmart-hunter-jones-black-unlimited-adventure-series" target="_blank" rel="noopener"><span class="mono">Sep 11, 2023</span><b>Walmart Spotlights Pro Surfer Hunter Jones for Its “Black &amp; Unlimited Adventure Series”</b><i>Read on Hypebeast</i></a>
+<section class="rl" id="role">
+  <div class="bg" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-boat.gif?v=1" alt="" width="440" height="247" loading="lazy" decoding="async"><i class="ov dim"></i><i class="ov gl"></i></div>
+  <div class="in">
+    <div class="card rv">
+      <div class="cl2">
+        <div class="rb"><span class="mono no">07 / Creative Lead</span><h2>My Role</h2></div>
+        <div class="bt dc"><p>As creative lead, I crafted the narratives for each episode and developed the treatment for the docu-style capture of each video profile.</p><p>Each interview guide was designed to balance authentic capture of talent’s voice and organic infusion of brand messaging.</p><p>The outcome were relatable stories of personal triumphs, perseverance, packaged to resonate with Gen Z.</p></div>
       </div>
-    </div>
-    <div class="cds">
-      <figure><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-1.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
-      <figure><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-2.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
-      <figure><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-3.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
-      <figure><div class="ph" style="--ar:1/1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-hb-4.webp?v=1" alt="" width="720" height="720" loading="lazy" decoding="async"></div></figure>
-      <p class="hw cdn">product picks</p>
+      <div class="cr2">
+        <p class="pq">Packaged to resonate with <em>Gen Z</em></p>
+        <ul class="kit">
+          <li>Narratives for each episode</li>
+          <li>A treatment for the docu-style capture of each video profile</li>
+          <li>An interview guide for each talent, balancing authentic voice with organic brand messaging</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
+
 
 </div></div>
 <script>
@@ -1034,6 +1180,104 @@ section,header,footer{position:relative}
       setTimeout(function(){reveal(p)},9000);
     });
   });
+})();
+/* partner scrollytelling: a pinned horizontal track on wide screens, a vertical read everywhere else */
+(function(){
+  var sts=document.querySelector('.sts'),hs=document.getElementById('hs');
+  if(!sts||!hs)return;
+  var calm=false;
+  try{calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(x){}
+  function qa(s,r){return [].slice.call((r||hs).querySelectorAll(s))}
+  function cl(v,a,b){return v<a?a:v>b?b:v}
+  function sm(p){return p*p*(3-2*p)}
+  var stage=hs.querySelector('.hs-stage'),track=hs.querySelector('.hs-track'),spine=hs.querySelector('.hs-spine'),probe=hs.querySelector('.hs-kp');
+  var scenes=qa('.hs-sc'),navA=qa('.hs-nav a'),cnt=hs.querySelector('.hs-cnt b');
+  var pars=qa('[data-par]').map(function(el){var a=el.getAttribute('data-par').split(',');return{el:el,m:parseFloat(a[0]),max:parseFloat(a[1]||6),ex:0,ey:0}});
+  var flips=qa('[data-fx="flip"]');
+  var decks=qa('[data-fx="stack"]').map(function(d){return{el:d,cards:qa('.hs-dc',d)}});
+  var mode='v',dist=0,K=16,forceV=false,bad=0,raf=0,tid=0;
+  if(calm)hs.classList.add('calm');
+  track.querySelectorAll('img[loading=lazy]').forEach(function(i){i.loading='eager'});
+  function measure(){
+    var vh=window.innerHeight,w=sts.getBoundingClientRect().width;
+    var want=!calm&&!forceV&&w>=860&&vh>=520;
+    hs.classList.toggle('h',want);hs.classList.toggle('v',!want);
+    mode=want?'h':'v';
+    K=probe.offsetWidth||16;
+    pars.forEach(function(p){p.el.style.translate='';p.ex=0;p.ey=0});
+    if(want){
+      hs.style.setProperty('--sw',stage.clientWidth+'px');
+      dist=Math.max(0,track.scrollWidth-stage.clientWidth);
+      hs.style.height=(dist+stage.offsetHeight)+'px';
+    }else{
+      hs.style.height='';hs.style.removeProperty('--sw');track.style.transform='';dist=0;
+    }
+    update();
+  }
+  function update(){
+    raf=0;
+    var r=hs.getBoundingClientRect(),vh=window.innerHeight,prog=0;
+    if(mode==='h'){
+      var off=cl(-r.top,0,dist);prog=dist?off/dist:0;
+      track.style.transform='translate3d('+(-off).toFixed(2)+'px,0,0)';
+      /* if a host page stops position:sticky from working, fall back to the vertical read */
+      if(r.top<-60&&r.bottom>vh+60){
+        bad=Math.abs(stage.getBoundingClientRect().top)>3?bad+1:0;
+        if(bad>8){forceV=true;bad=0;measure();return}
+      }
+    }else{
+      var span=hs.offsetHeight-vh;prog=span>0?cl(-r.top/span,0,1):0;
+    }
+    spine.style.setProperty('--p',prog.toFixed(4));
+    var sr=stage.getBoundingClientRect(),cx=sr.left+sr.width*.5,cy=vh*.45,act=0;
+    scenes.forEach(function(s,i){var b=s.getBoundingClientRect();if(mode==='h'?(b.left<=cx&&b.right>cx):(b.top<=cy&&b.bottom>cy))act=i});
+    var ch=+scenes[act].getAttribute('data-ch');
+    navA.forEach(function(a,i){a.classList.toggle('on',i===ch);if(i===ch)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    if(cnt)cnt.textContent='0'+(ch+1);
+    if(calm||r.bottom<-300||r.top>vh+300)return;
+    /* counter-parallax: layers travel at their own speed, some against the track */
+    pars.forEach(function(p){
+      var b=p.el.getBoundingClientRect(),d;
+      if(mode==='h'){d=cl((p.m-1)*(b.left+b.width/2-p.ex-cx),-p.max*K,p.max*K);p.ex=d;p.el.style.translate=d.toFixed(1)+'px 0'}
+      else{d=cl((p.m-1)*.5*(b.top+b.height/2-p.ey-vh*.5),-p.max*K*.7,p.max*K*.7);p.ey=d;p.el.style.translate='0 '+d.toFixed(1)+'px'}
+    });
+    /* card flips scrubbed by position */
+    flips.forEach(function(f){
+      var b=f.getBoundingClientRect(),p;
+      if(mode==='h')p=cl((.84-(b.left+b.width/2-sr.left)/sr.width)/.3,0,1);
+      else p=cl((.86-(b.top+b.height/2)/vh)/.32,0,1);
+      f.style.setProperty('--a',(sm(p)*180).toFixed(1));
+    });
+    /* stacking cards: dealt onto the pile as the deck crosses the screen, or pinned under each other when vertical */
+    decks.forEach(function(d){
+      var n=d.cards.length,b=d.el.getBoundingClientRect();
+      if(mode==='h'){
+        var sp=cl((1-(b.left+b.width/2-sr.left)/sr.width)/.62,0,1),e=[],i;
+        for(i=0;i<n;i++)e.push(sm(cl((sp-i*.13)/.26,0,1)));
+        for(i=0;i<n;i++){var later=0;for(var j=i+1;j<n;j++)later+=e[j];
+          d.cards[i].style.setProperty('--e',e[i].toFixed(3));d.cards[i].style.setProperty('--s',(1-.028*later).toFixed(3))}
+      }else{
+        d.cards.forEach(function(c,i){
+          var s=1;
+          if(i<n-1){var cb=c.getBoundingClientRect(),nb=d.cards[i+1].getBoundingClientRect(),t=cl(1-(nb.top-cb.top-K*1.2)/Math.max(1,cb.height),0,1);s=1-.05*sm(t)}
+          c.style.setProperty('--s',s.toFixed(3));
+        });
+      }
+    });
+  }
+  function ask(){if(!raf)raf=requestAnimationFrame(update)}
+  window.addEventListener('scroll',ask,{passive:true});
+  window.addEventListener('resize',function(){clearTimeout(tid);tid=setTimeout(function(){forceV=false;measure()},140)});
+  window.addEventListener('load',measure);
+  /* chapter links in the spine and the intro */
+  function go(ch){
+    var tg=document.getElementById(['tn','bv','hb'][ch]);if(!tg)return;
+    var y=mode==='h'?hs.getBoundingClientRect().top+window.pageYOffset+Math.min(tg.offsetLeft,dist):tg.getBoundingClientRect().top+window.pageYOffset-K*3.6;
+    try{window.scrollTo({top:y,behavior:calm?'auto':'smooth'})}catch(x){window.scrollTo(0,y)}
+  }
+  qa('a[data-ch]',sts).forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(+a.getAttribute('data-ch'))})});
+  measure();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
 })();
 </script>
 </body></html>
