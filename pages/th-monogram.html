@@ -26,13 +26,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .dots{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:radial-gradient(circle,var(--dc,rgba(5,23,53,.13)) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .02 0 0 0 0 .09 0 0 0 0 .21 1.2 0 0 0 -.66'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");background-size:calc(var(--u)*.95) calc(var(--u)*.95),240px 240px}
 
 /* MARQUEE */
-.th .mq{background:var(--red);color:#fff;border-bottom:calc(var(--u)*.22) solid var(--ink);overflow:hidden;padding:calc(var(--u)*.85) 0;position:relative;z-index:5}
-.th .mt{display:flex;width:max-content;animation:thMq 46s linear infinite}
-.th .mh{display:flex;align-items:center;flex:none}
-.th .mh span{font:700 calc(var(--u)*.9)/1.2 var(--ty);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;padding:0 calc(var(--u)*1.1)}
-.th .mh i{display:block;flex:none;width:calc(var(--u)*1);aspect-ratio:1;background:var(--ink);clip-path:var(--spark)}
-.th .mq:hover .mt{animation-play-state:paused}
-@keyframes thMq{to{transform:translateX(-50%)}}
 
 /* COVER */
 .th .cv{background:var(--paper);z-index:1}
@@ -46,7 +39,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .h1 .l1{color:#fff!important;text-shadow:calc(var(--u)*.34) calc(var(--u)*.34) 0 var(--ink)}
 .th .h1 .l2{color:transparent!important;-webkit-text-stroke:calc(var(--u)*.15) #fff}
 .th .cr{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:start;margin-top:calc(var(--u)*3);padding-top:calc(var(--u)*1.8);border-top:calc(var(--u)*.14) solid #fff}
-.th .stp{position:absolute;right:calc(var(--u)*.4);top:calc(var(--u)*-1.1);width:calc(var(--u)*11.4);height:auto;color:#fff;animation:thSpin 28s linear infinite}
+.th .stp{position:absolute;right:calc(var(--u)*.4);top:calc(var(--u)*-3.8);width:calc(var(--u)*10.8);height:auto;color:#fff;animation:thSpin 28s linear infinite}
 .th .stp circle{fill:none;stroke:currentColor}
 .th .stp text{font:700 13.4px var(--ty);letter-spacing:.12em;fill:currentColor;text-transform:uppercase}
 @keyframes thSpin{to{transform:rotate(360deg)}}
@@ -75,13 +68,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .bl{position:relative}
 .th .bl .t2{--sc:var(--ink);font-size:calc(var(--u)*6.8)}
 .th .bl .t2 span{display:block}
-.th .bl .ty{margin-top:calc(var(--u)*1.4);color:var(--red)}
 .th .pqw{position:relative;margin-top:calc(var(--u)*3.4);transform:rotate(-1.8deg);filter:drop-shadow(calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink))}
 .th .pq{position:relative;background:var(--red);color:#fff;padding:calc(var(--u)*2.4) calc(var(--u)*2.4) calc(var(--u)*2.2);clip-path:polygon(0.0% 1.5%,6.2% 1.8%,12.5% 1.9%,18.8% 2.3%,25.0% 1.8%,31.2% 2.2%,37.5% 0.1%,43.8% 1.1%,50.0% 2.3%,56.2% 1.6%,62.5% 2.2%,68.8% 0.3%,75.0% 1.1%,81.2% 0.6%,87.5% 1.3%,93.8% 1.4%,100.0% 0.0%,99.5% 11.1%,99.3% 22.2%,97.8% 33.3%,98.2% 44.4%,99.6% 55.6%,98.1% 66.7%,99.7% 77.8%,98.5% 88.9%,100.0% 99.7%,93.8% 100.0%,87.5% 97.9%,81.2% 99.5%,75.0% 99.5%,68.8% 97.6%,62.5% 97.9%,56.2% 99.3%,50.0% 97.7%,43.8% 98.7%,37.5% 98.4%,31.2% 99.5%,25.0% 97.7%,18.8% 98.3%,12.5% 97.7%,6.2% 97.9%,0.7% 100.0%,0.9% 88.9%,0.4% 77.8%,0.3% 66.7%,0.2% 55.6%,0.7% 44.4%,1.4% 33.3%,0.0% 22.2%,1.6% 11.1%)}
 .th .pq::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 0 38%,rgba(255,255,255,.16) 38.3%,rgba(5,23,53,.2) 38.9%,transparent 40.4%),linear-gradient(7deg,transparent 0 63%,rgba(5,23,53,.18) 63.3%,rgba(255,255,255,.14) 63.9%,transparent 65.6%),linear-gradient(180deg,transparent 0 82%,rgba(5,23,53,.1) 100%)}
 .th .ci{position:relative;display:inline-block}
 .th .pq p{font:400 calc(var(--u)*2.7)/1.02 var(--cn);text-transform:uppercase}
-.th .pq .ty{margin:calc(var(--u)*1.2) 0 0;color:#fff;opacity:.85;font:700 calc(var(--u)*.78)/1.3 var(--ty);letter-spacing:.14em;text-transform:uppercase}
 .th .qa{display:grid;grid-template-columns:calc(var(--u)*11) minmax(0,1fr);gap:calc(var(--u)*2);padding:calc(var(--u)*2.2) 0;border-top:calc(var(--u)*.16) solid var(--ink)}
 .th .qa:last-child{border-bottom:calc(var(--u)*.16) solid var(--ink)}
 .th .qq{font:400 calc(var(--u)*4)/.95 var(--cn);text-transform:uppercase;color:var(--red)}
@@ -114,12 +105,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rls{margin-top:calc(var(--u)*6.4)}
 .th .rlh{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-bottom:calc(var(--u)*2.2);color:#fff}
 .th .rlh::after{content:'';flex:1;height:calc(var(--u)*.14);background:rgba(255,255,255,.5)}
-.th .rlr{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:calc(var(--u)*1.5)}
+.th .rlr{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:calc(var(--u)*1.5)}
 .th .rl{position:relative}
-.th .rl:nth-child(odd){transform:rotate(-1.4deg)}
-.th .rl:nth-child(even){transform:rotate(1.2deg);margin-top:calc(var(--u)*1.4)}
 .th .rl .im{background:#000;border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);aspect-ratio:320/570;overflow:hidden}
-.th .rl:nth-child(even) .im{box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--cob)}
 .th .rl img{width:100%;height:100%;object-fit:cover}
 .th .rl figcaption{margin-top:calc(var(--u)*1.1);color:var(--sil);font-size:calc(var(--u)*.7)}
 
@@ -249,11 +237,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .tr.c i{clip-path:polygon(0.0% 27.3%,4.0% 36.2%,5.7% 22.5%,9.5% 51.4%,14.1% 68.3%,18.7% 20.3%,22.0% 48.9%,25.8% 17.8%,28.6% 37.5%,32.0% 26.8%,33.8% 69.9%,37.8% 58.7%,41.5% 68.1%,44.0% 31.8%,46.8% 59.7%,51.0% 59.6%,54.1% 52.7%,59.2% 66.9%,64.2% 52.1%,68.8% 34.3%,70.6% 55.1%,72.3% 48.9%,74.8% 28.0%,77.5% 52.1%,81.6% 15.3%,86.1% 49.4%,89.7% 45.1%,93.5% 20.0%,97.1% 58.7%,98.6% 26.2%,100.0% 58.7%,100% 100%,0 100%)}
 
 /* graffiti placement: cover */
-.th .g2{right:calc(var(--u)*14.4);top:calc(var(--u)*-4.2);width:calc(var(--u)*3.2);--gc:#fff;--gw:.34;transform:rotate(8deg)}
-.th .g3{right:calc(var(--u)*-.2);top:calc(var(--u)*-4.6);width:calc(var(--u)*2.2);--gc:#fff;--gw:.3}
 .th .g6{left:calc(50% - var(--u)*41.6);bottom:calc(100% + var(--u)*15);width:calc(var(--u)*3.4);--gc:var(--cob);--gw:.4;transform:rotate(-10deg)}
 /* brief */
-.th .g7{right:calc(var(--u)*-.4);top:calc(var(--u)*-.8);width:calc(var(--u)*3.4);--gc:var(--red);--gw:.4}
 /* idea */
 .th .idl,.th .rwl{position:relative}
 .th .g10{left:calc(var(--u)*27);top:calc(var(--u)*-1);width:calc(var(--u)*3.4);--gc:#fff;--gw:.4;transform:rotate(10deg)}
@@ -261,24 +246,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 /* magazine */
 .th .mg{background:var(--red);color:#fff;padding:calc(var(--u)*7.4) 0 calc(var(--u)*1.2)}
 .th .mg .dots{--dc:rgba(5,23,53,.18)}
-.th .mgh{font:400 calc(var(--u)*5.4)/1.4 var(--cn);margin-bottom:calc(var(--u)*3.2);filter:drop-shadow(calc(var(--u)*.14) calc(var(--u)*.2) 0 rgba(5,23,53,.55))}
-.th .wd{display:inline-block;white-space:nowrap;margin-right:.32em}
-.th .rn{display:inline-block;padding:.05em .13em 0;margin:0 .025em .08em 0;line-height:1.05;text-transform:uppercase;color:var(--fg);background:var(--bg);transform:translateY(var(--dy)) rotate(var(--r)) scale(var(--s))}
-.th .rn.fcn{font:400 1em/1.05 var(--cn)}
-.th .rn.fsl{font:400 .84em/1.05 var(--sl)}
-.th .rn.fty{font:700 .8em/1.05 var(--ty)}
-.th .rn.fgr{font:800 .86em/1.05 var(--gr)}
-.th .rn.c1{clip-path:polygon(0 7%,9% 0,100% 3%,97% 100%,3% 94%)}
-.th .rn.c2{clip-path:polygon(3% 0,100% 6%,96% 96%,0 100%)}
-.th .rn.c3{clip-path:polygon(0 0,94% 4%,100% 100%,6% 95%)}
-.th .rn.c4{clip-path:polygon(5% 5%,100% 0,95% 100%,0 92%)}
+.th .mgh{margin:0 0 calc(var(--u)*3.4);line-height:0;font-size:0}
 .th .mgb{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,22fr);gap:calc(var(--u)*4);align-items:start}
 .th .mgs{position:relative}
 .th .sxw{position:relative;transform:rotate(-1.2deg);filter:drop-shadow(calc(var(--u)*.6) calc(var(--u)*.7) 0 var(--ink))}
 .th .sx{background:#fff;clip-path:polygon(0.0% 0.2%,7.1% 1.1%,14.3% 0.1%,21.4% 0.8%,28.6% 0.1%,35.7% 0.3%,42.9% 1.1%,50.0% 0.2%,57.1% 0.7%,64.3% 0.5%,71.4% 0.5%,78.6% 0.5%,85.7% 0.2%,92.9% 0.9%,99.9% 0.0%,99.7% 10.0%,100.0% 20.0%,99.7% 30.0%,99.6% 40.0%,99.0% 50.0%,99.6% 60.0%,99.9% 70.0%,99.7% 80.0%,98.9% 90.0%,100.0% 99.9%,92.9% 99.3%,85.7% 99.6%,78.6% 99.3%,71.4% 99.6%,64.3% 99.2%,57.1% 99.5%,50.0% 99.3%,42.9% 99.0%,35.7% 99.4%,28.6% 99.8%,21.4% 99.9%,14.3% 99.0%,7.1% 99.5%,0.2% 100.0%,1.0% 90.0%,0.6% 80.0%,0.8% 70.0%,1.0% 60.0%,0.3% 50.0%,0.4% 40.0%,1.0% 30.0%,0.1% 20.0%,0.8% 10.0%)}
 .th .sx img{width:100%;aspect-ratio:1080/849}
-.th .mgt{position:relative;padding-top:calc(var(--u)*.6)}
-.th .ivl{display:block;width:calc(var(--u)*15.5);margin:0 0 calc(var(--u)*1.2) calc(var(--u)*-.6);transform:rotate(-4deg);transform-origin:20% 60%;transition:transform .25s ease;filter:drop-shadow(calc(var(--u)*.3) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
+.th .mgt{position:relative;padding-top:calc(var(--u)*2.2)}
+.th .ivl{display:block;width:calc(var(--u)*25);margin:0 0 0 calc(var(--u)*-.8);transform:rotate(-3deg);transform-origin:20% 60%;transition:transform .25s ease;filter:drop-shadow(calc(var(--u)*.3) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
 .th .ivl:hover,.th .ivl:focus-visible{transform:rotate(-1deg) scale(1.04)}
 .th .ivl:focus-visible{outline:calc(var(--u)*.2) solid #fff;outline-offset:calc(var(--u)*.3)}
 .th .ivl img{display:block;width:100%;height:auto}
@@ -288,8 +263,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .cu{position:absolute;bottom:0;left:var(--cl);width:var(--cw);max-width:none;height:auto;transform:rotate(var(--cr));transform-origin:50% 100%;filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
 .th .cuw{position:absolute;bottom:0;left:var(--cl);width:var(--cw);transform:rotate(var(--cr));transform-origin:50% 100%}
 .th .cuw .cu{position:static;display:block;width:100%;transform:none}
-.th .g15{left:30%;top:3.4%;width:44%;--gc:#fff;--gw:.5;transform:rotate(-5deg)}
-.th .g15b{left:62.6%;top:9%;width:calc(var(--u)*3.2);--gc:#fff;--gw:.36}
+.th .g15{left:29.5%;top:-19.5%;width:40%;--gc:#fff;--gw:.46;transform:rotate(-6deg)}
+.th .g15b{left:61%;top:6%;width:calc(var(--u)*3.2);--gc:#fff;--gw:.36}
 /* cast, strips, results, role */
 .th .sxw .tp.a{left:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
 .th .sxw .tp.b{right:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
@@ -299,7 +274,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rs .t2 .gf,.th .ca .t2 .gf{z-index:9}
 
 @media(prefers-reduced-motion:reduce){
-.th .mt,.th .stp{animation:none}
+.th .stp{animation:none}
 .th.js .gf path{stroke-dashoffset:0;animation:none}
 .th .fc .pb,.th .ivl{transition:none}
 }
@@ -385,17 +360,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .tr{height:calc(var(--u)*2.4);margin-top:calc(var(--u)*-2.4)}
 .th .tr i{background-position:0 calc(var(--u)*2.4),0 calc(var(--u)*2.4)}
 .th .mg{padding-top:calc(var(--u)*4.6);padding-bottom:calc(var(--u)*.9)}
-.th .mgh{font-size:min(calc(var(--u)*3),11vw);margin-bottom:calc(var(--u)*1.8)}
+.th .mgh{margin-bottom:calc(var(--u)*2)}
 .th .mgb{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
 .th .mgt{padding-top:0}
-.th .ivl{width:calc(var(--u)*10);margin-left:calc(var(--u)*-.2);margin-bottom:calc(var(--u)*.9)}
+.th .ivl{width:calc(var(--u)*15);margin-left:calc(var(--u)*-.2)}
 .th .mgt p{font-size:calc(var(--u)*1.05)}
 .th .mgl{margin-top:calc(var(--u)*1)}
 .th .gf{--gw:.3}
-.th .g2{right:calc(var(--u)*8);top:calc(var(--u)*-2.6);width:calc(var(--u)*2)}
-.th .g3{right:0;top:calc(var(--u)*-2.8);width:calc(var(--u)*1.5)}
 .th .g6{display:none}
-.th .g7{right:0;top:calc(var(--u)*-.4);width:calc(var(--u)*2.2)}
 .th .g10{left:auto;right:0;top:calc(var(--u)*-.2);width:calc(var(--u)*2.2)}
 .th .g15{--gw:.3}
 .th .g15b{left:62.6%;top:7%;width:calc(var(--u)*1.8)}
@@ -418,16 +390,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <body>
 <div class="th" id="th">
 
-<div class="mq" aria-hidden="true"><div class="mt">
-<div class="mh"><span>TH Monogram</span><i></i><span>Tommy Factory Fall ’22</span><i></i><span>Q &amp; Andy</span><i></i><span>The Famebox</span><i></i><span>NYFW 2022</span><i></i><span>4.3M views</span><i></i><span>8.6M reach</span><i></i></div>
-<div class="mh"><span>TH Monogram</span><i></i><span>Tommy Factory Fall ’22</span><i></i><span>Q &amp; Andy</span><i></i><span>The Famebox</span><i></i><span>NYFW 2022</span><i></i><span>4.3M views</span><i></i><span>8.6M reach</span><i></i></div>
-</div></div>
-
 <header class="cv">
   <div class="cvw"><div class="cvs"><div class="dots"></div>
     <div class="w">
       <div class="cg">
-        <svg class="gf g2" viewBox="0 0 110 110" style="--gd:0.5s" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L85.3 94.5 L6.0 40.0 L104.0 41.4 L23.8 97.1 L55.3 4.4 L84.4 93.3"/></svg><svg class="gf g3" viewBox="0 0 110 110" style="--gd:0.8s" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L86.8 96.8 L6.1 41.1 L104.1 37.4 L24.5 96.1 L54.7 4.4 L85.9 95.5"/></svg>
+        
         <div class="ch">
           <h1 class="h1"><span class="ln l1"><span>Who’s</span> <span>behind</span></span><span class="ln l2"><span>the</span> <span>monogram?</span></span></h1>
         </div>
@@ -445,17 +412,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     <div><dt>Client</dt><dd>Tommy Hilfiger</dd></div>
     <div><dt>Campaign</dt><dd>Tommy Factory, Fall ’22</dd></div>
     <div><dt>My role</dt><dd>Associate Creative Director</dd></div>
-    <div><dt>Channels</dt><dd>Instagram, TikTok, NYFW</dd></div>
+    <div><dt>Channels</dt><dd>Instagram, TikTok</dd></div>
   </dl></div></div>
 </header>
 
 <section class="bf"><div class="dots"></div>
   <div class="w"><div class="bg">
     <div class="bl">
-      <svg class="gf g7" viewBox="0 0 110 110" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L86.8 96.8 L6.1 41.1 L104.1 37.4 L24.5 96.1 L54.7 4.4 L85.9 95.5"/></svg>
+      
       <h2 class="t2"><span>The</span> <span>Brief</span></h2>
-      <p class="ty">Four questions, four answers</p>
-      <div class="pqw"><div class="pq"><p>A signature stamp used to identify <span class="ci">a someone</span>.</p><p class="ty">What a monogram is, and where we started</p></div></div>
+      <div class="pqw"><div class="pq"><p>A signature stamp used to identify <span class="ci">a someone</span>.</p></div></div>
     </div>
     <div class="ql">
       <div class="qa"><h3 class="qq">Who?<small>The client</small></h3><p>Tommy Hilfiger, an iconic American fashion brand known for its prep style and cultural collaborations. Tommy was introducing a new Monogram logo in its Andy Warhol inspired FACTORY Fall ’22 brand campaign but needed a way to communicate the new mark’s meaning and equity.</p></div>
@@ -488,7 +454,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-3-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-3.webp?v=1" alt="Split-screen security camera footage of a blonde woman in a tan jacket looking up from a brick stairwell, stamped CAMERA 05, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 03. Second angle</figcaption></figure>
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-4.webp?v=1" alt="A man with long locs and a mustache in a blue patterned sweater, one hand in his hair, against a dark paneled wall" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 04. Portrait</figcaption></figure>
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-5-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-5.webp?v=1" alt="A woman with bright blue hair and bangs in a navy vest, white shirt and blue monogram-print boots, seated on a white armchair" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 05. Cut out</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6.webp?v=1" alt="A man holding a white instant camera up to his face in front of a blue and gold tinsel curtain, captioned the camera vs the shot" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 06. The camera vs the shot</figcaption></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6.webp?v=1" alt="A man holding a white instant camera up to his face in front of a blue and gold tinsel curtain, captioned the camera vs the shot" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 06. Polaroid</figcaption></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-7-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-7.webp?v=1" alt="A tiled wall of concrete boxes with a standing figure in black in each, cutting to close-ups of sneakers, a patterned jacket and a man with white hair and glasses in a black turtleneck" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 07. The grid</figcaption></figure>
     </div>
   </div></div>
 </section>
@@ -496,12 +463,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <div class="tr b" style="--tc:var(--red);--dc:rgba(5,23,53,.18)" aria-hidden="true"><b></b><i></i></div>
 <section class="mg"><div class="dots"></div>
   <div class="w">
-    <h2 class="mgh"><span class="vh">In the magazine</span><span aria-hidden="true"><span class="wd"><span class="rn c4 fty" style="--bg:#051735;--fg:#F3EFE5;--r:2deg;--dy:0em;--s:0.92">I</span><span class="rn c1 fsl" style="--bg:#003A6B;--fg:#fff;--r:-4deg;--dy:-0.03em;--s:0.92">N</span></span> <span class="wd"><span class="rn c1 fsl" style="--bg:#05264D;--fg:#fff;--r:-5deg;--dy:0.03em;--s:1.06">T</span><span class="rn c3 fcn" style="--bg:#F3EFE5;--fg:#CD0001;--r:2deg;--dy:0.07em;--s:1.06">H</span><span class="rn c2 fcn" style="--bg:#F3EFE5;--fg:#CD0001;--r:-2deg;--dy:-0.07em;--s:1.06">E</span></span> <span class="wd"><span class="rn c2 fcn" style="--bg:#F3EFE5;--fg:#CD0001;--r:-5deg;--dy:0em;--s:1.06">M</span><span class="rn c3 fty" style="--bg:#051735;--fg:#F3EFE5;--r:-2deg;--dy:0em;--s:1.06">A</span><span class="rn c4 fsl" style="--bg:#003A6B;--fg:#fff;--r:-3deg;--dy:0.07em;--s:1.06">G</span><span class="rn c4 fcn" style="--bg:#fff;--fg:#051735;--r:2deg;--dy:-0.03em;--s:1">A</span><span class="rn c1 fgr" style="--bg:#2D3BD0;--fg:#fff;--r:3deg;--dy:-0.07em;--s:1.06">Z</span><span class="rn c2 fty" style="--bg:#fff;--fg:#CD0001;--r:3deg;--dy:0.07em;--s:1.06">I</span><span class="rn c4 fsl" style="--bg:#05264D;--fg:#fff;--r:4deg;--dy:0.03em;--s:1.06">N</span><span class="rn c3 fcn" style="--bg:#F3EFE5;--fg:#CD0001;--r:-4deg;--dy:-0.03em;--s:1">E</span></span></span></h2>
+    <h2 class="mgh"><span class="vh">In the magazine</span><a class="ivl" href="https://www.interviewmagazine.com/fashion/tommy-factory" target="_blank" rel="noopener" aria-label="Interview, read the Tommy Factory feature"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-interview.webp?v=1" alt="Interview" width="644" height="270" loading="lazy" decoding="async"></a></h2>
     <div class="mgb">
       <div class="mgs"><div class="sxw"><i class="tp a"></i><i class="tp b"></i>
         <div class="sx"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-mag-1.webp?v=1" alt="A magazine spread. The left page is a headline in outlined letters crossed by black lines, with an intro paragraph below. The right page is a portrait of a person with auburn hair in a loosened striped shirt, plaid tie and tan trousers against a white wall." width="1080" height="849" loading="lazy" decoding="async"></div></div></div>
       <div class="mgt">
-        <a class="ivl" href="https://www.interviewmagazine.com/fashion/tommy-factory" target="_blank" rel="noopener" aria-label="Interview, read the Tommy Factory feature"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-interview.webp?v=1" alt="Interview" width="644" height="270" loading="lazy" decoding="async"></a>
         <p>The campaign also ran as a feature in Interview, the magazine Andy Warhol founded. A few of the cast answered classic Warhol questions, with portraits to match. Here is one spread, plus the portraits cut out and stood up below.</p>
         <a class="btn" href="https://www.interviewmagazine.com/fashion/tommy-factory" target="_blank" rel="noopener">Read it on Interview &rarr;</a>
       </div>
@@ -629,16 +595,23 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     gs.forEach(function(g){go.observe(g)});
   }else{gs.forEach(function(g){g.classList.add('go')})}
   /* animated reels load when near the viewport, stills stay for Reduce Motion */
-  function arm(img){
-    if(img.getAttribute('data-on'))return;img.setAttribute('data-on','1');
+  function armAll(){
     if(reduce)return;
-    var a=new Image();a.onload=function(){img.src=img.getAttribute('data-a')};a.src=img.getAttribute('data-a');
+    var n=rs.length,done=0,ok=[];
+    function go(){rs.forEach(function(img){if(ok.indexOf(img)>-1)img.src=img.getAttribute('data-a')})}
+    rs.forEach(function(img){
+      var a=new Image();
+      a.onload=function(){ok.push(img);if(++done===n)go()};
+      a.onerror=function(){if(++done===n)go()};
+      a.src=img.getAttribute('data-a');
+    });
+    setTimeout(function(){if(done<n)go()},9000);
   }
-  var rs=qa('.rl-i');
-  if('IntersectionObserver' in window){
-    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){arm(e.target);ro.unobserve(e.target)}})},{rootMargin:'500px 0px'});
-    rs.forEach(function(r){ro.observe(r)});
-  }else{rs.forEach(arm)}
+  var rs=qa('.rl-i'),rr=document.querySelector('.rlr');
+  if(rr&&'IntersectionObserver' in window){
+    var ro=new IntersectionObserver(function(es){if(es[0].isIntersecting){ro.disconnect();armAll()}},{rootMargin:'600px 0px'});
+    ro.observe(rr);
+  }else if(rr){armAll()}
   /* Vimeo facades: nothing loads until a click */
   qa('.fc').forEach(function(b){
     b.addEventListener('click',function(){
