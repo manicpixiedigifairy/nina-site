@@ -476,6 +476,15 @@ section,header,footer{position:relative}
 .sts .hs.calm .hs-ff,.sts .hs.calm .hs-fb{position:relative;transform:none;backface-visibility:visible;-webkit-backface-visibility:visible;min-height:calc(var(--k)*9)}
 .sts .hs.calm .hs-gw{display:none}
 
+/* footer */
+.sts .ft{background:#141F0E;padding:calc(var(--u)*3.4) 0;color:var(--cream)}
+.sts .bk{display:inline-flex;align-items:center;gap:calc(var(--u)*.8);padding:calc(var(--u)*1) calc(var(--u)*2.2);border-radius:999px;background:var(--gold);color:var(--ink);font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:calc(var(--u)*1.5);line-height:1;transition:background .3s,transform .3s}
+.sts .bk:hover{background:var(--cream);transform:translateX(calc(var(--u)*-.3))}
+.sts .bk:focus-visible{outline:calc(var(--u)*.2) solid var(--cream);outline-offset:calc(var(--u)*.3)}
+/* editorial title sits clear of the deck */
+.sts .hs.h .hs-tt.sm{width:calc(var(--k)*32)}
+.sts .hs.h .hs-tt.sm .rb h3{font-size:calc(var(--k)*6.4)}
+
 @media(max-width:1000px){
 /* single column, up to 1000px */
 .sts .sw{--u:16px}
@@ -1108,7 +1117,7 @@ section,header,footer{position:relative}
 </section>
 
 <section class="rl" id="role">
-  <div class="bg" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sts-ndea-boat.gif?v=1" alt="" width="440" height="247" loading="lazy" decoding="async"><i class="ov dim"></i><i class="ov gl"></i></div>
+  <div class="bg" aria-hidden="true"><i class="ov mt"></i><i class="ov gr"></i></div>
   <div class="in">
     <div class="card rv">
       <div class="cl2">
@@ -1127,6 +1136,10 @@ section,header,footer{position:relative}
   </div>
 </section>
 
+
+<section class="ft" id="end">
+  <div class="in"><a class="bk" href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></div>
+</section>
 
 </div></div>
 <script>
@@ -1203,7 +1216,7 @@ section,header,footer{position:relative}
   var pars=qa('[data-par]').map(function(el){var a=el.getAttribute('data-par').split(',');return{el:el,m:parseFloat(a[0]),max:parseFloat(a[1]||6),ex:0,ey:0}});
   var flips=qa('[data-fx="flip"]');
   var decks=qa('[data-fx="stack"]').map(function(d){return{el:d,cards:qa('.hs-dc',d)}});
-  var mode='v',dist=0,K=16,forceV=false,bad=0,raf=0,tid=0;
+  var holds=[],totalL=0,mode='v',dist=0,K=16,forceV=false,bad=0,raf=0,tid=0;
   if(calm)hs.classList.add('calm');
   track.querySelectorAll('img[loading=lazy]').forEach(function(i){i.loading='eager'});
   function measure(){
@@ -1215,10 +1228,16 @@ section,header,footer{position:relative}
     pars.forEach(function(p){p.el.style.translate='';p.ex=0;p.ey=0});
     if(want){
       hs.style.setProperty('--sw',stage.clientWidth+'px');
-      dist=Math.max(0,track.scrollWidth-stage.clientWidth);
+      /* each stacking deck gets a dwell: the track holds still while its cards land one at a time, with a pause on each so it can be read */
+      track.style.transform='';decks.forEach(function(d){d.el.style.translate=''});
+      holds=[];totalL=0;
+      decks.forEach(function(d){var sc=d.el.closest('.hs-sc');if(!sc)return;var h={a:sc.offsetLeft,L:d.cards.length*.4*stage.clientWidth,p:0,d:d};d.hold=h;holds.push(h)});
+      holds.sort(function(x,y){return x.a-y.a});
+      holds.forEach(function(h){totalL+=h.L});
+      dist=Math.max(0,track.scrollWidth-stage.clientWidth)+totalL;
       hs.style.height=(dist+stage.offsetHeight)+'px';
     }else{
-      hs.style.height='';hs.style.removeProperty('--sw');track.style.transform='';dist=0;
+      hs.style.height='';hs.style.removeProperty('--sw');track.style.transform='';dist=0;holds=[];totalL=0;decks.forEach(function(d){d.hold=null});
     }
     update();
   }
@@ -1227,7 +1246,12 @@ section,header,footer{position:relative}
     var r=hs.getBoundingClientRect(),vh=window.innerHeight,prog=0;
     if(mode==='h'){
       var off=cl(-r.top,0,dist);prog=dist?off/dist:0;
-      track.style.transform='translate3d('+(-off).toFixed(2)+'px,0,0)';
+      var eff=off,cons=0,held=false;
+      holds.forEach(function(h){var S=h.a+cons;
+        h.p=off<=S?0:off>=S+h.L?1:(off-S)/h.L;
+        if(!held){if(off<S){}else if(off<S+h.L){eff=h.a;held=true}else cons+=h.L}});
+      if(!held)eff=off-cons;
+      track.style.transform='translate3d('+(-eff).toFixed(2)+'px,0,0)';
       /* a host page can stop position:sticky from working. Then the stage is pinned by script instead */
       if(jsPin){
         var pin=cl(-r.top,0,Math.max(0,hs.offsetHeight-stage.offsetHeight));
@@ -1264,8 +1288,8 @@ section,header,footer{position:relative}
     decks.forEach(function(d){
       var n=d.cards.length,b=d.el.getBoundingClientRect();
       if(mode==='h'){
-        var sp=cl((1-(b.left+b.width/2-sr.left)/sr.width)/.62,0,1),e=[],i;
-        for(i=0;i<n;i++)e.push(sm(cl((sp-i*.13)/.26,0,1)));
+        var sp=d.hold?d.hold.p:1,e=[],i;
+        for(i=0;i<n;i++)e.push(sm(cl((sp-i/n)/(.45/n),0,1)));
         for(i=0;i<n;i++){var later=0;for(var j=i+1;j<n;j++)later+=e[j];
           d.cards[i].style.setProperty('--e',e[i].toFixed(3));d.cards[i].style.setProperty('--s',(1-.028*later).toFixed(3))}
       }else{
@@ -1284,7 +1308,8 @@ section,header,footer{position:relative}
   /* chapter links in the spine and the intro */
   function go(ch){
     var tg=document.getElementById(['tn','bv','hb'][ch]);if(!tg)return;
-    var y=mode==='h'?hs.getBoundingClientRect().top+window.pageYOffset+Math.min(tg.offsetLeft,dist):tg.getBoundingClientRect().top+window.pageYOffset-K*3.6;
+    var c=0;holds.forEach(function(h){if(h.a<tg.offsetLeft-1)c+=h.L});
+    var y=mode==='h'?hs.getBoundingClientRect().top+window.pageYOffset+Math.min(tg.offsetLeft+c,dist):tg.getBoundingClientRect().top+window.pageYOffset-K*3.6;
     try{window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}catch(x){window.scrollTo(0,y)}
   }
   qa('a[data-ch]',sts).forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(+a.getAttribute('data-ch'))})});
