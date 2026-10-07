@@ -45,7 +45,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 @keyframes thSpin{to{transform:rotate(360deg)}}
 .th .dk{font:600 calc(var(--u)*1.5)/1.38 var(--gr)}
 .th .dkw{display:contents}
-.th .dm{font:500 calc(var(--u)*1.2)/1.6 var(--gr);margin-top:calc(var(--u)*.3);opacity:.95}
 .th .pl{position:relative;z-index:3;width:min(calc(var(--u)*66),calc(100% - var(--u)*4));margin:calc(var(--u)*-11.4) auto 0}
 .th .pl .fr{position:relative;background:#fff;padding:calc(var(--u)*.8);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--cob),calc(var(--u)*1.6) calc(var(--u)*1.6) 0 var(--red);transform:rotate(-1.1deg)}
 .th .pl img{width:100%;aspect-ratio:1800/926;object-fit:cover}
@@ -68,11 +67,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .bl{position:relative}
 .th .bl .t2{--sc:var(--ink);font-size:calc(var(--u)*6.8)}
 .th .bl .t2 span{display:block}
-.th .pqw{position:relative;margin-top:calc(var(--u)*3.4);transform:rotate(-1.8deg);filter:drop-shadow(calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink))}
-.th .pq{position:relative;background:var(--red);color:#fff;padding:calc(var(--u)*2.4) calc(var(--u)*2.4) calc(var(--u)*2.2);clip-path:polygon(0.0% 1.5%,6.2% 1.8%,12.5% 1.9%,18.8% 2.3%,25.0% 1.8%,31.2% 2.2%,37.5% 0.1%,43.8% 1.1%,50.0% 2.3%,56.2% 1.6%,62.5% 2.2%,68.8% 0.3%,75.0% 1.1%,81.2% 0.6%,87.5% 1.3%,93.8% 1.4%,100.0% 0.0%,99.5% 11.1%,99.3% 22.2%,97.8% 33.3%,98.2% 44.4%,99.6% 55.6%,98.1% 66.7%,99.7% 77.8%,98.5% 88.9%,100.0% 99.7%,93.8% 100.0%,87.5% 97.9%,81.2% 99.5%,75.0% 99.5%,68.8% 97.6%,62.5% 97.9%,56.2% 99.3%,50.0% 97.7%,43.8% 98.7%,37.5% 98.4%,31.2% 99.5%,25.0% 97.7%,18.8% 98.3%,12.5% 97.7%,6.2% 97.9%,0.7% 100.0%,0.9% 88.9%,0.4% 77.8%,0.3% 66.7%,0.2% 55.6%,0.7% 44.4%,1.4% 33.3%,0.0% 22.2%,1.6% 11.1%)}
-.th .pq::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 0 38%,rgba(255,255,255,.16) 38.3%,rgba(5,23,53,.2) 38.9%,transparent 40.4%),linear-gradient(7deg,transparent 0 63%,rgba(5,23,53,.18) 63.3%,rgba(255,255,255,.14) 63.9%,transparent 65.6%),linear-gradient(180deg,transparent 0 82%,rgba(5,23,53,.1) 100%)}
-.th .ci{position:relative;display:inline-block}
-.th .pq p{font:400 calc(var(--u)*2.7)/1.02 var(--cn);text-transform:uppercase}
 .th .qa{display:grid;grid-template-columns:calc(var(--u)*11) minmax(0,1fr);gap:calc(var(--u)*2);padding:calc(var(--u)*2.2) 0;border-top:calc(var(--u)*.16) solid var(--ink)}
 .th .qa:last-child{border-bottom:calc(var(--u)*.16) solid var(--ink)}
 .th .qq{font:400 calc(var(--u)*4)/.95 var(--cn);text-transform:uppercase;color:var(--red)}
@@ -163,14 +157,19 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .st{background:var(--cob);color:#fff;padding:calc(var(--u)*7) 0 calc(var(--u)*8.4);overflow:hidden}
 .th .st .dots{--dc:rgba(255,255,255,.12)}
 .th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);list-style:none;margin:0;padding:0}
-.th .fv{position:relative;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*1.4);padding:calc(var(--u)*1.4);background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
+.th .fv{position:relative;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;gap:0;padding:0;background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
 .th .fv:nth-child(odd){transform:rotate(-1.4deg)}
 .th .fv:nth-child(even){transform:rotate(1.2deg);margin-top:calc(var(--u)*1.4);box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 #000}
 .th .fh{display:flex;align-items:center;gap:calc(var(--u)*.7);color:#fff;font-size:calc(var(--u)*.74)}
 .th .fh .rec{flex:none;width:calc(var(--u)*.9);aspect-ratio:1;border-radius:50%;background:var(--red);box-shadow:0 0 0 calc(var(--u)*.14) #fff}
 .th .fh b{margin-left:auto;font:700 1em/1 var(--ty);color:var(--ink);background:#fff;padding:.35em .6em;letter-spacing:.06em}
-.th .fn{font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
+.th .fn{display:block;font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
 .th .fn span{display:block;white-space:nowrap}
+.th .fv .fc{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*1.4);width:auto;padding:calc(var(--u)*1.4);background:transparent}
+.th .fv .fc .pb{top:36%;width:calc(var(--u)*3.8)}
+.th .fv .fc.on .fh,.th .fv .fc.on .fn{visibility:hidden}
+.th .fv .fc.on{background:#000}
+.th .fv .fc:focus-visible{outline:calc(var(--u)*.2) solid #fff;outline-offset:calc(var(--u)*-.6)}
 .th .fn i{display:inline-block;margin:calc(var(--u)*.6) 0;padding:.3em .62em;font:700 calc(var(--u)*1)/1 var(--ty);font-style:normal;text-transform:lowercase;background:var(--red);color:#fff;transform:rotate(-4deg)}
 
 /* RESULTS */
@@ -188,7 +187,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .tl li:nth-child(2){background:var(--cob);color:#fff}
 .th .rt{display:grid;grid-template-columns:calc(var(--u)*12) minmax(0,1fr);gap:calc(var(--u)*2);margin-top:calc(var(--u)*3.4);align-items:start}
 .th .rt .qq{color:#fff;font-size:calc(var(--u)*3.2)}
-.th .rt .qq small{color:#fff;opacity:.85}
 .th .rt p{font-size:calc(var(--u)*1.45);line-height:1.55;font-weight:600;max-width:calc(var(--u)*50)}
 
 /* ROLE */
@@ -269,7 +267,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .cr{display:block;position:relative;margin-top:calc(var(--u)*2.2);padding-top:calc(var(--u)*1.4)}
 .th .stp{right:0;top:calc(var(--u)*1.4);width:calc(var(--u)*5.6)}
 .th .dk{font-size:calc(var(--u)*1.2);padding-right:calc(var(--u)*6.8)}
-.th .dm{font-size:calc(var(--u)*1.05);margin-top:calc(var(--u)*.9)}
 .th .cvs{padding-top:calc(var(--u)*3.6);padding-bottom:calc(var(--u)*7.4)}
 .th .pl{margin-top:calc(var(--u)*-5.8)}
 .th .pl .fr{padding:calc(var(--u)*.5);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--cob),calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--red)}
@@ -285,8 +282,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .t2,.th .bl .t2,.th .id .t2,.th .rw .t2,.th .ca .t2,.th .rs .t2{font-size:min(calc(var(--u)*4.2),12vw)}
 .th .bg,.th .ig,.th .rg,.th .rog{grid-template-columns:1fr;gap:calc(var(--u)*2.6)}
 .th .bl .t2 span{display:inline}
-.th .pqw{margin-top:calc(var(--u)*2.2)}
-.th .pq p{font-size:calc(var(--u)*2)}
 .th .qa{grid-template-columns:1fr;gap:calc(var(--u)*.8);padding:calc(var(--u)*1.5) 0}
 .th .qq{font-size:calc(var(--u)*2.8)}
 .th .qq small{display:inline;margin-left:calc(var(--u)*.7)}
@@ -318,9 +313,13 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .prg{gap:calc(var(--u)*.7)}
 .th .prg figure{flex-basis:calc((100% - var(--u)*.7)/2)}
 .th .fl{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
-.th .fv{aspect-ratio:auto;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
+.th .fv{aspect-ratio:auto;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
 .th .fv:nth-child(even){margin-top:0;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
-.th .fn{font-size:calc(var(--u)*2.5)}
+.th .fn{font-size:calc(var(--u)*2.2)}
+.th .fv .fc{gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1)}
+.th .fv .fc .pb{left:auto;right:calc(var(--u)*1.2);top:auto;bottom:calc(var(--u)*1.2);transform:none;width:calc(var(--u)*3)}
+.th .fv .fc:hover .pb{transform:scale(1.08)}
+.th .fv .fc.on{aspect-ratio:1;flex:none}
 .th .fn i{margin:calc(var(--u)*.5) 0;font-size:calc(var(--u)*.9)}
 .th .tl{grid-template-columns:1fr 1fr}
 .th .tl li{aspect-ratio:1/.9;padding:calc(var(--u)*1.1)}
@@ -370,7 +369,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
           <h1 class="h1"><span class="ln l1"><span>Who’s</span> <span>behind</span></span><span class="ln l2"><span>the</span> <span>monogram?</span></span></h1>
         </div>
         <div class="cr">
-          <div class="dkw"><p class="dk">A monogram has the power to not just represent who we are, but also to define us.</p><p class="dm">For the Tommy Hilfiger brand, the monogram symbolizes the way an individual can become a brand like so many of us do today. To introduce the brand’s Monogram collection we interviewed some of NYC’s biggest icons, artists, and tastemakers and got to know the people behind the personas.</p></div>
+          <div class="dkw"><p class="dk">A monogram has the power to not just represent who we are, but also to define us.</p></div>
           <svg class="stp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="thCirc" d="M100 100 m-76 0 a76 76 0 1 1 152 0 a76 76 0 1 1 -152 0"/></defs><circle cx="100" cy="100" r="96" stroke-width="3"/><circle cx="100" cy="100" r="58" stroke-width="2"/><text><textPath href="#thCirc" startOffset="0">A signature stamp used to identify a someone ✱ A signature stamp used to identify a someone ✱</textPath></text><g fill="currentColor"><path d="M100 78 L106 94 L122 100 L106 106 L100 122 L94 106 L78 100 L94 94 Z"/></g></svg>
         </div>
       </div>
@@ -382,7 +381,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
   <div class="fbw"><svg class="gf g6" viewBox="0 0 110 110" style="--gd:0.4s" aria-hidden="true" focusable="false"><path pathLength="1" d="M53.1 4.5 L85.3 94.5 L6.0 40.0 L104.0 41.4 L23.8 97.1 L55.3 4.4 L84.4 93.3"/></svg><div class="fb"><dl class="w">
     <div><dt>Client</dt><dd>Tommy Hilfiger</dd></div>
     <div><dt>Campaign</dt><dd>Tommy Factory, Fall ’22</dd></div>
-    <div><dt>My role</dt><dd>Associate Creative Director</dd></div>
     <div><dt>Channels</dt><dd>Instagram, TikTok</dd></div>
   </dl></div></div>
 </header>
@@ -392,7 +390,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     <div class="bl">
       
       <h2 class="t2"><span>The</span> <span>Brief</span></h2>
-      <div class="pqw"><div class="pq"><p>A signature stamp used to identify <span class="ci">a someone</span>.</p></div></div>
     </div>
     <div class="ql">
       <div class="qa"><h3 class="qq">Who?<small>The client</small></h3><p>Tommy Hilfiger, an iconic American fashion brand known for its prep style and cultural collaborations. Tommy was introducing a new Monogram logo in its Andy Warhol inspired FACTORY Fall ’22 brand campaign but needed a way to communicate the new mark’s meaning and equity.</p></div>
@@ -512,9 +509,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <section class="st" aria-label="Famebox"><div class="dots"></div>
   <div class="w">
     <ol class="fl">
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></div><div class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></div></li>
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></div><div class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></div></li>
-      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></div><div class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></div></li>
+      <li class="fv"><button class="fc" type="button" data-v="788150108" data-t="Famebox 01, Travis Barker x Lady Bunny" aria-label="Play the interview, Travis Barker x Lady Bunny"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></span><span class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></span><span class="pb" aria-hidden="true"></span></button></li>
+      <li class="fv"><button class="fc" type="button" data-v="824516987" data-h="f2f3723173" data-t="Famebox 02, Tommy Hilfiger x Jon Batiste" aria-label="Play the interview, Tommy Hilfiger x Jon Batiste"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></span><span class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></span><span class="pb" aria-hidden="true"></span></button></li>
+      <li class="fv"><button class="fc" type="button" data-v="788149995" data-t="Famebox 03, Anthony Ramos x Mr. Brainwash" aria-label="Play the interview, Anthony Ramos x Mr. Brainwash"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></span><span class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></span><span class="pb" aria-hidden="true"></span></button></li>
     </ol>
   </div>
 </section>
@@ -527,7 +524,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <li><span class="nm">4.3M</span><span class="lb">Total views</span></li>
       <li><span class="nm">8.6M</span><span class="lb">In reach</span></li>
     </ul>
-    <div class="rt"><h3 class="qq">Results<small>The outcome</small></h3><p>The campaign generated significant industry buzz, debuting the monogram at NYFW 2022 and earning coverage in major fashion outlets, contributing to the collection’s global rollout. The launch content garnered 4.3M total views, 8.6M in reach and featured marquee talent like Kate Moss, Travis Barker, Jon Batiste, Lady Bunny and many more.</p></div>
+    <div class="rt"><h3 class="qq">Results</h3><p>The campaign generated significant industry buzz, debuting the monogram at NYFW 2022 and earning coverage in major fashion outlets, contributing to the collection’s global rollout. The launch content garnered 4.3M total views, 8.6M in reach and featured marquee talent like Kate Moss, Travis Barker, Jon Batiste, Lady Bunny and many more.</p></div>
   </div>
 </section>
 
@@ -549,7 +546,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <script>
 (function(){
   var th=document.querySelector('.th');
-  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   th.classList.add('js');
   function qa(s){return [].slice.call(document.querySelectorAll(s))}
   /* graffiti draws itself once near the viewport */
@@ -558,9 +554,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     var go=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('go');go.unobserve(e.target)}})},{threshold:.1});
     gs.forEach(function(g){go.observe(g)});
   }else{gs.forEach(function(g){g.classList.add('go')})}
-  /* animated reels load when near the viewport, stills stay for Reduce Motion */
+  /* the footage GIFs load when near the viewport and always play, whatever the Reduce Motion setting */
   function armAll(){
-    if(reduce)return;
     var n=rs.length,done=0,ok=[];
     function go(){rs.forEach(function(img){if(ok.indexOf(img)>-1)img.src=img.getAttribute('data-a')})}
     rs.forEach(function(img){
@@ -579,7 +574,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
   /* the film card is a looping animation, the player opens on click */
   var vi=document.querySelector('.vf .fc>img'),vw=document.querySelector('.vf');
   function armFilm(){
-    if(reduce||!vi)return;
+    if(!vi)return;
     var a=new Image();a.onload=function(){vi.src=vi.getAttribute('data-a')};a.src=vi.getAttribute('data-a');
   }
   if(vw&&'IntersectionObserver' in window){
@@ -591,7 +586,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     b.addEventListener('click',function(){
       if(b.classList.contains('on'))return;
       b.classList.add('on');
-      b.insertAdjacentHTML('beforeend','<iframe src="https://player.vimeo.com/video/'+b.getAttribute('data-v')+'?app_id=122963&autoplay=1&playsinline=1&dnt=1" title="'+b.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+      b.insertAdjacentHTML('beforeend','<iframe src="https://player.vimeo.com/video/'+b.getAttribute('data-v')+'?'+(b.getAttribute('data-h')?'h='+b.getAttribute('data-h')+'&':'')+'app_id=122963&autoplay=1&playsinline=1&dnt=1" title="'+b.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
     });
   });
 })();
