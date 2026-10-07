@@ -34,12 +34,12 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
 /* cover */
 .bc .cv{position:relative;background:var(--pink);padding:calc(var(--u)*2.6) calc(var(--u)*5) 0;overflow:clip}
 .bc .cv .top{position:relative;z-index:4;display:flex;justify-content:space-between}
-.bc .cvs{position:relative;height:calc(var(--u)*50);margin-top:calc(var(--u)*2.4);max-width:calc(var(--u)*80);margin-left:auto;margin-right:auto}
+.bc .cvs{position:relative;height:calc(var(--u)*50);margin-top:0;max-width:calc(var(--u)*80);margin-left:auto;margin-right:auto}
 .bc .cvp{position:absolute;left:0;top:calc(var(--u)*1.5);width:calc(var(--u)*33);z-index:1}
 .bc .cvp img{width:100%;height:auto;border-radius:calc(var(--u)*.9);box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.4) rgba(80,20,40,.28)}
 .bc .cv h1{margin:0;position:absolute;inset:0;z-index:2;font-weight:800;text-transform:uppercase;letter-spacing:-.055em;line-height:.8;font-size:calc(var(--u)*26);pointer-events:none;font-variation-settings:"opsz" 96}
 .bc .cv h1 .l1,.bc .cv h1 .l2{position:absolute;display:block;white-space:nowrap}
-.bc .cv h1 .l1{left:calc(var(--u)*-.8);top:calc(var(--u)*-1.6)}
+.bc .cv h1 .l1{left:calc(var(--u)*-.8);top:calc(var(--u)*-1.6);letter-spacing:.06em}
 .bc .cv h1 .l2{left:calc(var(--u)*12.5);top:calc(var(--u)*25)}
 .bc .cvt{position:absolute;z-index:3;left:calc(var(--u)*38.5);top:calc(var(--u)*3);width:calc(var(--u)*37)}
 .bc .cvt p{margin:calc(var(--u)*1) 0 calc(var(--u)*1.8);font-family:var(--serif);font-weight:400;font-size:calc(var(--u)*2.1);line-height:1.22;letter-spacing:-.015em}
@@ -329,10 +329,9 @@ position:relative;font-family:var(--disp);color:var(--ink);font-size:calc(var(--
 
 <header class="cv" id="top">
   <div class="grain" aria-hidden="true"></div>
-  <div class="top"><span class="mono">Walmart x Essence</span><span class="mono">Beautycon 360</span></div>
   <div class="cvs">
     <div class="cvm">
-      <figure class="cvp fx" data-par="-3" data-rot="2" style="margin:0"><span class="tape"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-cover.webp?v=1" width="900" height="973" alt=""></figure>
+      <figure class="cvp fx" data-par="-3" data-rot="2" style="margin:0"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-cover.webp?v=1" width="900" height="973" alt=""></figure>
       <h1><span class="vh">Walmart x Beautycon. </span><span class="l1 fx" data-par="5">It</span><span class="l2 fx" data-par="-4">Girl</span></h1>
       <div class="ring fx" data-rot="40" aria-hidden="true"><svg viewBox="-50 -50 100 100"><g class="rg"><defs><path id="bcRingPath" d="M-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#bcRingPath" textLength="236" lengthAdjust="spacing">For every it girl &#8226; For every it girl &#8226;</textPath></text></g><circle class="core" r="15"/><text class="ct" text-anchor="middle" dominant-baseline="central" y="1">IT</text></svg></div>
     </div>
