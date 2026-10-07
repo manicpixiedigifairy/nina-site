@@ -99,11 +99,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rls{margin-top:calc(var(--u)*6.4)}
 .th .rlh{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-bottom:calc(var(--u)*2.2);color:#fff}
 .th .rlh::after{content:'';flex:1;height:calc(var(--u)*.14);background:rgba(255,255,255,.5)}
-.th .rlr{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:calc(var(--u)*1.5)}
+.th .rlr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
 .th .rl{position:relative}
 .th .rl .im{background:#000;border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);aspect-ratio:320/570;overflow:hidden}
 .th .rl img{width:100%;height:100%;object-fit:cover}
-.th .rl figcaption{margin-top:calc(var(--u)*1.1);color:var(--sil);font-size:calc(var(--u)*.7)}
 
 /* RUNWAY */
 .th .rw{background:var(--paper);padding:calc(var(--u)*7.6) 0 calc(var(--u)*8.4)}
@@ -157,19 +156,15 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .st{background:var(--cob);color:#fff;padding:calc(var(--u)*7) 0 calc(var(--u)*8.4);overflow:hidden}
 .th .st .dots{--dc:rgba(255,255,255,.12)}
 .th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);list-style:none;margin:0;padding:0}
-.th .fv{position:relative;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;gap:0;padding:0;background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
-.th .fv:nth-child(odd){transform:rotate(-1.4deg)}
-.th .fv:nth-child(even){transform:rotate(1.2deg);margin-top:calc(var(--u)*1.4);box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 #000}
+.th .fv{position:relative;display:flex;flex-direction:column;gap:calc(var(--u)*1.4);padding:calc(var(--u)*1.4);background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
+.th .fp{position:relative;aspect-ratio:1;background:#000;border:calc(var(--u)*.2) solid rgba(255,255,255,.9)}
+.th .fp iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.th .fv:nth-child(even){box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 #000}
 .th .fh{display:flex;align-items:center;gap:calc(var(--u)*.7);color:#fff;font-size:calc(var(--u)*.74)}
 .th .fh .rec{flex:none;width:calc(var(--u)*.9);aspect-ratio:1;border-radius:50%;background:var(--red);box-shadow:0 0 0 calc(var(--u)*.14) #fff}
 .th .fh b{margin-left:auto;font:700 1em/1 var(--ty);color:var(--ink);background:#fff;padding:.35em .6em;letter-spacing:.06em}
 .th .fn{display:block;font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
 .th .fn span{display:block;white-space:nowrap}
-.th .fv .fc{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:calc(var(--u)*1.4);width:auto;padding:calc(var(--u)*1.4);background:transparent}
-.th .fv .fc .pb{top:36%;width:calc(var(--u)*3.8)}
-.th .fv .fc.on .fh,.th .fv .fc.on .fn{visibility:hidden}
-.th .fv .fc.on{background:#000}
-.th .fv .fc:focus-visible{outline:calc(var(--u)*.2) solid #fff;outline-offset:calc(var(--u)*-.6)}
 .th .fn i{display:inline-block;margin:calc(var(--u)*.6) 0;padding:.3em .62em;font:700 calc(var(--u)*1)/1 var(--ty);font-style:normal;text-transform:lowercase;background:var(--red);color:#fff;transform:rotate(-4deg)}
 
 /* RESULTS */
@@ -292,9 +287,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .id blockquote p{font-size:calc(var(--u)*1.4)}
 .th .vf{max-width:calc(var(--u)*16)}
 .th .rls{margin-top:calc(var(--u)*4)}
-.th .rlr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:calc(var(--u)*1.2);padding:calc(var(--u)*.6) calc(var(--u)*.6) calc(var(--u)*1.2);margin:0 calc(var(--u)*-2);padding-left:calc(var(--u)*2);padding-right:calc(var(--u)*2);-webkit-overflow-scrolling:touch}
-.th .rl{flex:none;width:calc(var(--u)*9.8);scroll-snap-align:center}
-.th .rl figcaption{font-size:calc(var(--u)*.6)}
+.th .rlr{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.4);padding:0 calc(var(--u)*.6) calc(var(--u)*.6) 0}
 .th .rw .t2 span{display:inline}
 .th .sc2{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*3)}
 .th .sc2 .s4{order:1}.th .sc2 .s5{order:2}
@@ -313,13 +306,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .prg{gap:calc(var(--u)*.7)}
 .th .prg figure{flex-basis:calc((100% - var(--u)*.7)/2)}
 .th .fl{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
-.th .fv{aspect-ratio:auto;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
-.th .fv:nth-child(even){margin-top:0;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
-.th .fn{font-size:calc(var(--u)*2.2)}
-.th .fv .fc{gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1)}
-.th .fv .fc .pb{left:auto;right:calc(var(--u)*1.2);top:auto;bottom:calc(var(--u)*1.2);transform:none;width:calc(var(--u)*3)}
-.th .fv .fc:hover .pb{transform:scale(1.08)}
-.th .fv .fc.on{aspect-ratio:1;flex:none}
+.th .fv{gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
+.th .fv:nth-child(even){box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
+.th .fn{font-size:calc(var(--u)*2.5)}
 .th .fn i{margin:calc(var(--u)*.5) 0;font-size:calc(var(--u)*.9)}
 .th .tl{grid-template-columns:1fr 1fr}
 .th .tl li{aspect-ratio:1/.9;padding:calc(var(--u)*1.1)}
@@ -412,18 +401,15 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <blockquote><p>“We’re here at the Tommy Factory, where creativity collides with excellence. It gets a little weird in here sometimes, not gonna lie.”</p><cite class="ty">Anthony Ramos, subtitles from the Q &amp; Andy reels</cite></blockquote>
     </div>
     <div class="vf"><button class="fc" type="button" data-v="824446083" data-t="TH_Factory, the Q &amp; Andy film" aria-label="Play the TH_Factory film">
-      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-reel-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-film.webp?v=1" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div>
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-film-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-film.webp?v=2" alt="" width="320" height="570" decoding="async" loading="lazy"></button></div>
   </div>
   <div class="rls">
     <div class="rlh ty"><span class="sp"></span>Tommy Factory footage</div>
     <div class="rlr">
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-1-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-1.webp?v=1" alt="Grainy black and white clip of a man with dark curly hair speaking into a microphone, subtitled we’re here at the Tommy Factory" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 01. Sound on</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-2-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-2.webp?v=1" alt="Split-screen security camera footage of a man in a navy suit moving around a brick stairwell, stamped CAMERA 03, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 02. Security cam</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-3-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-3.webp?v=1" alt="Split-screen security camera footage of a blonde woman in a tan jacket looking up from a brick stairwell, stamped CAMERA 05, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 03. Second angle</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-4.webp?v=1" alt="A man with long locs and a mustache in a blue patterned sweater, one hand in his hair, against a dark paneled wall" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 04. Portrait</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-5-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-5.webp?v=1" alt="A woman with bright blue hair and bangs in a navy vest, white shirt and blue monogram-print boots, seated on a white armchair" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 05. Cut out</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-6.webp?v=1" alt="A man holding a white instant camera up to his face in front of a blue and gold tinsel curtain, captioned the camera vs the shot" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 06. Polaroid</figcaption></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-7-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-gif-7.webp?v=1" alt="A tiled wall of concrete boxes with a standing figure in black in each, cutting to close-ups of sneakers, a patterned jacket and a man with white hair and glasses in a black turtleneck" width="320" height="570" loading="lazy" decoding="async"></div><figcaption class="ty">Reel 07. The grid</figcaption></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-1-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-1.webp?v=1" alt="A person in a tall platinum beehive wig and a leopard-print jacket crossing their forearms in front of a window, captioned Lady Bunny" width="320" height="570" loading="lazy" decoding="async"></div></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-2-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-2.webp?v=1" alt="Split-screen security camera footage of a blonde woman in a tan jacket looking up from a brick stairwell, stamped CAMERA 05, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-3-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-3.webp?v=1" alt="Split-screen security camera footage of a man in a navy suit moving around a brick stairwell, stamped CAMERA 03, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div></figure>
+      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-4.webp?v=1" alt="Grainy black and white clip of a man with dark curly hair speaking into a microphone, subtitled we’re here at the Tommy Factory" width="320" height="570" loading="lazy" decoding="async"></div></figure>
     </div>
   </div></div>
 </section>
@@ -509,9 +495,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <section class="st" aria-label="Famebox"><div class="dots"></div>
   <div class="w">
     <ol class="fl">
-      <li class="fv"><button class="fc" type="button" data-v="788150108" data-t="Famebox 01, Travis Barker x Lady Bunny" aria-label="Play the interview, Travis Barker x Lady Bunny"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></span><span class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></span><span class="pb" aria-hidden="true"></span></button></li>
-      <li class="fv"><button class="fc" type="button" data-v="824516987" data-h="f2f3723173" data-t="Famebox 02, Tommy Hilfiger x Jon Batiste" aria-label="Play the interview, Tommy Hilfiger x Jon Batiste"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></span><span class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></span><span class="pb" aria-hidden="true"></span></button></li>
-      <li class="fv"><button class="fc" type="button" data-v="788149995" data-t="Famebox 03, Anthony Ramos x Mr. Brainwash" aria-label="Play the interview, Anthony Ramos x Mr. Brainwash"><span class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></span><span class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></span><span class="pb" aria-hidden="true"></span></button></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>01</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/788150108?app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 01, Travis Barker x Lady Bunny" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Travis Barker</span> <i>x</i> <span>Lady Bunny</span></div></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>02</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/824516987?h=f2f3723173&amp;app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 02, Tommy Hilfiger x Jon Batiste" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Tommy Hilfiger</span> <i>x</i> <span>Jon Batiste</span></div></li>
+      <li class="fv"><div class="fh ty"><span class="rec" aria-hidden="true"></span>Famebox<b>03</b></div><div class="fp"><iframe src="https://player.vimeo.com/video/788149995?app_id=122963&amp;playsinline=1&amp;dnt=1" title="Famebox 03, Anthony Ramos x Mr. Brainwash" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="fn"><span>Anthony Ramos</span> <i>x</i> <span>Mr. Brainwash</span></div></li>
     </ol>
   </div>
 </section>
