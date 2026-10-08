@@ -71,16 +71,16 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 /* ---------- intro */
 .intro{position:fixed;inset:0;z-index:10;pointer-events:none}
 .intro>*{pointer-events:auto}
-.ticket{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);max-width:600px;margin:0 auto;display:grid;grid-template-columns:4.1rem 1fr;background:var(--paper);color:var(--ink);border-radius:6px;transform:rotate(.5deg);box-shadow:0 2px 0 rgba(0,0,0,.08),0 30px 60px -18px rgba(30,8,2,.65),0 10px 22px -10px rgba(30,8,2,.5);animation:stick .7s var(--ease) both .35s;transform-origin:30% 50%}
-@media (min-width:1200px){.ticket h1{font-size:2rem}.ticket{left:auto;right:max(var(--gutter),5vw);top:0;bottom:0;height:fit-content;margin:auto 0;width:clamp(360px,28vw,420px);max-width:none}}
+.ticket{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);max-width:720px;margin:0 auto;display:grid;grid-template-columns:4.1rem 1fr;background:var(--paper);color:var(--ink);border-radius:6px;transform:rotate(.5deg);box-shadow:0 2px 0 rgba(0,0,0,.08),0 30px 60px -18px rgba(30,8,2,.65),0 10px 22px -10px rgba(30,8,2,.5);animation:stick .7s var(--ease) both .35s;transform-origin:30% 50%}
+@media (min-width:1200px){.ticket h1{font-size:2rem}.ticket{left:auto;right:max(var(--gutter),5vw);top:0;bottom:0;height:fit-content;margin:auto 0;width:clamp(400px,34vw,500px);max-width:none}}
 @keyframes stick{from{opacity:0;transform:rotate(-4deg) scale(1.06)}to{opacity:1;transform:rotate(.5deg) scale(1)}}
-.stub{position:relative;border-right:2px dashed rgba(38,20,13,.28);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.3rem 0;background:linear-gradient(180deg,#F1E3CB,#EAD8BC);border-radius:6px 0 0 6px}
+.stub{position:relative;border-right:2px dashed rgba(38,20,13,.28);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:1.3rem 0;background:linear-gradient(180deg,#F1E3CB,#EAD8BC);border-radius:6px 0 0 6px}
 .stub::before,.stub::after{content:"";position:absolute;right:-11px;width:20px;height:20px;border-radius:50%;background:#000}
 .stub::before{top:-10px}.stub::after{bottom:-10px}
 .stub .admit{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--script);font-size:2.15rem;line-height:1;color:var(--oxblood)}
 .stub .serial{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--label);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
 .ticket-body{padding:1.6rem 2rem 1.25rem;min-width:0;display:grid;gap:1.1rem 3rem;grid-template-columns:minmax(0,1fr)}
-.tb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.7rem 1.6rem}
+.tb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.7rem 1.6rem}
 .ticket .eyebrow{color:var(--oxblood)}
 .ticket h1{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,3.6vw,2.3rem);line-height:1.02;margin:.75rem 0 0;text-wrap:balance;letter-spacing:-.005em}
 .lede{font-family:var(--label);font-weight:400;font-size:.98rem;line-height:1.6;letter-spacing:.01em;margin:0;color:var(--ink-soft);max-width:36ch}
@@ -89,7 +89,6 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 .btn-primary:hover{background:var(--oxblood-hi);transform:translateY(-1px)}
 .btn-text{font-family:var(--label);font-weight:500;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem 0;border-bottom:1.5px solid currentColor}
 .ticket .btn-text{color:var(--oxblood)}
-.ticket .actions .btn-primary{margin-left:-3px}
 .loadline{margin:0;font-family:var(--label);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:.7rem}
 .loadline .bar{display:none;flex:1;height:2px;background:rgba(38,20,13,.12);border-radius:2px;overflow:hidden;max-width:9rem}
 .loadline .bar i{display:block;height:100%;width:0;background:var(--oxblood);transition:width .4s var(--ease)}
@@ -320,14 +319,6 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 <body>
 
 
-<script>
-/* Inside the Squarespace editor the site runs in a frame: step aside so sections stay editable. */
-(function(){ try{ var fe=window.frameElement; if(!fe) return; var pw=window.parent, ed=false;
-  try{ ed = pw!==pw.top || /\/config/.test(pw.top.location.pathname) || pw.document.body.classList.contains('sqs-edit-mode-active'); }catch(e){ ed=true; }
-  if(!ed) return; var box=fe.parentNode; if(box && box.id==='nl-gallery'){ box.parentNode.removeChild(box);
-    var css=pw.document.getElementById('nl-gallery-css'); if(css) css.parentNode.removeChild(css);
-    pw.document.documentElement.style.overflow=''; pw.document.body.style.overflow=''; } }catch(e){} })();
-</script>
 <canvas id="stage" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
 
@@ -344,16 +335,17 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 
 <section id="intro" class="intro" aria-label="Exhibition entrance">
   <div class="ticket" id="ticket">
-    <div class="stub" aria-hidden="true"><span class="admit">Admit One</span></div>
+    <div class="stub" aria-hidden="true"><span class="admit">Admit One</span><span class="serial">Selected Works</span></div>
     <div class="ticket-body">
       <div class="tb-head"><p class="eyebrow">Selected Works</p>
-      <h1>Associate Creative Director, Copy</h1></div>
-      <div class="tb-main"><p class="lede">Nine campaigns for Unilever, Nike, Notion, Pizza Hut, eBay, Tommy Hilfiger, Walmart, and HealthCare.gov.</p>
+      <h1>Bridging Culture &amp; Commerce</h1></div>
+      <div class="tb-main"><p class="lede">Nine campaigns for Unilever, Nike, Notion, Pizza Hut, eBay, Tommy Hilfiger, Walmart, and HealthCare.gov, hung in one room.</p>
       <div class="actions">
         <button id="enter" class="btn-primary" type="button">Enter Gallery</button>
         <button id="go2d" class="btn-text" type="button">Explore in 2D</button>
       </div></div>
       <div class="tb-foot">
+        <p class="loadline"><span class="bar"><i id="loadbar"></i></span><span id="loadtext">Nina Austin</span></p>
         <ul class="social">
           <li><a href="mailto:ninaaustincreative@gmail.com" target="_top">Email</a></li>
           <li><a href="https://www.linkedin.com/in/ninasaustin/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -760,7 +752,7 @@ const state = { mode:'intro' };           // intro | flying | gallery | flat
 let focused=-1;
 
 if (!renderer) {
-  $('#enter').hidden=true; $('#flatTo3d').hidden=true; 
+  $('#enter').hidden=true; $('#flatTo3d').hidden=true; $('#loadtext').textContent='This browser can’t show the 3D gallery, so here are the works in 2D.';
   openFlat();
 } else {
   init3D();
@@ -819,7 +811,7 @@ function plaster(base, spread){
 const texWall = plaster('#ECE1D2', .025);
 const texOx = plaster('#5C1610', .022);
 const FLOOR='stone';
-const OUTSIDE='black';   // 'street' shows the NYC street and the Writers Room through the doorway; 'black' leaves the outside black
+const OUTSIDE='street';   // 'street' shows the NYC street and the Writers Room through the doorway; 'black' leaves the outside black
 const texFloor = FLOOR==='stone' ? canvasTex(1024,1024,(g,w,h)=>{
   /* large-format white stone tiles, 80 cm, with soft mottling, faint veins and pale grout */
   const n=5, ts=w/n;
@@ -924,8 +916,7 @@ for (const [x,ry,w,h,y] of [[-DOOR.w/2,Math.PI/2,T,DOOR.h,DOOR.h/2],[DOOR.w/2,-M
   const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),matSleeve); m.position.set(x,y,R+T/2); m.rotation.y=ry; gallery.add(m);
 }
 { const m=new THREE.Mesh(new THREE.PlaneGeometry(DOOR.w,T),matSleeve); m.position.set(0,DOOR.h,R+T/2); m.rotation.x=Math.PI/2; gallery.add(m);
-  const tg=new THREE.PlaneGeometry(DOOR.w,T+.02); { const uv=tg.attributes.uv, ps=tg.attributes.position; for(let i=0;i<uv.count;i++){ uv.setXY(i,ps.getX(i)/4,-(R+T/2-ps.getY(i))/4); } }
-  const th=new THREE.Mesh(tg,matFloor); th.rotation.x=-Math.PI/2; th.position.set(0,.002,R+T/2); gallery.add(th); }
+  const th=new THREE.Mesh(new THREE.PlaneGeometry(DOOR.w,T+.02),matFloor); th.rotation.x=-Math.PI/2; th.position.set(0,.002,R+T/2); gallery.add(th); }
 
 /* ---------- text on canvas */
 const fontsReady = (async()=>{ try{ await Promise.all(['400 80px Marcellus','500 40px Jost','400 40px Jost','700 40px Jost','300 40px "Source Serif 4"','italic 400 40px "Source Serif 4"','400 60px "Pinyon Script"'].map(f=>document.fonts.load(f))); await document.fonts.ready; }catch(e){} })();
@@ -978,43 +969,9 @@ titleWall.position.set(TW.x,TW.y,TW.z);
   row.rotation.y=Math.PI;
   row.position.set(TW.x+TW.w/2-(LINK_ROW.x0+LINK_ROW.w/2)/2048*TW.w, TW.y+TW.h/2-(LINK_ROW.y0+LINK_ROW.h/2)/1304*TW.h, TW.z-TW.d/2-.012); }
 function linkAt(h){ if(!h.uv) return null; const tx=LINK_ROW.x0+h.uv.x*LINK_ROW.w; return LINK_ROW.spans.find(sp=>tx>=sp.x0&&tx<=sp.x1)||null; }
-let hall=null; const hallU={value:0};
-function hallMat(m,key){ m.customProgramCacheKey=()=>'hall-'+key; m.onBeforeCompile=(sh)=>{ sh.uniforms.uFade=hallU; sh.fragmentShader=sh.fragmentShader.replace('#include <common>','#include <common>\nuniform float uFade;').replace('#include <dithering_fragment>','#include <dithering_fragment>\n\tgl_FragColor.rgb*=uFade;'); }; return m; }
 if(OUTSIDE==='black'){
   const ex=add(new THREE.Mesh(new THREE.PlaneGeometry(DOOR.w,DOOR.h),new THREE.MeshBasicMaterial({visible:false})),gallery,{kind:'exitdoor'});
   ex.rotation.y=Math.PI; ex.position.set(0,DOOR.h/2,R+T*.5);
-  /* EXIT sign over the door, lit red */
-  const signTex=canvasTex(512,186,(g,w,h)=>{ g.fillStyle='#121212'; rrect(g,4,4,w-8,h-8,18); g.fill(); g.strokeStyle='#3a3a3a'; g.lineWidth=4; g.stroke();
-    g.font='700 118px Jost, Futura, Arial, sans-serif'; g.textAlign='center'; g.textBaseline='middle'; g.fillStyle='#ff3b30';
-    g.shadowColor='rgba(255,40,30,.95)'; g.shadowBlur=22; spaced(g,'EXIT',w/2+9,h/2+6,18,'center'); g.shadowBlur=6; spaced(g,'EXIT',w/2+9,h/2+6,18,'center'); },{mip:false});
-  const SW_=1.15, SH_=.42, sy=DOOR.h+.5;
-  const housing=add(new THREE.Mesh(new THREE.BoxGeometry(SW_+.08,SH_+.08,.1),new THREE.MeshStandardMaterial({color:0x161616,roughness:.5})),gallery,{kind:'exitdoor'}); housing.position.set(0,sy,R-.06);
-  const face=add(new THREE.Mesh(new THREE.PlaneGeometry(SW_,SH_),new THREE.MeshBasicMaterial({map:signTex,toneMapped:false})),gallery,{kind:'exitdoor'}); face.rotation.y=Math.PI; face.position.set(0,sy,R-.112);
-  const glowTex=canvasTex(256,128,(g,w,h)=>{ const gr=g.createRadialGradient(w/2,h/2,4,w/2,h/2,w/2); gr.addColorStop(0,'rgba(255,60,45,.55)'); gr.addColorStop(1,'rgba(255,60,45,0)'); g.fillStyle=gr; g.fillRect(0,0,w,h); },{mip:false});
-  const glow=new THREE.Mesh(new THREE.PlaneGeometry(2.6,1.3),new THREE.MeshBasicMaterial({map:glowTex,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false})); glow.rotation.y=Math.PI; glow.position.set(0,sy,R-.015); gallery.add(glow);
-
-  /* an empty hallway beyond the doorway: the same stone floor, lit near the door and fading into darkness, no end wall */
-  hall=new THREE.Group(); hall.visible=false; gallery.add(hall);
-  const HW=4.0, HH=3.6, HL=20, Z0=R+T, LZ=[1.6,4.8,8.0], D0=2.5, D1=14;
-  const dark=z=>Math.min(1,Math.max(0,(z-D0)/(D1-D0)));
-  const ramp=(gr)=>{ for(let i=0;i<=20;i++){ const t=i/20; gr.addColorStop(t,`rgba(0,0,0,${Math.pow(dark(t*HL),.85).toFixed(3)})`); } return gr; };
-  const wallT=canvasTex(2048,384,(g,w,h)=>{ g.fillStyle='#ece5d9'; g.fillRect(0,0,w,h);
-    for(let i=0;i<6000;i++){ const v=rnd(); g.fillStyle=v<.5?'rgba(0,0,0,.025)':'rgba(255,255,255,.05)'; g.fillRect(rnd()*w,rnd()*h,2,2); }
-    for(const z of LZ){ const x=z/HL*w, gr=g.createRadialGradient(x,0,4,x,0,h*1.1); gr.addColorStop(0,`rgba(255,246,226,${.5*(1-dark(z))})`); gr.addColorStop(1,'rgba(255,246,226,0)'); g.fillStyle=gr; g.fillRect(0,0,w,h); }
-    g.fillStyle='#2a1710'; g.fillRect(0,h-.12/HH*h,w,.12/HH*h);
-    g.fillStyle=ramp(g.createLinearGradient(0,0,w,0)); g.fillRect(0,0,w,h); });
-  const wallTL=wallT.clone(); wallTL.needsUpdate=true; wallTL.repeat.set(-1,1); wallTL.offset.set(1,0);
-  const ceilT=canvasTex(512,2048,(g,w,h)=>{ g.fillStyle='#efe9df'; g.fillRect(0,0,w,h); g.fillStyle=ramp(g.createLinearGradient(0,h,0,0)); g.fillRect(0,0,w,h); });
-  const floorDark=canvasTex(64,1024,(g,w,h)=>{ g.fillStyle=ramp(g.createLinearGradient(0,0,0,h)); g.fillRect(0,0,w,h); },{mip:false});
-  const bm=(map,key,extra={})=>hallMat(new THREE.MeshBasicMaterial({map,toneMapped:false,...extra}),key);
-  /* the floor uses the gallery's own stone material, with UVs in the same world grid so the tiles line up */
-  const zc=Z0+HL/2, fg=new THREE.PlaneGeometry(HW,HL); { const uv=fg.attributes.uv, ps=fg.attributes.position; for(let i=0;i<uv.count;i++){ const x=ps.getX(i), y=ps.getY(i); uv.setXY(i,x/4,-(zc-y)/4); } }
-  const fl=new THREE.Mesh(fg,matFloor); fl.rotation.x=-Math.PI/2; fl.position.set(0,.002,zc); hall.add(fl);
-  const fd=new THREE.Mesh(new THREE.PlaneGeometry(HW,HL),bm(floorDark,'fd',{transparent:true,depthWrite:false})); fd.rotation.x=-Math.PI/2; fd.position.set(0,.006,zc); hall.add(fd);
-  const ce=new THREE.Mesh(new THREE.PlaneGeometry(HW,HL),bm(ceilT,'ce')); ce.rotation.x=Math.PI/2; ce.position.set(0,HH,zc); hall.add(ce);
-  const wl=new THREE.Mesh(new THREE.PlaneGeometry(HL,HH),bm(wallTL,'wl')); wl.rotation.y=Math.PI/2; wl.position.set(-HW/2,HH/2,zc); hall.add(wl);
-  const wr=new THREE.Mesh(new THREE.PlaneGeometry(HL,HH),bm(wallT,'wr')); wr.rotation.y=-Math.PI/2; wr.position.set(HW/2,HH/2,zc); hall.add(wr);
-  for(const z of LZ){ const k=1-dark(z), lm=hallMat(new THREE.MeshBasicMaterial({color:new THREE.Color(0xfff4dc).multiplyScalar(Math.max(.08,k)),toneMapped:false}),'lt'+z); const lp=new THREE.Mesh(new THREE.PlaneGeometry(1.3,.42),lm); lp.rotation.x=Math.PI/2; lp.position.set(0,HH-.01,Z0+z); hall.add(lp); }
 }
 function openLink(url){ const a=document.createElement('a'); a.href=url; a.target=url.startsWith('mailto:')?'_top':'_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); }
 
@@ -1091,7 +1048,7 @@ if(isNB){
     g.fillStyle='rgba(30,6,3,.18)'; g.fillRect(0,0,w,h);
     const ty=doorTopY*.5; g.fillStyle='#F5D98A';
     g.textAlign='center'; g.font='400 210px "Pinyon Script", "Snell Roundhand", cursive'; g.fillText('Portfolio Gallery',w/2,ty);
-    g.fillStyle='#FFF1DC'; g.font='400 44px Jost, Futura, "Helvetica Neue", Arial, sans-serif'; spaced(g,'ASSOCIATE CREATIVE DIRECTOR, COPY',w/2,ty+160,14,'center');
+    g.font='400 44px Jost, Futura, "Helvetica Neue", Arial, sans-serif'; spaced(g,'BRIDGING CULTURE & COMMERCE',w/2,ty+160,14,'center');
   });
 }
 const shellS = new THREE.Mesh(panel(2*E,SH,[rectPath(DOOR.w,DOOR.h,0,-SH/2+(0-BASE)+DOOR.h/2)]), litMaterial({map:facade,roughness:.9},{ao:false,pools:false}));
@@ -1463,7 +1420,7 @@ class GifPlayer{
 }
 let loaded=0;
 const ORDER=[0,6,8,1,2,3,4,5,7,9,10];
-function setLoad(){}
+function setLoad(){ $('#loadbar').style.width=(loaded/WORKS.length*100)+'%';  }
 setLoad();
 async function loadGif(i){
   try{
@@ -1503,7 +1460,7 @@ let fovTarget=30, tween=null;
 const sideBySide=()=>innerWidth>=1200;
 function introRegion(){
   const g=Math.max(16,innerWidth*.04);
-  if(sideBySide()){ const tw=Math.min(420,Math.max(360,innerWidth*.28)), rg=Math.max(g,innerWidth*.05); return {left:g, right:innerWidth-rg-tw-32, top:68, bot:innerHeight-24}; }
+  if(sideBySide()){ const tw=Math.min(500,Math.max(400,innerWidth*.34)), rg=Math.max(g,innerWidth*.05); return {left:g, right:innerWidth-rg-tw-32, top:68, bot:innerHeight-24}; }
   const tk=$('#ticket'); const th=tk.offsetHeight; const top=68; const bot=th? innerHeight-24-th-14 : innerHeight-24; return {left:g, right:innerWidth-g, top, bot:Math.max(top+140,bot)}; }
 function setIntroOffsets(){ const {left,right,top,bot}=introRegion(); vo.tx=innerWidth/2-(left+right)/2; vo.ty=innerHeight/2-(top+bot)/2; }
 function applyOffsets(k){
@@ -1777,13 +1734,12 @@ function frame(now){
   camera.updateProjectionMatrix();
   camera.updateMatrixWorld();
   sky.position.copy(camera.position);
-  { const cp=camera.position; const inside=Math.abs(cp.x)<R+.1&&Math.abs(cp.z)<R+T*.5&&cp.y<H&&cp.y>0; const tgt=(inside&&OUTSIDE!=='black')?1:0; const u=skyMat.uniforms.uMix; u.value+=(tgt-u.value)*Math.min(1,dt*(tgt?2.6:5.5)); if(Math.abs(tgt-u.value)<.002) u.value=tgt; street.visible=u.value>.01;
-    if(hall){ const th=inside?1:0; hallU.value+=(th-hallU.value)*Math.min(1,dt*(th?2.6:5.5)); if(Math.abs(th-hallU.value)<.002) hallU.value=th; hall.visible=hallU.value>.01; } }
+  { const cp=camera.position; const inside=Math.abs(cp.x)<R+.1&&Math.abs(cp.z)<R+T*.5&&cp.y<H&&cp.y>0; const tgt=(inside&&OUTSIDE!=='black')?1:0; const u=skyMat.uniforms.uMix; u.value+=(tgt-u.value)*Math.min(1,dt*(tgt?2.6:5.5)); if(Math.abs(tgt-u.value)<.002) u.value=tgt; street.visible=u.value>.01; }
   updatePlayers(dt*1000);
   renderer.render(scene,camera);
 }
 raf=requestAnimationFrame(frame);
-window.__gallery={ hall, hallU, state, cam, camera, focusWork, enterGallery, exitGallery, openFlat, ARTS, renderer, get loaded(){return loaded;} };
+window.__gallery={ state, cam, camera, focusWork, enterGallery, exitGallery, openFlat, ARTS, renderer, get loaded(){return loaded;} };
 }
 </script>
 
