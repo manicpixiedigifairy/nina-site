@@ -320,6 +320,14 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 <body>
 
 
+<script>
+/* Inside the Squarespace editor the site runs in a frame: step aside so sections stay editable. */
+(function(){ try{ var fe=window.frameElement; if(!fe) return; var pw=window.parent, ed=false;
+  try{ ed = pw!==pw.top || /\/config/.test(pw.top.location.pathname) || pw.document.body.classList.contains('sqs-edit-mode-active'); }catch(e){ ed=true; }
+  if(!ed) return; var box=fe.parentNode; if(box && box.id==='nl-gallery'){ box.parentNode.removeChild(box);
+    var css=pw.document.getElementById('nl-gallery-css'); if(css) css.parentNode.removeChild(css);
+    pw.document.documentElement.style.overflow=''; pw.document.body.style.overflow=''; } }catch(e){} })();
+</script>
 <canvas id="stage" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
 

@@ -31,6 +31,18 @@
   var PAGE = 'black.html';
   var box = document.getElementById('nl-gallery');
   if (!box) return;
+  // In the Squarespace editor, leave the page editable and show a small marker instead of the full-screen gallery.
+  var inEditor = false;
+  try { inEditor = window.self !== window.top || document.body.classList.contains('sqs-edit-mode-active'); } catch (e) { inEditor = true; }
+  if (inEditor) {
+    box.remove();
+    var note = document.createElement('p');
+    note.textContent = 'Portfolio Gallery (3D) shows full screen here on the live site.';
+    note.style.cssText = 'margin:0 0 1rem;padding:.8rem 1rem;border:1px dashed #999;font:14px/1.4 sans-serif;color:#555';
+    var txt = document.getElementById('nl-gallery-text');
+    if (txt) txt.insertBefore(note, txt.firstChild);
+    return;
+  }
   var frame = box.querySelector('iframe');
   // Lift the gallery out of the Squarespace section so it covers the whole window, centered,
   // and hide the site header and sitewide MENU button behind it (the gallery has its own menu).
