@@ -133,35 +133,17 @@ html,body{margin:0}
 .bf .ers button:hover{transform:translateY(-.08em)}
 .bf .ers button:active{transform:translateY(.2em);box-shadow:0 .04em 0 var(--br)}
 .bf .ers button[aria-checked="true"]{background:var(--y);color:var(--br)}
-.bf .stg{position:relative;aspect-ratio:16/10;border-radius:calc(var(--u)*2.4);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--br);overflow:hidden;isolation:isolate;background:var(--b)}
+.bf .stg{position:relative;aspect-ratio:16/9;border-radius:calc(var(--u)*2.4);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--br);overflow:hidden;isolation:isolate;background:var(--b)}
 .bf .sc{position:absolute;inset:0;clip-path:circle(0% at 50% 50%);transition:clip-path 1s cubic-bezier(.7,0,.2,1)}
 .bf .sc.on{clip-path:circle(150% at 50% 50%)}
 .bf .sc.nt{transition:none}
-.bf .s0{background:radial-gradient(circle at 50% 50%,#2C86FF,#0A5CD6 60%,#0847A8)}
-.bf .s0 .rg{position:absolute;left:50%;top:50%}
-.bf .s0 .rg i{position:absolute;left:calc(var(--u)*-16);top:calc(var(--u)*-16);width:calc(var(--u)*32);height:calc(var(--u)*32);border-radius:50%;border:calc(var(--u)*.22) solid rgba(255,255,255,.3);animation:rp 6s ease-out infinite;animation-delay:calc(var(--k)*2s);opacity:0}
-.bf .s1{background:linear-gradient(#FFD9A0 0,#FFB86B 42%,#0E6B7A 42.1%,#0A4F63 100%)}
-.bf .s1 .sun{position:absolute;left:50%;top:14%;width:20%;aspect-ratio:1;margin-left:-10%;border-radius:50%;background:var(--y);box-shadow:0 0 0 .8em rgba(255,233,49,.35),0 0 0 1.8em rgba(255,233,49,.18)}
-.bf .s1 .wv{position:absolute;left:0;width:200%;height:22%;animation:wv 9s linear infinite}
-.bf .s1 .wv svg{display:block;width:100%;height:100%}
-.bf .s1 .w1{top:34%;animation-duration:12s}.bf .s1 .w1 path{fill:#0E6B7A}
-.bf .s1 .w2{top:50%;animation-duration:8s;animation-direction:reverse}.bf .s1 .w2 path{fill:#0A5A6C}
-.bf .s1 .w3{top:66%;animation-duration:6s}.bf .s1 .w3 path{fill:#084657}
-@keyframes wv{to{transform:translateX(-50%)}}
-.bf .s1 .sh{position:absolute;left:12%;top:20%;width:15%;animation:sb 4s ease-in-out infinite}
-@keyframes sb{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(.8em) rotate(3deg)}}
-.bf .s2{background:radial-gradient(ellipse at 50% 40%,#FBEFCB,#EBD49B 70%,#D9BC7C)}
-.bf .s2 .hl1,.bf .s2 .hl2{position:absolute;left:-5%;width:110%}
-.bf .s2 .hl1{bottom:0;height:34%}.bf .s2 .hl2{bottom:0;height:22%}
-.bf .s2 svg{display:block;width:100%;height:100%}
-.bf .s2 .bn2{position:absolute;left:0;top:0;width:100%;height:24%}
-.bf .s2 .sr{position:absolute;color:var(--br2);font-size:calc(var(--u)*2.2);animation:tw 2.4s ease-in-out infinite;animation-delay:calc(var(--k)*-.6s)}
-@keyframes tw{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.35) rotate(18deg)}}
-.bf .bw{position:absolute;z-index:4;left:50%;top:46%;width:46%;margin-left:-23%;margin-top:-9%}
-.bf .bw img{width:100%;animation:bb 3.2s ease-in-out infinite}
-@keyframes bb{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-4%) rotate(3deg)}}
-.bf .bw.wr{animation:wp 1s cubic-bezier(.5,0,.3,1)}
-@keyframes wp{0%{transform:rotate(0) scale(1)}45%{transform:rotate(220deg) scale(.15)}100%{transform:rotate(360deg) scale(1)}}
+.bf .sc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease-out}
+.bf .sc.on img{transform:scale(1.12)}
+.bf .sc::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(6,20,60,.45)),repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0,rgba(0,0,0,.07) 1px,transparent 1px,transparent 3px)}
+.bf .s0 img{object-position:60% 50%}.bf .s1 img{object-position:50% 50%}.bf .s2 img{object-position:30% 50%}
+.bf .fl2{position:absolute;inset:0;z-index:5;pointer-events:none;background:#fff;opacity:0}
+.bf .fl2.go{animation:fz .7s ease-out}
+@keyframes fz{0%{opacity:.95}100%{opacity:0}}
 .bf .cap{position:absolute;z-index:6;left:calc(var(--u)*1.6);bottom:calc(var(--u)*1.6);max-width:min(calc(var(--u)*30),72%);padding:calc(var(--u)*1.2) calc(var(--u)*1.7) calc(var(--u)*1.4);background:var(--br);color:#fff;border-radius:calc(var(--u)*1.3);transform:rotate(-2deg);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 rgba(0,0,0,.25)}
 .bf .cap .n{display:block;font:600 calc(var(--u)*1)/1 var(--lab);color:var(--or)}
 .bf .cap .ern{display:block;margin:.3em 0 .3em;font:400 calc(var(--u)*3)/1 var(--disp);color:var(--y)}
@@ -265,8 +247,7 @@ html,body{margin:0}
 .bf .kn{top:10.8rem;width:9rem;height:9rem;margin:-4.5rem 0 0 -4.5rem}
 .bf .kd{width:2.1rem;height:2.1rem;margin:-1.05rem 0 0 -1.05rem;font-size:.85rem}
 .bf .ers button{font-size:1rem}
-.bf .stg{aspect-ratio:4/5}
-.bf .bw{width:70%;margin-left:-35%;top:40%}
+.bf .stg{aspect-ratio:1/1}
 .bf .cap{max-width:calc(100% - 2rem);left:1rem;bottom:1rem;padding:.8rem 1rem 1rem}
 .bf .cap .n{font-size:.8rem}.bf .cap .ern{font-size:1.9rem}.bf .cap .erd{font-size:.95rem}
 .bf .ca{aspect-ratio:4/5}
@@ -283,7 +264,7 @@ html,body{margin:0}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .rings i,.bf .s0 .rg i,.bf .hint,.bf .bw img,.bf .fc .pb,.bf .s1 .wv,.bf .s1 .sh,.bf .s2 .sr{animation:none}
+.bf .tt .ch,.bf .rings i,.bf .hint,.bf .fc .pb{animation:none}
 .bf .sc{transition-duration:.01s}
 }
 </style></head>
@@ -355,7 +336,7 @@ html,body{margin:0}
 </section>
 
 <section class="tm" id="bfTm">
-  <div class="hd rv"><div><span class="lb">Time Machine: Pick an Era</span><h2 class="h2">Never Ever, Any Era</h2></div><p class="sub">Spin the dial or tap an era to send the bar through time.</p></div>
+  <div class="hd rv"><div><span class="lb">Time Machine: Pick a Scene</span><h2 class="h2">Never Ever, Any Era</h2></div><p class="sub">Spin the dial or tap a scene to jump through time.</p></div>
   <div class="tg">
     <div class="ctl rv">
       <div class="kw" aria-hidden="true">
@@ -364,29 +345,18 @@ html,body{margin:0}
         <span class="kd" style="left:calc(50% + var(--u)*8.9);top:calc(var(--u)*9.4)">3</span>
         <div class="kn" id="bfKn"><i></i></div>
       </div>
-      <div class="ers" role="radiogroup" aria-label="Choose an era">
-        <button type="button" role="radio" aria-checked="true" data-e="0">Today</button>
-        <button type="button" role="radio" aria-checked="false" data-e="1">Golden Age of Pirates</button>
-        <button type="button" role="radio" aria-checked="false" data-e="2">Post-Revolutionary Folklore</button>
+      <div class="ers" role="radiogroup" aria-label="Choose a scene">
+        <button type="button" role="radio" aria-checked="true" data-e="0">The Ruins</button>
+        <button type="button" role="radio" aria-checked="false" data-e="1">The Throne Room</button>
+        <button type="button" role="radio" aria-checked="false" data-e="2">The Showdown</button>
       </div>
     </div>
     <div class="stg rv" id="bfStg" data-e="0" style="--d:.1s">
-      <div class="sc s0 on"><div class="rg" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i></div></div>
-      <div class="sc s1" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="wv w1"><svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 60Q75 10 150 60T300 60T450 60T600 60T750 60T900 60T1050 60T1200 60V120H0Z"/></svg></div>
-        <svg class="sh" viewBox="0 0 120 110" aria-hidden="true"><path d="M8 72H112L96 100H24Z" fill="#3B1B09"/><path d="M60 8V72" stroke="#3B1B09" stroke-width="4"/><path d="M64 14V66L104 62Z" fill="#FFF3C4"/><path d="M56 24V66L22 62Z" fill="#F2DFB0"/><path d="M60 8L78 14L60 20Z" fill="#E4372C"/></svg>
-        <div class="wv w2"><svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 60Q75 10 150 60T300 60T450 60T600 60T750 60T900 60T1050 60T1200 60V120H0Z"/></svg></div>
-        <div class="wv w3"><svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 60Q75 10 150 60T300 60T450 60T600 60T750 60T900 60T1050 60T1200 60V120H0Z"/></svg></div>
-      </div>
-      <div class="sc s2" aria-hidden="true">
-        <svg class="bn2" viewBox="0 0 600 70" preserveAspectRatio="none"><path d="M-10 6Q300 66 610 6" stroke="#3B1B09" stroke-width="2" fill="none"/><path d="M40 16l22 6-14 18z" fill="#E4372C"/><path d="M120 28l22 4-12 18z" fill="#0A5CD6"/><path d="M200 38l22 2-10 18z" fill="#FFE931"/><path d="M280 44l22 0-10 18z" fill="#E4372C"/><path d="M360 40l22-2-6 18z" fill="#0A5CD6"/><path d="M440 30l22-4-2 18z" fill="#FFE931"/><path d="M520 18l22-6 4 18z" fill="#E4372C"/></svg>
-        <span class="sr" style="left:12%;top:30%;--k:0">&#10022;</span><span class="sr" style="left:84%;top:36%;--k:1">&#10022;</span><span class="sr" style="left:70%;top:22%;--k:2">&#10022;</span>
-        <div class="hl1"><svg viewBox="0 0 600 120" preserveAspectRatio="none"><path d="M0 60Q150 0 300 50T600 40V120H0Z" fill="#7A8F3C"/></svg></div>
-        <div class="hl2"><svg viewBox="0 0 600 120" preserveAspectRatio="none"><path d="M0 70Q200 20 360 70T600 60V120H0Z" fill="#556B2F"/></svg></div>
-      </div>
-      <div class="bw" id="bfBw"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385"></div>
-      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Era 1 of 3</span><b class="ern" id="bfEt">Today</b><p class="erd" id="bfEd">The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.</p></div>
+      <div class="sc s0 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-1.webp?v=1" alt="" width="1200" height="676"></div>
+      <div class="sc s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-2.webp?v=1" alt="" width="1200" height="676"></div>
+      <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-3.webp?v=1" alt="" width="1400" height="788"></div>
+      <div class="fl2" id="bfFz" aria-hidden="true"></div>
+      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 3</span><b class="ern" id="bfEt">The Ruins</b><p class="erd" id="bfEd">Time travel sends the task force back to recover a stolen Butterfinger.</p></div>
     </div>
   </div>
 </section>
@@ -550,12 +520,12 @@ fa.addEventListener('click',function(){
 });
 
 /* time machine */
-var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),bw=q('#bfBw');
+var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),fz=q('#bfFz');
 var ANG=[-62,0,62],cur=0,zi=1,kAng=-62;
 var ERA=[
- ['Today','The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.'],
- ['Golden Age of Pirates','Time travel sends the task force back to recover a stolen Butterfinger.'],
- ['Post-Revolutionary Folklore','Time travel sends the task force back to recover a stolen Butterfinger.']
+ ['The Ruins','Time travel sends the task force back to recover a stolen Butterfinger.'],
+ ['The Throne Room','Time travel sends the task force back to recover a stolen Butterfinger.'],
+ ['The Showdown','Time travel sends the task force back to recover a stolen Butterfinger.']
 ];
 function knob(a,animate){
   kAng=a;
@@ -571,12 +541,11 @@ function setEra(i){
   kn.classList.remove('dr');kn.style.transform='rotate('+ANG[i]+'deg)';kAng=ANG[i];
   var s=scs[i];
   s.classList.add('nt');s.classList.remove('on');s.style.zIndex=++zi;void s.offsetWidth;s.classList.remove('nt');s.classList.add('on');
-  bw.classList.remove('wr');void bw.offsetWidth;bw.classList.add('wr');
-  q('#bfEn').textContent='Era '+(i+1)+' of 3';q('#bfEt').textContent=ERA[i][0];q('#bfEd').textContent=ERA[i][1];
+  fz.classList.remove('go');void fz.offsetWidth;fz.classList.add('go');
+  q('#bfEn').textContent='Scene '+(i+1)+' of 3';q('#bfEt').textContent=ERA[i][0];q('#bfEd').textContent=ERA[i][1];
 }
 kn.style.transform='rotate(-62deg)';
 ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.getAttribute('data-e'),10))})});
-bw.addEventListener('animationend',function(e){if(e.animationName==='wp')bw.classList.remove('wr')});
 (function(){
   var dr=false,moved=false,off=0,cx=0,cy=0;
   function ang(e){return Math.atan2(e.clientX-cx,-(e.clientY-cy))*180/Math.PI}
