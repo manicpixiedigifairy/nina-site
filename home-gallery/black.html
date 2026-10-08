@@ -1035,11 +1035,11 @@ if(OUTSIDE==='black'){
         for(let i=0;i<70;i++){ const cx=x+(rnd()-.5)*190, cy=top+rnd()*h*.42, r=14+rnd()*36, gg=['rgba(126,150,96,','rgba(150,170,112,','rgba(104,130,84,'][i%3]; g.fillStyle=gg+(.18+rnd()*.25)+')'; g.beginPath(); g.ellipse(cx,cy,r*1.3,r,rnd()*3,0,7); g.fill(); } }
       const haze=g.createLinearGradient(0,0,0,h); haze.addColorStop(0,'rgba(255,255,255,.25)'); haze.addColorStop(1,'rgba(255,255,255,.05)'); g.fillStyle=haze; g.fillRect(0,0,w,h); });
     t.wrapS=THREE.RepeatWrapping; t.repeat.set(2.4,1);
-    const CL=ZE-Z0+40, cz=Z0-6+CL/2;
+    const CL=ZE-Z0+34, cz=Z0+.05+CL/2;  // starts just past the gallery's outer wall so nothing pokes into the room
     const m=new THREE.Mesh(new THREE.PlaneGeometry(CL,12),hallMat(new THREE.MeshBasicMaterial({map:t,toneMapped:false}),'court')); m.rotation.y=Math.PI/2; m.position.set(XG-6,5.6,cz); hall.add(m);
     const gt=canvasTex(512,512,(g,w,h)=>{ g.fillStyle='#ddd8cd'; g.fillRect(0,0,w,h); for(let i=0;i<9000;i++){ const v=rnd(); g.fillStyle=v<.5?'rgba(120,110,96,.12)':'rgba(255,255,255,.25)'; g.fillRect(rnd()*w,rnd()*h,2,2); } }); gt.wrapS=gt.wrapT=THREE.RepeatWrapping; gt.repeat.set(2,14);
     const gr=new THREE.Mesh(new THREE.PlaneGeometry(6,CL),hm({map:gt,emissive:0xffffff,emissiveMap:gt,emissiveIntensity:.5,roughness:1},'gravel')); gr.rotation.x=-Math.PI/2; gr.position.set(XG-3,.001,cz); hall.add(gr);
-    const wf=new THREE.Mesh(new THREE.PlaneGeometry(XL-XG+6,12),hallMat(new THREE.MeshBasicMaterial({color:0xf5f4ef,toneMapped:false}),'courtEnd')); wf.rotation.y=Math.PI; wf.position.set((XL+XG-6)/2,5.6,Z0-6+CL); hall.add(wf); }
+    const wf=new THREE.Mesh(new THREE.PlaneGeometry(XL-XG+6,12),hallMat(new THREE.MeshBasicMaterial({color:0xf5f4ef,toneMapped:false}),'courtEnd')); wf.rotation.y=Math.PI; wf.position.set((XL+XG-6)/2,5.6,Z0+.05+CL); hall.add(wf); }
 }
 function openLink(url){ const a=document.createElement('a'); a.href=url; a.target=url.startsWith('mailto:')?'_top':'_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); }
 
