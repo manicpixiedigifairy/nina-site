@@ -1802,7 +1802,7 @@ function frame(now){
   camera.updateMatrixWorld();
   sky.position.copy(camera.position);
   { const cp=camera.position; const inside=Math.abs(cp.x)<R+.1&&Math.abs(cp.z)<R+T*.5&&cp.y<H&&cp.y>0; const tgt=(inside&&OUTSIDE!=='black')?1:0; const u=skyMat.uniforms.uMix; u.value+=(tgt-u.value)*Math.min(1,dt*(tgt?2.6:5.5)); if(Math.abs(tgt-u.value)<.002) u.value=tgt; street.visible=u.value>.01;
-    if(hall){ const th=inside?1:0; hallU.value+=(th-hallU.value)*Math.min(1,dt*(th?2.6:5.5)); if(Math.abs(th-hallU.value)<.002) hallU.value=th; hall.visible=hallU.value>.01; } }
+    if(hall){ if(inside){ hallU.value+=(1-hallU.value)*Math.min(1,dt*2.6); if(1-hallU.value<.002) hallU.value=1; } else hallU.value=0; hall.visible=hallU.value>.01; } }  // the room beyond the door vanishes the moment you step out, so nothing trails across the exit flight
   updatePlayers(dt*1000);
   renderer.render(scene,camera);
 }
