@@ -6,6 +6,28 @@
   var slug=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase();
   if(CORE.indexOf(slug)===-1)document.documentElement.classList.add('nl-project');
 })();
+/* Tag every wrapper above the page block so the phone CSS below can clear its padding and background, whatever the theme calls it. */
+(function(){
+  var de=document.documentElement,raf=0,obs;
+  function mark(){
+    raf=0;
+    if(!de.classList.contains('nl-project')||!document.body)return;
+    var hosts=[].slice.call(document.querySelectorAll('.sqs-block-code,[data-block-type="23"]'));
+    var all=document.body.getElementsByTagName('*');
+    for(var i=0;i<all.length;i++){if(all[i].shadowRoot)hosts.push(all[i]);}
+    hosts.forEach(function(h){
+      for(var e=h;e&&e!==document.body&&e!==de;e=e.parentElement)e.classList.add('nl-up');
+    });
+  }
+  function queue(){if(!raf)raf=requestAnimationFrame(mark)}
+  function start(){
+    mark();
+    obs=new MutationObserver(queue);obs.observe(document.body,{childList:true,subtree:true});
+    window.addEventListener('load',mark);
+    setTimeout(function(){obs.disconnect()},30000);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
 </script>
 <style>
 html.nl-project footer,
@@ -25,10 +47,12 @@ html.nl-project .nlb:hover,
 html.nl-project .nlb:hover span,
 html.nl-project .nlb:hover .ic{color:#D7F34A!important}
 
-/* Phones: remove the page background, section padding and gutters so the code block runs edge to edge. */
+/* Phones: a 56px strip at the top holds the MENU button (so it never sits on the page title), then the page runs edge to edge with no background, padding or gutters. */
 @media (max-width:767px){
 html.nl-project,
-html.nl-project body{background:transparent!important;margin:0!important;padding:0!important;overflow-x:hidden!important}
+html.nl-project body{background:#000!important;margin:0!important;overflow-x:hidden!important}
+html.nl-project body{position:relative!important;padding:56px 0 0!important}
+html.nl-project .nl-up,
 html.nl-project #siteWrapper,
 html.nl-project #page,
 html.nl-project main,
@@ -39,11 +63,9 @@ html.nl-project .content,
 html.nl-project .fluid-engine,
 html.nl-project .sqs-layout,
 html.nl-project .sqs-block,
-html.nl-project .sqs-block-content{background:transparent!important;margin:0!important;padding:0!important;max-width:none!important;width:100%!important;min-height:0!important}
+html.nl-project .sqs-block-content{display:block!important;float:none!important;width:100%!important;max-width:none!important;min-width:0!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
 html.nl-project .section-background,
 html.nl-project .section-border{display:none!important}
-html.nl-project .fluid-engine{display:block!important}
-html.nl-project .fluid-engine .fe-block{grid-column:1/-1!important;width:100%!important;margin:0!important;padding:0!important}
-html.nl-project .nlb{left:50%!important;right:auto!important;transform:translateX(-50%)!important}
+html.nl-project .nlb{position:absolute!important;top:0!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;height:56px!important;box-sizing:border-box!important;padding:0 1.3rem!important}
 }
 </style>
