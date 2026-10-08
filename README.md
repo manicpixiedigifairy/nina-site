@@ -17,4 +17,4 @@ Replace the file in `pages/` and commit. The live page picks it up within about 
 
 ## Homepage gallery (3D)
 `home-gallery/` holds the Portfolio Gallery homepage: `index.html` (white stone floor), using `home-gallery/assets/`. The Writers Room is the building seen through the gallery doorway; clicking it opens About Me, My Approach and Email Me.
-Paste `loaders/home-gallery.loader.html` into one Code Block on the Home page. Change `PAGE` in that loader to switch versions.
+Paste `loaders/home-gallery.loader.html` into one Code Block on the Home page.
