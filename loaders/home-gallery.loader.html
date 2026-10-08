@@ -1,5 +1,5 @@
 <!-- Homepage loader: Portfolio Gallery (3D).
-     Paste into one Code Block on the Squarespace Home page. It fetches home-gallery/black.html
+     Paste into one Code Block on the Squarespace Home page. It fetches home-gallery/index.html
      from this repo and shows it full screen, so every commit goes live (GitHub caches for about 5 minutes).
      index.html and black.html are the same live version (Live Portfolio Gallery 10-8), so older copies of this loader show it too.
      writers-room.html is the earlier version with the NYC street and the Writers Room.
@@ -28,7 +28,9 @@
 <script>
 (function () {
   var BASE = 'https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/home-gallery/';
-  var PAGE = 'black.html';
+  var PAGE = 'index.html';
+  // GitHub's API serves a fresh copy right after each push; raw.githubusercontent is the fallback (it can lag about 5 minutes).
+  var API = 'https://api.github.com/repos/manicpixiedigifairy/nina-site/contents/home-gallery/' + PAGE + '?ref=main';
   var box = document.getElementById('nl-gallery');
   if (!box) return;
   // In the Squarespace editor, leave the page editable and show a small marker instead of the full-screen gallery.
@@ -53,8 +55,9 @@
   document.head.appendChild(hide);
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
-  fetch(BASE + PAGE, { cache: 'no-cache' })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+  function get(url, opts) { return fetch(url, opts).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }); }
+  get(API, { headers: { Accept: 'application/vnd.github.raw' }, cache: 'no-store' })
+    .catch(function () { return get(BASE + PAGE, { cache: 'no-cache' }); })
     .then(function (html) {
       var tag = '<base href="' + BASE + '">';
       html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, function (m) { return m + tag; }) : tag + html;
