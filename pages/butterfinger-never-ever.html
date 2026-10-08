@@ -42,16 +42,18 @@ html,body{margin:0}
 .bf .obj{position:relative;z-index:2;justify-self:center;width:min(100%,calc(var(--u)*41));aspect-ratio:1300/1134;cursor:pointer;will-change:transform;transform-origin:50% -12%;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;border-radius:calc(var(--u)*2)}
 .bf .obj img{display:block;pointer-events:none}
 .bf .obj .bro{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(.5) rotate(-10deg);transition:transform .8s cubic-bezier(.3,1.8,.5,1),opacity .12s}
-.bf .obj.brk .bro{opacity:1;transform:none}
-.bf .obj .wr{position:absolute;left:-6%;right:-6%;top:50%;margin-top:-8%;transform:rotate(-14deg);transition:transform .25s cubic-bezier(.3,1.8,.5,1)}
+.bf .obj.brk .bro{opacity:1;transform:scale(1.14)}
+.bf .obj .wr{position:absolute;left:-16%;right:-16%;top:50%;margin-top:-9%;transform:rotate(-14deg);transition:transform .25s cubic-bezier(.3,1.8,.5,1)}
 .bf .obj:hover:not(.brk) .wr{transform:rotate(-14deg) scale(1.04);animation:wob .5s ease-in-out infinite}
 .bf .obj:active:not(.brk) .wr{transform:rotate(-14deg) scale(.96)}
 @keyframes wob{0%,100%{rotate:0deg}30%{rotate:-2deg}70%{rotate:2deg}}
-.bf .obj .wr img{width:100%;transition:transform .9s cubic-bezier(.25,.9,.3,1),opacity .6s ease .15s}
-.bf .obj .wa{-webkit-clip-path:polygon(0 0,52% 0,48% 18%,54% 34%,47% 52%,53% 70%,49% 85%,52% 100%,0 100%);clip-path:polygon(0 0,52% 0,48% 18%,54% 34%,47% 52%,53% 70%,49% 85%,52% 100%,0 100%)}
-.bf .obj .wb{position:absolute;left:0;top:0;-webkit-clip-path:polygon(52% 0,100% 0,100% 100%,52% 100%,49% 85%,53% 70%,47% 52%,54% 34%,48% 18%);clip-path:polygon(52% 0,100% 0,100% 100%,52% 100%,49% 85%,53% 70%,47% 52%,54% 34%,48% 18%)}
-.bf .obj.brk .wa{transform:translate(-22%,70%) rotate(-32deg);opacity:0}
-.bf .obj.brk .wb{transform:translate(22%,85%) rotate(36deg);opacity:0}
+.bf .obj .wr img{width:100%;transition:transform 1s cubic-bezier(.25,.9,.3,1),opacity .6s ease .35s}
+.bf .obj .wa{transform-origin:0% 50%;-webkit-clip-path:polygon(0 0,100% 0,100% 49%,93% 53%,85% 47%,77% 54%,68% 48%,60% 54%,51% 47%,42% 53%,33% 48%,24% 54%,15% 48%,7% 53%,0 49%);clip-path:polygon(0 0,100% 0,100% 49%,93% 53%,85% 47%,77% 54%,68% 48%,60% 54%,51% 47%,42% 53%,33% 48%,24% 54%,15% 48%,7% 53%,0 49%)}
+.bf .obj .wb{position:absolute;left:0;top:0;transform-origin:100% 50%;-webkit-clip-path:polygon(0 49%,7% 53%,15% 48%,24% 54%,33% 48%,42% 53%,51% 47%,60% 54%,68% 48%,77% 54%,85% 47%,93% 53%,100% 49%,100% 100%,0 100%);clip-path:polygon(0 49%,7% 53%,15% 48%,24% 54%,33% 48%,42% 53%,51% 47%,60% 54%,68% 48%,77% 54%,85% 47%,93% 53%,100% 49%,100% 100%,0 100%)}
+.bf .obj.brk .wa{transform:translate(-3%,-55%) rotate(-42deg);opacity:0}
+.bf .obj.brk .wb{transform:translate(3%,75%) rotate(34deg);opacity:0}
+.bf .pn.sp{animation:psp 1s cubic-bezier(.3,1.5,.5,1)}
+@keyframes psp{0%{scale:.8;opacity:.35}45%{scale:1.12;opacity:1}100%{scale:1}}
 .bf .cv2{position:absolute;inset:0;width:100%;height:100%;z-index:7;pointer-events:none}
 .bf .hint{position:absolute;z-index:4;left:50%;bottom:calc(var(--u)*-1.6);transform:translateX(-50%) rotate(-3deg);padding:.5em 1.1em;border-radius:99px;background:#fff;color:var(--b2);font:600 calc(var(--u)*1.1)/1 var(--lab);white-space:nowrap;box-shadow:0 .2em 0 var(--br);animation:hn 1.8s ease-in-out infinite;pointer-events:none;transition:opacity .4s}
 .bf .hint.gone{opacity:0}
@@ -137,10 +139,12 @@ html,body{margin:0}
 .bf .sc{position:absolute;inset:0;clip-path:circle(0% at 50% 50%);transition:clip-path 1s cubic-bezier(.7,0,.2,1)}
 .bf .sc.on{clip-path:circle(150% at 50% 50%)}
 .bf .sc.nt{transition:none}
-.bf .sc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease-out}
-.bf .sc.on img{transform:scale(1.12)}
+.bf .sc>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease-out}
+.bf .sc.on>img{transform:scale(1.1)}
+.bf .ins{position:absolute;z-index:3;left:calc(var(--u)*1.6);top:calc(var(--u)*1.6);width:26%;aspect-ratio:16/9;border:calc(var(--u)*.4) solid #fff;border-radius:calc(var(--u)*1);overflow:hidden;transform:rotate(-4deg);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--br)}
+.bf .ins img{width:100%;height:100%;object-fit:cover}
 .bf .sc::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(6,20,60,.45)),repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0,rgba(0,0,0,.07) 1px,transparent 1px,transparent 3px)}
-.bf .s0 img{object-position:60% 50%}.bf .s1 img{object-position:50% 50%}.bf .s2 img{object-position:30% 50%}
+.bf .s0>img{object-position:50% 50%}.bf .s1>img{object-position:62% 50%}.bf .s2>img{object-position:60% 50%}.bf .s3>img{object-position:50% 50%}.bf .s4>img{object-position:30% 50%}
 .bf .fl2{position:absolute;inset:0;z-index:5;pointer-events:none;background:#fff;opacity:0}
 .bf .fl2.go{animation:fz .7s ease-out}
 @keyframes fz{0%{opacity:.95}100%{opacity:0}}
@@ -340,23 +344,29 @@ html,body{margin:0}
   <div class="tg">
     <div class="ctl rv">
       <div class="kw" aria-hidden="true">
-        <span class="kd on" style="left:calc(50% - var(--u)*8.9);top:calc(var(--u)*9.4)">1</span>
-        <span class="kd" style="left:50%;top:calc(var(--u)*4.4)">2</span>
-        <span class="kd" style="left:calc(50% + var(--u)*8.9);top:calc(var(--u)*9.4)">3</span>
+        <span class="kd on" style="left:calc(50% + var(--u)*-9.36);top:calc(var(--u)*12.85)">1</span>
+        <span class="kd" style="left:calc(50% + var(--u)*-6.11);top:calc(var(--u)*7.22)">2</span>
+        <span class="kd" style="left:calc(50% + var(--u)*0.00);top:calc(var(--u)*5.00)">3</span>
+        <span class="kd" style="left:calc(50% + var(--u)*6.11);top:calc(var(--u)*7.22)">4</span>
+        <span class="kd" style="left:calc(50% + var(--u)*9.36);top:calc(var(--u)*12.85)">5</span>
         <div class="kn" id="bfKn"><i></i></div>
       </div>
       <div class="ers" role="radiogroup" aria-label="Choose a scene">
-        <button type="button" role="radio" aria-checked="true" data-e="0">The Ruins</button>
-        <button type="button" role="radio" aria-checked="false" data-e="1">The Throne Room</button>
-        <button type="button" role="radio" aria-checked="false" data-e="2">The Showdown</button>
+        <button type="button" role="radio" aria-checked="true" data-e="0">Today</button>
+        <button type="button" role="radio" aria-checked="false" data-e="1">Golden Age of Pirates</button>
+        <button type="button" role="radio" aria-checked="false" data-e="2">The Ruins</button>
+        <button type="button" role="radio" aria-checked="false" data-e="3">The Throne Room</button>
+        <button type="button" role="radio" aria-checked="false" data-e="4">The Showdown</button>
       </div>
     </div>
     <div class="stg rv" id="bfStg" data-e="0" style="--d:.1s">
-      <div class="sc s0 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-1.webp?v=1" alt="" width="1200" height="676"></div>
-      <div class="sc s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-2.webp?v=1" alt="" width="1200" height="676"></div>
-      <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-3.webp?v=1" alt="" width="1400" height="788"></div>
+      <div class="sc s0 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-end.gif?v=1" alt="" width="600" height="337"></div>
+      <div class="sc s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy"><div class="ins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div></div>
+      <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-1.webp?v=1" alt="" width="1200" height="676"></div>
+      <div class="sc s3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-2.webp?v=1" alt="" width="1200" height="676"></div>
+      <div class="sc s4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-3.webp?v=1" alt="" width="1400" height="788"></div>
       <div class="fl2" id="bfFz" aria-hidden="true"></div>
-      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 3</span><b class="ern" id="bfEt">The Ruins</b><p class="erd" id="bfEd">Time travel sends the task force back to recover a stolen Butterfinger.</p></div>
+      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 5</span><b class="ern" id="bfEt">Today</b><p class="erd" id="bfEd">The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.</p></div>
     </div>
   </div>
 </section>
@@ -441,7 +451,9 @@ go();
 var cv2=q('#bfCv2'),hc=null,broken=false;
 function breakBar(fromKey){
   broken=!broken;
-  obj.classList.toggle('brk',broken);obj.setAttribute('aria-pressed',broken?'true':'false');
+  obj.classList.toggle('brk',broken);
+  if(broken){pn.classList.remove('sp');void pn.offsetWidth;pn.classList.add('sp')}
+obj.setAttribute('aria-pressed',broken?'true':'false');
   if(hint){hint.textContent=broken?'Wrap It Again':'Break the Bar'}
   if(broken&&hc){
     var hr=hero.getBoundingClientRect(),ob=obj.getBoundingClientRect();
@@ -521,8 +533,10 @@ fa.addEventListener('click',function(){
 
 /* time machine */
 var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),fz=q('#bfFz');
-var ANG=[-62,0,62],cur=0,zi=1,kAng=-62;
+var ANG=[-80,-40,0,40,80],cur=0,zi=1,kAng=-80;
 var ERA=[
+ ['Today','The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.'],
+ ['Golden Age of Pirates','Time travel sends the task force to the golden age of pirates to recover a stolen Butterfinger.'],
  ['The Ruins','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['The Throne Room','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['The Showdown','Time travel sends the task force back to recover a stolen Butterfinger.']
@@ -542,9 +556,9 @@ function setEra(i){
   var s=scs[i];
   s.classList.add('nt');s.classList.remove('on');s.style.zIndex=++zi;void s.offsetWidth;s.classList.remove('nt');s.classList.add('on');
   fz.classList.remove('go');void fz.offsetWidth;fz.classList.add('go');
-  q('#bfEn').textContent='Scene '+(i+1)+' of 3';q('#bfEt').textContent=ERA[i][0];q('#bfEd').textContent=ERA[i][1];
+  q('#bfEn').textContent='Scene '+(i+1)+' of '+ANG.length;q('#bfEt').textContent=ERA[i][0];q('#bfEd').textContent=ERA[i][1];
 }
-kn.style.transform='rotate(-62deg)';
+kn.style.transform='rotate(-80deg)';
 ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.getAttribute('data-e'),10))})});
 (function(){
   var dr=false,moved=false,off=0,cx=0,cy=0;
@@ -557,7 +571,7 @@ ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.
   });
   kn.addEventListener('pointermove',function(e){
     if(!dr)return;
-    var a=cl(ang(e)-off,-80,80);
+    var a=cl(ang(e)-off,-95,95);
     if(Math.abs(a-kAng)>1.5)moved=true;
     kAng=a;kn.style.transform='rotate('+a+'deg)';
   });
@@ -565,7 +579,7 @@ ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.
     if(!dr)return;dr=false;kn.classList.remove('dr');
     var n=cur;
     if(moved){var best=1e9;ANG.forEach(function(v,k){var d=Math.abs(v-kAng);if(d<best){best=d;n=k}})}
-    else n=(cur+1)%3;
+    else n=(cur+1)%ANG.length;
     if(n===cur){kn.style.transform='rotate('+ANG[cur]+'deg)';kAng=ANG[cur]}else setEra(n);
   }
   kn.addEventListener('pointerup',up);kn.addEventListener('pointercancel',up);
