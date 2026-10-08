@@ -2,7 +2,7 @@
    Loaded by custom-js/sitewide-menu.loader.html from GitHub. Edit LINKS to change the menu. */
 (function(){
   if(window.__nlMenu)return;window.__nlMenu=1;
-  var LINKS=[["Home","https://www.byninaaustin.com/"],["Commercials","https://www.byninaaustin.com/commercials"],["Content","https://www.byninaaustin.com/content"],["Experiential","https://www.byninaaustin.com/experiential"],["Creative DNA","https://www.byninaaustin.com/creative-dna"],["About Me","https://www.byninaaustin.com/about-me"],["Contact","mailto:ninaaustincreative@gmail.com"]];
+  var LINKS=[["Home","https://www.byninaaustin.com/"],["Commercials","https://www.byninaaustin.com/commercials"],["Content","https://www.byninaaustin.com/content"],["Experiential","https://www.byninaaustin.com/experiential"],["Methodology","https://www.byninaaustin.com/creative-dna"],["About Me","https://www.byninaaustin.com/about-me"],["Contact","mailto:ninaaustincreative@gmail.com"]];
   var CSS='@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Marcellus&display=swap");'
   +'.header-nav,.header-burger,.header-menu{display:none!important}'
   +'.nlb{all:unset;cursor:pointer;display:flex;align-items:center;gap:.9rem;font-family:Jost,sans-serif;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;position:absolute;right:4vw;top:50%;transform:translateY(-50%);z-index:5}'
