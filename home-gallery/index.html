@@ -1020,7 +1020,12 @@ if(OUTSIDE==='black'){
   hang(print(1,2.2,1.4),2.2,1.4,3.5,2.6,ZE-.03,Math.PI);
   /* freestanding white walls, each with a print */
   const partition=(w,x,z,seed,pw,ph)=>{ const m=new THREE.Mesh(new THREE.BoxGeometry(w,3.9,.32),white); m.position.set(x,1.95,z); hall.add(m); hang(print(seed,pw,ph),pw,ph,x,1.9,z-.18,Math.PI); };
-  partition(5.2,3.6,Z0+11,2,1.5,1.05);
+  /* Nina's portrait on the nearer wall; clicking it opens About Me */
+  { const pw=new THREE.Mesh(new THREE.BoxGeometry(5.2,3.9,.32),white); pw.position.set(3.6,1.95,Z0+11); hall.add(pw);
+    const hsTex=new THREE.TextureLoader().setCrossOrigin('anonymous').load('assets/headshot.jpg'); hsTex.colorSpace=THREE.SRGBColorSpace; hsTex.anisotropy=maxAniso;
+    const fr=new THREE.Mesh(new THREE.BoxGeometry(1.13,1.49,.05),hm({color:0x1d1916,roughness:.55},'hsframe')); fr.position.set(3.6,1.95,Z0+11-.185); hall.add(fr);
+    const pic=new THREE.Mesh(new THREE.PlaneGeometry(1.05,1.41),hm({map:hsTex,emissive:0xffffff,emissiveMap:hsTex,emissiveIntensity:.22,roughness:.8},'hspic')); pic.rotation.y=Math.PI; pic.position.set(3.6,1.95,Z0+11-.212); hall.add(pic);
+    for(const m of [fr,pic]){ m.userData={kind:'about'}; pickables.push(m); } }
   partition(6.4,-2.4,Z0+17,0,1.9,1.1);
   /* a low white bench */
   { const m=new THREE.Mesh(new THREE.BoxGeometry(3.4,.48,1.5),white); m.position.set(-.4,.24,Z0+7.2); hall.add(m); }
@@ -1674,7 +1679,7 @@ const planMe=$('#planMe');
 
 /* ======================= input ======================= */
 const ray=new THREE.Raycaster(), ndc=new THREE.Vector2();
-function pick(x,y){ ndc.set(x/innerWidth*2-1,-(y/innerHeight)*2+1); ray.setFromCamera(ndc,camera); const h=ray.intersectObjects(pickables,false); return h[0]||null; }
+function pick(x,y){ ndc.set(x/innerWidth*2-1,-(y/innerHeight)*2+1); ray.setFromCamera(ndc,camera); const h=ray.intersectObjects(pickables,false); if(h[0]&&h[0].object.userData.kind==='exitdoor'){ const a=h.find(q=>q.object.userData.kind==='about'); if(a) return a; } return h[0]||null; }
 let down=null, hoverAt=null; const tip=$('#tip');
 canvas.addEventListener('pointerdown',e=>{ down={x:e.clientX,y:e.clientY,lx:e.clientX,ly:e.clientY,t:performance.now(),drag:false,id:e.pointerId}; canvas.setPointerCapture(e.pointerId); });
 canvas.addEventListener('pointermove',e=>{
@@ -1706,6 +1711,7 @@ function handleClick(x,y,ptype){
   if(k==='art'){ focusWork(h.object.userData.i); return; }
   if(k==='link'){ const sp=linkAt(h); if(sp) openLink(sp.url); return; }
   if(k==='exitdoor'){ exitGallery(); return; }
+  if(k==='about'){ const a=document.createElement('a'); a.href=SITE+'about-me'; a.target='_top'; document.body.appendChild(a); a.click(); a.remove(); return; }
   if(k==='writers'){ closeCard(); openWriters(); return; }
   if(k==='title') return;
   if(k==='floor'){ closeCard(); focused=-1; if(ptype!=='mouse'){ ring.position.set(h.point.x,.012,h.point.z); ring.visible=true; setTimeout(()=>ring.visible=false,700);} routeTo(new THREE.Vector3(h.point.x,EYE,h.point.z)); }
@@ -1719,6 +1725,7 @@ function updateHover(){
     if(k==='floor'){ ring.visible=true; ring.position.set(h.point.x,.012,h.point.z); tip.hidden=true; point=true; }
     else { ring.visible=false;
       if(k==='art'){ const i=h.object.userData.i; ARTS[i].fillet.emissive.setHex(0x6a4a10); tip.hidden=false; tip.innerHTML=''; tip.append(el('b',null,pad(i+1)), document.createTextNode(WORKS[i].title)); tip.style.left=hoverAt.x+'px'; tip.style.top=hoverAt.y+'px'; point=true; }
+      else if(k==='about'){ tip.hidden=false; tip.innerHTML=''; tip.append(el('b',null,'About Me'),document.createTextNode('Meet Nina')); tip.style.left=hoverAt.x+'px'; tip.style.top=hoverAt.y+'px'; point=true; }
       else if(k==='exitdoor'){ tip.hidden=false; tip.innerHTML=''; tip.append(el('b',null,'Exit'),document.createTextNode('Back to the entrance')); tip.style.left=hoverAt.x+'px'; tip.style.top=hoverAt.y+'px'; point=true; }
       else if(k==='writers'){ tip.hidden=false; tip.innerHTML=''; tip.append(el('b',null,'Writers Room'),document.createTextNode('About me, my approach, email')); tip.style.left=hoverAt.x+'px'; tip.style.top=hoverAt.y+'px'; point=true; }
       else if(k==='link'){ const sp=linkAt(h); if(sp){ tip.hidden=false; tip.innerHTML=''; tip.append(el('b',null,sp.label),document.createTextNode(sp.url.startsWith('mailto:')?'Opens your email app':'Opens in a new tab')); tip.style.left=hoverAt.x+'px'; tip.style.top=hoverAt.y+'px'; point=true; } else tip.hidden=true; }
