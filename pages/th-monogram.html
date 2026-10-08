@@ -60,6 +60,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .fb div:nth-child(-n+2){color:var(--navy)}
 .th .fb div:nth-child(n+3){color:#fff}
 .th .fb div:nth-child(3){grid-column:3/5;text-align:center;transform:translateX(calc(25cqw - var(--u)*17.3))}
+.th .fb div:nth-child(-n+2){text-align:center}
+@media(min-width:1001px){.th .fb .w{max-width:none;margin:0;padding-left:calc(var(--u)*1.2);padding-right:calc(var(--u)*1.2)}.th .fb div:nth-child(3){transform:none}}
 
 /* BRIEF */
 .th .bf{background:var(--paper);padding:calc(var(--u)*7.4) 0 calc(var(--u)*8)}
@@ -139,7 +141,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .sc2 .fx{transform:translateY(calc(var(--u)*-.4))}
 .th .sc2 img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .th .sc2 .s5 img{aspect-ratio:auto}
-.th .sc2 .s4 img{aspect-ratio:1000/1082;object-position:64% 50%}
+.th .sc2 .s4 img{aspect-ratio:1000/1082;object-position:80% 50%}
 
 /* CAST */
 .th .ca{background:#fff;padding:calc(var(--u)*7.6) 0 calc(var(--u)*7)}
@@ -261,7 +263,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .mgt p{font:600 calc(var(--u)*1.3)/1.58 var(--gr);margin-bottom:calc(var(--u)*1.8)}
 .th .mgt .btn{background:#fff;color:var(--ink)}
 .th .mgl{position:relative;z-index:5;aspect-ratio:68/42;margin-top:calc(var(--u)*-1.5);clip-path:inset(calc(var(--u)*-8) calc(var(--u)*-8) 0 calc(var(--u)*-8))}
-.th .cu{position:absolute;bottom:var(--cb,0);left:var(--cl);width:var(--cw);max-width:none;height:auto;transform:rotate(var(--cr));transform-origin:50% 100%;filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
+.th .cu{position:absolute;bottom:var(--cb,calc(var(--u)*-.9));left:var(--cl);width:var(--cw);max-width:none;height:auto;transform:rotate(var(--cr));transform-origin:50% 100%;filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.4) 0 rgba(5,23,53,.6))}
 /* cast, strips, results, role */
 .th .sxw .tp.a{left:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
 .th .sxw .tp.b{right:calc(var(--u)*-2.4);top:calc(var(--u)*-.6)}
