@@ -6,7 +6,7 @@
 <style>
 html,body{margin:0;background:#000}
 
-.pg{--u:clamp(11px,1.1111vw,28px);--lime:#D7F34A;width:100%;background:#000;color:#fff;font-family:Marcellus,Georgia,serif;padding:calc(var(--u)*2) 0 calc(var(--u)*8);position:relative;overflow:hidden}
+.pg{--u:clamp(11px,1.1111vw,28px);--lime:#F5D98A;width:100%;background:#000;color:#fff;font-family:Marcellus,Georgia,serif;padding:calc(var(--u)*2) 0 calc(var(--u)*8);position:relative;overflow:hidden}
 .pg *{box-sizing:border-box}.pg a{color:inherit;text-decoration:none}
 .pg .sm{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*.72);letter-spacing:.16em;text-transform:uppercase}
 .pg .tabs{display:flex;gap:calc(var(--u)*2.2);padding:calc(var(--u)*2.5) calc(var(--u)*5.5) 0;flex-wrap:wrap}
@@ -36,7 +36,7 @@ html,body{margin:0;background:#000}
 .pg .lv i{width:.7em;height:.7em;border-radius:50%;background:#fff;animation:lvDot 1.2s ease-in-out infinite}
 @keyframes lvRing{0%{box-shadow:0 0 0 0 rgba(194,37,92,.55)}70%,100%{box-shadow:0 0 0 .8rem rgba(194,37,92,0)}}
 @keyframes lvDot{0%,100%{opacity:1}50%{opacity:.25}}
-.pg .bk{transform:rotateY(180deg) translateZ(1px);opacity:0;pointer-events:none;transition:opacity .01s linear .38s;background:#0A0A0A;border:1px solid rgba(215,243,74,.4);padding:calc(var(--u)*1.8);display:flex;flex-direction:column;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.2) rgba(0,0,0,.65)}
+.pg .bk{transform:rotateY(180deg) translateZ(1px);opacity:0;pointer-events:none;transition:opacity .01s linear .38s;background:#0A0A0A;border:1px solid rgba(245,217,138,.4);padding:calc(var(--u)*1.8);display:flex;flex-direction:column;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.2) rgba(0,0,0,.65)}
 .pg .bkl{position:absolute;inset:0;z-index:0;cursor:pointer}.pg .bk>*:not(.bkl){position:relative;z-index:1;pointer-events:none}.pg .bk>.bt:not(.off){pointer-events:auto}.pg .back{display:inline-flex;align-items:center;gap:.5em;align-self:flex-end;cursor:pointer;opacity:.6;font-size:calc(var(--u)*.62);margin-bottom:calc(var(--u)*.8)}
 .pg .bk .br{display:block;color:var(--lime);margin-bottom:calc(var(--u)*.7)}
 .pg .bk h2{margin:0;font-weight:400;font-size:calc(var(--u)*2.1);line-height:1.08}
