@@ -184,43 +184,63 @@ html,body{margin:0}
 @keyframes pp{0%{transform:translate(-50%,-30%) scale(.3) rotate(var(--pr));opacity:0}25%{transform:translate(-50%,-90%) scale(1.15) rotate(var(--pr));opacity:1}100%{transform:translate(-50%,-230%) scale(1) rotate(var(--pr));opacity:0}}
 
 /* FILM */
-.bf .fl{background:var(--b2);padding:var(--sp) var(--g) calc(var(--sp)*1.1);position:relative;overflow:hidden;isolation:isolate}
-.bf .fl::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230A5CD6'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230A5CD6'/%3E%3C/svg%3E");background-size:calc(var(--u)*10) calc(var(--u)*10)}
-.bf .fl .h2{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br)}
-.bf .vg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*3.4)}
+.bf .fl{background:radial-gradient(ellipse 70% 55% at 82% 0%,rgba(242,138,30,.26),transparent 70%),radial-gradient(ellipse 80% 60% at 50% 100%,rgba(11,92,214,.22),transparent 70%),linear-gradient(180deg,#0B1226 0%,#17110E 55%,#0A0E20 100%);padding:calc(var(--sp)*1.25) var(--g) calc(var(--sp)*1.35);position:relative;overflow:hidden;isolation:isolate;color:#E9DCB8}
+.bf .fl::before{content:"";position:absolute;inset:-10%;z-index:3;pointer-events:none;opacity:.55;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .82 0 0 0 0 .62 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");animation:grn 1.2s steps(6) infinite}
+.bf .fl::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,0,0,.55) 100%)}
+@keyframes grn{0%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,0)}100%{transform:translate(0,0)}}
+.bf .fl .hd,.bf .fl .vg{position:relative;z-index:4}
+.bf .fl .lb{color:#E9DCB8}
+.bf .fl .h2{color:var(--y);text-shadow:0 0 .5em rgba(255,233,49,.38),0 .05em 0 var(--br2),0 .1em 0 #1A0B03}
+.bf .fl .sub{color:#E9DCB8;font:italic 400 calc(var(--u)*1.9)/1.3 var(--bd)}
+.bf .fl .hd{padding-right:calc(var(--u)*15)}
+.bf .scl{position:absolute;left:0;right:0;height:calc(var(--u)*1.3);z-index:2;pointer-events:none}
+.bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
+.bf .scl.b{bottom:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 100%,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
+.bf .ow{position:absolute;pointer-events:none;user-select:none;-webkit-user-select:none}
+.bf .ow img{width:100%}
+.bf .nt{width:calc(var(--u)*52);aspect-ratio:2/3;z-index:1;opacity:.15;background:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-net.webp?v=1) center/contain no-repeat;animation:ndr 14s ease-in-out infinite alternate}
+.bf .nt.a{left:calc(var(--u)*-8);top:calc(var(--u)*-4)}
+.bf .nt.b{right:calc(var(--u)*-10);bottom:calc(var(--u)*-6);transform:scale(-1,-1) rotate(8deg);animation-name:ndr2}
+@keyframes ndr{from{translate:0 0;rotate:-1.5deg}to{translate:1.5% 2%;rotate:1.5deg}}
+@keyframes ndr2{from{translate:0 0}to{translate:-2% -1.5%}}
+.bf .lan{right:calc(var(--g)*.7);top:calc(var(--u)*-1.5);width:calc(var(--u)*11);z-index:5;transform-origin:50% 0;animation:swy 5.5s ease-in-out infinite}
+.bf .lan::before{content:"";position:absolute;left:50%;top:-30vh;width:1px;height:30vh;background:linear-gradient(transparent,#8d7a52)}
+.bf .lan::after{content:"";position:absolute;left:50%;top:62%;width:260%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,196,96,.5),rgba(255,150,40,.18) 40%,transparent 68%);mix-blend-mode:screen;z-index:-1;animation:flk 3.1s ease-in-out infinite}
+@keyframes swy{0%,100%{rotate:3.5deg}50%{rotate:-3.5deg}}
+@keyframes flk{0%,100%{opacity:.9}18%{opacity:.7}32%{opacity:1}55%{opacity:.78}70%{opacity:.95}}
+.bf .anc{left:calc(var(--u)*-3);bottom:calc(var(--u)*-6);width:calc(var(--u)*22);z-index:1;rotate:-18deg;opacity:.85;filter:sepia(.5) brightness(.75) contrast(1.1)}
+.bf .cmp{right:calc(var(--u)*-3.5);bottom:calc(var(--u)*-3);width:calc(var(--u)*17);z-index:1;opacity:.9;filter:sepia(.35) brightness(.8);animation:cmw 7s ease-in-out infinite}
+@keyframes cmw{0%,100%{rotate:-6deg}50%{rotate:5deg}}
+.bf .vg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*4)}
 .bf .vc{position:relative}
-.bf .vt{display:flex;align-items:center;gap:.7em;margin:0 0 calc(var(--u)*1.4);font:600 calc(var(--u)*1.5)/1.1 var(--lab);color:#fff}
-.bf .vt b{padding:.35em .9em .4em;border-radius:99px;background:var(--y);color:var(--br);box-shadow:0 .16em 0 var(--br)}
-.bf .vlt{position:relative;aspect-ratio:16/9;border:calc(var(--u)*.6) solid #fff;border-radius:calc(var(--u)*2.2);box-shadow:calc(var(--u)*1) calc(var(--u)*1) 0 var(--br);overflow:hidden;background:var(--nv);isolation:isolate}
-.bf .vlt>.bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.38) saturate(.75)}
+.bf .vt{display:flex;align-items:center;gap:.8em;margin:0 0 calc(var(--u)*1.6);font:italic 500 calc(var(--u)*1.9)/1.1 var(--bd);color:#E9DCB8}
+.bf .vt b{font:600 calc(var(--u)*1.1)/1 var(--lab);font-style:normal;letter-spacing:.04em;padding:.5em 1.1em .55em;border-radius:99px;background:var(--y);color:var(--br);box-shadow:0 .16em 0 var(--br),0 0 1.2em rgba(255,233,49,.35)}
+.bf .vlt{position:relative;aspect-ratio:16/9;border:calc(var(--u)*.85) solid transparent;border-radius:calc(var(--u)*.9);background:linear-gradient(#0A0A12,#0A0A12) padding-box,linear-gradient(135deg,#F6DE9A 0%,#9A6B22 22%,#E7C46E 48%,#6F4A14 74%,#F1D587 100%) border-box;box-shadow:0 0 0 calc(var(--u)*.2) #1A0B03,0 calc(var(--u)*1.6) calc(var(--u)*3.2) rgba(0,0,0,.65),0 0 calc(var(--u)*4) rgba(242,138,30,.18);overflow:hidden;isolation:isolate}
+.bf .vlt::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;box-shadow:inset 0 0 calc(var(--u)*5) rgba(0,0,0,.8)}
+.bf .vlt>.bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(1) brightness(.3) contrast(1.15) saturate(.9) blur(1px)}
 .bf .vlt .cvv{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
-.bf .lk{position:absolute;inset:0;z-index:3;width:100%;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;transition:opacity .5s ease,transform .7s ease}
-.bf .lk svg{display:block;width:46%;height:auto;overflow:visible;margin-top:-2%}
-.bf .lk:hover:not([aria-disabled]) svg{animation:wob .5s ease-in-out infinite}
-.bf .lk .tap{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);padding:.55em 1.3em .6em;border-radius:99px;background:var(--y);color:var(--br);font:600 calc(var(--u)*1.25)/1 var(--lab);box-shadow:0 .2em 0 var(--br);white-space:nowrap;animation:hn 1.8s ease-in-out infinite}
+.bf .lk{position:absolute;inset:0;z-index:3;width:100%;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;transition:opacity .6s ease,transform .8s ease}
+.bf .lk .ob{position:relative;display:block;width:44%;max-height:84%;margin-top:-3%}
+.bf .lk .ob::before{content:"";position:absolute;left:50%;top:52%;width:150%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,206,110,.75),rgba(255,150,40,.28) 38%,transparent 68%);opacity:0;mix-blend-mode:screen;transform:scale(.4);transition:opacity .7s ease,transform 1s cubic-bezier(.3,1.5,.5,1)}
+.bf .v2 .lk .ob::before{background:radial-gradient(circle,rgba(255,160,50,.8),rgba(240,110,20,.3) 38%,transparent 68%)}
+.bf .lk .ob img{position:relative;display:block;width:100%;height:auto;max-height:100%;object-fit:contain;filter:brightness(.34) sepia(.5) saturate(.8) contrast(1.1);transition:filter 1s ease,transform .9s cubic-bezier(.3,1.6,.5,1)}
+.bf .v2 .lk .ob img{filter:brightness(.4) saturate(.55) contrast(1.05)}
+.bf .lk:hover:not([aria-disabled]) .ob img{filter:brightness(.6) sepia(.35) saturate(.95) contrast(1.1);animation:wob .6s ease-in-out infinite}
+.bf .v2 .lk:hover:not([aria-disabled]) .ob img{filter:brightness(.8) saturate(.9)}
+.bf .vlt.opening .lk .ob::before{opacity:1;transform:scale(1)}
+.bf .vlt.opening .lk .ob img{filter:brightness(1.12) sepia(0) saturate(1.1) contrast(1.05) drop-shadow(0 0 1.1em rgba(255,200,90,.7));transform:scale(1.07);animation:none}
+.bf .v2.opening .lk .ob img{filter:brightness(1.35) saturate(1.3) contrast(1.1) drop-shadow(0 0 1.4em rgba(255,140,30,.8))}
+.bf .vlt.opening .lk .tap{opacity:0;transition:opacity .3s}
+.bf .lk .tap{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);padding:.55em 1.4em .6em;border-radius:99px;background:rgba(10,10,18,.7);color:#F3DDA0;border:.14em solid #B98A3A;font:600 calc(var(--u)*1.2)/1 var(--lab);letter-spacing:.06em;white-space:nowrap;animation:hn 1.8s ease-in-out infinite;box-shadow:0 0 1.4em rgba(242,138,30,.3)}
 .bf .vlt.open .lk{opacity:0;transform:scale(1.25);pointer-events:none}
-.bf .vlt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:vfi .7s ease}
-@keyframes vfi{from{opacity:0}to{opacity:1}}
-.bf .vlt .glow{opacity:0;transform-box:fill-box;transform-origin:50% 50%;transform:scale(.4);transition:opacity .6s ease,transform .9s cubic-bezier(.3,1.5,.5,1)}
-.bf .vlt.opening .glow{opacity:1;transform:scale(1)}
-.bf .v1 .lid{transform-box:fill-box;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.3,1.7,.5,1) .55s}
-.bf .v1.opening .lid{transform:translate(-4px,-62px) rotate(-8deg) scaleY(.62)}
-.bf .v1 .lockg{transform-box:fill-box;transform-origin:50% 50%}
-.bf .v1.opening .lockg{animation:lkf .9s cubic-bezier(.5,0,.8,.4) .1s forwards}
-@keyframes lkf{0%{transform:rotate(0)}15%{transform:rotate(-10deg)}30%{transform:rotate(9deg)}45%{transform:rotate(-7deg)}100%{transform:translateY(160px) rotate(24deg);opacity:0}}
-.bf .v1 .coins{transform-box:fill-box;transform-origin:50% 100%;transform:translateY(8px);transition:transform .7s cubic-bezier(.3,1.6,.5,1) .7s}
-.bf .v1.opening .coins{transform:translateY(-10px)}
-.bf .v2 .face path{fill:#2A0F02;transition:fill .25s}
-.bf .v2.opening .face path{fill:#FFE931}
-.bf .v2 .pk2{transform-box:fill-box;transform-origin:50% 100%}
-.bf .v2.opening .pk2{animation:ppop .9s cubic-bezier(.3,1.7,.5,1) .15s}
-@keyframes ppop{0%{transform:scale(1)}25%{transform:scale(.9,1.08) rotate(-3deg)}55%{transform:scale(1.14,.94) rotate(2deg)}100%{transform:scale(1.06)}}
-.bf .vl{display:inline-block;margin-top:calc(var(--u)*1.4);color:#fff;font:600 calc(var(--u)*1.1)/1 var(--lab);text-decoration:underline;text-underline-offset:.25em}
+.bf .vlt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:vfi .9s ease}
+@keyframes vfi{from{opacity:0;filter:sepia(1) brightness(.4)}to{opacity:1;filter:none}}
+.bf .vl{display:inline-block;margin-top:calc(var(--u)*1.6);color:#E9DCB8;font:600 calc(var(--u)*1.1)/1 var(--lab);letter-spacing:.04em;text-decoration:underline;text-underline-offset:.25em;text-decoration-color:#B98A3A}
 .bf .vl:hover{color:var(--y)}
-.bf .vs{position:absolute;z-index:6;width:calc(var(--u)*14);aspect-ratio:16/9;border:calc(var(--u)*.4) solid #fff;border-radius:calc(var(--u)*1);overflow:hidden;box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--br);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
+.bf .crd{position:relative;z-index:4;margin:calc(var(--u)*8.5) 0 0;font:italic 400 calc(var(--u)*1.05)/1.3 var(--bd);color:rgba(233,220,184,.7)}
+.bf .vs{position:absolute;z-index:6;width:calc(var(--u)*14);aspect-ratio:16/9;border:calc(var(--u)*.4) solid #E8D7A6;border-radius:calc(var(--u)*.4);overflow:hidden;box-shadow:0 calc(var(--u)*.8) calc(var(--u)*1.6) rgba(0,0,0,.6);filter:sepia(.45) contrast(1.05);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
 .bf .vs img{width:100%;height:100%;object-fit:cover;pointer-events:none}
-.bf .vs.a{right:calc(var(--u)*-1.6);top:calc(var(--u)*-1.8)}
-.bf .vs.b{right:calc(var(--u)*-1.6);top:calc(var(--u)*-1.8)}
+.bf .vs.a,.bf .vs.b{right:calc(var(--u)*.4);bottom:calc(var(--u)*-6.6)}
 
 /* BANNER + FOOTER */
 .bf .bn{background:var(--y);line-height:0}
@@ -298,12 +318,13 @@ html,body{margin:0}
 .bf .st.s4{right:3%;top:5%;width:42%}
 .bf .ct{font-size:1rem;bottom:1rem}
 .bf .pop{font-size:2.2rem}
-.bf .vlt{border-width:.4rem;border-radius:1.2rem}
+.bf .vlt{border-width:.45rem;border-radius:.5rem}
+.bf .fl .hd{padding-right:5.2rem}.bf .lan{width:4.6rem}.bf .anc{width:9rem}.bf .cmp{width:7rem}.bf .nt{width:22rem}.bf .fl .sub{font-size:1.1rem}.bf .vt{font-size:1.1rem}
 .bf .vt{font-size:1rem}.bf .lk .tap{font-size:.85rem}.bf .vs{width:6.6rem}.bf .vl{font-size:.9rem}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .rings i,.bf .hint,.bf .lk .tap{animation:none}
+.bf .tt .ch,.bf .rings i,.bf .hint,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before{animation:none}
 .bf .sc{transition-duration:.01s}
 }
 </style></head>
@@ -428,6 +449,11 @@ html,body{margin:0}
 </section>
 
 <section class="fl" id="bfFl">
+  <span class="scl t" aria-hidden="true"></span><span class="scl b" aria-hidden="true"></span>
+  <div class="ow nt a" aria-hidden="true"></div><div class="ow nt b" aria-hidden="true"></div>
+  <div class="ow anc" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-anchor.webp?v=1" alt="" width="487" height="700" loading="lazy"></div>
+  <div class="ow cmp" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass.webp?v=1" alt="" width="700" height="695" loading="lazy"></div>
+  <div class="ow lan" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-lantern.webp?v=1" alt="" width="322" height="760" loading="lazy"></div>
   <div class="hd rv"><div><span class="lb">Watch the Films: Never Ever</span><h2 class="h2">Unlock the Films</h2></div><p class="sub">Open the chest. Light the pumpkin.</p></div>
   <div class="vg">
     <div class="vc rv">
@@ -435,7 +461,7 @@ html,body{margin:0}
       <div class="vlt v1" data-k="v" data-src="https://player.vimeo.com/video/1051746090?h=5f9d4b5a73&amp;app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="Butterfinger Never Ever, Film 1">
         <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy">
         <canvas class="cvv" aria-hidden="true"></canvas>
-        <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><svg viewBox="0 0 400 300" aria-hidden="true"><defs><radialGradient id="bfCg"><stop offset="0" stop-color="#FFE931" stop-opacity=".95"/><stop offset="1" stop-color="#FFE931" stop-opacity="0"/></radialGradient></defs><ellipse cx="200" cy="272" rx="176" ry="15" fill="rgba(0,0,0,.4)"/><circle class="glow" cx="200" cy="120" r="170" fill="url(#bfCg)"/><ellipse cx="200" cy="142" rx="138" ry="20" fill="#2A1204"/><g class="coins"><circle cx="150" cy="140" r="15" fill="#F2B01E" stroke="#3B1B09" stroke-width="4"/><circle cx="190" cy="132" r="16" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/><circle cx="232" cy="138" r="16" fill="#F2B01E" stroke="#3B1B09" stroke-width="4"/><circle cx="262" cy="144" r="13" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/><circle cx="214" cy="126" r="13" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/></g><g class="body"><rect x="62" y="142" width="276" height="124" rx="12" fill="#8F4A1B" stroke="#3B1B09" stroke-width="6"/><path d="M66 192H334M66 230H334" stroke="#6A3410" stroke-width="4"/><rect x="100" y="142" width="28" height="124" fill="#F2B01E" stroke="#3B1B09" stroke-width="5"/><rect x="272" y="142" width="28" height="124" fill="#F2B01E" stroke="#3B1B09" stroke-width="5"/><g class="lockg"><rect x="174" y="150" width="52" height="56" rx="9" fill="#FFE931" stroke="#3B1B09" stroke-width="5"/><circle cx="200" cy="173" r="8" fill="#3B1B09"/><rect x="197" y="175" width="6" height="18" rx="3" fill="#3B1B09"/></g></g><g class="lid"><path d="M62 144C62 72 120 44 200 44S338 72 338 144Z" fill="#A45A22" stroke="#3B1B09" stroke-width="6" stroke-linejoin="round"/><path d="M100 62H128V142H100Z M272 62H300V142H272Z" fill="#F2B01E" stroke="#3B1B09" stroke-width="5" stroke-linejoin="round"/><path d="M70 106C100 80 300 80 330 106" fill="none" stroke="#7B3B12" stroke-width="4" opacity=".6"/></g></svg><span class="tap">Tap the Chest</span></button>
+        <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-chest.webp?v=1" alt="" width="736" height="736"></span><span class="tap">Tap the Chest</span></button>
       </div>
       <a class="vl" href="https://vimeo.com/1051746090/5f9d4b5a73" target="_blank" rel="noopener">Watch on Vimeo</a>
       <div class="vs a" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div>
@@ -445,12 +471,13 @@ html,body{margin:0}
       <div class="vlt v2" data-k="y" data-src="https://www.youtube-nocookie.com/embed/wENnrEy3Sn0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" data-t="Butterfinger Never Ever, Film 2">
         <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-horseman.gif?v=1" alt="" width="640" height="360" loading="lazy">
         <canvas class="cvv" aria-hidden="true"></canvas>
-        <button class="lk" type="button" aria-label="Unlock Film 2 by lighting the pumpkin"><svg viewBox="0 0 300 280" aria-hidden="true"><defs><radialGradient id="bfPg"><stop offset="0" stop-color="#FFB02E" stop-opacity=".9"/><stop offset="1" stop-color="#FF7A1A" stop-opacity="0"/></radialGradient></defs><ellipse cx="150" cy="266" rx="124" ry="12" fill="rgba(0,0,0,.45)"/><circle class="glow" cx="150" cy="150" r="170" fill="url(#bfPg)"/><g class="pk2"><path d="M146 52C142 30 152 14 172 8L178 20C166 26 164 36 168 52Z" fill="#4C6B1F" stroke="#2A0F02" stroke-width="6" stroke-linejoin="round"/><ellipse cx="78" cy="156" rx="64" ry="100" fill="#D9701A" stroke="#2A0F02" stroke-width="6"/><ellipse cx="222" cy="156" rx="64" ry="100" fill="#D9701A" stroke="#2A0F02" stroke-width="6"/><ellipse cx="114" cy="156" rx="58" ry="106" fill="#F28A1E" stroke="#2A0F02" stroke-width="6"/><ellipse cx="186" cy="156" rx="58" ry="106" fill="#F28A1E" stroke="#2A0F02" stroke-width="6"/><ellipse cx="150" cy="156" rx="50" ry="108" fill="#FF9B2E" stroke="#2A0F02" stroke-width="6"/><g class="face"><path d="M96 118L132 130L100 162Z"/><path d="M204 118L168 130L200 162Z"/><path d="M150 152L136 176H164Z"/><path d="M84 190L112 210L132 194L150 212L168 194L188 210L216 190L204 228Q150 250 96 228Z"/></g></g></svg><span class="tap">Light the Pumpkin</span></button>
+        <button class="lk" type="button" aria-label="Unlock Film 2 by lighting the pumpkin"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pumpkin.webp?v=1" alt="" width="369" height="429"></span><span class="tap">Light the Pumpkin</span></button>
       </div>
       <a class="vl" href="https://youtu.be/wENnrEy3Sn0" target="_blank" rel="noopener">Watch on YouTube</a>
       <div class="vs b" data-st data-r="-5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-halloween.gif?v=1" alt="" width="640" height="360" loading="lazy"></div>
     </div>
   </div>
+  <p class="crd">Pumpkin photo by Terry Preshaw.</p>
 </section>
 
 <section class="rs" id="bfRs">
