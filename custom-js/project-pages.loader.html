@@ -1,0 +1,8 @@
+<script>
+(function(){
+  fetch('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/custom-js/project-pages.js')
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.text()})
+    .then(function(c){new Function(c)()})
+    .catch(function(e){console.error('project pages loader',e)});
+})();
+</script>
