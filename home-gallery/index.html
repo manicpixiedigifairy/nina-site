@@ -71,6 +71,7 @@ body.flat-open .topbar::before{opacity:1}
 .intro{position:fixed;inset:0;z-index:10;pointer-events:none}
 .intro>*{pointer-events:auto}
 .ticket{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);max-width:720px;margin:0 auto;display:grid;grid-template-columns:4.1rem 1fr;background:var(--paper);color:var(--ink);border-radius:6px;transform:rotate(.5deg);box-shadow:0 2px 0 rgba(0,0,0,.08),0 30px 60px -18px rgba(30,8,2,.65),0 10px 22px -10px rgba(30,8,2,.5);animation:stick .7s var(--ease) both .35s;transform-origin:30% 50%}
+@media (min-width:1100px){.ticket{left:auto;right:max(var(--gutter),5vw);top:0;bottom:0;height:fit-content;margin:auto 0;width:min(640px,50vw);max-width:none}}
 @keyframes stick{from{opacity:0;transform:rotate(-4deg) scale(1.06)}to{opacity:1;transform:rotate(.5deg) scale(1)}}
 .stub{position:relative;border-right:2px dashed rgba(38,20,13,.28);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:1.3rem 0;background:linear-gradient(180deg,#F1E3CB,#EAD8BC);border-radius:6px 0 0 6px}
 .stub::before,.stub::after{content:"";position:absolute;right:-11px;width:20px;height:20px;border-radius:50%;background:#000}
@@ -228,18 +229,17 @@ body.flat-open .topbar::before{opacity:1}
 .wr .card-x{color:var(--ink);top:.9rem;right:.9rem;background:rgba(31,47,120,.07)}
 
 /* ---------- search */
-.search{position:fixed;inset:0;z-index:50;overflow-y:auto;overscroll-behavior:contain;background:rgba(8,5,3,.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:calc(env(safe-area-inset-top,0px) + 80px) var(--gutter) 40px}
-.search-in{max-width:900px;margin:0 auto;background:var(--night);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,34px);display:grid;gap:1.15rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.search{position:fixed;inset:0;z-index:50;overflow-y:auto;overscroll-behavior:contain;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:calc(env(safe-area-inset-top,0px) + 80px) var(--gutter) 40px}
+.search-in{max-width:900px;margin:0 auto;background:#000;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,34px);display:grid;gap:1.15rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
 .search-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .search-top h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1;margin:0}
 .search-x{font-family:var(--label);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-soft);padding:.4rem 0}
 .search-x:hover{color:var(--gold)}
-.search-bar{display:flex;align-items:center;gap:.75rem;background:var(--paper);color:var(--ink);border-radius:999px;padding:.4rem .4rem .4rem 1.15rem}
+.search-bar{display:flex;align-items:center;gap:.75rem;background:var(--paper);color:var(--ink);border-radius:999px;padding:.4rem 1.15rem}
 .search-bar:focus-within{box-shadow:0 0 0 2px var(--gold)}
 .search-bar svg{flex:none}
 .search-bar input{flex:1;min-width:0;border:0;background:none;font-family:var(--label);font-size:1.05rem;color:var(--ink);padding:.7rem 0;outline:none}
 .search-bar input::placeholder{color:var(--ink-soft)}
-.search-bar .btn-primary{padding:.85rem 1.3rem;box-shadow:none}
 .search-label{font-family:var(--label);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-soft);margin:0 0 .65rem}
 .search-chips{display:flex;flex-wrap:wrap;gap:.5rem}
 .search-chips button{font-family:var(--label);font-size:.86rem;padding:.55rem 1.05rem;border-radius:999px;border:1px solid var(--line);color:var(--cream);transition:background .2s,color .2s,border-color .2s}
@@ -269,7 +269,7 @@ body.flat-open .topbar::before{opacity:1}
   .sr-thumb{width:56px;height:56px}
   .sr-acts{grid-column:1/-1;flex-direction:row}
   .sr-acts>*{flex:1}
-  .search-bar .btn-primary{display:none}
+
 }
 
 /* ---------- menu overlay (matches the sitewide menu) */
@@ -452,8 +452,7 @@ body.flat-open .topbar::before{opacity:1}
     <form id="searchForm" class="search-bar" role="search">
       <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.8" cy="6.8" r="5.1" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.7 10.7 L14.6 14.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <label for="searchQ" class="sr">Search by campaign, brand or category</label>
-      <input id="searchQ" type="search" placeholder="Search a campaign or brand" autocomplete="off" spellcheck="false" enterkeyhint="search">
-      <button type="submit" class="btn-primary">Search</button>
+      <input id="searchQ" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search">
     </form>
     <div class="search-recs"><p class="search-label">Recommended Searches:</p><div class="search-chips" id="searchChips"></div></div>
     <p id="searchCount" class="search-count" aria-live="polite"></p>
@@ -702,7 +701,7 @@ function runSearch(){
   const q=sQ.value.trim();
   document.querySelectorAll('#searchChips button').forEach(b=>b.classList.toggle('on',norm(b.textContent)===norm(q)));
   sRes.textContent='';
-  if(!q){ sCount.textContent='Search '+SEARCH.length+' campaigns across Commercials, Content and Experiential by name, brand or category.'; return; }
+  if(!q){ sCount.textContent=''; return; }
   const hits=SEARCH.map(it=>[scoreOf(it,q),it]).filter(h=>h[0]>0).sort((a,b)=>b[0]-a[0]||(a[1].gi<0)-(b[1].gi<0)).map(h=>h[1]);
   if(!hits.length){ sCount.textContent='No campaigns match \u201C'+q+'.\u201D Try a brand like Nike or a category like Beauty.'; return; }
   sCount.textContent=hits.length+(hits.length===1?' campaign':' campaigns')+' for \u201C'+q+'\u201D';
@@ -1439,12 +1438,17 @@ function updatePlayers(ms){
 
 /* ======================= camera state ======================= */
 const cam={ pos:new THREE.Vector3(0,EYE,8.4), yaw:0, pitch:-.02 };
-const ORBIT_H=17.5;
-const orbit={ a:-.72, r:70, h:ORBIT_H, target:new THREE.Vector3(0,4.6,0) };
+/* intro: a near-frontal view of the entrance, like a Pocket Gallery cover */
+const ORBIT_H=12.5, ORBIT_A=-.3, FRAME_H=17, FRAME_W=30;
+const orbit={ a:ORBIT_A, r:70, h:ORBIT_H, target:new THREE.Vector3(0,4.6,0) };
 const vo={x:0,y:0,tx:0,ty:0};
 let fovTarget=30, tween=null;
-function introRegion(){ const tk=$('#ticket'); const th=tk.offsetHeight; const top=68; const bot=th? innerHeight-24-th-14 : innerHeight-24; return {top, bot:Math.max(top+140,bot)}; }
-function setIntroOffsets(){ const {top,bot}=introRegion(); vo.tx=0; vo.ty=innerHeight/2-(top+bot)/2; }
+const sideBySide=()=>innerWidth>=1100;
+function introRegion(){
+  const g=Math.max(16,innerWidth*.04);
+  if(sideBySide()){ const tw=Math.min(640,innerWidth*.5), rg=Math.max(g,innerWidth*.05); return {left:g, right:innerWidth-rg-tw-32, top:68, bot:innerHeight-24}; }
+  const tk=$('#ticket'); const th=tk.offsetHeight; const top=68; const bot=th? innerHeight-24-th-14 : innerHeight-24; return {left:0, right:innerWidth, top, bot:Math.max(top+140,bot)}; }
+function setIntroOffsets(){ const {left,right,top,bot}=introRegion(); vo.tx=innerWidth/2-(left+right)/2; vo.ty=innerHeight/2-(top+bot)/2; }
 function applyOffsets(k){
   vo.x+=(vo.tx-vo.x)*k; vo.y+=(vo.ty-vo.y)*k;
   const W=innerWidth, Hh=innerHeight;
@@ -1551,13 +1555,13 @@ function showHud(){
 }
 function hideHud(){ $('#hud').hidden=true; for(const id of ['#btn2d','#btnHelp','#btnExit']){ const b=$(id); b.classList.add('off'); b.hidden=true; } }
 const helper=new THREE.PerspectiveCamera(); helper.rotation.order='YXZ';
-const introFov=()=>{ const {top,bot}=introRegion(); const f=(bot-top)/innerHeight, D=Math.hypot(orbit.r,orbit.h-orbit.target.y), asp=innerWidth/innerHeight;
-  const tv=Math.max(19/(0.92*f)/(2*D), 34/0.92/(2*D*asp)); return Math.min(72,Math.max(10,THREE.MathUtils.radToDeg(2*Math.atan(tv)))); };
+const introFov=()=>{ const {left,right,top,bot}=introRegion(); const fh=(bot-top)/innerHeight, fw=(right-left)/innerWidth, D=Math.hypot(orbit.r,orbit.h-orbit.target.y), asp=innerWidth/innerHeight;
+  const tv=Math.max(FRAME_H/(0.92*fh)/(2*D), FRAME_W/(0.92*fw)/(2*D*asp)); return Math.min(72,Math.max(10,THREE.MathUtils.radToDeg(2*Math.atan(tv)))); };
 function exitGallery(){
   if(state.mode!=='gallery') return;
   closeCard(); focused=-1; $('#coach').hidden=true; tween=null; keys.clear(); tip.hidden=true; ring.visible=false;
   state.mode='flying'; hideHud();
-  const start=cam.pos.clone(), inner=new THREE.Vector3(0,EYE,7.2), aEnd=-.72;
+  const start=cam.pos.clone(), inner=new THREE.Vector3(0,EYE,7.2), aEnd=ORBIT_A;
   const raw=[start,...detour(start,inner),inner,new THREE.Vector3(0,EYE,11.8),new THREE.Vector3(0,4.4,20),new THREE.Vector3(-18,13.5,45),new THREE.Vector3(Math.sin(aEnd)*orbit.r,ORBIT_H,Math.cos(aEnd)*orbit.r)];
   const pts=[raw[0]]; for(const q of raw.slice(1)) if(q.distanceTo(pts[pts.length-1])>.6) pts.push(q);
   flight={dir:'out',curve:new THREE.CatmullRomCurve3(pts,false,'centripetal',.5),t:0,dur:reduce?.01:4.2,fov0:camera.fov,q0:camera.quaternion.clone()};
@@ -1675,7 +1679,7 @@ function frame(now){
 
   if(state.mode==='intro'){
     stepSpring(dt);
-    if(!down && !reduce) orbit.a+=dt*.05;
+    if(!down){ const want=ORBIT_A+(reduce?0:.18*Math.sin(now/1000*.16)); orbit.a=lerpAng(orbit.a,want,Math.min(1,dt*.8)); orbit.h+=(ORBIT_H-orbit.h)*Math.min(1,dt*.8); }
     camera.position.set(Math.sin(orbit.a)*orbit.r,orbit.h,Math.cos(orbit.a)*orbit.r);
     camera.lookAt(orbit.target); camera.fov+=(introFov()-camera.fov)*Math.min(1,dt*4);
     setIntroOffsets(); applyOffsets(Math.min(1,dt*6));
