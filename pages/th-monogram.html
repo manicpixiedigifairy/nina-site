@@ -283,8 +283,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .h1{font-size:min(calc(var(--u)*4.4),16.2vw)}
 .th .h1 .ln>span{display:block}
 .th .cr{display:block;position:relative;margin-top:calc(var(--u)*2.2);padding-top:calc(var(--u)*1.4)}
-.th .stp{right:0;top:calc(var(--u)*1.4);width:calc(var(--u)*5.6)}
-.th .dk{font-size:calc(var(--u)*1.2);padding-right:calc(var(--u)*6.8)}
+.th .stp{display:none}
+.th .h1{text-align:center}
+.th .h1 .ln{text-align:center}
+.th .dk{font-size:calc(var(--u)*1.2);padding-right:0}
 .th .cvs{padding-top:calc(var(--u)*3.6);padding-bottom:calc(var(--u)*7.4)}
 .th .pl{margin-top:calc(var(--u)*-5.8)}
 .th .pl .fr{padding:calc(var(--u)*.5);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--cob),calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--red)}
@@ -597,6 +599,22 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     var vo=new IntersectionObserver(function(es){if(es[0].isIntersecting){vo.disconnect();armFilm()}},{rootMargin:'600px 0px'});
     vo.observe(vw);
   }else{armFilm()}
+  /* desktop: center the stamp between the end of the headline's first line and the MENU button */
+  var stp=document.querySelector('.stp'),h1l=document.querySelector('.h1 .l1');
+  function placeStamp(){
+    if(!stp||!h1l)return;
+    if(window.innerWidth<=1000){stp.style.left='';stp.style.right='';return}
+    var rg=document.createRange();rg.selectNodeContents(h1l);
+    var dR=rg.getBoundingClientRect().right,mL;
+    var nb=window.document.querySelector('.nlb'),lab=nb&&nb.querySelector('span');
+    if(lab){mL=lab.getBoundingClientRect().left}else if(nb){mL=nb.getBoundingClientRect().left}else{mL=window.innerWidth*.96-150}
+    var op=stp.offsetParent,ol=op?op.getBoundingClientRect().left:0,w=stp.getBoundingClientRect().width;
+    var tg=(dR+mL)/2;stp.style.right='auto';stp.style.left=Math.round(tg-w/2-ol)+'px';
+    var r=stp.getBoundingClientRect();stp.style.left=(parseFloat(stp.style.left)+Math.round(tg-(r.left+r.width/2)))+'px';
+  }
+  placeStamp();[400,1200,2800].forEach(function(t){setTimeout(placeStamp,t)});
+  window.addEventListener('resize',placeStamp);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(placeStamp);
   /* the interview strip loads its GIF when near the viewport */
   var si=document.querySelector('.fst .fc>img'),sw=document.querySelector('.fsw');
   function armStrip(){
