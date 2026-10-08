@@ -121,7 +121,7 @@ html,body{margin:0}
 .bf .tm::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230B2F7A'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230B2F7A'/%3E%3C/svg%3E");background-size:calc(var(--u)*10) calc(var(--u)*10)}
 .bf .tm>*{position:relative}
 .bf .tm .h2{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br)}
-.bf .tg{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:calc(var(--u)*3);align-items:stretch}
+.bf .tg{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:calc(var(--u)*3);align-items:stretch}
 .bf .ctl{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*2.4)}
 .bf .kw{position:relative;width:calc(var(--u)*26);height:calc(var(--u)*21)}
 .bf .kd{position:absolute;width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);margin:calc(var(--u)*-1.3) 0 0 calc(var(--u)*-1.3);border-radius:50%;display:grid;place-items:center;background:var(--y);color:var(--br);border:.14em solid var(--br);font:600 calc(var(--u)*1.1)/1 var(--lab);transition:transform .3s cubic-bezier(.3,1.8,.5,1),background .3s}
@@ -130,12 +130,12 @@ html,body{margin:0}
 .bf .kn.dr{transition:none;cursor:grabbing}
 .bf .kn::before{content:"";position:absolute;inset:calc(var(--u)*1.6);border-radius:50%;background:var(--b);border:calc(var(--u)*.3) solid var(--br)}
 .bf .kn i{position:absolute;left:50%;top:calc(var(--u)*.55);width:calc(var(--u)*1.1);height:calc(var(--u)*3.4);margin-left:calc(var(--u)*-.55);border-radius:99px;background:#fff;border:.14em solid var(--br);z-index:2}
-.bf .ers{display:flex;flex-direction:column;gap:calc(var(--u)*.9);width:100%;max-width:calc(var(--u)*26)}
-.bf .ers button{border:calc(var(--u)*.22) solid var(--br);background:#fff;color:var(--b2);font:600 calc(var(--u)*1.3)/1.1 var(--lab);padding:.75em 1.2em;border-radius:99px;cursor:pointer;text-align:left;box-shadow:0 .24em 0 var(--br);transition:transform .15s,background .2s,box-shadow .15s}
+.bf .ers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.9);width:100%;max-width:calc(var(--u)*34)}
+.bf .ers button{border:calc(var(--u)*.22) solid var(--br);background:#fff;color:var(--b2);font:600 calc(var(--u)*1.15)/1.1 var(--lab);padding:.7em 1em;border-radius:calc(var(--u)*1.6);cursor:pointer;text-align:left;box-shadow:0 .24em 0 var(--br);transition:transform .15s,background .2s,box-shadow .15s}
 .bf .ers button:hover{transform:translateY(-.08em)}
 .bf .ers button:active{transform:translateY(.2em);box-shadow:0 .04em 0 var(--br)}
 .bf .ers button[aria-checked="true"]{background:var(--y);color:var(--br)}
-.bf .stg{position:relative;aspect-ratio:16/9;border-radius:calc(var(--u)*2.4);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--br);overflow:hidden;isolation:isolate;background:var(--b)}
+.bf .stg{position:relative;width:100%;min-width:0;align-self:center;aspect-ratio:16/9;border-radius:calc(var(--u)*2.4);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--br);overflow:hidden;isolation:isolate;background:var(--b)}
 .bf .sc{position:absolute;inset:0;clip-path:circle(0% at 50% 50%);transition:clip-path 1s cubic-bezier(.7,0,.2,1)}
 .bf .sc.on{clip-path:circle(150% at 50% 50%)}
 .bf .sc.nt{transition:none}
@@ -144,7 +144,7 @@ html,body{margin:0}
 .bf .ins{position:absolute;z-index:3;left:calc(var(--u)*1.6);top:calc(var(--u)*1.6);width:26%;aspect-ratio:16/9;border:calc(var(--u)*.4) solid #fff;border-radius:calc(var(--u)*1);overflow:hidden;transform:rotate(-4deg);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--br)}
 .bf .ins img{width:100%;height:100%;object-fit:cover}
 .bf .sc::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(6,20,60,.45)),repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0,rgba(0,0,0,.07) 1px,transparent 1px,transparent 3px)}
-.bf .s0>img{object-position:50% 50%}.bf .s1>img{object-position:62% 50%}.bf .s2>img{object-position:60% 50%}.bf .s3>img{object-position:50% 50%}.bf .s4>img{object-position:30% 50%}
+.bf .s0>img{object-position:50% 50%}.bf .s1>img{object-position:62% 50%}.bf .s2>img{object-position:45% 50%}.bf .s3>img{object-position:50% 50%}.bf .s4>img{object-position:30% 50%}.bf .s5>img{object-position:50% 50%}.bf .s6>img{object-position:25% 50%}
 .bf .fl2{position:absolute;inset:0;z-index:5;pointer-events:none;background:#fff;opacity:0}
 .bf .fl2.go{animation:fz .7s ease-out}
 @keyframes fz{0%{opacity:.95}100%{opacity:0}}
@@ -187,20 +187,40 @@ html,body{margin:0}
 .bf .fl{background:var(--b2);padding:var(--sp) var(--g) calc(var(--sp)*1.1);position:relative;overflow:hidden;isolation:isolate}
 .bf .fl::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230A5CD6'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230A5CD6'/%3E%3C/svg%3E");background-size:calc(var(--u)*10) calc(var(--u)*10)}
 .bf .fl .h2{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br)}
-.bf .fv{position:relative}
-.bf .fc{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;margin:0;cursor:pointer;overflow:hidden;background:var(--nv);border:calc(var(--u)*.6) solid #fff;border-radius:calc(var(--u)*2.2);box-shadow:calc(var(--u)*1) calc(var(--u)*1) 0 var(--br);transform:rotate(-.6deg);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
-.bf .fc:hover{transform:rotate(0) scale(1.01)}
-.bf .fc>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.bf .fc iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
-.bf .fc .pb{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:calc(var(--u)*8);aspect-ratio:1;border-radius:50%;background:var(--y);border:calc(var(--u)*.4) solid var(--br);box-shadow:0 calc(var(--u)*.6) 0 var(--br);transition:transform .2s cubic-bezier(.3,1.8,.5,1),box-shadow .2s;animation:pbw 2.4s ease-in-out infinite}
-.bf .fc .pb::after{content:"";display:block;margin-left:12%;width:36%;aspect-ratio:1;background:var(--br);clip-path:polygon(0 0,100% 50%,0 100%)}
-@keyframes pbw{0%,100%{rotate:0deg}50%{rotate:6deg}}
-.bf .fc:hover .pb{transform:translate(-50%,-50%) scale(1.12)}
-.bf .fc:active .pb{transform:translate(-50%,calc(-50% + var(--u)*.4)) scale(1.04);box-shadow:0 calc(var(--u)*.2) 0 var(--br)}
-.bf .fc.on>img,.bf .fc.on .pb{display:none}
-.bf .fv .dc{position:absolute;z-index:4;width:calc(var(--u)*13);pointer-events:none}
-.bf .fv .dc.a{right:calc(var(--u)*-2);top:calc(var(--u)*-5);transform:rotate(18deg)}
-.bf .fv .dc.b{left:calc(var(--u)*-3);bottom:calc(var(--u)*-3);width:calc(var(--u)*16);transform:rotate(-12deg)}
+.bf .vg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*3.4)}
+.bf .vc{position:relative}
+.bf .vt{display:flex;align-items:center;gap:.7em;margin:0 0 calc(var(--u)*1.4);font:600 calc(var(--u)*1.5)/1.1 var(--lab);color:#fff}
+.bf .vt b{padding:.35em .9em .4em;border-radius:99px;background:var(--y);color:var(--br);box-shadow:0 .16em 0 var(--br)}
+.bf .vlt{position:relative;aspect-ratio:16/9;border:calc(var(--u)*.6) solid #fff;border-radius:calc(var(--u)*2.2);box-shadow:calc(var(--u)*1) calc(var(--u)*1) 0 var(--br);overflow:hidden;background:var(--nv);isolation:isolate}
+.bf .vlt>.bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.38) saturate(.75)}
+.bf .vlt .cvv{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
+.bf .lk{position:absolute;inset:0;z-index:3;width:100%;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;transition:opacity .5s ease,transform .7s ease}
+.bf .lk svg{display:block;width:46%;height:auto;overflow:visible;margin-top:-2%}
+.bf .lk:hover:not([aria-disabled]) svg{animation:wob .5s ease-in-out infinite}
+.bf .lk .tap{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);padding:.55em 1.3em .6em;border-radius:99px;background:var(--y);color:var(--br);font:600 calc(var(--u)*1.25)/1 var(--lab);box-shadow:0 .2em 0 var(--br);white-space:nowrap;animation:hn 1.8s ease-in-out infinite}
+.bf .vlt.open .lk{opacity:0;transform:scale(1.25);pointer-events:none}
+.bf .vlt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:vfi .7s ease}
+@keyframes vfi{from{opacity:0}to{opacity:1}}
+.bf .vlt .glow{opacity:0;transform-box:fill-box;transform-origin:50% 50%;transform:scale(.4);transition:opacity .6s ease,transform .9s cubic-bezier(.3,1.5,.5,1)}
+.bf .vlt.opening .glow{opacity:1;transform:scale(1)}
+.bf .v1 .lid{transform-box:fill-box;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.3,1.7,.5,1) .55s}
+.bf .v1.opening .lid{transform:translate(-4px,-62px) rotate(-8deg) scaleY(.62)}
+.bf .v1 .lockg{transform-box:fill-box;transform-origin:50% 50%}
+.bf .v1.opening .lockg{animation:lkf .9s cubic-bezier(.5,0,.8,.4) .1s forwards}
+@keyframes lkf{0%{transform:rotate(0)}15%{transform:rotate(-10deg)}30%{transform:rotate(9deg)}45%{transform:rotate(-7deg)}100%{transform:translateY(160px) rotate(24deg);opacity:0}}
+.bf .v1 .coins{transform-box:fill-box;transform-origin:50% 100%;transform:translateY(8px);transition:transform .7s cubic-bezier(.3,1.6,.5,1) .7s}
+.bf .v1.opening .coins{transform:translateY(-10px)}
+.bf .v2 .face path{fill:#2A0F02;transition:fill .25s}
+.bf .v2.opening .face path{fill:#FFE931}
+.bf .v2 .pk2{transform-box:fill-box;transform-origin:50% 100%}
+.bf .v2.opening .pk2{animation:ppop .9s cubic-bezier(.3,1.7,.5,1) .15s}
+@keyframes ppop{0%{transform:scale(1)}25%{transform:scale(.9,1.08) rotate(-3deg)}55%{transform:scale(1.14,.94) rotate(2deg)}100%{transform:scale(1.06)}}
+.bf .vl{display:inline-block;margin-top:calc(var(--u)*1.4);color:#fff;font:600 calc(var(--u)*1.1)/1 var(--lab);text-decoration:underline;text-underline-offset:.25em}
+.bf .vl:hover{color:var(--y)}
+.bf .vs{position:absolute;z-index:6;width:calc(var(--u)*14);aspect-ratio:16/9;border:calc(var(--u)*.4) solid #fff;border-radius:calc(var(--u)*1);overflow:hidden;box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--br);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
+.bf .vs img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.bf .vs.a{right:calc(var(--u)*-1.6);top:calc(var(--u)*-1.8)}
+.bf .vs.b{right:calc(var(--u)*-1.6);top:calc(var(--u)*-1.8)}
 
 /* BANNER + FOOTER */
 .bf .bn{background:var(--y);line-height:0}
@@ -214,6 +234,8 @@ html,body{margin:0}
 
 /* MOBILE */
 @media(max-width:1000px){
+.bf .vg{grid-template-columns:minmax(0,1fr);gap:3rem}
+.bf .vs{width:calc(var(--u)*14)}
 .bf .hero{grid-template-columns:minmax(0,1fr);padding-bottom:calc(var(--u)*14)}
 .bf .obj{width:min(100%,calc(var(--u)*36));margin-top:calc(var(--u)*2)}
 .bf .pn{left:30%;top:36%;width:70%}
@@ -262,13 +284,12 @@ html,body{margin:0}
 .bf .st.s4{right:3%;top:5%;width:42%}
 .bf .ct{font-size:1rem;bottom:1rem}
 .bf .pop{font-size:2.2rem}
-.bf .fc{border-width:.4rem;border-radius:1.2rem}
-.bf .fc .pb{width:4.6rem}
-.bf .fv .dc{display:none}
+.bf .vlt{border-width:.4rem;border-radius:1.2rem}
+.bf .vt{font-size:1rem}.bf .lk .tap{font-size:.85rem}.bf .vs{width:6.6rem}.bf .vl{font-size:.9rem}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .rings i,.bf .hint,.bf .fc .pb{animation:none}
+.bf .tt .ch,.bf .rings i,.bf .hint,.bf .lk .tap{animation:none}
 .bf .sc{transition-duration:.01s}
 }
 </style></head>
@@ -344,29 +365,35 @@ html,body{margin:0}
   <div class="tg">
     <div class="ctl rv">
       <div class="kw" aria-hidden="true">
-        <span class="kd on" style="left:calc(50% + var(--u)*-9.36);top:calc(var(--u)*12.85)">1</span>
-        <span class="kd" style="left:calc(50% + var(--u)*-6.11);top:calc(var(--u)*7.22)">2</span>
-        <span class="kd" style="left:calc(50% + var(--u)*0.00);top:calc(var(--u)*5.00)">3</span>
-        <span class="kd" style="left:calc(50% + var(--u)*6.11);top:calc(var(--u)*7.22)">4</span>
-        <span class="kd" style="left:calc(50% + var(--u)*9.36);top:calc(var(--u)*12.85)">5</span>
+        <span class="kd on" style="left:calc(50% + var(--u)*-9.50);top:calc(var(--u)*14.50)">1</span>
+        <span class="kd" style="left:calc(50% + var(--u)*-8.23);top:calc(var(--u)*9.75)">2</span>
+        <span class="kd" style="left:calc(50% + var(--u)*-4.75);top:calc(var(--u)*6.27)">3</span>
+        <span class="kd" style="left:calc(50% + var(--u)*0.00);top:calc(var(--u)*5.00)">4</span>
+        <span class="kd" style="left:calc(50% + var(--u)*4.75);top:calc(var(--u)*6.27)">5</span>
+        <span class="kd" style="left:calc(50% + var(--u)*8.23);top:calc(var(--u)*9.75)">6</span>
+        <span class="kd" style="left:calc(50% + var(--u)*9.50);top:calc(var(--u)*14.50)">7</span>
         <div class="kn" id="bfKn"><i></i></div>
       </div>
       <div class="ers" role="radiogroup" aria-label="Choose a scene">
         <button type="button" role="radio" aria-checked="true" data-e="0">Today</button>
         <button type="button" role="radio" aria-checked="false" data-e="1">Golden Age of Pirates</button>
-        <button type="button" role="radio" aria-checked="false" data-e="2">The Ruins</button>
-        <button type="button" role="radio" aria-checked="false" data-e="3">The Throne Room</button>
-        <button type="button" role="radio" aria-checked="false" data-e="4">The Showdown</button>
+        <button type="button" role="radio" aria-checked="false" data-e="2">Pirate Duel</button>
+        <button type="button" role="radio" aria-checked="false" data-e="3">Ancient Rome</button>
+        <button type="button" role="radio" aria-checked="false" data-e="4">The Ruins</button>
+        <button type="button" role="radio" aria-checked="false" data-e="5">The Throne Room</button>
+        <button type="button" role="radio" aria-checked="false" data-e="6">The Showdown</button>
       </div>
     </div>
     <div class="stg rv" id="bfStg" data-e="0" style="--d:.1s">
       <div class="sc s0 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-end.gif?v=1" alt="" width="600" height="337"></div>
       <div class="sc s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy"><div class="ins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div></div>
-      <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-1.webp?v=1" alt="" width="1200" height="676"></div>
-      <div class="sc s3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-2.webp?v=1" alt="" width="1200" height="676"></div>
-      <div class="sc s4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-still-3.webp?v=1" alt="" width="1400" height="788"></div>
+      <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-pirate.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
+      <div class="sc s3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-rome.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
+      <div class="sc s4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-ruins.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
+      <div class="sc s5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-throne.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
+      <div class="sc s6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-showdown.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="fl2" id="bfFz" aria-hidden="true"></div>
-      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 5</span><b class="ern" id="bfEt">Today</b><p class="erd" id="bfEd">The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.</p></div>
+      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 7</span><b class="ern" id="bfEt">Today</b><p class="erd" id="bfEd">The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.</p></div>
     </div>
   </div>
 </section>
@@ -387,10 +414,28 @@ html,body{margin:0}
 </section>
 
 <section class="fl" id="bfFl">
-  <div class="hd rv"><div><span class="lb">Watch the Film: Never Ever</span><h2 class="h2">Press Play</h2></div><p class="sub">Shortform, built for sharing.</p></div>
-  <div class="fv rv">
-    <button class="fc" type="button" data-v="1051746090" data-h="5f9d4b5a73" data-t="Butterfinger Never Ever" aria-label="Play the Butterfinger Never Ever film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bfi.webp?v=1" alt="" width="1200" height="677"><span class="pb" aria-hidden="true"></span></button>
-    <img class="dc a" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-peanuts.webp?v=1" alt="" width="1700" height="1204">
+  <div class="hd rv"><div><span class="lb">Watch the Films: Never Ever</span><h2 class="h2">Unlock the Films</h2></div><p class="sub">Open the chest. Light the pumpkin.</p></div>
+  <div class="vg">
+    <div class="vc rv">
+      <p class="vt"><b>Film 1</b>The Golden Age of Pirates</p>
+      <div class="vlt v1" data-k="v" data-src="https://player.vimeo.com/video/1051746090?h=5f9d4b5a73&amp;app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="Butterfinger Never Ever, Film 1">
+        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy">
+        <canvas class="cvv" aria-hidden="true"></canvas>
+        <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><svg viewBox="0 0 400 300" aria-hidden="true"><defs><radialGradient id="bfCg"><stop offset="0" stop-color="#FFE931" stop-opacity=".95"/><stop offset="1" stop-color="#FFE931" stop-opacity="0"/></radialGradient></defs><ellipse cx="200" cy="272" rx="176" ry="15" fill="rgba(0,0,0,.4)"/><circle class="glow" cx="200" cy="120" r="170" fill="url(#bfCg)"/><ellipse cx="200" cy="142" rx="138" ry="20" fill="#2A1204"/><g class="coins"><circle cx="150" cy="140" r="15" fill="#F2B01E" stroke="#3B1B09" stroke-width="4"/><circle cx="190" cy="132" r="16" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/><circle cx="232" cy="138" r="16" fill="#F2B01E" stroke="#3B1B09" stroke-width="4"/><circle cx="262" cy="144" r="13" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/><circle cx="214" cy="126" r="13" fill="#FFE931" stroke="#3B1B09" stroke-width="4"/></g><g class="body"><rect x="62" y="142" width="276" height="124" rx="12" fill="#8F4A1B" stroke="#3B1B09" stroke-width="6"/><path d="M66 192H334M66 230H334" stroke="#6A3410" stroke-width="4"/><rect x="100" y="142" width="28" height="124" fill="#F2B01E" stroke="#3B1B09" stroke-width="5"/><rect x="272" y="142" width="28" height="124" fill="#F2B01E" stroke="#3B1B09" stroke-width="5"/><g class="lockg"><rect x="174" y="150" width="52" height="56" rx="9" fill="#FFE931" stroke="#3B1B09" stroke-width="5"/><circle cx="200" cy="173" r="8" fill="#3B1B09"/><rect x="197" y="175" width="6" height="18" rx="3" fill="#3B1B09"/></g></g><g class="lid"><path d="M62 144C62 72 120 44 200 44S338 72 338 144Z" fill="#A45A22" stroke="#3B1B09" stroke-width="6" stroke-linejoin="round"/><path d="M100 62H128V142H100Z M272 62H300V142H272Z" fill="#F2B01E" stroke="#3B1B09" stroke-width="5" stroke-linejoin="round"/><path d="M70 106C100 80 300 80 330 106" fill="none" stroke="#7B3B12" stroke-width="4" opacity=".6"/></g></svg><span class="tap">Tap the Chest</span></button>
+      </div>
+      <a class="vl" href="https://vimeo.com/1051746090/5f9d4b5a73" target="_blank" rel="noopener">Watch on Vimeo</a>
+      <div class="vs a" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div>
+    </div>
+    <div class="vc rv" style="--d:.1s">
+      <p class="vt"><b>Film 2</b>The Headless Horseman</p>
+      <div class="vlt v2" data-k="y" data-src="https://www.youtube-nocookie.com/embed/wENnrEy3Sn0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" data-t="Butterfinger Never Ever, Film 2">
+        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-horseman.gif?v=1" alt="" width="640" height="360" loading="lazy">
+        <canvas class="cvv" aria-hidden="true"></canvas>
+        <button class="lk" type="button" aria-label="Unlock Film 2 by lighting the pumpkin"><svg viewBox="0 0 300 280" aria-hidden="true"><defs><radialGradient id="bfPg"><stop offset="0" stop-color="#FFB02E" stop-opacity=".9"/><stop offset="1" stop-color="#FF7A1A" stop-opacity="0"/></radialGradient></defs><ellipse cx="150" cy="266" rx="124" ry="12" fill="rgba(0,0,0,.45)"/><circle class="glow" cx="150" cy="150" r="170" fill="url(#bfPg)"/><g class="pk2"><path d="M146 52C142 30 152 14 172 8L178 20C166 26 164 36 168 52Z" fill="#4C6B1F" stroke="#2A0F02" stroke-width="6" stroke-linejoin="round"/><ellipse cx="78" cy="156" rx="64" ry="100" fill="#D9701A" stroke="#2A0F02" stroke-width="6"/><ellipse cx="222" cy="156" rx="64" ry="100" fill="#D9701A" stroke="#2A0F02" stroke-width="6"/><ellipse cx="114" cy="156" rx="58" ry="106" fill="#F28A1E" stroke="#2A0F02" stroke-width="6"/><ellipse cx="186" cy="156" rx="58" ry="106" fill="#F28A1E" stroke="#2A0F02" stroke-width="6"/><ellipse cx="150" cy="156" rx="50" ry="108" fill="#FF9B2E" stroke="#2A0F02" stroke-width="6"/><g class="face"><path d="M96 118L132 130L100 162Z"/><path d="M204 118L168 130L200 162Z"/><path d="M150 152L136 176H164Z"/><path d="M84 190L112 210L132 194L150 212L168 194L188 210L216 190L204 228Q150 250 96 228Z"/></g></g></svg><span class="tap">Light the Pumpkin</span></button>
+      </div>
+      <a class="vl" href="https://youtu.be/wENnrEy3Sn0" target="_blank" rel="noopener">Watch on YouTube</a>
+      <div class="vs b" data-st data-r="-5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-halloween.gif?v=1" alt="" width="640" height="360" loading="lazy"></div>
+    </div>
   </div>
 </section>
 
@@ -462,6 +507,7 @@ obj.setAttribute('aria-pressed',broken?'true':'false');
   }
 }
 obj.addEventListener('click',function(){breakBar()});
+setTimeout(function(){if(!broken)breakBar()},1900);
 obj.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){e.preventDefault();breakBar(true)}});
 
 /* peanut parallax (mouse + scroll) */
@@ -533,10 +579,12 @@ fa.addEventListener('click',function(){
 
 /* time machine */
 var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),fz=q('#bfFz');
-var ANG=[-80,-40,0,40,80],cur=0,zi=1,kAng=-80;
+var ANG=[-90,-60,-30,0,30,60,90],cur=0,zi=1,kAng=-90;
 var ERA=[
  ['Today','The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.'],
  ['Golden Age of Pirates','Time travel sends the task force to the golden age of pirates to recover a stolen Butterfinger.'],
+ ['Pirate Duel','Time travel sends the task force back to recover a stolen Butterfinger.'],
+ ['Ancient Rome','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['The Ruins','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['The Throne Room','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['The Showdown','Time travel sends the task force back to recover a stolen Butterfinger.']
@@ -558,7 +606,7 @@ function setEra(i){
   fz.classList.remove('go');void fz.offsetWidth;fz.classList.add('go');
   q('#bfEn').textContent='Scene '+(i+1)+' of '+ANG.length;q('#bfEt').textContent=ERA[i][0];q('#bfEd').textContent=ERA[i][1];
 }
-kn.style.transform='rotate(-80deg)';
+kn.style.transform='rotate(-90deg)';
 ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.getAttribute('data-e'),10))})});
 (function(){
   var dr=false,moved=false,off=0,cx=0,cy=0;
@@ -571,7 +619,7 @@ ebs.forEach(function(b){b.addEventListener('click',function(){setEra(parseInt(b.
   });
   kn.addEventListener('pointermove',function(e){
     if(!dr)return;
-    var a=cl(ang(e)-off,-95,95);
+    var a=cl(ang(e)-off,-105,105);
     if(Math.abs(a-kAng)>1.5)moved=true;
     kAng=a;kn.style.transform='rotate('+a+'deg)';
   });
@@ -603,13 +651,13 @@ function Crumbs(cv,host){
     });
     if(parts.length){requestAnimationFrame(stepc)}else{on=false;ctx.clearRect(0,0,cv.width,cv.height)}
   }
-  return {fit:fit,burst:function(x,y,m){
+  return {fit:fit,burst:function(x,y,m,pal){
     if(!ctx)return;m=m||1;
     var s0=Math.max(5,host.clientWidth*.007)*dpr;
     for(var i=0;i<Math.round(34*m);i++){
       var an=-Math.PI/2+(Math.random()-.5)*Math.PI*1.6,sp=(380+Math.random()*760)*dpr*(m>1?1.3:1),n=3+Math.floor(Math.random()*3),k=[];
       for(var j=0;j<n;j++)k.push(Math.random());
-      parts.push({x:x*dpr,y:y*dpr,vx:Math.cos(an)*sp,vy:Math.sin(an)*sp,r:Math.random()*6,vr:(Math.random()-.5)*16,s:s0*(.8+Math.random()*1.7),n:n,k:k,c:COL[Math.floor(Math.random()*COL.length)],l:.9+Math.random()*.7});
+      parts.push({x:x*dpr,y:y*dpr,vx:Math.cos(an)*sp,vy:Math.sin(an)*sp,r:Math.random()*6,vr:(Math.random()-.5)*16,s:s0*(.8+Math.random()*1.7),n:n,k:k,c:(pal||COL)[Math.floor(Math.random()*(pal||COL).length)],l:.9+Math.random()*.7});
     }
     if(!on){on=true;t0=performance.now();requestAnimationFrame(stepc)}
   }};
@@ -636,14 +684,23 @@ pk.addEventListener('click',function(e){
 });
 pk.addEventListener('animationend',function(){pk.classList.remove('jt')});
 
-/* film facade */
-qa('.fc').forEach(function(b){
-  b.addEventListener('click',function(){
-    if(b.classList.contains('on'))return;
-    b.classList.add('on');
-    b.insertAdjacentHTML('beforeend','<iframe src="https://player.vimeo.com/video/'+b.getAttribute('data-v')+'?'+(b.getAttribute('data-h')?'h='+b.getAttribute('data-h')+'&amp;':'')+'app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" title="'+b.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+/* vaults: chest and pumpkin unlock the films */
+var GOLD=['#FFE931','#F2B01E','#FFF3C4','#E89A2B'],FIRE=['#FFE931','#F28A1E','#D9701A','#FFF3C4'];
+qa('.vlt').forEach(function(box){
+  var btn=q('.lk',box),cvx=q('.cvv',box),cr=Crumbs(cvx,box),gold=box.getAttribute('data-k')==='v';
+  btn.addEventListener('click',function(){
+    if(box.classList.contains('opening'))return;
+    box.classList.add('opening');btn.setAttribute('aria-disabled','true');
+    var w=box.clientWidth,h=box.clientHeight;
+    setTimeout(function(){cr.burst(w*.5,h*.45,2,gold?GOLD:FIRE)},gold?700:300);
+    setTimeout(function(){cr.burst(w*.5,h*.45,1.2,gold?GOLD:FIRE)},gold?950:560);
+    setTimeout(function(){
+      box.insertAdjacentHTML('beforeend','<iframe src="'+box.getAttribute('data-src')+'" title="'+box.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>');
+      box.classList.add('open');
+    },1700);
   });
 });
+qa('.vs').forEach(function(e){sticker(e,q('#bfFl'))});
 })();
 </script>
 </body></html>
