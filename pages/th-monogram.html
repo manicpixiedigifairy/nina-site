@@ -99,7 +99,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .rls{margin-top:calc(var(--u)*6.4)}
 .th .rlh{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-bottom:calc(var(--u)*2.2);color:#fff}
 .th .rlh::after{content:'';flex:1;height:calc(var(--u)*.14);background:rgba(255,255,255,.5)}
-.th .rlr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
+.th .rlr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2);max-width:calc(var(--u)*78);margin-left:auto;margin-right:auto}
 .th .rl{position:relative}
 .th .rl .im{background:#000;border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);aspect-ratio:320/570;overflow:hidden}
 .th .rl img{width:100%;height:100%;object-fit:cover}
@@ -289,7 +289,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .id blockquote p{font-size:calc(var(--u)*1.4)}
 .th .vf{max-width:calc(var(--u)*16)}
 .th .rls{margin-top:calc(var(--u)*4)}
-.th .rlr{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.4);padding:0 calc(var(--u)*.6) calc(var(--u)*.6) 0}
+.th .rlr{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.4);padding:0 calc(var(--u)*.6) calc(var(--u)*.6) 0;max-width:none}
+.th .rlr .rl:last-child{grid-column:1/-1;justify-self:center;width:calc((100% - var(--u)*1.4)/2)}
 .th .rw .t2 span{display:inline}
 .th .sc2{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*3)}
 .th .sc2 .s4{order:1}.th .sc2 .s5{order:2}
@@ -412,7 +413,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-1-still.webp?v=2" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-1.gif?v=2" alt="" width="320" height="570" loading="lazy" decoding="async"></div></figure>
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-2-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-2.webp?v=1" alt="Split-screen security camera footage of a blonde woman in a tan jacket looking up from a brick stairwell, stamped CAMERA 05, with a TH timecode" width="320" height="570" loading="lazy" decoding="async"></div></figure>
       <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-3-still.webp?v=2" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-3.gif?v=2" alt="" width="320" height="570" loading="lazy" decoding="async"></div></figure>
-      <figure class="rl"><div class="im"><img class="rl-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-4-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-foot-4.webp?v=1" alt="Grainy black and white clip of a man with dark curly hair speaking into a microphone, subtitled we’re here at the Tommy Factory" width="320" height="570" loading="lazy" decoding="async"></div></figure>
     </div>
   </div></div>
 </section>
