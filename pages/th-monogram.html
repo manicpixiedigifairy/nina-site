@@ -70,6 +70,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .bl .t2 span{display:block}
 .th .qa{display:grid;grid-template-columns:calc(var(--u)*11) minmax(0,1fr);gap:calc(var(--u)*2);padding:calc(var(--u)*2.2) 0;border-top:calc(var(--u)*.16) solid var(--ink)}
 .th .qa:last-child{border-bottom:calc(var(--u)*.16) solid var(--ink)}
+.th .pbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);align-items:start;max-width:calc(var(--u)*68);margin:calc(var(--u)*6) auto 0}
+.th .pbs figure{mix-blend-mode:multiply;transform:rotate(-1.6deg)}
+.th .pbs figure:nth-child(2){transform:rotate(1.2deg) translateY(calc(var(--u)*1.6))}
+.th .pbs figure:nth-child(3){transform:rotate(-.8deg)}
+.th .pbs img{display:block;width:100%;height:auto}
 .th .qq{font:400 calc(var(--u)*4)/.95 var(--cn);text-transform:uppercase;color:var(--red)}
 .th .qq small{display:block;margin-top:calc(var(--u)*.6);font:700 calc(var(--u)*.7)/1.3 var(--ty);letter-spacing:.14em;color:var(--ink);opacity:.75}
 .th .qa p{font-size:calc(var(--u)*1.32);line-height:1.56;max-width:calc(var(--u)*46)}
@@ -120,11 +125,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .fx dt{font:700 calc(var(--u)*.7)/1.4 var(--ty);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .th .fx dd{font-weight:600;font-size:calc(var(--u)*1.05);line-height:1.35}
 .th .fx dt:last-of-type,.th .fx dd:last-of-type{border-bottom:0}
-.th .tz{position:relative}
+.th .tz{position:relative;width:100%;max-width:calc(var(--u)*25);margin:0 auto}
 .th .bst{position:absolute;z-index:6;right:calc(var(--u)*-2.2);top:calc(var(--u)*-3.8);width:calc(var(--u)*8.6);aspect-ratio:1;transform:rotate(12deg);filter:drop-shadow(calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--ink));pointer-events:none}
 .th .bst b{display:grid;place-items:center;width:100%;height:100%;background:var(--red);color:#fff;clip-path:polygon(50.0% 0.0%,58.0% 9.8%,69.1% 3.8%,72.8% 15.9%,85.4% 14.6%,84.1% 27.2%,96.2% 30.9%,90.2% 42.0%,100.0% 50.0%,90.2% 58.0%,96.2% 69.1%,84.1% 72.8%,85.4% 85.4%,72.8% 84.1%,69.1% 96.2%,58.0% 90.2%,50.0% 100.0%,42.0% 90.2%,30.9% 96.2%,27.2% 84.1%,14.6% 85.4%,15.9% 72.8%,3.8% 69.1%,9.8% 58.0%,0.0% 50.0%,9.8% 42.0%,3.8% 30.9%,15.9% 27.2%,14.6% 14.6%,27.2% 15.9%,30.9% 3.8%,42.0% 9.8%);font:400 calc(var(--u)*1.9)/.95 var(--cn);text-align:center;text-transform:uppercase;letter-spacing:.02em;padding-top:.1em}
 .th .tz .tw{position:relative;border:calc(var(--u)*.7) solid #fff;box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--ink);transform:rotate(-1deg);background:#fff}
-.th .tz .fc{aspect-ratio:16/9}
+.th .tz .fc{aspect-ratio:9/16}
 .th .tz .cp .ty{display:block;color:#fff}
 .th .tz .cp b{display:block;font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.02em;margin-top:calc(var(--u)*.3)}
 .th .sc2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,1fr);gap:calc(var(--u)*3);align-items:center;margin-top:calc(var(--u)*5.2)}
@@ -358,6 +363,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .h1 .ln>span{display:inline}
 }
 @supports (width:1cqw){@media(min-width:640px) and (max-width:1000px){.th .h1{font-size:min(calc(var(--u)*6.6),13.2cqw)}}}
+@media(max-width:640px){.th .pbs{grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*3.6)}.th .pbs figure:last-child{grid-column:1/-1;justify-self:center;width:calc((100% - var(--u)*1.6)/2)}.th .pbs figure:nth-child(2){transform:rotate(1.2deg)}}
 </style></head>
 <body>
 <div class="th" id="th">
@@ -399,7 +405,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <div class="qa"><h3 class="qq">Where?<small>The channels</small></h3><p>Instagram &amp; TikTok for interview content and campaign rollout, complemented by integration into the Fall 2022 NYFW runway show for broader exposure.</p></div>
       <div class="qa"><h3 class="qq">Why?<small>Cultural impact</small></h3><p>In a digital era where individuals curate personal brands, the campaign addressed the need to refresh Tommy Hilfiger’s heritage logo to resonate with modern audiences by emphasizing its representation of authenticity and self-expression.</p></div>
     </div>
-  </div></div>
+  </div>
+  <div class="pbs"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-strip-1.webp?v=2" alt="" width="720" height="936" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-strip-2.webp?v=2" alt="" width="720" height="936" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-strip-3.webp?v=2" alt="" width="720" height="936" loading="lazy" decoding="async"></figure></div></div>
 </section>
 
 <div class="tr a" style="--tc:var(--navy);--dc:rgba(255,255,255,.07)" aria-hidden="true"><b></b><i></i></div>
@@ -459,7 +466,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     </div>
     <div class="tz"><div class="bst" aria-hidden="true"><b>NYFW<br>’22</b></div>
       <div class="tw"><button class="fc" type="button" data-v="1126297435" data-t="Tommy Factory Teaser" aria-label="Play the Tommy Factory teaser">
-        <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-keyart.webp?v=1" alt="" width="1800" height="926" decoding="async" loading="lazy"><span class="pb" aria-hidden="true"></span><span class="cp"><span class="ty">Teaser</span><b>Tommy Factory</b></span></button></div>
+        <img class="tz-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-teaser.gif?v=1" alt="" width="360" height="640" decoding="async" loading="lazy"><span class="pb" aria-hidden="true"></span><span class="cp"><span class="ty">Teaser</span><b>Tommy Factory</b></span></button></div>
     </div>
   </div>
   <div class="sc2">
