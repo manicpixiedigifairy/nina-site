@@ -162,18 +162,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .prg figcaption{position:absolute;z-index:2;left:calc(var(--u)*.7);bottom:calc(var(--u)*.7);background:#fff;color:var(--ink);padding:.5em .8em}
 .th .st{background:var(--cob);color:#fff;padding:calc(var(--u)*7) 0 calc(var(--u)*8.4);overflow:hidden}
 .th .st .dots{--dc:rgba(255,255,255,.12)}
-.th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);list-style:none;margin:0;padding:0}
+.th .fl{position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4);list-style:none;margin:0;padding:0}
 .th .fv{position:relative;display:flex;flex-direction:column;gap:0;padding:0;background-color:var(--ink);background-image:radial-gradient(circle,rgba(255,255,255,.14) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22));background-size:calc(var(--u)*.75) calc(var(--u)*.75);border:calc(var(--u)*.45) solid #fff;box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 var(--red);overflow:hidden}
 .th .fp{position:relative;aspect-ratio:9/16;background:#000}
 .th .fp .fc{position:absolute;inset:0;width:100%;height:100%}
 .th .fc.ld iframe{z-index:0}
 .th .fc.ld>img{z-index:6}
-.th .fv:nth-child(even){box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 #000}
-.th .fv:nth-child(4){grid-column:2}
 .th .fh{display:flex;align-items:center;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.2) calc(var(--u)*1.4);color:#fff;font-size:calc(var(--u)*.74)}
 .th .fh .rec{flex:none;width:calc(var(--u)*.9);aspect-ratio:1;border-radius:50%;background:var(--red);box-shadow:0 0 0 calc(var(--u)*.14) #fff}
 .th .fh b{margin-left:auto;font:700 1em/1 var(--ty);color:var(--ink);background:#fff;padding:.35em .6em;letter-spacing:.06em}
-.th .fn{display:block;padding:calc(var(--u)*1.3) calc(var(--u)*1.4) calc(var(--u)*1.5);font:400 calc(var(--u)*2.6)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
+.th .fn{display:block;padding:calc(var(--u)*1.3) calc(var(--u)*1.1) calc(var(--u)*1.5);font:400 calc(var(--u)*1.7)/1 var(--cn);text-transform:uppercase;letter-spacing:.01em;color:#fff}
 .th .fn span{display:block;white-space:nowrap}
 .th .fn i{display:inline-block;margin:calc(var(--u)*.6) 0;padding:.3em .62em;font:700 calc(var(--u)*1)/1 var(--ty);font-style:normal;text-transform:lowercase;background:var(--red);color:#fff;transform:rotate(-4deg)}
 
@@ -326,8 +324,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .prg figure{flex-basis:calc((100% - var(--u)*.7)/2)}
 .th .fl{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
 .th .fv{box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--red)}
-.th .fv:nth-child(even){box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 #000}
-.th .fv:nth-child(4){grid-column:auto}
 .th .fh{padding:calc(var(--u)*1) calc(var(--u)*1.1)}
 .th .fn{padding:calc(var(--u)*1.1) calc(var(--u)*1.1) calc(var(--u)*1.3);font-size:calc(var(--u)*2.5)}
 .th .fn i{margin:calc(var(--u)*.5) 0;font-size:calc(var(--u)*.9)}
@@ -367,6 +363,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 }
 @supports (width:1cqw){@media(min-width:640px) and (max-width:1000px){.th .h1{font-size:min(calc(var(--u)*6.6),13.2cqw)}}}
 @media(max-width:1000px){.th .pbs{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*2.4)}.th .pbs figure:nth-child(2){transform:rotate(1.2deg)}}
+@media(min-width:641px) and (max-width:1000px){.th .fl{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.8)}.th .fn{font-size:calc(var(--u)*2)}}
 </style></head>
 <body>
 <div class="th" id="th">
