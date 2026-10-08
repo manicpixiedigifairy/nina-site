@@ -168,14 +168,14 @@ body.flat-open .topbar::before{opacity:1}
 .card-nav .count{color:var(--ink-soft);font-variant-numeric:tabular-nums}
 
 /* ---------- 2D catalogue */
-.flat{position:fixed;inset:0;z-index:16;overflow-y:auto;overscroll-behavior:contain;background:radial-gradient(120% 60% at 80% -10%,rgba(224,135,74,.28),transparent 60%),radial-gradient(90% 50% at 0% 0%,rgba(122,34,22,.4),transparent 60%),var(--night)}
-.flat-vig{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 80% 75% at 50% 46%,rgba(0,0,0,0) 42%,rgba(0,0,0,.5) 72%,rgba(0,0,0,.94) 100%);box-shadow:inset 0 0 160px 60px #000}
+.flat{position:fixed;inset:0;z-index:16;overflow-y:auto;overscroll-behavior:contain;background:linear-gradient(180deg,#000 0%,#000 14%,rgba(0,0,0,.82) 30%,rgba(0,0,0,0) 62%),radial-gradient(120% 60% at 80% 10%,rgba(224,135,74,.2),transparent 62%),radial-gradient(90% 50% at 0% 12%,rgba(122,34,22,.3),transparent 62%),var(--night)}
 .flat-in{position:relative;z-index:1;padding:calc(env(safe-area-inset-top,0px) + 104px) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 56px);display:grid;gap:clamp(36px,5vw,64px)}
-.flat-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end;gap:1.5rem 3rem}
+.flat-head{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);align-items:stretch;gap:1.5rem 3rem}
+.fh-main{display:grid;gap:1.2rem;min-width:0}
 .flat-head .eyebrow{color:var(--gold);grid-column:1/-1}
 .flat-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6.4vw,6rem);line-height:.98;margin:0;text-wrap:balance;letter-spacing:-.01em}
-.flat-head .side{display:grid;gap:1.2rem;justify-items:start}
-.flat-head .lede{color:var(--cream-soft);max-width:48ch;font-size:.92rem;line-height:1.65;text-wrap:balance}
+.flat-head .side{display:grid;place-items:center}
+.flat-head .lede{color:var(--cream-soft);max-width:64ch;font-size:.95rem;line-height:1.65;text-wrap:balance;margin:0}
 .flat-head .btn-primary{background:var(--gold);color:var(--ink)}
 .flat-head .btn-primary:hover{background:#FFE7A6}
 .wall{display:grid;gap:1rem}
@@ -280,6 +280,7 @@ body.flat-open .topbar::before{opacity:1}
   .plan{width:128px;padding:.6rem .6rem .7rem}
   .plan-dot{width:16px;height:16px;margin:-8px 0 0 -8px;font-size:.5rem}
   .flat-head,.flat-foot{grid-template-columns:1fr}
+  .flat-head .side{place-items:start}
   .wordmark{font-size:1.15rem}
   .tools{gap:.4rem}
   .chip{padding:.55rem .75rem;letter-spacing:.12em}
@@ -388,13 +389,14 @@ body.flat-open .topbar::before{opacity:1}
 </aside>
 
 <section id="flat" class="flat" hidden aria-label="Selected works in 2D">
-  <div class="flat-vig" aria-hidden="true"></div>
   <div class="flat-in">
     <header class="flat-head">
       <p class="eyebrow">Selected Works</p>
-      <h2>Bridging Culture &amp; Commerce</h2>
-      <div class="side">
+      <div class="fh-main">
+        <h2>Bridging Culture &amp; Commerce</h2>
         <p class="lede">The same campaigns as the gallery, in hanging order. Open any wall label for a quick breakdown, or go straight to the case study.</p>
+      </div>
+      <div class="side">
         <button id="flatTo3d" class="btn-primary" type="button">Enter the 3D Gallery</button>
       </div>
     </header>
