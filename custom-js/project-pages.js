@@ -21,7 +21,7 @@
         if(hb&&bt>hb+1)rows.push({t:nm(e),b:bt,h:Math.round(r.height),w:Math.round(r.width),x:Math.round(r.left),pb:cs.paddingBottom,mb:cs.marginBottom,mh:cs.minHeight,bg:cs.backgroundColor,anc:hosts.some(function(h){return e.contains(h)})});
       });
       rows.sort(function(a,b){return b.b-a.b||a.h-b.h});
-      var t=['nl-debug v10','html class: '+de.className,'viewport '+innerWidth+'x'+innerHeight+'  doc height '+de.scrollHeight+'  page block bottom '+hb+'  gap '+(de.scrollHeight-hb),'hosts found: '+hosts.length].concat(out);
+      var t=['nl-debug v11','html class: '+de.className,'viewport '+innerWidth+'x'+innerHeight+'  doc height '+de.scrollHeight+'  page block bottom '+hb+'  gap '+(de.scrollHeight-hb),'hosts found: '+hosts.length].concat(out);
       t.push('below the page block ('+rows.length+'):');
       rows.slice(0,12).forEach(function(r){t.push((r.anc?'[wraps page] ':'')+r.t+' x'+r.x+' w'+r.w+' h'+r.h+' bottom '+r.b+' padB '+r.pb+' marB '+r.mb+' minH '+r.mh+' bg '+r.bg)});
       var o=d.createElement('div');o.id='nl-dbg';o.textContent=t.join('\n');
@@ -73,7 +73,7 @@
     "html.nl-project .section-background,",
     "html.nl-project .section-border,",
     "html.nl-project [data-nl-hide]{display:none!important}",
-    "html.nl-project .nlb{position:absolute!important;top:0!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;height:56px!important;box-sizing:border-box!important;padding:0 1.3rem!important}",
+    "html.nl-project .nlb{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:auto!important;width:auto!important;transform:none!important;height:56px!important;box-sizing:border-box!important;padding:0 1.3rem!important;justify-content:center!important;background:#000!important;z-index:2147482000!important}",
     "}"].join("\n");
   var st=document.createElement('style');st.id='nl-project-css';st.textContent=CSS;(document.head||de).appendChild(st);
   if(isCore)return;
@@ -125,6 +125,30 @@
       });
     }
   }
+  /* Everywhere: remove whatever sits above the page block (theme top padding, header spacer, empty sections) so no black band shows at the top. */
+  function trimTop(){
+    if(!document.body)return;
+    var hosts=hostsList(),want=mq.matches?56:0;
+    function topOf(){var t=1e9,y=window.pageYOffset||0;hosts.forEach(function(h){var r=h.getBoundingClientRect();if(r.height>0)t=Math.min(t,r.top+y)});return t}
+    for(var pass=0;pass<3&&topOf()<1e9&&topOf()>want+1;pass++){
+      hosts.forEach(function(h){
+        for(var e=h.parentElement;e&&e!==de;e=e.parentElement){
+          var st=e.style;
+          if(!(e===document.body&&mq.matches))st.setProperty('padding-top','0','important');
+          if(e!==document.body)st.setProperty('margin-top','0','important');
+          st.setProperty('border-top-width','0','important');
+          for(var sib=e.previousElementSibling;sib;sib=sib.previousElementSibling){
+            if(/^(SCRIPT|STYLE|LINK|NOSCRIPT)$/.test(sib.tagName)||sib.classList.contains('nlb')||sib.classList.contains('nlm'))continue;
+            var cs=getComputedStyle(sib);
+            if(cs.display==='none'||cs.position==='fixed'||cs.position==='absolute')continue;
+            if(sib.id==='header'||sib.querySelector('.nlb,.nlm'))continue;
+            if(hosts.some(function(x){return sib.contains(x)}))continue;
+            sib.style.setProperty('display','none','important');
+          }
+        }
+      });
+    }
+  }
   function mark(){
     raf=0;
     if(!document.body)return;
@@ -148,6 +172,7 @@
     fit(document.querySelectorAll('.nl-up'));
     var b=document.querySelector('.nlb');
     if(b&&b.parentNode!==document.body){b.classList.add('nlf');document.body.appendChild(b);}
+    trimTop();
     trim();
   }
   function queue(){if(!raf)raf=requestAnimationFrame(mark)}

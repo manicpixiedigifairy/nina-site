@@ -59,6 +59,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .fb dd{font:400 calc(var(--u)*1.9)/1.05 var(--cn);text-transform:uppercase;letter-spacing:.02em}
 .th .fb div:nth-child(-n+2){color:var(--navy)}
 .th .fb div:nth-child(n+3){color:#fff}
+.th .fb div:nth-child(3){grid-column:3/5;text-align:center;transform:translateX(calc(25cqw - var(--u)*17.3))}
 
 /* BRIEF */
 .th .bf{background:var(--paper);padding:calc(var(--u)*7.4) 0 calc(var(--u)*8)}
@@ -189,11 +190,18 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 /* ROLE */
 .th .rl2{background:var(--ink);color:#fff;padding:calc(var(--u)*7.6) 0 calc(var(--u)*8)}
 .th .rl2 .dots{--dc:rgba(255,255,255,.06)}
-.th .rog{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*5);align-items:center}
+.th .rog{display:grid;grid-template-columns:auto minmax(0,1fr) calc(var(--u)*13);gap:calc(var(--u)*3);align-items:center}
 .th .rl2 .big{font:400 calc(var(--u)*13)/.86 var(--cn);text-transform:uppercase;color:#fff!important;text-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--red)}
 .th .rl2 .big span{display:block}
 .th .rl2 .big span:nth-child(2){color:transparent!important;-webkit-text-stroke:calc(var(--u)*.14) #fff;text-shadow:none}
 .th .rl2 p{font-size:calc(var(--u)*1.4);line-height:1.58;font-weight:500;max-width:calc(var(--u)*40)}
+.th .fsw{display:flex;justify-content:center}
+.th .fst{position:relative;width:calc(var(--u)*13);padding:calc(var(--u)*2.2) calc(var(--u)*2.1);background:#0b0b0d;transform:rotate(2deg);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--red)}
+.th .fst::before,.th .fst::after{content:'';position:absolute;top:calc(var(--u)*.5);bottom:calc(var(--u)*.5);width:calc(var(--u)*1.1);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Crect x='1' y='3' width='8' height='10' rx='2' fill='%23F3EFE5'/%3E%3C/svg%3E") repeat-y;background-size:100% calc(var(--u)*1.76)}
+.th .fst::before{left:calc(var(--u)*.45)}
+.th .fst::after{right:calc(var(--u)*.45)}
+.th .fst .fc{aspect-ratio:9/16;border:calc(var(--u)*.12) solid #2a2a30}
+.th .fst .fc .pb{width:calc(var(--u)*4.2)}
 
 /* FOOTER */
 .th .ft{background:var(--paper);border-top:calc(var(--u)*.4) solid var(--ink);padding:calc(var(--u)*2.6) 0}
@@ -210,7 +218,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th.js .gf.go path{animation:thDraw 1.3s var(--gd,.1s) cubic-bezier(.6,.05,.3,1) forwards}
 .th .tr{position:relative;z-index:7;height:calc(var(--u)*3.4);margin-top:calc(var(--u)*-3.4);pointer-events:none;filter:drop-shadow(0 calc(var(--u)*-.2) calc(var(--u)*.3) rgba(5,23,53,.3))}
 .th .tr b,.th .tr i{position:absolute;inset:0;display:block}
-.th .tr b{background:#fff}
+.th .tr b{background:#fff;bottom:1px}
 .th .tr i{background-color:var(--tc);background-image:radial-gradient(circle,var(--dc,transparent) 0 calc(var(--u)*.2),transparent calc(var(--u)*.22)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .02 0 0 0 0 .09 0 0 0 0 .21 1.2 0 0 0 -.66'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");background-size:calc(var(--u)*.95) calc(var(--u)*.95),240px 240px;background-position:0 calc(var(--u)*3.4),0 calc(var(--u)*3.4)}
 .th .tr.a b{clip-path:polygon(0.0% 31.0%,3.1% 41.1%,6.6% 28.4%,11.6% 17.2%,14.7% 61.9%,18.1% 61.7%,21.7% 52.1%,23.8% 43.9%,27.1% 19.5%,30.9% 14.2%,35.3% 17.9%,37.1% 4.4%,39.7% 47.5%,41.4% 24.8%,45.9% 52.5%,49.9% 24.0%,51.5% 59.4%,56.6% 52.5%,61.7% 0.0%,65.6% 13.0%,69.3% 56.4%,71.3% 29.1%,72.7% 60.8%,76.2% 24.6%,77.8% 4.5%,79.9% 39.0%,82.2% 48.3%,83.7% 16.7%,86.9% 5.4%,90.0% 20.6%,94.6% 59.8%,97.9% 47.0%,100.0% 7.3%,100% 100%,0 100%)}
 .th .tr.a i{clip-path:polygon(0.0% 43.9%,3.1% 52.3%,6.6% 39.1%,11.6% 36.8%,14.7% 74.0%,18.1% 78.4%,21.7% 67.5%,23.8% 56.2%,27.1% 38.3%,30.9% 25.8%,35.3% 35.6%,37.1% 15.8%,39.7% 62.6%,41.4% 37.4%,45.9% 65.7%,49.9% 45.6%,51.5% 79.0%,56.6% 66.2%,61.7% 20.7%,65.6% 25.5%,69.3% 71.2%,71.3% 49.4%,72.7% 78.5%,76.2% 35.8%,77.8% 26.4%,79.9% 51.6%,82.2% 61.4%,83.7% 36.0%,86.9% 19.4%,90.0% 34.2%,94.6% 70.7%,97.9% 58.1%,100.0% 24.3%,100% 100%,0 100%)}
@@ -274,6 +282,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .th .fb .w{grid-template-columns:1fr 1fr;row-gap:calc(var(--u)*1)}
 .th .fb dd{font-size:calc(var(--u)*1.35)}
 .th .fb div:nth-child(n+3){padding-top:calc(var(--u)*.4)}
+.th .fb div:nth-child(3){grid-column:1/-1;transform:none}
 .th .bf,.th .id,.th .rw,.th .ca,.th .rs,.th .rl2{padding-top:calc(var(--u)*4.6);padding-bottom:calc(var(--u)*4.8)}
 .th .st{padding-top:calc(var(--u)*4.4);padding-bottom:calc(var(--u)*5)}
 .th .t2,.th .bl .t2,.th .id .t2,.th .rw .t2,.th .ca .t2,.th .rs .t2{font-size:min(calc(var(--u)*4.2),12vw)}
@@ -430,9 +439,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       </div>
     </div>
     <div class="mgl">
-      <img class="cu" style="--cw:33.1%;--cl:1.5%;--cr:-3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-1.webp?v=1" alt="A person with voluminous dark curls, one hand raised to their head, in a mustard cropped cardigan, a blue monogram scarf and a burgundy leather skirt, cut out against the page" width="662" height="1000" loading="lazy" decoding="async">
+      <img class="cu" style="--cw:34.1%;--cl:.5%;--cr:-3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-1.webp?v=2" alt="A person with voluminous dark curls, one hand raised to their head, in a mustard cropped cardigan, a blue monogram scarf and a burgundy leather skirt, cut out against the page" width="682" height="1000" loading="lazy" decoding="async">
       <img class="cu" style="--cw:20.9%;--cl:38.5%;--cr:2.4deg;--cb:-6.5%" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-2.webp?v=1" alt="A person with long straight hair in a burgundy monogram-print scarf and matching leggings, seen from the side, cut out against the page" width="348" height="1000" loading="lazy" decoding="async">
-      <img class="cu" style="--cw:34.5%;--cl:62.3%;--cr:3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-4.webp?v=1" alt="A person with feathered black hair, red lipstick, a blue and black striped scarf and a camel monogram jacket, cut out against the page" width="677" height="1000" loading="lazy" decoding="async">
+      <img class="cu" style="--cw:36.5%;--cl:61.3%;--cr:3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-cut-4.webp?v=2" alt="A person with feathered black hair, red lipstick, a blue and black striped scarf and a camel monogram jacket, cut out against the page" width="717" height="1000" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -524,6 +533,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     <div>
       <p>I guided the campaign’s creative direction, developing social concepts and interview frameworks to highlight authentic stories, ensuring alignment with the brand’s prep heritage while targeting culturally savvy consumers.</p>
     </div>
+    <div class="fsw"><div class="fst"><button class="fc" type="button" data-v="824516459" data-h="3e741be880" data-t="Interview film" aria-label="Play the interview film">
+      <img class="fs-i" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-intv-still.webp?v=1" data-a="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/th-intv.gif?v=1" alt="" width="270" height="480" decoding="async" loading="lazy"><span class="pb" aria-hidden="true"></span></button></div></div>
   </div></div>
 </section>
 
@@ -570,6 +581,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
     var vo=new IntersectionObserver(function(es){if(es[0].isIntersecting){vo.disconnect();armFilm()}},{rootMargin:'600px 0px'});
     vo.observe(vw);
   }else{armFilm()}
+  /* the interview strip loads its GIF when near the viewport */
+  var si=document.querySelector('.fst .fc>img'),sw=document.querySelector('.fsw');
+  function armStrip(){
+    if(!si)return;
+    var a=new Image();a.onload=function(){si.src=si.getAttribute('data-a')};a.src=si.getAttribute('data-a');
+  }
+  if(sw&&'IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){if(es[0].isIntersecting){so.disconnect();armStrip()}},{rootMargin:'600px 0px'});
+    so.observe(sw);
+  }else{armStrip()}
   /* Vimeo facades: nothing loads until a click. Famebox covers stay up until the video is actually playing */
   var held=[];
   window.addEventListener('message',function(e){
