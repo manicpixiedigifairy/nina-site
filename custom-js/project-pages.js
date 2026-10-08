@@ -53,7 +53,7 @@
     "html.nl-project .nlb .ic{color:#fff!important}",
     "html.nl-project .nlb:hover,",
     "html.nl-project .nlb:hover span,",
-    "html.nl-project .nlb:hover .ic{color:#D7F34A!important}",
+    "html.nl-project .nlb:hover .ic{color:#F5D98A!important}",
     "@media (max-width:767px){",
     "html.nl-project,",
     "html.nl-project body{background:#000!important;margin:0!important;overflow-x:hidden!important}",
