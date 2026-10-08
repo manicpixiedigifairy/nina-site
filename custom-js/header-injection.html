@@ -1,0 +1,12 @@
+<script>
+/* Header Code Injection: one block that loads the project pages code and the sitewide MENU from GitHub. */
+(function(){
+  var B='https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/custom-js/';
+  ['project-pages.js','sitewide-menu.js'].forEach(function(f){
+    fetch(B+f)
+      .then(function(r){if(!r.ok)throw new Error(r.status);return r.text()})
+      .then(function(c){new Function(c)()})
+      .catch(function(e){console.error('loader '+f,e)});
+  });
+})();
+</script>
