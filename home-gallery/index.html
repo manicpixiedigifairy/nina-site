@@ -1056,7 +1056,7 @@ const roof = new THREE.Mesh(panel(2*E,2*E,roofHoles,{uvMeters:3}),matShell); roo
 const base = new THREE.Mesh(new THREE.PlaneGeometry(2*E,2*E),matOxDark); base.rotation.x=Math.PI/2; base.position.y=BASE; gallery.add(base);
 // portfolio version: file folders standing in the roof like files in a box, tabs named for the site sections
 if(!isNB){
-  const FOLD=[['COMMERCIALS',0x5A160F,'#F5D98A',7.6,-6.4],['CONTENT',0xD8B878,'#4A110B',4.3,-2.6],['EXPERIENTIAL',0xF5D98A,'#4A110B',1.0,1.2],['CREATIVE DNA',0x151012,'#F5D98A',-2.3,5.0],['ABOUT ME',0xF2E8D6,'#4A110B',-5.6,-4.4]];
+  const FOLD=[['COMMERCIALS',0x5A160F,'#F5D98A',7.6,-6.4],['CONTENT',0xD8B878,'#4A110B',4.3,-2.6],['EXPERIENTIAL',0xF5D98A,'#4A110B',1.0,1.2],['CREATIVE DNA',0x151012,'#F5D98A',-2.3,5.0],['EXTRAS',0xF2E8D6,'#4A110B',-5.6,-4.4]];
   const FW2=2*E-.7, HB=1.05, HT=.85, TW2=3.5, SL=.35, DEP=.12;
   FOLD.forEach(([label,col,ink,z,tx],k)=>{
     const sh=new THREE.Shape(); const L=tx-TW2/2, Rr=tx+TW2/2;
