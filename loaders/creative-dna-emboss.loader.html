@@ -1,0 +1,23 @@
+<div id="nl-host" style="display:block;min-height:100vh;background:#ED809D"></div>
+<script>
+(function(){
+  var URL_='https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/pages/creative-dna-emboss.html';
+  var host=document.getElementById('nl-host');
+  host.removeAttribute('id');
+  var root=host.attachShadow({mode:'open'});
+  fetch(URL_,{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.text()}).then(function(t){
+    var d=new DOMParser().parseFromString(t,'text/html');
+    d.querySelectorAll('link[rel=stylesheet],link[rel=preconnect]').forEach(function(l){
+      if(!document.head.querySelector('link[href="'+l.getAttribute('href')+'"]'))document.head.appendChild(l.cloneNode(true));
+    });
+    d.querySelectorAll('style[data-global]').forEach(function(s){document.head.appendChild(s.cloneNode(true));s.remove()});
+    var scripts=[];d.querySelectorAll('script').forEach(function(s){scripts.push(s.textContent);s.remove()});
+    var css='';d.querySelectorAll('style').forEach(function(s){css+=s.textContent;s.remove()});
+    var wrap=document.createElement('div');
+    wrap.innerHTML='<style>:host{display:block}'+css+'</style>'+d.body.innerHTML;
+    root.appendChild(wrap);
+    host.style.minHeight='0';
+    scripts.forEach(function(c){try{new Function('document',c)(root)}catch(e){console.error(e)}});
+  }).catch(function(e){root.innerHTML='<p style="color:#fff;font:14px sans-serif;padding:2rem">Content is loading slowly. Please refresh.</p>';console.error(e)});
+})();
+</script>

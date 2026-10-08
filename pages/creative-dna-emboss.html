@@ -1,0 +1,531 @@
+<style data-global>html,body{overflow-x:clip}#header,header#header,.Header,.header-announcement-bar-wrapper{display:none!important}</style>
+<title>Creative DNA Emboss</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: a letterpress booklet. An embossed cover, then the original two-page spreads bound into one open book whose pages turn as you scroll, then an embossed back cover. One typeface family inside; script only for "My" on the cover. */
+:root,:host{
+  /* palette: Pink Rose, Citron, Black Bean (paper is a pale tint of Pink Rose; deep is a shade of Black Bean; ink stays #1A1213) */
+  --pink:#ED809D;
+  --pink-pale:#C9C769;
+  --paper:#FBE3EA;
+  --red:#461312;
+  --red-deep:#260908;
+  --ink:#1A1213;
+  --sans:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --script:'Pinyon Script','Snell Roundhand','Apple Chancery',cursive;
+  --spine:64px;
+  --bar:54px;
+  --lx:2;--ly:2;
+  --em-base:var(--pink);--em-hi:rgba(255,255,255,.55);--em-lo:rgba(70,19,18,.34);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body,:host{background:var(--pink);color:var(--ink);overflow-x:clip}
+body,:host{font-family:var(--sans);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:900;text-wrap:balance;overflow-wrap:normal;max-width:100%}
+p{margin:0}
+
+.cond{font-family:var(--sans);font-variation-settings:"wdth" 62;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.88}
+.wide{font-family:var(--sans);font-variation-settings:"wdth" 125;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.84}
+.micro{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;line-height:1.4}
+.hl{color:var(--red);font-weight:800}
+
+.emboss{color:var(--em-base);text-shadow:calc(var(--lx) * -1px) calc(var(--ly) * -1px) 1px var(--em-hi),calc(var(--lx) * -2px) calc(var(--ly) * -2px) 6px var(--em-hi),calc(var(--lx) * 1px) calc(var(--ly) * 1px) 1px var(--em-lo),calc(var(--lx) * 2.5px) calc(var(--ly) * 3px) 9px var(--em-lo)}
+
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .1 0 0 0 0 .18 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.grain > *{position:relative;z-index:1}
+
+.stock{border-radius:14px;box-shadow:1px 1px 0 var(--edge,var(--red)),2px 2px 0 var(--edge,var(--red)),3px 3px 0 var(--edge,var(--red)),4px 4px 0 var(--edge,var(--red)),5px 5px 0 var(--edge,var(--red)),6px 6px 0 var(--edge,var(--red)),12px 18px 24px -12px rgba(70,19,18,.35)}
+.tilt{transform-style:preserve-3d;will-change:transform}
+
+/* spine */
+.spine{position:fixed;z-index:50;background:var(--red);color:var(--pink-pale);display:flex;align-items:center;left:0;right:0;top:0;height:calc(var(--bar) + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 14px 0 4px;gap:10px}
+.spine a{text-decoration:none}
+.spine .home{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;font-size:16px}
+.spine .vert{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.spine .title{font-family:var(--sans);font-variation-settings:"wdth" 125;font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.spine .meta{display:none}
+.spine .track-bar{flex:1;height:4px;background:rgba(201,199,105,.3);border-radius:4px;position:relative;overflow:hidden}
+.spine .fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--pink-pale)}
+.chapters{display:none}
+
+.book{position:relative;padding-top:var(--bar)}
+.stage,.track{position:relative}
+.panel{position:relative;padding:56px 18px;display:flex;flex-direction:column;gap:22px;overflow:hidden;perspective:1400px}
+
+/* covers */
+.p-cover,.p-back{background:var(--pink);min-height:calc(100svh - var(--bar));justify-content:center}
+.mark{position:relative;padding:20px 0}
+.mark h1,.mark h2{font-size:clamp(40px,12.4vw,190px)}
+.mark h1 span,.mark h2 span{display:block}
+.p-cover .mark h1{display:flex;align-items:flex-start;font-size:clamp(28px,9.2vw,150px)}
+.p-cover .mark h1 .cv-2{font-size:1.9em}
+.mark .my{flex:none;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--red);text-shadow:none;font-size:2.03em;line-height:1;margin:0 .06em 0 0;transform:skewX(24deg);transform-origin:50% 72%;-webkit-text-stroke:.02em currentColor;paint-order:stroke fill}
+.p-back{align-items:center;text-align:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--red);background:transparent;color:var(--red);cursor:pointer}
+.btn:hover{background:var(--red);color:var(--pink-pale)}
+
+/* ---------- the open book (phone default: pages stacked in reading order) ---------- */
+.p-book{padding:0;overflow:visible;perspective:none}
+.book-inner{position:static}
+.book3d{display:flex;flex-direction:column}
+.block,.endpaper{display:none}
+.base-left,.leaf{position:static}
+.face{position:relative}
+.pg{position:relative;padding:64px 20px 48px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.folio{margin-top:auto;padding-top:12px;opacity:.7}
+.bg-paper{background:var(--paper);--em-base:var(--paper);--em-lo:rgba(70,19,18,.22)}
+.bg-pink{background:var(--pink);--em-base:var(--pink)}
+.bg-pale{background:var(--pink-pale);--em-base:var(--pink-pale);--em-hi:rgba(255,255,240,.5);--em-lo:rgba(70,19,18,.3)}
+.bg-red{background:var(--red);color:var(--pink)}
+.bg-red .label{color:var(--pink-pale)}
+.bg-ink{background:var(--ink);color:var(--pink-pale)}
+.bg-ink .label{color:var(--pink)}
+.label{color:var(--red)}
+
+.sig{font-size:clamp(48px,14vw,90px);position:relative;isolation:isolate}
+.sig-my{display:block;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--pink-pale);font-size:1.7em;line-height:1;margin:0 0 -.19em -.04em;position:relative;z-index:-1}
+.sig-end{display:block;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--pink-pale);font-size:1.45em;line-height:1;margin:.04em 0 0 .3em}
+.sc{font-family:var(--script);font-weight:400;color:var(--red);font-size:1.5em;line-height:.8;letter-spacing:0}
+.ix-the{display:block;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--red);text-shadow:none;font-size:1.05em;line-height:1.1;margin:0 0 .04em}
+.stmt-text{font-variation-settings:"wdth" 88;font-weight:600;font-size:clamp(24px,6.6vw,34px);line-height:1.2;letter-spacing:-.01em}
+.lede{font-size:clamp(40px,12vw,72px)}
+.vbs{display:flex;flex-direction:column;gap:16px}
+.vb{padding:20px 20px 18px;display:flex;flex-direction:column;gap:10px}
+.vb p{font-variation-settings:"wdth" 70;font-weight:900;text-transform:uppercase;font-size:clamp(28px,8vw,44px);line-height:.92}
+.vb1{background:var(--paper)}
+.vb2{background:var(--ink);color:var(--pink);--edge:var(--red)}
+.vb2 .label{color:var(--pink-pale)}
+.ix-title{font-size:clamp(40px,11.6vw,90px)}
+.rows{list-style:none;margin:0;padding:0;border-top:1.5px solid currentColor}
+.rows li{border-bottom:1px solid currentColor}
+.rows button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;min-height:52px;padding:8px 0;font-variation-settings:"wdth" 70;font-weight:900;text-transform:uppercase;font-size:clamp(18px,5.4vw,26px);line-height:1}
+.rows button:hover .t{color:var(--red)}
+.rows button:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.rows .n{font-variation-settings:"wdth" 100;font-size:11px;letter-spacing:.14em;color:var(--red)}
+.rows .go{font-size:15px;color:var(--red)}
+.c-title{font-variation-settings:"wdth" 70;font-weight:900;text-transform:uppercase;font-size:clamp(30px,8.6vw,48px);line-height:.9}
+.c-body{font-size:16px;line-height:1.55}
+.links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:0 22px;border-radius:999px;background:var(--paper);color:var(--ink);text-decoration:none;font-variation-settings:"wdth" 80;font-weight:800;text-transform:uppercase;font-size:17px;--edge:var(--red-deep);transition:transform .15s}
+.links a:hover{transform:translate(-2px,-2px)}
+.links .ar{color:var(--red)}
+
+/* =================== DESKTOP =================== */
+@media (min-width:1024px) and (min-height:600px){
+  .book{padding-top:0}
+  .spine{top:0;bottom:0;right:auto;width:var(--spine);height:auto;flex-direction:column;padding:12px 0 18px;gap:18px}
+  .spine .vert{writing-mode:vertical-rl;transform:rotate(180deg);gap:20px}
+  .spine .title{font-size:14px}
+  .spine .meta{display:block}
+  .spine .track-bar{flex:1;width:4px;height:auto;min-height:60px}
+  .spine .fill{width:100%;height:0}
+  .chapters{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .chapters button{width:44px;height:28px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
+  .chapters button i{display:block;width:9px;height:9px;border-radius:50%;border:2px solid var(--pink-pale);transition:background .2s,transform .2s}
+  .chapters button.on i{background:var(--pink-pale);transform:scale(1.3)}
+
+  .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+  .track{display:flex;height:100%;width:max-content;padding-left:var(--spine);will-change:transform}
+  .panel{flex:none;height:100%;min-height:0;padding:clamp(28px,6vh,72px) clamp(40px,4vw,72px)}
+
+  .p-cover,.p-back{width:calc(100vw - var(--spine));align-items:center}
+  .mark h1{font-size:min(17vh,10.4vw)}
+  .p-cover .mark h1{font-size:min(15vh,8.4vw)}
+  .mark h2{font-size:min(19vh,11vw)}
+
+  /* the bound book */
+  .p-book{width:calc((100vw - var(--spine)) * 6.25);height:100%;flex:none}
+  .book-inner{position:absolute;top:0;left:0;width:calc(100vw - var(--spine));height:100%;display:grid;place-items:center;perspective:2600px;will-change:transform}
+  .book3d{display:block;position:relative;height:min(84vh,780px,calc((100vw - var(--spine) - 160px) * .655));aspect-ratio:1120/740;transform-style:preserve-3d;transform:rotateX(5deg)}
+  .block{display:block;position:absolute;top:0;height:100%;width:50%;background:var(--paper);transform:translateZ(-2px)}
+  .block.l{left:0;border-radius:12px 0 0 12px;box-shadow:-1px 1px 0 var(--red),-2px 2px 0 var(--red),-3px 3px 0 var(--red),-4px 4px 0 var(--red),-5px 5px 0 var(--red),-6px 6px 0 var(--red),-7px 7px 0 var(--red),-14px 34px 44px -14px rgba(70,19,18,.5)}
+  .block.r{right:0;border-radius:0 12px 12px 0;box-shadow:1px 1px 0 var(--red),2px 2px 0 var(--red),3px 3px 0 var(--red),4px 4px 0 var(--red),5px 5px 0 var(--red),6px 6px 0 var(--red),7px 7px 0 var(--red),14px 34px 44px -14px rgba(70,19,18,.5)}
+  .base-left{position:absolute;left:0;top:0;width:50%;height:100%;z-index:0}
+  .leaf{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}
+  .face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;container-type:size}
+  .face.back{transform:rotateY(180deg)}
+  .face.left{border-radius:12px 2px 2px 12px}
+  .face.right{border-radius:2px 12px 12px 2px}
+  .face.right::before,.face.left::before{content:"";position:absolute;top:0;bottom:0;width:12%;pointer-events:none;z-index:2}
+  .face.right::before{left:0;background:linear-gradient(to right,rgba(70,19,18,.2),rgba(70,19,18,0))}
+  .face.left::before{right:0;background:linear-gradient(to left,rgba(70,19,18,.2),rgba(70,19,18,0))}
+  .leaf .face::after{content:"";position:absolute;inset:0;background:#260908;opacity:calc(var(--sh,0) * .5);pointer-events:none;z-index:3}
+  .endpaper{display:block}
+  .pg{position:absolute;inset:0;min-height:0;padding:9cqw 8.5cqw 11cqw;gap:3.2cqw}
+  .folio{position:absolute;bottom:5cqw;margin:0;padding:0}
+  .face.left .folio{left:8.5cqw}
+  .face.right .folio{right:8.5cqw}
+
+  .sig{font-size:12.4cqw}
+  .stmt-text{font-size:5.6cqw}
+  .lede{font-size:9.4cqw}
+  .vbs{gap:3.6cqw}
+  .vb{padding:4cqw 4.4cqw}
+  .vb p{font-size:6.6cqw}
+  .ix-title{font-size:11cqw}
+  .rows button{min-height:max(44px,9cqw);font-size:4.6cqw;grid-template-columns:9cqw minmax(0,1fr) auto}
+  .c-title{font-size:8cqw}
+  .c-body{font-size:clamp(14px,3.1cqw,19px)}
+  .links{gap:3cqw}
+  .links a{min-height:max(48px,10.5cqw);font-size:3.6cqw}
+}
+
+/* loading block: a red letterpress plate; the name presses deeper into it as the booklet loads */
+.loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:var(--pink);transition:opacity .6s .2s,visibility 0s .8s}
+.ld-plate{--edge:var(--red-deep);--d:0;position:relative;width:min(78vw,360px);aspect-ratio:1;container-type:inline-size;background:var(--red);color:var(--pink-pale);padding:clamp(22px,8vw,30px);display:flex;flex-direction:column;justify-content:space-between;transition:transform .35s cubic-bezier(.3,.7,.3,1),box-shadow .35s}
+.ld-top{display:flex;justify-content:space-between;align-items:baseline;font-size:11px}
+.ld-name{font-size:19.5cqw;line-height:.84;color:var(--red);text-shadow:calc(var(--d) * -2px) calc(var(--d) * -2px) 1px rgba(237,128,157,.42),calc(var(--d) * -3px) calc(var(--d) * -3px) 7px rgba(237,128,157,.24),calc(var(--d) * 2px) calc(var(--d) * 2px) 1px rgba(0,0,0,.6),calc(var(--d) * 4px) calc(var(--d) * 5px) 10px rgba(0,0,0,.5)}
+.ld-name span{display:block}
+.ld-bar{height:3px;background:rgba(201,199,105,.3);border-radius:3px;overflow:hidden}
+.ld-bar i{display:block;height:100%;background:var(--pink-pale);transform-origin:0 50%;transform:scaleX(0)}
+.loader.out{opacity:0;visibility:hidden;pointer-events:none}
+.loader.out .ld-plate{transform:translate(5px,6px);box-shadow:0 0 0 var(--edge),12px 18px 24px -18px rgba(70,19,18,.2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="loader grain" id="loader" role="status" aria-label="Loading the booklet">
+  <div class="ld-plate stock">
+    <div class="ld-top micro"><span>Loading</span><span id="ldPct">000</span></div>
+    <div class="ld-name wide" aria-hidden="true"><span>Nina</span><span>Austin</span></div>
+    <div class="ld-bar" aria-hidden="true"><i id="ldFill"></i></div>
+  </div>
+</div>
+
+<nav class="spine" aria-label="Booklet">
+  <a class="home" href="https://www.byninaaustin.com" target="_blank" rel="noopener" aria-label="Nina Austin's portfolio">&larr;</a>
+  <div class="vert"><span class="title">Nina Austin</span><span class="meta micro">Methodology</span></div>
+  <div class="track-bar" aria-hidden="true"><div class="fill" id="fill"></div></div>
+  <div class="chapters" id="chapters"></div>
+</nav>
+
+<main class="book" id="book">
+ <div class="stage">
+  <div class="track" id="track">
+
+  <section class="panel p-cover grain" id="cover">
+    <div class="mark tilt" data-tilt="0.4">
+      <h1 class="wide emboss"><span class="my">My</span><span class="stack"><span>Creative</span><span class="cv-2">DNA</span></span></h1>
+    </div>
+  </section>
+
+  <section class="panel p-book" id="bookSection" aria-label="Approach and Method">
+   <div class="book-inner" id="bookInner">
+    <div class="book3d">
+      <div class="block l" aria-hidden="true"></div>
+      <div class="block r" aria-hidden="true"></div>
+
+      <div class="base-left">
+        <div class="face left bg-red"><div class="pg">
+          <h2 class="sig cond"><span class="sig-my">My</span>signature is the system behind <span class="sig-end">the story.</span></h2>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-paper"><div class="pg">
+          <p class="stmt-text">I’ve earned a reputation as a master <span class="sc">architect</span> of brand worlds, designing social-first ecosystems where a brand’s values become a point of view people choose to <span class="sc">follow</span>.</p>
+          <span class="micro folio">01</span>
+        </div></div>
+        <div class="face back left bg-pink"><div class="pg">
+          <h2 class="ix-title wide emboss">Approach</h2>
+          <ol class="rows">
+            <li><button type="button" data-spread="1"><span class="n">01</span><span class="t">A real idea can carry a system.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="2"><span class="n">02</span><span class="t">The audience is the co-author.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="2"><span class="n">03</span><span class="t">Human truth, built to scale.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="3"><span class="n">04</span><span class="t">Strategy is the engine.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="3"><span class="n">05</span><span class="t">Social is not a lesser craft.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+          </ol>
+          <span class="micro folio">02</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-paper"><div class="pg">
+          <span class="micro label">No. 01</span>
+          <h3 class="c-title">A real idea can carry a system.</h3>
+          <p class="c-body">I know a campaign tag or concept works when its language can hold an entire platform: clear rules, a repeatable narrative spine, and a defined voice. That architecture is what lets one big idea extend across TVC, creator partnerships, and brand-led experiences without losing the thread.</p>
+          <span class="micro folio">03</span>
+        </div></div>
+        <div class="face back left bg-pale"><div class="pg">
+          <span class="micro label">No. 02</span>
+          <h3 class="c-title">The audience is the co-author.</h3>
+          <p class="c-body">Brands no longer dictate the narrative alone. From product R&amp;D to the comments section, the community shapes the story in real time. I write work with open ends: formats people can remix, lines they can repurpose, gaps they want to fill.</p>
+          <span class="micro folio">04</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-red"><div class="pg">
+          <span class="micro label">No. 03</span>
+          <h3 class="c-title">Human truth, built to scale.</h3>
+          <p class="c-body">I translate specs and brand ideals into one human sentence. A feature list tells people what a product can do. Brand values sell them on a promise. The work has to show what it adds to someone’s day. Once that truth is clear, attention and consideration follow.</p>
+          <span class="micro folio">05</span>
+        </div></div>
+        <div class="face back left bg-ink"><div class="pg">
+          <span class="micro label">No. 04</span>
+          <h3 class="c-title">Strategy is the engine.</h3>
+          <p class="c-body">The strongest creative is rooted in a real command of the category, the brand’s equity, and the audience’s mindset. I partner with strategy from before the initial brief all the way through the final review, so the insight drives the idea instead of decorating it.</p>
+          <span class="micro folio">06</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-paper"><div class="pg">
+          <span class="micro label">No. 05</span>
+          <h3 class="c-title">Social is not a lesser craft.</h3>
+          <p class="c-body">This is a hill I live on: traditional first principles and social savvy aren’t opposites. A six-second vertical still needs a sharp insight. Work made for social spaces doesn’t have to be trivial. I hold a TikTok to the same standard as a broadcast spot and shape it for the way people watch.</p>
+          <span class="micro folio">07</span>
+        </div></div>
+        <div class="face back left bg-paper"><div class="pg">
+          <h2 class="ix-title wide emboss">Method</h2>
+          <ol class="rows">
+            <li><button type="button" data-spread="4"><span class="n">01</span><span class="t">Deconstruct the digital behavior.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="5"><span class="n">02</span><span class="t">Define the semiotics.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="5"><span class="n">03</span><span class="t">Build the environment.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="6"><span class="n">04</span><span class="t">Disrupt with intent.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="6"><span class="n">05</span><span class="t">Ideate format first.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+            <li><button type="button" data-spread="7"><span class="n">06</span><span class="t">Design for earned.</span><span class="go" aria-hidden="true">&#8594;</span></button></li>
+          </ol>
+          <span class="micro folio">08</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-pink"><div class="pg">
+          <span class="micro label">Step 01</span>
+          <h3 class="c-title">Deconstruct the digital behavior.</h3>
+          <p class="c-body">I start where the category creates friction. I study how people already engage with it across platforms: the search queries, the comment threads, the stitches, the creator content they consume. Identifying how people actually behave is a cheat code. It hands the work an insider POV with genuine potential to resonate.</p>
+          <span class="micro folio">09</span>
+        </div></div>
+        <div class="face back left bg-paper"><div class="pg">
+          <span class="micro label">Step 02</span>
+          <h3 class="c-title">Define the semiotics.</h3>
+          <p class="c-body">I identify the visual and verbal codes that tell an audience the work was made for them. Whether the strategy calls for high-camp irony or minimalist utility, I specify the cues precisely because belonging is signaled in details.</p>
+          <span class="micro folio">10</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-pale"><div class="pg">
+          <span class="micro label">Step 03</span>
+          <h3 class="c-title">Build the environment.</h3>
+          <p class="c-body">I structure a campaign the way a product team structures an app. I map the journey from the first algorithmic hook to the deepest editorial or episodic content, and I assign each layer a job: stop the scroll, entertain or educate, deepen the relationship.</p>
+          <span class="micro folio">11</span>
+        </div></div>
+        <div class="face back left bg-ink"><div class="pg">
+          <span class="micro label">Step 04</span>
+          <h3 class="c-title">Disrupt with intent.</h3>
+          <p class="c-body">Every bold idea is anchored in an audience or data insight. I break one convention at a time, so the risk is specific, defensible, and measurable.</p>
+          <span class="micro folio">12</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-paper"><div class="pg">
+          <span class="micro label">Step 05</span>
+          <h3 class="c-title">Ideate format first.</h3>
+          <p class="c-body">In social-first work, the feed is the native habitat. I lean into visual grammar that lands with the sound off and script language people type into search. Social-first is the shape of the idea from day one, not a cutdown at the end.</p>
+          <span class="micro folio">13</span>
+        </div></div>
+        <div class="face back left bg-pink"><div class="pg">
+          <span class="micro label">Step 06</span>
+          <h3 class="c-title">Design for earned.</h3>
+          <p class="c-body">The strongest campaigns outgrow their original placements. I give every idea a reason to travel: a line worth quoting or a format worth duplicating. When people carry the work beyond the media plan, the brand gains credibility no budget can buy.</p>
+          <span class="micro folio">14</span>
+        </div></div>
+      </div>
+
+      <div class="leaf">
+        <div class="face front right bg-red"><div class="pg">
+          <ul class="links">
+            <li><a class="stock" href="https://www.linkedin.com/in/ninasaustin/" target="_blank" rel="noopener">LinkedIn <span class="ar" aria-hidden="true">&#8599;</span></a></li>
+            <li><a class="stock" href="https://byninaaustin.com" target="_blank" rel="noopener">byninaaustin.com <span class="ar" aria-hidden="true">&#8599;</span></a></li>
+            <li><a class="stock" href="https://fypfiles.substack.com" target="_blank" rel="noopener">The FYP Files <span class="ar" aria-hidden="true">&#8599;</span></a></li>
+          </ul>
+          <span class="micro folio">15</span>
+        </div></div>
+        <div class="face back left bg-pink endpaper" aria-hidden="true"></div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <section class="panel p-back grain" id="back">
+    <div class="mark tilt" data-tilt="0.4">
+      <h2 class="wide emboss"><span>Nina</span><span>Austin</span></h2>
+    </div>
+  </section>
+
+  </div>
+ </div>
+</main>
+
+<script>
+/* site only: stretch the code block full width and clear Squarespace wrappers that would break the fixed spine and sticky book */
+(function(){
+  var host=document.host;
+  if(!(host&&host.style&&host.ownerDocument))return;
+  var od=host.ownerDocument,de=od.documentElement,tm=0;
+  function set(el,k,v){el.style.setProperty(k,v,'important')}
+  function unwrap(){
+    for(var a=host.parentElement;a&&a!==od.body&&a!==de;a=a.parentElement){
+      var cs=getComputedStyle(a);
+      if(cs.overflowX!=='visible'||cs.overflowY!=='visible')set(a,'overflow','visible');
+      if(cs.transform!=='none')set(a,'transform','none');
+      if(cs.filter!=='none')set(a,'filter','none');
+      if(cs.willChange&&cs.willChange!=='auto')set(a,'will-change','auto');
+      if(cs.contain&&cs.contain!=='none')set(a,'contain','none');
+    }
+  }
+  function fit(){
+    ['padding','border','margin-left','margin-right'].forEach(function(k){set(host,k,'0')});
+    set(host,'width','auto');set(host,'max-width','none');set(host,'box-sizing','border-box');
+    var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+    if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set(host,'margin-left',(-l)+'px');set(host,'width',cw+'px')}
+    set(host,'background','none');
+    window.dispatchEvent(new Event('resize'));
+  }
+  unwrap();fit();
+  window.addEventListener('resize',function(e){if(e.isTrusted){clearTimeout(tm);tm=setTimeout(fit,120)}});
+  window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+  window.addEventListener('load',function(){unwrap();fit()});
+  setTimeout(function(){unwrap();fit()},700);
+})();
+</script>
+<script>
+(function(){
+  var D=window.document,root=document.host||D.documentElement,book=document.getElementById('book'),track=document.getElementById('track'),fill=document.getElementById('fill');
+  var mq=window.matchMedia('(min-width:1024px) and (min-height:600px)');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function all(s){return [].slice.call(document.querySelectorAll(s))}
+  var bsec=document.getElementById('bookSection'),inner=document.getElementById('bookInner');
+  var leaves=all('.leaf'),turns=leaves.length-1;
+  var baseLeft=document.querySelector('.base-left .face');
+  var cover=document.getElementById('cover'),back=document.getElementById('back');
+  var tilts=all('[data-tilt]'),chapNav=document.getElementById('chapters');
+  var desk=false,maxX=0,ticking=false,x=0,lastL='',curSpread=0,inBook=false;
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+  function cssNum(n,d){return parseFloat(getComputedStyle(root).getPropertyValue(n))||d}
+  function smooth(){return reduce.matches?'auto':'smooth'}
+  function sp(){return cssNum('--spine',64)}
+  function bar(){return cssNum('--bar',54)}
+  function span(){return bsec.offsetWidth-(window.innerWidth-sp())}
+  function to(top){window.scrollTo({top:Math.max(0,Math.round(top)),behavior:smooth()})}
+  function bookTop(){return book.getBoundingClientRect().top+window.scrollY}
+  function goToEl(el){to(desk?bookTop()+el.offsetLeft-sp():el.getBoundingClientRect().top+window.scrollY-bar())}
+  function pageFor(s){return s===0?baseLeft:leaves[s-1].querySelector('.back')}
+  function goToSpread(s){
+    s=clamp(s,0,turns);
+    if(desk)to(bookTop()+bsec.offsetLeft-sp()+span()*(s/turns));
+    else{var el=pageFor(s);to(el.getBoundingClientRect().top+window.scrollY-bar())}
+  }
+
+  var chapters=[['Cover',function(){goToEl(cover)}],['Background',function(){goToSpread(0)}],['Approach',function(){goToSpread(1)}],['The Method',function(){goToSpread(4)}],['Back',function(){goToEl(back)}]];
+  chapters.forEach(function(c){
+    var b=D.createElement('button');b.type='button';b.setAttribute('aria-label','Go to '+c[0]);b.title=c[0];
+    b.innerHTML='<i></i>';b.addEventListener('click',c[1]);chapNav.appendChild(b);
+  });
+  var chapBtns=[].slice.call(chapNav.children);
+  all('[data-spread]').forEach(function(b){b.addEventListener('click',function(){goToSpread(+b.getAttribute('data-spread'))})});
+
+  // each leaf turns in its own slice of the book's progress, with a short rest on every spread
+  function setBook(p){
+    leaves.forEach(function(lf,k){
+      if(k>=turns){lf.style.transform='';lf.style.zIndex=1;return}
+      var t=clamp((p*turns-k-0.15)/0.7,0,1);
+      lf.style.transform='rotateY('+(-180*t)+'deg)';
+      lf.style.zIndex=t>0.5?(turns+k+2):(turns-k+1);
+      lf.style.setProperty('--sh',(Math.sin(t*Math.PI)*0.45).toFixed(3));
+    });
+    curSpread=Math.round(p*turns);
+  }
+
+  function layout(){
+    desk=mq.matches;
+    if(desk){maxX=Math.max(0,track.scrollWidth-window.innerWidth);book.style.height=(maxX+window.innerHeight)+'px';}
+    else{
+      book.style.height='';track.style.transform='';inner.style.transform='';
+      leaves.forEach(function(lf){lf.style.transform='';lf.style.zIndex='';lf.style.removeProperty('--sh')});
+    }
+    update();
+  }
+
+  function update(){
+    ticking=false;
+    var vw=window.innerWidth,vh=window.innerHeight,progress,cur=0;
+    if(desk){
+      x=clamp(-book.getBoundingClientRect().top,0,maxX);
+      track.style.transform='translate3d('+(-x)+'px,0,0)';
+      progress=maxX?x/maxX:0;fill.style.height=(progress*100)+'%';fill.style.width='100%';
+      var left=bsec.offsetLeft-x,s=span(),local=clamp(-(left-sp()),0,s);
+      inner.style.transform='translate3d('+local+'px,0,0)';
+      setBook(s>0?local/s:0);
+      inBook=left<=sp()+2&&local<s-2;
+      if(left<=vw*0.5)cur=curSpread>=4?3:curSpread>=1?2:1;
+      if(back.offsetLeft-x<=vw*0.5)cur=4;
+    }else{
+      var docMax=D.documentElement.scrollHeight-vh;progress=docMax>0?clamp(window.scrollY/docMax,0,1):0;
+      fill.style.width=(progress*100)+'%';fill.style.height='100%';
+      if(baseLeft.getBoundingClientRect().top<=vh*0.5)cur=1;
+      if(pageFor(1).getBoundingClientRect().top<=vh*0.5)cur=2;
+      if(pageFor(4).getBoundingClientRect().top<=vh*0.5)cur=3;
+      if(back.getBoundingClientRect().top<=vh*0.5)cur=4;
+    }
+    chapBtns.forEach(function(b,i){b.classList.toggle('on',i===cur)});
+    if(!reduce.matches){
+      var a=progress*Math.PI*1.2+0.6,lx=(Math.cos(a)*1.4+2.2).toFixed(2),ly=(Math.sin(a)*0.8+2.2).toFixed(2);
+      if(lx+','+ly!==lastL){root.style.setProperty('--lx',lx);root.style.setProperty('--ly',ly);lastL=lx+','+ly;}
+      tilts.forEach(function(el){
+        var r=el.getBoundingClientRect(),dir=parseFloat(el.getAttribute('data-tilt'))||1,c;
+        if(desk){c=clamp((r.left+r.width/2-vw/2)/vw,-1,1);el.style.transform='rotateY('+(c*-16*dir)+'deg) translateZ('+((1-Math.abs(c))*20)+'px)';}
+        else{c=clamp((r.top+r.height/2-vh/2)/vh,-1,1);el.style.transform='rotateX('+(c*10*dir)+'deg)';}
+      });
+    }
+  }
+
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  window.addEventListener('resize',layout);
+  if(mq.addEventListener)mq.addEventListener('change',layout);else mq.addListener(layout);
+  D.addEventListener('keydown',function(e){
+    if(!desk)return;
+    if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+    e.preventDefault();
+    var fwd=e.key==='ArrowRight';
+    if(inBook&&((fwd&&curSpread<turns)||(!fwd&&curSpread>0))){goToSpread(curSpread+(fwd?1:-1));return}
+    window.scrollBy({top:(fwd?1:-1)*window.innerWidth*0.6,behavior:smooth()});
+  });
+  window.addEventListener('wheel',function(e){if(desk&&Math.abs(e.deltaX)>Math.abs(e.deltaY))window.scrollBy(0,e.deltaX)},{passive:true});
+  layout();
+  window.addEventListener('load',layout);
+  if(D.fonts&&D.fonts.ready)D.fonts.ready.then(layout);
+})();
+</script>
+<script>
+(function(){
+  var L=document.getElementById('loader');if(!L)return;
+  var plate=L.querySelector('.ld-plate'),fill=document.getElementById('ldFill'),pct=document.getElementById('ldPct');
+  var calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var t0=performance.now(),MIN=calm?0:1200,ready=false,p=0,closed=false;
+  function done(){ready=true}
+  var loaded=new Promise(function(r){if(window.document.readyState==='complete')r();else window.addEventListener('load',r,{once:true})});
+  Promise.all([loaded,window.document.fonts&&window.document.fonts.ready?window.document.fonts.ready:Promise.resolve()]).then(done,done);
+  setTimeout(done,6000);
+  function draw(){plate.style.setProperty('--d',p.toFixed(3));fill.style.transform='scaleX('+p.toFixed(3)+')';var n=Math.round(p*100);pct.textContent=(n<10?'00':n<100?'0':'')+n;}
+  function close(){if(closed)return;closed=true;p=1;draw();L.classList.add('out');setTimeout(function(){L.remove()},1000);}
+  function tick(now){
+    var target=ready?1:Math.min(.88,(now-t0)/2600);
+    p+=(target-p)*(ready?.14:.08);
+    if(ready&&1-p<.005)p=1;
+    draw();
+    if(p>=1&&now-t0>=MIN){setTimeout(close,calm?0:180);return}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
