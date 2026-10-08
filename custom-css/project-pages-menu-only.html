@@ -20,4 +20,25 @@ html.nl-project #header .header-background-gradient{display:none!important}
 html.nl-project #header .header-inner{height:0!important;min-height:0!important;padding:0!important;background:transparent!important}
 html.nl-project .nlb{position:fixed!important;top:1.5rem!important;right:4vw!important;left:auto!important;transform:none!important;z-index:2147482000!important;padding:.8rem 1.3rem!important;background:#000!important;color:#fff!important;border-radius:999px!important}
 html.nl-project .nlb:hover{color:#D7F34A!important}
+
+/* Phones: remove the page background, section padding and gutters so the code block runs edge to edge. */
+@media (max-width:767px){
+html.nl-project,
+html.nl-project body{background:transparent!important;margin:0!important;padding:0!important;overflow-x:hidden!important}
+html.nl-project #siteWrapper,
+html.nl-project #page,
+html.nl-project main,
+html.nl-project article.sections,
+html.nl-project .page-section,
+html.nl-project .content-wrapper,
+html.nl-project .content,
+html.nl-project .fluid-engine,
+html.nl-project .sqs-layout,
+html.nl-project .sqs-block,
+html.nl-project .sqs-block-content{background:transparent!important;margin:0!important;padding:0!important;max-width:none!important;width:100%!important;min-height:0!important}
+html.nl-project .section-background,
+html.nl-project .section-border{display:none!important}
+html.nl-project .fluid-engine{display:block!important}
+html.nl-project .fluid-engine .fe-block{grid-column:1/-1!important;width:100%!important;margin:0!important;padding:0!important}
+}
 </style>
