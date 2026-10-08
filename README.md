@@ -16,5 +16,5 @@ Replace the file in `pages/` and commit. The live page picks it up within about 
 - Repo must be public for the loader to read it.
 
 ## Homepage gallery (3D)
-`home-gallery/` holds the Portfolio Gallery homepage: `index.html` (white stone floor), using `home-gallery/assets/`. The Writers Room is the building seen through the gallery doorway; clicking it opens About Me, My Approach and Email Me.
+`home-gallery/` holds the Portfolio Gallery homepage: `index.html` (white stone floor) and `black.html` (same gallery with a black outside; clicking the doorway exits to the entrance), sharing `home-gallery/assets/`. The Writers Room is the building seen through the gallery doorway; clicking it opens About Me, My Approach and Email Me.
 Paste `loaders/home-gallery.loader.html` into one Code Block on the Home page.
