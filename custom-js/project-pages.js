@@ -4,6 +4,32 @@
    Loaded by custom-js/project-pages.loader.html from GitHub (Squarespace Code Injection, Header). */
 (function(){
   if(window.__nlProj)return;window.__nlProj=1;
+  /* Diagnostic: add ?nldebug to any page address to show what loaded and what sits below the page block. */
+  if(/[?&]nldebug/.test(location.search)){
+    var runDbg=function(){setTimeout(function(){
+      var d=document,de=d.documentElement,y=window.pageYOffset||0,all=[].slice.call(d.body.getElementsByTagName('*')),hosts=[].slice.call(d.querySelectorAll('.sqs-block-code,[data-block-type="23"]'));
+      all.forEach(function(e){if(e.shadowRoot)hosts.push(e)});
+      var hb=0,out=[];
+      function nm(e){return e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.split?'.'+e.className.split(/\s+/).filter(Boolean).slice(0,3).join('.'):'')}
+      hosts.forEach(function(h){var r=h.getBoundingClientRect();if(r.height>0)hb=Math.max(hb,Math.round(r.bottom+y));out.push('HOST '+nm(h)+' left '+Math.round(r.left)+' w '+Math.round(r.width)+' top '+Math.round(r.top+y)+' bottom '+Math.round(r.bottom+y))});
+      var rows=[];
+      all.forEach(function(e){
+        if(e.closest('#nl-dbg')||hosts.some(function(h){return h.contains(e)}))return;
+        var cs=getComputedStyle(e);if(cs.display==='none'||cs.position==='fixed')return;
+        var r=e.getBoundingClientRect();if(r.height<=0)return;
+        var bt=Math.round(r.bottom+y);
+        if(hb&&bt>hb+1)rows.push({t:nm(e),b:bt,h:Math.round(r.height),w:Math.round(r.width),x:Math.round(r.left),pb:cs.paddingBottom,mb:cs.marginBottom,mh:cs.minHeight,bg:cs.backgroundColor,anc:hosts.some(function(h){return e.contains(h)})});
+      });
+      rows.sort(function(a,b){return b.b-a.b||a.h-b.h});
+      var t=['nl-debug v10','html class: '+de.className,'viewport '+innerWidth+'x'+innerHeight+'  doc height '+de.scrollHeight+'  page block bottom '+hb+'  gap '+(de.scrollHeight-hb),'hosts found: '+hosts.length].concat(out);
+      t.push('below the page block ('+rows.length+'):');
+      rows.slice(0,12).forEach(function(r){t.push((r.anc?'[wraps page] ':'')+r.t+' x'+r.x+' w'+r.w+' h'+r.h+' bottom '+r.b+' padB '+r.pb+' marB '+r.mb+' minH '+r.mh+' bg '+r.bg)});
+      var o=d.createElement('div');o.id='nl-dbg';o.textContent=t.join('\n');
+      o.style.cssText='position:fixed;left:0;right:0;bottom:0;max-height:55vh;overflow:auto;background:#fff;color:#000;font:11px/1.35 monospace;padding:8px;white-space:pre-wrap;z-index:2147483647;border-top:3px solid #f00';
+      d.body.appendChild(o);
+    },2500)};
+    if(document.readyState==='complete')runDbg();else window.addEventListener('load',runDbg);
+  }
   var CORE=['','commercials','content','experiential','creative-dna','about-me','capabilities'];
   var slug=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase();
   var FOOTER_ONLY=['about-me','creative-dna'];
