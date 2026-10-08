@@ -1,11 +1,12 @@
 <!-- Homepage loader: Portfolio Gallery (3D).
-     Paste into one Code Block on the Squarespace Home page. It fetches home-gallery/index.html
+     Paste into one Code Block on the Squarespace Home page. It fetches home-gallery/black.html
      from this repo and shows it full screen, so every commit goes live (GitHub caches for about 5 minutes).
-     To show the copy with a black outside (no Writers Room; the doorway exits to the entrance), change PAGE below to 'black.html'.
+     black.html is the current homepage: the doorway opens onto an empty hallway under an EXIT sign and takes you back to the entrance.
+     To show the version with the NYC street and the Writers Room instead, change PAGE below to 'index.html'.
      The list under the gallery gives search engines readable text and links; visitors get the same works in the 2D view. -->
 <div id="nl-gallery-text" style="position:relative;z-index:0;padding:2rem;font:16px/1.5 Georgia,serif">
   <h1>Nina Austin: Portfolio Gallery</h1>
-  <p>Bridging Culture &amp; Commerce. Campaigns for Unilever, Nike, Notion, Pizza Hut, eBay, Tommy Hilfiger, Walmart and HealthCare.gov.</p>
+  <p>Associate Creative Director, Copy. Campaigns for Unilever, Nike, Notion, Pizza Hut, eBay, Tommy Hilfiger, Walmart and HealthCare.gov.</p>
   <ul>
     <li><a href="https://www.byninaaustin.com/silkpressconference">Silk Press Conference, SheaMoisture</a></li>
     <li><a href="https://www.byninaaustin.com/for-your-lifes-work">For Your Life&rsquo;s Work, Notion</a></li>
@@ -27,7 +28,7 @@
 <script>
 (function () {
   var BASE = 'https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/home-gallery/';
-  var PAGE = 'index.html';
+  var PAGE = 'black.html';
   var box = document.getElementById('nl-gallery');
   if (!box) return;
   var frame = box.querySelector('iframe');
