@@ -70,7 +70,7 @@ body.flat-open .topbar::before{opacity:1}
 /* ---------- intro */
 .intro{position:fixed;inset:0;z-index:10;pointer-events:none}
 .intro>*{pointer-events:auto}
-.ticket{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);max-width:950px;margin:0 auto;display:grid;grid-template-columns:4.1rem 1fr;background:var(--paper);color:var(--ink);border-radius:6px;transform:rotate(.5deg);box-shadow:0 2px 0 rgba(0,0,0,.08),0 30px 60px -18px rgba(30,8,2,.65),0 10px 22px -10px rgba(30,8,2,.5);animation:stick .7s var(--ease) both .35s;transform-origin:30% 50%}
+.ticket{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);max-width:720px;margin:0 auto;display:grid;grid-template-columns:4.1rem 1fr;background:var(--paper);color:var(--ink);border-radius:6px;transform:rotate(.5deg);box-shadow:0 2px 0 rgba(0,0,0,.08),0 30px 60px -18px rgba(30,8,2,.65),0 10px 22px -10px rgba(30,8,2,.5);animation:stick .7s var(--ease) both .35s;transform-origin:30% 50%}
 @keyframes stick{from{opacity:0;transform:rotate(-4deg) scale(1.06)}to{opacity:1;transform:rotate(.5deg) scale(1)}}
 .stub{position:relative;border-right:2px dashed rgba(38,20,13,.28);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:1.3rem 0;background:linear-gradient(180deg,#F1E3CB,#EAD8BC);border-radius:6px 0 0 6px}
 .stub::before,.stub::after{content:"";position:absolute;right:-11px;width:20px;height:20px;border-radius:50%;background:#000}
@@ -88,7 +88,7 @@ body.flat-open .topbar::before{opacity:1}
 .btn-text{font-family:var(--label);font-weight:500;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem 0;border-bottom:1.5px solid currentColor}
 .ticket .btn-text{color:var(--oxblood)}
 .loadline{margin:0;font-family:var(--label);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:.7rem}
-.loadline .bar{flex:1;height:2px;background:rgba(38,20,13,.12);border-radius:2px;overflow:hidden;max-width:9rem}
+.loadline .bar{display:none;flex:1;height:2px;background:rgba(38,20,13,.12);border-radius:2px;overflow:hidden;max-width:9rem}
 .loadline .bar i{display:block;height:100%;width:0;background:var(--oxblood);transition:width .4s var(--ease)}
 .ticket.torn .stub{animation:tearStub .9s cubic-bezier(.5,0,.75,0) forwards}
 .ticket.torn .ticket-body{animation:tearBody .7s var(--ease) forwards}
@@ -344,7 +344,7 @@ body.flat-open .topbar::before{opacity:1}
         <button id="go2d" class="btn-text" type="button">Explore in 2D</button>
       </div></div>
       <div class="tb-foot">
-        <p class="loadline" aria-live="polite"><span class="bar"><i id="loadbar"></i></span><span id="loadtext">Hanging the works</span></p>
+        <p class="loadline"><span class="bar"><i id="loadbar"></i></span><span id="loadtext">Nina Austin</span></p>
         <ul class="social">
           <li><a href="mailto:ninaaustincreative@gmail.com" target="_top">Email</a></li>
           <li><a href="https://www.linkedin.com/in/ninasaustin/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -1407,7 +1407,7 @@ class GifPlayer{
 }
 let loaded=0;
 const ORDER=[0,6,8,1,2,3,4,5,7,9,10];
-function setLoad(){ $('#loadbar').style.width=(loaded/WORKS.length*100)+'%'; $('#loadtext').textContent = loaded<WORKS.length ? `Hanging the works, ${loaded} of ${WORKS.length}` : 'All eleven works are on the wall'; }
+function setLoad(){ $('#loadbar').style.width=(loaded/WORKS.length*100)+'%';  }
 setLoad();
 async function loadGif(i){
   try{

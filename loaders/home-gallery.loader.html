@@ -30,6 +30,13 @@
   var box = document.getElementById('nl-gallery');
   if (!box) return;
   var frame = box.querySelector('iframe');
+  // Lift the gallery out of the Squarespace section so it covers the whole window, centered,
+  // and hide the site header and sitewide MENU button behind it (the gallery has its own menu).
+  document.body.appendChild(box);
+  var hide = document.createElement('style');
+  hide.id = 'nl-gallery-css';
+  hide.textContent = '#header,.header,#nlb{visibility:hidden!important}';
+  document.head.appendChild(hide);
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
   fetch(BASE + PAGE, { cache: 'no-cache' })
@@ -43,6 +50,7 @@
     .catch(function (e) {
       console.error('home gallery loader', e);
       box.remove();
+      hide.remove();
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     });
