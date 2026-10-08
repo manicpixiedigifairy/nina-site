@@ -322,7 +322,7 @@ body.in-gallery .wordmark{opacity:0;visibility:hidden;pointer-events:none}
 
 <script>
 /* Inside the Squarespace editor the site runs in a frame: step aside so sections stay editable. */
-(function(){ try{ var fe=window.frameElement; if(!fe) return; var pw=window.parent, ed=false;
+(function(){ try{ var fe=window.frameElement; if(!fe) return; var pw=window.parent, ed=false; if(pw.__nlGalleryToggle) return;
   try{ ed = pw!==pw.top || /\/config/.test(pw.top.location.pathname) || pw.document.body.classList.contains('sqs-edit-mode-active'); }catch(e){ ed=true; }
   if(!ed) return; var box=fe.parentNode; if(box && box.id==='nl-gallery'){ box.parentNode.removeChild(box);
     var css=pw.document.getElementById('nl-gallery-css'); if(css) css.parentNode.removeChild(css);
@@ -984,37 +984,38 @@ if(OUTSIDE==='black'){
   const ex=add(new THREE.Mesh(new THREE.PlaneGeometry(DOOR.w,DOOR.h),new THREE.MeshBasicMaterial({visible:false})),gallery,{kind:'exitdoor'});
   ex.rotation.y=Math.PI; ex.position.set(0,DOOR.h/2,R+T*.5);
   /* EXIT sign over the door, lit red */
-  const signTex=canvasTex(512,186,(g,w,h)=>{ g.fillStyle='#121212'; rrect(g,4,4,w-8,h-8,18); g.fill(); g.strokeStyle='#3a3a3a'; g.lineWidth=4; g.stroke();
-    g.font='700 118px Jost, Futura, Arial, sans-serif'; g.textAlign='center'; g.textBaseline='middle'; g.fillStyle='#ff3b30';
-    g.shadowColor='rgba(255,40,30,.95)'; g.shadowBlur=22; spaced(g,'EXIT',w/2+9,h/2+6,18,'center'); g.shadowBlur=6; spaced(g,'EXIT',w/2+9,h/2+6,18,'center'); },{mip:false});
-  const SW_=1.15, SH_=.42, sy=DOOR.h+.5;
-  const housing=add(new THREE.Mesh(new THREE.BoxGeometry(SW_+.08,SH_+.08,.1),new THREE.MeshStandardMaterial({color:0x161616,roughness:.5})),gallery,{kind:'exitdoor'}); housing.position.set(0,sy,R-.06);
-  const face=add(new THREE.Mesh(new THREE.PlaneGeometry(SW_,SH_),new THREE.MeshBasicMaterial({map:signTex,toneMapped:false})),gallery,{kind:'exitdoor'}); face.rotation.y=Math.PI; face.position.set(0,sy,R-.112);
-  const glowTex=canvasTex(256,128,(g,w,h)=>{ const gr=g.createRadialGradient(w/2,h/2,4,w/2,h/2,w/2); gr.addColorStop(0,'rgba(255,60,45,.55)'); gr.addColorStop(1,'rgba(255,60,45,0)'); g.fillStyle=gr; g.fillRect(0,0,w,h); },{mip:false});
-  const glow=new THREE.Mesh(new THREE.PlaneGeometry(2.6,1.3),new THREE.MeshBasicMaterial({map:glowTex,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false})); glow.rotation.y=Math.PI; glow.position.set(0,sy,R-.015); gallery.add(glow);
+  const signTex=canvasTex(512,186,(g,w,h)=>{ g.fillStyle='#5A160F'; rrect(g,4,4,w-8,h-8,14); g.fill(); g.strokeStyle='#F5D98A'; g.lineWidth=3; rrect(g,16,16,w-32,h-32,8); g.stroke();
+    g.font='500 104px Jost, Futura, Arial, sans-serif'; g.textAlign='center'; g.textBaseline='middle'; g.fillStyle='#F5D98A'; spaced(g,'EXIT',w/2+12,h/2+6,24,'center'); },{mip:false});
+  const SW_=1.1, SH_=.4, sy=DOOR.h+.5;
+  const housing=add(new THREE.Mesh(new THREE.BoxGeometry(SW_+.04,SH_+.04,.05),new THREE.MeshStandardMaterial({color:0x2a0a06,roughness:.6})),gallery,{kind:'exitdoor'}); housing.position.set(0,sy,R-.03);
+  const face=add(new THREE.Mesh(new THREE.PlaneGeometry(SW_,SH_),new THREE.MeshStandardMaterial({map:signTex,emissive:0xffffff,emissiveMap:signTex,emissiveIntensity:.35,roughness:.6})),gallery,{kind:'exitdoor'}); face.rotation.y=Math.PI; face.position.set(0,sy,R-.057);
 
-  /* an empty hallway beyond the doorway: the same stone floor, lit near the door and fading into darkness, no end wall */
+  /* a warm, evenly lit hallway beyond the doorway that turns a corner, so it continues out of sight instead of ending */
   hall=new THREE.Group(); hall.visible=false; gallery.add(hall);
-  const HW=4.0, HH=3.6, HL=20, Z0=R+T, LZ=[1.6,4.8,8.0], D0=2.5, D1=14;
-  const dark=z=>Math.min(1,Math.max(0,(z-D0)/(D1-D0)));
-  const ramp=(gr)=>{ for(let i=0;i<=20;i++){ const t=i/20; gr.addColorStop(t,`rgba(0,0,0,${Math.pow(dark(t*HL),.85).toFixed(3)})`); } return gr; };
-  const wallT=canvasTex(2048,384,(g,w,h)=>{ g.fillStyle='#ece5d9'; g.fillRect(0,0,w,h);
-    for(let i=0;i<6000;i++){ const v=rnd(); g.fillStyle=v<.5?'rgba(0,0,0,.025)':'rgba(255,255,255,.05)'; g.fillRect(rnd()*w,rnd()*h,2,2); }
-    for(const z of LZ){ const x=z/HL*w, gr=g.createRadialGradient(x,0,4,x,0,h*1.1); gr.addColorStop(0,`rgba(255,246,226,${.5*(1-dark(z))})`); gr.addColorStop(1,'rgba(255,246,226,0)'); g.fillStyle=gr; g.fillRect(0,0,w,h); }
-    g.fillStyle='#2a1710'; g.fillRect(0,h-.12/HH*h,w,.12/HH*h);
-    g.fillStyle=ramp(g.createLinearGradient(0,0,w,0)); g.fillRect(0,0,w,h); });
-  const wallTL=wallT.clone(); wallTL.needsUpdate=true; wallTL.repeat.set(-1,1); wallTL.offset.set(1,0);
-  const ceilT=canvasTex(512,2048,(g,w,h)=>{ g.fillStyle='#efe9df'; g.fillRect(0,0,w,h); g.fillStyle=ramp(g.createLinearGradient(0,h,0,0)); g.fillRect(0,0,w,h); });
-  const floorDark=canvasTex(64,1024,(g,w,h)=>{ g.fillStyle=ramp(g.createLinearGradient(0,0,0,h)); g.fillRect(0,0,w,h); },{mip:false});
-  const bm=(map,key,extra={})=>hallMat(new THREE.MeshBasicMaterial({map,toneMapped:false,...extra}),key);
-  /* the floor uses the gallery's own stone material, with UVs in the same world grid so the tiles line up */
-  const zc=Z0+HL/2, fg=new THREE.PlaneGeometry(HW,HL); { const uv=fg.attributes.uv, ps=fg.attributes.position; for(let i=0;i<uv.count;i++){ const x=ps.getX(i), y=ps.getY(i); uv.setXY(i,x/4,-(zc-y)/4); } }
-  const fl=new THREE.Mesh(fg,matFloor); fl.rotation.x=-Math.PI/2; fl.position.set(0,.002,zc); hall.add(fl);
-  const fd=new THREE.Mesh(new THREE.PlaneGeometry(HW,HL),bm(floorDark,'fd',{transparent:true,depthWrite:false})); fd.rotation.x=-Math.PI/2; fd.position.set(0,.006,zc); hall.add(fd);
-  const ce=new THREE.Mesh(new THREE.PlaneGeometry(HW,HL),bm(ceilT,'ce')); ce.rotation.x=Math.PI/2; ce.position.set(0,HH,zc); hall.add(ce);
-  const wl=new THREE.Mesh(new THREE.PlaneGeometry(HL,HH),bm(wallTL,'wl')); wl.rotation.y=Math.PI/2; wl.position.set(-HW/2,HH/2,zc); hall.add(wl);
-  const wr=new THREE.Mesh(new THREE.PlaneGeometry(HL,HH),bm(wallT,'wr')); wr.rotation.y=-Math.PI/2; wr.position.set(HW/2,HH/2,zc); hall.add(wr);
-  for(const z of LZ){ const k=1-dark(z), lm=hallMat(new THREE.MeshBasicMaterial({color:new THREE.Color(0xfff4dc).multiplyScalar(Math.max(.08,k)),toneMapped:false}),'lt'+z); const lp=new THREE.Mesh(new THREE.PlaneGeometry(1.3,.42),lm); lp.rotation.x=Math.PI/2; lp.position.set(0,HH-.01,Z0+z); hall.add(lp); }
+  const HW=4.0, HH=3.6, Z0=R+T, L1=9, L2=16, ZC=Z0+L1, ZF=Z0+L1+HW, XT=-HW/2-L2;
+  const wallTex=(warm)=>canvasTex(512,460,(g,w,h)=>{ const gr=g.createLinearGradient(0,0,0,h); gr.addColorStop(0,'#f6efe3'); gr.addColorStop(1,'#ebe3d6'); g.fillStyle=gr; g.fillRect(0,0,w,h);
+    for(let i=0;i<1500;i++){ g.fillStyle=rnd()<.5?'rgba(0,0,0,.02)':'rgba(255,255,255,.05)'; g.fillRect(rnd()*w,rnd()*h,2,2); }
+    if(warm){ const wg=g.createLinearGradient(0,0,w,0); wg.addColorStop(0,'rgba(255,214,150,.45)'); wg.addColorStop(1,'rgba(255,214,150,0)'); g.fillStyle=wg; g.fillRect(0,0,w,h); }
+    g.fillStyle='#2a1710'; g.fillRect(0,h-.12/HH*h,w,.12/HH*h); });
+  const wallM=(len,warm,key)=>{ const t=wallTex(warm); t.wrapS=THREE.RepeatWrapping; t.repeat.set(warm?1:len/HW,1); return hallMat(new THREE.MeshStandardMaterial({map:t,emissive:0xffffff,emissiveMap:t,emissiveIntensity:.42,roughness:.92}),key); };
+  const wall=(len,x,z,ry,warm,key)=>{ const m=new THREE.Mesh(new THREE.PlaneGeometry(len,HH),wallM(len,warm,key)); m.rotation.y=ry; m.position.set(x,HH/2,z); hall.add(m); };
+  wall(ZF-Z0, HW/2, (Z0+ZF)/2, -Math.PI/2, false,'wa');          // right-hand wall as you look out, runs to the corner
+  wall(L1, -HW/2, Z0+L1/2, Math.PI/2, false,'wb');                // left-hand wall, stops where the hallway turns
+  { const m=new THREE.Mesh(new THREE.PlaneGeometry(HW/2-XT,HH),wallM(1,true,'wc')); m.rotation.y=Math.PI; m.position.set((XT+HW/2)/2,HH/2,ZF); m.material.map.repeat.set(-1,1); m.material.map.offset.set(1,0); hall.add(m); } // facing wall, warmed by light from around the corner
+  wall(-HW/2-XT, (XT-HW/2)/2, ZC, 0, false,'wd');                 // inner wall of the turn
+  wall(HW, XT, (ZC+ZF)/2, Math.PI/2, false,'we');                 // far end of the turn, out of sight from the gallery
+  /* floor and ceiling: the gallery's stone tiles on the same world grid */
+  const floorPlane=(x0,x1,z0,z1)=>{ const w=x1-x0, d=z1-z0, cx=(x0+x1)/2, cz=(z0+z1)/2, g=new THREE.PlaneGeometry(w,d), uv=g.attributes.uv, ps=g.attributes.position;
+    for(let i=0;i<uv.count;i++){ const x=cx+ps.getX(i), z=cz-ps.getY(i); uv.setXY(i,x/4,-z/4); }
+    const m=new THREE.Mesh(g,matFloor); m.rotation.x=-Math.PI/2; m.position.set(cx,.002,cz); hall.add(m); };
+  floorPlane(-HW/2,HW/2,Z0,ZF); floorPlane(XT,-HW/2,ZC,ZF);
+  const ceilM=hallMat(new THREE.MeshStandardMaterial({color:0xf3ece1,emissive:0xf3ece1,emissiveIntensity:.35,roughness:1}),'ce');
+  const ceilPlane=(x0,x1,z0,z1)=>{ const m=new THREE.Mesh(new THREE.PlaneGeometry(x1-x0,z1-z0),ceilM); m.rotation.x=Math.PI/2; m.position.set((x0+x1)/2,HH,(z0+z1)/2); hall.add(m); };
+  ceilPlane(-HW/2,HW/2,Z0,ZF); ceilPlane(XT,-HW/2,ZC,ZF);
+  const lightM=hallMat(new THREE.MeshBasicMaterial({color:0xfff2d6,toneMapped:false}),'lt');
+  const lamp=(x,z,ry)=>{ const lp=new THREE.Mesh(new THREE.PlaneGeometry(1.3,.42),lightM); lp.rotation.set(Math.PI/2,0,ry||0); lp.position.set(x,HH-.01,z); hall.add(lp); };
+  for(const dz of [1.8,5.2,8.6,11.4]) lamp(0,Z0+dz);
+  for(const x of [-5,-9,-13,-17]) lamp(x,(ZC+ZF)/2,Math.PI/2);
 }
 function openLink(url){ const a=document.createElement('a'); a.href=url; a.target=url.startsWith('mailto:')?'_top':'_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); }
 
