@@ -14,3 +14,7 @@ Replace the file in `pages/` and commit. The live page picks it up within about 
 - Pages render inside an isolated shadow DOM, so Squarespace styles can't break them.
 - `about.html` also hides the Squarespace header on that page (the `data-global` style block).
 - Repo must be public for the loader to read it.
+
+## Homepage gallery (3D)
+`home-gallery/` holds the Portfolio Gallery homepage: `index.html` (wood floor), `stone.html` (white stone floor) and `writers.html` (Writers Room), sharing `home-gallery/assets/`.
+Paste `loaders/home-gallery.loader.html` into one Code Block on the Home page. Change `PAGE` in that loader to switch versions.

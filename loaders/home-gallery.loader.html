@@ -1,0 +1,51 @@
+<!-- Homepage loader: Portfolio Gallery (3D).
+     Paste into one Code Block on the Squarespace Home page. It fetches home-gallery/index.html
+     from this repo and shows it full screen, so every commit goes live (GitHub caches for about 5 minutes).
+     To show another version, change PAGE below to 'stone.html' (white stone floor) or 'writers.html' (Writers Room).
+     The list under the gallery gives search engines readable text and links; visitors get the same works in the 2D view. -->
+<div id="nl-gallery-text" style="position:relative;z-index:0;padding:2rem;font:16px/1.5 Georgia,serif">
+  <h1>Nina Austin: Portfolio Gallery</h1>
+  <p>Bridging Culture &amp; Commerce. Campaigns for Unilever, Nike, Notion, Pizza Hut, eBay, Tommy Hilfiger, Walmart and HealthCare.gov.</p>
+  <ul>
+    <li><a href="https://www.byninaaustin.com/silkpressconference">Silk Press Conference, SheaMoisture</a></li>
+    <li><a href="https://www.byninaaustin.com/for-your-lifes-work">For Your Life&rsquo;s Work, Notion</a></li>
+    <li><a href="https://www.byninaaustin.com/big-new-yorker">The Big New Yorker, Pizza Hut</a></li>
+    <li><a href="https://www.byninaaustin.com/the-footprint">The Footprint, eBay</a></li>
+    <li><a href="https://www.byninaaustin.com/wtyw">Welcome To Your Walmart, Walmart</a></li>
+    <li><a href="https://www.byninaaustin.com/shea-us-what-you-got">Shea Us What You Got, SheaMoisture</a></li>
+    <li><a href="https://www.byninaaustin.com/come-thru">Come Thru, Nike</a></li>
+    <li><a href="https://www.byninaaustin.com/plan-for-the-best">Plan For The Best, HealthCare.gov</a></li>
+    <li><a href="https://www.byninaaustin.com/dear-dad">Dear Dad, Walmart</a></li>
+    <li><a href="https://www.byninaaustin.com/monogram">The Monogram, Tommy Hilfiger</a></li>
+    <li><a href="https://www.byninaaustin.com/seize-the-summer">Seize The Summer, Walmart</a></li>
+  </ul>
+  <p><a href="https://www.byninaaustin.com/about-me">About Me</a> &middot; <a href="https://www.byninaaustin.com/creative-dna">Creative DNA</a> &middot; <a href="mailto:ninaaustincreative@gmail.com">Email</a></p>
+</div>
+<div id="nl-gallery" style="position:fixed;inset:0;z-index:2147482000;background:#000">
+  <iframe title="Portfolio Gallery" style="display:block;width:100%;height:100%;border:0" allow="fullscreen; autoplay"></iframe>
+</div>
+<script>
+(function () {
+  var BASE = 'https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/home-gallery/';
+  var PAGE = 'index.html';
+  var box = document.getElementById('nl-gallery');
+  if (!box) return;
+  var frame = box.querySelector('iframe');
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  fetch(BASE + PAGE, { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (html) {
+      var tag = '<base href="' + BASE + '">';
+      html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, function (m) { return m + tag; }) : tag + html;
+      frame.srcdoc = html;
+      frame.addEventListener('load', function () { try { frame.contentWindow.focus(); } catch (e) {} });
+    })
+    .catch(function (e) {
+      console.error('home gallery loader', e);
+      box.remove();
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    });
+})();
+</script>
