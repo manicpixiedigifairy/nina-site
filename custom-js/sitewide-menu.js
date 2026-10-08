@@ -25,13 +25,14 @@
   function init(){
     if(document.getElementById('nl-menu-css'))return;
     var st=document.createElement('style');st.id='nl-menu-css';st.textContent=CSS;document.head.appendChild(st);
-    var host=document.querySelector('.header-inner')||document.querySelector('.header')||document.querySelector('header');
+    var proj=document.documentElement.classList.contains('nl-project');
+    var host=proj?null:(document.querySelector('.header-inner')||document.querySelector('.header')||document.querySelector('header'));
     var b=document.createElement('button');b.type='button';b.className='nlb';b.id='nlb';
     b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','nlm');
     b.innerHTML='<span>Menu</span><span class="ic" aria-hidden="true"></span>';
     if(host){if(getComputedStyle(host).position==='static')host.style.position='relative';host.appendChild(b);
       var ref=host.querySelector('.header-title a, .header-title-text a, a');
-      if(ref&&!document.documentElement.classList.contains('nl-project'))b.style.setProperty('color',getComputedStyle(ref).color,'important');}
+      if(ref)b.style.setProperty('color',getComputedStyle(ref).color,'important');}
     else{b.classList.add('nlf');document.body.appendChild(b);}
     var m=document.createElement('div');m.className='nlm';m.id='nlm';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-label','Navigation');
     var h='<button type="button" class="nlx" id="nlx">Close</button><ul>';
