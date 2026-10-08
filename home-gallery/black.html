@@ -1085,7 +1085,7 @@ if(isNB){
     g.fillStyle='rgba(30,6,3,.18)'; g.fillRect(0,0,w,h);
     const ty=doorTopY*.5; g.fillStyle='#F5D98A';
     g.textAlign='center'; g.font='400 210px "Pinyon Script", "Snell Roundhand", cursive'; g.fillText('Portfolio Gallery',w/2,ty);
-    g.font='400 44px Jost, Futura, "Helvetica Neue", Arial, sans-serif'; spaced(g,'ASSOCIATE CREATIVE DIRECTOR, COPY',w/2,ty+160,14,'center');
+    g.fillStyle='#FFF1DC'; g.font='400 44px Jost, Futura, "Helvetica Neue", Arial, sans-serif'; spaced(g,'ASSOCIATE CREATIVE DIRECTOR, COPY',w/2,ty+160,14,'center');
   });
 }
 const shellS = new THREE.Mesh(panel(2*E,SH,[rectPath(DOOR.w,DOOR.h,0,-SH/2+(0-BASE)+DOOR.h/2)]), litMaterial({map:facade,roughness:.9},{ao:false,pools:false}));
