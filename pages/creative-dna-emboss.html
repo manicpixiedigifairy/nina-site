@@ -1,18 +1,23 @@
 <style data-global>html,body{overflow-x:clip}#header,header#header,.Header,.header-announcement-bar-wrapper{display:none!important}</style>
-<title>Creative DNA Emboss</title>
+<title>Creative DNA Glow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Pinyon+Script&display=swap">
 <style>
 /* Layout: a letterpress booklet. An embossed cover, then the original two-page spreads bound into one open book whose pages turn as you scroll, then an embossed back cover. One typeface family inside; script only for "My" on the cover. */
 :root,:host{
-  /* palette: Pink Rose, Citron, Black Bean (paper is a pale tint of Pink Rose; deep is a shade of Black Bean; ink stays #1A1213) */
-  --pink:#ED809D;
-  --pink-pale:#C9C769;
-  --paper:#FBE3EA;
-  --red:#461312;
-  --red-deep:#260908;
-  --ink:#1A1213;
+  /* palette: periwinkle sky, lilac, orchid, chocolate, plum, cream card, butter gold */
+  --pink:#DE8FD0;
+  --pink-pale:#F5D98A;
+  --paper:#EFEBE2;
+  --red:#3A1D12;
+  --red-deep:#21100A;
+  --ink:#2A140C;
+  --sky:#B4C6E6;
+  --lilac:#E8C6EC;
+  --plum:#7A4150;
+  --orchid-deep:#B3529E;
+  --grad:radial-gradient(48% 52% at 0% 0%,#A9C4E4 0%,rgba(169,196,228,0) 100%),radial-gradient(42% 50% at 100% 0%,#2E150F 0%,rgba(46,21,15,0) 100%),radial-gradient(40% 46% at 0% 100%,#4A2418 0%,rgba(74,36,24,0) 100%),radial-gradient(50% 50% at 100% 100%,#BCC9EA 0%,rgba(188,201,234,0) 100%),radial-gradient(70% 70% at 50% 45%,#ECB2E4 0%,#DC8ECF 55%,#C47BB6 100%);
   --sans:'Archivo','Helvetica Neue',Arial,sans-serif;
   --script:'Pinyon Script','Snell Roundhand','Apple Chancery',cursive;
   --spine:64px;
@@ -23,6 +28,7 @@
 }
 *{box-sizing:border-box}
 html,body,:host{background:var(--pink);color:var(--ink);overflow-x:clip}
+body{margin:0}
 body,:host{font-family:var(--sans);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px;border-radius:6px}
@@ -63,9 +69,9 @@ p{margin:0}
 .mark{position:relative;padding:20px 0}
 .mark h1,.mark h2{font-size:clamp(40px,12.4vw,190px)}
 .mark h1 span,.mark h2 span{display:block}
-.p-cover .mark h1{display:flex;align-items:flex-start;font-size:clamp(24px,7.6vw,150px)}
+.p-cover .mark h1{display:flex;align-items:flex-start;position:relative;isolation:isolate;font-size:clamp(24px,8.2vw,150px)}
 .p-cover .mark h1 .cv-2{font-size:1.9em}
-.mark .my{flex:none;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--red);text-shadow:none;font-size:3.11em;line-height:1;margin:-.004em .05em 0 0;transform:skewX(24deg);transform-origin:50% 72%;-webkit-text-stroke:.02em currentColor;paint-order:stroke fill}
+.mark .my{flex:none;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--red);text-shadow:none;font-size:3.11em;line-height:1;margin:-.004em -.12em 0 0;position:relative;z-index:-1;transform:skewX(24deg);transform-origin:50% 72%;-webkit-text-stroke:.02em currentColor;paint-order:stroke fill}
 .p-back{align-items:center;text-align:center}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--red);background:transparent;color:var(--red);cursor:pointer}
 .btn:hover{background:var(--red);color:var(--pink-pale)}
@@ -136,7 +142,8 @@ p{margin:0}
 
   .p-cover,.p-back{width:calc(100vw - var(--spine));align-items:center}
   .mark h1{font-size:min(17vh,10.4vw)}
-  .p-cover .mark h1{font-size:min(13vh,7.2vw)}
+  .p-cover .mark h1{font-size:min(15vh,8.4vw)}
+  .p-cover{padding-left:24px;padding-right:24px}
   .mark h2{font-size:min(19vh,11vw)}
 
   /* the bound book */
@@ -187,6 +194,34 @@ p{margin:0}
 .loader.out{opacity:0;visibility:hidden;pointer-events:none}
 .loader.out .ld-plate{transform:translate(5px,6px);box-shadow:0 0 0 var(--edge),12px 18px 24px -18px rgba(70,19,18,.2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* glow copy: a solid butter-gold backdrop sits behind the book */
+html{background:#F5D98A}
+body{background:transparent}
+:host{background:#F5D98A}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:#F5D98A;pointer-events:none}
+.bg-pale{background:var(--sky);--em-base:var(--sky);--em-hi:rgba(255,255,255,.55);--em-lo:rgba(58,29,18,.26)}
+.bg-ink{background:var(--plum);color:var(--pink-pale)}
+/* solid covers: sky front, chocolate back, both blind-embossed in their own color */
+.p-cover{background:var(--sky);--em-base:var(--sky);--em-hi:rgba(255,255,255,.6);--em-lo:rgba(58,29,18,.34)}
+.p-back{background:var(--red);--em-base:var(--red);--em-hi:rgba(222,143,208,.34);--em-lo:rgba(0,0,0,.6)}
+/* full-page script signature and script last words on the detail titles */
+.sig{font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;line-height:.88;font-size:clamp(58px,17vw,112px);color:var(--pink);text-wrap:wrap}
+.sig-end{white-space:nowrap}
+.sig-my,.sig-end{display:inline;font-size:1em;line-height:inherit;margin:0;position:static;z-index:auto;color:var(--pink-pale)}
+.c-title .t-sc{font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;font-size:1.45em;line-height:.8;margin-left:.14em}
+@media (min-width:1024px) and (min-height:600px){.sig{font-size:18.5cqw}}
+/* the y ends at its loop: its exit stroke no longer sweeps up into the D */
+.mark .my{clip-path:polygon(-50% -50%,150% -50%,150% 51%,100.75% 51%,82.94% 79%,82.94% 150%,-50% 150%)}
+/* script words take an accent color that contrasts with each page */
+.sc{color:var(--orchid-deep)}
+.bg-paper .t-sc,.bg-pale .t-sc{color:var(--orchid-deep)}
+.bg-pink .t-sc{color:var(--plum)}
+.bg-red .t-sc{color:var(--pink-pale)}
+.bg-ink .t-sc{color:var(--pink)}
+
+.loader{background:#F5D98A}
+.ld-name{text-shadow:calc(var(--d) * -2px) calc(var(--d) * -2px) 1px rgba(222,143,208,.45),calc(var(--d) * -3px) calc(var(--d) * -3px) 7px rgba(222,143,208,.25),calc(var(--d) * 2px) calc(var(--d) * 2px) 1px rgba(0,0,0,.6),calc(var(--d) * 4px) calc(var(--d) * 5px) 10px rgba(0,0,0,.5)}
 </style>
 
 <div class="loader grain" id="loader" role="status" aria-label="Loading the booklet">
@@ -222,7 +257,7 @@ p{margin:0}
 
       <div class="base-left">
         <div class="face left bg-red"><div class="pg">
-          <h2 class="sig cond"><span class="sig-my">My</span>signature is the system behind <span class="sig-end">the story.</span></h2>
+          <h2 class="sig"><span class="sig-my">My</span> signature is the system behind <span class="sig-end">the story.</span></h2>
         </div></div>
       </div>
 
@@ -247,13 +282,13 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-paper"><div class="pg">
           <span class="micro label">No. 01</span>
-          <h3 class="c-title">A real idea can carry a system.</h3>
+          <h3 class="c-title">A real idea can carry a <span class="t-sc">system.</span></h3>
           <p class="c-body">I know a campaign tag or concept works when its language can hold an entire platform: clear rules, a repeatable narrative spine, and a defined voice. That architecture is what lets one big idea extend across TVC, creator partnerships, and brand-led experiences without losing the thread.</p>
           <span class="micro folio">03</span>
         </div></div>
         <div class="face back left bg-pale"><div class="pg">
           <span class="micro label">No. 02</span>
-          <h3 class="c-title">The audience is the co-author.</h3>
+          <h3 class="c-title">The audience is the <span class="t-sc">co-author.</span></h3>
           <p class="c-body">Brands no longer dictate the narrative alone. From product R&amp;D to the comments section, the community shapes the story in real time. I write work with open ends: formats people can remix, lines they can repurpose, gaps they want to fill.</p>
           <span class="micro folio">04</span>
         </div></div>
@@ -262,13 +297,13 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-red"><div class="pg">
           <span class="micro label">No. 03</span>
-          <h3 class="c-title">Human truth, built to scale.</h3>
+          <h3 class="c-title">Human truth, built to <span class="t-sc">scale.</span></h3>
           <p class="c-body">I translate specs and brand ideals into one human sentence. A feature list tells people what a product can do. Brand values sell them on a promise. The work has to show what it adds to someone’s day. Once that truth is clear, attention and consideration follow.</p>
           <span class="micro folio">05</span>
         </div></div>
         <div class="face back left bg-ink"><div class="pg">
           <span class="micro label">No. 04</span>
-          <h3 class="c-title">Strategy is the engine.</h3>
+          <h3 class="c-title">Strategy is the <span class="t-sc">engine.</span></h3>
           <p class="c-body">The strongest creative is rooted in a real command of the category, the brand’s equity, and the audience’s mindset. I partner with strategy from before the initial brief all the way through the final review, so the insight drives the idea instead of decorating it.</p>
           <span class="micro folio">06</span>
         </div></div>
@@ -277,7 +312,7 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-paper"><div class="pg">
           <span class="micro label">No. 05</span>
-          <h3 class="c-title">Social is not a lesser craft.</h3>
+          <h3 class="c-title">Social is not a lesser <span class="t-sc">craft.</span></h3>
           <p class="c-body">This is a hill I live on: traditional first principles and social savvy aren’t opposites. A six-second vertical still needs a sharp insight. Work made for social spaces doesn’t have to be trivial. I hold a TikTok to the same standard as a broadcast spot and shape it for the way people watch.</p>
           <span class="micro folio">07</span>
         </div></div>
@@ -298,13 +333,13 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-pink"><div class="pg">
           <span class="micro label">Step 01</span>
-          <h3 class="c-title">Deconstruct the digital behavior.</h3>
+          <h3 class="c-title">Deconstruct the digital <span class="t-sc">behavior.</span></h3>
           <p class="c-body">I start where the category creates friction. I study how people already engage with it across platforms: the search queries, the comment threads, the stitches, the creator content they consume. Identifying how people actually behave is a cheat code. It hands the work an insider POV with genuine potential to resonate.</p>
           <span class="micro folio">09</span>
         </div></div>
         <div class="face back left bg-paper"><div class="pg">
           <span class="micro label">Step 02</span>
-          <h3 class="c-title">Define the semiotics.</h3>
+          <h3 class="c-title">Define the <span class="t-sc">semiotics.</span></h3>
           <p class="c-body">I identify the visual and verbal codes that tell an audience the work was made for them. Whether the strategy calls for high-camp irony or minimalist utility, I specify the cues precisely because belonging is signaled in details.</p>
           <span class="micro folio">10</span>
         </div></div>
@@ -313,13 +348,13 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-pale"><div class="pg">
           <span class="micro label">Step 03</span>
-          <h3 class="c-title">Build the environment.</h3>
+          <h3 class="c-title">Build the <span class="t-sc">environment.</span></h3>
           <p class="c-body">I structure a campaign the way a product team structures an app. I map the journey from the first algorithmic hook to the deepest editorial or episodic content, and I assign each layer a job: stop the scroll, entertain or educate, deepen the relationship.</p>
           <span class="micro folio">11</span>
         </div></div>
         <div class="face back left bg-ink"><div class="pg">
           <span class="micro label">Step 04</span>
-          <h3 class="c-title">Disrupt with intent.</h3>
+          <h3 class="c-title">Disrupt with <span class="t-sc">intent.</span></h3>
           <p class="c-body">Every bold idea is anchored in an audience or data insight. I break one convention at a time, so the risk is specific, defensible, and measurable.</p>
           <span class="micro folio">12</span>
         </div></div>
@@ -328,13 +363,13 @@ p{margin:0}
       <div class="leaf">
         <div class="face front right bg-paper"><div class="pg">
           <span class="micro label">Step 05</span>
-          <h3 class="c-title">Ideate format first.</h3>
+          <h3 class="c-title">Ideate format <span class="t-sc">first.</span></h3>
           <p class="c-body">In social-first work, the feed is the native habitat. I lean into visual grammar that lands with the sound off and script language people type into search. Social-first is the shape of the idea from day one, not a cutdown at the end.</p>
           <span class="micro folio">13</span>
         </div></div>
         <div class="face back left bg-pink"><div class="pg">
           <span class="micro label">Step 06</span>
-          <h3 class="c-title">Design for earned.</h3>
+          <h3 class="c-title">Design for <span class="t-sc">earned.</span></h3>
           <p class="c-body">The strongest campaigns outgrow their original placements. I give every idea a reason to travel: a line worth quoting or a format worth duplicating. When people carry the work beyond the media plan, the brand gains credibility no budget can buy.</p>
           <span class="micro folio">14</span>
         </div></div>
@@ -388,7 +423,7 @@ p{margin:0}
     set(host,'width','auto');set(host,'max-width','none');set(host,'box-sizing','border-box');
     var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
     if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set(host,'margin-left',(-l)+'px');set(host,'width',cw+'px')}
-    set(host,'background','none');
+    set(host,'background','#F5D98A');
     window.dispatchEvent(new Event('resize'));
   }
   unwrap();fit();
