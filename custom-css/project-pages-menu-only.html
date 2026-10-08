@@ -1,0 +1,23 @@
+<script>
+/* Project pages: hide the Squarespace header (except the MENU button) and the footer.
+   Core pages keep the full header and footer. Add a slug to CORE to exempt another page. */
+(function(){
+  var CORE=['','commercials','content','experiential','creative-dna','about-me','capabilities'];
+  var slug=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase();
+  if(CORE.indexOf(slug)===-1)document.documentElement.classList.add('nl-project');
+})();
+</script>
+<style>
+html.nl-project footer,
+html.nl-project #footer-sections{display:none!important}
+html.nl-project #header{position:absolute!important;top:0!important;left:0!important;right:0!important;height:0!important;min-height:0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+html.nl-project #header .header-announcement-bar-wrapper,
+html.nl-project #header .header-display-desktop,
+html.nl-project #header .header-display-mobile,
+html.nl-project #header .header-menu,
+html.nl-project #header .header-background-solid,
+html.nl-project #header .header-background-gradient{display:none!important}
+html.nl-project #header .header-inner{height:0!important;min-height:0!important;padding:0!important;background:transparent!important}
+html.nl-project .nlb{position:fixed!important;top:1.5rem!important;right:4vw!important;left:auto!important;transform:none!important;z-index:2147482000!important;padding:.8rem 1.3rem!important;background:#000!important;color:#fff!important;border-radius:999px!important}
+html.nl-project .nlb:hover{color:#D7F34A!important}
+</style>
