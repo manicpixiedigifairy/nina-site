@@ -30,6 +30,57 @@
     },2500)};
     if(document.readyState==='complete')runDbg();else window.addEventListener('load',runDbg);
   }
+  /* Name removal: no site title in the header on any page except Home, and no name in the Home footer. */
+  (function(){
+    var pth=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase(),home=pth==='';
+    var NAME=/nina\s+(?:s\.?\s+)?austin\b/i;
+    if(!home){
+      var st=document.createElement('style');st.id='nl-noname-css';
+      st.textContent='#header .header-title,#header .header-title-text,#header .header-title-logo,#header .site-title,#header [data-nc-element="logo"]{display:none!important}';
+      (document.head||document.documentElement).appendChild(st);
+    }
+    function textNodes(root,out){
+      var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n;
+      while((n=w.nextNode()))if(NAME.test(n.nodeValue))out.push(n);
+    }
+    function shadows(root,out){
+      var els=root.querySelectorAll('*');
+      for(var i=0;i<els.length;i++)if(els[i].shadowRoot){out.push(els[i].shadowRoot);shadows(els[i].shadowRoot,out)}
+    }
+    function clean(n){
+      var v=n.nodeValue.replace(/\s*(?:\u00a9\s*)?nina\s+(?:s\.?\s+)?austin\b\.?/ig,function(m){return /\u00a9/.test(m)?' \u00a9':''}).replace(/\s+([.,])/g,'$1').replace(/\s{2,}/g,' ');
+      n.nodeValue=v;
+      if(!v.trim()){
+        var e=n.parentNode;
+        while(e&&e.children&&e.children.length===0&&!e.textContent.trim()&&e!==document.body){var up=e.parentNode;e.style.setProperty('display','none','important');if(!up||up.textContent.trim())break;e=up}
+      }
+    }
+    function sweep(){
+      try{
+        var roots=[],found=[];
+        if(home){
+          var f=document.querySelectorAll('footer,#footer-sections');for(var i=0;i<f.length;i++)roots.push(f[i]);
+          var sh=[];shadows(document.body,sh);
+          var lim=Math.max(document.documentElement.scrollHeight*.7,innerHeight);
+          sh.forEach(function(r){roots.push(r)});
+          roots.forEach(function(r){textNodes(r,found)});
+          /* any other visible text in the lower part of the Home page */
+          var body=[];textNodes(document.body,body);
+          body.forEach(function(n){
+            if(found.indexOf(n)!==-1||!n.parentElement||n.parentElement.closest('#header,#nlm,.nlm'))return;
+            var r=n.parentElement.getBoundingClientRect();
+            if(r.bottom+(window.pageYOffset||0)>lim)found.push(n);
+          });
+        }else{
+          var h=document.querySelectorAll('#header');for(var j=0;j<h.length;j++)textNodes(h[j],found);
+        }
+        found.forEach(clean);
+      }catch(e){}
+    }
+    var raf2=0;function q2(){if(!raf2)raf2=requestAnimationFrame(function(){raf2=0;sweep()})}
+    function go(){sweep();var o=new MutationObserver(q2);o.observe(document.body,{childList:true,subtree:true,characterData:true});[600,2000,5000].forEach(function(t){setTimeout(q2,t)});window.addEventListener('load',q2);setTimeout(function(){o.disconnect()},30000)}
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+  })();
   var CORE=['','commercials','content','experiential','creative-dna','about-me','capabilities'];
   var slug=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase();
   var FOOTER_ONLY=['about-me','creative-dna'];
