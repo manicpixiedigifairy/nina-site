@@ -121,6 +121,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .h2 i{font-style:italic}
 .am .sh .sc{position:absolute;font-size:calc(var(--u)*2.2);line-height:1}
 
+/* banner into the films */
+.am .ban{position:relative;background:var(--ir)}
+.am .ban img{width:100%;aspect-ratio:1600/592;object-fit:cover}
+.am .ban figcaption{position:absolute;left:var(--g);bottom:calc(var(--u)*1.2);padding:.4em .8em;background:var(--paper);color:var(--ink)}
 /* films: infrared block, taped polaroids */
 .am .fs{background:var(--ir);color:var(--paper);padding-bottom:calc(var(--u)*7)}
 .am .fs .h2{color:var(--paper)}
@@ -138,6 +142,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .po .chips li{background:var(--paper);color:var(--ink);font-family:var(--tw);font-weight:700;letter-spacing:.08em}
 .am .fl li:nth-child(3) .clip{right:calc(var(--u)*1.4);top:calc(var(--u)*-1.6);transform:rotate(12deg)}
 
+.am .po .who{margin-top:calc(var(--u)*.35);font:700 max(10px,calc(var(--u)*.72))/1.35 var(--tw);letter-spacing:.06em;color:var(--gr)}
+.am .spot{position:relative;display:grid;grid-template-columns:calc(var(--u)*15) minmax(0,1fr);gap:calc(var(--u)*3);align-items:center;margin:calc(var(--u)*6) var(--g) 0;max-width:calc(var(--u)*72);padding:calc(var(--u)*2.6);background:var(--paper);color:var(--ink);transform:rotate(-.8deg);box-shadow:0 calc(var(--u)*1) calc(var(--u)*2.4) rgba(0,0,0,.25)}
+.am .spot .tape{left:calc(var(--u)*4);top:calc(var(--u)*-1);transform:rotate(-5deg)}
+.am .spot img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:calc(var(--u)*.35) solid #fff;box-shadow:0 0 0 calc(var(--u)*.3) var(--ir)}
+.am .spot h3{margin:calc(var(--u)*.6) 0 calc(var(--u)*1);font:900 calc(var(--u)*3.6)/1 var(--sf)}
+.am .spot h3 i{font-style:italic;color:var(--ir)}
+.am .spot p:not(.tw){font-size:calc(var(--u)*1.06);line-height:1.7}
+.am .spot p+p{margin-top:calc(var(--u)*.8)}
 /* stories: sky block, zine notes */
 .am .ss{position:relative;background:var(--sky);padding-bottom:calc(var(--u)*7)}
 .am .bub{position:absolute;right:var(--g);top:calc(var(--u)*4);z-index:3;font:400 calc(var(--u)*9)/.9 var(--bb);color:#fff;-webkit-text-stroke:calc(var(--u)*.14) var(--ink);text-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--ink);transform:rotate(8deg);pointer-events:none}
@@ -206,6 +218,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .fl li:nth-child(even) .po{margin-top:1.6rem}
 .am .po h3{font-size:1.5rem}
 .am .bub{font-size:min(5.4rem,19cqw);top:2.2rem}
+.am .ban img{aspect-ratio:4/3}
+.am .spot{grid-template-columns:1fr;margin:3.4rem var(--g) 0;padding:1.6rem 1.3rem;transform:none;gap:1.2rem}
+.am .spot img{width:9rem}
+.am .spot h3{font-size:2.3rem}
+.am .po .who{font-size:.7rem}
 .am .zine{font-size:1.45rem;margin-bottom:1.6rem}
 .am .sr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1.1rem;padding:1rem var(--g) 1.4rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .am .sr::-webkit-scrollbar{display:none}
@@ -239,8 +256,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 </svg>
 
 <p class="run tw" aria-hidden="true"><span>Nike Air Max Day</span><span>Case study</span><span>03 / 26 / 22</span></p>
-<nav class="tabs tw" aria-label="On this page"><a href="#amFilms" data-go>The films</a><a href="#amStories" data-go>The stories</a><a href="#amFacts" data-go>Air facts</a></nav>
-<div class="rule" aria-hidden="true"></div>
 
 <header class="hero">
   <svg class="clip" viewBox="0 0 30 80" aria-hidden="true"><use href="#amClip"/></svg>
@@ -290,6 +305,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <span class="num" aria-hidden="true">01</span>
       <h3>The <i>moment</i></h3>
       <p>Air Max Day lands every March 26, the day the Air Max 1 released in 1987. The 2022 edition marked <mark>35 years of visible Air</mark>.</p>
+      <p>Nike celebrated with regional Air Max 1 drops, the Blueprint in North America, La Ville-Lumi&egrave;re in Europe and Wabi-Sabi across Asia-Pacific and Latin America, plus a Give Fresh Air game show on the SNKRS app.</p>
       <p>That made the milestone a story about time as much as a shoe: a first pair, a hand-me-down, a sneaker you still remember wearing to school.</p>
     </article>
     <article>
@@ -307,6 +323,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
   </div>
 </section>
 
+<figure class="ban">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1" srcset="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner-sm.webp?v=1 900w, https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1 1600w" sizes="100vw" alt="An Air Max Plus in a sunset orange fade, collaged over infrared red, concrete shards, sparks and chains" width="1600" height="592" loading="lazy" decoding="async">
+  <figcaption class="tw">Air Max Plus</figcaption>
+</figure>
+
 <section class="fs" id="amFilms" aria-labelledby="amF">
   <div class="sh"><h2 class="h2 grain" id="amF">The <i>Films</i></h2><p class="tw">Film 01, More Than A Shoe, plays up top</p><span class="sc" aria-hidden="true">tap a polaroid &#8595;</span></div>
   <p class="lbl tw"><span>Films</span><span>02 / 05</span></p>
@@ -315,8 +336,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <button class="fc" type="button" data-v="738012071" data-h="999323921b" data-t="35 in 35" aria-label="Play 35 in 35, 34 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-35.webp?v=1" alt="" width="652" height="880" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span></button>
       <div class="cap"><h3>35 in 35</h3></div><ul class="chips"><li>02</li><li>0:34</li><li>9:16</li></ul></div></li>
     <li><div class="po"><span class="tape" aria-hidden="true"></span>
-      <button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="" width="900" height="928" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span></button>
-      <div class="cap"><h3>Juliana | On Air</h3></div><ul class="chips"><li>03</li><li>0:51</li><li>9:16</li></ul></div></li>
+      <button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="" width="900" height="928" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span></button>
+      <div class="cap"><h3>Juliana | On Air</h3></div><p class="who">ft. Juliana Sagat, Nike footwear designer</p><ul class="chips"><li>03</li><li>0:51</li><li>9:16</li></ul></div></li>
     <li><div class="po"><svg class="clip" viewBox="0 0 30 80" aria-hidden="true"><use href="#amClip"/></svg>
       <button class="fc r45" type="button" data-v="738027608" data-h="6fd32e17ed" data-t="To the Max" aria-label="Play To the Max, 39 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-max.webp?v=1" alt="" width="900" height="1125" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span></button>
       <div class="cap"><h3>To the Max</h3></div><ul class="chips"><li>04</li><li>0:39</li><li>4:5</li></ul></div></li>
@@ -324,6 +345,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <button class="fc r45" type="button" data-v="738005979" data-h="d3001e0626" data-t="Cop or Drop" aria-label="Play Cop or Drop, 13 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cop.webp?v=1" alt="" width="750" height="892" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span></button>
       <div class="cap"><h3>Cop or Drop</h3></div><ul class="chips"><li>05</li><li>0:13</li><li>4:5</li></ul></div></li>
   </ol>
+  <aside class="spot" aria-labelledby="amJ">
+    <span class="tape" aria-hidden="true"></span>
+    <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="Juliana Sagat smiling, holding an Air Max 90 on its box" width="900" height="928" loading="lazy" decoding="async">
+    <div>
+      <p class="tw">On Air, the designer</p>
+      <h3 id="amJ">Juliana <i>Sagat</i></h3>
+      <p>A footwear designer from Paris, raised in Saint-Ouen and trained at Studio Bercot, who came to Nike in Portland after Marc Jacobs, Kenzo, Givenchy and Isabel Marant.</p>
+      <p>For the Air Max 1&rsquo;s 35th, she spoke to Nike&rsquo;s design shift toward women, community-driven insight and tactile, exaggerated tooling, like the double-stacked Air of the Air Max Furyosa.</p>
+    </div>
+  </aside>
 </section>
 
 <section class="ss" id="amStories" aria-labelledby="amS">
