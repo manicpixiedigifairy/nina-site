@@ -118,8 +118,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .acc .frame{transform:rotate(4deg);padding:calc(var(--u)*.45)}
 .am .acc img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .am .acc .mo{margin-top:calc(var(--u)*1.2);color:var(--lime);text-align:center;transform:rotate(4deg)}
+.am .evo{margin:calc(var(--u)*6) var(--g) 0;padding:calc(var(--u)*.7);background:#fff;box-shadow:0 calc(var(--u)*1.4) calc(var(--u)*3.4) rgba(0,0,0,.6)}
+.am .evo img{width:100%}
 /* juliana */
-.am .spot{position:relative;display:grid;grid-template-columns:calc(var(--u)*17) minmax(0,1fr);gap:calc(var(--u)*3.4);align-items:center;margin:calc(var(--u)*6) var(--g) 0;padding:calc(var(--u)*2.8);border:1px solid var(--line);background:var(--bk2)}
+.am .spot{position:relative;display:grid;grid-template-columns:calc(var(--u)*17) minmax(0,1fr) calc(var(--u)*15);gap:calc(var(--u)*3.4);align-items:center;margin:calc(var(--u)*6) var(--g) 0;padding:calc(var(--u)*2.8);border:1px solid var(--line);background:var(--bk2)}
 .am .spot .img{position:relative}
 .am .spot img{width:100%;aspect-ratio:1;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
 .am .spot .img::after{content:'';position:absolute;inset:calc(var(--u)*-.6);border:1.5px solid var(--lime);pointer-events:none}
@@ -127,6 +129,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .spot p:not(.mo){color:#D0D0D4}
 .am .spot p+p{margin-top:calc(var(--u)*.8)}
 .am .spot>div>.mo{color:var(--lime)}
+.am .spot .reel{margin:0}
+.am .spot .reel img{aspect-ratio:560/1062;object-fit:cover;filter:none;border-radius:calc(var(--u)*1.1)}
+.am .spot .reel figcaption{margin-top:calc(var(--u)*.8);color:var(--mut);text-align:center}
 
 /* stories */
 .am .ss{background:var(--bk2)}
@@ -142,7 +147,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .gk b{color:var(--lime)}
 
 .am .g2{margin-top:calc(var(--u)*3.4)}
-.am .fut img{aspect-ratio:1600/450}
+.am .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin:0;background:var(--bk)}
+.am .tri img{width:100%;aspect-ratio:4/5;object-fit:cover}
 /* ugc */
 .am .ugcl{margin:0 var(--g) calc(var(--u)*3);max-width:calc(var(--u)*46);color:#D0D0D4;font-size:calc(var(--u)*1.2)}
 .am .ug{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:calc(var(--u)*2);padding:0 var(--g);align-items:start}
@@ -228,6 +234,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .fi h3{font-size:1.5rem}
 .am .spot{grid-template-columns:1fr;padding:1.5rem;gap:1.6rem}
 .am .spot .img{max-width:12rem}
+.am .spot .reel{max-width:15rem}
+.am .evo{margin:3.4rem var(--g) 0;padding:.4rem}
 .am .spot h3{font-size:3rem}
 .am .zq{font-size:2.1rem}
 .am .sr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:.6rem var(--g) 1rem;scrollbar-width:none}
@@ -241,7 +249,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .ugr.one img{flex-basis:100%}
 .am .post figcaption b{font-size:2rem}
 .am .ugcl{font-size:1rem}
-.am .fut img{aspect-ratio:16/9;object-position:0 0}
+.am .tri img{aspect-ratio:3/4}
 .am .wall figure:first-child{grid-column:span 2;grid-row:auto}
 .am .awg{grid-template-columns:1fr;gap:2.4rem}
 .am .awh{font-size:min(3.8rem,14cqw)}
@@ -319,9 +327,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   <ol class="fl">
     <li><div class="frame"><button class="fc" type="button" data-v="738012071" data-h="999323921b" data-t="35 in 35" aria-label="Play 35 in 35, 34 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-35.webp?v=1" alt="" width="652" height="880" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>02</b><span>00:34 / 9:16</span></p><h3>35 in 35</h3></div></li>
-    <li><div class="frame"><button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="" width="900" height="928" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
+    <li><div class="frame"><button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana-thumb.webp?v=1" alt="" width="640" height="1138" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>03</b><span>00:51 / 9:16</span></p><h3>Juliana | On Air</h3><p class="who mo">ft. Juliana Sagat</p></div></li>
   </ol>
+  <figure class="evo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-evolution-of-air.webp?v=1" alt="The Evolution of Visible Air: Air units and outsoles from the Air Max 1 (1987), 90, 180, 93, 95, 97, Plus, 360 and Air Max 2015, from Air revolution begins to maximum air, maximum flexibility" width="1160" height="653" loading="lazy" decoding="async"></figure>
   <aside class="spot" aria-labelledby="amJ">
     <div class="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="Juliana Sagat smiling, holding an Air Max 90 on its box" width="900" height="928" loading="lazy" decoding="async"></div>
     <div>
@@ -330,6 +339,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
       <p>A footwear designer from Paris, raised in Saint-Ouen and trained at Studio Bercot, who came to Nike in Portland after Marc Jacobs, Kenzo, Givenchy and Isabel Marant.</p>
       <p>For the Air Max 1&rsquo;s 35th, she spoke to Nike&rsquo;s design shift toward women, community-driven insight and tactile, exaggerated tooling, like the double-stacked Air of the Air Max Furyosa.</p>
     </div>
+    <figure class="reel"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-nikewomen-reel.webp?v=1" alt="@nikewomen Reel: Meet Juliana Sagat, Air Max designer, showing her Air Max Furyosa sketches and prototypes with the caption For the Air Max Furyosa we create this new innovation of double bubble" width="560" height="1062" loading="lazy" decoding="async"></div><figcaption class="mo">@nikewomen Reel</figcaption></figure>
   </aside>
 </section>
 
@@ -358,8 +368,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   </ol>
 </section>
 
-<figure class="ban fut">
-  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-future-banner.webp?v=1" alt="The future is in the air: a Nike Air crewneck, a black Air Max Dawn and a portrait with flowers, set in a Nike Air Max type system" width="1600" height="450" loading="lazy" decoding="async">
+<figure class="tri" aria-label="Air VaporMax 360 details">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-1.webp?v=1" alt="Close-up of a grey Air VaporMax 360 upper with an iridescent Swoosh" width="900" height="1125" loading="lazy" decoding="async">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-2.webp?v=1" alt="Iridescent heel of the Air VaporMax 360 over its clear VaporMax Air unit" width="900" height="1125" loading="lazy" decoding="async">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-3.webp?v=1" alt="The clear VaporMax Air outsole seen from below" width="900" height="900" loading="lazy" decoding="async">
 </figure>
 
 <section class="sec ugc" aria-labelledby="amU">
