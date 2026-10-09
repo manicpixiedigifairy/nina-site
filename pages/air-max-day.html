@@ -101,6 +101,20 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .chips{display:flex;flex-wrap:wrap;gap:2px;align-content:flex-start}
 .am .chips li{padding:.55em .9em;background:#F1ECFF;color:#4B2BD8;font:600 calc(var(--u)*.9)/1 var(--ar);letter-spacing:.04em}
 
+/* dossier: the moment, the idea, the rollout */
+.am .dos{position:relative;padding:calc(var(--u)*6) var(--g) calc(var(--u)*6.5)}
+.am .dos .chip{display:inline-block;padding:.35em .9em;background:#E7A9C6;transform:rotate(-2deg)}
+.am .dos .lbl{margin:calc(var(--u)*1.6) 0 calc(var(--u)*3)}
+.am .dg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3.4)}
+.am .dg article{position:relative}
+.am .dg .num{display:block;font:700 calc(var(--u)*3.4)/1 var(--sc);color:var(--ir)}
+.am .dg h3{margin:calc(var(--u)*.5) 0 calc(var(--u)*1.1);font:900 calc(var(--u)*3)/1 var(--sf)}
+.am .dg h3 i{font-style:italic}
+.am .dg p{font-size:calc(var(--u)*1.08);line-height:1.7}
+.am .dg p+p{margin-top:calc(var(--u)*1)}
+.am .dg mark{background:var(--lime);color:inherit;padding:0 .15em}
+.am .dg .q{display:block;margin-top:calc(var(--u)*1.4);padding-left:calc(var(--u)*1.1);border-left:2px solid var(--ir);font:700 calc(var(--u)*1.75)/1.15 var(--sc)}
+.am .dos .stk{right:var(--g);top:calc(var(--u)*4)}
 /* section heads */
 .am .sh{position:relative;padding:calc(var(--u)*6) var(--g) calc(var(--u)*3)}
 .am .h2{font:900 calc(var(--u)*10)/.82 var(--sf);letter-spacing:-.02em}
@@ -180,6 +194,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .card p{font-size:1.02rem}
 .am .chips li{font-size:.78rem}
 .am .sh{padding:4rem var(--g) 2rem}
+.am .dos{padding:3.6rem var(--g) 4rem}
+.am .dg{grid-template-columns:1fr;gap:2.6rem}
+.am .dg h3{font-size:2rem}
+.am .dg .num{font-size:2.4rem}
+.am .dg .q{font-size:1.4rem}
 .am .h2{font-size:min(6.4rem,20cqw)}
 .am .sh .sc{font-size:1.5rem}
 .am .fs .sh .sc{position:static;display:block;margin-top:.8rem;transform:rotate(-3deg)}
@@ -199,6 +218,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .torn{font-size:1.6rem}
 }
 @media(max-width:560px){
+.am .dg{grid-template-columns:1fr}
 .am .fl{grid-template-columns:1fr;gap:3rem}
 .am .fl>li{max-width:20rem;width:100%;justify-self:center}
 .am .fl li:nth-child(even) .po{margin-top:0}
@@ -258,6 +278,32 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <p>Air Max Day 2022 ran as five short films and an Instagram Stories series that asked followers for their first memory of Nike Air, then quizzed them on where the Air came from.</p>
       <ul class="chips" aria-label="Project tags"><li>Nike</li><li>Air Max Day</li><li>5 Films</li><li>Instagram Stories</li><li>Quiz</li><li>Sneaker History</li></ul>
     </div>
+  </div>
+</section>
+
+<section class="dos" aria-labelledby="amD">
+  <span class="chip tw">Dossier</span>
+  <span class="stk" aria-hidden="true">35<br>yrs</span>
+  <p class="lbl tw"><span id="amD">The case</span><span>03 / 26</span></p>
+  <div class="dg">
+    <article>
+      <span class="num" aria-hidden="true">01</span>
+      <h3>The <i>moment</i></h3>
+      <p>Air Max Day lands every March 26, the day the Air Max 1 released in 1987. The 2022 edition marked <mark>35 years of visible Air</mark>.</p>
+      <p>That made the milestone a story about time as much as a shoe: a first pair, a hand-me-down, a sneaker you still remember wearing to school.</p>
+    </article>
+    <article>
+      <span class="num" aria-hidden="true">02</span>
+      <h3>The <i>idea</i></h3>
+      <p>Air Max is <mark>more than a shoe</mark>. It&rsquo;s a memory people carry. So the work handed the mic to the people who wear it, asked for their first memory of Nike Air, and played their answers back in the feed.</p>
+      <span class="q">&ldquo;Middle school, my mother worked hard to get me my first pair of Air Max 90.&rdquo;</span>
+    </article>
+    <article>
+      <span class="num" aria-hidden="true">03</span>
+      <h3>The <i>rollout</i></h3>
+      <p>Five films, from 13 to 51 seconds, cut for vertical and 4:5 feeds.</p>
+      <p>A run of Instagram Stories that moved from an open question, to a quiz on Tinker Hatfield&rsquo;s original sketches, to quick Air facts and a style tip for the 1987 Air Max 1.</p>
+    </article>
   </div>
 </section>
 
