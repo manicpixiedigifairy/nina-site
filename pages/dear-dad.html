@@ -169,7 +169,8 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 .dd .bt:nth-child(4) i{background:#8be36b;box-shadow:inset 0 -.35em 0 rgba(0,0,0,.25),0 0 0 calc(var(--u)*.25) var(--ink),0 0 0 calc(var(--u)*.45) #8be36b}
 .dd .bt b{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:calc(var(--u)*1.7);line-height:1.1}
 /* footer */
-.dd .ft{background:var(--ink);padding:calc(var(--u)*5) var(--g) calc(var(--u)*6);display:flex;gap:calc(var(--u)*1.6);flex-wrap:wrap;justify-content:flex-start}
+.dd .ft{background:var(--ink);padding:calc(var(--u)*5) var(--g) calc(var(--u)*6);display:flex;gap:calc(var(--u)*1.6);flex-wrap:wrap;justify-content:space-between}
+.dd .ft a svg{width:calc(var(--u)*1.5);height:auto;flex:none}
 .dd .ft a,.dd .ft button{display:inline-flex;align-items:center;gap:calc(var(--u)*1);padding:calc(var(--u)*1.2) calc(var(--u)*2.2);border-radius:999px;border:0;font-family:var(--px);font-size:max(9px,calc(var(--u)*.88));letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .15s}
 .dd .ft a{background:var(--ye);color:var(--ink);box-shadow:0 .5em 0 #b8800a}
 .dd .ft button{background:transparent;color:var(--cr);box-shadow:inset 0 0 0 calc(var(--u)*.25) var(--cr)}
@@ -342,7 +343,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
     <div class="hd rv"><span class="lvl px">Level 6</span><h2><span class="k">My Role</span></h2></div>
     <div class="tx rv" style="--d:.1s"><p class="bdy">As Associate Creative Director, I <mark>originated the campaign concept</mark> and led creative across both live and cinematic components. I scripted the livestream segments, directed storytelling tone and created initial treatments shared with filmmaker partners.</p></div>
     <div class="btns">
-      <div class="bt rv"><i></i><b>Originated the Concept</b></div>
+      <div class="bt rv"><i></i><b>Original Concept</b></div>
       <div class="bt rv" style="--d:.07s"><i></i><b>Led Live and Cinematic</b></div>
       <div class="bt rv" style="--d:.14s"><i></i><b>Scripted the Livestream</b></div>
       <div class="bt rv" style="--d:.21s"><i></i><b>Created Initial Treatments</b></div>
@@ -351,7 +352,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 </section>
 
 <footer class="ft">
-  <a href="https://www.byninaaustin.com/content" data-back><span aria-hidden="true">&larr;</span> <span data-back-label>Back to Content</span></a>
+  <a href="https://www.byninaaustin.com/content"><svg class="pix" viewBox="0 0 9 7" aria-hidden="true" focusable="false"><rect x="3" y="0" width="1" height="1" fill="#090B2A"/><rect x="2" y="1" width="2" height="1" fill="#090B2A"/><rect x="1" y="2" width="8" height="1" fill="#090B2A"/><rect x="0" y="3" width="9" height="1" fill="#090B2A"/><rect x="1" y="4" width="8" height="1" fill="#090B2A"/><rect x="2" y="5" width="2" height="1" fill="#090B2A"/><rect x="3" y="6" width="1" height="1" fill="#090B2A"/></svg> Back to Content</a>
   <button type="button" data-go-top>Play Again</button>
 </footer>
 
@@ -467,16 +468,6 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
       if(a.hasAttribute('data-coin')&&!reduce){a.classList.add('hit');win.setTimeout(function(){a.classList.remove('hit');go()},520)}else go();
     });
   });
-  /* back link: Experiential for the Streamathon page, Content for Dear Dad */
-  var back=dd.querySelector('[data-back]');
-  if(back){
-    var path=String(win.location.pathname||'').toLowerCase(),ref='';
-    try{ref=document.referrer||win.document.referrer||''}catch(x){}
-    if(path.indexOf('streamathon')>-1||/\/experiential(\b|\/|\?|$)/i.test(ref)){
-      back.setAttribute('href','https://www.byninaaustin.com/experiential');
-      var bl=back.querySelector('[data-back-label]');if(bl)bl.textContent='Back to Experiential';
-    }
-  }
   var top=dd.querySelector('[data-go-top]');
   if(top)top.addEventListener('click',function(){
     goTo(dd.getBoundingClientRect().top+(win.pageYOffset||0));
