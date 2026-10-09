@@ -158,6 +158,46 @@ background:linear-gradient(90deg,rgba(0,0,0,.45),transparent 12%,transparent 88%
 .dd.js .fr.rv{opacity:1;transform:none;filter:none}
 .dd.js .fr.rv .pic{clip-path:inset(0 50% 0 50%);transition:clip-path 1.8s cubic-bezier(.7,0,.2,1)}
 .dd.js .fr.rv.on .pic{clip-path:inset(0 0 0 0)}
+/* softening pass: fewer rules and boxes, warmer light, looser rhythm */
+.dd .hero .vf{display:none}
+.dd .hero .beam{clip-path:none;background:conic-gradient(from 180deg at 50% -2%,rgba(242,201,138,.52) 0deg,rgba(242,201,138,.3) 13deg,transparent 29deg,transparent 331deg,rgba(242,201,138,.3) 347deg,rgba(242,201,138,.52) 360deg);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.55) 50%,transparent 92%);mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.55) 50%,transparent 92%)}
+.dd .tkt{rotate:-2.6deg}
+.dd .st{border-top:0}
+.dd .st::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(var(--u)*18);background:linear-gradient(180deg,var(--prev,transparent),transparent);pointer-events:none}
+.dd .who{--prev:#070504;background:radial-gradient(70% 60% at 86% 34%,rgba(184,102,58,.15),transparent 70%),#0A0807}
+.dd .what{--prev:#0A0807;background:radial-gradient(60% 24% at 8% 10%,rgba(242,201,138,.08),transparent 70%),radial-gradient(60% 22% at 92% 72%,rgba(184,102,58,.11),transparent 70%),var(--ink2)}
+.dd .where{--prev:var(--ink2);background:radial-gradient(60% 50% at 14% 82%,rgba(120,170,190,.12),transparent 70%),var(--sea)}
+.dd .why{--prev:var(--sea)}
+.dd .res{--prev:var(--pc);background:radial-gradient(70% 40% at 50% 100%,rgba(242,201,138,.12),transparent 70%),var(--ink)}
+.dd .role{--prev:var(--ink);background:radial-gradient(70% 60% at 18% 22%,rgba(184,102,58,.16),transparent 70%),var(--umber)}
+.dd .ft{--prev:var(--umber);border-top:0}
+.dd .ft::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(var(--u)*14);background:linear-gradient(180deg,var(--prev),transparent);pointer-events:none}
+.dd .ft>*{position:relative}
+.dd .st .nm{color:rgba(214,176,106,.065);-webkit-text-stroke:0}
+.dd .why .nm{color:rgba(26,17,12,.055);-webkit-text-stroke:0}
+.dd h2 .k{letter-spacing:.24em}
+.dd .who .tx{grid-column:7/12;padding-top:calc(var(--u)*5)}
+.dd .where .tx{grid-column:6/11;padding-top:calc(var(--u)*6)}
+.dd .role .tx{grid-column:8/13;padding-top:calc(var(--u)*4)}
+.dd .res .tx{grid-column:7/13}
+.dd .why::before,.dd .res::before{height:calc(var(--u)*7)}
+.dd .fr{background:#120c09;border-radius:calc(var(--u)*1);padding:calc(var(--u)*.7);box-shadow:0 calc(var(--u)*2.4) calc(var(--u)*6) rgba(0,0,0,.65),0 0 calc(var(--u)*10) rgba(242,201,138,.13);animation:ddFloat 9s ease-in-out infinite alternate}
+.dd .fr .pic{border-radius:calc(var(--u)*.5)}
+.dd .fr .pic::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,rgba(242,160,90,.3),transparent 30%);mix-blend-mode:screen}
+.dd article.film .fr{rotate:-1.3deg}
+.dd article.film.rev .fr{rotate:1.1deg;animation-delay:-3s}
+.dd article.film:nth-of-type(3) .fr{rotate:.8deg;animation-delay:-6s}
+@keyframes ddFloat{from{translate:0 calc(var(--u)*-.35)}to{translate:0 calc(var(--u)*.35)}}
+.dd .film{margin-top:calc(var(--u)*5.5)}
+.dd .chn{border-top:0}
+.dd .chn div{border-left:0;padding-left:0}
+.dd .chn div::before,.dd .sb::before{content:"";display:block;width:calc(var(--u)*3);height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:calc(var(--u)*1.4)}
+.dd .sb{border-top:0;padding-top:0}
+.dd .aw{border:0;border-radius:calc(var(--u)*1.6);background:linear-gradient(160deg,rgba(242,201,138,.1),rgba(184,102,58,.05))}
+.dd .crd div{border-top:0;padding-top:0}
+.dd .crd div::before{content:"";display:block;width:calc(var(--u)*.55);height:calc(var(--u)*.55);margin:0 auto calc(var(--u)*1.5);background:var(--gold);transform:rotate(45deg);opacity:.85}
+.dd .ft .end::before{background:linear-gradient(90deg,transparent,var(--gold2))}
+.dd .ft .end::after{background:linear-gradient(90deg,var(--gold2),transparent)}
 /* tablet and phone */
 @media (max-width:1000px){
 .dd{--u:clamp(9px,2.1vw,16px);--g:calc(var(--u)*3);--sp:calc(var(--u)*7)}
@@ -165,6 +205,8 @@ background:linear-gradient(90deg,rgba(0,0,0,.45),transparent 12%,transparent 88%
 .dd .rail .in{display:none}
 .dd .st .hd,.dd .st .tx,.dd .why .tx2{grid-column:1/13}
 .dd .st .tx{margin-top:calc(var(--u)*2.6)}
+.dd .who .tx,.dd .where .tx,.dd .role .tx{padding-top:0}
+.dd .tkt{rotate:-2deg}
 .dd .tt{font-size:calc(var(--u)*10)}
 .dd .film .fr,.dd .film.rev .fr{grid-column:1/13;grid-row:auto}
 .dd .film .cp,.dd .film.rev .cp{grid-column:1/13;grid-row:auto;padding:calc(var(--u)*2.2) 0 0;text-align:left}
@@ -199,13 +241,14 @@ background:linear-gradient(90deg,rgba(0,0,0,.45),transparent 12%,transparent 88%
 .dd .fr .pic img{transform:scale(1.02)}
 }
 @media (prefers-reduced-motion:reduce){
-.dd .grain,.dd .hero .beam,.dd .hero .glow,.dd .hero .mote{animation:none!important}
+.dd .grain,.dd .hero .beam,.dd .hero .glow,.dd .hero .mote,.dd .fr{animation:none!important}
 .dd .cur.l{animation:none!important;transform:translateX(-82%)}
 .dd .cur.r{animation:none!important;transform:translateX(82%)}
 .dd .tt i,.dd .hero .pre,.dd .hero .kick,.dd .tkt{animation:none!important;opacity:1;filter:none;transform:none}
 .dd.js .rv,.dd.js .rv.on{opacity:1;transform:none;filter:none;transition:none}
 .dd.js .fr.rv .pic{clip-path:none;transition:none}
 .dd .fr .pic img{transform:scale(1.02)}
+.dd .fr{animation:none!important}
 }
 </style></head><body>
 <div class="dd" id="dd">
