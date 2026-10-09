@@ -42,6 +42,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .hud.b{top:auto;bottom:calc(var(--u)*1.6)}
 .am .h1{position:relative;font:400 calc(var(--u)*13.5)/.84 var(--an);text-transform:uppercase;letter-spacing:.005em}
 .am .h1 .l2{display:block;margin-left:calc(var(--u)*4)}
+.am .h1 .chr{background:linear-gradient(100deg,transparent 38%,rgba(255,255,255,.35) 44%,#fff 50%,rgba(220,235,255,.35) 56%,transparent 62%) -60% 0/45% 100% no-repeat,var(--chrome);-webkit-background-clip:text;background-clip:text;animation:amGlint 4.8s cubic-bezier(.45,0,.2,1) infinite}
+.am .h1 .l2.chr{animation-delay:.18s}
+@keyframes amGlint{0%,55%{background-position:-60% 0,0 0}90%,100%{background-position:170% 0,0 0}}
 .am .sub{display:inline-flex;align-items:center;gap:.7em;margin-top:calc(var(--u)*2.4);padding:.5em 1em;border:1.5px solid var(--lime);color:var(--lime)}
 .am .sub::before{content:'';width:.6em;height:.6em;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime);animation:amBlink 1.4s steps(1) infinite}
 @keyframes amBlink{50%{opacity:.2}}
@@ -386,6 +389,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .st{opacity:1;transform:none;transition:none}.am .st.in .bars i{animation:none;transform:scaleX(1)}.am .emo,.am .pll img{transition:none}.am .qz button.no,.am .qb .qr.pop,.am .pdone.on{animation:none}
 .am .tk div,.am .gl::before,.am .gl::after,.am .sub::before{animation:none}
 .am .gl::before,.am .gl::after{display:none}
+.am .h1 .chr{animation:none}
 .am .tilt,.am .fl .frame,.am .fc>img,.am .f2{transition:none}
 }
 </style></head>
@@ -395,7 +399,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 <header class="hero grid-bg scan">
   <p class="hud mo" aria-hidden="true"><span>Nike / Air Max Day</span></p>
   <div>
-    <h1 class="h1"><span class="gl chr" data-t="Air Max">Air Max</span><span class="gl chr l2" data-t="Day 22">Day 22</span></h1>
+    <h1 class="h1"><span class="gl chr" data-t="Air Max">Air Max</span><span class="gl chr l2" data-t="Day &rsquo;22">Day &rsquo;22</span></h1>
     <p class="ld">For the broader hardcore sneakerhead community, Air Max Day 2022 (which marked the 35th anniversary of the Air Max 1) shifted from abstract digital hubs into pure product storytelling, regional hype, and archival history. The 2022 approach transformed standard consumer feeds into a sprawling, multi-platform gallery.</p>
   </div>
   <div class="hcard">
