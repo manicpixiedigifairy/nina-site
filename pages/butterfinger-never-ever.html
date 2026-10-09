@@ -20,7 +20,7 @@ html,body{margin:0}
 .bf.js .rv.in{opacity:1;translate:0 0;scale:1}
 
 /* HERO */
-.bf .hero{position:relative;padding:calc(var(--u)*6.5) var(--g) calc(var(--u)*5);display:flex;flex-direction:column;align-items:center;text-align:center;background:radial-gradient(ellipse at 50% 34%,#2B86FF 0,#0A5CD6 52%,#0847A8 100%);isolation:isolate;overflow:hidden;overflow:clip}
+.bf .hero{position:relative;padding:calc(var(--u)*6.5) var(--g) calc(var(--u)*5);display:flex;flex-direction:column;align-items:center;text-align:center;background:radial-gradient(ellipse at 50% 34%,#2B86FF 0,#0A5CD6 52%,#0847A8 100%);isolation:isolate;overflow:hidden;overflow:clip;border-bottom:calc(var(--u)*.4) solid var(--br)}
 .bf .hero::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.55;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%231A74F0'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%231A74F0'/%3E%3C/svg%3E");background-size:calc(var(--u)*10) calc(var(--u)*10)}
 .bf .rings{position:absolute;left:50%;top:50%;width:0;height:0;z-index:-1;pointer-events:none}
 .bf .rings i{position:absolute;left:calc(var(--u)*-18);top:calc(var(--u)*-18);width:calc(var(--u)*36);height:calc(var(--u)*36);border-radius:50%;border:calc(var(--u)*.22) solid rgba(255,255,255,.28);opacity:0;animation:rp 6s ease-out infinite;animation-delay:calc(var(--k)*1.5s)}
@@ -60,18 +60,6 @@ html,body{margin:0}
 @keyframes hn{0%,100%{translate:0 0}50%{translate:0 -.35em}}
 .bf .pn{position:absolute;z-index:3;left:50%;top:50%;translate:-50% -50%;width:100cqw;max-width:none;pointer-events:none;will-change:transform}
 .bf .up{transition:none!important;cursor:grabbing!important;box-shadow:calc(var(--u)*.9) calc(var(--u)*1.2) 0 var(--br)}
-
-/* TICKERS */
-.bf .tk{position:relative;height:calc(var(--u)*15);background:var(--nv);overflow:hidden;border-top:calc(var(--u)*.4) solid var(--br)}
-.bf .tape{position:absolute;left:-6%;right:-6%;height:calc(var(--u)*5);display:flex;align-items:center;overflow:hidden;white-space:nowrap;box-shadow:0 .5em 0 rgba(0,0,0,.25)}
-.bf .tape.t1{top:calc(var(--u)*2.4);background:var(--y);color:var(--br);transform:rotate(-2.2deg)}
-.bf .tape.t2{top:calc(var(--u)*6.2);background:var(--or);color:var(--br);transform:rotate(1.8deg)}
-.bf .run{display:flex;flex:none;animation:tk 34s linear infinite}
-.bf .t2 .run{animation-duration:42s;animation-direction:reverse}
-.bf .grp{display:flex;flex:none;align-items:center}
-.bf .grp b{font:400 calc(var(--u)*2.3)/1 var(--disp);padding:0 calc(var(--u)*1.5)}
-.bf .grp i{font-style:normal;font-size:calc(var(--u)*1.7)}
-@keyframes tk{to{transform:translateX(-50%)}}
 
 /* CASE FILE */
 .bf .cf{position:relative;background:var(--y2);color:var(--br);padding:var(--sp) var(--g) calc(var(--sp)*1.1);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
@@ -263,10 +251,6 @@ html,body{margin:0}
 .bf .tt{font-size:min(5.6rem,23vw)}
 .bf .dek{font-size:1.15rem}
 .bf .pls li{font-size:.85rem}
-.bf .tk{height:10.5rem}
-.bf .tape{height:3.4rem}
-.bf .tape.t1{top:1.6rem}.bf .tape.t2{top:4.2rem}
-.bf .grp b{font-size:1.5rem;padding:0 1rem}
 .bf .fa{font-size:.95rem}
 .bf .cd .in{min-height:15rem}
 .bf .cd .fw{font-size:3.2rem}
@@ -314,17 +298,6 @@ html,body{margin:0}
   </div>
   <canvas class="cv2" id="bfCv2" aria-hidden="true"></canvas>
 </header>
-
-<div class="tk" aria-hidden="true">
-  <div class="tape t1"><div class="run">
-    <div class="grp"><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i></div>
-    <div class="grp"><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i><b>Nobody&rsquo;s Gonna Lay a Finger</b><i>&#10022;</i></div>
-  </div></div>
-  <div class="tape t2"><div class="run">
-    <div class="grp"><b>Never Ever</b><i>&#10022;</i><b>Butterfinger Investigators</b><i>&#10022;</i><b>Time Travel</b><i>&#10022;</i><b>Never Ever</b><i>&#10022;</i><b>Butterfinger Investigators</b><i>&#10022;</i><b>Time Travel</b><i>&#10022;</i></div>
-    <div class="grp"><b>Never Ever</b><i>&#10022;</i><b>Butterfinger Investigators</b><i>&#10022;</i><b>Time Travel</b><i>&#10022;</i><b>Never Ever</b><i>&#10022;</i><b>Butterfinger Investigators</b><i>&#10022;</i><b>Time Travel</b><i>&#10022;</i></div>
-  </div></div>
-</div>
 
 <section class="cf" id="bfCf">
   <div class="hd rv"><div><span class="lb">Case File: The Briefing</span><h2 class="h2">Open the Case File</h2></div><button class="fa" type="button" id="bfFa">Flip All Cards</button></div>
@@ -424,34 +397,31 @@ html,body{margin:0}
     <div class="ctl rv">
       <div class="kw" aria-hidden="true">
         <span class="kd on" style="left:calc(50% + var(--u)*-9.50);top:calc(var(--u)*14.50)">1</span>
-        <span class="kd" style="left:calc(50% + var(--u)*-8.23);top:calc(var(--u)*9.75)">2</span>
-        <span class="kd" style="left:calc(50% + var(--u)*-4.75);top:calc(var(--u)*6.27)">3</span>
-        <span class="kd" style="left:calc(50% + var(--u)*0.00);top:calc(var(--u)*5.00)">4</span>
-        <span class="kd" style="left:calc(50% + var(--u)*4.75);top:calc(var(--u)*6.27)">5</span>
-        <span class="kd" style="left:calc(50% + var(--u)*8.23);top:calc(var(--u)*9.75)">6</span>
-        <span class="kd" style="left:calc(50% + var(--u)*9.50);top:calc(var(--u)*14.50)">7</span>
+        <span class="kd" style="left:calc(50% + var(--u)*-7.69);top:calc(var(--u)*8.92)">2</span>
+        <span class="kd" style="left:calc(50% + var(--u)*-2.94);top:calc(var(--u)*5.46)">3</span>
+        <span class="kd" style="left:calc(50% + var(--u)*2.94);top:calc(var(--u)*5.46)">4</span>
+        <span class="kd" style="left:calc(50% + var(--u)*7.69);top:calc(var(--u)*8.92)">5</span>
+        <span class="kd" style="left:calc(50% + var(--u)*9.50);top:calc(var(--u)*14.50)">6</span>
         <div class="kn" id="bfKn"><i></i></div>
       </div>
       <div class="ers" role="radiogroup" aria-label="Choose a scene">
-        <button type="button" role="radio" aria-checked="true" data-e="0">Today</button>
-        <button type="button" role="radio" aria-checked="false" data-e="1">Golden Age of Pirates</button>
-        <button type="button" role="radio" aria-checked="false" data-e="2">Pirate Duel</button>
-        <button type="button" role="radio" aria-checked="false" data-e="3">Ancient Rome</button>
-        <button type="button" role="radio" aria-checked="false" data-e="4">The Ruins</button>
-        <button type="button" role="radio" aria-checked="false" data-e="5">The Throne Room</button>
-        <button type="button" role="radio" aria-checked="false" data-e="6">The Showdown</button>
+        <button type="button" role="radio" aria-checked="true" data-e="0">Golden Age of Pirates</button>
+        <button type="button" role="radio" aria-checked="false" data-e="1">Pirate Duel</button>
+        <button type="button" role="radio" aria-checked="false" data-e="2">Ancient Rome</button>
+        <button type="button" role="radio" aria-checked="false" data-e="3">The Ruins</button>
+        <button type="button" role="radio" aria-checked="false" data-e="4">The Throne Room</button>
+        <button type="button" role="radio" aria-checked="false" data-e="5">The Showdown</button>
       </div>
     </div>
     <div class="stg rv" id="bfStg" data-e="0" style="--d:.1s">
-      <div class="sc s0 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-end.gif?v=1" alt="" width="600" height="337"></div>
-      <div class="sc s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy"><div class="ins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div></div>
+      <div class="sc s1 on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy"><div class="ins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div></div>
       <div class="sc s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-pirate.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="sc s3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-rome.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="sc s4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-ruins.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="sc s5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-throne.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="sc s6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-scene-showdown.webp?v=1" alt="" width="1400" height="788" loading="lazy"></div>
       <div class="fl2" id="bfFz" aria-hidden="true"></div>
-      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 7</span><b class="ern" id="bfEt">Today</b><p class="erd" id="bfEd">The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.</p></div>
+      <div class="cap" aria-live="polite"><span class="n" id="bfEn">Scene 1 of 6</span><b class="ern" id="bfEt">Golden Age of Pirates</b><p class="erd" id="bfEd">Time travel sends the task force to the golden age of pirates to recover a stolen Butterfinger.</p></div>
     </div>
   </div>
 </section>
@@ -586,9 +556,8 @@ fa.addEventListener('click',function(){
 
 /* time machine */
 var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),fz=q('#bfFz');
-var ANG=[-90,-60,-30,0,30,60,90],cur=0,zi=1,kAng=-90;
+var ANG=[-90,-54,-18,18,54,90],cur=0,zi=1,kAng=-90;
 var ERA=[
- ['Today','The Butterfinger Investigators, a task force dedicated to returning stolen Butterfingers.'],
  ['Golden Age of Pirates','Time travel sends the task force to the golden age of pirates to recover a stolen Butterfinger.'],
  ['Pirate Duel','Time travel sends the task force back to recover a stolen Butterfinger.'],
  ['Ancient Rome','Time travel sends the task force back to recover a stolen Butterfinger.'],
