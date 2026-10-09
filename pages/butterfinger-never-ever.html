@@ -21,25 +21,26 @@ html,body{margin:0}
 .bf.js .rv.in{opacity:1;translate:0 0;scale:1}
 
 /* HERO */
-.bf .hero{position:relative;min-height:calc(var(--u)*56);padding:calc(var(--u)*8) var(--g) calc(var(--u)*6);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:calc(var(--u)*2);background:radial-gradient(ellipse at 70% 50%,#2B86FF 0,#0A5CD6 55%,#0847A8 100%);isolation:isolate}
+.bf .hero{position:relative;padding:calc(var(--u)*6.5) var(--g) calc(var(--u)*5);display:flex;flex-direction:column;align-items:center;text-align:center;background:radial-gradient(ellipse at 50% 34%,#2B86FF 0,#0A5CD6 52%,#0847A8 100%);isolation:isolate;overflow:hidden;overflow:clip}
 .bf .hero::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.55;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%231A74F0'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%231A74F0'/%3E%3C/svg%3E");background-size:calc(var(--u)*10) calc(var(--u)*10)}
-.bf .rings{position:absolute;left:68%;top:52%;width:0;height:0;z-index:-1;pointer-events:none}
+.bf .rings{position:absolute;left:50%;top:50%;width:0;height:0;z-index:-1;pointer-events:none}
 .bf .rings i{position:absolute;left:calc(var(--u)*-18);top:calc(var(--u)*-18);width:calc(var(--u)*36);height:calc(var(--u)*36);border-radius:50%;border:calc(var(--u)*.22) solid rgba(255,255,255,.28);opacity:0;animation:rp 6s ease-out infinite;animation-delay:calc(var(--k)*1.5s)}
 @keyframes rp{0%{transform:scale(.25);opacity:0}15%{opacity:.9}100%{transform:scale(2.4);opacity:0}}
 .bf .logo{position:absolute;left:var(--g);top:calc(var(--u)*2.4);width:calc(var(--u)*9.5);z-index:6}
-.bf .hl{position:relative;z-index:2}
-.bf .tt{margin:0;font:400 calc(var(--u)*10.5)/.9 var(--disp);color:var(--y)}
-.bf .tt .wd{display:block;white-space:nowrap}
-.bf .tt .wd+.wd{padding-left:.7em}
+.bf .stage{order:1;position:relative;width:min(100%,calc(var(--u)*36));margin-top:calc(var(--u)*1.5)}
+.bf .hl{position:relative;z-index:2;order:2;margin-top:calc(var(--u)*3.4)}
+.bf .tt{margin:0;font:400 calc(var(--u)*8.8)/.95 var(--disp);color:var(--y)}
+.bf .tt .wd{display:inline-block;white-space:nowrap}
+.bf .tt .wd+.wd{padding-left:.28em}
 .bf .tt .ch{display:inline-block;transform-origin:50% 100%;--s:var(--br2);text-shadow:0 .03em 0 var(--s),0 .06em 0 var(--s),0 .09em 0 var(--s),0 .12em 0 var(--s),0 .15em 0 var(--s),0 .18em 0 var(--br),0 .3em .14em rgba(0,0,0,.3);animation:bw 2.8s ease-in-out infinite;animation-delay:calc(var(--i)*-.21s);cursor:default;-webkit-user-select:none;user-select:none}
 @keyframes bw{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-.05em) rotate(1.4deg)}}
 .bf .tt .ch.hp{animation:hop .7s cubic-bezier(.3,1.6,.5,1)}
 @keyframes hop{0%{transform:translateY(0) scale(1)}28%{transform:translateY(-.3em) rotate(-9deg) scale(1.1,.94)}58%{transform:translateY(.02em) rotate(3deg) scale(.95,1.06)}100%{transform:translateY(0) rotate(0) scale(1)}}
-.bf .dek{margin:calc(var(--u)*2.6) 0 0;max-width:24em;font:500 calc(var(--u)*1.75)/1.4 var(--lab)}
-.bf .pls{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin:calc(var(--u)*2.2) 0 0;padding:0;list-style:none}
+.bf .dek{margin:calc(var(--u)*2.2) auto 0;max-width:28em;font:500 calc(var(--u)*1.75)/1.4 var(--lab)}
+.bf .pls{display:flex;flex-wrap:wrap;justify-content:center;gap:calc(var(--u)*.8);margin:calc(var(--u)*2.2) 0 0;padding:0;list-style:none}
 .bf .pls li{padding:.55em 1.2em .6em;border-radius:99px;background:var(--y);color:var(--br);font:600 calc(var(--u)*1.2)/1 var(--lab);box-shadow:0 .2em 0 var(--br2);transition:transform .18s cubic-bezier(.3,1.6,.5,1),box-shadow .18s;cursor:default}
 .bf .pls li:hover{transform:translateY(.14em) rotate(-2deg);box-shadow:0 .06em 0 var(--br2)}
-.bf .obj{position:relative;z-index:2;justify-self:center;width:min(100%,calc(var(--u)*41));aspect-ratio:1300/1134;cursor:pointer;will-change:transform;transform-origin:50% -12%;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;border-radius:calc(var(--u)*2)}
+.bf .obj{position:relative;z-index:2;width:100%;aspect-ratio:1300/1134;cursor:pointer;will-change:transform;transform-origin:50% -12%;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;border-radius:calc(var(--u)*2)}
 .bf .obj img{display:block;pointer-events:none}
 .bf .obj .bro{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(.5) rotate(-10deg);transition:transform .8s cubic-bezier(.3,1.8,.5,1),opacity .12s}
 .bf .obj.brk .bro{opacity:1;transform:scale(1.14)}
@@ -58,11 +59,8 @@ html,body{margin:0}
 .bf .hint{position:absolute;z-index:4;left:50%;bottom:calc(var(--u)*-1.6);transform:translateX(-50%) rotate(-3deg);padding:.5em 1.1em;border-radius:99px;background:#fff;color:var(--b2);font:600 calc(var(--u)*1.1)/1 var(--lab);white-space:nowrap;box-shadow:0 .2em 0 var(--br);animation:hn 1.8s ease-in-out infinite;pointer-events:none;transition:opacity .4s}
 .bf .hint.gone{opacity:0}
 @keyframes hn{0%,100%{translate:0 0}50%{translate:0 -.35em}}
-.bf .pn{position:absolute;z-index:3;left:54%;top:-3%;width:52%;pointer-events:none;will-change:transform;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%);mask-image:linear-gradient(90deg,transparent 0,#000 14%)}
-.bf .ph{position:absolute;z-index:5;right:calc(var(--g)*.7);bottom:calc(var(--u)*3.2);width:calc(var(--u)*10.5);aspect-ratio:576/1024;border:calc(var(--u)*.55) solid #fff;border-radius:calc(var(--u)*1.5);overflow:hidden;background:var(--b);box-shadow:calc(var(--u)*.5) calc(var(--u)*.6) 0 var(--br);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;-webkit-user-select:none;user-select:none}
-.bf .ph img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.bf .pn{position:absolute;z-index:3;left:50%;top:50%;translate:-50% -50%;width:100cqw;max-width:none;pointer-events:none;will-change:transform}
 .bf .up{transition:none!important;cursor:grabbing!important;box-shadow:calc(var(--u)*.9) calc(var(--u)*1.2) 0 var(--br)}
-.bf .ph .tg2{position:absolute;left:0;right:0;bottom:0;padding:.6em .4em;background:linear-gradient(0deg,rgba(6,35,95,.9),rgba(6,35,95,0));font:600 calc(var(--u)*.95)/1 var(--lab);text-align:center;pointer-events:none}
 
 /* TICKERS */
 .bf .tk{position:relative;height:calc(var(--u)*15);background:var(--nv);overflow:hidden;border-top:calc(var(--u)*.4) solid var(--br)}
@@ -153,48 +151,20 @@ html,body{margin:0}
 .bf .cap .ern{display:block;margin:.3em 0 .3em;font:400 calc(var(--u)*3)/1 var(--disp);color:var(--y)}
 .bf .cap .erd{margin:0;font:500 calc(var(--u)*1.2)/1.35 var(--lab)}
 
-/* FIELD BAND */
-.bf .fd{position:relative;overflow:hidden;line-height:0;background:#F9CF2B}
-.bf .fd img{width:100%;height:auto;transform:scale(1.12) translate3d(0,var(--py,0%),0);will-change:transform}
-@media(min-width:701px){.bf .fd{height:calc(var(--u)*25)}.bf .fd img{height:100%;object-fit:cover;object-position:50% 52%}}
-
-/* CRUNCH */
-.bf .cr{background:var(--y);color:var(--br);padding:var(--sp) var(--g) calc(var(--sp)*1.1);position:relative}
-.bf .cr .h2{color:var(--b)}
-.bf .ca{position:relative;aspect-ratio:16/8;border-radius:calc(var(--u)*2.4);border:calc(var(--u)*.45) solid var(--br);background:radial-gradient(circle at 50% 50%,#2C86FF,#0A5CD6 62%,#0847A8);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--br);overflow:hidden;isolation:isolate;touch-action:manipulation}
-.bf .cv{position:absolute;inset:0;width:100%;height:100%;z-index:7;pointer-events:none}
-.bf .pk{position:absolute;z-index:3;left:29%;top:20%;width:42%;border:0;background:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s}
-.bf .pk img{width:100%;pointer-events:none}
-.bf .pk:hover{transform:rotate(-2deg) scale(1.03)}
-.bf .pk.jt{animation:jt .45s cubic-bezier(.3,1.6,.5,1)}
-@keyframes jt{0%{transform:scale(1)}20%{transform:scale(.88,.8) rotate(-3deg)}55%{transform:scale(1.1,1.12) rotate(2deg)}100%{transform:scale(1)}}
-.bf .st{position:absolute;z-index:4;touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
-.bf .st img{width:100%;pointer-events:none;height:100%;object-fit:cover}
-.bf .st.cir{border-radius:50%;overflow:hidden;border:calc(var(--u)*.4) solid #fff;box-shadow:calc(var(--u)*.4) calc(var(--u)*.5) 0 var(--br);aspect-ratio:1}
-.bf .st.tile{border-radius:calc(var(--u)*1.3);overflow:hidden;border:calc(var(--u)*.4) solid #fff;box-shadow:calc(var(--u)*.4) calc(var(--u)*.5) 0 var(--br);aspect-ratio:600/410}
-.bf .st.s1{left:5%;top:9%;width:17%}
-.bf .st.s2{right:6%;bottom:9%;width:17%}
-.bf .st.s3{left:9%;bottom:7%;width:21%}
-.bf .st.s4{right:4%;top:8%;width:25%}
-.bf .ct{position:absolute;z-index:5;left:50%;bottom:calc(var(--u)*1.6);transform:translateX(-50%);padding:.55em 1.3em;border-radius:99px;background:#fff;color:var(--b2);font:600 calc(var(--u)*1.3)/1 var(--lab);box-shadow:0 .22em 0 var(--br);white-space:nowrap;pointer-events:none}
-.bf .ct b{font:400 1.3em/1 var(--disp);color:var(--or);display:inline-block;min-width:1ch}
-.bf .ct b.bp2{animation:cp .3s cubic-bezier(.3,1.8,.5,1)}
-@keyframes cp{0%{transform:scale(1)}40%{transform:scale(1.7)}100%{transform:scale(1)}}
-.bf .pop{position:absolute;z-index:8;pointer-events:none;font:400 calc(var(--u)*3.2)/1 var(--disp);color:var(--y);text-shadow:0 .05em 0 var(--br2),0 .1em 0 var(--br),0 .16em .1em rgba(0,0,0,.3);white-space:nowrap;animation:pp .9s cubic-bezier(.2,.9,.3,1) forwards}
-@keyframes pp{0%{transform:translate(-50%,-30%) scale(.3) rotate(var(--pr));opacity:0}25%{transform:translate(-50%,-90%) scale(1.15) rotate(var(--pr));opacity:1}100%{transform:translate(-50%,-230%) scale(1) rotate(var(--pr));opacity:0}}
-
 /* FILM */
-.bf .fl{background:radial-gradient(ellipse 70% 55% at 82% 0%,rgba(242,138,30,.26),transparent 70%),radial-gradient(ellipse 80% 60% at 50% 100%,rgba(11,92,214,.22),transparent 70%),linear-gradient(180deg,#0B1226 0%,#17110E 55%,#0A0E20 100%);padding:calc(var(--sp)*1.25) var(--g) calc(var(--sp)*1.35);position:relative;overflow:hidden;isolation:isolate;color:#E9DCB8}
-.bf .fl::before{content:"";position:absolute;inset:-10%;z-index:3;pointer-events:none;opacity:.55;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .82 0 0 0 0 .62 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");animation:grn 1.2s steps(6) infinite}
+.bf .fl{position:relative;overflow:hidden;isolation:isolate;padding:calc(var(--sp)*1.2) var(--g) calc(var(--sp)*1.35);color:#EADFC0}
+.bf .fp{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230A5CD6' fill-opacity='.17'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230A5CD6' fill-opacity='.17'/%3E%3C/svg%3E") 0 0/calc(var(--u)*10) calc(var(--u)*10),radial-gradient(ellipse 55% 50% at 36% 62%,rgba(255,200,90,.17),transparent 70%),linear-gradient(180deg,#071634 0%,#0A1B40 50%,#0F1428 100%)}
+.bf .fh{border-top:calc(var(--u)*.4) solid var(--br);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230A5CD6' fill-opacity='.09'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230A5CD6' fill-opacity='.09'/%3E%3C/svg%3E") 0 0/calc(var(--u)*10) calc(var(--u)*10),radial-gradient(ellipse 45% 42% at 66% 60%,rgba(242,138,30,.2),transparent 70%),radial-gradient(ellipse 60% 35% at 18% 100%,rgba(90,150,130,.24),transparent 70%),linear-gradient(180deg,#04070E 0%,#0A1411 55%,#07080E 100%)}
+.bf .fl::before{content:"";position:absolute;inset:-10%;z-index:3;pointer-events:none;opacity:.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .82 0 0 0 0 .62 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");animation:grn 1.2s steps(6) infinite}
 .bf .fl::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,0,0,.55) 100%)}
 @keyframes grn{0%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,0)}100%{transform:translate(0,0)}}
-.bf .fl .hd,.bf .fl .vg{position:relative;z-index:4}
-.bf .fl .lb{color:#E9DCB8}
-.bf .fl .h2{color:var(--y);text-shadow:0 0 .5em rgba(255,233,49,.38),0 .05em 0 var(--br2),0 .1em 0 #1A0B03}
-.bf .fl .sub{color:#E9DCB8;font:italic 400 calc(var(--u)*1.9)/1.3 var(--bd)}
-.bf .fl .hd{padding-right:calc(var(--u)*15)}
+.bf .fl .hd,.bf .fl .fg,.bf .fl .crd{position:relative;z-index:4}
+.bf .fl .lb{color:#EADFC0}
+.bf .fl .h2{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br),0 0 .6em rgba(255,233,49,.3)}
+.bf .fl .sub{color:#EADFC0}
+.bf .fh .hd{padding-right:calc(var(--u)*15)}
 .bf .scl{position:absolute;left:0;right:0;height:calc(var(--u)*1.3);z-index:2;pointer-events:none}
-.bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
+.bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
 .bf .scl.b{bottom:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 100%,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
 .bf .ow{position:absolute;pointer-events:none;user-select:none;-webkit-user-select:none}
 .bf .ow img{width:100%}
@@ -208,14 +178,25 @@ html,body{margin:0}
 .bf .lan::after{content:"";position:absolute;left:50%;top:62%;width:260%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,196,96,.5),rgba(255,150,40,.18) 40%,transparent 68%);mix-blend-mode:screen;z-index:-1;animation:flk 3.1s ease-in-out infinite}
 @keyframes swy{0%,100%{rotate:3.5deg}50%{rotate:-3.5deg}}
 @keyframes flk{0%,100%{opacity:.9}18%{opacity:.7}32%{opacity:1}55%{opacity:.78}70%{opacity:.95}}
-.bf .anc{left:calc(var(--u)*-3);bottom:calc(var(--u)*-6);width:calc(var(--u)*22);z-index:1;rotate:-18deg;opacity:.85;filter:sepia(.5) brightness(.75) contrast(1.1)}
-.bf .cmp{right:calc(var(--u)*-3.5);bottom:calc(var(--u)*-3);width:calc(var(--u)*17);z-index:1;opacity:.9;filter:sepia(.35) brightness(.8);animation:cmw 7s ease-in-out infinite}
+.bf .fog{position:absolute;left:-20%;right:-20%;bottom:0;height:46%;z-index:2;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(ellipse at 28% 62%,rgba(150,195,178,.2),transparent 60%),radial-gradient(ellipse at 74% 45%,rgba(150,195,178,.14),transparent 60%);animation:fgd 24s ease-in-out infinite alternate}
+@keyframes fgd{from{translate:-4% 0}to{translate:4% -3%}}
+.bf .fg{display:grid;gap:calc(var(--u)*4);align-items:center}
+.bf .fp .fg{grid-template-columns:minmax(0,1.9fr) minmax(0,1fr)}
+.bf .fh .fg{grid-template-columns:minmax(0,1.15fr) minmax(0,1.9fr)}
+.bf .art{position:relative;align-self:stretch;min-height:calc(var(--u)*42)}
+.bf .fh .fg{margin-top:calc(var(--u)*3)}
+.bf .anc{left:-2%;top:2%;width:64%;rotate:-14deg;opacity:.9;filter:sepia(.5) brightness(.78) contrast(1.1)}
+.bf .cmp{right:-6%;bottom:2%;width:62%;opacity:.92;filter:sepia(.35) brightness(.82);animation:cmw 7s ease-in-out infinite}
 @keyframes cmw{0%,100%{rotate:-6deg}50%{rotate:5deg}}
-.bf .vg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*4)}
-.bf .vc{position:relative}
-.bf .vt{display:flex;align-items:center;gap:.8em;margin:0 0 calc(var(--u)*1.6);font:italic 500 calc(var(--u)*1.9)/1.1 var(--bd);color:#E9DCB8}
-.bf .vt b{font:600 calc(var(--u)*1.1)/1 var(--lab);font-style:normal;letter-spacing:.04em;padding:.5em 1.1em .55em;border-radius:99px;background:var(--y);color:var(--br);box-shadow:0 .16em 0 var(--br),0 0 1.2em rgba(255,233,49,.35)}
-.bf .vlt{position:relative;aspect-ratio:16/9;border:calc(var(--u)*.85) solid transparent;border-radius:calc(var(--u)*.9);background:linear-gradient(#0A0A12,#0A0A12) padding-box,linear-gradient(135deg,#F6DE9A 0%,#9A6B22 22%,#E7C46E 48%,#6F4A14 74%,#F1D587 100%) border-box;box-shadow:0 0 0 calc(var(--u)*.2) #1A0B03,0 calc(var(--u)*1.6) calc(var(--u)*3.2) rgba(0,0,0,.65),0 0 calc(var(--u)*4) rgba(242,138,30,.18);overflow:hidden;isolation:isolate}
+.bf .hfg{left:50%;bottom:0;translate:-50% 0;height:100%;width:auto;max-width:none;filter:drop-shadow(0 0 2.2em rgba(242,138,30,.4)) drop-shadow(0 0 .6em rgba(150,195,178,.35))}
+.bf .hfg img{width:auto;height:100%}
+.bf .vc{position:relative;isolation:isolate}
+.bf .por{position:absolute;left:50%;top:50%;width:150%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:calc(var(--u)*.16) dashed rgba(246,222,154,.32);z-index:-1;pointer-events:none;animation:prt 120s linear infinite}
+.bf .por::before{content:"";position:absolute;inset:11%;border-radius:50%;border:calc(var(--u)*.2) dotted rgba(246,222,154,.28);animation:prt 80s linear infinite reverse}
+.bf .por::after{content:"";position:absolute;inset:23%;border-radius:50%;border:calc(var(--u)*.12) solid rgba(246,222,154,.2)}
+.bf .fh .por{border-color:rgba(242,160,70,.3)}
+@keyframes prt{to{rotate:360deg}}
+.bf .vlt{position:relative;aspect-ratio:16/9;border:calc(var(--u)*.7) solid #EADCAE;border-radius:calc(var(--u)*1.6);background:#0A0A12;box-shadow:calc(var(--u)*1) calc(var(--u)*1) 0 #1A0B03,0 0 calc(var(--u)*4) rgba(242,138,30,.2);overflow:hidden;isolation:isolate}
 .bf .vlt::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;box-shadow:inset 0 0 calc(var(--u)*5) rgba(0,0,0,.8)}
 .bf .vlt>.bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(1) brightness(.3) contrast(1.15) saturate(.9) blur(1px)}
 .bf .vlt .cvv{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
@@ -231,20 +212,19 @@ html,body{margin:0}
 .bf .vlt.opening .lk .ob img{filter:brightness(1.12) sepia(0) saturate(1.1) contrast(1.05) drop-shadow(0 0 1.1em rgba(255,200,90,.7));transform:scale(1.07);animation:none}
 .bf .v2.opening .lk .ob img{filter:brightness(1.35) saturate(1.3) contrast(1.1) drop-shadow(0 0 1.4em rgba(255,140,30,.8))}
 .bf .vlt.opening .lk .tap{opacity:0;transition:opacity .3s}
-.bf .lk .tap{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);padding:.55em 1.4em .6em;border-radius:99px;background:rgba(10,10,18,.7);color:#F3DDA0;border:.14em solid #B98A3A;font:600 calc(var(--u)*1.2)/1 var(--lab);letter-spacing:.06em;white-space:nowrap;animation:hn 1.8s ease-in-out infinite;box-shadow:0 0 1.4em rgba(242,138,30,.3)}
+.bf .lk .tap{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);padding:.55em 1.4em .6em;border-radius:99px;background:var(--y);color:var(--br);font:600 calc(var(--u)*1.25)/1 var(--lab);letter-spacing:.03em;white-space:nowrap;animation:hn 1.8s ease-in-out infinite;box-shadow:0 .2em 0 var(--br)}
 .bf .vlt.open .lk{opacity:0;transform:scale(1.25);pointer-events:none}
 .bf .vlt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:vfi .9s ease}
 @keyframes vfi{from{opacity:0;filter:sepia(1) brightness(.4)}to{opacity:1;filter:none}}
-.bf .vl{display:inline-block;margin-top:calc(var(--u)*1.6);color:#E9DCB8;font:600 calc(var(--u)*1.1)/1 var(--lab);letter-spacing:.04em;text-decoration:underline;text-underline-offset:.25em;text-decoration-color:#B98A3A}
+.bf .vl{display:inline-block;margin-top:calc(var(--u)*1.6);color:#EADFC0;font:600 calc(var(--u)*1.1)/1 var(--lab);letter-spacing:.03em;text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--y)}
 .bf .vl:hover{color:var(--y)}
-.bf .crd{position:relative;z-index:4;margin:calc(var(--u)*8.5) 0 0;font:italic 400 calc(var(--u)*1.05)/1.3 var(--bd);color:rgba(233,220,184,.7)}
-.bf .vs{position:absolute;z-index:6;width:calc(var(--u)*14);aspect-ratio:16/9;border:calc(var(--u)*.4) solid #E8D7A6;border-radius:calc(var(--u)*.4);overflow:hidden;box-shadow:0 calc(var(--u)*.8) calc(var(--u)*1.6) rgba(0,0,0,.6);filter:sepia(.45) contrast(1.05);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
+.bf .crd{margin:calc(var(--u)*8.5) 0 0;font:500 calc(var(--u)*1.05)/1.3 var(--lab);color:rgba(234,223,192,.65)}
+.bf .vs{position:absolute;z-index:6;width:calc(var(--u)*14);aspect-ratio:16/9;border:calc(var(--u)*.4) solid #EADCAE;border-radius:calc(var(--u)*.8);overflow:hidden;box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 #1A0B03;filter:sepia(.4) contrast(1.05);touch-action:none;cursor:grab;transition:transform .45s cubic-bezier(.34,1.56,.64,1);-webkit-user-select:none;user-select:none}
 .bf .vs img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.bf .up{transition:none!important;cursor:grabbing!important}
 .bf .vs.a,.bf .vs.b{right:calc(var(--u)*.4);bottom:calc(var(--u)*-6.6)}
 
 /* BANNER + FOOTER */
-.bf .bn{background:var(--y);line-height:0}
-.bf .bn img{width:100%;height:auto}
 .bf .ft{background:var(--y);padding:calc(var(--u)*3) var(--g) calc(var(--u)*6);display:flex;justify-content:center}
 .bf .bk{display:inline-flex;align-items:center;gap:.6em;padding:.8em 1.7em .85em;border-radius:99px;background:var(--b);color:#fff;border:calc(var(--u)*.25) solid var(--br);box-shadow:0 .28em 0 var(--br);font:600 calc(var(--u)*1.4)/1 var(--lab);text-decoration:none;transition:transform .15s,box-shadow .15s,color .2s}
 .bf .bk:hover{transform:translateY(-.1em);color:var(--y)}
@@ -268,12 +248,6 @@ html,body{margin:0}
 .bf .rc .src a:hover{background:var(--y)}
 @media(max-width:1000px){
 .bf .rg{grid-template-columns:minmax(0,1fr)}
-.bf .vg{grid-template-columns:minmax(0,1fr);gap:3rem}
-.bf .vs{width:calc(var(--u)*14)}
-.bf .hero{grid-template-columns:minmax(0,1fr);padding-bottom:calc(var(--u)*14)}
-.bf .obj{width:min(100%,calc(var(--u)*36));margin-top:calc(var(--u)*2)}
-.bf .pn{left:30%;top:36%;width:70%}
-.bf .rings{left:50%;top:70%}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 .bf .cd,.bf .cd:nth-child(n+4){grid-column:span 6}
 }
@@ -282,14 +256,14 @@ html,body{margin:0}
 .bf .lb{font-size:.9rem}
 .bf .h2{font-size:min(3rem,12vw)}
 .bf .sub{font-size:1.05rem}
-.bf .hero{padding-top:6.4rem;padding-bottom:9rem}
+.bf .hero{padding-top:5.6rem;padding-bottom:4.5rem}
+.bf .stage{width:100%;margin-top:.5rem}
+.bf .obj .wr{left:-5%;right:-5%}
+.bf .tt .wd{display:block}.bf .tt .wd+.wd{padding-left:0}
 .bf .logo{top:1.4rem;width:6.4rem}
-.bf .tt{font-size:min(5.6rem,24vw)}
+.bf .tt{font-size:min(5.6rem,23vw)}
 .bf .dek{font-size:1.15rem}
 .bf .pls li{font-size:.85rem}
-.bf .obj{width:100%}
-.bf .hint{font-size:.8rem;bottom:-1.4rem}
-.bf .ph{width:6.6rem;right:1rem;bottom:1.4rem}
 .bf .tk{height:10.5rem}
 .bf .tape{height:3.4rem}
 .bf .tape.t1{top:1.6rem}.bf .tape.t2{top:4.2rem}
@@ -310,21 +284,14 @@ html,body{margin:0}
 .bf .stg{aspect-ratio:1/1}
 .bf .cap{max-width:calc(100% - 2rem);left:1rem;bottom:1rem;padding:.8rem 1rem 1rem}
 .bf .cap .n{font-size:.75rem}.bf .cap .ern{font-size:1.45rem;margin:.2em 0 0}.bf .cap .erd{display:none}.bf .cap{padding:.6rem .9rem .75rem;width:auto}
-.bf .ca{aspect-ratio:4/5}
-.bf .pk{left:5%;width:90%;top:30%}
-.bf .st.s1{left:4%;top:5%;width:28%}
-.bf .st.s2{right:4%;bottom:15%;width:28%}
-.bf .st.s3{left:4%;bottom:15%;width:40%}
-.bf .st.s4{right:3%;top:5%;width:42%}
-.bf .ct{font-size:1rem;bottom:1rem}
-.bf .pop{font-size:2.2rem}
-.bf .vlt{border-width:.45rem;border-radius:.5rem}
-.bf .fl .hd{padding-right:5.2rem}.bf .lan{width:4.6rem}.bf .anc{width:9rem}.bf .cmp{width:7rem}.bf .nt{width:22rem}.bf .fl .sub{font-size:1.1rem}.bf .vt{font-size:1.1rem}
-.bf .vt{font-size:1rem}.bf .lk .tap{font-size:.85rem}.bf .vs{width:6.6rem}.bf .vl{font-size:.9rem}
+.bf .vlt{border-width:.45rem;border-radius:.8rem}
+.bf .fh .hd{padding-right:5.2rem}.bf .lan{width:4.6rem}.bf .nt{width:22rem}.bf .art{min-height:17rem}.bf .fp .art{min-height:14rem}
+.bf .lk .tap{font-size:.85rem}.bf .vs{width:6.6rem}.bf .vl{font-size:.9rem}
+.bf .fp .fg,.bf .fh .fg{grid-template-columns:minmax(0,1fr);gap:2.4rem}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .rings i,.bf .hint,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before{animation:none}
+.bf .tt .ch,.bf .rings i,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before,.bf .por,.bf .por::before,.bf .fog{animation:none}
 .bf .sc{transition-duration:.01s}
 }
 </style></head>
@@ -332,7 +299,6 @@ html,body{margin:0}
 <div class="bf">
 
 <header class="hero" id="bfHero">
-  <div class="rings" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></div>
   <img class="logo" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-logo.webp?v=1" alt="" width="252" height="56">
   <div class="hl">
     <h1 class="tt" aria-label="Never Ever">
@@ -342,10 +308,12 @@ html,body{margin:0}
     <p class="dek">A task force dedicated to returning stolen Butterfingers, now with time travel.</p>
     <ul class="pls"><li>Shortform Films</li><li>Time Travel</li><li>Digital and Social</li></ul>
   </div>
+  <div class="stage">
+  <div class="rings" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></div>
   <div class="obj" id="bfObj" role="button" tabindex="0" aria-pressed="false" aria-label="Break the bar"><img class="bro" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-broken.webp?v=1" alt="" width="1300" height="1134" draggable="false"><div class="wr" aria-hidden="true"><img class="wa" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385" draggable="false"><img class="wb" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385" draggable="false"></div><span class="hint" id="bfHint">Break the Bar</span></div>
   <img class="pn" id="bfPn" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-peanuts.webp?v=1" alt="" width="1700" height="1204">
+  </div>
   <canvas class="cv2" id="bfCv2" aria-hidden="true"></canvas>
-  <div class="ph" data-r="7" data-st aria-label="Drag the sticker" role="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-intro.gif?v=1" alt="" width="576" height="1024"></div>
 </header>
 
 <div class="tk" aria-hidden="true">
@@ -395,6 +363,62 @@ html,body{margin:0}
   </div>
 </section>
 
+
+<section class="fl fp" id="bfFp">
+  <span class="scl t" aria-hidden="true"></span>
+  <div class="ow nt a" aria-hidden="true"></div><div class="ow nt b" aria-hidden="true"></div>
+  <div class="hd rv"><div><span class="lb">Film 1: Never Ever</span><h2 class="h2">Open the Chest</h2></div><p class="sub">Unlock the Golden Age of Pirates.</p></div>
+  <div class="fg">
+    <div class="vc rv">
+      <div class="por" aria-hidden="true"></div>
+      <div class="vlt v1" data-k="v" data-src="https://player.vimeo.com/video/1051746090?h=5f9d4b5a73&amp;app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="Butterfinger Never Ever, Film 1">
+        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy">
+        <canvas class="cvv" aria-hidden="true"></canvas>
+        <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-chest.webp?v=1" alt="" width="736" height="736"></span><span class="tap">Tap the Chest</span></button>
+      </div>
+      <a class="vl" href="https://vimeo.com/1051746090/5f9d4b5a73" target="_blank" rel="noopener">Watch on Vimeo</a>
+      <div class="vs a" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="ow anc" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-anchor.webp?v=1" alt="" width="487" height="700" loading="lazy"></div>
+      <div class="ow cmp" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass.webp?v=1" alt="" width="700" height="695" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="fl fh" id="bfFh">
+  <div class="fog" aria-hidden="true"></div>
+  <div class="ow lan" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-lantern.webp?v=1" alt="" width="322" height="760" loading="lazy"></div>
+  <div class="hd rv"><div><span class="lb">Film 2: Never Ever</span><h2 class="h2">Light the Pumpkin</h2></div><p class="sub">Unlock the Headless Horseman.</p></div>
+  <div class="fg">
+    <div class="art" aria-hidden="true">
+      <div class="ow hfg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-horseman-fig.webp?v=1" alt="" width="563" height="1200" loading="lazy"></div>
+    </div>
+    <div class="vc rv" style="--d:.1s">
+      <div class="por" aria-hidden="true"></div>
+      <div class="vlt v2" data-k="y" data-src="https://www.youtube-nocookie.com/embed/wENnrEy3Sn0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" data-t="Butterfinger Never Ever, Film 2">
+        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-horseman.gif?v=1" alt="" width="640" height="360" loading="lazy">
+        <canvas class="cvv" aria-hidden="true"></canvas>
+        <button class="lk" type="button" aria-label="Unlock Film 2 by lighting the pumpkin"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pumpkin.webp?v=1" alt="" width="369" height="429"></span><span class="tap">Light the Pumpkin</span></button>
+      </div>
+      <a class="vl" href="https://youtu.be/wENnrEy3Sn0" target="_blank" rel="noopener">Watch on YouTube</a>
+      <div class="vs b" data-st data-r="-5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-halloween.gif?v=1" alt="" width="640" height="360" loading="lazy"></div>
+    </div>
+  </div>
+  <p class="crd">Pumpkin and horseman photo by Terry Preshaw.</p>
+  <span class="scl b" aria-hidden="true"></span>
+</section>
+
+<section class="rs" id="bfRs">
+  <div class="hd rv"><div><span class="lb">Results</span><h2 class="h2">Measured Business &amp; Creative Performance</h2></div></div>
+  <p class="rsp rv">Butterfinger leaned into classic mischief with its &ldquo;Nobody lays a finger on my Butterfinger&rdquo; line, updated for a Halloween setting with the Headless Horseman. The spot blends suspense-movie parody with humor. The result? Strong brand recall and solid engagement, proving that nostalgia and clever tone still resonate when refreshed for seasonal storytelling.</p>
+  <div class="rg" style="margin-top:calc(var(--u)*3.4)">
+    <article class="rc rv" style="--r:-1.2deg"><span class="rn">Result 1</span><h3>Financial Reversal</h3><p>Prior to launching the BFI creative universe, Butterfinger was suffering from cultural irrelevance and bleeding market share. The BFI campaign structure single-handedly turned around the portfolio from a negative double-digit decline into an initial +15% growth spike, followed by consecutive years of positive growth through late 2025/2026.</p><div class="src"><span>Sources</span><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 1, Brand Innovators">1</a><a href="https://www.wearepiro.com/bfi-butterfinger-investigators" target="_blank" rel="noopener" aria-label="Source 2, Piro">2</a><a href="https://ca.linkedin.com/in/mark-wakefield-82760520" target="_blank" rel="noopener" aria-label="Source 3, LinkedIn">3</a></div></article>
+    <article class="rc rv" style="--r:.8deg;--d:.1s"><span class="rn">Result 2</span><h3>High Ad Effectiveness Rating</h3><p>According to independent ad-testing platform <a href="https://system1group.com/ad-of-the-week/86-butterfinger" target="_blank" rel="noopener" style="color:var(--b2)">System1 Group</a>, the BFI campaign repeatedly secured top marks for effectiveness. The character-driven narrative (&ldquo;Hugh Dunnit&rdquo; and &ldquo;Ali Byes&rdquo;) resulted in incredibly high &ldquo;Fluency&rdquo; scores, meaning audiences instantly recognized the brand and connected with the humor.</p><div class="src"><span>Sources</span><a href="https://system1group.com/ad-of-the-week/86-butterfinger" target="_blank" rel="noopener" aria-label="Source 1, System1 Group">1</a></div></article>
+    <article class="rc rv" style="--r:-.6deg;--d:.2s"><span class="rn">Result 3</span><h3>Audience Expansion</h3><p>The campaign effectively expanded the brand&rsquo;s reach beyond nostalgia, successfully penetrating the highly competitive Millennial Parent (ages 20 to 30) and Gen Z markets across digital platforms like YouTube, Instagram, and Hulu.</p><div class="src"><span>Sources</span><a href="https://candyusa.com/cst/the-rebirth-of-iconic-chocolate-brands/" target="_blank" rel="noopener" aria-label="Source 1, Candy USA">1</a><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 2, Brand Innovators">2</a></div></article>
+  </div>
+</section>
+
 <section class="tm" id="bfTm">
   <div class="hd rv"><div><span class="lb">Time Machine: Pick a Scene</span><h2 class="h2">Never Ever, Any Era</h2></div><p class="sub">Spin the dial or tap a scene to jump through time.</p></div>
   <div class="tg">
@@ -433,64 +457,6 @@ html,body{margin:0}
   </div>
 </section>
 
-<div class="fd" id="bfFd"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-field.webp?v=1" alt="" width="1200" height="410"></div>
-
-<section class="cr" id="bfCr">
-  <div class="hd rv"><div><span class="lb">Play Time: Touch Everything</span><h2 class="h2">Crunch It</h2></div><p class="sub">Poke the bar. Drag the stickers anywhere you like.</p></div>
-  <div class="ca rv" id="bfCa">
-    <canvas class="cv" id="bfCv" aria-hidden="true"></canvas>
-    <button class="pk" id="bfPk" type="button" aria-label="Crunch the Butterfinger"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-cut.webp?v=1" alt="" width="594" height="364"></button>
-    <div class="st cir s1" data-st data-r="-8"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-peanut.gif?v=1" alt="" width="400" height="400"></div>
-    <div class="st cir s2" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-choc.gif?v=1" alt="" width="400" height="400"></div>
-    <div class="st tile s3" data-st data-r="9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-wrapped.webp?v=1" alt="" width="600" height="410"></div>
-    <div class="st s4" data-st data-r="-10"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385"></div>
-    <div class="ct" aria-live="off"><b id="bfN">0</b> Crunches</div>
-  </div>
-</section>
-
-<section class="fl" id="bfFl">
-  <span class="scl t" aria-hidden="true"></span><span class="scl b" aria-hidden="true"></span>
-  <div class="ow nt a" aria-hidden="true"></div><div class="ow nt b" aria-hidden="true"></div>
-  <div class="ow anc" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-anchor.webp?v=1" alt="" width="487" height="700" loading="lazy"></div>
-  <div class="ow cmp" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass.webp?v=1" alt="" width="700" height="695" loading="lazy"></div>
-  <div class="ow lan" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-lantern.webp?v=1" alt="" width="322" height="760" loading="lazy"></div>
-  <div class="hd rv"><div><span class="lb">Watch the Films: Never Ever</span><h2 class="h2">Unlock the Films</h2></div><p class="sub">Open the chest. Light the pumpkin.</p></div>
-  <div class="vg">
-    <div class="vc rv">
-      <p class="vt"><b>Film 1</b>The Golden Age of Pirates</p>
-      <div class="vlt v1" data-k="v" data-src="https://player.vimeo.com/video/1051746090?h=5f9d4b5a73&amp;app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="Butterfinger Never Ever, Film 1">
-        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-2.gif?v=1" alt="" width="600" height="337" loading="lazy">
-        <canvas class="cvv" aria-hidden="true"></canvas>
-        <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-chest.webp?v=1" alt="" width="736" height="736"></span><span class="tap">Tap the Chest</span></button>
-      </div>
-      <a class="vl" href="https://vimeo.com/1051746090/5f9d4b5a73" target="_blank" rel="noopener">Watch on Vimeo</a>
-      <div class="vs a" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div>
-    </div>
-    <div class="vc rv" style="--d:.1s">
-      <p class="vt"><b>Film 2</b>The Headless Horseman</p>
-      <div class="vlt v2" data-k="y" data-src="https://www.youtube-nocookie.com/embed/wENnrEy3Sn0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" data-t="Butterfinger Never Ever, Film 2">
-        <img class="bgp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-horseman.gif?v=1" alt="" width="640" height="360" loading="lazy">
-        <canvas class="cvv" aria-hidden="true"></canvas>
-        <button class="lk" type="button" aria-label="Unlock Film 2 by lighting the pumpkin"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pumpkin.webp?v=1" alt="" width="369" height="429"></span><span class="tap">Light the Pumpkin</span></button>
-      </div>
-      <a class="vl" href="https://youtu.be/wENnrEy3Sn0" target="_blank" rel="noopener">Watch on YouTube</a>
-      <div class="vs b" data-st data-r="-5"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-halloween.gif?v=1" alt="" width="640" height="360" loading="lazy"></div>
-    </div>
-  </div>
-  <p class="crd">Pumpkin photo by Terry Preshaw.</p>
-</section>
-
-<section class="rs" id="bfRs">
-  <div class="hd rv"><div><span class="lb">Results: Measured Business &amp; Creative Performance</span><h2 class="h2">Mischief and Nostalgia Collide</h2></div></div>
-  <p class="rsp rv">Butterfinger leaned into classic mischief with its &ldquo;Nobody lays a finger on my Butterfinger&rdquo; line, updated for a Halloween setting with the Headless Horseman. The spot blends suspense-movie parody with humor. The result? Strong brand recall and solid engagement, proving that nostalgia and clever tone still resonate when refreshed for seasonal storytelling.</p>
-  <div class="rg" style="margin-top:calc(var(--u)*3.4)">
-    <article class="rc rv" style="--r:-1.2deg"><span class="rn">Result 1</span><h3>Financial Reversal</h3><p>Prior to launching the BFI creative universe, Butterfinger was suffering from cultural irrelevance and bleeding market share. The BFI campaign structure single-handedly turned around the portfolio from a negative double-digit decline into an initial +15% growth spike, followed by consecutive years of positive growth through late 2025/2026.</p><div class="src"><span>Sources</span><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 1, Brand Innovators">1</a><a href="https://www.wearepiro.com/bfi-butterfinger-investigators" target="_blank" rel="noopener" aria-label="Source 2, Piro">2</a><a href="https://ca.linkedin.com/in/mark-wakefield-82760520" target="_blank" rel="noopener" aria-label="Source 3, LinkedIn">3</a></div></article>
-    <article class="rc rv" style="--r:.8deg;--d:.1s"><span class="rn">Result 2</span><h3>High Ad Effectiveness Rating</h3><p>According to independent ad-testing platform <a href="https://system1group.com/ad-of-the-week/86-butterfinger" target="_blank" rel="noopener" style="color:var(--b2)">System1 Group</a>, the BFI campaign repeatedly secured top marks for effectiveness. The character-driven narrative (&ldquo;Hugh Dunnit&rdquo; and &ldquo;Ali Byes&rdquo;) resulted in incredibly high &ldquo;Fluency&rdquo; scores, meaning audiences instantly recognized the brand and connected with the humor.</p><div class="src"><span>Sources</span><a href="https://system1group.com/ad-of-the-week/86-butterfinger" target="_blank" rel="noopener" aria-label="Source 1, System1 Group">1</a></div></article>
-    <article class="rc rv" style="--r:-.6deg;--d:.2s"><span class="rn">Result 3</span><h3>Audience Expansion</h3><p>The campaign effectively expanded the brand&rsquo;s reach beyond nostalgia, successfully penetrating the highly competitive Millennial Parent (ages 20 to 30) and Gen Z markets across digital platforms like YouTube, Instagram, and Hulu.</p><div class="src"><span>Sources</span><a href="https://candyusa.com/cst/the-rebirth-of-iconic-chocolate-brands/" target="_blank" rel="noopener" aria-label="Source 1, Candy USA">1</a><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 2, Brand Innovators">2</a></div></article>
-  </div>
-</section>
-
-<div class="bn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-banner.webp?v=1" alt="" width="1800" height="297"></div>
 <footer class="ft"><a class="bk" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span> Back to Commercials</a></footer>
 
 </div>
@@ -558,7 +524,6 @@ obj.setAttribute('aria-pressed',broken?'true':'false');
   }
 }
 obj.addEventListener('click',function(){breakBar()});
-setTimeout(function(){if(!broken)breakBar()},1900);
 obj.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){e.preventDefault();breakBar(true)}});
 
 /* peanut parallax (mouse + scroll) */
@@ -580,11 +545,6 @@ window.addEventListener('scroll',function(){
   var r=hero.getBoundingClientRect();
   P.sy=cl(-r.top,0,r.height)*.16;pgo();
 },{passive:true});
-
-/* field band parallax */
-var fd=q('#bfFd'),fdi=fd&&fd.querySelector('img'),fdt=false;
-function fdp(){fdt=false;var r=fd.getBoundingClientRect(),vh=window.innerHeight,t=cl((vh-r.top)/(vh+r.height),0,1);fdi.style.setProperty('--py',((t-.5)*-9).toFixed(2)+'%')}
-if(fd){window.addEventListener('scroll',function(){if(!fdt){fdt=true;requestAnimationFrame(fdp)}},{passive:true});window.addEventListener('resize',fdp);fdp()}
 
 /* draggable stickers */
 function sticker(el,bounds){
@@ -611,9 +571,6 @@ function sticker(el,bounds){
   }
   el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);
 }
-qa('.ph').forEach(function(e){sticker(e,hero)});
-var ca=q('#bfCa');
-qa('.st',ca).forEach(function(e){sticker(e,ca)});
 
 /* flip cards */
 var cds=qa('.cd'),fa=q('#bfFa'),allOn=false;
@@ -715,26 +672,6 @@ function Crumbs(cv,host){
 }
 hc=Crumbs(cv2,hero);
 
-/* crunch */
-var pk=q('#bfPk'),cv=q('#bfCv'),nEl=q('#bfN'),cnt=0,cc=Crumbs(cv,ca);
-var WORDS=['Crunch!','Crispety!','Crunchety!','Snap!','Crack!'];
-function burst(x,y){cc.burst(x,y,1)}
-function crunch(x,y){
-  burst(x,y);
-  pk.classList.remove('jt');void pk.offsetWidth;pk.classList.add('jt');
-  cnt++;nEl.textContent=cnt;nEl.classList.remove('bp2');void nEl.offsetWidth;nEl.classList.add('bp2');
-  var p=WD.createElement('span');p.className='pop';p.textContent=WORDS[Math.floor(Math.random()*WORDS.length)];
-  p.style.left=x+'px';p.style.top=y+'px';p.style.setProperty('--pr',((Math.random()-.5)*20).toFixed(1)+'deg');
-  ca.appendChild(p);setTimeout(function(){if(p.parentNode)p.parentNode.removeChild(p)},950);
-}
-pk.addEventListener('click',function(e){
-  var r=ca.getBoundingClientRect(),x,y;
-  if(e.detail===0){var b=pk.getBoundingClientRect();x=b.left+b.width/2-r.left;y=b.top+b.height/2-r.top}
-  else{x=e.clientX-r.left;y=e.clientY-r.top}
-  crunch(x,y);
-});
-pk.addEventListener('animationend',function(){pk.classList.remove('jt')});
-
 /* vaults: chest and pumpkin unlock the films */
 var GOLD=['#FFE931','#F2B01E','#FFF3C4','#E89A2B'],FIRE=['#FFE931','#F28A1E','#D9701A','#FFF3C4'];
 qa('.vlt').forEach(function(box){
@@ -751,7 +688,7 @@ qa('.vlt').forEach(function(box){
     },1700);
   });
 });
-qa('.vs').forEach(function(e){sticker(e,q('#bfFl'))});
+qa('.fl').forEach(function(sec){qa('.vs',sec).forEach(function(e){sticker(e,sec)})});
 })();
 </script>
 </body></html>
