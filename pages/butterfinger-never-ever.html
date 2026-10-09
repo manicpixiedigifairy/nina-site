@@ -41,8 +41,12 @@ html,body{margin:0}
 .bf .ch1 .lb{color:#fff}
 .bf .ch1 .stmt{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br)}
 .bf .stmt{margin:calc(var(--u)*1.6) 0 0;font:400 calc(var(--u)*3.3)/1.1 var(--disp);max-width:24em}
+.bf .cf .idg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:start;margin-top:calc(var(--u)*2)}
+.bf .cf .lead{margin:0;font:400 calc(var(--u)*3.2)/1.16 var(--disp);color:#fff;-webkit-text-stroke:.13em var(--b);paint-order:stroke fill;text-shadow:0 .08em 0 var(--b2),0 .14em 0 var(--nv);letter-spacing:.035em;word-spacing:.08em}
+.bf .cf mark{background:none;color:inherit;padding:0}
+.bf .cf .bd{margin:calc(var(--u)*.4) 0 0;padding-left:calc(var(--u)*2.4);border-left:calc(var(--u)*.3) solid var(--br);font:500 calc(var(--u)*2)/1.62 var(--lab);color:var(--br)}
+.bf .cf .ev{display:inline-block;padding:.08em .5em .12em;border-radius:99px;background:var(--br);color:var(--y);font:400 .8em/1.1 var(--disp);letter-spacing:.04em;transform:rotate(-3deg);box-shadow:0 .12em 0 var(--b)}
 .bf .cf{background:var(--y2);color:var(--br);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
-.bf .cf .bd{margin:calc(var(--u)*1.8) 0 0;max-width:34em;font:500 calc(var(--u)*2.3)/1.5 var(--lab)}
 .bf .so1{background:var(--y);color:var(--br)}
 .bf .so1 .stmt{color:var(--b);max-width:22em}
 .bf .so1 .nf{position:absolute;inset:0;z-index:0;pointer-events:none}
@@ -98,6 +102,10 @@ html,body{margin:0}
 .bf .fl .h2{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br),0 0 .6em rgba(255,233,49,.3)}
 .bf .fl .sub{color:#EADFC0}
 .bf .fh .hd{padding-right:calc(var(--u)*15)}
+.bf .fp .swd{position:absolute;left:calc(var(--u)*-3.2);top:calc(var(--u)*-9.5);width:calc(var(--u)*22);z-index:6;pointer-events:none;transform-origin:88% 62%;transform:rotate(-4deg);filter:drop-shadow(0 .8em 1em rgba(0,0,0,.5))}
+.bf .swd img{display:block;width:100%;height:auto}
+.bf.js .vc.in .swd{animation:swg 1.5s cubic-bezier(.22,1,.36,1) .25s both}
+@keyframes swg{0%{transform:translate(-140%,-120%) rotate(-80deg);opacity:0}8%{opacity:1}55%{transform:translate(4%,3%) rotate(12deg)}78%{transform:rotate(-9deg)}100%{transform:rotate(-4deg)}}
 .bf .scl{position:absolute;left:0;right:0;height:calc(var(--u)*1.3);z-index:5;pointer-events:none}
 .bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
 .bf .scl.b{bottom:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 100%,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
@@ -187,11 +195,12 @@ html,body{margin:0}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:700px){
+.bf .fp .swd{width:7rem;left:auto;right:-.4rem;top:-4.4rem}
 .bf .so1 .nf i:not(.m){display:none}
 .bf .so1 .nf i{width:calc(var(--u)*var(--w)*1.15)}
 .bf{--u:clamp(8px,2.45vw,16px);--g:1.25rem;--sp:3.4rem}
 .bf .lb{font-size:.9rem}
-.bf .stmt{font-size:min(1.75rem,6.8vw)}.bf .cf .bd{font-size:1.2rem}
+.bf .stmt{font-size:min(1.75rem,6.8vw)}.bf .cf .idg{grid-template-columns:minmax(0,1fr);gap:1.6rem}.bf .cf .lead{font-size:1.9rem}.bf .cf .bd{font-size:1.1rem;padding-left:1.1rem;margin-top:0}
 .bf .h2{font-size:min(3rem,12vw)}
 .bf .sub{font-size:1.05rem}
 .bf .hero{padding-top:5.6rem;padding-bottom:4.5rem}
@@ -212,7 +221,7 @@ html,body{margin:0}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .bfl,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before,.bf .por,.bf .por::before,.bf .fog{animation:none}
+.bf .tt .ch,.bf .bfl,.bf .swd,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before,.bf .por,.bf .por::before,.bf .fog{animation:none}
 .bf .sc{transition-duration:.01s}
 }
 </style></head>
@@ -266,7 +275,10 @@ html,body{margin:0}
 
 <section class="cf" id="bfCf">
   <span class="lb rv">The Idea</span>
-  <p class="bd rv">The Butterfinger Investigators (BFI) are a task force with one mission: returning stolen Butterfingers to their rightful owners. They&rsquo;ve been around for years, but with the addition of &ldquo;EVER,&rdquo; we opened the door to time travel, extending the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p>
+  <div class="idg">
+    <p class="lead rv">The Butterfinger Investigators (BFI) are a task force with one <mark>mission</mark>: returning stolen Butterfingers to their rightful owners.</p>
+    <p class="bd rv" style="--d:.1s">They&rsquo;ve been around for years, but with the addition of &ldquo;<b class="ev">EVER</b>,&rdquo; we opened the door to time travel, extending the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p>
+  </div>
 </section>
 
 
@@ -282,6 +294,7 @@ html,body{margin:0}
         <canvas class="cvv" aria-hidden="true"></canvas>
         <button class="lk" type="button" aria-label="Unlock Film 1 by opening the treasure chest"><span class="ob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-chest.webp?v=1" alt="" width="736" height="736"></span><span class="tap">Tap the Chest</span></button>
       </div>
+      <div class="swd" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-sword.webp?v=1" alt="" width="522" height="678" loading="lazy"></div>
       <div class="vs a" data-st data-r="6"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pirate-1.gif?v=1" alt="" width="600" height="337" loading="lazy"></div>
     </div>
     <div class="art" aria-hidden="true">
