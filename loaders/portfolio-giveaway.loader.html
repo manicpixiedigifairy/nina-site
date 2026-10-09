@@ -1,0 +1,64 @@
+<!-- Portfolio Giveaway loader.
+     Paste into one Code Block on the giveaway page in Squarespace.
+     It pulls giveaway/ from the nina-site repo, so every commit goes live without re-pasting.
+     The Selected Work page opens inside the same block, and the frame grows to fit each page. -->
+<div id="nl-giveaway" style="display:block;min-height:100vh;background:#E8E6E1">
+  <iframe title="Portfolio Giveaway" style="display:block;width:100%;height:100vh;border:0" allow="autoplay; fullscreen"></iframe>
+</div>
+<script>
+(function () {
+  var REPO = 'manicpixiedigifairy/nina-site', DIR = 'giveaway/';
+  var BASE = 'https://raw.githubusercontent.com/' + REPO + '/main/' + DIR;
+  var box = document.getElementById('nl-giveaway');
+  if (!box) return;
+  var frame = box.querySelector('iframe'), current = 'index.html', ro = null;
+
+  function getPage(path) {
+    // GitHub's API serves the newest commit right away; raw.githubusercontent is the fallback (it can lag about 5 minutes).
+    return fetch('https://api.github.com/repos/' + REPO + '/contents/' + DIR + path + '?ref=main', { headers: { Accept: 'application/vnd.github.raw' }, cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .catch(function () { return fetch(BASE + path + '?v=' + Date.now()).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }); });
+  }
+  function scrollToFrameEl(el) {
+    var top = frame.getBoundingClientRect().top + (el ? el.getBoundingClientRect().top : 0) + window.pageYOffset - 80;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+  function fit() {
+    try { var d = frame.contentDocument; frame.style.height = Math.max(d.documentElement.scrollHeight, d.body ? d.body.scrollHeight : 0) + 'px'; } catch (e) {}
+  }
+  function wire(hash) {
+    var d = frame.contentDocument;
+    if (ro) ro.disconnect();
+    fit();
+    if (window.ResizeObserver) { ro = new ResizeObserver(fit); ro.observe(d.documentElement); }
+    d.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.target === '_blank') return;
+      var url = a.href, h = url.indexOf('#'), path = h > -1 ? url.slice(0, h) : url, frag = h > -1 ? url.slice(h + 1) : '';
+      if (path.indexOf(BASE) !== 0) return;
+      e.preventDefault();
+      var rel = path.slice(BASE.length) || 'index.html';
+      if (/\/$/.test(rel)) rel += 'index.html';
+      if (rel === current) { scrollToFrameEl(frag ? d.getElementById(frag) : null); return; }
+      go(rel, frag);
+    }, true);
+    if (hash) setTimeout(function () { scrollToFrameEl(d.getElementById(hash)); }, 250); else if (wire.used) scrollToFrameEl(null);
+    wire.used = true;
+  }
+  function go(rel, hash) {
+    getPage(rel).then(function (html) {
+      current = rel;
+      var dir = BASE + rel.replace(/[^\/]*$/, '');
+      var tag = '<base href="' + dir + '"><script>window.__NL_EMBED=1<\/script>';
+      html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, function (m) { return m + tag; })
+        : '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + tag + '</head><body>' + html + '</body></html>';
+      frame.onload = function () { wire(hash); };
+      frame.srcdoc = html;
+    }).catch(function () {
+      box.innerHTML = '<p style="font:16px/1.5 Georgia,serif;padding:2rem">This page is loading slowly. Please refresh.</p>';
+    });
+  }
+  window.addEventListener('resize', fit);
+  go('index.html', (location.hash || '').slice(1));
+})();
+</script>

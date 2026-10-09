@@ -1,0 +1,513 @@
+<title>Portfolio Giveaway</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: a printed lookbook on grey stock. Masthead, pink rules, two-column features, tipped-in illustrations as small accents. One deliberate light look. */
+:root,.pg{
+  --stock:#E8E6E1;
+  --stock-2:#DCD9D2;
+  --ink:#1D1B1A;
+  --ink-2:#55504B;
+  --pink:#EC6BBE;
+  --pink-ink:#B42C83;
+  --sun:#F4E94F;
+  --white:#FBFAF7;
+  --script:"Pinyon Script","Snell Roundhand",cursive;
+  --didone:"Bodoni Moda","Didot","Bodoni 72",serif;
+  --head:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:"Newsreader",Georgia,serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+.pg [hidden]{display:none!important}
+body{background:var(--stock);color:var(--ink)}
+.pg{background:var(--stock);color:var(--ink);font:400 19px/1.55 var(--text);-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+.pg::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .19 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pg>*{position:relative}
+.pg a{color:inherit}
+.pg :focus-visible{outline:2px solid var(--pink-ink);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4.5vw,48px)}
+.lab{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.h2{font:800 clamp(38px,5.4vw,66px)/.92 var(--head);letter-spacing:-.045em;margin:0;text-wrap:balance}
+.ph{border-bottom:1.5px dashed var(--pink-ink);background:rgba(236,107,190,.12);padding:0 .2em}
+
+/* folio */
+.folio{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--ink)}
+.folio nav{display:flex;gap:clamp(14px,2.4vw,28px);flex-wrap:wrap}
+.folio nav a{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.folio nav a:hover{color:var(--pink-ink)}
+
+/* masthead */
+.mast{text-align:center;padding-block:clamp(40px,7vw,84px) clamp(28px,4vw,44px)}
+.mast .script{display:block;font:400 clamp(68px,11vw,150px)/.6 var(--script);margin-bottom:-.05em;position:relative;z-index:1}
+.mast .giv{display:inline-block;font:500 clamp(84px,15vw,200px)/.82 var(--didone);letter-spacing:.01em;transform:scaleX(.74);transform-origin:center;margin-inline:-12%}
+.rule{height:5px;background:var(--pink);margin:0}
+.deck{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:24px clamp(24px,5vw,72px);align-items:end;padding-block:clamp(28px,4vw,44px) clamp(48px,7vw,88px)}
+.deck p{margin:0;font:400 clamp(22px,2.4vw,30px)/1.3 var(--text);max-width:30ch;text-wrap:pretty}
+.deck p em{font-style:italic;color:var(--pink-ink)}
+.ctas{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.btn{display:inline-flex;justify-content:space-between;align-items:center;gap:18px;font:700 15px/1 var(--head);letter-spacing:-.01em;padding:18px 20px;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;transition:background .15s ease,color .15s ease}
+.btn.k{background:var(--ink);color:var(--stock)}
+.btn.k:hover{background:var(--pink-ink);border-color:var(--pink-ink)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--stock)}
+.btn .ar{font-family:var(--mono);font-weight:400}
+
+/* feature spread */
+.spread{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--ink)}
+.spread .side{display:flex;flex-direction:column;gap:18px}
+.body p{margin:0 0 1em;max-width:58ch}
+.body p:first-child::first-letter{float:left;font:500 4.1em/.78 var(--didone);padding:.06em .1em 0 0;color:var(--pink-ink)}
+.tip{position:relative;width:min(240px,62%);margin-top:12px;transform:rotate(-3deg)}
+.tip img{display:block;width:100%;height:auto;border:8px solid var(--white);box-shadow:0 14px 26px -16px rgba(29,27,26,.55)}
+.tip::after{content:"";position:absolute;top:-12px;left:50%;width:74px;height:22px;transform:translateX(-50%) rotate(4deg);background:rgba(244,233,79,.78)}
+.cap{font:400 13px/1.35 var(--mono);color:var(--ink-2);margin-top:12px;max-width:30ch}
+.fit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:28px;border-top:1.5px solid var(--ink)}
+.fit div{padding:18px 18px 4px 0}
+.fit div+div{padding-left:18px;border-left:1px solid var(--ink)}
+.fit h3{font:700 15px/1.2 var(--head);letter-spacing:-.01em;margin:0 0 8px;display:flex;gap:8px;align-items:center}
+.fit h3 i{font-style:normal;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font:500 12px/1 var(--mono)}
+.fit .yes i{background:var(--sun)}
+.fit .no i{background:var(--ink);color:var(--stock)}
+.fit p{margin:0;font-size:17px;color:var(--ink-2)}
+
+/* process */
+.process>div{max-width:820px}
+.process{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--ink)}
+.process blockquote{margin:22px 0 0;font:400 clamp(30px,3.6vw,46px)/1.12 var(--didone);letter-spacing:-.01em;text-wrap:balance}
+.process .body{margin-top:24px}
+.process .body p:first-child::first-letter{all:unset}
+.inset{justify-self:end;width:min(360px,100%);transform:rotate(2deg)}
+.inset img{display:block;width:100%;height:auto;border:10px solid var(--white);box-shadow:0 18px 34px -20px rgba(29,27,26,.6)}
+
+/* about me */
+.me-lede{margin:clamp(22px,3vw,34px) 0 0;font:400 clamp(26px,3vw,38px)/1.15 var(--didone);letter-spacing:-.01em;max-width:24ch;text-wrap:balance}
+.body.plain p:first-child::first-letter{all:unset}
+.creds{margin:28px 0 0;display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.creds div{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--ink)}
+.creds dt{font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.creds dd{margin:0;font:600 16px/1.45 var(--head);letter-spacing:-.01em}
+.awards{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.awards li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px}
+.awards .yr{font:500 13px/1.5 var(--mono);color:var(--pink-ink);font-variant-numeric:tabular-nums}
+.awards b{display:block;font:600 16px/1.35 var(--head);letter-spacing:-.01em}
+.awards i{display:block;font:italic 400 16px/1.35 var(--text);color:var(--ink-2)}
+@media (max-width:600px){.creds div{grid-template-columns:minmax(0,1fr);gap:6px}}
+
+/* getting started band */
+.band{background:var(--pink);color:var(--ink);border-block:1.5px solid var(--ink)}
+.band .w{padding-block:clamp(44px,6vw,72px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 48px;align-items:center}
+.band h2{font:800 clamp(40px,6vw,76px)/.9 var(--head);letter-spacing:-.04em;margin:0;color:var(--white);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-transform:uppercase}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.steps li::before{counter-increment:s;content:"0" counter(s);font:500 13px/1 var(--mono);letter-spacing:.1em}
+.steps b{font:800 22px/1.05 var(--head);letter-spacing:-.03em}
+.steps span{font-size:16px;line-height:1.4}
+.avatar{width:clamp(130px,16vw,190px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid var(--ink);flex:none}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* form */
+.apply{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);padding-block:clamp(56px,8vw,104px)}
+.apply .side p{margin:18px 0 0;max-width:34ch;color:var(--ink-2)}
+.privacy{margin-top:22px;padding:14px 0 0;border-top:1px solid var(--ink);font:400 13px/1.45 var(--mono);color:var(--ink-2);max-width:36ch}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 22px}
+.f{display:flex;flex-direction:column;gap:8px;min-width:0}
+.f.wide{grid-column:1/-1}
+.f>label,.f legend{font:500 12px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.opt{color:var(--ink-2);text-transform:none;letter-spacing:0}
+.help{font-size:15px;color:var(--ink-2);line-height:1.4}
+input[type=text],input[type=email],input[type=url],select,textarea{font:400 18px/1.4 var(--text);color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid var(--ink);border-radius:0;padding:8px 0 10px;width:100%;min-width:0}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 6px) 55%;background-size:6px 6px;background-repeat:no-repeat;cursor:pointer}
+textarea{min-height:120px;resize:vertical;border:1.5px solid var(--ink);padding:12px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink-ink);box-shadow:0 1.5px 0 var(--pink-ink)}
+[aria-invalid="true"]{border-color:var(--pink-ink)!important}
+.err{font:400 13px/1.3 var(--mono);color:var(--pink-ink)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:10px}
+.choice label{display:flex;flex-direction:column;gap:4px;border:1.5px solid var(--ink);padding:14px 16px;cursor:pointer;transition:background .15s ease}
+.choice label b{font:700 17px/1.15 var(--head);letter-spacing:-.02em}
+.choice label span{font-size:15px;color:var(--ink-2);line-height:1.35}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice label:has(input:checked){background:var(--ink);color:var(--stock)}
+.choice label:has(input:checked) span{color:var(--stock-2)}
+.choice label:has(input:focus-visible){outline:2px solid var(--pink-ink);outline-offset:3px}
+.go{grid-column:1/-1;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.go .btn{min-width:240px}
+.go .btn[disabled]{opacity:.55;cursor:progress}
+.status{font:400 14px/1.4 var(--mono)}
+.done{grid-column:1/-1;border:1.5px solid var(--ink);background:var(--white);padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:14px}
+.done h3{font:800 32px/1 var(--head);letter-spacing:-.04em;margin:0}
+.done p{margin:0;max-width:52ch}
+.mailrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mailrow code{font:500 15px/1 var(--mono);background:var(--stock);padding:11px 12px;user-select:all}
+.mailrow .btn{padding:11px 14px}
+
+/* consultation */
+.consult{border-top:1.5px solid var(--ink);padding-top:18px}
+.cal-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:16px}
+.cal{background:var(--white);border:1.5px solid var(--ink);padding:14px}
+.cal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-top b{font:400 22px/1 var(--didone)}
+.nav{appearance:none;border:1px solid var(--ink);background:transparent;width:32px;height:32px;cursor:pointer;font:400 14px/1 var(--mono);color:var(--ink)}
+.nav:disabled{opacity:.3;cursor:default}
+.nav:not(:disabled):hover{background:var(--ink);color:var(--stock)}
+.dow,.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.dow span{font:500 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-align:center;padding-bottom:6px}
+.day{appearance:none;aspect-ratio:1;border:1px solid transparent;background:transparent;font:500 14px/1 var(--mono);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums}
+.day:hover:not(:disabled){border-color:var(--ink)}
+.day:disabled{color:#B5B0A8;cursor:default}
+.day.open{background:var(--stock-2);font-weight:500}
+.day.today{text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:3px}
+.day[aria-pressed="true"]{background:var(--pink);border-color:var(--ink);color:var(--ink)}
+.times{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tz{font:400 12px/1.3 var(--mono);color:var(--ink-2)}
+.tz b{font-weight:500;color:var(--ink)}
+.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-height:212px;overflow:auto}
+.slot{appearance:none;border:1px solid var(--ink);background:transparent;padding:9px 4px;font:500 13px/1 var(--mono);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums}
+.slot:hover{background:var(--stock-2)}
+.slot[aria-checked="true"]{background:var(--ink);color:var(--stock)}
+.pick{grid-column:1/-1;margin:0;font-size:16px;color:var(--ink-2)}
+.other{display:flex;flex-direction:column;gap:6px}
+.other label{font:500 12px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.other input{font:500 16px/1.2 var(--mono);color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid var(--ink);padding:6px 0;width:100%;max-width:200px}
+.sel{margin:0;font:400 17px/1.35 var(--text)}
+.sel b{background:linear-gradient(transparent 60%,rgba(244,233,79,.8) 60%);font-weight:500}
+
+/* faq */
+.faqwrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--ink)}
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:20px 0;font:700 clamp(18px,1.8vw,21px)/1.25 var(--head);letter-spacing:-.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 22px/1 var(--mono);flex:none;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;max-width:60ch;color:var(--ink-2)}
+
+/* colophon */
+.colo{border-top:5px solid var(--pink);padding-block:28px 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.colo .sig{font:400 40px/1 var(--script)}
+.colo a{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+
+@media (max-width:880px){
+  .deck,.spread,.process,.apply,.faqwrap{grid-template-columns:minmax(0,1fr)}
+  .band .w{grid-template-columns:minmax(0,1fr)}
+  .avatar{order:-1}
+  .inset{justify-self:start;width:min(300px,80%)}
+  .ctas{flex-direction:row;flex-wrap:wrap}
+  .ctas .btn{flex:1 1 220px}
+}
+@media (max-width:600px){
+  .steps,.fit,.choice,form,.cal-wrap{grid-template-columns:minmax(0,1fr)}
+  .fit div+div{border-left:0;padding-left:0;border-top:1px solid var(--ink)}
+  .pg{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){.pg *{transition:none!important}}
+</style>
+
+<div class="pg">
+  <div class="w">
+    <header class="folio">
+      <span class="lab">By Nina Austin · A Creative Exchange Project</span>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#me">About Me</a>
+        <a href="#apply">Apply</a>
+        <a href="#faq">FAQ</a>
+        <a href="work/index.html">Selected Work ↗</a>
+      </nav>
+    </header>
+
+    <section class="mast" aria-labelledby="mast-title">
+      <h1 id="mast-title" style="margin:0;font-weight:400">
+        <span class="script">Portfolio</span>
+        <span class="giv">GIVEAWAY</span>
+      </h1>
+    </section>
+  </div>
+  <hr class="rule">
+  <div class="w">
+    <div class="deck">
+      <p>A free first portfolio site, or a <em>makeover</em> of the one you have. For creatives and entrepreneurs ready to show their work.</p>
+      <div class="ctas">
+        <a class="btn k" href="#apply">Apply for a slot <span class="ar">→</span></a>
+        <a class="btn o" href="work/index.html">See selected work <span class="ar">↗</span></a>
+      </div>
+    </div>
+
+    <section class="spread" id="about" aria-labelledby="about-h">
+      <div class="side">
+        <span class="lab">01 · About the project</span>
+        <h2 class="h2" id="about-h">About The Project</h2>      </div>
+      <div class="body">
+        <p>As part of this creative exchange project, I'll help make over your portfolio or make your first site. It's a design-based project, so it's ideal for creatives and entrepreneurs looking to showcase their work.</p>        <div class="fit">
+          <div class="yes"><h3><i>✓</i>A good fit</h3><p>Creatives and entrepreneurs who need a first portfolio site or a makeover of an existing one, and are looking for support with the design, the professional narrative strategy behind it, or both.</p></div>
+          <div class="no"><h3><i>×</i>Not a fit</h3><p>Involved web development projects. Custom code is available as part of the service, but builds that need an involved backend or CMS are evaluated case by case.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-h">
+      <div>
+        <span class="lab">02 · The process</span>
+        <h2 class="h2" id="process-h" style="margin-top:14px">The Process</h2>
+        <blockquote><span>I'll build a foundation, and we'll work together to adjust the details.</span></blockquote>
+        <div class="body"><p>The process is collaborative. You'll share your work and your vision for the site, if you have one.</p></div>
+      </div>    </section>
+
+    <section class="spread me" id="me" aria-labelledby="me-h">
+      <div class="side">
+        <span class="lab">03 · About me</span>
+        <h2 class="h2" id="me-h">About Me</h2>
+        <p class="me-lede">I'm an award-winning, social-first Associate Creative Director, copywriter and cultural strategist based in Brooklyn.</p>
+      </div>
+      <div>
+        <div class="body plain">
+          <p>For more than 10 years I've built culture-driven campaigns and content for brands across beauty, lifestyle, food and automotive. I've built myself over 11 portfolios to evolve my professional brand and picked up a few industry highlights and award wins along the way.</p>
+        </div>
+        <dl class="creds">
+          <div><dt>Selected brands</dt><dd>Nike · Walmart · eBay · Tommy Hilfiger · Pizza Hut · SheaMoisture · Dove · AT&amp;T · Pepsi</dd></div>
+          <div><dt>Awards</dt><dd><ul class="awards"><li><span class="yr">2026</span><span><b>Featured Campaign, ADWEEK House at Cannes Lions</b><i>SheaMoisture “Silk Press Conference”</i></span></li><li><span class="yr">2024</span><span><b>Webby Award Nominee, Branded Entertainment</b><i>Walmart “Dear Dad”</i></span></li><li><span class="yr">2024</span><span><b>Webby Award Nominee, Social Video</b><i>eBay “The Footprint”</i></span></li><li><span class="yr">2023</span><span><b>Webby People’s Voice Winner, Social</b><i>eBay “Born A Sneakerhead”</i></span></li><li><span class="yr">2023</span><span><b>Kinsale Gold Shark Award, Branded Content</b><i>Walmart “Dear Dad”</i></span></li><li><span class="yr">2023</span><span><b>Shorty Impact Award, Gold Honor &amp; Audience Honor</b><i>Walmart Father’s Day Streamathon</i></span></li><li><span class="yr">2022</span><span><b>Drum Award Winner, Best OOH Campaign</b><i>Notion “For Your Life’s Work”</i></span></li></ul></dd></div>
+          <div><dt>More work</dt><dd><a href="https://www.byninaaustin.com" target="_blank" rel="noopener">byninaaustin.com ↗</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <section class="band" aria-labelledby="start-h">
+    <div class="w">
+      <div>
+        <h2 id="start-h">Getting Started</h2>
+        <ol class="steps">
+          <li><b>Complete the submission form</b><span>Tell me who you are and what you need.</span></li>
+          <li><b>Upload your files</b><span>Share a link to your work in the form.</span></li>
+          <li><b>Request a 15-minute consultation</b><span>Pick a time on the calendar or book an open slot.</span></li>
+        </ol>
+      </div>
+      <div class="avatar"><img src="ill-avatar.webp" alt="Illustration of a woman with long pink hair working on a laptop" width="269" height="247" loading="lazy"></div>
+    </div>
+  </section>
+
+  <div class="w">
+    <section class="apply" id="apply" aria-labelledby="apply-h">
+      <div class="side">
+        <span class="lab">04 · Apply</span>
+        <h2 class="h2" id="apply-h" style="margin-top:14px">Apply for a slot</h2>
+        <p>It's free. Fill this out, share your work and request a time for your 15-minute consultation.</p>
+        <p class="privacy">Submissions go privately to Nina. Nothing you send here is published or shared.</p>
+      </div>
+      <form id="gform" novalidate>
+        <fieldset class="f wide">
+          <legend>What do you need?</legend>
+          <div class="choice" role="radiogroup">
+            <label for="need-first"><input type="radio" id="need-first" name="need" value="First portfolio site"><b>My first portfolio site</b><span>You're starting from scratch.</span></label>
+            <label for="need-makeover"><input type="radio" id="need-makeover" name="need" value="Portfolio makeover"><b>A portfolio makeover</b><span>You have a site that needs work.</span></label>
+          </div>
+          <span class="err" id="need-err"></span>
+        </fieldset>
+        <div class="f"><label for="g-name">Full name</label><input type="text" id="g-name" autocomplete="name"><span class="err" id="g-name-err"></span></div>
+        <div class="f"><label for="g-email">Email</label><input type="email" id="g-email" autocomplete="email"><span class="err" id="g-email-err"></span></div>
+        <div class="f"><label for="g-social">Instagram or LinkedIn</label><input type="text" id="g-social" placeholder="@handle or profile link"><span class="err" id="g-social-err"></span></div>
+        <div class="f"><label for="g-disc">What you do</label>
+          <select id="g-disc"><option value="">Choose one</option><option>Design</option><option>Copywriting</option><option>Strategy</option><option>Creative direction</option><option>Photo or video</option><option>Music</option><option>Writing or journalism</option><option>Entrepreneur or small business</option><option>Other</option></select>
+          <span class="err" id="g-disc-err"></span></div>
+        <div class="f wide" id="site-row" hidden><label for="g-site">Your current site</label><input type="url" id="g-site" placeholder="https://"><span class="err" id="g-site-err"></span></div>
+        <div class="f wide"><label for="g-files">Link to your files</label><input type="url" id="g-files" placeholder="https://"><span class="help">A Google Drive, Dropbox or WeTransfer link to the work you want on the site. Make sure anyone with the link can view it.</span><span class="err" id="g-files-err"></span></div>
+        <div class="f wide"><label for="g-vision">Your vision for the site <span class="opt">(optional)</span></label><textarea id="g-vision" maxlength="1200" placeholder="Who it's for, sites you love, how you want it to feel."></textarea></div>
+        <fieldset class="f wide consult">
+          <legend>Request your 15-minute consultation</legend>
+          <p class="help" style="margin:8px 0 0">Open times come from Nina's calendar and show in your time zone.</p>
+          <div class="cal-wrap" id="custom-pane">
+            <div class="cal" aria-label="Choose a date">
+              <div class="cal-top"><button type="button" class="nav" id="cal-prev" aria-label="Previous month">←</button><b id="cal-month" aria-live="polite"></b><button type="button" class="nav" id="cal-next" aria-label="Next month">→</button></div>
+              <div class="dow" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+              <div class="grid" id="cal-grid" role="grid"></div>
+            </div>
+            <div class="times">
+              <span class="tz">Times in <b id="tz"></b></span>
+              <div class="slots" id="slots" role="radiogroup" aria-label="Choose a time"><p class="pick">Pick a highlighted date to see open times.</p></div>
+              <div class="other"><label for="g-other">Suggest another time <span class="opt">(optional)</span></label><input type="time" id="g-other" step="900"><span class="help">If none of the open times work, suggest one on the date you picked.</span></div>
+              <div class="f"><label for="g-note">Anything about timing <span class="opt">(optional)</span></label><input type="text" id="g-note" placeholder="e.g. weekday evenings work best"></div>
+              <p class="sel" id="sel" aria-live="polite"></p>
+            </div>
+          </div>
+          <span class="err" id="consult-err"></span>
+        </fieldset>
+        <div class="go"><button class="btn k" type="submit" id="g-go">Submit my application <span class="ar">→</span></button><span class="status" id="g-status" role="status"></span></div>
+      </form>
+    </section>
+
+    <section class="faqwrap" id="faq" aria-labelledby="faq-h">
+      <div><span class="lab">05 · Questions</span><h2 class="h2" id="faq-h" style="margin-top:14px">FAQ</h2></div>
+      <div class="faq">
+        <details><summary>Does it cost anything?</summary><p>No. The site is free as part of this creative exchange project.</p></details>
+        <details><summary>Who is this for?</summary><p>Creatives and entrepreneurs who want to showcase their work, whether you need your first portfolio site or a makeover of the one you have.</p></details>
+        <details><summary>What kinds of projects aren't a fit?</summary><p>This is a design-based project, so it isn't suitable for involved web development projects.</p></details>
+        <details><summary>Do I need to know what I want?</summary><p>No. Share your vision if you have one. If you don't, we'll shape it together during the process.</p></details>
+        <details><summary>What platform will my site be built on?</summary><p>Your site is a custom build, so it can be deployed on almost any major web hosting platform, including WordPress, Squarespace, Wix, Webflow, Readymag, Universe, Figma Sites, Cargo, Format and Canva (with limited functions).</p></details>
+        <details><summary>Who owns the site and the copy?</summary><p>You do. You'll get a final copy of all necessary working files, and you'll own and manage the site after launch.</p></details>
+        <details><summary>Are domain and hosting included?</summary><p>No. Your domain and hosting aren't included, but your build is made to deploy on the platform you choose.</p></details>
+        <details><summary>How long does it take?</summary><p>Timelines vary based on project needs, but the goal is one month to six weeks max from intake to launch.</p></details>
+        <details><summary>What happens to the information I send?</summary><p>It goes privately to Nina and is only used to review your application and get in touch. It's never published.</p></details>
+      </div>
+    </section>
+
+    <footer class="colo">
+      <span class="sig">Nina Austin</span>
+      <a href="work/index.html">Selected work ↗</a>
+      <a href="https://www.byninaaustin.com" target="_blank" rel="noopener">byninaaustin.com ↗</a>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var ENDPOINT='https://hook.us2.make.com/gbwe0bghj6xh5cqoy1o559iahcp9ckeb';
+  var EMAIL='ninaaustincreative@gmail.com';
+  /* Nina's availability, mirrored from her Notion Calendar booking link. Times are in HOST_TZ. 0=Sun ... 6=Sat */
+  var HOST_TZ='America/New_York';
+  var AVAILABILITY={5:[['16:00','18:00']],6:[['16:00','17:00']]};
+  var SLOT=30,LEAD_HOURS=24,WINDOW_DAYS=60;
+  var $=function(id){return document.getElementById(id)};
+  var form=$('gform');if(!form)return;
+  var siteRow=$('site-row');
+  form.querySelectorAll('input[name=need]').forEach(function(r){r.addEventListener('change',function(){siteRow.hidden=!(r.checked&&r.value==='Portfolio makeover')})});
+
+  /* calendar */
+  var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+  $('tz').textContent=tz?tz.replace(/_/g,' '):'your local time';
+  function hostOffsetMin(utcMs){
+    try{var p={};new Intl.DateTimeFormat('en-US',{timeZone:HOST_TZ,hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).formatToParts(new Date(utcMs)).forEach(function(x){p[x.type]=x.value});
+      return (Date.UTC(+p.year,+p.month-1,+p.day,+p.hour%24,+p.minute)-utcMs)/60000}catch(e){return -new Date(utcMs).getTimezoneOffset()}
+  }
+  function hostInstant(y,m,d,mins){var guess=Date.UTC(y,m,d,0,mins);var o=hostOffsetMin(guess);var t=guess-o*60000;var o2=hostOffsetMin(t);return guess-o2*60000}
+  function toMin(hm){var p=hm.split(':');return +p[0]*60+ +p[1]}
+  function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+  var now=Date.now(),earliest=now+LEAD_HOURS*3600000,latest=now+WINDOW_DAYS*86400000;
+  var byDay={};
+  (function build(){
+    var start=new Date(now-86400000);
+    for(var i=0;i<=WINDOW_DAYS+2;i++){
+      var g=new Date(Date.UTC(start.getUTCFullYear(),start.getUTCMonth(),start.getUTCDate()+i));
+      var y=g.getUTCFullYear(),m=g.getUTCMonth(),d=g.getUTCDate(),wd=g.getUTCDay();
+      (AVAILABILITY[wd]||[]).forEach(function(w){
+        for(var t=toMin(w[0]);t+SLOT<=toMin(w[1]);t+=SLOT){
+          var at=hostInstant(y,m,d,t);if(at<earliest||at>latest)continue;
+          var k=ymd(new Date(at));(byDay[k]=byDay[k]||[]).push(at);
+        }
+      });
+    }
+    Object.keys(byDay).forEach(function(k){byDay[k].sort(function(a,b){return a-b})});
+  })();
+  var openDays=Object.keys(byDay).sort();
+  var first=openDays.length?new Date(openDays[0]+'T00:00:00'):new Date();
+  var view=new Date(first.getFullYear(),first.getMonth(),1);
+  var lastView=new Date(latest);lastView=new Date(lastView.getFullYear(),lastView.getMonth(),1);
+  var pickedDate=null,pickedAt=null;
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function fmtTime(ms){return new Date(ms).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
+  function otherAt(){var v=$('g-other').value;if(!v||!pickedDate)return null;var p=v.split(':'),d=new Date(pickedDate);d.setHours(+p[0],+p[1],0,0);return +d}
+  function drawMonth(){
+    var g=$('cal-grid');g.innerHTML='';
+    $('cal-month').textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
+    var nowMonth=new Date();nowMonth=new Date(nowMonth.getFullYear(),nowMonth.getMonth(),1);
+    $('cal-prev').disabled=view<=nowMonth;
+    $('cal-next').disabled=view>=lastView;
+    for(var i=0;i<view.getDay();i++)g.appendChild(document.createElement('span'));
+    var days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate(),todayK=ymd(new Date());
+    for(var d=1;d<=days;d++){
+      var dt=new Date(view.getFullYear(),view.getMonth(),d),k=ymd(dt),b=document.createElement('button');
+      b.type='button';b.className='day';b.textContent=d;
+      var open=!!byDay[k]||(!openDays.length&&+dt>=earliest-86400000&&+dt<=latest);
+      b.setAttribute('aria-label',dt.toDateString()+(byDay[k]?', '+byDay[k].length+' open times':open?'':', no open times'));
+      if(k===todayK)b.classList.add('today');
+      if(open)b.classList.add('open');else b.disabled=true;
+      b.setAttribute('aria-pressed',pickedDate&&ymd(pickedDate)===k?'true':'false');
+      (function(dt){b.addEventListener('click',function(){pickedDate=dt;pickedAt=null;$('g-other').value='';drawMonth();drawSlots();summary()})})(dt);
+      g.appendChild(b);
+    }
+  }
+  function drawSlots(){
+    var s=$('slots');s.innerHTML='';
+    if(!pickedDate||!openDays.length){s.innerHTML='<p class="pick">'+(openDays.length?'Pick a highlighted date to see open times.':'No open times right now. Pick a date and suggest a time below.')+'</p>';return}
+    (byDay[ymd(pickedDate)]||[]).forEach(function(at){
+      var b=document.createElement('button');b.type='button';b.className='slot';b.setAttribute('role','radio');b.textContent=fmtTime(at);
+      b.setAttribute('aria-checked',pickedAt===at&&!$('g-other').value?'true':'false');
+      b.addEventListener('click',function(){pickedAt=at;$('g-other').value='';drawSlots();summary()});
+      s.appendChild(b);
+    });
+  }
+  $('g-other').addEventListener('input',function(){pickedAt=null;drawSlots();summary()});
+  function chosenAt(){return $('g-other').value?otherAt():pickedAt}
+  function summary(){
+    var el=$('sel');el.textContent='';if(!pickedDate)return;
+    var at=chosenAt(),dl=pickedDate.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
+    el.appendChild(document.createTextNode(at&&$('g-other').value?'Suggesting ':'Requesting '));
+    var b=document.createElement('b');b.textContent=dl+(at?' at '+fmtTime(at):'');el.appendChild(b);
+    if(!at)el.appendChild(document.createTextNode('. Now choose a time.'));
+  }
+  $('cal-prev').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);drawMonth()});
+  $('cal-next').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);drawMonth()});
+  drawMonth();drawSlots();
+  function isoAt(ms){
+    var d=new Date(ms),off=-d.getTimezoneOffset(),sign=off>=0?'+':'-',a=Math.abs(off);
+    return ymd(d)+'T'+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+':00'+sign+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0');
+  }
+
+  /* validation */
+  function v(id){return $(id).value.trim()}
+  function err(id,msg){$(id).setAttribute('aria-invalid',msg?'true':'false');$(id+'-err').textContent=msg||''}
+  var urlRe=/^https?:\/\/[^\s.]+\.\S+/;
+  function check(){
+    var ok=true,need=form.querySelector('input[name=need]:checked');
+    $('need-err').textContent=need?'':'Choose a first site or a makeover.';if(!need)ok=false;
+    if(!v('g-name')){err('g-name','Add your name.');ok=false}else err('g-name','');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('g-email'))){err('g-email','Add a valid email, like you@example.com.');ok=false}else err('g-email','');
+    if(!v('g-social')){err('g-social','Add your Instagram handle or LinkedIn link.');ok=false}else err('g-social','');
+    if(!v('g-disc')){err('g-disc','Choose what you do.');ok=false}else err('g-disc','');
+    if(need&&need.value==='Portfolio makeover'&&!urlRe.test(v('g-site'))){err('g-site','Add your current site, starting with https://');ok=false}else err('g-site','');
+    if(!urlRe.test(v('g-files'))){err('g-files','Add a link to your files, starting with https://');ok=false}else err('g-files','');
+    var ce=$('consult-err');ce.textContent='';
+    if(!pickedDate){ce.textContent='Pick a date for your consultation.';ok=false}
+    else if(!chosenAt()){ce.textContent='Choose an open time, or suggest another time.';ok=false}
+    return ok;
+  }
+  function payload(){
+    var need=form.querySelector('input[name=need]:checked'),at=chosenAt(),suggested=!!$('g-other').value;
+    return {name:v('g-name'),email:v('g-email'),social:v('g-social'),need:need?need.value:'',discipline:v('g-disc'),current_site:need&&need.value==='Portfolio makeover'?v('g-site'):'',files_link:v('g-files'),vision:v('g-vision'),
+      scheduling:suggested?'Suggested another time':'Requested an open time',consultation:at?isoAt(at):'',time_zone:tz,time_note:v('g-note'),source:'portfolio-giveaway-page'};
+  }
+  function block(h,p,text){
+    var d=document.createElement('div');d.className='done';
+    d.innerHTML='<h3></h3><p class="msg"></p>';
+    d.querySelector('h3').textContent=h;d.querySelector('.msg').textContent=p;
+    if(text){
+      var row=document.createElement('div');row.className='mailrow';row.innerHTML='<code></code><button class="btn o" type="button">Copy my application</button>';
+      row.querySelector('code').textContent=EMAIL;d.appendChild(row);
+      var st=document.createElement('span');st.className='status';d.appendChild(st);
+      row.querySelector('button').addEventListener('click',function(){try{navigator.clipboard.writeText(text).then(function(){st.textContent='Copied.'},function(){st.textContent='Select the email above and send your details there.'})}catch(x){st.textContent='Select the email above and send your details there.'}});
+    }
+    return d;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check()){var bad=form.querySelector('[aria-invalid="true"]');if(bad)bad.focus();else{var c=form.querySelector('.consult');if(c)c.scrollIntoView({block:'center'})}return}
+    var go=$('g-go'),st=$('g-status'),p=payload();
+    go.disabled=true;st.textContent='Sending…';
+    fetch(ENDPOINT,{method:'POST',body:new URLSearchParams(p)}).then(function(r){
+      if(!r.ok)throw new Error(r.status);
+      var when=p.consultation?$('sel').textContent.replace(/^Requesting /,''):'';
+      form.innerHTML='';
+      form.appendChild(block("You're in the queue.",p.consultation?'Your application and consultation request for '+when+' were sent. Your time will be confirmed by email.':'Your application was sent.'));
+    }).catch(function(){
+      go.disabled=false;st.textContent='';
+      var text=['Portfolio giveaway application','Name: '+p.name,'Email: '+p.email,'Social: '+p.social,'Need: '+p.need,'Discipline: '+p.discipline,'Current site: '+(p.current_site||'n/a'),'Files: '+p.files_link,'Vision: '+(p.vision||'n/a'),'Consultation: '+(p.consultation||p.scheduling)+(p.time_zone?' ('+p.time_zone+')':''),'Timing note: '+(p.time_note||'n/a')].join('\n');
+      var old=form.querySelector('.done');if(old)old.remove();
+      form.appendChild(block("This didn't go through.","Your application couldn't be sent from here. Copy it and email it to the address below, and nothing gets lost.",text));
+    });
+  });
+})();
+</script>

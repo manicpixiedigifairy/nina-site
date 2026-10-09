@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Selected Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: the lookbook's back section. A contents list, then one full-bleed spread per case study with the live page in a framed screen. */
+:root{
+  --stock:#E8E6E1;--stock-2:#DCD9D2;--ink:#1D1B1A;--ink-2:#55504B;--pink:#EC6BBE;--pink-ink:#B42C83;--sun:#F4E94F;--white:#FBFAF7;
+  --script:"Pinyon Script","Snell Roundhand",cursive;--didone:"Bodoni Moda","Didot",serif;--head:"Archivo","Helvetica Neue",Arial,sans-serif;--text:"Newsreader",Georgia,serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--stock);color:var(--ink);font:400 19px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .19 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--pink-ink);outline-offset:3px}
+[hidden]{display:none!important}
+.w{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4.5vw,48px);position:relative}
+.lab{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.folio{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--ink)}
+.folio a{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.folio a:hover{color:var(--pink-ink)}
+
+.head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;padding-block:clamp(40px,7vw,80px) clamp(28px,4vw,40px)}
+.head h1{margin:0;font-weight:400;line-height:.85}
+.head .s{display:block;font:400 clamp(56px,8.5vw,112px)/.7 var(--script)}
+.head .d{display:inline-block;font:500 clamp(64px,11vw,148px)/.85 var(--didone);transform:scaleX(.76);transform-origin:left;margin-right:-20%}
+.head p{margin:22px 0 0;max-width:44ch;color:var(--ink-2)}
+.accent{width:clamp(110px,14vw,170px);aspect-ratio:3/4;overflow:hidden;transform:rotate(3deg);border:7px solid var(--white);box-shadow:0 14px 26px -16px rgba(29,27,26,.55);position:relative}
+.accent img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.accent::after{content:"";position:absolute;top:-4px;left:50%;width:56px;height:18px;transform:translateX(-50%) rotate(-5deg);background:rgba(244,233,79,.8)}
+.rule{height:5px;background:var(--pink);border:0;margin:0}
+
+.toc{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--ink)}
+.toc a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:18px 0;border-top:1px solid var(--ink);text-decoration:none}
+.toc li:first-child a{border-top:0}
+.toc b{font:800 clamp(22px,2.8vw,34px)/1 var(--head);letter-spacing:-.04em}
+.toc span{color:var(--ink-2);font-size:17px}
+.toc i{font:400 13px/1 var(--mono);font-style:normal}
+.toc a:hover b{color:var(--pink-ink)}
+
+.case{padding-block:clamp(56px,8vw,100px);border-bottom:1px solid var(--ink)}
+.case-top{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px clamp(28px,5vw,72px);align-items:end;margin-bottom:clamp(22px,3vw,34px)}
+.case h2{margin:10px 0 0;font:800 clamp(40px,5.6vw,72px)/.9 var(--head);letter-spacing:-.045em;text-wrap:balance}
+.case .dek{margin:0;font:400 clamp(20px,2vw,24px)/1.35 var(--text);max-width:40ch}
+.case .dek em{color:var(--pink-ink)}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:clamp(22px,3vw,30px) 0 0;border-top:1.5px solid var(--ink)}
+.specs div{padding:12px 16px 0 0}
+.specs div+div{padding-left:16px;border-left:1px solid var(--ink)}
+.specs dt{font:500 11px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+.specs dd{margin:0;font:600 16px/1.3 var(--head);letter-spacing:-.01em}
+
+.screen{border:1.5px solid var(--ink);background:var(--ink);box-shadow:0 30px 60px -36px rgba(29,27,26,.6)}
+.chrome{display:flex;align-items:center;gap:12px;padding:9px 12px;color:var(--stock)}
+.dots{display:flex;gap:6px;flex:none}.dots i{width:10px;height:10px;border-radius:50%;background:var(--pink)}.dots i:nth-child(2){background:var(--sun)}.dots i:nth-child(3){background:var(--stock-2)}
+.addr{flex:1;min-width:0;font:400 12px/1 var(--mono);color:#B9B3AA;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ctl{appearance:none;flex:none;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--stock);background:transparent;border:1px solid #5B5550;padding:7px 10px;cursor:pointer}
+.ctl:hover{background:var(--stock);color:var(--ink)}
+.vp{position:relative;height:min(76vh,800px);background:var(--stock-2)}
+.vp iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+.poster{z-index:1}
+.poster{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:var(--stock-2)}
+.poster button{appearance:none;font:700 16px/1 var(--head);letter-spacing:-.01em;padding:18px 24px;background:var(--ink);color:var(--stock);border:0;cursor:pointer;display:inline-flex;gap:14px;align-items:center}
+.poster button:hover{background:var(--pink-ink)}
+.poster small{display:block;margin-top:12px;font:400 12px/1.3 var(--mono);color:var(--ink-2)}
+.screen.full{position:fixed;inset:0;z-index:20;border:0}
+.screen.full .vp{height:calc(100% - 44px)}
+
+.back{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;padding-block:clamp(48px,7vw,80px)}
+.back p{margin:0;font:400 clamp(26px,3vw,38px)/1.15 var(--didone);max-width:22ch}
+.btn{display:inline-flex;gap:18px;align-items:center;font:700 15px/1 var(--head);padding:18px 22px;background:var(--ink);color:var(--stock);text-decoration:none}
+.btn:hover{background:var(--pink-ink)}
+footer{border-top:5px solid var(--pink);padding-block:26px 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+footer .sig{font:400 38px/1 var(--script)}
+
+@media (max-width:880px){
+  .case-top{grid-template-columns:minmax(0,1fr)}
+  .toc a{grid-template-columns:minmax(0,1fr) auto}
+  .toc span{display:none}
+}
+@media (max-width:600px){
+  .head{grid-template-columns:minmax(0,1fr)}
+  .accent{display:none}
+  .specs{grid-template-columns:minmax(0,1fr)}
+  .specs div+div{border-left:0;padding-left:0}
+  .vp{height:72vh}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* inside the byninaaustin.com loader the frame grows to fit, so viewport units and fixed layers are swapped for fixed sizes */
+.embed .vp{height:720px}
+.embed [data-full]{display:none}
+.embed body::before{position:absolute}
+@media (max-width:600px){.embed .vp{height:560px}}
+</style>
+</head><body>
+<div class="w">
+  <header class="folio">
+    <a href="../index.html">← Portfolio Giveaway</a>
+    <span class="lab">By Nina Austin</span>
+  </header>
+  <section class="head" aria-labelledby="t">
+    <div>
+      <h1 id="t"><span class="s">Selected</span><span class="d">WORK</span></h1>
+      <p>Three case study pages, live and in full. This is the level of design, writing and build that goes into every site.</p>
+    </div>
+    <div class="accent" aria-hidden="true"><img src="../ill-wall.webp" alt="" width="620" height="750"></div>
+  </section>
+</div>
+<hr class="rule">
+<div class="w">
+  <nav aria-label="Case studies">
+    <ol class="toc">
+      <li><a href="#tommy"><b>Tommy Hilfiger</b><span>TH Monogram, Tommy Factory</span><i>01</i></a></li>
+      <li><a href="#froot"><b>Froot Loops</b><span>Follow Your Ears</span><i>02</i></a></li>
+      <li><a href="#pizza"><b>Pizza Hut</b><span>The Big New Yorker</span><i>03</i></a></li>
+    </ol>
+  </nav>
+
+  <article class="case" id="tommy" aria-labelledby="tommy-h">
+    <div class="case-top">
+      <div><span class="lab">01 · Fashion</span><h2 id="tommy-h">Tommy Hilfiger</h2></div>
+      <p class="dek">The TH Monogram, told through <em>80s New York</em>, Warhol's Interview Magazine and a celebrity Q&amp;A series.</p>
+    </div>
+    <div class="screen" data-src="../gallery/tommy/index.html" data-live="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/pages/th-monogram.html">
+      <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr">byninaaustin.com / th-monogram</span><button class="ctl" type="button" data-full>Expand</button></div>
+      <div class="vp"><div class="poster"><div><button type="button" data-load>View the live page <span>→</span></button><small>Scroll inside the frame. Videos open in a new tab.</small></div></div></div>
+    </div>
+    <dl class="specs"><div><dt>Brand</dt><dd>Tommy Hilfiger</dd></div><div><dt>Campaign</dt><dd>TH Monogram, Tommy Factory</dd></div><div><dt>Page look</dt><dd>80s New York editorial</dd></div></dl>
+  </article>
+
+  <article class="case" id="froot" aria-labelledby="froot-h">
+    <div class="case-top">
+      <div><span class="lab">02 · Food &amp; culture</span><h2 id="froot-h">Froot Loops</h2></div>
+      <p class="dek">Follow Your Ears, a hip-hop campaign rendered as an <em>iced-out dreamworld</em> editorial.</p>
+    </div>
+    <div class="screen" data-src="../gallery/froot-loops/index.html" data-live="https://raw.githubusercontent.com/manicpixiedigifairy/dj-portfolio/main/follow-your-ears/index.html">
+      <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr">follow-your-ears / froot-loops</span><button class="ctl" type="button" data-full>Expand</button></div>
+      <div class="vp"><div class="poster"><div><button type="button" data-load>View the live page <span>→</span></button><small>Scroll inside the frame.</small></div></div></div>
+    </div>
+    <dl class="specs"><div><dt>Brand</dt><dd>Froot Loops, WK Kellogg Co</dd></div><div><dt>Campaign</dt><dd>Follow Your Ears</dd></div><div><dt>Page look</dt><dd>Iced-out dreamworld</dd></div></dl>
+  </article>
+
+  <article class="case" id="pizza" aria-labelledby="pizza-h">
+    <div class="case-top">
+      <div><span class="lab">03 · Food &amp; social</span><h2 id="pizza-h">Pizza Hut</h2></div>
+      <p class="dek">The Big New Yorker relaunch, a fan-first social campaign with <em>90s nostalgia</em>.</p>
+    </div>
+    <div class="screen" data-src="../gallery/pizza-hut/index.html" data-live="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/pages/pizza-hut-big-new-yorker.html">
+      <div class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr">byninaaustin.com / the-big-new-yorker</span><button class="ctl" type="button" data-full>Expand</button></div>
+      <div class="vp"><div class="poster"><div><button type="button" data-load>View the live page <span>→</span></button><small>Scroll inside the frame.</small></div></div></div>
+    </div>
+    <dl class="specs"><div><dt>Brand</dt><dd>Pizza Hut</dd></div><div><dt>Campaign</dt><dd>The Big New Yorker</dd></div><div><dt>Page look</dt><dd>90s nostalgia, fan-first</dd></div></dl>
+  </article>
+
+  <section class="back" aria-label="Apply">
+    <p>Want a site built like these?</p>
+    <a class="btn" href="../index.html#apply">Apply for a slot <span>→</span></a>
+  </section>
+  <footer><span class="sig">Nina Austin</span><a class="lab" href="../index.html">Back to the giveaway</a></footer>
+</div>
+<script>
+var EMBED=!!window.__NL_EMBED;if(EMBED)document.documentElement.classList.add('embed');
+document.querySelectorAll('.screen').forEach(function(s){
+  var vp=s.querySelector('.vp');
+  s.querySelector('[data-load]').addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    if(EMBED){
+      var live=s.getAttribute('data-live'),dir=live.replace(/[^\/]*$/,'');
+      fetch(live,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){
+        var tag='<base href="'+dir+'">';f.srcdoc=/<head[^>]*>/i.test(h)?h.replace(/<head[^>]*>/i,function(m){return m+tag}):tag+h;
+      }).catch(function(){f.src=s.getAttribute('data-src')});
+    }else{f.src=s.getAttribute('data-src');}f.title=s.closest('.case').querySelector('h2').textContent+' case study page';
+    var po=s.querySelector('.poster');po.querySelector('button').textContent='Loading the live page…';f.addEventListener('load',function(){po.hidden=true});setTimeout(function(){po.hidden=true},8000);vp.appendChild(f);
+  });
+  var b=s.querySelector('[data-full]');
+  b.addEventListener('click',function(){var on=s.classList.toggle('full');b.textContent=on?'Close':'Expand';document.body.style.overflow=on?'hidden':'';if(on&&!vp.querySelector('iframe'))s.querySelector('[data-load]').click()});
+});
+function loadCase(id){var c=document.getElementById(id);if(!c)return;var s=c.querySelector('.screen');if(s&&!s.querySelector('iframe'))s.querySelector('[data-load]').click()}
+document.querySelectorAll('.toc a').forEach(function(a){
+  var id=a.getAttribute('href').slice(1);
+  ['pointerenter','focus','touchstart'].forEach(function(ev){a.addEventListener(ev,function(){loadCase(id)},{passive:true,once:true})});
+  a.addEventListener('click',function(){loadCase(id)});
+});
+if(location.hash)loadCase(location.hash.slice(1));
+/* load each case study automatically: the first right away, the rest as they come near the screen */
+var cases=[].slice.call(document.querySelectorAll('.case'));
+if(cases[0])loadCase(cases[0].id);
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){loadCase(e.target.id);io.unobserve(e.target)}})},{rootMargin:'900px 0px'});
+  cases.forEach(function(c){io.observe(c)});
+}else{cases.forEach(function(c){loadCase(c.id)})}
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var s=document.querySelector('.screen.full');if(s)s.querySelector('[data-full]').click()});
+</script>
+</body></html>
