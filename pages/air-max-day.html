@@ -267,7 +267,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .pr a:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
 
 /* press */
-.am .pg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:calc(var(--u)*4);padding:0 var(--g);align-items:start}
+.am .pg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:calc(var(--u)*4);padding:0 var(--g);align-items:center}
 .am .f2{display:block;background:#fff;color:var(--bk);padding:calc(var(--u)*.8) calc(var(--u)*.8) calc(var(--u)*1.6);transform:rotate(-1.2deg);transition:transform .3s;box-shadow:0 calc(var(--u)*1.2) calc(var(--u)*3) rgba(0,0,0,.6)}
 .am .f2:hover{transform:rotate(0) translateY(-4px)}
 .am .f2 img{width:100%;aspect-ratio:3/2;object-fit:cover}
@@ -296,9 +296,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .cut-shoe{right:calc(var(--g) - var(--u)*2);top:calc(var(--u)*1.5);width:calc(var(--u)*24);transform:rotate(-8deg)}
 .am .ugc .sh,.am .ugc .ugcl{position:relative;z-index:3}
 .am .ugc .ugcl{max-width:calc(var(--u)*40)}
-.am .boxw{position:absolute;z-index:2;right:var(--g);top:calc(var(--u)*-1);width:calc(var(--u)*21);pointer-events:none}
+.am .boxw{position:absolute;z-index:2;right:var(--g);top:calc(var(--u)*-7);width:calc(var(--u)*17);pointer-events:none}
 .am .boxw .cut{position:relative;width:100%;transform-origin:50% 80%;animation:amBox 5.5s ease-in-out infinite}
-.am .boxsh{display:block;width:70%;height:calc(var(--u)*1.2);margin:calc(var(--u)*-.6) auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(92,255,59,.35),transparent);animation:amBoxSh 5.5s ease-in-out infinite}
+.am .boxsh{display:block;width:70%;height:calc(var(--u)*1.2);margin:-22% auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(92,255,59,.35),transparent);animation:amBoxSh 5.5s ease-in-out infinite}
 @keyframes amBox{0%,100%{transform:translateY(0) rotate(-4deg)}25%{transform:translateY(calc(var(--u)*-1.4)) rotate(2deg)}50%{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}62%{transform:translateY(calc(var(--u)*-1.8)) rotate(5deg) scale(1.03)}80%{transform:translateY(calc(var(--u)*-.6)) rotate(-2deg)}}
 @keyframes amBoxSh{0%,100%{transform:scaleX(1);opacity:1}25%,62%{transform:scaleX(.72);opacity:.55}}
 .am .pr .sh{position:relative;z-index:3}
