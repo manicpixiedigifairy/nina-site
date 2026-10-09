@@ -46,7 +46,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 @keyframes ddBob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(calc(var(--u)*-1.2)) rotate(var(--r,0deg))}}
 .dd .hero .f1{left:9%;top:20%;width:calc(var(--u)*7);--r:-10deg}
 .dd .hero .f2{right:9%;top:16%;width:calc(var(--u)*6);--r:9deg;animation-delay:-1.1s}
-.dd .hero .f3{left:13%;bottom:21%;width:calc(var(--u)*11);--r:7deg;animation-delay:-2s}
+.dd .hero .f3{left:calc(var(--u)*5);bottom:21%;width:calc(var(--u)*11);--r:7deg;animation-delay:-2s}
 .dd .hero .f4{right:13%;bottom:24%;width:calc(var(--u)*4.4);--r:-8deg;animation-delay:-.6s}
 .dd .mq{position:relative;z-index:3;display:inline-block;padding:calc(var(--u)*2.4);border-radius:calc(var(--u)*3);background:#120a3a;box-shadow:0 0 calc(var(--u)*4) rgba(255,79,163,.45),0 calc(var(--u)*1) 0 #05061c}
 .dd .mq::before,.dd .mq::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at center,#fff6c9 0 24%,var(--ye) 28% 44%,transparent 50%) 0 0/calc(var(--u)*2.4) calc(var(--u)*2.4) round;animation:ddBulb 1s steps(1) infinite}
