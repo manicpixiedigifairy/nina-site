@@ -61,22 +61,20 @@ html,body{margin:0}
 .bf .pn{position:absolute;z-index:3;left:50%;top:50%;translate:-50% -50%;width:100cqw;max-width:none;pointer-events:none;will-change:transform}
 .bf .up{transition:none!important;cursor:grabbing!important;box-shadow:calc(var(--u)*.9) calc(var(--u)*1.2) 0 var(--br)}
 
-/* CASE FILE */
-.bf .cf{position:relative;background:var(--y2);color:var(--br);padding:var(--sp) var(--g) calc(var(--sp)*1.1);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
-.bf .cf .h2{color:var(--b)}
-.bf .cs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*2.6);align-items:stretch}
-.bf .pn2{position:relative;overflow:hidden;border:calc(var(--u)*.3) solid var(--br);border-radius:calc(var(--u)*1.8);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--br);padding:calc(var(--u)*3) calc(var(--u)*3) calc(var(--u)*3.2);transform:rotate(var(--r,0deg));display:flex;flex-direction:column;gap:calc(var(--u)*1.6)}
-.bf .pn2 .tag{align-self:flex-start;font:600 calc(var(--u)*1.2)/1 var(--lab);letter-spacing:.04em;padding:.6em 1.2em .65em;border-radius:99px;border:.16em solid currentColor}
-.bf .pn2 p{margin:0;position:relative;z-index:2}
-.bf .pn2.c{background:var(--b);color:#fff}
-.bf .pn2.c .tag{background:var(--y);color:var(--br);border-color:var(--br)}
-.bf .pn2.c .lead{font:400 calc(var(--u)*3)/1.1 var(--disp);color:var(--y);text-shadow:0 .05em 0 var(--br2),0 .1em 0 var(--br)}
-.bf .pn2.s{background:var(--y);color:var(--br)}
-.bf .pn2.s .tag{background:var(--b);color:#fff;border-color:var(--br)}
-.bf .pn2.s .lead{font:400 calc(var(--u)*2.8)/1.12 var(--disp);color:var(--b)}
-.bf .pn2.s .bd{font:500 calc(var(--u)*1.75)/1.45 var(--bd)}
-.bf .pn2 .fi{position:absolute;right:calc(var(--u)*-1.5);bottom:calc(var(--u)*-.5);width:62%;z-index:1;rotate:-8deg;pointer-events:none}
-.bf .cl{margin:calc(var(--u)*3) auto 0;max-width:calc(var(--u)*62);padding:calc(var(--u)*2.2) calc(var(--u)*3);background:var(--br);color:var(--y);border-radius:calc(var(--u)*1.4);transform:rotate(-1deg);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--b2);text-align:center;font:400 calc(var(--u)*2.5)/1.2 var(--disp)}
+/* CASE FILE: CHALLENGE, IDEA, SOLUTION */
+.bf .ch1,.bf .cf,.bf .so1{position:relative;padding:calc(var(--sp)*.95) var(--g) calc(var(--sp)*1.05);overflow:hidden;isolation:isolate}
+.bf .ch1{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h80a80 80 0 0 1-80 80z' fill='%230A5CD6' fill-opacity='.22'/%3E%3Cpath d='M160 160H80a80 80 0 0 1 80-80z' fill='%230A5CD6' fill-opacity='.22'/%3E%3C/svg%3E") 0 0/calc(var(--u)*10) calc(var(--u)*10),var(--nv);color:#fff}
+.bf .ch1 .lb{color:#fff}
+.bf .ch1 .stmt{color:var(--y);text-shadow:0 .04em 0 var(--br2),0 .08em 0 var(--br2),0 .12em 0 var(--br)}
+.bf .ch1 .fi{position:absolute;right:calc(var(--g)*.6);bottom:calc(var(--u)*-1);width:calc(var(--u)*30);rotate:-8deg;pointer-events:none;z-index:-1}
+.bf .stmt{margin:calc(var(--u)*1.6) 0 0;font:400 calc(var(--u)*5)/1.06 var(--disp);max-width:19em}
+.bf .cf{background:var(--y2);color:var(--br);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
+.bf .cf .idg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:calc(var(--u)*4);align-items:start;margin-top:calc(var(--u)*1.8)}
+.bf .cf .lead{margin:0;font:400 calc(var(--u)*3.4)/1.08 var(--disp);color:var(--b)}
+.bf .cf .bd{margin:0;font:500 calc(var(--u)*1.75)/1.5 var(--bd)}
+.bf .cl{margin:calc(var(--u)*3.4) 0 0;max-width:calc(var(--u)*62);padding:calc(var(--u)*2.2) calc(var(--u)*3);background:var(--br);color:var(--y);border-radius:calc(var(--u)*1.4);transform:rotate(-1deg);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--b2);font:400 calc(var(--u)*2.5)/1.2 var(--disp)}
+.bf .so1{background:var(--y);color:var(--br)}
+.bf .so1 .stmt{color:var(--b);max-width:17em}
 
 /* TIME MACHINE */
 .bf .tm{background:var(--nv);padding:var(--sp) var(--g) calc(var(--sp)*1.1);position:relative;overflow:hidden}
@@ -128,7 +126,7 @@ html,body{margin:0}
 .bf .fl .sub{color:#EADFC0}
 .bf .fh .hd{padding-right:calc(var(--u)*15)}
 .bf .scl{position:absolute;left:0;right:0;height:calc(var(--u)*1.3);z-index:2;pointer-events:none}
-.bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
+.bf .scl.t{top:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 0,var(--y) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
 .bf .scl.b{bottom:0;background:radial-gradient(circle calc(var(--u)*1.3) at 50% 100%,var(--y2) 96%,transparent 100%) 0 0/calc(var(--u)*2.6) 100% repeat-x}
 .bf .ow{position:absolute;pointer-events:none;user-select:none;-webkit-user-select:none}
 .bf .ow img{width:100%}
@@ -211,14 +209,14 @@ html,body{margin:0}
 .bf .rc .src a{color:var(--b2);background:var(--y2);border:.14em solid var(--br);border-radius:99px;padding:.45em .9em;text-decoration:none}
 .bf .rc .src a:hover{background:var(--y)}
 @media(max-width:1000px){
-.bf .cs{grid-template-columns:minmax(0,1fr)}
+.bf .cf .idg{grid-template-columns:minmax(0,1fr);gap:1.4rem}
 .bf .rg{grid-template-columns:minmax(0,1fr)}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:700px){
 .bf{--u:clamp(8px,2.45vw,16px);--g:1.25rem;--sp:3.4rem}
 .bf .lb{font-size:.9rem}
-.bf .pn2{padding:1.6rem 1.4rem 1.8rem}.bf .pn2.c{padding-bottom:6.4rem}.bf .pn2.c .lead{font-size:1.75rem}.bf .pn2.s .lead{font-size:1.55rem}.bf .pn2.s .bd{font-size:1.1rem}.bf .pn2 .fi{width:46%}.bf .cl{font-size:1.4rem;padding:1.4rem 1.2rem}
+.bf .stmt{font-size:min(2.4rem,9.2vw)}.bf .ch1 .fi{width:11rem;right:-1rem;bottom:-.6rem}.bf .cf .lead{font-size:1.9rem}.bf .cf .bd{font-size:1.1rem}.bf .cl{font-size:1.4rem;padding:1.4rem 1.2rem}
 .bf .h2{font-size:min(3rem,12vw)}
 .bf .sub{font-size:1.05rem}
 .bf .hero{padding-top:5.6rem;padding-bottom:4.5rem}
@@ -268,13 +266,24 @@ html,body{margin:0}
   <canvas class="cv2" id="bfCv2" aria-hidden="true"></canvas>
 </header>
 
+<section class="ch1" id="bfCh">
+  <span class="lb rv">The Challenge</span>
+  <h2 class="stmt rv">Brand stagnation in a market where consumers demand entertaining, relatable content.</h2>
+  <img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-cut.webp?v=1" alt="" width="594" height="364" loading="lazy">
+</section>
+
 <section class="cf" id="bfCf">
-  <div class="hd rv"><div><span class="lb">Case File</span><h2 class="h2">Challenge and Solution</h2></div></div>
-  <div class="cs">
-    <article class="pn2 c rv" style="--r:-1deg"><span class="tag">Challenge</span><p class="lead">Brand stagnation in a market where consumers demand entertaining, relatable content.</p><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-cut.webp?v=1" alt="" width="594" height="364" loading="lazy"></article>
-    <article class="pn2 s rv" style="--r:.8deg;--d:.1s"><span class="tag">Solution</span><p class="lead">One thing is certain in life: someone will try to lay a finger on your Butterfinger.</p><p class="bd">But they will always fail thanks to the Butterfinger Investigators (aka BFI). They&rsquo;re a task force whose sole purpose in life is to return stolen Butterfingers to their rightful owners. The BFI have been around for years, but with the addition of &ldquo;EVER,&rdquo; we opened the door to time travel, extending the possibilities of the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p></article>
+  <span class="lb rv">The Idea</span>
+  <div class="idg">
+    <p class="lead rv">One thing is certain in life: someone will try to lay a finger on your Butterfinger.</p>
+    <p class="bd rv" style="--d:.1s">But they will always fail thanks to the Butterfinger Investigators (aka BFI). They&rsquo;re a task force whose sole purpose in life is to return stolen Butterfingers to their rightful owners. The BFI have been around for years, but with the addition of &ldquo;EVER,&rdquo; we opened the door to time travel, extending the possibilities of the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p>
   </div>
   <p class="cl rv">Proving that no matter where you are (or when you are), nobody will lay a finger on your Butterfinger. Ever.</p>
+</section>
+
+<section class="so1" id="bfSo">
+  <span class="lb rv">The Solution</span>
+  <h2 class="stmt rv">Modernize the classic BFI device, and refresh the story with a built-in humorous premise.</h2>
 </section>
 
 
