@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Nina Austin. Nike Air Max Day 2022: five films and an Instagram Stories series for March 26, 2022.">
+<meta name="description" content="Nina Austin. Nike Air Max Day 2022: the second edition of Nike's digital Air Max Day, with five films, interactive Instagram Stories, talent briefs, interview outlines and repurposed UGC.">
 <title>Nina Austin | Air Max Day</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rubik+Bubbles&display=swap" rel="stylesheet">
@@ -115,6 +115,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .dg mark{background:var(--lime);color:inherit;padding:0 .15em}
 .am .dg .q{display:block;margin-top:calc(var(--u)*1.4);padding-left:calc(var(--u)*1.1);border-left:2px solid var(--ir);font:700 calc(var(--u)*1.75)/1.15 var(--sc)}
 .am .dos .stk{right:var(--g);top:calc(var(--u)*4)}
+.am .role{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*.8) calc(var(--u)*3);align-items:baseline;margin-top:calc(var(--u)*4);padding-top:calc(var(--u)*1.8);border-top:1.5px solid var(--ink)}
+.am .role .tw{color:var(--ir2)}
+.am .role .rl{font:900 calc(var(--u)*2.4)/1.1 var(--sf)}
+.am .role .chips{grid-column:2;display:flex;flex-wrap:wrap;gap:2px;margin-top:calc(var(--u)*.6)}
+.am .role .chips li{padding:.55em .9em;background:#F1ECFF;color:#4B2BD8;font:600 calc(var(--u)*.92)/1 var(--ar);letter-spacing:.04em}
 /* section heads */
 .am .sh{position:relative;padding:calc(var(--u)*6) var(--g) calc(var(--u)*3)}
 .am .h2{font:900 calc(var(--u)*10)/.82 var(--sf);letter-spacing:-.02em}
@@ -172,6 +177,44 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .sr figcaption{margin-top:calc(var(--u)*1);display:flex;gap:.7em;align-items:baseline}
 .am .sr figcaption b{color:var(--ir2)}
 
+/* recognition */
+.am .aw{background:var(--ink);color:var(--paper);padding:calc(var(--u)*6) 0 calc(var(--u)*6.5)}
+.am .aw .lbl{border-color:rgba(239,235,227,.6)}
+.am .awg{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:calc(var(--u)*5);padding:0 var(--g);align-items:start}
+.am .pen{display:inline-block;padding:.45em 1.4em;background:linear-gradient(135deg,#E9A27A,#B8693F 55%,#E3A07C);color:#fff;font:800 calc(var(--u)*1)/1 var(--ar);letter-spacing:.14em;text-transform:uppercase;clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%)}
+.am .awh{margin-top:calc(var(--u)*1.6);font:900 calc(var(--u)*6.4)/.9 var(--sf);letter-spacing:-.02em}
+.am .awh i{font-style:italic;color:var(--ir)}
+.am .aws{margin-top:calc(var(--u)*1.4);color:#E9A27A}
+.am .awc{margin-top:calc(var(--u)*2);max-width:calc(var(--u)*44);font-size:calc(var(--u)*1.12);line-height:1.7}
+.am .awk{margin-top:calc(var(--u)*1.8);color:var(--gr)}
+.am .awl{display:inline-block;margin-top:calc(var(--u)*2);padding:.85em 1.4em;border-radius:99px;background:var(--lime);color:var(--ink);transition:transform .2s}
+.am .awl:hover{transform:translateY(-2px)}
+.am .awl:focus-visible{outline:3px solid var(--ir);outline-offset:4px}
+.am .st{display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid rgba(239,235,227,.6);border-left:1.5px solid rgba(239,235,227,.6)}
+.am .st li{padding:calc(var(--u)*1.8) calc(var(--u)*1.6);border-right:1.5px solid rgba(239,235,227,.6);border-bottom:1.5px solid rgba(239,235,227,.6)}
+.am .st b{display:block;font:900 calc(var(--u)*4.6)/1 var(--sf);color:var(--paper)}
+.am .st li:first-child b{color:var(--lime)}
+.am .st .tw{display:block;margin-top:calc(var(--u)*.8);color:#BDB9B0;line-height:1.5}
+/* press */
+.am .pr{padding-bottom:calc(var(--u)*7)}
+.am .pg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:calc(var(--u)*4);padding:0 var(--g);align-items:start}
+.am .feat2{position:relative;display:block;background:#fff;padding:calc(var(--u)*1.1) calc(var(--u)*1.1) calc(var(--u)*1.8);box-shadow:0 calc(var(--u)*.9) calc(var(--u)*2.2) rgba(20,20,20,.18);transform:rotate(-1deg);transition:transform .3s}
+.am .feat2:hover{transform:rotate(0) translateY(-4px)}
+.am .feat2 .tape{left:50%;top:calc(var(--u)*-1);transform:translateX(-50%) rotate(3deg)}
+.am .feat2 img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.am .pr .meta{display:flex;justify-content:space-between;margin-top:calc(var(--u)*1.2);color:var(--gr)}
+.am .pr .hd{display:block;font:700 calc(var(--u)*2.3)/1.12 var(--ar);letter-spacing:-.01em}
+.am .feat2 .hd{margin-top:calc(var(--u)*.5);font:900 calc(var(--u)*3)/1.05 var(--sf)}
+.am .feat2 .chips{display:flex;flex-wrap:wrap;gap:2px;margin-top:calc(var(--u)*1.2)}
+.am .feat2 .chips span{padding:.55em .9em;background:#F1ECFF;color:#4B2BD8;font:600 calc(var(--u)*.9)/1 var(--ar)}
+.am .cl li{border-top:1.5px solid var(--ink)}
+.am .cl li:last-child{border-bottom:1.5px solid var(--ink)}
+.am .cl a{position:relative;display:block;padding:calc(var(--u)*1.6) calc(var(--u)*3.2) calc(var(--u)*1.7) 0;transition:background .2s,padding .2s}
+.am .cl .tw{display:block;margin-bottom:calc(var(--u)*.6);color:var(--ir2)}
+.am .cl .ar{position:absolute;right:0;top:50%;transform:translateY(-50%);font:700 calc(var(--u)*2)/1 var(--ar);transition:transform .2s}
+.am .cl a:hover{background:var(--lime);padding-left:calc(var(--u)*1)}
+.am .cl a:hover .ar{transform:translate(4px,-50%)}
+.am .pr a:focus-visible{outline:3px solid var(--ir);outline-offset:4px}
 /* footer */
 .am .ft{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.4);align-items:center;padding:calc(var(--u)*5) var(--g) calc(var(--u)*6);background:var(--ink);color:var(--paper)}
 .am .ft a,.am .ft button{display:inline-flex;align-items:center;gap:.7em;padding:.9em 1.5em;border-radius:99px;border:0;font-family:var(--tw);font-weight:700;font-size:max(11px,calc(var(--u)*.8));letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s}
@@ -208,6 +251,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .sh{padding:4rem var(--g) 2rem}
 .am .dos{padding:3.6rem var(--g) 4rem}
 .am .dg{grid-template-columns:1fr;gap:2.6rem}
+.am .role{grid-template-columns:1fr}.am .role .chips{grid-column:1}.am .role .rl{font-size:1.6rem}
 .am .dg h3{font-size:2rem}
 .am .dg .num{font-size:2.4rem}
 .am .dg .q{font-size:1.4rem}
@@ -218,6 +262,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 .am .fl li:nth-child(even) .po{margin-top:1.6rem}
 .am .po h3{font-size:1.5rem}
 .am .bub{font-size:min(5.4rem,19cqw);top:2.2rem}
+.am .aw{padding:4rem 0 4.5rem}
+.am .awg{grid-template-columns:1fr;gap:2.4rem}
+.am .awh{font-size:min(4rem,14cqw)}
+.am .awc{font-size:1rem}
+.am .st b{font-size:2.6rem}
+.am .pg{grid-template-columns:1fr;gap:2.4rem}
+.am .pr .hd{font-size:1.25rem}
+.am .feat2 .hd{font-size:1.7rem}
+.am .feat2{transform:none}
+.am .pr{padding-bottom:4.5rem}
 .am .ban img{aspect-ratio:4/3}
 .am .spot{grid-template-columns:1fr;margin:3.4rem var(--g) 0;padding:1.6rem 1.3rem;transform:none;gap:1.2rem}
 .am .spot img{width:9rem}
@@ -259,7 +313,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
 <header class="hero">
   <div>
     <h1 class="h1 grain"><span class="l">Air Max</span><span class="l l2">Day</span><span class="ov" aria-hidden="true">more than a shoe</span></h1>
-    <p class="ld">Five films and an <b>Instagram Stories</b> series for Air Max Day, March 26, 2022.</p>
+    <p class="ld">Five films and an <b>Instagram Stories</b> series for the second edition of Nike&rsquo;s digital Air Max Day, March 26, 2022.</p>
   </div>
   <div class="stack">
     <svg class="ring" viewBox="0 0 400 400" aria-hidden="true"><defs><path id="amRing" d="M200 200m-170 0a170 170 0 1 1 340 0a170 170 0 1 1-340 0"/></defs><text><textPath href="#amRing">The future is in the air &#10033; More than a shoe &#10033; Air Max Day &#10033; 03.26.22 &#10033;</textPath></text></svg>
@@ -316,11 +370,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
       <p>A run of Instagram Stories that moved from an open question, to a quiz on Tinker Hatfield&rsquo;s original sketches, to quick Air facts and a style tip for the 1987 Air Max 1.</p>
     </article>
   </div>
+  <div class="role">
+    <p class="tw">My role</p>
+    <p class="rl">I executed the second edition of Nike&rsquo;s digital Air Max Day.</p>
+    <ul class="chips" aria-label="What I made"><li>Custom organic content</li><li>Interactive owned content</li><li>Talent briefs</li><li>Interview outlines</li><li>UGC repurposing</li></ul>
+  </div>
 </section>
 
 <figure class="ban">
   <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1" srcset="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner-sm.webp?v=1 900w, https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1 1600w" sizes="100vw" alt="An Air Max Plus in a sunset orange fade, collaged over infrared red, concrete shards, sparks and chains" width="1600" height="592" loading="lazy" decoding="async">
-  <figcaption class="tw">Air Max Plus</figcaption>
+  <figcaption class="tw">Air Max Plus, Air Max Day Worldwide</figcaption>
 </figure>
 
 <section class="fs" id="amFilms" aria-labelledby="amF">
@@ -373,10 +432,49 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--pa
   <svg class="xh" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 2v36M2 20h36" stroke="currentColor" stroke-width="1.6"/></svg>
 </section>
 
+<section class="aw" aria-labelledby="amA">
+  <p class="lbl tw"><span>Where it started</span><span>Edition one, 2021</span></p>
+  <div class="awg">
+    <div>
+      <span class="pen" aria-hidden="true">Bronze</span>
+      <h2 class="awh grain" id="amA">Air Max Day <i>Worldwide</i></h2>
+      <p class="aws tw">One Show 2022 &middot; Bronze &middot; Digital Design</p>
+      <p class="awc">The second edition built on the first. Air Max Day Worldwide, the first entirely virtual Air Max Day, won a One Show Bronze for its 2021 launch. With in-person events off the table, Air Max Day Worldwide brought Nike&rsquo;s local celebrations online as a members-only, 24-hour experience: timed events from fifteen Nike geos, a live stream from the Nike Campus, a 3D tour of an athlete&rsquo;s sneaker closet, and a digital passport that stamped every city a visitor reached.</p>
+      <p class="awk tw">Edition one: Nike / Portland + Stink Studios / New York</p>
+      <a class="awl tw" href="https://www.stinkstudios.com/work/nike-airmaxday" target="_blank" rel="noopener">Edition one case study &#8599;</a>
+    </div>
+    <ul class="st" aria-label="Edition one in numbers">
+      <li><b>5.7B</b><span class="tw">Virtual miles logged in 24 hours</span></li>
+      <li><b>100+</b><span class="tw">Pieces of original content</span></li>
+      <li><b>15</b><span class="tw">Nike geos, one global event</span></li>
+      <li><b>24h</b><span class="tw">Members-only experience</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pr" aria-labelledby="amP">
+  <div class="sh"><h2 class="h2 grain" id="amP">In the <i>Press</i></h2></div>
+  <p class="lbl tw"><span>Press</span><span>04 clippings</span></p>
+  <div class="pg">
+    <a class="feat2" href="https://www.collater.al/en/air-max-day-2022-interview-juliana-sagat-style/" target="_blank" rel="noopener">
+      <span class="tape" aria-hidden="true"></span>
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-press-collateral.webp?v=1" alt="Collater.al's Air Max Day 2022 cover: Juliana Sagat holding an Air Max 90 on its box, framed by Air Max Day 2022 type" width="900" height="600" loading="lazy" decoding="async">
+      <span class="meta"><span class="tw">Collater.al</span><span class="tw">03.26.22</span></span>
+      <span class="hd">Air Max Day 2022: interview with Juliana Sagat</span>
+      <span class="chips"><span>Interview</span><span>Juliana Sagat</span><span>Read &#8599;</span></span>
+    </a>
+    <ul class="cl">
+      <li><a href="https://www.highsnobiety.com/p/air-max-day-2022-releases-shoes-colorways/" target="_blank" rel="noopener"><span class="tw">Highsnobiety &middot; 03.26.22</span><span class="hd">Here&rsquo;s What&rsquo;s Happening on Air Max Day 2022</span><span class="ar" aria-hidden="true">&#8599;</span></a></li>
+      <li><a href="https://hypebeast.com/2022/3/nike-air-max-day-1-2022-air-shop-new-silhouettes" target="_blank" rel="noopener"><span class="tw">Hypebeast &middot; 03.26.22</span><span class="hd">Nike Air Max Day 2022 Is Here Along with New Sneaker Releases</span><span class="ar" aria-hidden="true">&#8599;</span></a></li>
+      <li><a href="https://wwd.com/shop/shop-fashion/nike-air-max-day-2022-1235135197/" target="_blank" rel="noopener"><span class="tw">WWD &middot; 2022</span><span class="hd">Nike Air Max Day 2022: Sneaker Launch Info</span><span class="ar" aria-hidden="true">&#8599;</span></a></li>
+    </ul>
+  </div>
+</section>
+
 <footer class="ft">
   <a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a>
   <button type="button" data-top>Back to top</button>
-  <span class="dots tw" aria-hidden="true">Films &middot; Stories &middot; Quiz &middot; Air facts</span>
+  <span class="dots tw" aria-hidden="true">Films &middot; Stories &middot; Edition one &middot; Press</span>
   <span class="sc" aria-hidden="true">see you next March 26 &#10033;</span>
 </footer>
 
