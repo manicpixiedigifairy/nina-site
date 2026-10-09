@@ -90,10 +90,11 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .q{display:block;margin-top:calc(var(--u)*1.4);padding:calc(var(--u)*1.1) calc(var(--u)*1.2);border-left:3px solid var(--ir);background:rgba(255,59,47,.08);font:600 calc(var(--u)*1.25)/1.4 var(--ar);color:var(--wh)}
 .am .role{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1) calc(var(--u)*3);align-items:center;margin:calc(var(--u)*3) var(--g) 0;padding:calc(var(--u)*2.2) calc(var(--u)*2.4);border:1.5px solid var(--lime);background:linear-gradient(90deg,rgba(92,255,59,.1),transparent 60%)}
 .am .role .mo{color:var(--lime)}
-.am .role .rl{font:400 calc(var(--u)*2.8)/1 var(--an);text-transform:uppercase}
+.am .role .rl{font:400 calc(var(--u)*2.4)/1.05 var(--an);text-transform:uppercase;max-width:calc(var(--u)*56)}
+.am .role .chips{margin-top:calc(var(--u)*1.2)}
 .am .chips{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}
 .am .chips li,.am .chips span{padding:.5em .85em;border:1px solid rgba(255,255,255,.35);font:700 max(10px,calc(var(--u)*.72))/1 var(--mo);letter-spacing:.08em;text-transform:uppercase;color:var(--wh)}
-.am .role .chips{grid-column:2}
+
 
 /* banner */
 .am .ban{position:relative}
@@ -215,8 +216,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .pn{grid-template-columns:1fr;gap:1.1rem}
 .am .pnl h3{font-size:2.1rem}
 .am .role{grid-template-columns:1fr;padding:1.4rem}
-.am .role .chips{grid-column:1}
-.am .role .rl{font-size:1.9rem}
+
+.am .role .rl{font-size:1.6rem}
 .am .ban img{aspect-ratio:4/3}
 .am .fl{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 1rem}
 .am .fi h3{font-size:1.5rem}
@@ -300,8 +301,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   </div>
   <div class="role">
     <p class="mo">My role</p>
-    <p class="rl">I executed the second edition of Nike&rsquo;s digital Air Max Day.</p>
-    <ul class="chips" aria-label="What I made"><li>Custom organic content</li><li>Interactive owned content</li><li>Talent briefs</li><li>Interview outlines</li><li>UGC repurposing</li></ul>
+    <div>
+      <p class="rl">I created organic and reactive content that fed fan enthusiasm, drove engagement, amplified reach and introduced casual sneakerheads to proper Air Max Day etiquette.</p>
+      <ul class="chips" aria-label="What I made"><li>Organic content</li><li>Reactive content</li><li>Interactive Stories</li><li>Talent briefs</li><li>Interview outlines</li><li>UGC repurposing</li></ul>
+    </div>
   </div>
 </section>
 
