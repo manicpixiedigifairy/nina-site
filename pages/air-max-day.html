@@ -147,8 +147,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .gk b{color:var(--lime)}
 
 .am .g2{margin-top:calc(var(--u)*3.4)}
-.am .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin:0;background:var(--bk)}
-.am .tri img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.am .sole{position:relative;display:flex;justify-content:center;padding:calc(var(--u)*3) var(--g);background:var(--bk)}
+.am .sole::before{content:'';position:absolute;left:var(--g);right:var(--g);top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(92,255,59,.6),transparent)}
+.am .sole img{position:relative;width:min(100%,calc(var(--u)*44));transform:rotate(-3deg);filter:drop-shadow(0 calc(var(--u)*1.6) calc(var(--u)*2.4) rgba(0,0,0,.8)) drop-shadow(0 0 calc(var(--u)*3) rgba(46,107,255,.25));animation:amSole 7s ease-in-out infinite}
+@keyframes amSole{50%{transform:rotate(-1deg) translateY(calc(var(--u)*-.8))}}
 /* ugc */
 .am .ugcl{margin:0 var(--g) calc(var(--u)*3);max-width:calc(var(--u)*46);color:#D0D0D4;font-size:calc(var(--u)*1.2)}
 .am .ug{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:calc(var(--u)*2);padding:0 var(--g);align-items:start}
@@ -337,7 +339,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .ugr.one img{flex-basis:100%}
 .am .post figcaption b{font-size:2rem}
 .am .ugcl{font-size:1rem}
-.am .tri img{aspect-ratio:3/4}
+.am .sole{padding:2.4rem var(--g)}
 .am .pg{grid-template-columns:1fr;gap:2.4rem}
 .am .f2{transform:none}
 .am .f2 .hd{font-size:1.8rem}
@@ -350,7 +352,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .sr li{flex-basis:66%}
 }
 @media(prefers-reduced-motion:reduce){
-.am .boxw .cut,.am .boxsh{animation:none}
+.am .boxw .cut,.am .boxsh,.am .sole img{animation:none}
 .am .st{opacity:1;transform:none;transition:none}.am .st.in .bars i{animation:none;transform:scaleX(1)}.am .emo,.am .pll img,.am .ayb span{transition:none}.am .qz button.no,.am .qb .qr.pop{animation:none}
 .am .tk div,.am .gl::before,.am .gl::after,.am .sub::before{animation:none}
 .am .gl::before,.am .gl::after{display:none}
@@ -459,14 +461,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </div>
 </section>
 
-<figure class="tri" aria-label="Air VaporMax 360 details">
-  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-1.webp?v=1" alt="Close-up of a grey Air VaporMax 360 upper with an iridescent Swoosh" width="900" height="1125" loading="lazy" decoding="async">
-  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-2.webp?v=1" alt="Iridescent heel of the Air VaporMax 360 over its clear VaporMax Air unit" width="900" height="1125" loading="lazy" decoding="async">
-  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-vapormax-3.webp?v=1" alt="The clear VaporMax Air outsole seen from below" width="900" height="900" loading="lazy" decoding="async">
-</figure>
+<div class="sole" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1" alt="" width="1400" height="538" loading="lazy" decoding="async"></div>
 
 <section class="sec ugc" aria-labelledby="amU">
-  <img class="cut cut-shoe" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-shoe.webp?v=1" alt="" width="700" height="588" loading="lazy" decoding="async" aria-hidden="true">
   <div class="sh"><div><span class="kk mo">Show us your Air</span><h2 class="h2 chr" id="amU">Your City</h2></div><p class="mo">UGC on @nikesportswear</p></div>
   <p class="ugcl">&ldquo;Show Us Your Air&rdquo; turned Nike&rsquo;s feeds into a multi-platform gallery. On March 26, community content tags, curated with local boutiques and Nike partners, invited fans to post their collections, unboxings and on-foot grids. Their looks were repurposed into city-tagged posts that sent people to shop the collection on Instagram.</p>
   <div class="ug">
