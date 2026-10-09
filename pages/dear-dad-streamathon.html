@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Dear Dad, a Walmart Father's Day campaign built around a livestream gaming event and an ABFF short film series.">
-<title>Dear Dad</title>
+<meta name="description" content="Father's Day Streamathon, a Walmart livestream blending competitive gaming, unfiltered discussions on Black fatherhood, and giveaways.">
+<title>Father's Day Streamathon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
@@ -181,6 +181,62 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 .dd.js .fm.rv.on:nth-child(3){transform:rotate(1.1deg)}
 .dd.js .fm.rv .pic{clip-path:inset(49.5% 0 49.5% 0);filter:brightness(3)}
 .dd.js .fm.rv.on .pic{clip-path:inset(0);filter:none;transition:clip-path .5s .15s cubic-bezier(.3,1.2,.4,1),filter .7s .15s}
+
+.dd .tt{font-size:calc(var(--u)*8)}
+.dd .tt .ln.l1{font-size:.5em;margin-bottom:.12em}
+.dd .tt .w{display:inline-block;white-space:nowrap}
+.dd .tt .gap{display:inline-block;width:.4em}
+.dd .mq .mi{padding:calc(var(--u)*2.8) calc(var(--u)*4.4) calc(var(--u)*3.4)}
+.dd .live{position:relative;z-index:3;display:inline-flex;align-items:center;gap:.8em;margin-bottom:calc(var(--u)*2.2);padding:.7em 1.2em;border-radius:999px;background:#ff3b3b;color:#fff;font-family:var(--px);font-size:max(9px,calc(var(--u)*.85));letter-spacing:.12em;text-transform:uppercase;box-shadow:0 0 calc(var(--u)*2) rgba(255,59,59,.6)}
+.dd .live i{width:.8em;height:.8em;border-radius:50%;background:#fff;animation:ddBlink 1s steps(1) infinite}
+.dd .cta{position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:center;gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*2.4)}
+.dd .cta .coin{margin-top:0}
+.dd .coin.alt{background:var(--pk);color:var(--ink);box-shadow:0 .5em 0 #b3256b,0 .8em 1.2em rgba(0,0,0,.4)}
+.dd .coin.alt:active{box-shadow:0 .1em 0 #b3256b}
+.dd .vrow{grid-column:1/13;display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*4);margin-top:calc(var(--u)*5);align-items:center}
+.dd .ph{position:relative;width:calc(var(--u)*21);padding:calc(var(--u)*1) calc(var(--u)*.9);border-radius:calc(var(--u)*3);background:#05061c;box-shadow:inset 0 0 0 calc(var(--u)*.3) var(--pk),0 0 calc(var(--u)*3) rgba(255,79,163,.35)}
+.dd .ph .vw{position:relative;border-radius:calc(var(--u)*2.2);overflow:hidden;aspect-ratio:9/16;background:#000}
+.dd .ph iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.dd .ph .px{display:block;margin:0 0 calc(var(--u)*.8);text-align:center;color:var(--pk)}
+.dd .stack{display:grid;gap:calc(var(--u)*2.4)}
+.dd .stack .vs{margin-top:0;grid-column:auto;align-items:stretch}
+.dd .stack .pl h3{font-size:calc(var(--u)*2.5)}
+.dd .stack .vsm{align-self:center}
+.dd .hero .f1{left:3%;top:9%}
+.dd .alsof .px{display:block;margin-bottom:calc(var(--u)*1);color:var(--ye)}
+.dd .alsof .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.4)}
+.dd .alsof .row b{display:block;padding:calc(var(--u)*1.5) calc(var(--u)*1.4);border-radius:calc(var(--u)*1);background:var(--ink2);box-shadow:inset 0 0 0 calc(var(--u)*.22) var(--ye);font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:calc(var(--u)*1.55);line-height:1.1;text-align:center}
+.dd .cp{padding:calc(var(--u)*2) calc(var(--u)*1.8)}
+.dd .chn.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.dd .chn.c5 .cp b{font-size:calc(var(--u)*1.75)}
+.dd .cp.hi{background:var(--bl)}
+.dd .cp.hi .px{color:var(--ye)}
+.dd .pw b{font-size:calc(var(--u)*3.5);padding-left:calc(var(--u)*.8);padding-right:calc(var(--u)*.8)}
+.dd .sb{display:flex;flex-direction:column;justify-content:center;align-items:center}
+.dd .sb .pre{display:block;margin-bottom:calc(var(--u)*.9);color:var(--pk)}
+.dd .sb.wide{grid-column:1/-1}
+.dd .sb.wide .num{font-size:calc(var(--u)*4.4)}
+.dd .gifs{grid-column:1/13;display:grid;grid-template-columns:1.78fr 1.78fr .8fr .8fr;gap:calc(var(--u)*1.8);margin-top:calc(var(--u)*2.6);align-items:center}
+.dd .gifs .pic{aspect-ratio:auto}
+.dd .gifs .pic img{height:auto;object-fit:initial}
+.dd .gifs figure{margin:0}
+.dd .gifs .pic::after{display:none}
+.dd .gh{grid-column:1/13;margin-top:calc(var(--u)*7)}
+.dd .gal{grid-column:1/13;columns:3;column-gap:calc(var(--u)*1.8);margin-top:calc(var(--u)*2.6)}
+.dd .gal figure{margin:0 0 calc(var(--u)*1.8);break-inside:avoid}
+.dd .gal .gb{display:block;width:100%;padding:0;border:0;background:none;color:inherit;cursor:zoom-in;font:inherit}
+.dd .gal .scr{padding:calc(var(--u)*.6)}
+.dd .gal .pic{aspect-ratio:auto}
+.dd .gal .pic img{height:auto;object-fit:initial}
+.dd .gal figure:nth-child(3n+1){transform:rotate(-.8deg)}
+.dd .gal figure:nth-child(3n){transform:rotate(.8deg)}
+.dd .ft .ex{background:var(--pk);color:var(--ink);box-shadow:0 .5em 0 #b3256b}
+.ddlb{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;background:rgba(5,6,28,.94)}
+.ddlb.on{display:flex}
+.ddlb img{max-width:min(92vw,1100px);max-height:84vh;width:auto;height:auto;border-radius:10px;box-shadow:0 0 0 4px #FFC220,0 20px 60px rgba(0,0,0,.6)}
+.ddlb button{position:absolute;border:0;background:#FFC220;color:#090B2A;font:400 14px "Press Start 2P","Courier New",monospace;padding:14px 16px;border-radius:999px;cursor:pointer;box-shadow:0 5px 0 #b8800a}
+.ddlb .x{top:18px;right:18px}.ddlb .pv{left:18px;top:50%}.ddlb .nx{right:18px;top:50%}
+.ddlb .ct{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#3DE8FF;font:400 11px "Press Start 2P","Courier New",monospace;letter-spacing:.08em}
 /* mobile */
 @media (max-width:1000px){
 .dd{--u:clamp(9px,2.1vw,16px);--g:calc(var(--u)*3)}
@@ -189,7 +245,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 .dd .bar .sc{margin-left:auto}
 .dd .st .hd,.dd .st .tx,.dd .what .tx{grid-column:1/13}
 .dd .st .tx{margin-top:calc(var(--u)*2.4)}
-.dd .tt{font-size:calc(var(--u)*11)}
+.dd .tt{font-size:calc(var(--u)*6.4)}
 .dd .vs{grid-template-columns:minmax(0,1fr)}
 .dd .vsm{justify-self:center}
 .dd .fms{gap:calc(var(--u)*1.8)}
@@ -201,30 +257,42 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 .dd .bdy{font-size:calc(var(--u)*1.9)}
 .dd .fmh{flex-wrap:wrap}
 .dd .hero .f1,.dd .hero .f2{display:none}
+.dd .vrow{grid-template-columns:minmax(0,1fr);justify-items:center}
+.dd .stack{width:100%}
+.dd .chn.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dd .gal{columns:2}
+.dd .tt{font-size:calc(var(--u)*6.4)}
 }
 @media (max-width:700px){
 .dd .fms{grid-template-columns:1fr;gap:calc(var(--u)*3.4)}
 .dd{--u:clamp(9px,3.15vw,16px)}
 @supports (width:1cqw){.dd{--u:clamp(9px,3.15cqw,16px)}}
 .dd .bar .br{font-size:calc(var(--u)*1.5)}
-.dd .tt{font-size:calc(var(--u)*5.2)}
-.dd .mq{padding:calc(var(--u)*1.2*2)}
-.dd .mq .mi{padding:calc(var(--u)*1.6) calc(var(--u)*2) calc(var(--u)*2)}
+.dd .tt{font-size:calc(var(--u)*2.75)}
+.dd .mq{padding:calc(var(--u)*1.2)}
+.dd .mq .mi{padding:calc(var(--u)*1.4) calc(var(--u)*1) calc(var(--u)*1.6)}
 .dd .kick{font-size:max(8px,calc(var(--u)*.78));letter-spacing:.06em}
 .dd .hero{min-height:calc(var(--u)*50);padding-bottom:calc(var(--u)*10)}
 .dd .hero .f3{width:calc(var(--u)*7);left:5%;bottom:3%}
+.dd .tt .ln.l1{font-size:.55em}
 .dd .hero .f4{width:calc(var(--u)*3.4);right:8%;bottom:4%}
 .dd h2 .k{font-size:calc(var(--u)*6)}
 .dd .why h2 .k{font-size:calc(var(--u)*4.5)}
 .dd .pl h3{font-size:calc(var(--u)*1.9);overflow-wrap:anywhere}
 .dd .pl{padding:calc(var(--u)*1.8) calc(var(--u)*2)}
 .dd .bdy{font-size:calc(var(--u)*1.75)}
-.dd .chn,.dd .sbd,.dd .btns{grid-template-columns:1fr}
+.dd .chn,.dd .sbd,.dd .btns,.dd .chn.c5{grid-template-columns:1fr}
+.dd .alsof .row{grid-template-columns:1fr}
+.dd .pw b{font-size:calc(var(--u)*3.2)}
+.dd .ph{width:calc(var(--u)*20)}
+.dd .gifs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dd .gifs figure:nth-child(-n+2){grid-column:1/-1}
+.dd .gal{columns:2;column-gap:calc(var(--u)*1.2)}
 .dd .sb .num{font-size:calc(var(--u)*6.4)}
 .dd .tk .rl span{font-size:calc(var(--u)*2.8)}
 }
 @media (prefers-reduced-motion:reduce){
-.dd .hero .flr,.dd .hero .fl,.dd .mq::before,.dd .mq::after,.dd .tt .ln i,.dd .coin span,.dd .who .cn,.dd .tk .rl,.dd .aw svg,.dd .fm:hover .pic img{animation:none!important}
+.dd .hero .flr,.dd .hero .fl,.dd .mq::before,.dd .mq::after,.dd .tt .ln i,.dd .coin span,.dd .who .cn,.dd .tk .rl,.dd .aw svg,.dd .fm:hover .pic img,.dd .live i{animation:none!important}
 .dd.js .rv,.dd.js .rv.on{opacity:1;transform:none;transition:none}
 .dd.js .fm.rv .pic{clip-path:none;filter:none}
 .dd .scr{transition:none}
@@ -252,16 +320,20 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
   <span class="fl f2" aria-hidden="true"><svg class="pix" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><rect x="1" y="0" width="2" height="1" fill="#FF4FA3"/><rect x="4" y="0" width="2" height="1" fill="#FF4FA3"/><rect x="0" y="1" width="1" height="1" fill="#FF4FA3"/><rect x="1" y="1" width="1" height="1" fill="#ffd0e6"/><rect x="2" y="1" width="5" height="1" fill="#FF4FA3"/><rect x="0" y="2" width="1" height="1" fill="#FF4FA3"/><rect x="1" y="2" width="1" height="1" fill="#ffd0e6"/><rect x="2" y="2" width="5" height="1" fill="#FF4FA3"/><rect x="0" y="3" width="7" height="1" fill="#FF4FA3"/><rect x="1" y="4" width="5" height="1" fill="#FF4FA3"/><rect x="2" y="5" width="3" height="1" fill="#FF4FA3"/><rect x="3" y="6" width="1" height="1" fill="#FF4FA3"/></svg></span>
   <span class="fl f3" aria-hidden="true"><svg class="pix" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><rect x="2" y="0" width="12" height="1" fill="#0071CE"/><rect x="1" y="1" width="14" height="1" fill="#0071CE"/><rect x="0" y="2" width="4" height="1" fill="#0071CE"/><rect x="4" y="2" width="1" height="1" fill="#090B2A"/><rect x="5" y="2" width="11" height="1" fill="#0071CE"/><rect x="0" y="3" width="3" height="1" fill="#0071CE"/><rect x="3" y="3" width="3" height="1" fill="#090B2A"/><rect x="6" y="3" width="5" height="1" fill="#0071CE"/><rect x="11" y="3" width="1" height="1" fill="#FF4FA3"/><rect x="12" y="3" width="1" height="1" fill="#0071CE"/><rect x="13" y="3" width="1" height="1" fill="#FFC220"/><rect x="14" y="3" width="2" height="1" fill="#0071CE"/><rect x="0" y="4" width="4" height="1" fill="#0071CE"/><rect x="4" y="4" width="1" height="1" fill="#090B2A"/><rect x="5" y="4" width="3" height="1" fill="#0071CE"/><rect x="8" y="4" width="2" height="1" fill="#090B2A"/><rect x="10" y="4" width="6" height="1" fill="#0071CE"/><rect x="0" y="5" width="16" height="1" fill="#0071CE"/><rect x="1" y="6" width="14" height="1" fill="#0071CE"/><rect x="2" y="7" width="4" height="1" fill="#0071CE"/><rect x="10" y="7" width="4" height="1" fill="#0071CE"/></svg></span>
   <span class="fl f4" aria-hidden="true"><svg class="pix" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><rect x="3" y="0" width="1" height="1" fill="#FFC220"/><rect x="3" y="1" width="1" height="1" fill="#FFC220"/><rect x="0" y="2" width="7" height="1" fill="#FFC220"/><rect x="1" y="3" width="2" height="1" fill="#FFC220"/><rect x="3" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="4" y="3" width="2" height="1" fill="#FFC220"/><rect x="2" y="4" width="3" height="1" fill="#FFC220"/><rect x="1" y="5" width="2" height="1" fill="#FFC220"/><rect x="4" y="5" width="2" height="1" fill="#FFC220"/><rect x="1" y="6" width="1" height="1" fill="#FFC220"/><rect x="5" y="6" width="1" height="1" fill="#FFC220"/></svg></span>
+  <span class="live px"><i></i>Live</span>
   <div class="mq">
     <div class="mi">
-      <h1 class="tt" aria-label="Dear Dad">
-        <span class="ln" aria-hidden="true"><i style="--k:0">D</i><i style="--k:1">E</i><i style="--k:2">A</i><i style="--k:3">R</i></span>
-        <span class="ln" aria-hidden="true"><i style="--k:4">D</i><i style="--k:5">A</i><i style="--k:6">D</i></span>
+      <h1 class="tt" aria-label="Father&rsquo;s Day Streamathon">
+        <span class="ln l1" aria-hidden="true"><span class="w"><i style="--k:0">F</i><i style="--k:1">A</i><i style="--k:2">T</i><i style="--k:3">H</i><i style="--k:4">E</i><i style="--k:5">R</i><i style="--k:6">’</i><i style="--k:7">S</i></span><span class="gap"> </span><span class="w"><i style="--k:8">D</i><i style="--k:9">A</i><i style="--k:10">Y</i></span></span>
+        <span class="ln l2" aria-hidden="true"><span class="w"><i style="--k:11">S</i><i style="--k:12">T</i><i style="--k:13">R</i><i style="--k:14">E</i><i style="--k:15">A</i><i style="--k:16">M</i><i style="--k:17">A</i><i style="--k:18">T</i><i style="--k:19">H</i><i style="--k:20">O</i><i style="--k:21">N</i></span></span>
       </h1>
     </div>
   </div>
-  <p class="kick">Play, Pride, and Film</p>
-  <a class="coin" href="#who" data-go data-coin><svg class="pix" viewBox="0 0 8 8" aria-hidden="true" focusable="false"><rect x="2" y="0" width="4" height="1" fill="#b8800a"/><rect x="1" y="1" width="1" height="1" fill="#b8800a"/><rect x="2" y="1" width="4" height="1" fill="#FFC220"/><rect x="6" y="1" width="1" height="1" fill="#b8800a"/><rect x="0" y="2" width="1" height="1" fill="#b8800a"/><rect x="1" y="2" width="1" height="1" fill="#FFC220"/><rect x="2" y="2" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="2" width="4" height="1" fill="#FFC220"/><rect x="7" y="2" width="1" height="1" fill="#b8800a"/><rect x="0" y="3" width="1" height="1" fill="#b8800a"/><rect x="1" y="3" width="1" height="1" fill="#FFC220"/><rect x="2" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="3" width="4" height="1" fill="#FFC220"/><rect x="7" y="3" width="1" height="1" fill="#b8800a"/><rect x="0" y="4" width="1" height="1" fill="#b8800a"/><rect x="1" y="4" width="6" height="1" fill="#FFC220"/><rect x="7" y="4" width="1" height="1" fill="#b8800a"/><rect x="0" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="5" width="6" height="1" fill="#FFC220"/><rect x="7" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="6" width="4" height="1" fill="#FFC220"/><rect x="6" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="7" width="4" height="1" fill="#b8800a"/></svg><span>Insert Coin</span></a>
+  <p class="kick">Gaming, Fatherhood, and Giveaways</p>
+  <div class="cta">
+    <a class="coin" href="#who" data-go data-coin><svg class="pix" viewBox="0 0 8 8" aria-hidden="true" focusable="false"><rect x="2" y="0" width="4" height="1" fill="#b8800a"/><rect x="1" y="1" width="1" height="1" fill="#b8800a"/><rect x="2" y="1" width="4" height="1" fill="#FFC220"/><rect x="6" y="1" width="1" height="1" fill="#b8800a"/><rect x="0" y="2" width="1" height="1" fill="#b8800a"/><rect x="1" y="2" width="1" height="1" fill="#FFC220"/><rect x="2" y="2" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="2" width="4" height="1" fill="#FFC220"/><rect x="7" y="2" width="1" height="1" fill="#b8800a"/><rect x="0" y="3" width="1" height="1" fill="#b8800a"/><rect x="1" y="3" width="1" height="1" fill="#FFC220"/><rect x="2" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="3" width="4" height="1" fill="#FFC220"/><rect x="7" y="3" width="1" height="1" fill="#b8800a"/><rect x="0" y="4" width="1" height="1" fill="#b8800a"/><rect x="1" y="4" width="6" height="1" fill="#FFC220"/><rect x="7" y="4" width="1" height="1" fill="#b8800a"/><rect x="0" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="5" width="6" height="1" fill="#FFC220"/><rect x="7" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="6" width="4" height="1" fill="#FFC220"/><rect x="6" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="7" width="4" height="1" fill="#b8800a"/></svg><span>Insert Coin</span></a>
+    <a class="coin alt" href="https://www.youtube.com/live/IRqbomeHomw?si=DcmREznVebeTuj9A" target="_blank" rel="noopener"><span style="animation:none">Watch The Stream</span></a>
+  </div>
   <div class="scan"></div>
 </header>
 
@@ -269,31 +341,53 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
   <span class="cn" aria-hidden="true"><svg class="pix" viewBox="0 0 8 8" aria-hidden="true" focusable="false"><rect x="2" y="0" width="4" height="1" fill="#b8800a"/><rect x="1" y="1" width="1" height="1" fill="#b8800a"/><rect x="2" y="1" width="4" height="1" fill="#FFC220"/><rect x="6" y="1" width="1" height="1" fill="#b8800a"/><rect x="0" y="2" width="1" height="1" fill="#b8800a"/><rect x="1" y="2" width="1" height="1" fill="#FFC220"/><rect x="2" y="2" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="2" width="4" height="1" fill="#FFC220"/><rect x="7" y="2" width="1" height="1" fill="#b8800a"/><rect x="0" y="3" width="1" height="1" fill="#b8800a"/><rect x="1" y="3" width="1" height="1" fill="#FFC220"/><rect x="2" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="3" y="3" width="4" height="1" fill="#FFC220"/><rect x="7" y="3" width="1" height="1" fill="#b8800a"/><rect x="0" y="4" width="1" height="1" fill="#b8800a"/><rect x="1" y="4" width="6" height="1" fill="#FFC220"/><rect x="7" y="4" width="1" height="1" fill="#b8800a"/><rect x="0" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="5" width="6" height="1" fill="#FFC220"/><rect x="7" y="5" width="1" height="1" fill="#b8800a"/><rect x="1" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="6" width="4" height="1" fill="#FFC220"/><rect x="6" y="6" width="1" height="1" fill="#b8800a"/><rect x="2" y="7" width="4" height="1" fill="#b8800a"/></svg></span>
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 1</span><h2><span class="k">Who:</span><span class="c">The Client</span></h2></div>
-    <div class="tx rv" style="--d:.1s"><p class="bdy"><mark>Walmart</mark>, the global retail powerhouse seeking to strategically invest in <mark>purpose-driven marketing</mark> to address cultural consumer demands for authentic, values-based brand interactions.</p></div>
+    <div class="tx rv" style="--d:.1s"><p class="bdy"><mark>Walmart</mark>, the world&rsquo;s largest retailer, seeking a <mark>culturally specific way</mark> to reach their target on Father&rsquo;s Day.</p></div>
   </div>
 </section>
 
 <section class="st what" id="what">
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 2</span><h2><span class="k">What:</span><span class="c">The Campaign</span></h2></div>
-    <div class="tx rv" style="--d:.1s"><p class="bdy">Developed and launched <mark>Dear Dad</mark>, a multifaceted Father&rsquo;s Day campaign anchored by a livestream gaming event and an ABFF (American Black Film Festival) short film series. The livestream paired NFL icon Cam Newton and gaming legend IpodKingCarter with their sons in a retro-styled game lounge featuring NBA Jam, VR Racing, and other classics, while the film series offered intimate, narrative-driven portraits of Black fatherhood, written by emerging filmmakers.</p></div>
+    <div class="tx rv" style="--d:.1s"><p class="bdy">Produced a <mark>first-of-its-kind livestream event</mark> blending competitive gaming sessions with popular titles, unfiltered discussions on Black fatherhood, and interactive elements like chat, polls, and giveaways, featuring NFL legend Cam Newton and gaming creator iPod King Carter as hosts, along with celebrity guests, creators, and real father-son duos to create shareable content beyond the stream.</p></div>
 
-    <div class="vs">
-      <div class="pl rv"><span class="px">Player 1</span><h3>Cam Newton</h3><p>NFL icon, with his son</p></div>
-      <div class="vsm rv" style="--d:.1s" aria-hidden="true">VS</div>
-      <div class="pl p2 rv" style="--d:.15s"><span class="px">Player 2</span><h3>IpodKingCarter</h3><p>Gaming legend, with his son</p></div>
+    <div class="vrow">
+      <div class="ph rv"><span class="px">Now Playing</span><div class="vw"><iframe src="https://player.vimeo.com/video/1126652757?app_id=122963" title="Short video from the Streamathon" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+      <div class="stack">
+        <div class="vs">
+          <div class="pl rv"><span class="px">Host 1</span><h3>Cam Newton</h3><p>NFL legend</p></div>
+          <div class="vsm rv" style="--d:.1s" aria-hidden="true">&amp;</div>
+          <div class="pl p2 rv" style="--d:.15s"><span class="px">Host 2</span><h3>iPod King Carter</h3><p>Gaming creator</p></div>
+        </div>
+        <div class="alsof rv"><span class="px">Along With</span><div class="row"><b>Celebrity Guests</b><b>Creators</b><b>Real Father-Son Duos</b></div></div>
+      </div>
     </div>
 
     <div class="tk rv" aria-hidden="true"><div class="rl">
-      <span>NBA Jam</span><span class="sp">&#9733;</span><span>VR Racing</span><span class="sp">&#9733;</span><span>And Other Classics</span><span class="sp">&#9733;</span>
-      <span>NBA Jam</span><span class="sp">&#9733;</span><span>VR Racing</span><span class="sp">&#9733;</span><span>And Other Classics</span><span class="sp">&#9733;</span>
+      <span>Competitive Gaming</span><span class="sp">&#9733;</span><span>Unfiltered Discussions on Black Fatherhood</span><span class="sp">&#9733;</span><span>Chat, Polls, and Giveaways</span><span class="sp">&#9733;</span>
+      <span>Competitive Gaming</span><span class="sp">&#9733;</span><span>Unfiltered Discussions on Black Fatherhood</span><span class="sp">&#9733;</span><span>Chat, Polls, and Giveaways</span><span class="sp">&#9733;</span>
     </div></div>
 
-    <div class="fmh rv"><span class="px">Now Showing</span><h3>The ABFF Short Film Series</h3></div>
-    <div class="fms">
-      <figure class="fm rv" style="margin:0"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-dear-dad.webp?v=1" alt="" role="img" aria-label="Title card for the short film Dear Dad" width="1280" height="720" loading="lazy"></div></div><figcaption class="cap"><span class="px">Film 1</span><h4>Dear Dad</h4><p>Jared Malik Royal</p></figcaption></figure>
-      <figure class="fm rv" style="margin:0;--d:.1s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-just-breathe.webp?v=1" alt="" role="img" aria-label="Title card for the short film Just Breathe" width="1280" height="720" loading="lazy"></div></div><figcaption class="cap"><span class="px">Film 2</span><h4>Just Breathe</h4><p>Rodney Rikai</p></figcaption></figure>
-      <figure class="fm rv" style="margin:0;--d:.2s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-legacy-of-the-sea.webp?v=1" alt="" role="img" aria-label="Title card for the short film Legacy of the Sea" width="1280" height="720" loading="lazy"></div></div><figcaption class="cap"><span class="px">Film 3</span><h4>Legacy of the Sea</h4><p>Dior Rodriguez</p></figcaption></figure>
+    <div class="fmh gh rv"><span class="px">Replay</span><h3>Highlights</h3></div>
+    <div class="gifs">
+<figure class="fm rv" style="--d:0.00s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-gif-1.gif?v=1" alt="" role="img" aria-label="Animated highlight 1 of 4 from the Streamathon" width="554" height="311" loading="lazy"></div></div></figure>
+<figure class="fm rv" style="--d:0.07s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-gif-2.gif?v=1" alt="" role="img" aria-label="Animated highlight 2 of 4 from the Streamathon" width="554" height="311" loading="lazy"></div></div></figure>
+<figure class="fm rv" style="--d:0.14s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-gif-3.gif?v=1" alt="" role="img" aria-label="Animated highlight 3 of 4 from the Streamathon" width="371" height="465" loading="lazy"></div></div></figure>
+<figure class="fm rv" style="--d:0.21s"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-gif-4.gif?v=1" alt="" role="img" aria-label="Animated highlight 4 of 4 from the Streamathon" width="371" height="465" loading="lazy"></div></div></figure>
+    </div>
+
+    <div class="fmh gh rv"><span class="px">Bonus Round</span><h3>Gallery</h3></div>
+    <div class="gal">
+<figure class="fm rv" style="--d:0.00s"><button type="button" class="gb" data-i="0" aria-label="Open photo 1 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-1.webp?v=1" alt="" role="img" aria-label="Photo 1 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.06s"><button type="button" class="gb" data-i="1" aria-label="Open photo 2 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-2.webp?v=1" alt="" role="img" aria-label="Photo 2 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.12s"><button type="button" class="gb" data-i="2" aria-label="Open photo 3 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-3.webp?v=1" alt="" role="img" aria-label="Photo 3 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.00s"><button type="button" class="gb" data-i="3" aria-label="Open photo 4 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-4.webp?v=1" alt="" role="img" aria-label="Photo 4 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.06s"><button type="button" class="gb" data-i="4" aria-label="Open photo 5 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-5.webp?v=1" alt="" role="img" aria-label="Photo 5 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.12s"><button type="button" class="gb" data-i="5" aria-label="Open photo 6 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-6.webp?v=1" alt="" role="img" aria-label="Photo 6 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.00s"><button type="button" class="gb" data-i="6" aria-label="Open photo 7 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-7.webp?v=1" alt="" role="img" aria-label="Photo 7 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.06s"><button type="button" class="gb" data-i="7" aria-label="Open photo 8 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-8.webp?v=1" alt="" role="img" aria-label="Photo 8 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.12s"><button type="button" class="gb" data-i="8" aria-label="Open photo 9 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-9.webp?v=1" alt="" role="img" aria-label="Photo 9 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.00s"><button type="button" class="gb" data-i="9" aria-label="Open photo 10 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-10.webp?v=1" alt="" role="img" aria-label="Photo 10 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
+<figure class="fm rv" style="--d:0.06s"><button type="button" class="gb" data-i="10" aria-label="Open photo 11 of 11"><div class="scr"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ds-11.webp?v=1" alt="" role="img" aria-label="Photo 11 of 11 from the Streamathon" loading="lazy"></div></div></button></figure>
     </div>
   </div>
 </section>
@@ -301,12 +395,13 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 <section class="st where" id="where">
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 3</span><h2><span class="k">Where:</span><span class="c">Channels</span></h2></div>
-    <div class="tx rv" style="--d:.1s"><p class="bdy">Streamed in partnership with <mark>Group Black</mark>, <mark>Cxmmunity</mark>, and <mark>IGN</mark> and distributed on <mark>YouTube</mark>. The ABFF film series premiered as part of Walmart&rsquo;s sponsored programming and was extended through digital and festival integrations.</p></div>
-    <div class="chn">
-      <div class="cp rv"><span class="px">Streaming Partner</span><b>Group Black</b></div>
-      <div class="cp rv" style="--d:.07s"><span class="px">Streaming Partner</span><b>Cxmmunity</b></div>
-      <div class="cp rv" style="--d:.14s"><span class="px">Streaming Partner</span><b>IGN</b></div>
-      <div class="cp yt rv" style="--d:.21s"><span class="px">Distribution</span><b>YouTube</b></div>
+    <div class="tx rv" style="--d:.1s"><p class="bdy">Hosted live on <mark>Twitch</mark> and <mark>YouTube</mark> for the main event, with syndication through <mark>IGN</mark> and <mark>Walmart channels</mark> for broader reach. Recordings and cut downs were extended across social to maximize accessibility.</p></div>
+    <div class="chn c5">
+      <div class="cp rv"><span class="px">Main Event</span><b>Twitch</b></div>
+      <div class="cp hi rv" style="--d:.07s"><span class="px">Main Event</span><b>YouTube</b></div>
+      <div class="cp rv" style="--d:.14s"><span class="px">Syndication</span><b>IGN</b></div>
+      <div class="cp rv" style="--d:.21s"><span class="px">Syndication</span><b>Walmart Channels</b></div>
+      <div class="cp rv" style="--d:.28s"><span class="px">Recordings and Cut Downs</span><b>Social</b></div>
     </div>
   </div>
 </section>
@@ -314,25 +409,21 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 <section class="st why" id="why">
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 4</span><h2><span class="k">Why It Matters:</span><span class="c">Cultural Impact</span></h2></div>
-    <div class="pw"><b class="rv">Play</b><b class="rv" style="--d:.1s">Pride</b><b class="rv" style="--d:.2s">Film</b></div>
-    <div class="tx2 rv"><p class="bdy">In a media landscape where Black fatherhood is often misrepresented or invisibilized, Dear Dad <mark>reclaimed the narrative through play, pride, and film</mark>. By combining joyful, accessible moments with cinematic storytelling, Walmart strengthened emotional connection with Black audiences and reinforced its investment in long-term cultural equity.</p></div>
+    <div class="pw"><b class="rv">Gaming</b><b class="rv" style="--d:.1s">Streaming</b><b class="rv" style="--d:.2s">Rituals</b></div>
+    <div class="tx2 rv"><p class="bdy">Tackled the challenge of making Father&rsquo;s Day culturally relevant by <mark>tapping into gaming and streaming as shared rituals</mark> that resonate with today&rsquo;s multicultural families.</p></div>
   </div>
 </section>
 
 <section class="st res" id="res">
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 5</span><h2><span class="k">How It Did:</span><span class="c">Results</span></h2></div>
-    <div class="tx rv" style="--d:.1s"><p class="bdy">The livestream generated <mark>67K+ live views</mark>, <mark>500K+ total watch minutes</mark>, <mark>15M+ impressions</mark>, and a <mark>7.5x CTR</mark>. The overall campaign earned multiple accolades including a Shorty Impact Award, a Gold Shark International Award for branded content, and a 2024 Equity &amp; Inclusion Webby Nomination, affirming its cultural and creative impact.</p></div>
+    <div class="tx rv" style="--d:.1s"><p class="bdy">Reached thousands of viewers across Twitch with additional reach through syndication on IGN and Walmart channels. Generated <mark>15MM impressions</mark> across organic and paid media, achieved <mark>7.5x above-average CTR</mark>, attracted <mark>nearly 67K livestream views</mark>, over <mark>2K total hours watched</mark>. The activation also showed significant resonance during public access post-event game room engagement with <mark>nearly half-hour dwell time per person over 41 days</mark>.</p></div>
     <div class="sbd">
-      <div class="sb rv"><b class="num" data-to="67" data-dec="0" data-suf="K+">67K+</b><span class="lab px">Live Views</span></div>
-      <div class="sb rv" style="--d:.08s"><b class="num" data-to="500" data-dec="0" data-suf="K+">500K+</b><span class="lab px">Total Watch Minutes</span></div>
-      <div class="sb rv" style="--d:.16s"><b class="num" data-to="15" data-dec="0" data-suf="M+">15M+</b><span class="lab px">Impressions</span></div>
-      <div class="sb rv" style="--d:.24s"><b class="num" data-to="7.5" data-dec="1" data-suf="x">7.5x</b><span class="lab px">CTR</span></div>
-    </div>
-    <div class="awd">
-      <div class="aw rv"><svg class="pix" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><rect x="3" y="0" width="1" height="1" fill="#FFC220"/><rect x="3" y="1" width="1" height="1" fill="#FFC220"/><rect x="0" y="2" width="7" height="1" fill="#FFC220"/><rect x="1" y="3" width="2" height="1" fill="#FFC220"/><rect x="3" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="4" y="3" width="2" height="1" fill="#FFC220"/><rect x="2" y="4" width="3" height="1" fill="#FFC220"/><rect x="1" y="5" width="2" height="1" fill="#FFC220"/><rect x="4" y="5" width="2" height="1" fill="#FFC220"/><rect x="1" y="6" width="1" height="1" fill="#FFC220"/><rect x="5" y="6" width="1" height="1" fill="#FFC220"/></svg><div><b>Shorty Impact Award</b></div></div>
-      <div class="aw rv" style="--d:.08s"><svg class="pix" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><rect x="3" y="0" width="1" height="1" fill="#FFC220"/><rect x="3" y="1" width="1" height="1" fill="#FFC220"/><rect x="0" y="2" width="7" height="1" fill="#FFC220"/><rect x="1" y="3" width="2" height="1" fill="#FFC220"/><rect x="3" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="4" y="3" width="2" height="1" fill="#FFC220"/><rect x="2" y="4" width="3" height="1" fill="#FFC220"/><rect x="1" y="5" width="2" height="1" fill="#FFC220"/><rect x="4" y="5" width="2" height="1" fill="#FFC220"/><rect x="1" y="6" width="1" height="1" fill="#FFC220"/><rect x="5" y="6" width="1" height="1" fill="#FFC220"/></svg><div><b>Gold Shark International Award</b><span class="px">Branded Content</span></div></div>
-      <div class="aw rv" style="--d:.16s"><svg class="pix" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><rect x="3" y="0" width="1" height="1" fill="#FFC220"/><rect x="3" y="1" width="1" height="1" fill="#FFC220"/><rect x="0" y="2" width="7" height="1" fill="#FFC220"/><rect x="1" y="3" width="2" height="1" fill="#FFC220"/><rect x="3" y="3" width="1" height="1" fill="#FFF6C9"/><rect x="4" y="3" width="2" height="1" fill="#FFC220"/><rect x="2" y="4" width="3" height="1" fill="#FFC220"/><rect x="1" y="5" width="2" height="1" fill="#FFC220"/><rect x="4" y="5" width="2" height="1" fill="#FFC220"/><rect x="1" y="6" width="1" height="1" fill="#FFC220"/><rect x="5" y="6" width="1" height="1" fill="#FFC220"/></svg><div><b>Equity &amp; Inclusion Webby Nomination</b><span class="px">2024</span></div></div>
+      <div class="sb rv"><b class="num" data-to="15" data-dec="0" data-suf="MM">15MM</b><span class="lab px">Impressions Across Organic and Paid Media</span></div>
+      <div class="sb rv" style="--d:.08s"><span class="pre px">Above-Average</span><b class="num" data-to="7.5" data-dec="1" data-suf="x">7.5x</b><span class="lab px">CTR</span></div>
+      <div class="sb rv" style="--d:.16s"><span class="pre px">Nearly</span><b class="num" data-to="67" data-dec="0" data-suf="K">67K</b><span class="lab px">Livestream Views</span></div>
+      <div class="sb rv" style="--d:.24s"><span class="pre px">Over</span><b class="num" data-to="2" data-dec="0" data-suf="K">2K</b><span class="lab px">Total Hours Watched</span></div>
+      <div class="sb wide rv" style="--d:.3s"><b class="num">Nearly Half-Hour</b><span class="lab px">Dwell Time Per Person Over 41 Days, Post-Event Game Room</span></div>
     </div>
   </div>
 </section>
@@ -340,22 +431,24 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 <section class="st role" id="role">
   <div class="gr">
     <div class="hd rv"><span class="lvl px">Level 6</span><h2><span class="k">My Role</span></h2></div>
-    <div class="tx rv" style="--d:.1s"><p class="bdy">As Associate Creative Director, I <mark>originated the campaign concept</mark> and led creative across both live and cinematic components. I scripted the livestream segments, directed storytelling tone and created initial treatments shared with filmmaker partners.</p></div>
+    <div class="tx rv" style="--d:.1s"><p class="bdy">As Associate Creative Director at Publicis I <mark>originated the concept</mark> for this hybrid irl experience and digital activation. I provided event flow maps and segment scripts to partners like Cxmmunity Media Co., leading the narrative development for the streamathon&rsquo;s gaming programming and live discussions. I also outline the vision for the on-site experience, curating interactive touchpoints and visual storytelling elements that brought the campaign&rsquo;s cultural themes to life and reinforced the emotional core of the Father&rsquo;s Day celebration.</p></div>
     <div class="btns">
       <div class="bt rv"><i></i><b>Originated the Concept</b></div>
-      <div class="bt rv" style="--d:.07s"><i></i><b>Led Live and Cinematic</b></div>
-      <div class="bt rv" style="--d:.14s"><i></i><b>Scripted the Livestream</b></div>
-      <div class="bt rv" style="--d:.21s"><i></i><b>Created Initial Treatments</b></div>
+      <div class="bt rv" style="--d:.07s"><i></i><b>Event Flow Maps</b></div>
+      <div class="bt rv" style="--d:.14s"><i></i><b>Segment Scripts</b></div>
+      <div class="bt rv" style="--d:.21s"><i></i><b>On-Site Vision</b></div>
     </div>
   </div>
 </section>
 
 <footer class="ft">
-  <a href="https://www.byninaaustin.com/content" data-back><span aria-hidden="true">&larr;</span> <span data-back-label>Back to Content</span></a>
+  <a href="https://www.byninaaustin.com/experiential"><span aria-hidden="true">&larr;</span> Back to Experiential</a>
+  <a class="ex" href="https://www.youtube.com/live/IRqbomeHomw?si=DcmREznVebeTuj9A" target="_blank" rel="noopener">Watch The Stream</a>
   <button type="button" data-go-top>Play Again</button>
 </footer>
 
 </div>
+<div class="ddlb" id="ddLb" role="dialog" aria-modal="true" aria-label="Photo viewer"><img alt="" src=""><button type="button" class="x" aria-label="Close">X</button><button type="button" class="pv" aria-label="Previous photo">&lt;</button><button type="button" class="nx" aria-label="Next photo">&gt;</button><div class="ct" aria-hidden="true"></div></div>
 <script>
 (function(){
   var root=document;
@@ -366,7 +459,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
   var reduce=!!(win.matchMedia&&win.matchMedia('(prefers-reduced-motion: reduce)').matches);
   function $$(s){return [].slice.call(dd.querySelectorAll(s))}
   /* counters */
-  var nums=$$('.num');
+  var nums=$$('.num[data-to]');
   function fmt(n,dec,suf){return (dec?n.toFixed(dec):String(Math.round(n)))+suf}
   function count(el){
     var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10),suf=el.getAttribute('data-suf')||'';
@@ -385,7 +478,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
   var rv=$$('.rv');
   function show(el){
     el.classList.add('on');
-    [].forEach.call(el.querySelectorAll('.num'),count);
+    [].forEach.call(el.querySelectorAll('.num[data-to]'),count);
   }
   if('IntersectionObserver' in win){
     var io=new IntersectionObserver(function(es){
@@ -467,15 +560,23 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
       if(a.hasAttribute('data-coin')&&!reduce){a.classList.add('hit');win.setTimeout(function(){a.classList.remove('hit');go()},520)}else go();
     });
   });
-  /* back link: Experiential for the Streamathon page, Content for Dear Dad */
-  var back=dd.querySelector('[data-back]');
-  if(back){
-    var path=String(win.location.pathname||'').toLowerCase(),ref='';
-    try{ref=document.referrer||win.document.referrer||''}catch(x){}
-    if(path.indexOf('streamathon')>-1||/\/experiential(\b|\/|\?|$)/i.test(ref)){
-      back.setAttribute('href','https://www.byninaaustin.com/experiential');
-      var bl=back.querySelector('[data-back-label]');if(bl)bl.textContent='Back to Experiential';
-    }
+  /* lightbox */
+  var lb=root.getElementById('ddLb');
+  if(lb){
+    var lbi=lb.querySelector('img'),lct=lb.querySelector('.ct');
+    var srcs=$$('.gal .gb img').map(function(i){return i.getAttribute('src')});
+    var cur=0;
+    var open=function(n){cur=(n+srcs.length)%srcs.length;lbi.setAttribute('src',srcs[cur].replace(/\?v=\d+$/,'')+'?v=1');lct.textContent=(cur+1)+' / '+srcs.length;lb.classList.add('on')};
+    var close=function(){lb.classList.remove('on')};
+    $$('.gal .gb').forEach(function(bn){bn.addEventListener('click',function(){open(parseInt(bn.getAttribute('data-i'),10))})});
+    lb.querySelector('.x').addEventListener('click',close);
+    lb.querySelector('.pv').addEventListener('click',function(){open(cur-1)});
+    lb.querySelector('.nx').addEventListener('click',function(){open(cur+1)});
+    lb.addEventListener('click',function(ev){if(ev.target===lb)close()});
+    win.addEventListener('keydown',function(ev){
+      if(!lb.classList.contains('on'))return;
+      if(ev.key==='Escape')close();else if(ev.key==='ArrowLeft')open(cur-1);else if(ev.key==='ArrowRight')open(cur+1);
+    });
   }
   var top=dd.querySelector('[data-go-top]');
   if(top)top.addEventListener('click',function(){
