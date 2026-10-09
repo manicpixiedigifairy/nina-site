@@ -43,14 +43,14 @@ html,body{margin:0}
 .bf .stmt{margin:calc(var(--u)*1.6) 0 0;font:400 calc(var(--u)*3.3)/1.1 var(--disp);max-width:24em}
 .bf .cf .idg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:start;margin-top:calc(var(--u)*2)}
 .bf .cf .lead{margin:0;font:400 calc(var(--u)*3.2)/1.16 var(--disp);color:var(--b);text-shadow:0 .05em 0 var(--b2),0 .1em 0 var(--nv);letter-spacing:.01em}
-.bf .cf mark{background:none;color:inherit;padding:0}
+.bf .cf .wh{color:#fff;-webkit-text-stroke:.13em var(--b);paint-order:stroke fill;text-shadow:0 .08em 0 var(--b2),0 .14em 0 var(--nv);letter-spacing:.03em;word-spacing:.06em}
 .bf .cf .bd{margin:calc(var(--u)*.4) 0 0;padding-left:calc(var(--u)*2.4);border-left:calc(var(--u)*.3) solid var(--br);font:500 calc(var(--u)*2)/1.62 var(--lab);color:var(--br)}
 .bf .cf .ev{display:inline-block;padding:.08em .5em .12em;border-radius:99px;background:var(--br);color:var(--y);font:400 .8em/1.1 var(--disp);letter-spacing:.04em;transform:rotate(-3deg);box-shadow:0 .12em 0 var(--b)}
-.bf .cf .hk{position:absolute;right:calc(var(--u)*-1.2);bottom:calc(var(--u)*-5.5);width:calc(var(--u)*19);height:calc(var(--u)*26);z-index:0;pointer-events:none;filter:drop-shadow(0 .5em .7em rgba(59,27,9,.35))}
+.bf .cf .hk{position:absolute;right:calc(var(--u)*-1.2);bottom:calc(var(--u)*-4.6);width:calc(var(--u)*15.5);height:calc(var(--u)*21);z-index:0;pointer-events:none;filter:drop-shadow(0 .5em .7em rgba(59,27,9,.35))}
 .bf.js .cf .hk.rv{opacity:0;translate:38% 46%;rotate:20deg;scale:1;transition:opacity .4s ease .1s,translate 1.1s cubic-bezier(.3,1.4,.5,1) .1s,rotate 1.3s cubic-bezier(.3,1.6,.5,1) .1s}
 .bf.js .cf .hk.rv.in{opacity:1;translate:0 0;rotate:0deg}
 .bf .cf .lb,.bf .cf .idg{position:relative;z-index:1}
-.bf .cf{padding-bottom:calc(var(--u)*21)}
+.bf .cf{padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*14.5)}
 .bf .cf{background:var(--y2);color:var(--br);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
 .bf .so1{background:var(--y);color:var(--br)}
 .bf .so1 .stmt{color:var(--b);max-width:22em}
@@ -201,7 +201,7 @@ html,body{margin:0}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:700px){
-.bf .cf{padding-bottom:11.5rem}.bf .cf .hk{width:9rem;height:12.5rem;right:-.8rem;bottom:-3rem}
+.bf .cf{padding-top:3.2rem;padding-bottom:9rem}.bf .cf .hk{width:7.4rem;height:10rem;right:-.6rem;bottom:-2.4rem}
 .bf .so1 .nf i:not(.m){display:none}
 .bf .so1 .nf i{width:calc(var(--u)*var(--w)*1.15)}
 .bf{--u:clamp(8px,2.45vw,16px);--g:1.25rem;--sp:3.4rem}
@@ -284,7 +284,7 @@ html,body{margin:0}
   <img class="hk rv" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-hook.webp?v=1" alt="" width="1000" height="962" loading="lazy">
   <span class="lb rv">The Idea</span>
   <div class="idg">
-    <p class="lead rv">The Butterfinger Investigators (BFI) are a task force with one <mark>mission</mark>: returning stolen Butterfingers to their rightful owners.</p>
+    <p class="lead rv"><span class="wh">The Butterfinger Investigators (BFI) are a task force with one mission:</span> returning stolen Butterfingers to their rightful owners.</p>
     <p class="bd rv" style="--d:.1s">They&rsquo;ve been around for years, but with the addition of &ldquo;<b class="ev">EVER</b>,&rdquo; we opened the door to time travel, extending the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p>
   </div>
 </section>
