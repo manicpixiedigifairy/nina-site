@@ -1,14 +1,10 @@
-# Netlify: the "portfoliogiveaway" project publishes only the giveaway/ folder from this repo.
+# One repo, two Netlify projects. build.sh picks what to publish from the project name:
+#   portfoliodupe      -> the full byninaaustin.com site (site/build.py)
+#   portfoliogiveaway  -> the Portfolio Giveaway (giveaway/)
 # The Squarespace loaders read files straight from GitHub and are not affected by this file.
 [build]
-  base = "giveaway"
-  publish = "."
-  command = ""
-
-[[redirects]]
-  from = "/work"
-  to = "/work/"
-  status = 301
+  command = "sh build.sh"
+  publish = "dist"
 
 [[headers]]
   for = "/assets/*"

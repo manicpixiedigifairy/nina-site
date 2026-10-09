@@ -1,6 +1,6 @@
 # byninaaustin.com on Netlify (test build)
 
-`build.py` assembles the full site into `dist/` from the files already in this repo, so `pages/`, `home-gallery/`, `giveaway/` and `custom-js/` stay the single source of truth. Netlify runs it on every push (Base directory: `site`).
+`build.py` assembles the full site into `dist/` from the files already in this repo, so `pages/`, `home-gallery/`, `giveaway/` and `custom-js/` stay the single source of truth. Netlify runs it on every push through `build.sh` at the repo root (project: portfoliodupe).
 
 ## Addresses
 - `/` the 3D Portfolio Gallery (`home-gallery/index.html`, assets at `/assets/`)
