@@ -64,42 +64,19 @@ html,body{margin:0}
 /* CASE FILE */
 .bf .cf{position:relative;background:var(--y2);color:var(--br);padding:var(--sp) var(--g) calc(var(--sp)*1.1);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
 .bf .cf .h2{color:var(--b)}
-.bf .fa{border:calc(var(--u)*.25) solid var(--br);background:var(--y);color:var(--br);font:600 calc(var(--u)*1.2)/1 var(--lab);padding:.7em 1.5em .75em;border-radius:99px;cursor:pointer;box-shadow:0 .28em 0 var(--br);transition:transform .15s,box-shadow .15s}
-.bf .fa:hover{transform:translateY(-.08em) rotate(-1deg)}
-.bf .fa:active{transform:translateY(.24em);box-shadow:0 .04em 0 var(--br)}
-.bf .cg{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:calc(var(--u)*2.2)}
-.bf .cd{display:flex;grid-column:span 2;perspective:calc(var(--u)*90);cursor:pointer;transform:rotate(var(--r,0deg));transition:transform .4s cubic-bezier(.3,1.6,.5,1);-webkit-tap-highlight-color:transparent;border-radius:calc(var(--u)*1.6)}
-.bf .cd:nth-child(n+4){grid-column:span 3}
-.bf .cd:hover{transform:rotate(0) translateY(calc(var(--u)*-.6))}
-.bf .cd .in{flex:1;min-width:0;display:grid;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.3,1.3,.5,1);min-height:calc(var(--u)*24)}
-.bf .cd.flp .in{transform:rotateY(180deg)}
-.bf .cd .fr,.bf .cd .ba{grid-area:1/1;position:relative;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:calc(var(--u)*1.6);border:calc(var(--u)*.3) solid var(--br);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--br);padding:calc(var(--u)*2.2)}
-.bf .cd .fr{display:flex;flex-direction:column}
-.bf .cd .no{font:600 calc(var(--u)*1.1)/1 var(--lab);padding:.5em .9em;border:.16em solid currentColor;border-radius:99px;align-self:flex-start}
-.bf .cd .fw{margin:calc(var(--u)*1.4) 0 0;font:400 calc(var(--u)*4.6)/.95 var(--disp);position:relative;z-index:2}
-.bf .cd .fs{margin:.5em 0 0;font:600 calc(var(--u)*1.3)/1.1 var(--lab);position:relative;z-index:2}
-.bf .cd .tp{margin-top:auto;align-self:flex-start;position:relative;z-index:2;font:600 calc(var(--u)*1.05)/1 var(--lab);padding:.6em 1.1em;border-radius:99px;background:var(--br);color:var(--y)}
-.bf .cd .tp::after{content:" \21BB"}
-.bf .cd .fi{position:absolute;z-index:1;pointer-events:none;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
-.bf .cd:hover .fi{transform:rotate(var(--ir,0deg)) scale(1.07)}
-.bf .c1 .fr{background:var(--b);color:var(--y)}
-.bf .c2 .fr{background:var(--y);color:var(--b2)}
-.bf .c3 .fr{background:var(--or);color:var(--br)}
-.bf .c4 .fr{background:#fff;color:var(--b)}
-.bf .c5 .fr{background:var(--nv);color:var(--y)}
-.bf .c1 .fi{width:76%;right:-6%;bottom:15%;--ir:-4deg;transform:rotate(-8deg)}
-.bf .c2 .fi{width:66%;right:-5%;bottom:12%;--ir:4deg;transform:rotate(8deg)}
-.bf .c3 .fi{width:38%;right:7%;bottom:9%;--ir:-3deg;transform:rotate(7deg);border:calc(var(--u)*.35) solid #fff;border-radius:calc(var(--u)*1.2);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--br)}
-.bf .c4 .fi{width:32%;right:4%;bottom:5%;--ir:3deg;transform:rotate(-5deg)}
-.bf .c5 .fi{width:48%;right:-2%;bottom:14%;--ir:-3deg;transform:rotate(-10deg)}
-.bf .cd .ba{transform:rotateY(180deg);background:#FFFDF2;background-image:repeating-linear-gradient(0deg,transparent 0,transparent calc(var(--u)*1.75),rgba(10,92,214,.14) calc(var(--u)*1.75),rgba(10,92,214,.14) calc(var(--u)*1.85));display:flex;flex-direction:column;justify-content:center;padding-top:calc(var(--u)*4.4)}
-.bf .cd .ba::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(var(--u)*2.6);background:var(--cc,var(--b));border-bottom:calc(var(--u)*.3) solid var(--br)}
-.bf .c2 .ba{--cc:var(--y)}.bf .c3 .ba{--cc:var(--or)}.bf .c5 .ba{--cc:var(--nv)}.bf .c4 .ba{--cc:var(--b)}
-.bf .cd .bt{position:absolute;z-index:1;left:calc(var(--u)*2.2);top:calc(var(--u)*.55);font:600 calc(var(--u)*1.1)/1.5 var(--lab);color:var(--br)}
-.bf .c1 .bt,.bf .c4 .bt,.bf .c5 .bt{color:var(--y)}
-.bf .cd .bh{margin:0 0 .35em;font:400 calc(var(--u)*2.5)/1 var(--disp);color:var(--b)}
-.bf .cd .bs{margin:0 0 .7em;font:600 calc(var(--u)*1.1)/1.1 var(--lab);color:var(--br2)}
-.bf .cd .bp{margin:0;font:400 calc(var(--u)*1.38)/1.42 var(--bd);color:var(--br)}
+.bf .cs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*2.6);align-items:stretch}
+.bf .pn2{position:relative;overflow:hidden;border:calc(var(--u)*.3) solid var(--br);border-radius:calc(var(--u)*1.8);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--br);padding:calc(var(--u)*3) calc(var(--u)*3) calc(var(--u)*3.2);transform:rotate(var(--r,0deg));display:flex;flex-direction:column;gap:calc(var(--u)*1.6)}
+.bf .pn2 .tag{align-self:flex-start;font:600 calc(var(--u)*1.2)/1 var(--lab);letter-spacing:.04em;padding:.6em 1.2em .65em;border-radius:99px;border:.16em solid currentColor}
+.bf .pn2 p{margin:0;position:relative;z-index:2}
+.bf .pn2.c{background:var(--b);color:#fff}
+.bf .pn2.c .tag{background:var(--y);color:var(--br);border-color:var(--br)}
+.bf .pn2.c .lead{font:400 calc(var(--u)*3)/1.1 var(--disp);color:var(--y);text-shadow:0 .05em 0 var(--br2),0 .1em 0 var(--br)}
+.bf .pn2.s{background:var(--y);color:var(--br)}
+.bf .pn2.s .tag{background:var(--b);color:#fff;border-color:var(--br)}
+.bf .pn2.s .lead{font:400 calc(var(--u)*2.8)/1.12 var(--disp);color:var(--b)}
+.bf .pn2.s .bd{font:500 calc(var(--u)*1.75)/1.45 var(--bd)}
+.bf .pn2 .fi{position:absolute;right:calc(var(--u)*-1.5);bottom:calc(var(--u)*-.5);width:62%;z-index:1;rotate:-8deg;pointer-events:none}
+.bf .cl{margin:calc(var(--u)*3) auto 0;max-width:calc(var(--u)*62);padding:calc(var(--u)*2.2) calc(var(--u)*3);background:var(--br);color:var(--y);border-radius:calc(var(--u)*1.4);transform:rotate(-1deg);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--b2);text-align:center;font:400 calc(var(--u)*2.5)/1.2 var(--disp)}
 
 /* TIME MACHINE */
 .bf .tm{background:var(--nv);padding:var(--sp) var(--g) calc(var(--sp)*1.1);position:relative;overflow:hidden}
@@ -234,13 +211,14 @@ html,body{margin:0}
 .bf .rc .src a{color:var(--b2);background:var(--y2);border:.14em solid var(--br);border-radius:99px;padding:.45em .9em;text-decoration:none}
 .bf .rc .src a:hover{background:var(--y)}
 @media(max-width:1000px){
+.bf .cs{grid-template-columns:minmax(0,1fr)}
 .bf .rg{grid-template-columns:minmax(0,1fr)}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
-.bf .cd,.bf .cd:nth-child(n+4){grid-column:span 6}
 }
 @media(max-width:700px){
 .bf{--u:clamp(8px,2.45vw,16px);--g:1.25rem;--sp:3.4rem}
 .bf .lb{font-size:.9rem}
+.bf .pn2{padding:1.6rem 1.4rem 1.8rem}.bf .pn2.c{padding-bottom:6.4rem}.bf .pn2.c .lead{font-size:1.75rem}.bf .pn2.s .lead{font-size:1.55rem}.bf .pn2.s .bd{font-size:1.1rem}.bf .pn2 .fi{width:46%}.bf .cl{font-size:1.4rem;padding:1.4rem 1.2rem}
 .bf .h2{font-size:min(3rem,12vw)}
 .bf .sub{font-size:1.05rem}
 .bf .hero{padding-top:5.6rem;padding-bottom:4.5rem}
@@ -251,15 +229,6 @@ html,body{margin:0}
 .bf .tt{font-size:min(5.6rem,23vw)}
 .bf .dek{font-size:1.15rem}
 .bf .pls li{font-size:.85rem}
-.bf .fa{font-size:.95rem}
-.bf .cd .in{min-height:15rem}
-.bf .cd .fw{font-size:3.2rem}
-.bf .cd .fs{font-size:1rem}
-.bf .c3 .fi{width:30%;bottom:5%}
-.bf .cd .no,.bf .cd .tp{font-size:.8rem}
-.bf .cd .bh{font-size:1.9rem}.bf .cd .bs{font-size:.9rem}.bf .cd .bp{font-size:1.05rem}.bf .cd .bt{font-size:.85rem;top:.5rem}
-.bf .cd .ba{padding-top:3.4rem}.bf .cd .ba::before{height:2.1rem}
-.bf .cd .fr,.bf .cd .ba{padding-left:1.4rem;padding-right:1.4rem}.bf .cd .bt{left:1.4rem}
 .bf .kw{width:min(20rem,100%);height:14.5rem}
 .bf .kn{top:10.8rem;width:9rem;height:9rem;margin:-4.5rem 0 0 -4.5rem}
 .bf .kd{width:2.1rem;height:2.1rem;margin:-1.05rem 0 0 -1.05rem;font-size:.85rem}
@@ -300,39 +269,12 @@ html,body{margin:0}
 </header>
 
 <section class="cf" id="bfCf">
-  <div class="hd rv"><div><span class="lb">Case File: The Briefing</span><h2 class="h2">Open the Case File</h2></div><button class="fa" type="button" id="bfFa">Flip All Cards</button></div>
-  <div class="cg">
-    <div class="cd c1 rv" style="--r:-1.2deg" role="button" tabindex="0" aria-pressed="false">
-      <div class="in">
-        <div class="fr"><span class="no">Exhibit 01</span><p class="fw">Who</p><p class="fs">The Client</p><span class="tp">Tap to Flip</span><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385"></div>
-        <div class="ba"><span class="bt">Exhibit 01</span><h3 class="bh">Who</h3><p class="bs">The Client</p><p class="bp">Butterfinger, iconic candy bar brand, strategically refreshing its classic humor to maintain relevance and drive consumer loyalty amid competitive snacking trends.</p></div>
-      </div>
-    </div>
-    <div class="cd c2 rv" style="--r:1deg;--d:.08s" role="button" tabindex="0" aria-pressed="false">
-      <div class="in">
-        <div class="fr"><span class="no">Exhibit 02</span><p class="fw">What</p><p class="fs">What We Did</p><span class="tp">Tap to Flip</span><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-cut.webp?v=1" alt="" width="594" height="364"></div>
-        <div class="ba"><span class="bt">Exhibit 02</span><h3 class="bh">What</h3><p class="bs">What We Did</p><p class="bp">Expanded the Butterfinger Investigators (BFI) premise, a task force dedicated to returning stolen Butterfingers, with &ldquo;Never Ever,&rdquo; incorporating time travel to depict recoveries across historical eras like the golden age of pirates and post-revolutionary folklore through shortform films.</p></div>
-      </div>
-    </div>
-    <div class="cd c3 rv" style="--r:-.8deg;--d:.16s" role="button" tabindex="0" aria-pressed="false">
-      <div class="in">
-        <div class="fr"><span class="no">Exhibit 03</span><p class="fw">Where</p><p class="fs">Channels</p><span class="tp">Tap to Flip</span><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-pile.webp?v=1" alt="" width="720" height="720"></div>
-        <div class="ba"><span class="bt">Exhibit 03</span><h3 class="bh">Where</h3><p class="bs">Channels</p><p class="bp">Delivered via digital platforms and social media for shareability, enabling broad, engaging distribution to modern audiences.</p></div>
-      </div>
-    </div>
-    <div class="cd c4 rv" style="--r:.9deg" role="button" tabindex="0" aria-pressed="false">
-      <div class="in">
-        <div class="fr"><span class="no">Exhibit 04</span><p class="fw">Why It Matters</p><p class="fs">Cultural Impact</p><span class="tp">Tap to Flip</span><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-broken.webp?v=1" alt="" width="1300" height="1134"></div>
-        <div class="ba"><span class="bt">Exhibit 04</span><h3 class="bh">Why It Matters</h3><p class="bs">Cultural Impact</p><p class="bp">Addressed brand stagnation by evolving the timeless &ldquo;Nobody&rsquo;s Gonna Lay a Finger&rdquo; tagline with innovative time-travel narratives to combat ad apathy, fostering fun authenticity in a market where consumers demand entertaining, relatable content.</p></div>
-      </div>
-    </div>
-    <div class="cd c5 rv" style="--r:-1deg;--d:.1s" role="button" tabindex="0" aria-pressed="false">
-      <div class="in">
-        <div class="fr"><span class="no">Exhibit 05</span><p class="fw">My Role</p><p class="fs">On the Case</p><span class="tp">Tap to Flip</span><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-bar.webp?v=1" alt="" width="1400" height="385"></div>
-        <div class="ba"><span class="bt">Exhibit 05</span><h3 class="bh">My Role</h3><p class="bs">On the Case</p><p class="bp">I worked with an ACD team and creative partner to develop time-travel concepts and shortform film narratives, blending historical settings with the campaign&rsquo;s reimagined core message.</p></div>
-      </div>
-    </div>
+  <div class="hd rv"><div><span class="lb">Case File</span><h2 class="h2">Challenge and Solution</h2></div></div>
+  <div class="cs">
+    <article class="pn2 c rv" style="--r:-1deg"><span class="tag">Challenge</span><p class="lead">Brand stagnation in a market where consumers demand entertaining, relatable content.</p><img class="fi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-cut.webp?v=1" alt="" width="594" height="364" loading="lazy"></article>
+    <article class="pn2 s rv" style="--r:.8deg;--d:.1s"><span class="tag">Solution</span><p class="lead">One thing is certain in life: someone will try to lay a finger on your Butterfinger.</p><p class="bd">But they will always fail thanks to the Butterfinger Investigators (aka BFI). They&rsquo;re a task force whose sole purpose in life is to return stolen Butterfingers to their rightful owners. The BFI have been around for years, but with the addition of &ldquo;EVER,&rdquo; we opened the door to time travel, extending the possibilities of the BFI premise to the golden age of pirates, post-revolutionary folklore, and beyond.</p></article>
   </div>
+  <p class="cl rv">Proving that no matter where you are (or when you are), nobody will lay a finger on your Butterfinger. Ever.</p>
 </section>
 
 
@@ -540,19 +482,6 @@ function sticker(el,bounds){
   }
   el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);
 }
-
-/* flip cards */
-var cds=qa('.cd'),fa=q('#bfFa'),allOn=false;
-function setCd(c,on){c.classList.toggle('flp',on);c.setAttribute('aria-pressed',on?'true':'false')}
-cds.forEach(function(c){
-  c.addEventListener('click',function(){setCd(c,!c.classList.contains('flp'))});
-  c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){e.preventDefault();setCd(c,!c.classList.contains('flp'))}});
-});
-fa.addEventListener('click',function(){
-  allOn=!allOn;
-  cds.forEach(function(c,i){setTimeout(function(){setCd(c,allOn)},i*110)});
-  fa.textContent=allOn?'Flip Them Back':'Flip All Cards';
-});
 
 /* time machine */
 var tm=q('#bfTm'),stg=q('#bfStg'),scs=qa('.sc',stg),ebs=qa('.ers button',tm),kn=q('#bfKn'),kds=qa('.kd',tm),fz=q('#bfFz');
