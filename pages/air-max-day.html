@@ -136,6 +136,18 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .gk{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6) calc(var(--u)*2);padding:0 var(--g) calc(var(--u)*2.4);color:var(--mut)}
 .am .gk b{color:var(--lime)}
 
+.am .g2{margin-top:calc(var(--u)*3.4)}
+.am .fut img{aspect-ratio:1600/450}
+/* ugc */
+.am .ugcl{margin:0 var(--g) calc(var(--u)*3);max-width:calc(var(--u)*46);color:#D0D0D4;font-size:calc(var(--u)*1.2)}
+.am .ug{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:calc(var(--u)*2);padding:0 var(--g);align-items:start}
+.am .ugr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.6)}
+.am .ugr.one{grid-template-columns:1fr}
+.am .ugr img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:0 0;border:1px solid var(--line)}
+.am .post figcaption{display:grid;gap:calc(var(--u)*.35);margin-top:calc(var(--u)*1.1);padding-top:calc(var(--u)*.9);border-top:1px solid var(--line)}
+.am .post figcaption .mo{color:var(--mut)}
+.am .post figcaption b{font:400 calc(var(--u)*2.6)/1 var(--an);color:var(--lime)}
+.am .post .cap{color:#D0D0D4;font-size:calc(var(--u)*1)}
 /* edition one */
 .am .ed{background:var(--bk)}
 .am .wall{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:calc(var(--u)*.8);padding:0 var(--g)}
@@ -216,6 +228,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .sr::-webkit-scrollbar{display:none}
 .am .sr li{flex:0 0 min(46%,15rem);scroll-snap-align:start}
 .am .wall{grid-template-columns:1fr 1fr}
+.am .ug{grid-template-columns:1fr}
+.am .ugr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.am .ugr::-webkit-scrollbar{display:none}
+.am .ugr img{flex:0 0 78%;scroll-snap-align:start}
+.am .ugr.one img{flex-basis:100%}
+.am .post figcaption b{font-size:2rem}
+.am .ugcl{font-size:1rem}
+.am .fut img{aspect-ratio:16/9;object-position:0 0}
 .am .wall figure:first-child{grid-column:span 2;grid-row:auto}
 .am .awg{grid-template-columns:1fr;gap:2.4rem}
 .am .awh{font-size:min(3.8rem,14cqw)}
@@ -256,7 +276,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
     </div></div>
     <span class="stamp" aria-hidden="true"><svg viewBox="0 0 230 200"><path d="M40 6h150l34 50v88l-34 50H40L6 144V56z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M48 18h134l26 40v84l-26 40H48l-26-40V58z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span>03.26.22<b>AMD</b>Edition 02</span></span>
   </div>
-  <p class="hud b mo" aria-hidden="true"><span>Scroll</span><span>Films 05 / Stories 10</span></p>
+  <p class="hud b mo" aria-hidden="true"><span>Scroll</span><span>Films 05 / Stories 14</span></p>
 </header>
 
 <section class="sec" aria-labelledby="amD">
@@ -314,7 +334,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </section>
 
 <section class="sec ss" aria-labelledby="amS">
-  <div class="sh"><div><span class="kk mo">Instagram Stories</span><h2 class="h2 chr" id="amS">The Stories</h2></div><p class="mo">10 frames</p></div>
+  <div class="sh"><div><span class="kk mo">Instagram Stories</span><h2 class="h2 chr" id="amS">The Stories</h2></div><p class="mo">14 frames</p></div>
   <p class="zq">Q: What&rsquo;s your <span>first memory</span> of Nike Air?</p>
   <p class="gk mo"><span><b>1</b> First memories</span><span><b>2</b> Quiz</span><span><b>3</b> Air facts</span></p>
   <ol class="sr">
@@ -329,6 +349,28 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
     <li><figure><div class="ph" style="--p:90%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-9.webp?v=1" alt="Air fact frame: Tinker Hatfield designed the original Air Max model in 1986" width="640" height="1117" loading="lazy" decoding="async"></div><figcaption class="mo"><b>3</b>Air fact</figcaption></figure></li>
     <li><figure><div class="ph" style="--p:100%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-10.webp?v=1" alt="Style tip frame for the 1987 Air Max 1 in white, grey and red" width="640" height="1025" loading="lazy" decoding="async"></div><figcaption class="mo"><b>3</b>Style tip</figcaption></figure></li>
   </ol>
+  <p class="gk mo g2"><span><b>4</b> Sliders, quizzes and Add Yours</span></p>
+  <ol class="sr">
+    <li><figure><div class="ph" style="--p:25%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-addyours.webp?v=1" alt="Berlin Story with an Add Yours sticker: Tap in and show us how you wear Nike Air Max, over a low-angle shot of white Air Max" width="640" height="1119" loading="lazy" decoding="async"></div><figcaption class="mo"><b>4</b>Add yours</figcaption></figure></li>
+    <li><figure><div class="ph" style="--p:50%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-vibe.webp?v=1" alt="Slider Story: What's most your vibe? ranking the Air Max 1, 90, 95, 97, Plus, VaporMax and Dawn" width="640" height="1119" loading="lazy" decoding="async"></div><figcaption class="mo"><b>4</b>Vibe slider</figcaption></figure></li>
+    <li><figure><div class="ph" style="--p:75%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-tn.webp?v=1" alt="Quiz Story over an Air Max Plus design sketch: Which state's sunset inspired the look of the TN? California, Florida or Hawaii" width="640" height="1119" loading="lazy" decoding="async"></div><figcaption class="mo"><b>4</b>TN quiz</figcaption></figure></li>
+    <li><figure><div class="ph" style="--p:100%"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-bw.webp?v=1" alt="Slider Story on an orange shoebox: What's your favorite colorway? for six Air Max BW colorways" width="640" height="1119" loading="lazy" decoding="async"></div><figcaption class="mo"><b>4</b>BW colorways</figcaption></figure></li>
+  </ol>
+</section>
+
+<figure class="ban fut">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-future-banner.webp?v=1" alt="The future is in the air: a Nike Air crewneck, a black Air Max Dawn and a portrait with flowers, set in a Nike Air Max type system" width="1600" height="450" loading="lazy" decoding="async">
+</figure>
+
+<section class="sec ugc" aria-labelledby="amU">
+  <div class="sh"><div><span class="kk mo">#AirMax, around the world</span><h2 class="h2 chr" id="amU">Your City</h2></div><p class="mo">UGC on @nikesportswear</p></div>
+  <p class="ugcl">Fans&rsquo; own Air Max looks, repurposed into city-tagged feed posts that sent people to shop the collection on Instagram.</p>
+  <div class="ug">
+    <figure class="post"><div class="ugr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-ugc-beijing.webp?v=1" alt="Beijing: a fan crouched in the snow outside the Forbidden City in Air Max 1s, framed with an Around the World #AirMax side bar" width="900" height="1126" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-ugc-berlin.webp?v=1" alt="Berlin: a fan in a tie-dye Nike sweatsuit and pink and teal Air Max on a Berlin sidewalk" width="900" height="1116" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-ugc-shanghai.webp?v=1" alt="Shanghai: a fan with a chrome prosthetic leg in white Air Max on a rooftop" width="900" height="1210" loading="lazy" decoding="async"></div>
+      <figcaption><span class="mo">Carousel &middot; Beijing, Berlin, Shanghai</span><b>43,290 likes</b><span class="cap">&ldquo;Your signature style keeps #AirMax looking fly in every city.&rdquo;</span></figcaption></figure>
+    <figure class="post"><div class="ugr one"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-ugc-singapore.webp?v=1" alt="Singapore: a fan's mirror selfie in grey and green Air Max 90s" width="900" height="1210" loading="lazy" decoding="async"></div>
+      <figcaption><span class="mo">Single post &middot; Singapore</span><b>20,058 likes</b><span class="cap">&ldquo;Put your city on the map this Air Max Day and discover your style in our IG Shop.&rdquo;</span></figcaption></figure>
+  </div>
 </section>
 
 <div class="tk" aria-hidden="true"><div>
