@@ -283,7 +283,9 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .tex-charm::before{background-image:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-tex-charm.webp?v=1");background-position:70% 40%}
 .am .tex-heel::before{background-image:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-tex-heel.webp?v=1");background-position:40% 60%;opacity:.12}
 .am .cut{position:absolute;z-index:2;pointer-events:none;height:auto;max-width:none;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*2) rgba(0,0,0,.6))}
-.am .cut-model{right:calc(var(--g) - var(--u)*1);top:calc(var(--u)*13);width:calc(var(--u)*30)}
+.am .flw{display:grid;grid-template-columns:minmax(0,calc(var(--u)*56)) minmax(0,1fr);align-items:center}
+.am .flw .fl{max-width:none}
+.am .cut-model{display:block;justify-self:center;width:min(100%,calc(var(--u)*30));height:auto;pointer-events:none;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*2) rgba(0,0,0,.6))}
 .am .cut-shoe{right:calc(var(--g) - var(--u)*2);top:calc(var(--u)*1.5);width:calc(var(--u)*24);transform:rotate(-8deg)}
 .am .ugc .sh,.am .ugc .ugcl{position:relative;z-index:3}
 .am .ugc .ugcl{max-width:calc(var(--u)*40)}
@@ -333,7 +335,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .spot{grid-template-columns:1fr;padding:1.5rem;gap:1.6rem}
 .am .spot .img{max-width:12rem}
 .am .spot .reel{max-width:15rem}
-.am .cut-model{position:relative;display:block;right:auto;top:auto;width:min(17rem,70cqw);margin:2.4rem auto 0}
+.am .flw{grid-template-columns:1fr}
+.am .cut-model{width:min(17rem,70cqw);margin:3rem auto 0}
 .am .cut-shoe{width:7.5rem;right:-1.4rem;top:-1.2rem}
 .am .boxw{width:5.6rem;right:.4rem;top:-.6rem}
 .am .pr .sh{padding-right:5.6rem}
@@ -434,14 +437,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </section>
 
 <section class="sec grid-bg" aria-labelledby="amF">
-  <img class="cut cut-model" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-model.webp?v=1" alt="" width="700" height="849" loading="lazy" decoding="async" aria-hidden="true">
   <div class="sh"><div><span class="kk mo">Press play</span><h2 class="h2 chr" id="amF">The Evolution Of Air</h2></div></div>
+  <div class="flw">
   <ol class="fl">
     <li><div class="frame"><button class="fc" type="button" data-v="738012071" data-h="999323921b" data-t="35 in 35" aria-label="Play 35 in 35, 34 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-35.webp?v=1" alt="" width="652" height="880" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>02</b><span>00:34 / 9:16</span></p><h3>35 in 35</h3><p class="who mo">35 years of Air Max 1</p></div></li>
     <li><div class="frame"><button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana-thumb.webp?v=1" alt="" width="640" height="1138" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>03</b><span>00:51 / 9:16</span></p><h3>Juliana | On Air</h3><p class="who mo">ft. Juliana Sagat</p></div></li>
   </ol>
+  <img class="cut-model" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-model.webp?v=1" alt="" width="700" height="849" loading="lazy" decoding="async" aria-hidden="true">
+  </div>
   <aside class="spot" aria-labelledby="amJ">
     <div class="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana-portrait.webp?v=1" alt="Portrait of Nike footwear designer Juliana Sagat" width="640" height="640" loading="lazy" decoding="async"></div>
     <div>

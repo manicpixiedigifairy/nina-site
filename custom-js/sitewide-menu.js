@@ -6,7 +6,7 @@
   var CSS='@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Marcellus&display=swap");'
   +'.header-nav,.header-burger,.header-menu{display:none!important}'
   +'.nlb{all:unset;cursor:pointer;display:flex;align-items:center;gap:.9rem;font-family:Jost,sans-serif;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;position:absolute;right:4vw;top:50%;transform:translateY(-50%);z-index:5}'
-  +'.nlb.nlf{position:fixed;top:2rem;transform:none;mix-blend-mode:normal}'
+  +'.nlb.nlf{position:absolute;top:2rem;transform:none;mix-blend-mode:normal}'
   +'.nlb .ic{width:1.9rem;height:.7rem;position:relative;display:block}'
   +'.nlb .ic:before,.nlb .ic:after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor}'
   +'.nlb .ic:before{top:0}.nlb .ic:after{bottom:0}'

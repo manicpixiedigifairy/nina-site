@@ -99,7 +99,7 @@
     "html.nl-project #header .header-background-solid,",
     "html.nl-project #header .header-background-gradient{display:none!important}",
     "html.nl-project #header .header-inner{height:0!important;min-height:0!important;padding:0!important;background:transparent!important}",
-    "html.nl-project .nlb{position:fixed!important;top:1.5rem!important;right:4vw!important;left:auto!important;transform:none!important;z-index:2147482000!important;padding:.8rem 1.3rem!important;background:transparent!important;color:#fff!important;border-radius:0!important;box-shadow:none!important;mix-blend-mode:normal!important}",
+    "html.nl-project .nlb{position:absolute!important;top:1.5rem!important;right:4vw!important;left:auto!important;transform:none!important;z-index:2147482000!important;padding:.8rem 1.3rem!important;background:transparent!important;color:#fff!important;border-radius:0!important;box-shadow:none!important;mix-blend-mode:normal!important}",
     "html.nl-project .nlb span,",
     "html.nl-project .nlb .ic{color:#fff!important}",
     "html.nl-project .nlb:hover,",
@@ -124,7 +124,7 @@
     "html.nl-project .section-background,",
     "html.nl-project .section-border,",
     "html.nl-project [data-nl-hide]{display:none!important}",
-    "html.nl-project .nlb{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:auto!important;width:auto!important;transform:none!important;height:56px!important;box-sizing:border-box!important;padding:0 1.3rem!important;justify-content:center!important;background:#000!important;z-index:2147482000!important}",
+    "html.nl-project .nlb{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:auto!important;width:auto!important;transform:none!important;height:56px!important;box-sizing:border-box!important;padding:0 1.3rem!important;justify-content:center!important;background:#000!important;z-index:2147482000!important}",
     "}"].join("\n");
   var st=document.createElement('style');st.id='nl-project-css';st.textContent=CSS;(document.head||de).appendChild(st);
   if(isCore)return;
