@@ -24,13 +24,13 @@
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   }
   function fit() {
-    try { var d = frame.contentDocument; frame.style.height = Math.max(d.documentElement.scrollHeight, d.body ? d.body.scrollHeight : 0) + 'px'; } catch (e) {}
+    try { var b = frame.contentDocument.body; if (b) frame.style.height = Math.ceil(Math.max(b.offsetHeight, b.getBoundingClientRect().height)) + 'px'; } catch (e) {}
   }
   function wire(hash) {
     var d = frame.contentDocument;
     if (ro) ro.disconnect();
     fit();
-    if (window.ResizeObserver) { ro = new ResizeObserver(fit); ro.observe(d.documentElement); }
+    if (window.ResizeObserver) { ro = new ResizeObserver(fit); ro.observe(d.body); }
     d.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href]');
       if (!a || a.target === '_blank') return;
