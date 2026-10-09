@@ -88,7 +88,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .pnl p+p{margin-top:calc(var(--u)*.9)}
 .am .pnl mark{background:none;color:var(--lime)}
 .am .q{display:block;margin-top:calc(var(--u)*1.4);padding:calc(var(--u)*1.1) calc(var(--u)*1.2);border-left:3px solid var(--ir);background:rgba(255,59,47,.08);font:600 calc(var(--u)*1.25)/1.4 var(--ar);color:var(--wh)}
-.am .role{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1) calc(var(--u)*3);align-items:center;margin:calc(var(--u)*3) var(--g) 0;padding:calc(var(--u)*2.2) calc(var(--u)*2.4);border:1.5px solid var(--lime);background:linear-gradient(90deg,rgba(92,255,59,.1),transparent 60%)}
+.am .role{display:grid;grid-template-columns:auto minmax(0,1fr) calc(var(--u)*13);gap:calc(var(--u)*1) calc(var(--u)*3);align-items:center;margin:calc(var(--u)*3) var(--g) 0;padding:calc(var(--u)*2.2) calc(var(--u)*2.4);border:1.5px solid var(--lime);background:linear-gradient(90deg,rgba(92,255,59,.1),transparent 60%)}
 .am .role .mo{color:var(--lime)}
 .am .role .rl{font:400 calc(var(--u)*2.4)/1.05 var(--an);text-transform:uppercase;max-width:calc(var(--u)*56)}
 .am .role .chips{margin-top:calc(var(--u)*1.2)}
@@ -102,7 +102,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .ban figcaption{position:absolute;left:var(--g);bottom:calc(var(--u)*1.2);padding:.45em .8em;background:var(--bk);color:var(--lime)}
 
 /* films: floating cards */
-.am .fl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:calc(var(--u)*82);gap:calc(var(--u)*3) calc(var(--u)*2.2);padding:0 var(--g);align-items:end;perspective:1400px}
+.am .fl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:calc(var(--u)*56);gap:calc(var(--u)*3) calc(var(--u)*2.2);padding:0 var(--g);align-items:end;perspective:1400px}
 .am .fl>li{min-width:0}
 .am .fl .frame{transition:transform .5s ease}
 .am .fl>li:nth-child(odd) .frame{transform:rotateY(8deg) rotateZ(-1.5deg)}
@@ -114,9 +114,8 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .fi h3{margin-top:calc(var(--u)*.5);font:400 calc(var(--u)*2.4)/1 var(--an);text-transform:uppercase}
 .am .fi .who{margin-top:calc(var(--u)*.45);color:var(--mut)}
 
-.am .acc{align-self:center}
-.am .acc .frame{transform:rotate(4deg) translateY(calc(var(--u)*-2));padding:calc(var(--u)*.55)}
-.am .fl>li.acc:hover .frame{transform:rotate(4deg) translateY(calc(var(--u)*-2))}
+.am .acc{align-self:center;margin:0}
+.am .acc .frame{transform:rotate(4deg);padding:calc(var(--u)*.45)}
 .am .acc img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .am .acc .mo{margin-top:calc(var(--u)*1.2);color:var(--lime);text-align:center;transform:rotate(4deg)}
 /* juliana */
@@ -221,6 +220,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .pn{grid-template-columns:1fr;gap:1.1rem}
 .am .pnl h3{font-size:2.1rem}
 .am .role{grid-template-columns:1fr;padding:1.4rem}
+.am .role .acc{width:11rem;justify-self:center;margin-top:.6rem}
 
 .am .role .rl{font-size:1.35rem;line-height:1.1}
 .am .ban img{aspect-ratio:4/3}
@@ -306,6 +306,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
       <p class="rl">I created organic and reactive content that anchored the narrative of the entire Air Max Day ecosystem on Nike&rsquo;s owned channels, fed fan enthusiasm, drove engagement, amplified reach and introduced casual sneakerheads to proper Air Max Day etiquette.</p>
       <ul class="chips" aria-label="What I made"><li>Organic content</li><li>Reactive content</li><li>Interactive Stories</li><li>Talent briefs</li><li>Interview outlines</li><li>UGC repurposing</li></ul>
     </div>
+    <figure class="acc" aria-hidden="true"><div class="frame"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cop-or-drop.gif?v=1" alt="" width="300" height="375" loading="lazy" decoding="async"></div><figcaption class="mo">Cop or drop?</figcaption></figure>
   </div>
 </section>
 
@@ -320,7 +321,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
       <div class="fi"><p class="mo"><b>02</b><span>00:34 / 9:16</span></p><h3>35 in 35</h3></div></li>
     <li><div class="frame"><button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="" width="900" height="928" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>03</b><span>00:51 / 9:16</span></p><h3>Juliana | On Air</h3><p class="who mo">ft. Juliana Sagat</p></div></li>
-    <li class="acc" aria-hidden="true"><div class="frame"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cop-or-drop.gif?v=1" alt="" width="300" height="375" loading="lazy" decoding="async"></div><p class="mo">Cop or drop?</p></li>
   </ol>
   <aside class="spot" aria-labelledby="amJ">
     <div class="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="Juliana Sagat smiling, holding an Air Max 90 on its box" width="900" height="928" loading="lazy" decoding="async"></div>
