@@ -176,6 +176,17 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .sel{margin:0;font:400 17px/1.35 var(--text)}
 .sel b{background:linear-gradient(transparent 60%,rgba(244,233,79,.8) 60%);font-weight:500}
 
+/* notion application */
+.napply{display:flex;flex-direction:column;gap:26px;min-width:0}
+.nsteps{list-style:none;margin:0;padding:0;counter-reset:n;border-top:1.5px solid var(--ink)}
+.nsteps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;padding:16px 0;border-bottom:1px solid var(--ink);counter-increment:n}
+.nsteps li::before{content:"0" counter(n);grid-row:span 2;font:500 13px/1.6 var(--mono);color:var(--pink-ink)}
+.nsteps b{font:700 18px/1.2 var(--head);letter-spacing:-.02em}
+.nsteps span{color:var(--ink-2);font-size:17px}
+.nform{border:1.5px solid var(--ink);background:var(--white);height:900px}
+.nform iframe{width:100%;height:100%;border:0;display:block}
+.btn[aria-disabled="true"]{opacity:.55;cursor:default}
+
 /* faq */
 .faqwrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--ink)}
 .faq{border-top:1.5px solid var(--ink)}
@@ -284,7 +295,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <ol class="steps">
           <li><b>Complete the submission form</b><span>Tell me who you are and what you need.</span></li>
           <li><b>Upload your files</b><span>Share a link to your work in the form.</span></li>
-          <li><b>Request a 15-minute consultation</b><span>Pick a time on the calendar or book an open slot.</span></li>
+          <li><b>Request a 15-minute consultation</b><span>Pick a Friday or Saturday time in the application.</span></li>
         </ol>
       </div>
       <div class="avatar"><img src="ill-avatar.webp" alt="Illustration of a woman with long pink hair working on a laptop" width="269" height="247" loading="lazy"></div>
@@ -296,48 +307,18 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       <div class="side">
         <span class="lab">04 · Apply</span>
         <h2 class="h2" id="apply-h" style="margin-top:14px">Apply for a slot</h2>
-        <p>It's free. Fill this out, share your work and request a time for your 15-minute consultation.</p>
+        <p>It's free. The application covers who you are, your work and a time for your 15-minute consultation.</p>
         <p class="privacy">Submissions go privately to Nina. Nothing you send here is published or shared.</p>
       </div>
-      <form id="gform" novalidate>
-        <fieldset class="f wide">
-          <legend>What do you need?</legend>
-          <div class="choice" role="radiogroup">
-            <label for="need-first"><input type="radio" id="need-first" name="need" value="First portfolio site"><b>My first portfolio site</b><span>You're starting from scratch.</span></label>
-            <label for="need-makeover"><input type="radio" id="need-makeover" name="need" value="Portfolio makeover"><b>A portfolio makeover</b><span>You have a site that needs work.</span></label>
-          </div>
-          <span class="err" id="need-err"></span>
-        </fieldset>
-        <div class="f"><label for="g-name">Full name</label><input type="text" id="g-name" autocomplete="name"><span class="err" id="g-name-err"></span></div>
-        <div class="f"><label for="g-email">Email</label><input type="email" id="g-email" autocomplete="email"><span class="err" id="g-email-err"></span></div>
-        <div class="f"><label for="g-social">Instagram or LinkedIn</label><input type="text" id="g-social" placeholder="@handle or profile link"><span class="err" id="g-social-err"></span></div>
-        <div class="f"><label for="g-disc">What you do</label>
-          <select id="g-disc"><option value="">Choose one</option><option>Design</option><option>Copywriting</option><option>Strategy</option><option>Creative direction</option><option>Photo or video</option><option>Music</option><option>Writing or journalism</option><option>Entrepreneur or small business</option><option>Other</option></select>
-          <span class="err" id="g-disc-err"></span></div>
-        <div class="f wide" id="site-row" hidden><label for="g-site">Your current site</label><input type="url" id="g-site" placeholder="https://"><span class="err" id="g-site-err"></span></div>
-        <div class="f wide"><label for="g-files">Link to your files</label><input type="url" id="g-files" placeholder="https://"><span class="help">A Google Drive, Dropbox or WeTransfer link to the work you want on the site. Make sure anyone with the link can view it.</span><span class="err" id="g-files-err"></span></div>
-        <div class="f wide"><label for="g-vision">Your vision for the site <span class="opt">(optional)</span></label><textarea id="g-vision" maxlength="1200" placeholder="Who it's for, sites you love, how you want it to feel."></textarea></div>
-        <fieldset class="f wide consult">
-          <legend>Request your 15-minute consultation</legend>
-          <p class="help" style="margin:8px 0 0">Open times come from Nina's calendar and show in your time zone.</p>
-          <div class="cal-wrap" id="custom-pane">
-            <div class="cal" aria-label="Choose a date">
-              <div class="cal-top"><button type="button" class="nav" id="cal-prev" aria-label="Previous month">←</button><b id="cal-month" aria-live="polite"></b><button type="button" class="nav" id="cal-next" aria-label="Next month">→</button></div>
-              <div class="dow" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
-              <div class="grid" id="cal-grid" role="grid"></div>
-            </div>
-            <div class="times">
-              <span class="tz">Times in <b id="tz"></b></span>
-              <div class="slots" id="slots" role="radiogroup" aria-label="Choose a time"><p class="pick">Pick a highlighted date to see open times.</p></div>
-              <div class="other"><label for="g-other">Suggest another time <span class="opt">(optional)</span></label><input type="time" id="g-other" step="900"><span class="help">If none of the open times work, suggest one on the date you picked.</span></div>
-              <div class="f"><label for="g-note">Anything about timing <span class="opt">(optional)</span></label><input type="text" id="g-note" placeholder="e.g. weekday evenings work best"></div>
-              <p class="sel" id="sel" aria-live="polite"></p>
-            </div>
-          </div>
-          <span class="err" id="consult-err"></span>
-        </fieldset>
-        <div class="go"><button class="btn k" type="submit" id="g-go">Submit my application <span class="ar">→</span></button><span class="status" id="g-status" role="status"></span></div>
-      </form>
+      <div class="napply" id="napply">
+        <ol class="nsteps">
+          <li><b>Tell me about you</b><span>Your name, email, socials and what you do.</span></li>
+          <li><b>Share your work</b><span>A Google Drive, Dropbox or WeTransfer link anyone can view, plus your current site if you have one.</span></li>
+          <li><b>Request a consultation time</b><span>Consultations run Fridays 4 to 6 pm and Saturdays 4 to 5 pm, Eastern time.</span></li>
+        </ol>
+        <div class="nform" id="nform" hidden></div>
+        <div class="go"><a class="btn k" id="napply-link" href="#" target="_blank" rel="noopener">Open the application <span class="ar">↗</span></a><span class="status">Opens in Notion. It takes about five minutes.</span></div>
+      </div>
     </section>
 
     <section class="faqwrap" id="faq" aria-labelledby="faq-h">
@@ -365,149 +346,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 
 <script>
 (function(){
-  var ENDPOINT='https://hook.us2.make.com/gbwe0bghj6xh5cqoy1o559iahcp9ckeb';
-  var EMAIL='ninaaustincreative@gmail.com';
-  /* Nina's availability, mirrored from her Notion Calendar booking link. Times are in HOST_TZ. 0=Sun ... 6=Sat */
-  var HOST_TZ='America/New_York';
-  var AVAILABILITY={5:[['16:00','18:00']],6:[['16:00','17:00']]};
-  var SLOT=30,LEAD_HOURS=24,WINDOW_DAYS=60;
-  var $=function(id){return document.getElementById(id)};
-  var form=$('gform');if(!form)return;
-  var siteRow=$('site-row');
-  form.querySelectorAll('input[name=need]').forEach(function(r){r.addEventListener('change',function(){siteRow.hidden=!(r.checked&&r.value==='Portfolio makeover')})});
-
-  /* calendar */
-  var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
-  $('tz').textContent=tz?tz.replace(/_/g,' '):'your local time';
-  function hostOffsetMin(utcMs){
-    try{var p={};new Intl.DateTimeFormat('en-US',{timeZone:HOST_TZ,hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).formatToParts(new Date(utcMs)).forEach(function(x){p[x.type]=x.value});
-      return (Date.UTC(+p.year,+p.month-1,+p.day,+p.hour%24,+p.minute)-utcMs)/60000}catch(e){return -new Date(utcMs).getTimezoneOffset()}
-  }
-  function hostInstant(y,m,d,mins){var guess=Date.UTC(y,m,d,0,mins);var o=hostOffsetMin(guess);var t=guess-o*60000;var o2=hostOffsetMin(t);return guess-o2*60000}
-  function toMin(hm){var p=hm.split(':');return +p[0]*60+ +p[1]}
-  function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-  var now=Date.now(),earliest=now+LEAD_HOURS*3600000,latest=now+WINDOW_DAYS*86400000;
-  var byDay={};
-  (function build(){
-    var start=new Date(now-86400000);
-    for(var i=0;i<=WINDOW_DAYS+2;i++){
-      var g=new Date(Date.UTC(start.getUTCFullYear(),start.getUTCMonth(),start.getUTCDate()+i));
-      var y=g.getUTCFullYear(),m=g.getUTCMonth(),d=g.getUTCDate(),wd=g.getUTCDay();
-      (AVAILABILITY[wd]||[]).forEach(function(w){
-        for(var t=toMin(w[0]);t+SLOT<=toMin(w[1]);t+=SLOT){
-          var at=hostInstant(y,m,d,t);if(at<earliest||at>latest)continue;
-          var k=ymd(new Date(at));(byDay[k]=byDay[k]||[]).push(at);
-        }
-      });
-    }
-    Object.keys(byDay).forEach(function(k){byDay[k].sort(function(a,b){return a-b})});
-  })();
-  var openDays=Object.keys(byDay).sort();
-  var first=openDays.length?new Date(openDays[0]+'T00:00:00'):new Date();
-  var view=new Date(first.getFullYear(),first.getMonth(),1);
-  var lastView=new Date(latest);lastView=new Date(lastView.getFullYear(),lastView.getMonth(),1);
-  var pickedDate=null,pickedAt=null;
-  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
-  function fmtTime(ms){return new Date(ms).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
-  function otherAt(){var v=$('g-other').value;if(!v||!pickedDate)return null;var p=v.split(':'),d=new Date(pickedDate);d.setHours(+p[0],+p[1],0,0);return +d}
-  function drawMonth(){
-    var g=$('cal-grid');g.innerHTML='';
-    $('cal-month').textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
-    var nowMonth=new Date();nowMonth=new Date(nowMonth.getFullYear(),nowMonth.getMonth(),1);
-    $('cal-prev').disabled=view<=nowMonth;
-    $('cal-next').disabled=view>=lastView;
-    for(var i=0;i<view.getDay();i++)g.appendChild(document.createElement('span'));
-    var days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate(),todayK=ymd(new Date());
-    for(var d=1;d<=days;d++){
-      var dt=new Date(view.getFullYear(),view.getMonth(),d),k=ymd(dt),b=document.createElement('button');
-      b.type='button';b.className='day';b.textContent=d;
-      var open=!!byDay[k]||(!openDays.length&&+dt>=earliest-86400000&&+dt<=latest);
-      b.setAttribute('aria-label',dt.toDateString()+(byDay[k]?', '+byDay[k].length+' open times':open?'':', no open times'));
-      if(k===todayK)b.classList.add('today');
-      if(open)b.classList.add('open');else b.disabled=true;
-      b.setAttribute('aria-pressed',pickedDate&&ymd(pickedDate)===k?'true':'false');
-      (function(dt){b.addEventListener('click',function(){pickedDate=dt;pickedAt=null;$('g-other').value='';drawMonth();drawSlots();summary()})})(dt);
-      g.appendChild(b);
-    }
-  }
-  function drawSlots(){
-    var s=$('slots');s.innerHTML='';
-    if(!pickedDate||!openDays.length){s.innerHTML='<p class="pick">'+(openDays.length?'Pick a highlighted date to see open times.':'No open times right now. Pick a date and suggest a time below.')+'</p>';return}
-    (byDay[ymd(pickedDate)]||[]).forEach(function(at){
-      var b=document.createElement('button');b.type='button';b.className='slot';b.setAttribute('role','radio');b.textContent=fmtTime(at);
-      b.setAttribute('aria-checked',pickedAt===at&&!$('g-other').value?'true':'false');
-      b.addEventListener('click',function(){pickedAt=at;$('g-other').value='';drawSlots();summary()});
-      s.appendChild(b);
-    });
-  }
-  $('g-other').addEventListener('input',function(){pickedAt=null;drawSlots();summary()});
-  function chosenAt(){return $('g-other').value?otherAt():pickedAt}
-  function summary(){
-    var el=$('sel');el.textContent='';if(!pickedDate)return;
-    var at=chosenAt(),dl=pickedDate.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
-    el.appendChild(document.createTextNode(at&&$('g-other').value?'Suggesting ':'Requesting '));
-    var b=document.createElement('b');b.textContent=dl+(at?' at '+fmtTime(at):'');el.appendChild(b);
-    if(!at)el.appendChild(document.createTextNode('. Now choose a time.'));
-  }
-  $('cal-prev').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);drawMonth()});
-  $('cal-next').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);drawMonth()});
-  drawMonth();drawSlots();
-  function isoAt(ms){
-    var d=new Date(ms),off=-d.getTimezoneOffset(),sign=off>=0?'+':'-',a=Math.abs(off);
-    return ymd(d)+'T'+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+':00'+sign+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0');
-  }
-
-  /* validation */
-  function v(id){return $(id).value.trim()}
-  function err(id,msg){$(id).setAttribute('aria-invalid',msg?'true':'false');$(id+'-err').textContent=msg||''}
-  var urlRe=/^https?:\/\/[^\s.]+\.\S+/;
-  function check(){
-    var ok=true,need=form.querySelector('input[name=need]:checked');
-    $('need-err').textContent=need?'':'Choose a first site or a makeover.';if(!need)ok=false;
-    if(!v('g-name')){err('g-name','Add your name.');ok=false}else err('g-name','');
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('g-email'))){err('g-email','Add a valid email, like you@example.com.');ok=false}else err('g-email','');
-    if(!v('g-social')){err('g-social','Add your Instagram handle or LinkedIn link.');ok=false}else err('g-social','');
-    if(!v('g-disc')){err('g-disc','Choose what you do.');ok=false}else err('g-disc','');
-    if(need&&need.value==='Portfolio makeover'&&!urlRe.test(v('g-site'))){err('g-site','Add your current site, starting with https://');ok=false}else err('g-site','');
-    if(!urlRe.test(v('g-files'))){err('g-files','Add a link to your files, starting with https://');ok=false}else err('g-files','');
-    var ce=$('consult-err');ce.textContent='';
-    if(!pickedDate){ce.textContent='Pick a date for your consultation.';ok=false}
-    else if(!chosenAt()){ce.textContent='Choose an open time, or suggest another time.';ok=false}
-    return ok;
-  }
-  function payload(){
-    var need=form.querySelector('input[name=need]:checked'),at=chosenAt(),suggested=!!$('g-other').value;
-    return {name:v('g-name'),email:v('g-email'),social:v('g-social'),need:need?need.value:'',discipline:v('g-disc'),current_site:need&&need.value==='Portfolio makeover'?v('g-site'):'',files_link:v('g-files'),vision:v('g-vision'),
-      scheduling:suggested?'Suggested another time':'Requested an open time',consultation:at?isoAt(at):'',time_zone:tz,time_note:v('g-note'),source:'portfolio-giveaway-page'};
-  }
-  function block(h,p,text){
-    var d=document.createElement('div');d.className='done';
-    d.innerHTML='<h3></h3><p class="msg"></p>';
-    d.querySelector('h3').textContent=h;d.querySelector('.msg').textContent=p;
-    if(text){
-      var row=document.createElement('div');row.className='mailrow';row.innerHTML='<code></code><button class="btn o" type="button">Copy my application</button>';
-      row.querySelector('code').textContent=EMAIL;d.appendChild(row);
-      var st=document.createElement('span');st.className='status';d.appendChild(st);
-      row.querySelector('button').addEventListener('click',function(){try{navigator.clipboard.writeText(text).then(function(){st.textContent='Copied.'},function(){st.textContent='Select the email above and send your details there.'})}catch(x){st.textContent='Select the email above and send your details there.'}});
-    }
-    return d;
-  }
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!check()){var bad=form.querySelector('[aria-invalid="true"]');if(bad)bad.focus();else{var c=form.querySelector('.consult');if(c)c.scrollIntoView({block:'center'})}return}
-    var go=$('g-go'),st=$('g-status'),p=payload();
-    go.disabled=true;st.textContent='Sending…';
-    fetch(ENDPOINT,{method:'POST',body:new URLSearchParams(p)}).then(function(r){
-      if(!r.ok)throw new Error(r.status);
-      var when=p.consultation?$('sel').textContent.replace(/^Requesting /,''):'';
-      form.innerHTML='';
-      form.appendChild(block("You're in the queue.",p.consultation?'Your application and consultation request for '+when+' were sent. Your time will be confirmed by email.':'Your application was sent.'));
-    }).catch(function(){
-      go.disabled=false;st.textContent='';
-      var text=['Portfolio giveaway application','Name: '+p.name,'Email: '+p.email,'Social: '+p.social,'Need: '+p.need,'Discipline: '+p.discipline,'Current site: '+(p.current_site||'n/a'),'Files: '+p.files_link,'Vision: '+(p.vision||'n/a'),'Consultation: '+(p.consultation||p.scheduling)+(p.time_zone?' ('+p.time_zone+')':''),'Timing note: '+(p.time_note||'n/a')].join('\n');
-      var old=form.querySelector('.done');if(old)old.remove();
-      form.appendChild(block("This didn't go through.","Your application couldn't be sent from here. Copy it and email it to the address below, and nothing gets lost.",text));
-    });
-  });
+  /* The application is a Notion form, so every submission lands straight in the Portfolio Giveaway Submissions database. */
+  var FORM_URL='';
+  var link=document.getElementById('napply-link'),box=document.getElementById('nform');
+  if(!link)return;
+  if(!FORM_URL){link.removeAttribute('href');link.setAttribute('aria-disabled','true');link.querySelector('.ar').textContent='';link.firstChild.nodeValue='Applications open soon ';return}
+  link.href=FORM_URL;
+  if(window.__NL_EMBED){var f=document.createElement('iframe');f.src=FORM_URL;f.title='Portfolio Giveaway application';f.loading='lazy';box.appendChild(f);box.hidden=false;link.firstChild.nodeValue='Open in a new tab '}
 })();
 </script>
