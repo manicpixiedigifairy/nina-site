@@ -674,32 +674,33 @@ function stepWork(d){ const n=(cardIdx+d+WORKS.length)%WORKS.length; if (cardMod
 
 /* ======================= search ======================= */
 const SEARCH = [
-  { t:'Silk Press Conference', b:['SheaMoisture','Shea Moisture','Unilever'], sec:'Content', tags:['Beauty'], u:'silkpressconference', d:'A viral Silk Press Conference turned a product launch into a cultural moment, delivering the #1 brand post of the year.' },
+  { t:'Silk Press Conference', b:['SheaMoisture','Shea Moisture','Unilever'], sec:'Content', tags:['Beauty','CPG'], u:'silkpressconference', d:'A viral Silk Press Conference turned a product launch into a cultural moment, delivering the #1 brand post of the year.' },
   { t:'The Monogram', b:['Tommy Hilfiger','Tommy'], sec:'Content', tags:['Fashion'], u:'monogram', d:'A campaign transforming a classic monogram into a symbol of personal branding in the digital era.' },
-  { t:'Shea Us What You Got', b:['SheaMoisture','Shea Moisture','Unilever'], sec:'Content', tags:['Beauty'], u:'shea-us-what-you-got', d:'A trivia game show inspired campaign using IYKYK curly girl facts to promote the Curl Stretch Collection.' },
+  { t:'Shea Us What You Got', b:['SheaMoisture','Shea Moisture','Unilever'], sec:'Content', tags:['Beauty','CPG'], u:'shea-us-what-you-got', d:'A trivia game show inspired campaign using IYKYK curly girl facts to promote the Curl Stretch Collection.' },
   { t:'The Footprint', b:['eBay'], sec:'Content', tags:['Fashion','Tech'], u:'the-footprint', d:'A digital documentary honoring the cultural footprint of Black sneaker history.' },
   { t:'Come Thru', b:['Nike'], sec:'Content', tags:['Fashion','Lifestyle'], u:'come-thru', d:'Nike\u2019s first ever long-form digital series inviting generational changemakers to come through for real conversations.' },
   { t:'Dear Dad', b:['Walmart'], sec:'Content', tags:['Retail','Lifestyle'], u:'dear-dad', d:'An award-winning film and digital event series defining fatherhood for a new generation.' },
   { t:'The Big New Yorker', b:['Pizza Hut'], sec:'Content', tags:['Lifestyle'], u:'big-new-yorker', d:'A fan-fueled organic relaunch that turned Big New Yorker nostalgia into consumer demand.' },
-  { t:'#SponsoredBySuave', b:['Suave'], sec:'Content', tags:['Beauty'], u:'sponsored-by-suave', d:'A social-first, earned media campaign, reclaiming every body part you forgot to moisturize, one sponsored spot at a time.' },
+  { t:'#SponsoredBySuave', b:['Suave'], sec:'Content', tags:['Beauty','CPG'], u:'sponsored-by-suave', im:'830effdf-346c-4605-af63-310da4d80dc2/AQPsyX7_d_3z5D4ghPibUyvMhsUwwCYGazXh68dPlnG8uxDD0-qbi8McZ7J-g7ZAwF0vRMQr5fvmUYkUmXN8RAMAD723jQFmi8MHJTU-high%282%29.gif', d:'A social-first, earned media campaign, reclaiming every body part you forgot to moisturize, one sponsored spot at a time.' },
   { t:'Seize The Summer', b:['Walmart'], sec:'Content', tags:['Retail','Lifestyle'], u:'seize-the-summer', d:'A two-part creator profile highlighting modern day trailblazers changing the face of outdoor recreation.' },
   { t:'For Your Life\u2019s Work', b:['Notion'], sec:'Commercials', tags:['Tech'], u:'for-your-lifes-work', d:'International brand campaign inspired by community stories blending work and life with Notion.' },
   { t:'Welcome To Your Walmart', b:['Walmart'], sec:'Commercials', tags:['Tech','Retail'], u:'wtyw', d:'A personalized app launch campaign repositioning the world\u2019s largest retailer from the everything store to every shopper\u2019s store.' },
-  { t:'Never Ever', b:['Butterfinger'], sec:'Commercials', tags:['Lifestyle'], u:'never-ever', d:'A cinematic expansion of the Butterfinger Investigators universe with a comedic time-travel twist.' },
+  { t:'Never Ever', b:['Butterfinger'], sec:'Commercials', tags:['Lifestyle','CPG'], u:'never-ever', im:'5e030e9d-0c62-4735-b5f1-56ea500dc27b/dd1a92e4-ef0a-4f82-967b-2f622c3701b6-high.gif', d:'A cinematic expansion of the Butterfinger Investigators universe with a comedic time-travel twist.' },
   { t:'Plan For The Best', b:['HealthCare.gov','Healthcare','HHS'], sec:'Commercials', tags:['Health'], u:'plan-for-the-best', d:'An anthemic campaign reframing health insurance as an empowering step towards owning your future.' },
-  { t:'Never Through', b:['Under Armour'], sec:'Commercials', tags:['Lifestyle'], u:'never-through', d:'A visual manifesto tapping into the collective urgency for better, better selves, better systems, better futures.' },
-  { t:'Tiny Wins', b:['AT&T','ATT'], sec:'Commercials', tags:['Tech'], u:'tiny-wins', d:'A warm, comedic TVC campaign turning the rush of scoring a great deal into relatable, everyday micro-celebrations.' },
-  { t:'How You Moto', b:['Motorola','Moto'], sec:'Commercials', tags:['Tech'], u:'how-you-moto', d:'A relatable global tech campaign showing how the Moto G is not only a device, but an extension of who you are.' },
-  { t:'Curls Just Wanna Have Fun', b:['Mielle'], sec:'Commercials', tags:['Beauty'], u:'curls-just-wanna-have-fun', d:'A bouncy 30-second spot and multi-channel activation celebrating 4c textured hair, curl joy, and self-expression.' },
-  { t:'People Not Profit', b:['CTCP'], sec:'Commercials', tags:['Health'], u:'people-not-profit', d:'A bold public service campaign using emotionally charged visuals and personal storytelling to expose the deadly impact of menthol tobacco marketing.' },
-  { t:'OK V-Day', b:['AT&T','ATT'], sec:'Experiential', tags:['Pop-Up'], u:'ok-v-day', d:'A hidden-camera pop-up stunt capturing real reaction to \u2018Just Ok\u2019 Valentine\u2019s Day cards.' },
-  { t:'HBCU Tour', b:['Walmart'], sec:'Experiential', tags:['Creator-Led','Retail'], u:'hbcu-tour', d:'A mobile creator studio bringing on-campus activations to leading HBCUs across the country.' },
-  { t:'Brunch With The Best', b:['PepsiCo','Pepsi'], sec:'Experiential', tags:['Pop-Up','Food'], u:'brunch-with-the-best', d:'A Super Bowl weekend social, digital and in-person activation uniting regional brunch cultures through chef-driven storytelling and a Las Vegas pop-up.' },
-  { t:'The \u201985 Shop', b:['eBay'], sec:'Experiential', tags:['Pop-Up','Fashion'], u:'the-85-shop', d:'A nostalgic Chicago pop-up and global auction that solidified eBay\u2019s cultural claim in the sneaker game.' },
-  { t:'Dear Dad Streamathon', b:['Walmart'], sec:'Experiential', tags:['Creator-Led','Retail'], u:'dear-dad-streamathon', d:'A next-gen Father\u2019s Day activation where gaming became a holiday gathering, bringing fathers and families together on stream.' },
+  { t:'Never Through', b:['Under Armour'], sec:'Commercials', tags:['Lifestyle'], u:'never-through', im:'8ddf6f7a-4e02-431d-8fc0-51bcd4ef03b9/Under-Armour_Never-Through_Sizzle-Video_Final.mp4-high+%283%29.gif', d:'A visual manifesto tapping into the collective urgency for better, better selves, better systems, better futures.' },
+  { t:'Tiny Wins', b:['AT&T','ATT'], sec:'Commercials', tags:['Tech'], u:'tiny-wins', im:'556fc34c-0b32-49ee-8e3b-ad2b1cd7b7a6/High+Five-high+%282%29.gif', d:'A warm, comedic TVC campaign turning the rush of scoring a great deal into relatable, everyday micro-celebrations.' },
+  { t:'How You Moto', b:['Motorola','Moto'], sec:'Commercials', tags:['Tech'], u:'how-you-moto', im:'8ac5a8f7-8723-435d-aa60-519daf0fe8f3/Motorola+How+You+Moto+Hero-high+%281%29.gif', d:'A relatable global tech campaign showing how the Moto G is not only a device, but an extension of who you are.' },
+  { t:'Curls Just Wanna Have Fun', b:['Mielle'], sec:'Commercials', tags:['Beauty','CPG'], u:'curls-just-wanna-have-fun', im:'a39b6a37-c89e-441c-b7ed-a5fcad527e83/THE+SWITCH+UO_KMA-high+%282%29.gif', d:'A bouncy 30-second spot and multi-channel activation celebrating 4c textured hair, curl joy, and self-expression.' },
+  { t:'People Not Profit', b:['CTCP'], sec:'Commercials', tags:['Health'], u:'people-not-profit', im:'31d794e4-2435-4f7d-b9da-7d33ba7aa213/Anti_menthol_60_v9-high.gif', d:'A bold public service campaign using emotionally charged visuals and personal storytelling to expose the deadly impact of menthol tobacco marketing.' },
+  { t:'OK V-Day', b:['AT&T','ATT'], sec:'Experiential', tags:['Pop-Up'], u:'ok-v-day', im:'b33cd864-3025-4b86-90ba-476217189afc/just_ok.jpg', d:'A hidden-camera pop-up stunt capturing real reaction to \u2018Just Ok\u2019 Valentine\u2019s Day cards.' },
+  { t:'HBCU Tour', b:['Walmart'], sec:'Experiential', tags:['Creator-Led','Retail'], u:'hbcu-tour', im:'677581db-7f91-4449-bd53-98527452511a/Photo-4-of-4-1-scaled-1.webp', d:'A mobile creator studio bringing on-campus activations to leading HBCUs across the country.' },
+  { t:'Brunch With The Best', b:['PepsiCo','Pepsi'], sec:'Experiential', tags:['Pop-Up','Food','CPG'], u:'brunch-with-the-best', im:'45ecbfc5-ace2-479c-ac5e-22808e432221/Screenshot+2025-10-11+at+10.17.02%E2%80%AFPM.png', d:'A Super Bowl weekend social, digital and in-person activation uniting regional brunch cultures through chef-driven storytelling and a Las Vegas pop-up.' },
+  { t:'The \u201985 Shop', b:['eBay'], sec:'Experiential', tags:['Pop-Up','Fashion'], u:'the-85-shop', im:'c3d450b6-c04e-48b6-b236-6ca224f32e0f/imgi_50_The_85_Shop_curated_in_partnership.png', d:'A nostalgic Chicago pop-up and global auction that solidified eBay\u2019s cultural claim in the sneaker game.' },
+  { t:'Dear Dad Streamathon', b:['Walmart'], sec:'Experiential', tags:['Gaming','Creator-Led','Retail'], u:'dear-dad-streamathon', im:'6ecc2270-cd0f-4d36-8129-c2e7a8f84435/imgi_3_PJNITZA0N0TcDglnxwfq81ykH7k.jpg', d:'A next-gen Father\u2019s Day activation where gaming became a holiday gathering, bringing fathers and families together on stream.' },
 ];
 SEARCH.forEach(it=>{ it.url=SITE+it.u; it.gi=WORKS.findIndex(w=>w.url===it.url); });
-const RECS=['Fashion','Beauty','Lifestyle','Retail'];
+const RECS=['Fashion','Beauty','Lifestyle','Retail','CPG','Tech','Gaming'];
+const SQ_CDN='https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/';
 const sBox=$('#search'), sQ=$('#searchQ'), sRes=$('#searchResults'), sCount=$('#searchCount');
 let enterHook=()=>{}, pendingFocus=-1;
 const norm=x=>x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[\u2018\u2019']/g,'').replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim();
@@ -717,8 +718,10 @@ function scoreOf(it,q){
 RECS.forEach(r=>{ const b=el('button',null,r); b.type='button'; b.addEventListener('click',()=>{ sQ.value=r; runSearch(); sQ.focus(); }); $('#searchChips').appendChild(b); });
 function resultRow(it){
   const li=el('article','sr-item');
-  const th=el('span','sr-thumb'+(it.gi<0?' sr-mono':''));
-  if(it.gi>=0){ const im=new Image(); im.src='assets/'+WORKS[it.gi].slug+'-poster.webp'; im.alt=''; im.loading='lazy'; th.appendChild(im); } else th.textContent=it.b[0].charAt(0).toUpperCase();
+  const src=it.gi>=0?'assets/'+WORKS[it.gi].slug+'-poster.webp':(it.im?SQ_CDN+it.im+'?format=300w':'');
+  const th=el('span','sr-thumb'+(src?'':' sr-mono'));
+  const mono=()=>{ th.textContent=it.b[0].charAt(0).toUpperCase(); th.classList.add('sr-mono'); };
+  if(src){ const im=new Image(); im.alt=''; im.loading='lazy'; im.decoding='async'; im.onerror=mono; im.src=src; th.appendChild(im); } else mono();
   const tx=el('div','sr-text');
   tx.append(el('p','sr-meta',[it.b[0],it.sec,...it.tags].join(' \u00B7 ')), el('h3',null,it.t), el('p','sr-desc',it.d));
   const ac=el('div','sr-acts');
