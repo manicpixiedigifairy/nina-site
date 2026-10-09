@@ -46,6 +46,9 @@ html,body{margin:0}
 .bf .cf mark{background:none;color:inherit;padding:0}
 .bf .cf .bd{margin:calc(var(--u)*.4) 0 0;padding-left:calc(var(--u)*2.4);border-left:calc(var(--u)*.3) solid var(--br);font:500 calc(var(--u)*2)/1.62 var(--lab);color:var(--br)}
 .bf .cf .ev{display:inline-block;padding:.08em .5em .12em;border-radius:99px;background:var(--br);color:var(--y);font:400 .8em/1.1 var(--disp);letter-spacing:.04em;transform:rotate(-3deg);box-shadow:0 .12em 0 var(--b)}
+.bf .cf .bag{position:absolute;right:calc(var(--g)*-.3);bottom:calc(var(--u)*-1.4);width:calc(var(--u)*27);height:auto;z-index:0;pointer-events:none;filter:drop-shadow(0 .6em .8em rgba(59,27,9,.28))}
+.bf .cf .lb,.bf .cf .idg{position:relative;z-index:1}
+.bf .cf{padding-bottom:calc(var(--u)*14)}
 .bf .cf{background:var(--y2);color:var(--br);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
 .bf .so1{background:var(--y);color:var(--br)}
 .bf .so1 .stmt{color:var(--b);max-width:22em}
@@ -195,6 +198,7 @@ html,body{margin:0}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:700px){
+.bf .cf{padding-bottom:9rem}.bf .cf .bag{width:12.5rem;right:-1.4rem;bottom:-.8rem}
 .bf .fp .swd{width:7rem;left:auto;right:-.4rem;top:-4.4rem}
 .bf .so1 .nf i:not(.m){display:none}
 .bf .so1 .nf i{width:calc(var(--u)*var(--w)*1.15)}
@@ -274,6 +278,7 @@ html,body{margin:0}
 </section>
 
 <section class="cf" id="bfCf">
+  <img class="bag rv" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-moneybag.webp?v=1" alt="" width="1000" height="775" loading="lazy">
   <span class="lb rv">The Idea</span>
   <div class="idg">
     <p class="lead rv">The Butterfinger Investigators (BFI) are a task force with one <mark>mission</mark>: returning stolen Butterfingers to their rightful owners.</p>
