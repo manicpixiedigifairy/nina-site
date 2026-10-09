@@ -352,7 +352,7 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
 </section>
 
 <footer class="ft">
-  <a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a>
+  <a href="https://www.byninaaustin.com/content" data-back><span aria-hidden="true">&larr;</span> <span data-back-label>Back to Content</span></a>
   <button type="button" data-go-top>Play Again</button>
 </footer>
 
@@ -468,6 +468,16 @@ background:linear-gradient(to right,rgba(255,79,163,.7) 2px,transparent 2px) 0 0
       if(a.hasAttribute('data-coin')&&!reduce){a.classList.add('hit');win.setTimeout(function(){a.classList.remove('hit');go()},520)}else go();
     });
   });
+  /* back link: Experiential for the Streamathon page, Content for Dear Dad */
+  var back=dd.querySelector('[data-back]');
+  if(back){
+    var path=String(win.location.pathname||'').toLowerCase(),ref='';
+    try{ref=document.referrer||win.document.referrer||''}catch(x){}
+    if(path.indexOf('streamathon')>-1||/\/experiential(\b|\/|\?|$)/i.test(ref)){
+      back.setAttribute('href','https://www.byninaaustin.com/experiential');
+      var bl=back.querySelector('[data-back-label]');if(bl)bl.textContent='Back to Experiential';
+    }
+  }
   var top=dd.querySelector('[data-go-top]');
   if(top)top.addEventListener('click',function(){
     goTo(dd.getBoundingClientRect().top+(win.pageYOffset||0));
