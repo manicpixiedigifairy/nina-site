@@ -171,12 +171,14 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .sw{position:relative;display:block;width:min(100%,calc(var(--u)*44));transform:rotate(-3deg);animation:amSole 7s ease-in-out infinite}
 .am .sw img{display:block;width:100%;height:auto;filter:drop-shadow(0 calc(var(--u)*.4) calc(var(--u)*.5) rgba(0,0,0,.9)) drop-shadow(0 calc(var(--u)*2.4) calc(var(--u)*3) rgba(0,0,0,.85)) drop-shadow(0 0 calc(var(--u)*2.4) rgba(120,170,255,.45))}
 .am .sw::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 48%,rgba(200,255,190,.35) 52%,transparent 65%) -150% 0/60% 100% no-repeat;-webkit-mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1") center/100% 100% no-repeat;mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1") center/100% 100% no-repeat;mix-blend-mode:screen;animation:amSheen 4.5s ease-in-out infinite}
-.am .sshd{position:absolute;left:50%;bottom:calc(var(--u)*2.2);width:calc(var(--u)*34);height:calc(var(--u)*2.6);transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent);animation:amShd 7s ease-in-out infinite}
+.am .sshd{position:absolute;left:50%;top:50%;width:min(calc(100% - var(--g)*2),calc(var(--u)*44));aspect-ratio:1400/538;transform:translate(-50%,-50%) translateY(calc(var(--u)*4.4)) rotate(-2deg) scale(.98,.92);background:#000;-webkit-mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1") center/100% 100% no-repeat;mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1") center/100% 100% no-repeat;filter:blur(calc(var(--u)*.7));opacity:1;z-index:0;pointer-events:none;animation:amShd 7s ease-in-out infinite}
+.am .sshd::after{content:'';position:absolute;left:8%;right:8%;bottom:-18%;height:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.95),rgba(0,0,0,.6) 60%,transparent)}
+.am .sw{z-index:1}
 .am .sbub{position:absolute;inset:0;z-index:-1;pointer-events:none}
 .am .sbub i{position:absolute;bottom:18%;width:calc(var(--u)*.9);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),rgba(180,210,255,.08) 60%);opacity:0;animation:amBub 6s ease-in infinite}
 .am .sbub i:nth-child(1){left:22%;animation-delay:0s}.am .sbub i:nth-child(2){left:31%;width:calc(var(--u)*.6);animation-delay:-1.4s}.am .sbub i:nth-child(3){left:42%;width:calc(var(--u)*1.2);animation-delay:-3s}.am .sbub i:nth-child(4){left:57%;animation-delay:-.7s}.am .sbub i:nth-child(5){left:66%;width:calc(var(--u)*.5);animation-delay:-2.2s}.am .sbub i:nth-child(6){left:74%;width:calc(var(--u)*1.1);animation-delay:-4.1s}.am .sbub i:nth-child(7){left:50%;width:calc(var(--u)*.7);animation-delay:-5s}
 @keyframes amSole{50%{transform:rotate(-1deg) translateY(calc(var(--u)*-1.2))}}
-@keyframes amShd{50%{transform:translateX(-50%) scale(.82);opacity:.7}}
+@keyframes amShd{50%{transform:translate(-50%,-50%) translateY(calc(var(--u)*5.2)) rotate(-1deg) scale(.93,.86);opacity:.85;filter:blur(calc(var(--u)*1.1))}}
 @keyframes amGlow{50%{transform:translate(-50%,-50%) scale(1.08);opacity:.8}}
 @keyframes amRing{0%{transform:translate(-50%,-50%) rotate(-3deg) scale(.7);opacity:0}25%{opacity:1}100%{transform:translate(-50%,-50%) rotate(-3deg) scale(1.25);opacity:0}}
 @keyframes amSheen{0%,35%{background-position:-150% 0}75%,100%{background-position:250% 0}}
@@ -371,7 +373,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .sole{padding:3.4rem var(--g) 4rem}
 .am .sglow{width:22rem;height:9rem}
 .am .sring{width:21rem;height:7rem}
-.am .sshd{width:15rem;height:1.2rem;bottom:1.6rem}
 .am .sole::after{width:28rem}
 .am .sbub i{width:.55rem}
 .am .pg{grid-template-columns:1fr;gap:2.4rem}
@@ -399,7 +400,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 <header class="hero grid-bg scan">
   <p class="hud mo" aria-hidden="true"><span>Nike / Air Max Day</span></p>
   <div>
-    <h1 class="h1"><span class="gl chr" data-t="Air Max">Air Max</span><span class="gl chr l2" data-t="Day &rsquo;22">Day &rsquo;22</span></h1>
+    <h1 class="h1"><span class="gl chr" data-t="Air Max">Air Max</span><span class="gl chr l2" data-t="Day &lsquo;22">Day &lsquo;22</span></h1>
     <p class="ld">For the broader hardcore sneakerhead community, Air Max Day 2022 (which marked the 35th anniversary of the Air Max 1) shifted from abstract digital hubs into pure product storytelling, regional hype, and archival history. The 2022 approach transformed standard consumer feeds into a sprawling, multi-platform gallery.</p>
   </div>
   <div class="hcard">
@@ -500,7 +501,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </div>
 </section>
 
-<div class="sole" aria-hidden="true"><span class="sglow"></span><span class="sring"></span><span class="sring r2"></span><span class="sbub"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="sw"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1" alt="" width="1400" height="538" loading="lazy" decoding="async"></span><span class="sshd"></span></div>
+<div class="sole" aria-hidden="true"><span class="sglow"></span><span class="sring"></span><span class="sring r2"></span><span class="sbub"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="sshd"></span><span class="sw"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-sole.webp?v=1" alt="" width="1400" height="538" loading="lazy" decoding="async"></span></div>
 
 <section class="sec ugc" aria-labelledby="amU">
   <div class="sh"><div><span class="kk mo">Show us your Air</span><h2 class="h2 chr" id="amU">Your City</h2></div><p class="mo">UGC on @nikesportswear</p></div>
