@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Selected Work</title>
+<title>Selected Work · Portfolio Giveaway</title>
+<meta name="description" content="Selected case study pages by Nina Austin: Tommy Hilfiger, Froot Loops and Pizza Hut.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Pinyon+Script&display=swap">
@@ -108,7 +109,7 @@ footer .sig{font:400 38px/1 var(--script)}
       <h1 id="t"><span class="s">Selected</span><span class="d">WORK</span></h1>
       <p>Three case study pages, live and in full. This is the level of design, writing and build that goes into every site.</p>
     </div>
-    <div class="accent" aria-hidden="true"><img src="../ill-wall.webp" alt="" width="620" height="750"></div>
+    <div class="accent" aria-hidden="true"><img src="../assets/ill-wall.webp" alt="" width="620" height="750"></div>
   </section>
 </div>
 <hr class="rule">
@@ -164,12 +165,12 @@ footer .sig{font:400 38px/1 var(--script)}
   <footer><span class="sig">Nina Austin</span><a class="lab" href="../index.html">Back to the giveaway</a></footer>
 </div>
 <script>
-var EMBED=!!window.__NL_EMBED;if(EMBED)document.documentElement.classList.add('embed');
+var EMBED=!!window.__NL_EMBED;var LIVE=EMBED||/^https?:$/.test(location.protocol)&&!/claude/i.test(location.hostname);if(EMBED)document.documentElement.classList.add('embed');
 document.querySelectorAll('.screen').forEach(function(s){
   var vp=s.querySelector('.vp');
   s.querySelector('[data-load]').addEventListener('click',function(){
     var f=document.createElement('iframe');
-    if(EMBED){
+    if(LIVE){
       var live=s.getAttribute('data-live'),dir=live.replace(/[^\/]*$/,'');
       fetch(live,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){
         var tag='<base href="'+dir+'">';f.srcdoc=/<head[^>]*>/i.test(h)?h.replace(/<head[^>]*>/i,function(m){return m+tag}):tag+h;

@@ -1,0 +1,14 @@
+# Netlify settings for the Portfolio Giveaway site.
+# In Netlify, set Base directory to "giveaway". No build step: the files are served as-is.
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/work"
+  to = "/work/"
+  status = 301
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
