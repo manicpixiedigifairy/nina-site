@@ -46,9 +46,11 @@ html,body{margin:0}
 .bf .cf mark{background:none;color:inherit;padding:0}
 .bf .cf .bd{margin:calc(var(--u)*.4) 0 0;padding-left:calc(var(--u)*2.4);border-left:calc(var(--u)*.3) solid var(--br);font:500 calc(var(--u)*2)/1.62 var(--lab);color:var(--br)}
 .bf .cf .ev{display:inline-block;padding:.08em .5em .12em;border-radius:99px;background:var(--br);color:var(--y);font:400 .8em/1.1 var(--disp);letter-spacing:.04em;transform:rotate(-3deg);box-shadow:0 .12em 0 var(--b)}
-.bf .cf .hk{position:absolute;right:0;bottom:0;width:calc(var(--u)*19);height:auto;z-index:0;pointer-events:none;filter:drop-shadow(0 .5em .7em rgba(59,27,9,.35))}
+.bf .cf .hk{position:absolute;right:calc(var(--u)*-1.2);bottom:calc(var(--u)*-5.5);width:calc(var(--u)*19);height:calc(var(--u)*26);z-index:0;pointer-events:none;filter:drop-shadow(0 .5em .7em rgba(59,27,9,.35))}
+.bf.js .cf .hk.rv{opacity:0;translate:38% 46%;rotate:20deg;scale:1;transition:opacity .4s ease .1s,translate 1.1s cubic-bezier(.3,1.4,.5,1) .1s,rotate 1.3s cubic-bezier(.3,1.6,.5,1) .1s}
+.bf.js .cf .hk.rv.in{opacity:1;translate:0 0;rotate:0deg}
 .bf .cf .lb,.bf .cf .idg{position:relative;z-index:1}
-.bf .cf{padding-bottom:calc(var(--u)*20)}
+.bf .cf{padding-bottom:calc(var(--u)*21)}
 .bf .cf{background:var(--y2);color:var(--br);background-image:radial-gradient(rgba(59,27,9,.09) 1.2px,transparent 1.4px);background-size:calc(var(--u)*1.6) calc(var(--u)*1.6)}
 .bf .so1{background:var(--y);color:var(--br)}
 .bf .so1 .stmt{color:var(--b);max-width:22em}
@@ -118,6 +120,11 @@ html,body{margin:0}
 .bf .lan{right:calc(var(--g)*.7);top:calc(var(--u)*-1.5);width:calc(var(--u)*11);z-index:5;transform-origin:50% 0;animation:swy 5.5s ease-in-out infinite}
 .bf .lan::before{content:"";position:absolute;left:50%;top:-30vh;width:1px;height:30vh;background:linear-gradient(transparent,#8d7a52)}
 .bf .lan::after{content:"";position:absolute;left:50%;top:62%;width:260%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,196,96,.5),rgba(255,150,40,.18) 40%,transparent 68%);mix-blend-mode:screen;z-index:-1;animation:flk 3.1s ease-in-out infinite}
+@keyframes lon{0%{filter:brightness(.18) saturate(.5)}8%{filter:brightness(.9)}13%{filter:brightness(.25)}22%{filter:brightness(1)}28%{filter:brightness(.4)}38%{filter:brightness(1.1)}46%{filter:brightness(.7)}58%{filter:brightness(1)}100%{filter:brightness(1)}}
+@keyframes gon{0%{opacity:0}8%{opacity:.9}13%{opacity:.1}22%{opacity:1}28%{opacity:.25}38%{opacity:1}46%{opacity:.5}58%{opacity:.95}100%{opacity:.9}}
+.bf.js .lan img{filter:brightness(.18) saturate(.5)}.bf.js .lan::after{opacity:0;animation:none}
+.bf.js .fh.lit .lan img{animation:lon 2.4s steps(1,end) .2s both}
+.bf.js .fh.lit .lan::after{animation:gon 2.4s steps(1,end) .2s both,flk 3.1s ease-in-out 2.7s infinite}
 @keyframes swy{0%,100%{rotate:3.5deg}50%{rotate:-3.5deg}}
 @keyframes flk{0%,100%{opacity:.9}18%{opacity:.7}32%{opacity:1}55%{opacity:.78}70%{opacity:.95}}
 .bf .fog{position:absolute;left:-20%;right:-20%;bottom:0;height:46%;z-index:2;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(ellipse at 28% 62%,rgba(150,195,178,.2),transparent 60%),radial-gradient(ellipse at 74% 45%,rgba(150,195,178,.14),transparent 60%);animation:fgd 24s ease-in-out infinite alternate}
@@ -127,9 +134,12 @@ html,body{margin:0}
 .bf .fh .fg{grid-template-columns:minmax(0,1.15fr) minmax(0,1.9fr)}
 .bf .art{position:relative;align-self:stretch;min-height:calc(var(--u)*42)}
 .bf .fh .fg{margin-top:calc(var(--u)*3)}
-.bf .anc{left:-2%;top:2%;width:64%;rotate:-14deg;opacity:.9;filter:sepia(.5) brightness(.78) contrast(1.1)}
-.bf .cmp{right:-6%;bottom:2%;width:62%;opacity:.92;filter:sepia(.35) brightness(.82);animation:cmw 7s ease-in-out infinite}
-@keyframes cmw{0%,100%{rotate:-6deg}50%{rotate:5deg}}
+.bf .anc{left:-2%;top:2%;width:64%;rotate:-14deg;opacity:.9;filter:sepia(.5) brightness(.78) contrast(1.1);animation:ans 16s linear infinite}
+@keyframes ans{from{rotate:-14deg}to{rotate:346deg}}
+.bf .cmp{right:-6%;bottom:2%;width:62%;opacity:.92;filter:sepia(.35) brightness(.82)}
+.bf .cmp img{position:absolute;left:0;top:0}.bf .cmp .cb{position:relative}
+.bf .cmp .cn{transform-origin:58.6% 61.1%;animation:cms 9s cubic-bezier(.45,.05,.3,1) infinite}
+@keyframes cms{0%{rotate:0deg}30%{rotate:250deg}38%{rotate:232deg}46%{rotate:244deg}70%{rotate:420deg}100%{rotate:720deg}}
 .bf .hfg{left:50%;bottom:0;translate:-50% 0;height:100%;width:auto;max-width:none;filter:drop-shadow(0 0 2.2em rgba(242,138,30,.4)) drop-shadow(0 0 .6em rgba(150,195,178,.35))}
 .bf .hfg img{width:auto;height:100%}
 .bf .vc{position:relative;isolation:isolate}
@@ -185,16 +195,13 @@ html,body{margin:0}
 .bf .rc .rn{align-self:flex-start;font:600 calc(var(--u)*1.1)/1 var(--lab);padding:.5em .9em;border-radius:99px;background:var(--y);border:.16em solid var(--br)}
 .bf .rc h3{margin:0;font:400 calc(var(--u)*2.7)/1 var(--disp);color:var(--b)}
 .bf .rc p{margin:0;font:500 calc(var(--u)*1.5)/1.4 var(--bd)}
-.bf .rc .src{margin-top:auto;padding-top:calc(var(--u)*.6);display:flex;flex-wrap:wrap;gap:.5em;align-items:center;font:600 calc(var(--u)*1.05)/1 var(--lab)}
-.bf .rc .src a{color:var(--b2);background:var(--y2);border:.14em solid var(--br);border-radius:99px;padding:.45em .9em;text-decoration:none}
-.bf .rc .src a:hover{background:var(--y)}
 @media(max-width:1000px){
 .bf .hero{grid-template-columns:minmax(0,1fr);text-align:center}.bf .bfl{grid-column:1;grid-row:1;width:min(100%,44rem)}.bf .hl{grid-column:1;grid-row:2}.bf .dek{margin-left:auto;margin-right:auto}
 .bf .rg{grid-template-columns:minmax(0,1fr)}
 .bf .tg{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:700px){
-.bf .cf{padding-bottom:11rem}.bf .cf .hk{width:10rem}
+.bf .cf{padding-bottom:11.5rem}.bf .cf .hk{width:9rem;height:12.5rem;right:-.8rem;bottom:-3rem}
 .bf .so1 .nf i:not(.m){display:none}
 .bf .so1 .nf i{width:calc(var(--u)*var(--w)*1.15)}
 .bf{--u:clamp(8px,2.45vw,16px);--g:1.25rem;--sp:3.4rem}
@@ -220,8 +227,9 @@ html,body{margin:0}
 .bf .bk{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
-.bf .tt .ch,.bf .bfl,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp,.bf .nt,.bf .fl::before,.bf .por,.bf .por::before,.bf .fog{animation:none}
+.bf .tt .ch,.bf .bfl,.bf .lk .tap,.bf .lan,.bf .lan::after,.bf .cmp .cn,.bf .anc,.bf .nt,.bf .fl::before,.bf .por,.bf .por::before,.bf .fog{animation:none}
 .bf .sc{transition-duration:.01s}
+.bf.js .lan img{filter:none}.bf.js .lan::after{opacity:.9}.bf.js .fh.lit .lan img,.bf.js .fh.lit .lan::after{animation:none}
 }
 </style></head>
 <body>
@@ -298,7 +306,7 @@ html,body{margin:0}
     </div>
     <div class="art" aria-hidden="true">
       <div class="ow anc" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-anchor.webp?v=1" alt="" width="487" height="700" loading="lazy"></div>
-      <div class="ow cmp" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass.webp?v=1" alt="" width="700" height="695" loading="lazy"></div>
+      <div class="ow cmp" aria-hidden="true"><img class="cb" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass-base.webp?v=1" alt="" width="700" height="695" loading="lazy"><img class="cn" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass-needle.webp?v=1" alt="" width="700" height="695" loading="lazy"><img class="ct" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bfn-compass-nut.webp?v=1" alt="" width="700" height="695" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -328,9 +336,9 @@ html,body{margin:0}
   <div class="hd rv"><div><span class="lb">Results</span><h2 class="h2">Measured Business &amp; Creative Performance</h2></div></div>
   <p class="rsp rv">Butterfinger leaned into classic mischief with its &ldquo;Nobody lays a finger on my Butterfinger&rdquo; line, updated for a Halloween setting with the Headless Horseman. The spot blends suspense-movie parody with humor. The result? Strong brand recall and solid engagement, proving that nostalgia and clever tone still resonate when refreshed for seasonal storytelling.</p>
   <div class="rg" style="margin-top:calc(var(--u)*3.4)">
-    <article class="rc rv" style="--r:-1.2deg"><span class="rn">Result 1</span><h3>Financial Reversal</h3><p>Prior to launching the BFI creative universe, Butterfinger was suffering from cultural irrelevance and bleeding market share. The BFI campaign structure single-handedly turned around the portfolio from a negative double-digit decline into an initial +15% growth spike, followed by consecutive years of positive growth.</p><div class="src"><span>Sources</span><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 1, Brand Innovators">1</a><a href="https://www.wearepiro.com/bfi-butterfinger-investigators" target="_blank" rel="noopener" aria-label="Source 2, Piro">2</a><a href="https://ca.linkedin.com/in/mark-wakefield-82760520" target="_blank" rel="noopener" aria-label="Source 3, LinkedIn">3</a></div></article>
-    <article class="rc rv" style="--r:.8deg;--d:.1s"><span class="rn">Result 2</span><h3>High Ad Effectiveness Rating</h3><p>The BFI campaign repeatedly secured top marks for effectiveness. The character-driven narrative (&ldquo;Hugh Dunnit&rdquo; and &ldquo;Ali Byes&rdquo;) resulted in incredibly high &ldquo;Fluency&rdquo; scores, meaning audiences instantly recognized the brand and connected with the humor.</p><div class="src"><span>Sources</span><a href="https://system1group.com/ad-of-the-week/86-butterfinger" target="_blank" rel="noopener" aria-label="Source 1, System1 Group">1</a></div></article>
-    <article class="rc rv" style="--r:-.6deg;--d:.2s"><span class="rn">Result 3</span><h3>Audience Expansion</h3><p>The campaign effectively expanded the brand&rsquo;s reach beyond nostalgia, successfully penetrating the highly competitive Millennial Parent (ages 20 to 30) and Gen Z markets across digital platforms like YouTube, Instagram, and Hulu.</p><div class="src"><span>Sources</span><a href="https://candyusa.com/cst/the-rebirth-of-iconic-chocolate-brands/" target="_blank" rel="noopener" aria-label="Source 1, Candy USA">1</a><a href="https://brand-innovators.com/bfi-investigators-return-in-butterfingers-new-halloween-campaign/" target="_blank" rel="noopener" aria-label="Source 2, Brand Innovators">2</a></div></article>
+    <article class="rc rv" style="--r:-1.2deg"><span class="rn">Result 1</span><h3>Financial Reversal</h3><p>Prior to launching the BFI creative universe, Butterfinger was suffering from cultural irrelevance and bleeding market share. The BFI campaign structure single-handedly turned around the portfolio from a negative double-digit decline into an initial +15% growth spike, followed by consecutive years of positive growth.</p></article>
+    <article class="rc rv" style="--r:.8deg;--d:.1s"><span class="rn">Result 2</span><h3>High Ad Effectiveness Rating</h3><p>The BFI campaign repeatedly secured top marks for effectiveness. The character-driven narrative (&ldquo;Hugh Dunnit&rdquo; and &ldquo;Ali Byes&rdquo;) resulted in incredibly high &ldquo;Fluency&rdquo; scores, meaning audiences instantly recognized the brand and connected with the humor.</p></article>
+    <article class="rc rv" style="--r:-.6deg;--d:.2s"><span class="rn">Result 3</span><h3>Audience Expansion</h3><p>The campaign effectively expanded the brand&rsquo;s reach beyond nostalgia, successfully penetrating the highly competitive Millennial Parent (ages 20 to 30) and Gen Z markets across digital platforms like YouTube, Instagram, and Hulu.</p></article>
   </div>
 </section>
 
@@ -385,6 +393,9 @@ var Z=20;
   els.forEach(function(e){io.observe(e)});
   setTimeout(function(){qa('.rv:not(.in)').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<window.innerHeight)e.classList.add('in')})},1800);
 })();
+
+/* lantern lights on when Film 2 scrolls in */
+(function(){var f=q('.fh');if(!f)return;if(!('IntersectionObserver' in window)){f.classList.add('lit');return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){f.classList.add('lit');o.disconnect()}})},{threshold:.2});o.observe(f)})();
 
 /* bouncing title letters */
 var chs=qa('.tt .ch');
