@@ -97,9 +97,21 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 
 
 /* banner */
-.am .ban{position:relative}
-.am .ban img{width:100%;aspect-ratio:1600/592;object-fit:cover}
-.am .ban figcaption{position:absolute;left:var(--g);bottom:calc(var(--u)*1.2);padding:.45em .8em;background:var(--bk);color:var(--lime)}
+/* play along */
+.am .pa{position:relative;isolation:isolate;overflow:hidden;padding:calc(var(--u)*6) 0 calc(var(--u)*6)}
+.am .pabg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.am .pa::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.55),rgba(5,5,5,.78) 45%,rgba(5,5,5,.92))}
+.am .pa .sh{border-color:rgba(255,255,255,.25)}
+.am .pa .sh .mo{color:var(--wh)}
+.am .pgr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);margin:0;padding:0 var(--g);list-style:none}
+.am .pc{min-width:0}
+.am .pc:nth-child(odd) .ph{transform:rotate(-1deg)}.am .pc:nth-child(even) .ph{transform:rotate(.8deg)}
+.am .pdone{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:calc(var(--u)*1) calc(var(--u)*1.6);margin:calc(var(--u)*3) var(--g) 0;padding:calc(var(--u)*1.2) calc(var(--u)*1.6);background:var(--lime);color:var(--bk);text-align:center}
+.am .pdone[hidden]{display:none}
+.am .pdone.on{animation:amPop .5s cubic-bezier(.2,1.6,.4,1)}
+.am .pdone p{margin:0;font:400 calc(var(--u)*1.7)/1.05 var(--an);text-transform:uppercase}
+.am .pdone button{display:inline-flex;align-items:center;gap:.6em;padding:.8em 1.2em;border:0;background:var(--bk);color:var(--lime);font:700 max(11px,calc(var(--u)*.78))/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.am .pdone svg,.am .ft svg{width:1.15em;height:1.15em;flex:none;display:block}
 
 /* films: floating cards */
 .am .fl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:calc(var(--u)*56);gap:calc(var(--u)*3) calc(var(--u)*2.2);padding:0 var(--g);align-items:end;perspective:1400px}
@@ -287,7 +299,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .ft a{background:var(--lime);color:var(--bk)}
 .am .ft button{background:transparent;color:var(--wh);box-shadow:inset 0 0 0 1.5px var(--wh)}
 .am .ft a:hover,.am .ft button:hover{transform:translateY(-2px)}
-.am .ft .mo:last-child{margin-left:auto;color:var(--mut)}
 
 /* tablet and phone */
 @media(max-width:1000px){
@@ -311,7 +322,12 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .role .acc{width:11rem;justify-self:center;margin-top:.6rem}
 
 .am .role .rl{font-size:1rem;line-height:1.6}
-.am .ban img{aspect-ratio:4/3}
+.am .pa{padding:4.5rem 0}
+.am .pgr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--g);gap:1rem;padding:.6rem var(--g) 1rem;scrollbar-width:none}
+.am .pgr::-webkit-scrollbar{display:none}
+.am .pc{flex:0 0 min(70%,16rem);scroll-snap-align:start}
+.am .pdone{margin-top:1.4rem}
+.am .pdone p{font-size:1.5rem}
 .am .fl{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 1rem}
 .am .fi h3{font-size:1.5rem}
 .am .spot{grid-template-columns:1fr;padding:1.5rem;gap:1.6rem}
@@ -344,7 +360,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .f2{transform:none}
 .am .f2 .hd{font-size:1.8rem}
 .am .cl .hd{font-size:1.15rem}
-.am .ft .mo:last-child{margin-left:0;width:100%}
 }
 @media(max-width:560px){
 .am .fl{grid-template-columns:1fr;gap:3rem}
@@ -353,7 +368,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 }
 @media(prefers-reduced-motion:reduce){
 .am .boxw .cut,.am .boxsh,.am .sole img{animation:none}
-.am .st{opacity:1;transform:none;transition:none}.am .st.in .bars i{animation:none;transform:scaleX(1)}.am .emo,.am .pll img,.am .ayb span{transition:none}.am .qz button.no,.am .qb .qr.pop{animation:none}
+.am .st{opacity:1;transform:none;transition:none}.am .st.in .bars i{animation:none;transform:scaleX(1)}.am .emo,.am .pll img,.am .ayb span{transition:none}.am .qz button.no,.am .qb .qr.pop,.am .pdone.on{animation:none}
 .am .tk div,.am .gl::before,.am .gl::after,.am .sub::before{animation:none}
 .am .gl::before,.am .gl::after{display:none}
 .am .tilt,.am .fl .frame,.am .fc>img,.am .f2{transition:none}
@@ -406,9 +421,17 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   </div>
 </section>
 
-<figure class="ban">
-  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1" srcset="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner-sm.webp?v=1 900w, https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1 1600w" sizes="100vw" alt="An Air Max Plus in a sunset orange fade, collaged over infrared red, concrete shards, sparks and chains" width="1600" height="592" loading="lazy" decoding="async">
-</figure>
+<section class="pa" aria-labelledby="amA">
+  <img class="pabg" aria-hidden="true" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1" srcset="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner-sm.webp?v=1 900w, https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-plus-banner.webp?v=1 1600w" sizes="100vw" alt="" width="1600" height="592" loading="lazy" decoding="async">
+  <div class="sh"><div><span class="kk mo">Your turn</span><h2 class="h2 chr" id="amA">Play Along</h2></div><p class="mo">Four stickers from the Stories</p></div>
+  <ol class="pgr">
+      <li class="pc"><div class="ph"><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-1.webp?v=1')"><div class="qb"><p class="qh">What&rsquo;s your first memory of Nike Air?</p><form class="qf"><label class="vh" for="amQ">Your answer</label><input id="amQ" type="text" maxlength="80" placeholder="Type something..." autocomplete="off"><button type="submit">Send</button></form><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>01</b>Question box</p></li>
+      <li class="pc"><div class="ph"><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-tn.webp?v=1')"><div class="qz" role="group" aria-label="Quiz: Which state&rsquo;s sunset inspired the look of the TN?"><p class="qh dark">Which state&rsquo;s sunset inspired the look of the TN?</p><button type="button" data-a="0"><b>A</b>California</button><button type="button" data-a="1" data-ok><b>B</b>Florida</button><button type="button" data-a="0"><b>C</b>Hawaii</button><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>02</b>Quiz</p></li>
+      <li class="pc"><div class="ph"><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-vibe.webp?v=1')"><div class="sl"><p class="qh">What&rsquo;s most your vibe?</p><div class="slb"><label class="vh" for="amV">Slide to rate</label><input id="amV" type="range" min="0" max="100" value="12"><span class="emo" aria-hidden="true">&#128525;</span></div><p class="qr" aria-live="polite">Slide the heart eyes</p></div></div></div><p class="cap mo"><b>03</b>Emoji slider</p></li>
+      <li class="pc"><div class="ph"><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-bw.webp?v=1')"><div class="pll"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-shoe.webp?v=1" alt="" width="700" height="588" loading="lazy" decoding="async"><p class="qh">Cop or drop?</p><div class="plb"><button type="button" data-v="Cop">Cop</button><button type="button" data-v="Drop">Drop</button></div><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>04</b>Poll</p></li>
+  </ol>
+  <div class="pdone" aria-live="polite" hidden><p>Check your answers and see what people said below</p><button type="button" data-see>See the Stories <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></button></div>
+</section>
 
 <section class="sec grid-bg" aria-labelledby="amF">
   <img class="cut cut-model" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-model.webp?v=1" alt="" width="700" height="849" loading="lazy" decoding="async" aria-hidden="true">
@@ -438,7 +461,6 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   <div class="rtabs" role="tablist" aria-label="Story chapters"><button type="button" class="on" data-go="1"><b>1</b> First memories</button><button type="button" data-go="2"><b>2</b> Quizzes</button><button type="button" data-go="3"><b>3</b> Sliders and Add Yours</button><span class="rnav"><button type="button" class="rp" aria-label="Previous stories">&larr;</button><button type="button" class="rn" aria-label="Next stories">&rarr;</button></span></div>
   <ol class="rail" tabindex="0" aria-label="Instagram Stories, scroll sideways">
       <li class="st" data-ch="1"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-1.webp?v=1" alt="Story frame: Tune in 3.26.22, with a question sticker asking what's your first memory of Nike Air, over a red kite and a baby in Air Max" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>1</b>The prompt</p></li>
-      <li class="st live lq" data-ch="1"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-1.webp?v=1')"><div class="qb"><p class="qh">What&rsquo;s your first memory of Nike Air?</p><form class="qf"><label class="vh" for="amQ">Your answer</label><input id="amQ" type="text" maxlength="80" placeholder="Type something..." autocomplete="off"><button type="submit">Send</button></form><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>1</b>Question box <em>Play along</em></p></li>
       <li class="st" data-ch="1"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-2.webp?v=1" alt="Story frame: two follower answers about their first Air Max over a pink Air Max sneaker" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>1</b>Answers</p></li>
       <li class="st" data-ch="1"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-3.webp?v=1" alt="Story frame: follower answers about first Air Max memories over silver Air Max 95s" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>1</b>Answers</p></li>
       <li class="st" data-ch="1"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-4.webp?v=1" alt="Story frame: follower answers about first Air Max memories over a white and red Air Max 97" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>1</b>Answers</p></li>
@@ -447,15 +469,12 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
       <li class="st" data-ch="2"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-7.webp?v=1" alt="Quiz frame asking what Tinker called the Air unit in the sole, with three answer options" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>2</b>The question</p></li>
       <li class="st" data-ch="2"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-8.webp?v=1" alt="Answer frame: The Guts, over a vintage Nike Air ad that reads Nike-Air is not a shoe" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>2</b>The answer</p></li>
       <li class="st" data-ch="2"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-tn.webp?v=1" alt="Quiz Story over an Air Max Plus design sketch: Which state's sunset inspired the look of the TN? California, Florida or Hawaii" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>2</b>TN quiz</p></li>
-      <li class="st live lz" data-ch="2"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-tn.webp?v=1')"><div class="qz" role="group" aria-label="Quiz: Which state&rsquo;s sunset inspired the look of the TN?"><p class="qh dark">Which state&rsquo;s sunset inspired the look of the TN?</p><button type="button" data-a="0"><b>A</b>California</button><button type="button" data-a="1" data-ok><b>B</b>Florida</button><button type="button" data-a="0"><b>C</b>Hawaii</button><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>2</b>Quiz <em>Play along</em></p></li>
       <li class="st" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-9.webp?v=1" alt="Air fact frame: Tinker Hatfield designed the original Air Max model in 1986" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>3</b>Air fact</p></li>
       <li class="st" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-10.webp?v=1" alt="Style tip frame for the 1987 Air Max 1 in white, grey and red" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>3</b>Style tip</p></li>
       <li class="st" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-vibe.webp?v=1" alt="Slider Story: What's most your vibe? ranking the Air Max 1, 90, 95, 97, Plus, VaporMax and Dawn" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>3</b>Vibe slider</p></li>
-      <li class="st live ls" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-vibe.webp?v=1')"><div class="sl"><p class="qh">What&rsquo;s most your vibe?</p><div class="slb"><label class="vh" for="amV">Slide to rate</label><input id="amV" type="range" min="0" max="100" value="12"><span class="emo" aria-hidden="true">&#128525;</span></div><p class="qr" aria-live="polite">Slide the heart eyes</p></div></div></div><p class="cap mo"><b>3</b>Emoji slider <em>Play along</em></p></li>
       <li class="st" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-bw.webp?v=1" alt="Slider Story on an orange shoebox: What's your favorite colorway? for six Air Max BW colorways" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>3</b>BW colorways</p></li>
       <li class="st" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-addyours.webp?v=1" alt="Berlin Story with an Add Yours sticker: Tap in and show us how you wear Nike Air Max, over a low-angle shot of white Air Max" width="640" height="1110" loading="lazy" decoding="async"></div><p class="cap mo"><b>3</b>Add yours</p></li>
-      <li class="st live la" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-addyours.webp?v=1')"><div class="ay"><p class="ayt">Add yours</p><p class="ayq">Tap in and show us how you wear Nike Air Max</p><button type="button" class="ayb" aria-pressed="false"><span>+</span> Add yours</button><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>3</b>Add Yours <em>Play along</em></p></li>
-      <li class="st live lp" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-bw.webp?v=1')"><div class="pll"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-shoe.webp?v=1" alt="" width="700" height="588" loading="lazy" decoding="async"><p class="qh">Cop or drop?</p><div class="plb"><button type="button" data-v="Cop">Cop</button><button type="button" data-v="Drop">Drop</button></div><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>3</b>Poll <em>Play along</em></p></li>
+      <li class="st live la" data-ch="3"><div class="ph"><span class="bars" aria-hidden="true"><i></i></span><div class="lv" style="--bg:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-story-addyours.webp?v=1')"><div class="ay"><p class="ayt">Add yours</p><p class="ayq">Tap in and show us how you wear Nike Air Max</p><button type="button" class="ayb" aria-pressed="false"><span>+</span> Add yours</button><p class="qr" aria-live="polite"></p></div></div></div><p class="cap mo"><b>3</b>Add Yours</p></li>
   </ol>
   <div class="rprog" aria-hidden="true"><i></i></div>
 </div>
@@ -496,9 +515,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </section>
 
 <footer class="ft">
-  <a href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a>
-  <button type="button" data-top>Back to top</button>
-  <span class="mo">Air Max Day &middot; Edition two &middot; 03.26.22</span>
+  <a href="https://www.byninaaustin.com/content"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>Back to Content</a>
 </footer>
 
 </div>
@@ -560,21 +577,24 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   }
   /* question box */
   var qf=am.querySelector('.qf');
-  if(qf)qf.addEventListener('submit',function(e){e.preventDefault();var inp=qf.querySelector('input'),out=qf.parentNode.querySelector('.qr'),v=(inp.value||'').trim();if(!v){inp.focus();return}out.textContent='\u201C'+v+'\u201D, sent. That\u2019s the kind of memory that ran in the Stories.';out.classList.remove('pop');void out.offsetWidth;out.classList.add('pop');inp.value=''});
+  if(qf)qf.addEventListener('submit',function(e){e.preventDefault();var inp=qf.querySelector('input'),out=qf.parentNode.querySelector('.qr'),v=(inp.value||'').trim();if(!v){inp.focus();return}out.textContent='\u201C'+v+'\u201D, sent. That\u2019s the kind of memory that ran in the Stories.';out.classList.remove('pop');void out.offsetWidth;out.classList.add('pop');inp.value='';played()});
   /* quiz */
   var qz=am.querySelector('.qz');
-  if(qz){var done=false;Array.prototype.forEach.call(qz.querySelectorAll('button'),function(b){b.addEventListener('click',function(){if(done)return;var ok=b.hasAttribute('data-ok'),out=qz.querySelector('.qr');if(ok){done=true;b.classList.add('ok');out.textContent='Florida. The TN gradient came from a Florida sunset.'}else{b.classList.remove('no');void b.offsetWidth;b.classList.add('no');out.textContent='Not quite. Try again.'}})})}
+  if(qz){var done=false;Array.prototype.forEach.call(qz.querySelectorAll('button'),function(b){b.addEventListener('click',function(){if(done)return;var ok=b.hasAttribute('data-ok'),out=qz.querySelector('.qr');if(ok){done=true;b.classList.add('ok');out.textContent='Florida. The TN gradient came from a Florida sunset.';played()}else{b.classList.remove('no');void b.offsetWidth;b.classList.add('no');out.textContent='Not quite. Try again.'}})})}
   /* emoji slider */
   var sl=am.querySelector('.sl input');
-  if(sl){var box=sl.parentNode,out=box.parentNode.querySelector('.qr');var upd=function(){var v=+sl.value;box.style.setProperty('--v',v+'%');box.style.setProperty('--s',(1+v/100*.9).toFixed(2))};sl.addEventListener('input',upd);sl.addEventListener('change',function(){var v=+sl.value;out.textContent=v>80?'Max vibe. Locked in at '+v+'%':v>40?'Solid vibe at '+v+'%':'Warming up at '+v+'%'});upd()}
+  if(sl){var box=sl.parentNode,out=box.parentNode.querySelector('.qr');var upd=function(){var v=+sl.value;box.style.setProperty('--v',v+'%');box.style.setProperty('--s',(1+v/100*.9).toFixed(2))};sl.addEventListener('input',upd);sl.addEventListener('change',function(){var v=+sl.value;out.textContent=v>80?'Max vibe. Locked in at '+v+'%':v>40?'Solid vibe at '+v+'%':'Warming up at '+v+'%';played()});upd()}
   /* add yours */
   var ay=am.querySelector('.ayb');
   if(ay)ay.addEventListener('click',function(){var on=ay.getAttribute('aria-pressed')!=='true';ay.setAttribute('aria-pressed',on?'true':'false');ay.lastChild.textContent=on?' Added':' Add yours';ay.parentNode.querySelector('.qr').textContent=on?'Your fit just joined the chain':''});
   /* cop or drop poll */
   var pl=am.querySelector('.pll');
-  if(pl)Array.prototype.forEach.call(pl.querySelectorAll('.plb button'),function(b){b.addEventListener('click',function(){Array.prototype.forEach.call(pl.querySelectorAll('.plb button'),function(x){x.classList.toggle('on',x===b)});var v=b.getAttribute('data-v');pl.classList.remove('cop','drop');pl.classList.add(v.toLowerCase());pl.querySelector('.qr').textContent=v==='Cop'?'Cop. Straight to the cart.':'Drop. Next pair up.'})});
-  var top=am.querySelector('[data-top]');
-  if(top)top.addEventListener('click',function(){window.scrollTo({top:Math.max(0,am.getBoundingClientRect().top+(window.pageYOffset||0)),behavior:reduce?'auto':'smooth'})});
+  if(pl)Array.prototype.forEach.call(pl.querySelectorAll('.plb button'),function(b){b.addEventListener('click',function(){Array.prototype.forEach.call(pl.querySelectorAll('.plb button'),function(x){x.classList.toggle('on',x===b)});var v=b.getAttribute('data-v');pl.classList.remove('cop','drop');pl.classList.add(v.toLowerCase());pl.querySelector('.qr').textContent=v==='Cop'?'Cop. Straight to the cart.':'Drop. Next pair up.';played()})});
+  /* play along: after any completed sticker, point to the Stories */
+  var pd=am.querySelector('.pdone');
+  function played(){if(!pd||!pd.hidden)return;pd.hidden=false;pd.classList.add('on')}
+  var see=am.querySelector('[data-see]');
+  if(see)see.addEventListener('click',function(){var t=am.querySelector('.ss');if(t)window.scrollTo({top:t.getBoundingClientRect().top+(window.pageYOffset||0)-20,behavior:reduce?'auto':'smooth'})});
 })();
 </script>
 </body></html>
