@@ -8,7 +8,7 @@ A free first portfolio site or portfolio makeover, offered as a creative exchang
 - `assets/`: illustrations used as accents
 
 ## Where it runs
-- **Netlify:** deploys this folder as its own site (Base directory `giveaway`, see `netlify.toml`).
+- **Netlify:** deploys this folder as its own site (set by `netlify.toml` at the repo root, which publishes only this folder).
 - **byninaaustin.com:** `loaders/portfolio-giveaway.loader.html` pulls the same files into a Squarespace Code Block.
 
 ## Applications
