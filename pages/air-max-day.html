@@ -199,6 +199,22 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .cl a:hover{background:var(--lime);color:var(--bk);padding-left:calc(var(--u)*1)}
 .am .cl a:hover .mo{color:var(--bk)}
 
+/* textures and cutouts */
+.am .tex{isolation:isolate}
+.am .tex::before{content:'';position:absolute;inset:0;z-index:-1;background-size:cover;background-position:50% 50%;opacity:.16;filter:grayscale(.2) contrast(1.1);-webkit-mask:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);pointer-events:none}
+.am .tex-charm::before{background-image:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-tex-charm.webp?v=1");background-position:70% 40%}
+.am .tex-heel::before{background-image:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-tex-heel.webp?v=1");background-position:40% 60%;opacity:.12}
+.am .cut{position:absolute;z-index:2;pointer-events:none;height:auto;max-width:none;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*2) rgba(0,0,0,.6))}
+.am .cut-model{right:calc(var(--g) - var(--u)*1);top:calc(var(--u)*13);width:calc(var(--u)*30)}
+.am .cut-shoe{right:calc(var(--g) - var(--u)*2);top:calc(var(--u)*1.5);width:calc(var(--u)*24);transform:rotate(-8deg)}
+.am .ugc .sh,.am .ugc .ugcl{position:relative;z-index:3}
+.am .ugc .ugcl{max-width:calc(var(--u)*40)}
+.am .boxw{position:absolute;z-index:2;right:var(--g);top:calc(var(--u)*-1);width:calc(var(--u)*21);pointer-events:none}
+.am .boxw .cut{position:relative;width:100%;transform-origin:50% 80%;animation:amBox 5.5s ease-in-out infinite}
+.am .boxsh{display:block;width:70%;height:calc(var(--u)*1.2);margin:calc(var(--u)*-.6) auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(92,255,59,.35),transparent);animation:amBoxSh 5.5s ease-in-out infinite}
+@keyframes amBox{0%,100%{transform:translateY(0) rotate(-4deg)}25%{transform:translateY(calc(var(--u)*-1.4)) rotate(2deg)}50%{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}62%{transform:translateY(calc(var(--u)*-1.8)) rotate(5deg) scale(1.03)}80%{transform:translateY(calc(var(--u)*-.6)) rotate(-2deg)}}
+@keyframes amBoxSh{0%,100%{transform:scaleX(1);opacity:1}25%,62%{transform:scaleX(.72);opacity:.55}}
+.am .pr .sh{position:relative;z-index:3}
 /* footer */
 .am .ft{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.2);align-items:center;padding:calc(var(--u)*4) var(--g) calc(var(--u)*5)}
 .am .ft a,.am .ft button{display:inline-flex;align-items:center;gap:.6em;padding:.9em 1.4em;border:0;font:700 max(11px,calc(var(--u)*.8))/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .2s}
@@ -235,6 +251,10 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .spot{grid-template-columns:1fr;padding:1.5rem;gap:1.6rem}
 .am .spot .img{max-width:12rem}
 .am .spot .reel{max-width:15rem}
+.am .cut-model{position:relative;display:block;right:auto;top:auto;width:min(17rem,70cqw);margin:2.4rem auto 0}
+.am .cut-shoe{width:7.5rem;right:-1.4rem;top:-1.2rem}
+.am .boxw{width:5.6rem;right:.4rem;top:-.6rem}
+.am .pr .sh{padding-right:5.6rem}
 .am .evo{margin:3.4rem var(--g) 0;padding:.4rem}
 .am .spot h3{font-size:3rem}
 .am .zq{font-size:2.1rem}
@@ -266,6 +286,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 .am .sr li{flex-basis:66%}
 }
 @media(prefers-reduced-motion:reduce){
+.am .boxw .cut,.am .boxsh{animation:none}
 .am .tk div,.am .gl::before,.am .gl::after,.am .sub::before{animation:none}
 .am .gl::before,.am .gl::after{display:none}
 .am .tilt,.am .fl .frame,.am .fc>img,.am .f2{transition:none}
@@ -292,7 +313,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   
 </header>
 
-<section class="sec" aria-labelledby="amD">
+<section class="sec tex tex-charm" aria-labelledby="amD">
   <div class="sh"><div><span class="kk mo">The case</span><h2 class="h2 chr" id="amD">Dossier</h2></div><p class="mo">03 / 26 / 22</p></div>
   <div class="pn">
     <article class="pnl"><p class="mo"><span>01</span><span>The moment</span></p><div class="in">
@@ -323,16 +344,16 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </figure>
 
 <section class="sec grid-bg" aria-labelledby="amF">
-  <div class="sh"><div><span class="kk mo">Press play</span><h2 class="h2 chr" id="amF">The Evolution Of Air</h2></div><p class="mo">Film 01 plays up top</p></div>
+  <img class="cut cut-model" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-model.webp?v=1" alt="" width="700" height="849" loading="lazy" decoding="async" aria-hidden="true">
+  <div class="sh"><div><span class="kk mo">Press play</span><h2 class="h2 chr" id="amF">The Evolution Of Air</h2></div></div>
   <ol class="fl">
     <li><div class="frame"><button class="fc" type="button" data-v="738012071" data-h="999323921b" data-t="35 in 35" aria-label="Play 35 in 35, 34 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-35.webp?v=1" alt="" width="652" height="880" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>02</b><span>00:34 / 9:16</span></p><h3>35 in 35</h3></div></li>
     <li><div class="frame"><button class="fc" type="button" data-v="737999431" data-h="13752f191c" data-t="Juliana | On Air" aria-label="Play Juliana, On Air, with Nike footwear designer Juliana Sagat, 51 seconds"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana-thumb.webp?v=1" alt="" width="640" height="1138" loading="lazy" decoding="async"><span class="pl" aria-hidden="true">Play</span></button></div>
       <div class="fi"><p class="mo"><b>03</b><span>00:51 / 9:16</span></p><h3>Juliana | On Air</h3><p class="who mo">ft. Juliana Sagat</p></div></li>
   </ol>
-  <figure class="evo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-evolution-of-air.webp?v=1" alt="The Evolution of Visible Air: Air units and outsoles from the Air Max 1 (1987), 90, 180, 93, 95, 97, Plus, 360 and Air Max 2015, from Air revolution begins to maximum air, maximum flexibility" width="1160" height="653" loading="lazy" decoding="async"></figure>
   <aside class="spot" aria-labelledby="amJ">
-    <div class="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana.webp?v=1" alt="Juliana Sagat smiling, holding an Air Max 90 on its box" width="900" height="928" loading="lazy" decoding="async"></div>
+    <div class="img"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-juliana-portrait.webp?v=1" alt="Portrait of Nike footwear designer Juliana Sagat" width="640" height="640" loading="lazy" decoding="async"></div>
     <div>
       <p class="mo">On Air, the designer</p>
       <h3 id="amJ" class="chr">Juliana Sagat</h3>
@@ -343,7 +364,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
   </aside>
 </section>
 
-<section class="sec ss" aria-labelledby="amS">
+<section class="sec ss tex tex-heel" aria-labelledby="amS">
   <div class="sh"><div><span class="kk mo">Owned channels</span><h2 class="h2 chr" id="amS">The Stories</h2></div><p class="mo">Interactive Stories</p></div>
   <p class="zq">Q: What&rsquo;s your <span>first memory</span> of Nike Air?</p>
   <p class="gk mo"><span><b>1</b> First memories</span><span><b>2</b> Quiz</span><span><b>3</b> Air facts</span></p>
@@ -375,6 +396,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </figure>
 
 <section class="sec ugc" aria-labelledby="amU">
+  <img class="cut cut-shoe" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-shoe.webp?v=1" alt="" width="700" height="588" loading="lazy" decoding="async" aria-hidden="true">
   <div class="sh"><div><span class="kk mo">Show us your Air</span><h2 class="h2 chr" id="amU">Your City</h2></div><p class="mo">UGC on @nikesportswear</p></div>
   <p class="ugcl">&ldquo;Show Us Your Air&rdquo; turned Nike&rsquo;s feeds into a multi-platform gallery. On March 26, community content tags, curated with local boutiques and Nike partners, invited fans to post their collections, unboxings and on-foot grids. Their looks were repurposed into city-tagged posts that sent people to shop the collection on Instagram.</p>
   <div class="ug">
@@ -386,6 +408,7 @@ position:relative;overflow:hidden;container-type:inline-size;background:var(--bk
 </section>
 
 <section class="sec pr" aria-labelledby="amP">
+  <div class="boxw" aria-hidden="true"><img class="cut cut-box" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/am-cut-box.webp?v=1" alt="" width="800" height="1000" loading="lazy" decoding="async"><span class="boxsh"></span></div>
   <div class="sh"><div><h2 class="h2 chr" id="amP">In the Press</h2></div><p class="mo">07 clippings</p></div>
   <div class="pg">
     <a class="f2" href="https://www.collater.al/en/air-max-day-2022-interview-juliana-sagat-style/" target="_blank" rel="noopener">
