@@ -555,7 +555,20 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
   var rr=root.querySelector('.rr');
   if(!rr)return;
   rr.classList.add('js');
+  /*hdrfix*/
   var win=window;
+  (function(){
+    var nav=rr.querySelector('nav');if(!nav)return;
+    var d=win.document;
+    function hdr(){var c=d.querySelectorAll('#header, header, .header, [data-nc-group="top"]');for(var i=0;i<c.length;i++){var el=c[i];if(rr.contains(el))continue;var r=el.getBoundingClientRect();if(r.height>20&&r.width>200)return el}return null}
+    function fit(){
+      rr.style.paddingTop='';
+      var h=hdr();if(!h)return;
+      var hb=h.getBoundingClientRect().bottom,nt=nav.getBoundingClientRect().top,need=Math.ceil(hb-nt+16);
+      if(need>0&&need<400)rr.style.paddingTop=need+'px';
+    }
+    fit();win.addEventListener('load',fit);win.addEventListener('resize',fit);win.setTimeout(fit,800);win.setTimeout(fit,2000);
+  })();
   var rv=[].slice.call(rr.querySelectorAll('.rv'));
   function show(el){el.classList.add('on')}
   if('IntersectionObserver' in win){
