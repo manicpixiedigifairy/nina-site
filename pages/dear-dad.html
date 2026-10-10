@@ -173,6 +173,9 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .crd{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*8)}
 .dd .crd div{background:var(--red);color:var(--cream);padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.2);min-height:calc(var(--u)*9);display:flex;align-items:flex-end}
 .dd .crd b{font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*2.7);line-height:.98;-webkit-text-stroke:calc(var(--u)*.04) currentColor}
+.dd .role h2 .c{font-size:calc(var(--u)*6.2)}
+.dd .pls{grid-column:1/13;list-style:none;margin:calc(var(--u)*3.2) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*1)}
+.dd .pls li{padding:calc(var(--u)*.75) calc(var(--u)*1.7);border:1px solid rgba(250,246,238,.55);border-radius:999px;font-family:var(--bd);font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:max(9px,calc(var(--u)*.85));line-height:1.3;color:var(--cream)}
 /* footer */
 .dd .ft{position:relative;background:var(--red);color:var(--cream);padding:calc(var(--u)*8) var(--g) calc(var(--u)*7)}
 .dd .ft .end{font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*13);line-height:.88;-webkit-text-stroke:calc(var(--u)*.08) currentColor}
@@ -212,6 +215,8 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .awd{grid-template-columns:1fr;row-gap:calc(var(--u)*1.6)}
 .dd .aw b{font-size:calc(var(--u)*3.4)}
 .dd .crd b{font-size:calc(var(--u)*2.9)}
+.dd .role h2 .c{font-size:calc(var(--u)*5.4)}
+.dd .pls li{font-size:max(9px,calc(var(--u)*1.15))}
 .dd .ft .end{font-size:calc(var(--u)*10)}
 .dd .ft a{font-size:calc(var(--u)*2.8)}
 .dd .ser{display:block;margin-top:calc(var(--u)*6)}
@@ -252,6 +257,8 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .stp .vl{font-size:calc(var(--u)*1.7)}
 .dd .stp .vl i{font-size:max(8px,calc(var(--u)*.9))}
 .dd .ft .end{font-size:calc(var(--u)*8.6)}
+.dd .role h2 .c{font-size:calc(var(--u)*3.9);overflow-wrap:anywhere}
+.dd .pls li{font-size:max(9px,calc(var(--u)*1.3))}
 .dd .ft .row{flex-direction:column;align-items:stretch}
 .dd .ft a{justify-content:center;font-size:calc(var(--u)*2.3);white-space:nowrap}
 }
@@ -364,7 +371,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 
 <section class="st th-d role" id="role" data-th="d">
   <div class="gr">
-    <div class="hd rv"><h2><span class="k">My Role</span><span class="c">Credits</span></h2></div>
+    <div class="hd rv"><h2><span class="k">My Role</span><span class="c">&amp; Responsibilities</span></h2></div>
     <div class="tx rv" style="--d:.15s"><p class="bdy">As Associate Creative Director, I <mark>originated the campaign concept</mark> and led creative across the film series and the TikTok microcreator campaign. I directed storytelling tone and created initial treatments shared with filmmaker partners.</p></div>
     <div class="crd">
       <div class="rv"><b>Original Concept</b></div>
@@ -372,6 +379,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
       <div class="rv" style="--d:.2s"><b>Directed Storytelling Tone</b></div>
       <div class="rv" style="--d:.3s"><b>Created Initial Treatments</b></div>
     </div>
+    <ul class="pls"><li class="rv" style="--d:0.00s">Post-production Management</li><li class="rv" style="--d:0.05s">Director Briefing</li><li class="rv" style="--d:0.10s">Campaign Narrative Arc</li><li class="rv" style="--d:0.15s">Long-form Content</li><li class="rv" style="--d:0.20s">Docu-style Interview Capture</li><li class="rv" style="--d:0.25s">Editorial Supervision</li><li class="rv" style="--d:0.30s">TikTok Media Partnership</li></ul>
   </div>
 </section>
 
