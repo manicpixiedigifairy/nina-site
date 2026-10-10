@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Dear Dad, a Walmart Father's Day campaign built around a livestream gaming event and an ABFF short film series, reclaiming the narrative of Black fatherhood through play, pride, and film.">
+<meta name="description" content="Dear Dad, a Walmart Father's Day campaign celebrating modern fatherhood through an ABFF short film series and a TikTok UGC campaign, built to earn affinity and protect share of voice.">
 <title>Dear Dad</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300..600&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0}
-.dd{display:block;position:relative;overflow:hidden;overflow:clip;container-type:inline-size;background:#16040A;
---u:clamp(11px,1.1111vw,28px);--W:100vw;--ox:#16040A;--ox2:#2A0910;--red:#C41E2F;--red2:#A5192A;--cream:#FAF6EE;--burg:#3B0710;--pk:#E58F98;
+.dd{display:block;position:relative;overflow:hidden;overflow:clip;container-type:inline-size;background:#001E60;
+--u:clamp(11px,1.1111vw,28px);--W:100vw;--ox:#001E60;--ox2:#001548;--red:#0053E2;--red2:#0046BD;--cream:#FAF6EE;--burg:#00123A;--y:#FFC220;
 --g:calc(var(--u)*6.5);--sp:calc(var(--u)*10);
---disp:"Instrument Serif","Bodoni Moda",Georgia,"Times New Roman",serif;--bd:Outfit,"Helvetica Neue",Arial,sans-serif;
+--scr:"Pinyon Script","Snell Roundhand","Apple Chancery","Brush Script MT",cursive;--disp:"Instrument Serif","Bodoni Moda",Georgia,"Times New Roman",serif;--bd:Outfit,"Helvetica Neue",Arial,sans-serif;
 font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-synthesis:none}
 @supports (width:1cqw){.dd{--u:clamp(11px,1.1111cqw,28px);--W:100cqw}}
 .dd *,.dd *::before,.dd *::after{box-sizing:border-box}
@@ -20,20 +20,21 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .disp{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.002em;-webkit-text-stroke:calc(var(--u)*.045) currentColor}
 /* rail */
 .dd .rail{position:sticky;top:0;height:0;z-index:60}
-.dd .rail .pr{position:absolute;left:0;top:0;height:calc(var(--u)*.24);width:calc(var(--p,0)*100%);background:#FF6B7A}
+.dd .rail .pr{position:absolute;left:0;top:0;height:calc(var(--u)*.24);width:calc(var(--p,0)*100%);background:#FFC220}
 .dd .rail .in{position:absolute;left:calc(var(--u)*1.4);top:50vh;transform:translateY(-50%)}
 .dd .rail nav{display:flex;flex-direction:column;gap:calc(var(--u)*1.7);align-items:center}
 .dd .rail nav a{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--bd);font-weight:500;font-size:max(9px,calc(var(--u)*.7));letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;color:var(--cream);opacity:.5;transition:opacity .4s,color .4s}
 .dd .rail[data-th=l] nav a{color:var(--burg)}
 .dd .rail nav a:hover,.dd .rail nav a.on{opacity:1}
 .dd .rail[data-th=l] nav a.on{color:var(--red)}
-.dd .rail[data-th=r] nav a.on{color:var(--ox)}
+.dd .rail[data-th=r] nav a.on{color:var(--y)}
 /* hero */
 .dd .hero{position:relative;overflow:hidden;height:calc(var(--u)*64);background:var(--ox)}
-.dd .hero .ph{position:absolute;left:0;right:0;top:calc(var(--u)*17);bottom:0;overflow:hidden;animation:fIn 2.4s ease both}
+.dd .hero .ph{isolation:isolate;position:absolute;left:0;right:0;top:calc(var(--u)*17);bottom:0;overflow:hidden;animation:fIn 2.4s ease both}
 .dd .hero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 6%;filter:grayscale(1) contrast(1.15) brightness(1.15);animation:fZoom 3.2s cubic-bezier(.2,.7,.2,1) both}
-.dd .hero .ph::before{content:"";position:absolute;inset:0;z-index:1;background:#B3182B;mix-blend-mode:multiply}
-.dd .hero .ph::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,var(--ox) 0,rgba(22,4,10,0) 30%,rgba(22,4,10,.55) 52%,rgba(22,4,10,.96) 82%)}
+.dd .hero .ph::before{content:"";position:absolute;inset:0;z-index:1;background:#0053E2;mix-blend-mode:multiply}
+.dd .hero .ph .sh{position:absolute;inset:0;z-index:1;background:#001E60;mix-blend-mode:screen}
+.dd .hero .ph::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,var(--ox) 0,rgba(0,30,96,0) 30%,rgba(0,30,96,.55) 52%,rgba(0,30,96,.96) 82%)}
 @keyframes fIn{from{opacity:0}to{opacity:1}}
 @keyframes fZoom{from{transform:scale(1.12)}to{transform:none}}
 .dd .hero .tag{position:absolute;z-index:4;left:0;right:0;top:calc(var(--u)*6.2);text-align:center;font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*2.7);line-height:1;letter-spacing:.01em;-webkit-text-stroke:calc(var(--u)*.035) currentColor;opacity:0;animation:fUpS 1.2s ease 1.5s forwards}
@@ -46,7 +47,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .tt .gap{display:inline-block;width:.2em}
 .dd .tt i{display:inline-block;font-style:normal;transform:translateY(112%);animation:fRise 1.5s cubic-bezier(.2,.8,.15,1) forwards;animation-delay:calc(.5s + var(--k)*.075s)}
 .dd .tt i em{font-style:italic}
-.dd .tt i.cm{color:#FF4A5E;position:relative;top:-.17em}
+.dd .tt i.cm{color:#FFC220;position:relative;top:-.17em}
 @keyframes fRise{to{transform:none}}
 /* ticker */
 .dd .tk{position:relative;background:var(--red);color:var(--cream);overflow:hidden;padding:calc(var(--u)*1.7) 0}
@@ -64,58 +65,121 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .hd{grid-column:1/8}
 .dd .tx{grid-column:8/13;padding-top:calc(var(--u)*5)}
 .dd h2 .k{display:block;margin-bottom:calc(var(--u)*1.2);color:var(--red);font-family:var(--bd);font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:max(10px,calc(var(--u)*.85))}
-.dd .th-d h2 .k{color:#FF5A6C}
+.dd .th-d h2 .k{color:#FFC220}
 .dd .th-r h2 .k{color:var(--cream);opacity:.8}
 .dd h2 .c{display:block;font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:calc(var(--u)*8.6);line-height:.9;letter-spacing:.002em;-webkit-text-stroke:calc(var(--u)*.06) currentColor}
 .dd .bdy{font-size:calc(var(--u)*1.35);line-height:1.62;font-weight:300;max-width:calc(var(--u)*34)}
 .dd .bdy mark{background:none;color:inherit;font-weight:500;padding:0}
-.dd .th-l .bdy{color:#2b0610}
+.dd .th-l .bdy{color:#0A1738}
 /* what */
 .dd .cred{grid-column:1/13;margin-top:calc(var(--u)*9)}
-.dd .cred .cap{display:block;color:#FF5A6C}
+.dd .cred .cap{display:block;color:#FFC220}
 .dd .cred .nm2{margin-top:calc(var(--u)*1.2);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 calc(var(--u)*1.8);font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*5.6);line-height:1;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
-.dd .cred .nm2 em{font-style:italic;color:#FF5A6C}
+.dd .cred .nm2 em{font-style:italic;color:#FFC220}
 .dd .cred .rl{margin-top:calc(var(--u)*1.6);opacity:.85}
 .dd .cred .sp{margin-top:calc(var(--u)*.6);opacity:.65}
 .dd .prog{grid-column:1/13;margin-top:calc(var(--u)*10)}
-.dd .prog .cap{display:block;color:#FF5A6C}
+.dd .prog .cap{display:block;color:#FFC220}
 .dd .prog h3{margin-top:calc(var(--u)*1);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*5.2);line-height:.95;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
 .dd .films{grid-column:1/13;margin-top:calc(var(--u)*5)}
-.dd .fm{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:end;margin-top:calc(var(--u)*7)}
-.dd .fm .pic{grid-column:1/8;position:relative;overflow:hidden;aspect-ratio:16/9;background:#000}
-.dd .fm .cp{grid-column:9/13;padding-bottom:calc(var(--u)*.4)}
-.dd .fm.rev .pic{grid-column:6/13;grid-row:1}
-.dd .fm.rev .cp{grid-column:1/5;grid-row:1;text-align:right}
-.dd .fm .pic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(1.1);transition:filter .8s,transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.dd .fm .pic::after{content:"";position:absolute;inset:0;background:#B3182B;mix-blend-mode:multiply;transition:opacity .8s;pointer-events:none}
+.dd .fm{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:center;margin-top:calc(var(--u)*7)}
+.dd .fm .pic{grid-column:1/7;position:relative;overflow:hidden;aspect-ratio:16/9;background:#000}
+.dd .fm .cp{grid-column:8/13;padding-bottom:calc(var(--u)*.4)}
+.dd .fm.rev .pic{grid-column:7/13;grid-row:1}
+.dd .fm.rev .cp{grid-column:1/6;grid-row:1;text-align:right}
+.dd .fm .pic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(1.5);transition:filter .8s,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.dd .fm .pic::after{content:"";position:absolute;inset:0;background:#0053E2;mix-blend-mode:multiply;transition:opacity .8s;pointer-events:none}
 .dd .fm:hover .pic img{filter:none;transform:scale(1.03)}
 .dd .fm:hover .pic::after{opacity:0}
-.dd .fm .no{display:block;color:#FF5A6C}
+.dd .fm .no{display:block;color:#FFC220}
 .dd .fm h4{margin-top:calc(var(--u)*.6);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*5.2);line-height:.92;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
 .dd .fm p{margin-top:calc(var(--u)*1);font-weight:300;font-size:calc(var(--u)*1.3);opacity:.85}
-/* where */
-.dd .chn{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*8)}
-.dd .chn div{padding-top:calc(var(--u)*1.6);border-top:1px solid rgba(59,7,16,.35)}
-.dd .chn .cap{display:block;color:var(--red)}
-.dd .chn b{display:block;margin-top:calc(var(--u)*.8);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*3.6);line-height:1;-webkit-text-stroke:calc(var(--u)*.045) currentColor}
 /* why */
-.dd .stz{grid-column:1/13;margin-top:calc(var(--u)*5);font-family:var(--disp);text-transform:uppercase;font-weight:400;line-height:.86;font-size:calc(var(--u)*15);color:var(--cream);-webkit-text-stroke:calc(var(--u)*.08) currentColor}
+.dd .stz{grid-column:1/13;margin-top:calc(var(--u)*5);font-family:var(--disp);text-transform:uppercase;font-weight:400;line-height:.86;font-size:calc(var(--u)*13);color:var(--cream);-webkit-text-stroke:calc(var(--u)*.08) currentColor}
 .dd .stz span{display:block;white-space:nowrap}
-.dd .stz span:nth-child(2){padding-left:calc(var(--u)*10);color:var(--ox);-webkit-text-stroke:0}
+.dd .stz span:nth-child(2){padding-left:calc(var(--u)*6);color:var(--ox);-webkit-text-stroke:0}
 .dd .stz span:nth-child(2) em{font-style:italic}
-.dd .stz span:nth-child(3){padding-left:calc(var(--u)*20)}
+.dd .stz span:nth-child(3){padding-left:calc(var(--u)*14)}
 .dd .tx2{grid-column:7/13;margin-top:calc(var(--u)*6)}
 .dd .tx2 .bdy{max-width:none}
+/* series + panel */
+.dd .ser{grid-column:1/13;margin-top:calc(var(--u)*8);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:start}
+.dd .ser .pic{grid-column:1/8;position:relative;overflow:hidden;aspect-ratio:16/9;background:#0053E2}
+.dd .ser .pic img{width:100%;height:100%;object-fit:cover}
+.dd .ser .cp{grid-column:8/13;padding-left:calc(var(--u)*1.2)}
+.dd .ser .more{grid-column:1/13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*4)}
+.dd .ser .more p{grid-column:span 6;font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
+.dd .ser .more p:nth-child(2){grid-column:8/13}
+.dd .ser .cp .cap{display:block;color:var(--y)}
+.dd .ser .cp h3{margin-top:calc(var(--u)*.8);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*5.2);line-height:.95;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
+.dd .ser .cp p{margin-top:calc(var(--u)*1.2);font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
+.dd .fm .pic{display:block}
+.dd .fm .go{position:absolute;left:calc(var(--u)*1.4);bottom:calc(var(--u)*1.4);z-index:3;width:calc(var(--u)*4.4);height:calc(var(--u)*4.4);border-radius:50%;background:var(--y);display:grid;place-items:center;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.dd .fm:hover .go{transform:scale(1.12)}
+.dd .fm .go svg{width:34%;height:auto;margin-left:6%}
+.dd .fm .bt{display:inline-flex;align-items:center;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.8);padding:calc(var(--u)*.9) calc(var(--u)*2.2);border:0;background:transparent;color:var(--y);box-shadow:inset 0 0 0 calc(var(--u)*.14) var(--y);cursor:pointer;font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*1.9);line-height:1.2;-webkit-text-stroke:calc(var(--u)*.03) currentColor;transition:background .35s,color .35s}
+.dd .fm .bt:hover{background:var(--y);color:var(--ox)}
+.dd .fm .bt svg{width:calc(var(--u)*1);height:auto;flex:none}
+.dd .fm .by{display:block;margin-top:calc(var(--u)*.8);opacity:.7}
+/* tiktok */
+.dd .ugcs{background-color:#F2EADA;color:var(--burg);position:relative;overflow:hidden;overflow:clip}
+.dd .ugcs::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .22 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E")}
+.dd .ugcs>*{position:relative}
+.dd .scr{font-family:var(--scr);font-weight:400;text-transform:none;letter-spacing:0;line-height:1}
+.dd .ugcs h2 .c{font-size:calc(var(--u)*6.7)}
+.dd .ugcs h2 .c .scr{display:block;margin-top:calc(var(--u)*.6);font-size:calc(var(--u)*4.6);color:var(--red);-webkit-text-stroke:0}
+.dd .ugc{grid-column:1/13;margin-top:calc(var(--u)*6)}
+.dd .ugc .ctl{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*2);margin-bottom:calc(var(--u)*2)}
+.dd .ugc .nt{display:flex;align-items:center;gap:calc(var(--u)*1);font-size:calc(var(--u)*3);color:var(--red)}
+.dd .ugc .nt svg{width:calc(var(--u)*4.4);height:auto;flex:none;color:var(--red)}
+.dd .ugc .nt.r{color:var(--burg);opacity:.85}
+.dd .board{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:calc(var(--u)*1.2);row-gap:calc(var(--u)*2.2);padding:calc(var(--u)*1.2) 0 calc(var(--u)*2)}
+.dd .stp{--m:calc(var(--u)*.7);--r:calc(var(--u)*.34);--s:calc(var(--u)*1.1);position:relative;display:block;rotate:var(--rt,0deg);translate:0 var(--ty,0);filter:drop-shadow(0 calc(var(--u)*.3) calc(var(--u)*.55) rgba(40,24,6,.34));transition:rotate .5s cubic-bezier(.2,.7,.2,1),scale .5s cubic-bezier(.2,.7,.2,1);z-index:1}
+.dd .stp:hover,.dd .stp:focus-visible{rotate:0deg;scale:1.07;z-index:5}
+.dd .stp .sp{display:block;background:#FDFBF5;padding:calc(var(--u)*1.1) calc(var(--u)*1.1) calc(var(--u)*.4);-webkit-mask:linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--m)) calc(100% - 2*var(--m)) no-repeat,radial-gradient(circle at 50% 0,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 0/var(--s) var(--m) repeat-x,radial-gradient(circle at 50% 100%,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 100%/var(--s) var(--m) repeat-x,radial-gradient(circle at 0 50%,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 0/var(--m) var(--s) repeat-y,radial-gradient(circle at 100% 50%,#0000 var(--r),#000 calc(var(--r) + .5px)) 100% 0/var(--m) var(--s) repeat-y;mask:linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--m)) calc(100% - 2*var(--m)) no-repeat,radial-gradient(circle at 50% 0,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 0/var(--s) var(--m) repeat-x,radial-gradient(circle at 50% 100%,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 100%/var(--s) var(--m) repeat-x,radial-gradient(circle at 0 50%,#0000 var(--r),#000 calc(var(--r) + .5px)) 0 0/var(--m) var(--s) repeat-y,radial-gradient(circle at 100% 50%,#0000 var(--r),#000 calc(var(--r) + .5px)) 100% 0/var(--m) var(--s) repeat-y}
+.dd .stp .im{display:block;position:relative;aspect-ratio:3/4;overflow:hidden;background:#00123A}
+.dd .stp img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.dd .stp:hover img{transform:scale(1.06)}
+.dd .stp .vl{display:flex;justify-content:space-between;align-items:center;padding:calc(var(--u)*.55) calc(var(--u)*.1) calc(var(--u)*.45);font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*1.25);line-height:1;color:var(--burg);-webkit-text-stroke:calc(var(--u)*.02) currentColor}
+.dd .stp .vl i{font-style:normal;font-family:var(--bd);font-weight:500;font-size:max(8px,calc(var(--u)*.62));letter-spacing:.2em;-webkit-text-stroke:0;opacity:.7}
+.dd .stp .pl{position:absolute;left:50%;top:50%;width:calc(var(--u)*3.6);height:calc(var(--u)*3.6);margin:calc(var(--u)*-1.8) 0 0 calc(var(--u)*-1.8);border-radius:50%;background:var(--y);display:grid;place-items:center;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.dd .stp:hover .pl{transform:scale(1.14)}
+.dd .stp .pl svg{width:34%;height:auto;margin-left:6%}
+.dd .board .stp:nth-child(6n+1){--rt:-2.6deg;--ty:calc(var(--u)*.6)}
+.dd .board .stp:nth-child(6n+2){--rt:1.8deg;--ty:calc(var(--u)*-1.6)}
+.dd .board .stp:nth-child(6n+3){--rt:-1.2deg;--ty:calc(var(--u)*1.4)}
+.dd .board .stp:nth-child(6n+4){--rt:2.9deg;--ty:calc(var(--u)*-.6)}
+.dd .board .stp:nth-child(6n+5){--rt:-3deg;--ty:calc(var(--u)*1.8)}
+.dd .board .stp:nth-child(6n){--rt:1.4deg;--ty:calc(var(--u)*-1.2)}
+.dd .pm{position:absolute;z-index:6;pointer-events:none;color:var(--red);opacity:.5;mix-blend-mode:multiply;width:calc(var(--u)*12);height:auto}
+.dd .board .en{grid-column:span 2;align-self:center;justify-self:center;rotate:-4deg;font-size:calc(var(--u)*4);color:var(--burg);text-align:center;padding:0 calc(var(--u)*1)}
+.dd .pm.a{right:calc(var(--u)*2);top:calc(var(--u)*-2.4);rotate:-14deg}
+.dd .pm.b{right:calc(var(--u)*4);bottom:calc(var(--u)*.5);rotate:11deg;color:var(--burg);opacity:.4}
+.dd.js .stp.rv{opacity:0;transform:translateY(calc(var(--u)*2.4)) scale(1.1);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),rotate .5s cubic-bezier(.2,.7,.2,1),scale .5s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s),var(--d,0s),0s,0s}
+.dd.js .stp.rv.on{opacity:1;transform:none}
+/* business case */
+.dd .bcs{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*8)}
+.dd .bc{padding-top:calc(var(--u)*1.8);border-top:1px solid rgba(250,246,238,.35)}
+.dd .bc .no{display:block;font-family:var(--disp);font-weight:400;font-size:calc(var(--u)*6.4);line-height:.95;color:var(--y);-webkit-text-stroke:calc(var(--u)*.05) currentColor}
+.dd .bc h3{margin-top:calc(var(--u)*1);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*3.6);line-height:.98;-webkit-text-stroke:calc(var(--u)*.045) currentColor}
+.dd .bc p{margin-top:calc(var(--u)*1.2);font-weight:300;font-size:calc(var(--u)*1.3);opacity:.88}
+.dd .stm{grid-column:1/13;margin-top:calc(var(--u)*9);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*9);line-height:.92;-webkit-text-stroke:calc(var(--u)*.07) currentColor}
+.dd .stm span{display:block}
+.dd .stm em{font-style:italic;color:var(--y);-webkit-text-stroke:0}
+/* lightbox */
+.ddlb{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;background:rgba(0,18,58,.95)}
+.ddlb.on{display:flex}
+.ddlb .fr{position:relative;background:#000;box-shadow:0 0 0 3px #FFC220,0 24px 70px rgba(0,0,0,.6)}
+.ddlb .fr.h{width:min(92vw,calc(80vh*16/9));aspect-ratio:16/9}
+.ddlb .fr.v{height:min(84vh,calc(92vw*16/9));aspect-ratio:9/16}
+.ddlb iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.ddlb .x{position:absolute;top:16px;right:16px;border:0;background:#FFC220;color:#001E60;font:500 13px Outfit,"Helvetica Neue",Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;padding:12px 18px;cursor:pointer}
 /* results */
-.dd .sbd{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*8)}
-.dd .sb{padding-top:calc(var(--u)*1.6);border-top:1px solid rgba(59,7,16,.35)}
-.dd .sb .num{display:block;font-family:var(--disp);font-weight:400;font-size:calc(var(--u)*6.4);line-height:.95;color:var(--red);white-space:nowrap;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
-.dd .sb .lab{display:block;margin-top:calc(var(--u)*.8);color:var(--burg)}
 .dd .awd{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*8)}
 .dd .aw{background:var(--ox);color:var(--cream);padding:calc(var(--u)*2.6) calc(var(--u)*2.4) calc(var(--u)*2.8)}
 .dd .aw svg{width:calc(var(--u)*1.8);height:auto;margin-bottom:calc(var(--u)*1.4)}
 .dd .aw b{display:block;font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*3);line-height:.98;-webkit-text-stroke:calc(var(--u)*.04) currentColor}
-.dd .aw .cap{display:block;margin-top:calc(var(--u)*1);color:#FF5A6C}
+.dd .aw .cap{display:block;margin-top:calc(var(--u)*1);color:#FFC220}
 /* role */
 .dd .crd{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*8)}
 .dd .crd div{background:var(--red);color:var(--cream);padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.2);min-height:calc(var(--u)*9);display:flex;align-items:flex-end}
@@ -123,12 +187,10 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 /* footer */
 .dd .ft{position:relative;background:var(--red);color:var(--cream);padding:calc(var(--u)*8) var(--g) calc(var(--u)*7)}
 .dd .ft .end{font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*13);line-height:.88;-webkit-text-stroke:calc(var(--u)*.08) currentColor}
-.dd .ft .row{display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*1.6);flex-wrap:wrap;margin-top:calc(var(--u)*5)}
-.dd .ft a,.dd .ft button{display:inline-flex;align-items:center;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1) calc(var(--u)*2.6);border:0;cursor:pointer;font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*2.2);line-height:1.2;letter-spacing:.01em;-webkit-text-stroke:calc(var(--u)*.03) currentColor;transition:background .35s,color .35s}
+.dd .ft .row{display:flex;justify-content:flex-start;align-items:center;gap:calc(var(--u)*1.6);flex-wrap:wrap;margin-top:calc(var(--u)*5)}
+.dd .ft a{display:inline-flex;align-items:center;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1) calc(var(--u)*2.6);border:0;cursor:pointer;font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*2.2);line-height:1.2;letter-spacing:.01em;-webkit-text-stroke:calc(var(--u)*.03) currentColor;transition:background .35s,color .35s}
 .dd .ft a{background:var(--cream);color:var(--red)}
-.dd .ft button{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 calc(var(--u)*.16) var(--cream)}
 .dd .ft a:hover{background:var(--ox);color:var(--cream)}
-.dd .ft button:hover{background:var(--cream);color:var(--red)}
 .dd .ft svg{width:calc(var(--u)*2.2);height:auto;flex:none}
 /* reveal */
 .dd.js .rv{opacity:0;transform:translateY(calc(var(--u)*2));transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
@@ -156,18 +218,33 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .fm p{font-size:calc(var(--u)*1.6)}
 .dd .cred .nm2{font-size:calc(var(--u)*4.6)}
 .dd .prog h3{font-size:calc(var(--u)*4.4)}
-.dd .chn,.dd .sbd,.dd .crd{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:calc(var(--u)*2.4)}
-.dd .chn b{font-size:calc(var(--u)*3.8)}
+.dd .crd{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:calc(var(--u)*1.6)}
 .dd .awd{grid-template-columns:1fr;row-gap:calc(var(--u)*1.6)}
 .dd .aw b{font-size:calc(var(--u)*3.4)}
-.dd .stz{font-size:calc(var(--u)*11)}
-.dd .stz span:nth-child(2){padding-left:calc(var(--u)*5)}
-.dd .stz span:nth-child(3){padding-left:calc(var(--u)*9)}
-.dd .sb .num{font-size:calc(var(--u)*7.4)}
+.dd .stz{font-size:calc(var(--u)*9.4)}
+.dd .stz span:nth-child(2){padding-left:calc(var(--u)*3)}
+.dd .stz span:nth-child(3){padding-left:calc(var(--u)*7)}
 .dd .crd b{font-size:calc(var(--u)*2.9)}
 .dd .ft .end{font-size:calc(var(--u)*10)}
-.dd .ft a,.dd .ft button{font-size:calc(var(--u)*2.8)}
+.dd .ft a{font-size:calc(var(--u)*2.8)}
 .dd .tk .gp span{font-size:calc(var(--u)*3.4)}
+.dd .ser{display:block;margin-top:calc(var(--u)*6)}
+.dd .ser .cp{padding:calc(var(--u)*2) 0 0}
+.dd .ser .cp h3{font-size:calc(var(--u)*4.6)}
+.dd .ser .cp p,.dd .ser .more p{font-size:calc(var(--u)*1.6)}
+.dd .ser .more{display:block;margin-top:calc(var(--u)*2)}
+.dd .ser .more p+p{margin-top:calc(var(--u)*1.2)}
+.dd .fm .bt{font-size:calc(var(--u)*2.3);padding:calc(var(--u)*1) calc(var(--u)*2.6)}
+.dd .board{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dd .stp{--m:calc(var(--u)*.9);--r:calc(var(--u)*.44);--s:calc(var(--u)*1.4)}
+.dd .ugcs h2 .c .scr{font-size:calc(var(--u)*4.4)}
+.dd .ugc .nt{font-size:calc(var(--u)*3.4)}
+.dd .pm{width:calc(var(--u)*15)}
+.dd .ugcs h2 .c{font-size:calc(var(--u)*6.4)}
+.dd .bcs{grid-template-columns:1fr;row-gap:calc(var(--u)*3)}
+.dd .bc h3{font-size:calc(var(--u)*4)}
+.dd .bc p{font-size:calc(var(--u)*1.6)}
+.dd .stm{font-size:calc(var(--u)*7)}
 }
 @media (max-width:700px){
 .dd{--u:clamp(9px,3.15vw,16px)}
@@ -175,19 +252,27 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .hero{height:calc(var(--u)*47)}
 .dd .hero .ph{top:calc(var(--u)*9)}
 .dd .hero .tag{top:calc(var(--u)*6);font-size:calc(var(--u)*2.3)}
-.dd .hero .ph::after{background:linear-gradient(180deg,var(--ox) 0,rgba(22,4,10,0) 26%,rgba(22,4,10,.6) 46%,rgba(22,4,10,.96) 68%)}
+.dd .hero .ph::after{background:linear-gradient(180deg,var(--ox) 0,rgba(0,30,96,0) 26%,rgba(0,30,96,.6) 46%,rgba(0,30,96,.96) 68%)}
 .dd .hero .ph img{object-position:50% 0}
 .dd .hero .mt{font-size:calc(var(--u)*2.3)}
 .dd h2 .c{font-size:calc(var(--u)*6.3)}
-.dd .chn,.dd .sbd,.dd .crd{grid-template-columns:1fr}
+.dd .crd{grid-template-columns:1fr}
 .dd .cred .nm2{font-size:calc(var(--u)*3.8);flex-direction:column;gap:0}
-.dd .stz{font-size:calc(var(--u)*6.3)}
-.dd .stz span:nth-child(2){padding-left:calc(var(--u)*2.5)}
-.dd .stz span:nth-child(3){padding-left:calc(var(--u)*3.5)}
-.dd .sb .num{font-size:calc(var(--u)*8)}
+.dd .stz{font-size:calc(var(--u)*4.4)}
+.dd .stz span:nth-child(2){padding-left:calc(var(--u)*2)}
+.dd .stz span:nth-child(3){padding-left:calc(var(--u)*4)}
+.dd .stm{font-size:calc(var(--u)*5.6)}
+.dd .board{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dd .ugc .ctl{flex-direction:column;align-items:flex-start}
+.dd .board .en{grid-column:1/-1;font-size:calc(var(--u)*4.2);padding:calc(var(--u)*1) 0}
+.dd .pm.b{display:none}
+.dd .ugcs h2 .c{font-size:calc(var(--u)*3.9);overflow-wrap:anywhere}
+.dd .pm.a{top:calc(var(--u)*-6.5);right:calc(var(--u)*.5)}
+.dd .stp .vl{font-size:calc(var(--u)*1.7)}
+.dd .stp .vl i{font-size:max(8px,calc(var(--u)*.9))}
 .dd .ft .end{font-size:calc(var(--u)*8.6)}
 .dd .ft .row{flex-direction:column;align-items:stretch}
-.dd .ft a,.dd .ft button{justify-content:center;font-size:calc(var(--u)*2.3);white-space:nowrap}
+.dd .ft a{justify-content:center;font-size:calc(var(--u)*2.3);white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){
 .dd .hero .ph,.dd .hero .ph img,.dd .tk .rl{animation:none!important}
@@ -195,6 +280,8 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .tt i{animation:none!important;transform:none}
 .dd.js .rv,.dd.js .rv.on{opacity:1;transform:none;transition:none}
 .dd.js .fm.rv .pic{clip-path:none;transition:none}
+.dd .fm .go,.dd .stp .pl,.dd .stp img{transition:none}
+.dd.js .stp.rv{opacity:1;transform:none;transition:none}
 }
 </style></head><body>
 <div class="dd" id="dd">
@@ -202,15 +289,16 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 <div class="rail" id="ddRail" data-th="d"><span class="pr"></span><div class="in"><nav aria-label="Sections">
   <a href="#who" data-go data-sec="who">Who</a>
   <a href="#what" data-go data-sec="what">What</a>
-  <a href="#where" data-go data-sec="where">Where</a>
+  <a href="#ugc" data-go data-sec="ugc">TikTok</a>
   <a href="#why" data-go data-sec="why">Why</a>
+  <a href="#case" data-go data-sec="case">Case</a>
   <a href="#res" data-go data-sec="res">Results</a>
   <a href="#role" data-go data-sec="role">Role</a>
 </nav></div></div>
 
 <header class="hero" id="top" data-th="d">
-  <div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-just-breathe.webp?v=1" alt="" role="img" aria-label="Still from the short film Just Breathe" width="1280" height="720"></div>
-  <p class="tag">Play, Pride, and Film</p>
+  <div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-hero-clean.webp?v=1" alt="" role="img" aria-label="Still from the short film Just Breathe" width="1280" height="720"><span class="sh"></span></div>
+  <p class="tag">Modern Fatherhood, On Film</p>
   <p class="mt l">Walmart</p><p class="mt r">ABFF</p>
   <h1 class="tt" aria-label="Dear Dad,"><span aria-hidden="true"><span class="w"><i style="--k:0">D</i><i style="--k:1">E</i><i style="--k:2"><em>A</em></i><i style="--k:3">R</i></span><span class="gap"> </span><span class="w"><i style="--k:4">D</i><i style="--k:5">A</i><i style="--k:6">D</i><i class="cm" style="--k:7">,</i></span></span></h1>
 </header>
@@ -223,39 +311,45 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
   </div>
 </section>
 
-<div class="tk" data-th="r" aria-hidden="true"><div class="rl"><div class="gp"><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i></div><div class="gp"><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i><span>Play, Pride, and Film</span><i></i></div></div></div>
+<div class="tk" data-th="r" aria-hidden="true"><div class="rl"><div class="gp"><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i></div><div class="gp"><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i></div></div></div>
 
 <section class="st th-d what" id="what" data-th="d">
   <div class="gr">
     <div class="hd rv"><h2><span class="k">What:</span><span class="c">The Campaign</span></h2></div>
-    <div class="tx rv" style="--d:.15s"><p class="bdy">Developed and launched <mark>Dear Dad</mark>, a multifaceted Father&rsquo;s Day campaign anchored by a livestream gaming event and an ABFF (American Black Film Festival) short film series. The livestream paired NFL icon Cam Newton and gaming legend IpodKingCarter with their sons in a retro-styled game lounge featuring NBA Jam, VR Racing, and other classics, while the film series offered intimate, narrative-driven portraits of Black fatherhood, written by emerging filmmakers.</p></div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">Developed and launched <mark>Dear Dad</mark>, a Father&rsquo;s Day campaign celebrating modern fatherhood. It was anchored by a docu-style short film series that premiered at the American Black Film Festival, and extended on TikTok through a microcreator campaign of user-generated content.</p></div>
 
-    <div class="cred rv">
-      <span class="cap">The Livestream</span>
-      <div class="nm2"><span>Cam Newton</span><em>&amp;</em><span>IpodKingCarter</span></div>
-      <p class="rl cap">NFL Icon and Gaming Legend, With Their Sons</p>
-      <p class="sp cap">NBA Jam &nbsp;/&nbsp; VR Racing &nbsp;/&nbsp; And Other Classics</p>
+    <div class="ser rv">
+      <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-series.gif?v=1" alt="" role="img" aria-label="Walmart presents the Black and Unlimited Fatherhood Series, a preview of the three short films" width="680" height="383" loading="lazy"></div>
+      <div class="cp"><span class="cap">The Series</span><h3>An Ode to Modern Fatherhood</h3>
+        <p>We worked with Walmart to launch a series of docu-style short films to serve as both an ode to modern fatherhood and an exploration of its evolution.</p>
+        </div>
+      <div class="more"><p>By scratching beneath the surface of the daily lives of a few real Black fathers, each film offered a new perspective on fatherhood today. Pointed intergenerational conversations were juxtaposed with the visual narrative of intimate, everyday moments. Directed by emerging filmmakers Jared Malik Royal, Dior Rodriguez, and Rodney Rikai, the films captured authentic, nuanced stories of real dads who are shifting the narrative in their day-to-day lives.</p><p>In honor of Father&rsquo;s Day, the series launched to encourage families everywhere to celebrate the amazing fathers in their lives, and premiered at the American Black Film Festival.</p></div>
     </div>
 
-    <div class="prog rv"><span class="cap">Now Showing</span><h3>The ABFF Short Film Series</h3></div>
+    <div class="cred rv">
+      <span class="cap">The Premiere Panel</span>
+      <div class="nm2"><span>Morris Chestnut</span><em>&amp;</em><span>Lorenz Tate</span><em>&amp;</em><span>Malcolm Lee</span></div>
+      <p class="rl cap">Actors and Filmmaker, in Live Conversation After the Films</p>
+      <p class="sp cap">Making Strides Every Day to Keep Rewriting the Narrative</p>
+    </div>
+
+    <div class="prog rv"><span class="cap">Now Showing</span><h3>The Short Film Series</h3></div>
 
     <div class="films">
-      <article class="fm rv"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-dear-dad.webp?v=1" alt="" role="img" aria-label="Title card for the short film Dear Dad" width="1280" height="720" loading="lazy"></div><div class="cp"><span class="no cap">Film I</span><h4>Dear Dad</h4><p>A film by Jared Malik Royal</p></div></article>
-      <article class="fm rev rv"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-just-breathe.webp?v=1" alt="" role="img" aria-label="Title card for the short film Just Breathe" width="1280" height="720" loading="lazy"></div><div class="cp"><span class="no cap">Film II</span><h4>Just Breathe</h4><p>A film by Rodney Rikai</p></div></article>
-      <article class="fm rv"><div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-legacy-of-the-sea.webp?v=1" alt="" role="img" aria-label="Title card for the short film Legacy of the Sea" width="1280" height="720" loading="lazy"></div><div class="cp"><span class="no cap">Film III</span><h4>Legacy of the Sea</h4><p>A film by Dior Rodriguez</p></div></article>
+      <article class="fm rv"><a class="pic" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-legacy.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Legacy of the Sea" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film I</span><h4>Legacy of the Sea</h4><span class="by cap">A film by Dior Rodriguez</span><p>Legacy of the Sea is a story of preserving and passing down traditions. Dior&rsquo;s concept was born from her own experience with her late father, who was a maker and empowered an entire generation by sharing his wisdom. This poetic story explores themes of family traditions and heritage in a way that is relatable yet refreshingly nuanced and original. Not only does this short expand viewers&rsquo; understanding of modern fatherhood, it also introduces an all-together new understanding of Blackness and identity.</p><a class="bt" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
+      <article class="fm rev rv"><a class="pic" href="https://vimeo.com/837227378/81213cac25" data-vid="837227378" data-h="81213cac25" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-dear-dad.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Dear Dad" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film II</span><h4>Dear Dad</h4><span class="by cap">A film by Jared M. Royal</span><p>Jared&rsquo;s Dear Dad takes place on Sankofa Farms and explores the story of father and farmer Kamal Bell. This poetic doc explores how Kamal is using foundational knowledge in innovative new ways to create a lasting legacy. Jared drew inspiration for this theme from his own family history and the generations of fathers that paved the way for him. The result is a compelling, cinematic portrayal of a new kind of family story.</p><a class="bt" href="https://vimeo.com/837227378/81213cac25" data-vid="837227378" data-h="81213cac25" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
+      <article class="fm rv"><a class="pic" href="https://vimeo.com/837226684/b311579f97" data-vid="837226684" data-h="b311579f97" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-breathe.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Just Breathe" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film III</span><h4>Just Breathe</h4><span class="by cap">A film by Rodney Rikai</span><p>Rodney&rsquo;s story is a reflective, autobiographical homage to his journey as a full-time single father and uncle. As a self-titled Dunkle, Rodney has learned to juggle becoming his own man while also raising his son and nephew to become the men they are meant to be. Just Breathe is a commentary on modern fatherhood and parenting styles that both draws from and departs from the models of prior generations. This refreshing new story is an inspiration for the new fathers of today to feel seen.</p><a class="bt" href="https://vimeo.com/837226684/b311579f97" data-vid="837226684" data-h="b311579f97" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
     </div>
   </div>
 </section>
 
-<section class="st th-l where" id="where" data-th="l">
+<section class="st th-l ugcs" id="ugc" data-th="l">
   <div class="gr">
-    <div class="hd rv"><h2><span class="k">Where:</span><span class="c">Channels</span></h2></div>
-    <div class="tx rv" style="--d:.15s"><p class="bdy">Streamed in partnership with <mark>Group Black</mark>, <mark>Cxmmunity</mark>, and <mark>IGN</mark> and distributed on <mark>YouTube</mark>. The ABFF film series premiered as part of Walmart&rsquo;s sponsored programming and was extended through digital and festival integrations.</p></div>
-    <div class="chn">
-      <div class="rv"><span class="cap">Streaming Partner</span><b>Group Black</b></div>
-      <div class="rv" style="--d:.1s"><span class="cap">Streaming Partner</span><b>Cxmmunity</b></div>
-      <div class="rv" style="--d:.2s"><span class="cap">Streaming Partner</span><b>IGN</b></div>
-      <div class="rv" style="--d:.3s"><span class="cap">Distribution</span><b>YouTube</b></div>
+    <div class="hd rv"><h2><span class="k">And on TikTok:</span><span class="c">Microcreators<span class="scr">every dad tells a story</span></span></h2></div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">To complement the longer-form films on TikTok, we challenged <mark>everyday fathers and families</mark> to showcase their usual rituals and routines. These quick glimpses into each family&rsquo;s story highlighted the nuances that make modern fatherhood unique, and gave new insight into the roles fathers play in their families&rsquo; and communities&rsquo; lives.</p></div>
+    <div class="ugc">
+      <div class="ctl"><span class="nt scr rv">tap a stamp to play<svg viewBox="0 0 48 30" aria-hidden="true"><path d="M3 4c14 0 30 2 36 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M31 19l8 3 3-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      <div class="board" id="ddBoard"><svg class="pm a" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="pmA" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs><circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="60" cy="60" r="30" fill="none" stroke="currentColor" stroke-width="1.4"/><text font-family="Outfit,Arial,sans-serif" font-size="10.5" font-weight="500" fill="currentColor"><textPath href="#pmA" textLength="248" lengthAdjust="spacing">DEAR DAD &#183; FATHER&#8217;S DAY &#183;</textPath></text><path d="M42 60h36M44 54h32M44 66h32" stroke="currentColor" stroke-width="1.6" fill="none"/></svg><svg class="pm b" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="pmB" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs><circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="60" cy="60" r="30" fill="none" stroke="currentColor" stroke-width="1.4"/><text font-family="Outfit,Arial,sans-serif" font-size="10.5" font-weight="500" fill="currentColor"><textPath href="#pmB" textLength="248" lengthAdjust="spacing">DEAR DAD &#183; FATHER&#8217;S DAY &#183;</textPath></text><path d="M42 60h36M44 54h32M44 66h32" stroke="currentColor" stroke-width="1.6" fill="none"/></svg><a class="stp rv" style="--d:0.07s" href="https://vimeo.com/837241141/b80f34ddff" data-vid="837241141" data-h="b80f34ddff" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 1 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-01.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574384-c9a5d8297594d723536c845fdcbbf213670aea97466857a50e01329eca9d1846-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 1" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 01<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.14s" href="https://vimeo.com/837240264/5ae1848d0b" data-vid="837240264" data-h="5ae1848d0b" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 2 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-02.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572517-9852948dd72a56976bce0d9bac34ebef43278d175f23296ce0f2bd5aa03505c5-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 2" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 02<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.21s" href="https://vimeo.com/837241156/49cfc8c4b8" data-vid="837241156" data-h="49cfc8c4b8" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 3 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-03.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574528-5ea62d618e3c3d6212944496e5fd67cdc81b4b7f3eec862baa8e77752efe7256-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 3" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 03<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.28s" href="https://vimeo.com/837241164/2f78b05dd3" data-vid="837241164" data-h="2f78b05dd3" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 4 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-04.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574414-eb23013a1b9bbee10be9750e234274c086d36529f203d941c0cd63ca099403ad-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 4" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 04<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.35s" href="https://vimeo.com/837243024/fd3ca50070" data-vid="837243024" data-h="fd3ca50070" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 5 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-05.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685578008-a1688b37cfdd1fdba1e5969031a03a0b2ab99e9b72d12c92c7d4cfbe1983b2bf-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 5" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 05<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.00s" href="https://vimeo.com/837240319/4a91444014" data-vid="837240319" data-h="4a91444014" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 6 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-06.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572647-00c6a5f1dedc33e384d829aa6d1ea1ef148ce97d285d7661564a4a36833b876c-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 6" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 06<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.07s" href="https://vimeo.com/837243103/19b34dbcd8" data-vid="837243103" data-h="19b34dbcd8" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 7 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-07.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685578206-a54e6e63935d52a4f6794f881eb54e28e8453b02d5d3a3a36b764644b2d1a1bc-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 7" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 07<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.14s" href="https://vimeo.com/837240309/2ae1bd70d8" data-vid="837240309" data-h="2ae1bd70d8" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 8 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-08.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572614-12d2d55d07d78f1661c0869c89655f0defdaa24b5b41f7cdbfd2d49714e7c991-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 8" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 08<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.21s" href="https://vimeo.com/837243168/cbf7cdfac6" data-vid="837243168" data-h="cbf7cdfac6" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 9 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-09.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685578322-df87ffd2bd398150e3d0e127908a867e7f42683e4376e3491ecc8fd795703fa1-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 9" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 09<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.28s" href="https://vimeo.com/837240269/ce3fe96cb0" data-vid="837240269" data-h="ce3fe96cb0" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 10 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-10.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572555-6670771a292a243b06c6ca77a9a3229231a1984c9580a6302571232ef378396a-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 10" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 10<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.35s" href="https://vimeo.com/837240342/41c181b4d8" data-vid="837240342" data-h="41c181b4d8" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 11 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-11.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572687-2159341bbd40c3e33357a3edf690a31af5e32ff5534dae6a9e151e58ef78e94d-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 11" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 11<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.00s" href="https://vimeo.com/837240323/2ee1a79313" data-vid="837240323" data-h="2ee1a79313" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 12 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-12.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572684-cd9177186f185192df75c685c9c39279ea44d4093b39bde059ecf5fd5068a62b-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 12" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 12<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.07s" href="https://vimeo.com/837240275/487db2275b" data-vid="837240275" data-h="487db2275b" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 13 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-13.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572547-5b034fb9df001ed9b6a2a62acb85aafa41df50a94dd93d6c46da6e878d9fe209-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 13" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 13<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.14s" href="https://vimeo.com/837240331/dc1d171ded" data-vid="837240331" data-h="dc1d171ded" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 14 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-14.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572686-9ab390b4dcd09c64e8c06a49dbf02da411ca7e3d99fae6fe05e485093ab134e3-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 14" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 14<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.21s" href="https://vimeo.com/837241168/09f023bac0" data-vid="837241168" data-h="09f023bac0" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 15 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-15.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574425-83cf666dac662364b0b3aee396866d2129cb9779f9f58b4e78920052578c66d0-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 15" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 15<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.28s" href="https://vimeo.com/837240297/ae05af3683" data-vid="837240297" data-h="ae05af3683" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 16 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-16.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572603-807067436d49afd1d858a3d1143bf881bf21b1f6d595a0e05288288c0139ab6b-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 16" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 16<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.35s" href="https://vimeo.com/837241147/20fc852e6b" data-vid="837241147" data-h="20fc852e6b" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 17 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-17.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574393-8b2937afcc10f577697e099854ccb4a6655759a6a5ad654b2d548268d0e98e08-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 17" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 17<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.00s" href="https://vimeo.com/837240300/7b1c55a48c" data-vid="837240300" data-h="7b1c55a48c" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 18 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-18.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685572620-e98986f926d3aa47b165f18f00be4e1b44f347fc8d88db025258c780d35914b3-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 18" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 18<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.07s" href="https://vimeo.com/837241181/d3688178f6" data-vid="837241181" data-h="d3688178f6" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 19 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-19.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574470-832a74e4f718107ae351e513775fb2bf98547e9a8610a9c280ba3d5b68f01a14-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 19" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 19<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.14s" href="https://vimeo.com/837241200/1095944ad1" data-vid="837241200" data-h="1095944ad1" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 20 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-20.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574500-a228d40a5ede5db47807e8cd515dc12f4ff4a596fea6d58684714053be77400c-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 20" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 20<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.21s" href="https://vimeo.com/837241215/d2dcd4bf44" data-vid="837241215" data-h="d2dcd4bf44" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 21 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-21.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685574476-2f272325f2f572147b7dd479c6fa64e95dfa26565a0350ef3529646b7e9512fa-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 21" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 21<i>Dear Dad</i></span></span></a><a class="stp rv" style="--d:0.28s" href="https://vimeo.com/837243133/cfabdfa4c9" data-vid="837243133" data-h="cfabdfa4c9" data-ar="v" target="_blank" rel="noopener" aria-label="Play TikTok clip 22 of 22"><span class="sp"><span class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-ugc-22.webp?v=1" data-hi="https://i.vimeocdn.com/video/1685578288-eddccbf318af3a0479917eab22d049fec065ecb977a69b3613560038176fefd2-d?mw=480&amp;mh=640&amp;q=80" alt="" role="img" aria-label="Still from TikTok clip 22" width="200" height="356" loading="lazy"><span class="pl"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></span><span class="vl">No. 22<i>Dear Dad</i></span></span></a><div class="en scr rv">22 families, 22 stories</div></div>
     </div>
   </div>
 </section>
@@ -263,25 +357,32 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 <section class="st th-r why" id="why" data-th="r">
   <div class="gr">
     <div class="hd rv"><h2><span class="k">Why It Matters:</span><span class="c">Cultural Impact</span></h2></div>
-    <div class="stz" aria-label="Play, pride, and film"><span class="rv" aria-hidden="true">Play,</span><span class="rv" style="--d:.2s" aria-hidden="true"><em>Pride,</em></span><span class="rv" style="--d:.4s" aria-hidden="true">and Film.</span></div>
-    <div class="tx2 rv"><p class="bdy">In a media landscape where Black fatherhood is often misrepresented or invisibilized, Dear Dad <mark>reclaimed the narrative through play, pride, and film</mark>. By combining joyful, accessible moments with cinematic storytelling, Walmart strengthened emotional connection with Black audiences and reinforced its investment in long-term cultural equity.</p></div>
+    <div class="stz" aria-label="Modern fatherhood, every day."><span class="rv" aria-hidden="true">Modern</span><span class="rv" style="--d:.2s" aria-hidden="true"><em>Fatherhood,</em></span><span class="rv" style="--d:.4s" aria-hidden="true">Every Day.</span></div>
+    <div class="tx2 rv"><p class="bdy">In a media landscape where modern fatherhood is often misrepresented or invisibilized, Dear Dad <mark>reclaimed the narrative</mark> through the real stories of Black fathers and everyday families. By pairing cinematic storytelling with the ordinary rituals of real households, Walmart strengthened emotional connection with its audiences and reinforced its investment in long-term cultural equity.</p></div>
+  </div>
+</section>
+
+<section class="st th-d case" id="case" data-th="d">
+  <div class="gr">
+    <div class="hd rv"><h2><span class="k">The Business Case:</span><span class="c">Earning Affinity</span></h2></div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">Dear Dad was built to <mark>earn affinity, not just attention</mark>. Competitors like Amazon fight for share of voice on speed, price, and convenience. Walmart can&rsquo;t win that fight by shouting louder. So the campaign put real families in the lead and positioned Walmart as a supporting actor in the narrative of everyday life.</p></div>
+    <div class="bcs">
+      <div class="bc rv"><span class="no">01</span><h3>Connect With Consumers</h3><p>Real fathers and families told their own stories, so shoppers saw themselves first and the brand second. Affinity built on recognition lasts longer than a message built on a sale.</p></div>
+      <div class="bc rv" style="--d:.1s"><span class="no">02</span><h3>Protect Share of Voice</h3><p>Against competitors like Amazon, a meaningful place in the cultural conversation defends share of voice in a way that more media spend alone does not.</p></div>
+      <div class="bc rv" style="--d:.2s"><span class="no">03</span><h3>Play the Supporting Actor</h3><p>Walmart appears inside the moments that matter, from the Father&rsquo;s Day gift to the family table. The families lead the story, and the brand earns its place in it.</p></div>
+    </div>
+    <div class="stm rv" aria-label="Families lead. Walmart supports."><span>Families Lead.</span><span><em>Walmart Supports.</em></span></div>
   </div>
 </section>
 
 <section class="st th-l res" id="res" data-th="l">
   <div class="gr">
     <div class="hd rv"><h2><span class="k">How It Did:</span><span class="c">Results</span></h2></div>
-    <div class="tx rv" style="--d:.15s"><p class="bdy">The livestream generated <mark>67K+ live views</mark>, <mark>500K+ total watch minutes</mark>, <mark>15M+ impressions</mark>, and a <mark>7.5x CTR</mark>. The overall campaign earned multiple accolades including a Shorty Impact Award, a Gold Shark International Award for branded content, and a 2024 Equity &amp; Inclusion Webby Nomination, affirming its cultural and creative impact.</p></div>
-    <div class="sbd">
-      <div class="sb rv"><b class="num" data-to="67" data-dec="0" data-suf="K+">67K+</b><span class="lab cap">Live Views</span></div>
-      <div class="sb rv" style="--d:.1s"><b class="num" data-to="500" data-dec="0" data-suf="K+">500K+</b><span class="lab cap">Total Watch Minutes</span></div>
-      <div class="sb rv" style="--d:.2s"><b class="num" data-to="15" data-dec="0" data-suf="M+">15M+</b><span class="lab cap">Impressions</span></div>
-      <div class="sb rv" style="--d:.3s"><b class="num" data-to="7.5" data-dec="1" data-suf="x">7.5x</b><span class="lab cap">CTR</span></div>
-    </div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">The campaign earned multiple accolades including a <mark>Shorty Impact Award</mark>, a <mark>Gold Shark International Award</mark> for branded content, and a <mark>2024 Equity &amp; Inclusion Webby Nomination</mark>, affirming its cultural and creative impact.</p></div>
     <div class="awd">
-      <div class="aw rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FF4A5E"/></svg><b>Shorty Impact Award</b></div>
-      <div class="aw rv" style="--d:.1s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FF4A5E"/></svg><b>Gold Shark International Award</b><span class="cap">Branded Content</span></div>
-      <div class="aw rv" style="--d:.2s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FF4A5E"/></svg><b>Equity &amp; Inclusion Webby Nomination</b><span class="cap">2024</span></div>
+      <div class="aw rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FFC220"/></svg><b>Shorty Impact Award</b></div>
+      <div class="aw rv" style="--d:.1s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FFC220"/></svg><b>Gold Shark International Award</b><span class="cap">Branded Content</span></div>
+      <div class="aw rv" style="--d:.2s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#FFC220"/></svg><b>Equity &amp; Inclusion Webby Nomination</b><span class="cap">2024</span></div>
     </div>
   </div>
 </section>
@@ -289,11 +390,11 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 <section class="st th-d role" id="role" data-th="d">
   <div class="gr">
     <div class="hd rv"><h2><span class="k">My Role</span><span class="c">Credits</span></h2></div>
-    <div class="tx rv" style="--d:.15s"><p class="bdy">As Associate Creative Director, I <mark>originated the campaign concept</mark> and led creative across both live and cinematic components. I scripted the livestream segments, directed storytelling tone and created initial treatments shared with filmmaker partners.</p></div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">As Associate Creative Director, I <mark>originated the campaign concept</mark> and led creative across the film series and the TikTok microcreator campaign. I directed storytelling tone and created initial treatments shared with filmmaker partners.</p></div>
     <div class="crd">
       <div class="rv"><b>Original Concept</b></div>
-      <div class="rv" style="--d:.1s"><b>Led Live and Cinematic</b></div>
-      <div class="rv" style="--d:.2s"><b>Scripted the Livestream</b></div>
+      <div class="rv" style="--d:.1s"><b>Led Film and Social</b></div>
+      <div class="rv" style="--d:.2s"><b>Directed Storytelling Tone</b></div>
       <div class="rv" style="--d:.3s"><b>Created Initial Treatments</b></div>
     </div>
   </div>
@@ -303,11 +404,12 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
   <p class="end rv">The End</p>
   <div class="row">
     <a href="https://www.byninaaustin.com/content"><svg viewBox="0 0 24 10" aria-hidden="true"><path d="M24 5H2M6 1L2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Back to Content</a>
-    <button type="button" data-go-top>Back to Top</button>
   </div>
 </footer>
 
 </div>
+
+<div class="ddlb" id="ddLb" role="dialog" aria-modal="true" aria-label="Video player"><div class="fr h"></div><button type="button" class="x" aria-label="Close video">Close</button></div>
 <script>
 (function(){
   var root=document;
@@ -348,7 +450,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
   }else{rv.forEach(show)}
   var rail=dd.querySelector('.rail');
   var navs=$$('.rail nav a');
-  var secs=['who','what','where','why','res','role'].map(function(id){return {id:id,el:root.getElementById(id)}});
+  var secs=['who','what','ugc','why','case','res','role'].map(function(id){return {id:id,el:root.getElementById(id)}});
   var ths=$$('[data-th]');
   var tick=false;
   function frame(){
@@ -384,10 +486,39 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
       goTo(t.getBoundingClientRect().top+(win.pageYOffset||0));
     });
   });
-  var top=dd.querySelector('[data-go-top]');
-  if(top)top.addEventListener('click',function(){
-    goTo(dd.getBoundingClientRect().top+(win.pageYOffset||0));
+  $$('img[data-hi]').forEach(function(im){
+    var hi=im.getAttribute('data-hi'),t=new win.Image();
+    t.onload=function(){im.src=hi};
+    t.src=hi;
   });
+  var lb=root.getElementById('ddLb');
+  var fr=lb?lb.querySelector('.fr'):null;
+  var lastF=null;
+  function openV(a){
+    if(!lb||!fr)return;
+    lastF=a;
+    fr.className='fr '+(a.getAttribute('data-ar')==='v'?'v':'h');
+    var f=win.document.createElement('iframe');
+    f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+    f.setAttribute('allowfullscreen','');
+    f.setAttribute('title','Video player');
+    f.src='https://player.vimeo.com/video/'+a.getAttribute('data-vid')+'?h='+a.getAttribute('data-h')+'&autoplay=1&title=0&byline=0&portrait=0';
+    fr.innerHTML='';fr.appendChild(f);
+    lb.classList.add('on');
+    var x=lb.querySelector('.x');if(x)x.focus();
+  }
+  function closeV(){
+    if(!lb||!fr)return;
+    lb.classList.remove('on');fr.innerHTML='';
+    if(lastF&&lastF.focus)lastF.focus();
+  }
+  $$('a[data-vid]').forEach(function(a){
+    a.addEventListener('click',function(ev){ev.preventDefault();openV(a)});
+  });
+  if(lb){
+    lb.addEventListener('click',function(ev){if(ev.target===lb||ev.target.classList.contains('x'))closeV()});
+    win.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&lb.classList.contains('on'))closeV()});
+  }
 })();
 </script>
 </body></html>
