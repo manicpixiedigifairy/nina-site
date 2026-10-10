@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Pepsi Dig In Brunch With The Best, a social, digital and in-person Brunch Royale that took Pepsi into one of the biggest casual dining occasions in the country with restaurateur relationships at the center.">
+<meta name="description" content="Pepsi Dig In Brunch With The Best, a social, digital and in-person Brunch Royale that put restaurateurs at the center of one of the biggest casual dining occasions in the country.">
 <title>Pepsi Dig In: Brunch With The Best</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Unbounded:wght@800;900&display=swap" rel="stylesheet">
@@ -323,232 +323,185 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .mq .tr{animation:none}
 }
 
-/* brunch page */
+.rr .sv{position:relative;aspect-ratio:750/935;overflow:hidden;background:#000;border:1px solid #000;border-radius:calc(var(--u)*.9);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 #000}
+.rr .sv .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+.rr .sv .sl img.on{opacity:1}
+.rr .sv .bars{position:absolute;z-index:3;left:calc(var(--u)*.7);right:calc(var(--u)*.7);top:calc(var(--u)*.6);display:flex;gap:4px}
+.rr .sv .bars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4);overflow:hidden;position:relative}
+.rr .sv .bars i::after{content:"";position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.rr .sv .bars i.done::after{transform:none}
+.rr .sv .bars i.now::after{animation:svb 3.4s linear forwards}
+@keyframes svb{to{transform:none}}
+@media (prefers-reduced-motion:reduce){.rr .sv .bars i.now::after{animation:none;transform:none}}
+.rr .sv button{all:unset;position:absolute;z-index:2;top:0;bottom:0;width:50%;cursor:pointer}
+.rr .sv .pv{left:0}.rr .sv .nx{right:0}
+.rr .sv button:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+
 .rr .hero h1.b3{font-size:calc(var(--u)*8.7)}
-.rr .iw{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:start}
-.rr .iw .tx p{font-size:calc(var(--u)*1.3);line-height:1.6;margin-top:calc(var(--u)*1.2);max-width:calc(var(--u)*52)}
-.rr .iw .tx p:first-of-type{margin-top:0}
-.rr .iw .fm{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1);margin-top:calc(var(--u)*2)}
-.rr .iw .fm figure{position:relative;aspect-ratio:18/25;overflow:hidden;border:1px solid var(--ink);border-radius:calc(var(--u)*.8);background:#000;box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink)}
-.rr .iw .fm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.rr .poll{border:1px solid var(--ink);background:var(--black);color:var(--cream);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--blue);padding:calc(var(--u)*2.2) calc(var(--u)*2.2) calc(var(--u)*2.4)}
-.rr .poll .lb{color:var(--gold);display:block}
-.rr .poll h3{margin-top:calc(var(--u)*.9);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.9);line-height:1.05;letter-spacing:-.01em}
-.rr .poll ul{margin-top:calc(var(--u)*1.6);display:grid;gap:calc(var(--u)*.8)}
-.rr .poll button{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*1);width:100%;cursor:pointer;padding:calc(var(--u)*1.1) calc(var(--u)*1.4);border:1px solid var(--cream);border-radius:calc(var(--u)*.8);font-family:var(--bd);font-weight:700;font-size:calc(var(--u)*1.2);line-height:1.3;transition:background .25s,color .25s}
-.rr .poll button:hover,.rr .poll button:focus-visible{background:var(--cream);color:var(--ink)}
-.rr .poll button i{flex:none;width:calc(var(--u)*1.3);height:calc(var(--u)*1.3);border:2px solid currentColor;border-radius:50%}
-.rr .poll button[aria-pressed="true"]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.rr .poll button[aria-pressed="true"] i{background:var(--ink);border-color:var(--ink)}
-.rr .poll .st{margin-top:calc(var(--u)*1.2);min-height:calc(var(--u)*1.8);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:max(9px,calc(var(--u)*.85));color:var(--gold)}
-.rr .rs{background:var(--blue);color:#fff;text-align:left}
+.rr .pan .p.q img{object-position:50% 50%}
+.rr .pan .p.q{background:#000}
+.rr .pan .p.q img{object-fit:contain}
+/* essay */
+.rr .es{grid-column:1/13;margin-top:calc(var(--u)*2.4);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:calc(var(--u)*2.4);align-items:start}
+.rr .es .lb{color:var(--blue);padding-top:calc(var(--u)*.6)}
+.rr .es blockquote{margin:0;background:var(--black);color:var(--cream);border:1px solid var(--ink);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--blue);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);font-size:calc(var(--u)*1.45);line-height:1.6}
+.rr .es blockquote::first-line{font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+/* takeover mosaic */
+.rr .mz{grid-column:1/13;display:grid;grid-template-columns:minmax(0,.8fr) repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,calc(var(--u)*19));gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*2.8)}
+.rr .mz figure{position:relative;overflow:hidden;border:1px solid var(--ink);background:#000;margin:0}
+.rr .mz img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .mz .lg{grid-row:1/3}
+.rr .mz .w{grid-column:2/4}
+.rr .tk{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*2.4)}
+.rr .tk>div{border:1px solid var(--ink);padding:calc(var(--u)*2) calc(var(--u)*2.2) calc(var(--u)*2.4);background:var(--paper)}
+.rr .tk>div:last-child{background:var(--blue);color:#fff}
+.rr .tk .lb{display:block;color:var(--blue)}.rr .tk>div:last-child .lb{color:var(--gold)}
+.rr .tk h3{margin-top:calc(var(--u)*.8);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*2);line-height:1.04;letter-spacing:-.01em}
+.rr .tk p{margin-top:calc(var(--u)*1);font-size:calc(var(--u)*1.2);line-height:1.55}
+/* backstories */
+.rr .bsg{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.4) calc(var(--u)*2)}
+.rr .bsg figcaption{margin-top:calc(var(--u)*1);background:var(--cream);color:var(--ink);border:1px solid #000;padding:calc(var(--u)*.9) calc(var(--u)*1.2);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 #000}
+.rr .bsg figcaption b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.15);line-height:1.1}
+.rr .bsg figcaption span{display:block;margin-top:calc(var(--u)*.3);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:max(9px,calc(var(--u)*.75));color:var(--blue)}
+.rr .bsg figure{margin:0}
+/* cttc + boh */
+.rr .kb{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:calc(var(--u)*2.4);align-items:start}
+.rr .kb+.kb{margin-top:calc(var(--u)*4.4);padding-top:calc(var(--u)*4);border-top:1px solid var(--ink)}
+.rr .kb h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*2.4);line-height:1.02;letter-spacing:-.01em;color:var(--blue)}
+.rr .kb .bdy{margin-top:calc(var(--u)*1.2)}
+.rr .kb .row{display:grid;gap:calc(var(--u)*1.2)}
+.rr .kb .r4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rr .kb .r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rr .kb figure{margin:0;position:relative;aspect-ratio:9/16;overflow:hidden;border:1px solid var(--ink);border-radius:calc(var(--u)*.8);background:#000;box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink)}
+.rr .kb figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .kb .r3 figure{aspect-ratio:250/445}
+.rr .kb .cp{display:block;margin-top:calc(var(--u)*.7);font-weight:700;font-size:calc(var(--u)*.95);line-height:1.35}
+/* sweepstakes */
+.rr .swk{background:var(--black);color:var(--cream)}
+.rr .swk .sh .lb{color:var(--gold)}
+.rr .swk .bdy{color:var(--cream)}
+.rr .sgr{grid-column:1/13;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.6) calc(var(--u)*1.2);margin-top:calc(var(--u)*2.8)}
+.rr .sgr figure{margin:0}
+.rr .sgr .f{position:relative;aspect-ratio:250/445;overflow:hidden;border:1px solid var(--cream);border-radius:calc(var(--u)*.8);background:#111}
+.rr .sgr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .sgr figcaption{margin-top:calc(var(--u)*.7);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:max(9px,calc(var(--u)*.78));line-height:1.35;color:var(--gold)}
+/* results */
+.rr .rs{background:var(--blue);color:#fff}
 .rr .rs .sh .lb{color:#fff}
 .rr .rs .big{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:center}
 .rr .rs .num{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*7);line-height:.95;letter-spacing:-.02em;color:var(--cream);text-shadow:calc(var(--u)*-.12) calc(var(--u)*.12) 0 #000,calc(var(--u)*-.24) calc(var(--u)*.24) 0 #000,calc(var(--u)*-.36) calc(var(--u)*.36) 0 #000,calc(var(--u)*-.48) calc(var(--u)*.48) 0 #000,calc(var(--u)*-.6) calc(var(--u)*.6) 0 #000}
 .rr .rs .num small{display:block;margin-top:calc(var(--u)*.8);font-family:var(--bd);font-weight:800;letter-spacing:.14em;font-size:calc(var(--u)*1.4);text-shadow:none}
 .rr .rs p{font-size:calc(var(--u)*1.4);line-height:1.55;background:var(--black);color:var(--cream);border:1px solid #000;padding:calc(var(--u)*1.4) calc(var(--u)*1.8);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--gold)}
-/* strategy strip and partners */
-.rr .fl{grid-column:1/13;margin-top:calc(var(--u)*2.4);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);border:1px solid var(--ink);background:var(--paper)}
-.rr .fl>div{padding:calc(var(--u)*2) calc(var(--u)*2.2) calc(var(--u)*2.4);border-right:1px solid var(--ink);position:relative}
-.rr .fl>div:last-child{border-right:0;background:var(--black);color:var(--cream)}
-.rr .fl>div:nth-child(2){background:var(--blue);color:#fff}
-.rr .fl .n{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:max(9px,calc(var(--u)*.8));color:var(--blue)}
-.rr .fl>div:nth-child(2) .n,.rr .fl>div:last-child .n{color:var(--gold)}
-.rr .fl h3{margin-top:calc(var(--u)*.9);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.8);line-height:1.04;letter-spacing:-.01em}
-.rr .fl p{margin-top:calc(var(--u)*1);font-size:calc(var(--u)*1.12);line-height:1.55}
-.rr .rp{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--ink);background:var(--paper)}
-.rr .rp>article{padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.4);border-right:1px solid var(--ink)}
-.rr .rp>article:last-child{border-right:0}
-.rr .rp .n{font-family:var(--disp);font-weight:900;font-size:calc(var(--u)*3.2);line-height:1;color:transparent;-webkit-text-stroke:1px var(--ink)}
-.rr .rp h3{margin-top:calc(var(--u)*1.2);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.6);line-height:1.05;letter-spacing:-.01em}
-.rr .rp p{margin-top:calc(var(--u)*.9);font-size:calc(var(--u)*1.1);line-height:1.55}
 @media (max-width:1000px){
-.rr .fl{grid-template-columns:minmax(0,1fr)}
-.rr .fl>div{border-right:0;border-bottom:1px solid var(--ink)}.rr .fl>div:last-child{border-bottom:0}
-.rr .fl h3{font-size:calc(var(--u)*2.4)}.rr .fl p{font-size:calc(var(--u)*1.5)}
-.rr .rp{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.rr .rp>article{border-bottom:1px solid var(--ink)}.rr .rp>article:nth-child(2n){border-right:0}.rr .rp>article:nth-last-child(-n+2){border-bottom:0}
-.rr .rp h3{font-size:calc(var(--u)*2)}.rr .rp p{font-size:calc(var(--u)*1.4)}
 .rr .hero h1.b3{font-size:calc(var(--u)*4.5)}
-.rr .iw{grid-template-columns:minmax(0,1fr)}
-.rr .rs .big{grid-template-columns:minmax(0,1fr)}
-.rr .rs .num{font-size:calc(var(--u)*7)}
-.rr .iw .tx p{font-size:calc(var(--u)*1.6)}
-.rr .poll h3{font-size:calc(var(--u)*2.4)}.rr .poll button{font-size:calc(var(--u)*1.5)}
+.rr .es,.rr .kb,.rr .tk,.rr .rs .big{grid-template-columns:minmax(0,1fr)}
+.rr .es blockquote{font-size:calc(var(--u)*1.6)}
+.rr .bsg{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .bsg figcaption b{font-size:calc(var(--u)*1.5)}.rr .bsg figcaption span{font-size:calc(var(--u)*1)}
+.rr .mz{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:calc(var(--u)*22)}
+.rr .mz .lg{grid-row:span 2}.rr .mz .w{grid-column:auto}
+.rr .sgr{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rr .sgr figcaption{font-size:calc(var(--u)*.95)}
+.rr .kb h3{font-size:calc(var(--u)*3)}.rr .kb .cp{font-size:calc(var(--u)*1.2)}
+.rr .tk h3{font-size:calc(var(--u)*2.6)}.rr .tk p{font-size:calc(var(--u)*1.5)}
 }
 @media (max-width:700px){
-.rr .rp{grid-template-columns:minmax(0,1fr)}.rr .rp>article{border-right:0;border-bottom:1px solid var(--ink)!important}.rr .rp>article:last-child{border-bottom:0!important}
-.rr .fl h3{font-size:calc(var(--u)*2.2)}.rr .fl p{font-size:calc(var(--u)*1.5)}
 .rr .hero h1.b3{font-size:calc(var(--u)*3)}
-.rr .iw .fm{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .kb h3{font-size:calc(var(--u)*2.1)}
+.rr .bsg{grid-template-columns:minmax(0,1fr)}
+.rr .bsg figcaption b{font-size:calc(var(--u)*1.8)}.rr .bsg figcaption span{font-size:calc(var(--u)*1.1)}
+.rr .kb .r4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .kb .r3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .sgr{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .sgr figcaption{font-size:calc(var(--u)*1.05)}
+.rr .mz{grid-auto-rows:calc(var(--u)*26)}
+.rr .es blockquote{font-size:calc(var(--u)*1.7);padding:calc(var(--u)*2.2)}
 .rr .rs .num{font-size:calc(var(--u)*5.2)}.rr .rs .num small{font-size:calc(var(--u)*1.5)}
 .rr .rs p{font-size:calc(var(--u)*1.6)}
-.rr .poll h3{font-size:calc(var(--u)*2)}
 }
 </style></head><body>
 <div class="rr">
 <div class="fr">
-<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#experience">The Experience</a><a href="#partners">Partners</a><a href="#interactive">Play Along</a><a href="#chefs">Chef Moments</a><a href="#results">The Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#takeover">The Takeover</a><a href="#backstories">Backstories</a><a href="#kitchen">The Kitchen</a><a href="#sweepstakes">Sweepstakes</a><a href="#results">The Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
 
 <header class="hero" id="top">
   <h1 class="x h b3" aria-label="Brunch With The Best"><span>Brunch</span><span>With The</span><span class="l2"><span>Best</span><span class="mk"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-logo.webp?v=1" alt="" role="img" aria-label="Pepsi Dig In logo" loading="lazy" decoding="async"></span></span></h1>
   <div class="pan">
-    <div class="p"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-1.webp?v=1" alt="" role="img" aria-label="Guests raising drinks around a crowded brunch table" loading="lazy" decoding="async"></div>
-    <div class="p q"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-1.webp?v=1" alt="" role="img" aria-label="Story frame with a chef, a Pepsi and a plate of brunch" loading="lazy" decoding="async"></div>
+    <div class="p"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-hero.webp?v=1" alt="" role="img" aria-label="Chefs and hosts celebrating together on the Dig In stage" loading="lazy" decoding="async"></div>
+    <div class="p q"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-logo-screen.webp?v=1" alt="" role="img" aria-label="Pepsi Dig In Brunch With The Best wordmark" loading="lazy" decoding="async"></div>
   </div>
-  <div class="hl"><span class="lb">The Headline</span><p>After the Better With Pepsi repositioning, Brunch With The Best took Pepsi into one of the biggest casual dining occasions in the country, a social, digital and in-person Brunch Royale with restaurateur relationships at the center.</p></div>
+  <div class="hl"><span class="lb">The Headline</span><p>Brunch With The Best took Pepsi Dig In into one of the biggest casual dining occasions in the country. A social, digital and in-person Brunch Royale that put restaurateurs at the center and brunch culture head to head, online and on one menu, during Super Bowl weekend.</p></div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="tr"><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span></div></div>
+<div class="mq" aria-hidden="true"><div class="tr"><span>Brunch With The Best</span><span>Brunch Royale</span><span>Della&rsquo;s Kitchen Las Vegas</span><span>Dig In Show Love</span><span>Brunch With The Best</span><span>Brunch Royale</span><span>Della&rsquo;s Kitchen Las Vegas</span><span>Dig In Show Love</span><span>Brunch With The Best</span><span>Brunch Royale</span><span>Della&rsquo;s Kitchen Las Vegas</span><span>Dig In Show Love</span><span>Brunch With The Best</span><span>Brunch Royale</span><span>Della&rsquo;s Kitchen Las Vegas</span><span>Dig In Show Love</span></div></div>
 
 <section class="sc" id="idea">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>01</b>The Strategy</span><h2 class="x m">From Platform to Partnerships</h2></div>
+    <div class="sh rv"><span class="lb"><b>01</b>The Idea</span><h2 class="x m">Crown the Restaurateurs</h2></div>
     <div class="idea rv">
-      <div class="a"><span class="lb">The Insight</span><p class="big">Better With Pepsi made the meal the hero and Pepsi the perfect pairing. That gave restaurant partners a reason to lean in.</p></div>
-      <div class="b"><span class="lb">The Idea</span><p class="big">Enter brunch, one of the biggest casual dining occasions in the country, by putting the restaurateurs who own it at the center.</p></div>
+      <div class="a"><span class="lb">The Insight</span><p class="big">Brunch is one of the biggest casual dining occasions in the country, and the restaurateurs behind it set the table for how people gather.</p></div>
+      <div class="b"><span class="lb">The Idea</span><p class="big">Close the Restaurant Royalty residency with a Brunch Royale that crowns the restaurateurs pushing the brunch tradition forward.</p></div>
     </div>
-    <div class="fl">
-      <div class="rv"><span class="n">Step One</span><h3>Better With Pepsi</h3><p>The brand platform introduction. It elevated the meal occasion and positioned Pepsi as the ideal companion.</p></div>
-      <div class="rv" style="--d:.08s"><span class="n">Step Two</span><h3>Brunch With The Best</h3><p>The occasion play. A social, digital and in-person Brunch Royale with chefs and restaurateurs at the table.</p></div>
-      <div class="rv" style="--d:.16s"><span class="n">Step Three</span><h3>Restaurant Partnerships</h3><p>Built to give foodservice and restaurant relationship teams narrative and proof points for pouring rights, menu presence, co-marketing and long-term operator partnerships.</p></div>
+    <p class="bdy rv" style="grid-column:1/13;margin-top:calc(var(--u)*2.4);max-width:calc(var(--u)*60)">With Better With Pepsi already putting the meal first and Pepsi right beside it, brunch was the natural next table. Every piece of the program was built around restaurateurs: their signature dishes on one menu, their stories on Pepsi Dig In&rsquo;s channels, and local brunch spots in the spotlight.</p>
+    <div class="es rv">
+      <span class="lb">Around The Dig In Table</span>
+      <blockquote>To some, brunch is just another meal. Around the Dig In table, it&rsquo;s much more. It&rsquo;s an occasion, a reason to gather, a chance to gossip, and a momentary getaway from the world outside your circle. It&rsquo;s where chosen family comes to be fed in a way that food alone can&rsquo;t satisfy. It&rsquo;s a kind of nourishment that takes years of tradition, taste tests, and trash talk to truly understand. For us, community is everything. And this is the space we built to get together and make each of the chefs pushing the brunch tradition forward feel like royalty.</blockquote>
     </div>
-    <p class="bdy rv" style="grid-column:1/13;margin-top:calc(var(--u)*2.4)">Pepsi Dig In, PepsiCo&rsquo;s platform for Black-owned restaurants, carried the work. Brunch With The Best culminates its Restaurant Royalty residency, amplifying Black culinary talent and cultivating long-term restaurant partnerships.</p>
   </div>
 </section>
 
-<section class="sc ex" id="experience">
+<section class="sc" id="takeover" style="background:var(--cream)">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>02</b>Dual Plane Activation</span><h2 class="x m">One Menu, Two Planes</h2></div>
-    <div class="exl">
-      <p class="bdy rv">Brunch is one of the biggest casual dining occasions in the country, and Pepsi Dig In stepped into it with restaurateurs at the center. A brunch takeover on the Las Vegas Strip brought top chefs and a mixologist from across the country to the table, each serving signature dishes.</p>
-      <p class="bdy rv" style="--d:.1s">Online and in person run as one dual plane activation. Engagement stories send people to a real table, and the moments captured on site feed the next posts. The two planes keep passing the energy back and forth across three beats.</p>
+    <div class="sh rv"><span class="lb"><b>02</b>The Takeover</span><h2 class="x m">One Menu, Two Planes</h2></div>
+    <div class="tk">
+      <div class="rv"><span class="lb">Online</span><h3>Head to Head</h3><p>Brunch culture from across the country went head to head on Pepsi Dig In&rsquo;s social channels, with chef stories, interviews and creator reviews feeding the conversation.</p></div>
+      <div class="rv" style="--d:.08s"><span class="lb">In Person</span><h3>One Culturally Infused Menu</h3><p>Chefs and a mixologist from across the country brought their signature dishes to one menu at a brunch takeover at Della&rsquo;s Kitchen in Las Vegas, February 8 to 10.</p></div>
     </div>
-    <div class="dp">
-      <article class="rv"><div class="hd"><h3>Amplification</h3><span>Jan 26 to 29</span></div>
-        <div class="c on" data-l="Online Plane">Each Royal chef shares a personalized sweepstakes story to hype their audience.</div>
-        <div class="c br" data-l="The Bridge">Entering means tagging a location, which puts the spot on the map.</div>
-        <div class="c rw" data-l="Real World Plane">Fans share a favorite memory from a local Black-owned brunch spot, with the food, the ambiance and their own experience in frame.</div></article>
-      <article class="rv" style="--d:.1s"><div class="hd"><h3>Storytelling</h3><span>Jan 29 to Feb 10</span></div>
-        <div class="c on" data-l="Online Plane">A daily chef story series, collaborative in-feed carousels and interactive story templates with polls, questions and a countdown.</div>
-        <div class="c br" data-l="The Bridge">Every engagement story carries a tagged location, a hyperlinked reservation sticker and &ldquo;meet me there gameday weekend&rdquo; copy.</div>
-        <div class="c rw" data-l="Real World Plane">The takeover opens on the Vegas Strip. Each featured chef serves signature dishes, with cocktails from a featured mixologist.</div></article>
-      <article class="rv" style="--d:.2s"><div class="hd"><h3>Echo</h3><span>Feb 13 to 18</span></div>
-        <div class="c on" data-l="Online Plane">Meme-format Reels and TikToks, shared by each Royal and on the Dig In channels.</div>
-        <div class="c br" data-l="The Bridge">On site capture turns brunch service into content.</div>
-        <div class="c rw" data-l="Real World Plane">Cameras catch behind-the-scenes moments of chef life during brunch service.</div></article>
-    </div>
-    <div class="art">
-      <div class="ph3 rv">
-        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-1.webp?v=1" alt="" role="img" aria-label="Guests raising drinks around a crowded brunch table" loading="lazy" decoding="async"></figure>
-        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-2.webp?v=1" alt="" role="img" aria-label="A table of fried chicken, waffles, eggs and mimosas" loading="lazy" decoding="async"></figure>
-        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-3.webp?v=1" alt="" role="img" aria-label="A dusted pancake beside a plate of greens" loading="lazy" decoding="async"></figure>
-      </div>
-      <div class="tx rv" style="--d:.1s">
-        <span class="lb" style="color:var(--blue)">Experience Design</span>
-        <h3 style="margin-top:calc(var(--u)*.8)">Brunch as an Art Form</h3>
-        <ul>
-          <li><b>The Takeover Menu</b>Signature dishes from each featured chef, with a mixologist and cocktail menus to match.</li>
-          <li><b>Chef Wall Coverings</b>17 foot tall wall coverings promote each chef in the room.</li>
-          <li><b>One Visual World</b>The same hand-drawn doodle pattern and Brunch With The Best wordmark carry across every story template.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="sw rv">
-      <div><span class="lb">The Online Hook</span><h3>Brunch With The Best Sweepstakes</h3>
-        <p>Fans and foodies share a favorite memory at a local Black-owned brunch spot, listing the restaurant location. Entries are posted in-feed on Instagram and can be shared through stories or Reels.</p>
-        <ul><li>Show the food, the ambiance and the personal experience</li><li>Tag the location, tag @pepsidigin and use #DigInShowLove</li><li>Follow @pepsidigin on Instagram</li></ul></div>
-      <div><span class="lb">The Prizes</span><h3>Win the Real World Plane</h3>
-        <ul><li>Grand prize: a VIP trip for two to Vegas for gameday weekend, with roundtrip transportation, a 4-night hotel stay and $500 to spend at the Brunch With The Best experience</li><li>Second prize: a $2,500 gift card for a brunch party</li></ul></div>
-    </div>
+    <div class="mz rv"><figure class="lg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-logo-screen.webp?v=1" alt="" role="img" aria-label="Pepsi Dig In Brunch With The Best wordmark on screen" loading="lazy" decoding="async"></figure>
+<figure class="w"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-3.webp?v=1" alt="" role="img" aria-label="Brunch With The Best signage lining the venue walkway" loading="lazy" decoding="async"></figure>
+<figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-1.webp?v=1" alt="" role="img" aria-label="Guest in a Dig In jacket walking into the brunch" loading="lazy" decoding="async"></figure>
+<figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-2.webp?v=1" alt="" role="img" aria-label="Guests at a table during the brunch" loading="lazy" decoding="async"></figure>
+<figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-4.webp?v=1" alt="" role="img" aria-label="Guests toasting at the brunch" loading="lazy" decoding="async"></figure>
+<figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-5.webp?v=1" alt="" role="img" aria-label="Dig In signage at the venue entrance" loading="lazy" decoding="async"></figure></div>
   </div>
 </section>
 
-
-<section class="sc" id="partners">
+<section class="sc cr ch" id="backstories">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>03</b>Restaurateur Relationships</span><h2 class="x m">What Restaurateurs Got</h2></div>
-    <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*2.8)">Every beat of the activation was built to put restaurants in front of the occasion, and to give Pepsi a reason to be at their tables long after the takeover.</p>
-    <div class="rp">
-      <article class="rv"><span class="n">01</span><h3>On The Menu</h3><p>Each featured chef served signature dishes at the takeover, with the food at the center of the occasion and Pepsi at the table.</p></article>
-      <article class="rv" style="--d:.07s"><span class="n">02</span><h3>On The Map</h3><p>Sweepstakes entries tagged local Black-owned brunch spots, putting each restaurant&rsquo;s location in front of the community.</p></article>
-      <article class="rv" style="--d:.14s"><span class="n">03</span><h3>In The Feed</h3><p>Each Royal chef got a personalized story, a feature on the Dig In channels and a collaborative in-feed carousel to share with their own audience.</p></article>
-      <article class="rv" style="--d:.21s"><span class="n">04</span><h3>At The Door</h3><p>Tagged locations and hyperlinked reservation stickers sent engaged followers toward a real table.</p></article>
-    </div>
+    <div class="sh rv"><span class="lb"><b>03</b>Brunch Backstories</span><h2 class="x m c">Six Plates, Six Stories</h2></div>
+    <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*2.8)">We created individual brunch backstories for each chef that described their relationship to brunch as a culinary art and the significance of their signature dishes. Tap through each story.</p>
+    <div class="bsg"><figure class="rv" style="--d:0.00s"><div class="sv" role="group" aria-label="Brunch backstory for The Drink Coach, Atlanta"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for The Drink Coach" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for The Drink Coach" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Garden of Eden</b><span>The Drink Coach &middot; Atlanta</span></figcaption></figure><figure class="rv" style="--d:0.07s"><div class="sv" role="group" aria-label="Brunch backstory for Lolo&rsquo;s On The Water, New York"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Jerk Ribs</b><span>Lolo&rsquo;s On The Water &middot; New York</span></figcaption></figure><figure class="rv" style="--d:0.14s"><div class="sv" role="group" aria-label="Brunch backstory for Taylor&rsquo;s Tacos, Chicago"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Steak N Eggs &lsquo;Dilla</b><span>Taylor&rsquo;s Tacos &middot; Chicago</span></figcaption></figure><figure class="rv" style="--d:0.00s"><div class="sv" role="group" aria-label="Brunch backstory for Cranky Granny&rsquo;s, Austin"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Peach Cobbler French Toast</b><span>Cranky Granny&rsquo;s &middot; Austin</span></figcaption></figure><figure class="rv" style="--d:0.07s"><div class="sv" role="group" aria-label="Brunch backstory for Bridgetown Roti, Los Angeles"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Bridgetown Roti" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Bridgetown Roti" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Biscuits &amp; Gravy Goodness</b><span>Bridgetown Roti &middot; Los Angeles</span></figcaption></figure><figure class="rv" style="--d:0.14s"><div class="sv" role="group" aria-label="Brunch backstory for Blk Swan, Baltimore"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Blk Swan" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Blk Swan" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><figcaption><b>Tide to Table Omelette</b><span>Blk Swan &middot; Baltimore</span></figcaption></figure></div>
   </div>
 </section>
 
-<section class="sc" id="interactive" style="background:var(--cream)">
+<section class="sc" id="kitchen">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>04</b>Interactive Owned Content</span><h2 class="x m">Head to Head, Vote by Vote</h2></div>
-    <div class="iw">
-      <div class="tx rv">
-        <p>On Pepsi Dig In&rsquo;s own channels, regional brunch cultures went head to head and the community did the deciding. Votes, polls, questions and a countdown turned every story into a pick, a conversation or a plan.</p>
-        <p>The templates carried the same doodle world and Brunch With The Best wordmark as the room, so every tap felt like part of the table. Each engagement story pointed back to the takeover with a tagged location, a reservation link and &ldquo;meet me there gameday weekend&rdquo; copy.</p>
-        <div class="fm">
-          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-1.webp?v=1" alt="" role="img" aria-label="Story frame with a question sticker asking for brunch questions" loading="lazy" decoding="async"></figure>
-          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-2.webp?v=1" alt="" role="img" aria-label="Story frame with a poll sticker asking where the host sits at brunch" loading="lazy" decoding="async"></figure>
-          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-3.webp?v=1" alt="" role="img" aria-label="Story frame with a countdown sticker to the brunch" loading="lazy" decoding="async"></figure>
-          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-4.webp?v=1" alt="" role="img" aria-label="Story frame with a question sticker about the worst brunch item to cook" loading="lazy" decoding="async"></figure>
-        </div>
-      </div>
-      <div class="poll rv" style="--d:.1s" id="poll">
-        <span class="lb">Try the Poll Sticker</span>
-        <h3>Where does the host sit at brunch?</h3>
-        <ul>
-          <li><button type="button" aria-pressed="false"><span>By their bestie</span><i aria-hidden="true"></i></button></li>
-          <li><button type="button" aria-pressed="false"><span>Head of the table</span><i aria-hidden="true"></i></button></li>
-          <li><button type="button" aria-pressed="false"><span>Next to their crush</span><i aria-hidden="true"></i></button></li>
-        </ul>
-        <div class="st" aria-live="polite"></div>
-      </div>
+    <div class="sh rv"><span class="lb"><b>04</b>Chef Moments</span><h2 class="x m">From the Comments to the Kitchen</h2></div>
+    <div class="kb">
+      <div class="rv"><h3>Compliments To The Chef</h3><p class="bdy">We gave our chefs their flowers by using real comments from their followers to generate questions for our pre-event interviews.</p></div>
+      <div class="row r4 rv" style="--d:.08s"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-1.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-2.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-3.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-4.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure></div>
+    </div>
+    <div class="kb">
+      <div class="rv"><h3>Back Of House</h3><p class="bdy">We gave our audience a sneak peek into the back of house experience by turning candid BTS footage of the chefs into organic social content.</p></div>
+      <div class="row r3 rv" style="--d:.08s"><div><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-1.gif?v=1" alt="" role="img" aria-label="Raising a toast to close the residency" loading="lazy" decoding="async"></figure><span class="cp">Raising a toast to close the residency</span></div><div><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-2.gif?v=1" alt="" role="img" aria-label="A signature sweet roll recipe on the brunch menu" loading="lazy" decoding="async"></figure><span class="cp">A signature sweet roll recipe on the brunch menu</span></div><div><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-3.gif?v=1" alt="" role="img" aria-label="Baltimore energy heating up the kitchen" loading="lazy" decoding="async"></figure><span class="cp">Baltimore energy heating up the kitchen</span></div></div>
     </div>
   </div>
 </section>
 
-<section class="sc cr ch" id="chefs">
+<section class="sc swk" id="sweepstakes">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>05</b>Chef Moments</span><h2 class="x m c">Six Chefs, Told Twice</h2></div>
-    <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*3.4)">Each Royal feature gets a day in the spotlight, first as a sweepstakes story and then, after the takeover, as a behind-the-scenes meme. The chef moments keep the brunch going long after the last plate.</p>
-    <div class="blk">
-      <div class="bh rv"><h3>Amplification</h3><span>Sweepstakes Stories</span></div>
-      <div class="ph9 s6">
-        <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-1.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a patterned jacket pointing at the camera" loading="lazy" decoding="async"></figure>
-        <figure class="rv" style="--d:.05s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-2.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef on the phone in a white top" loading="lazy" decoding="async"></figure>
-        <figure class="rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-3.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a light blue shirt" loading="lazy" decoding="async"></figure>
-        <figure class="rv" style="--d:.15s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-4.webp?v=1" alt="" role="img" aria-label="Story graphic of two chefs in matching taco shop shirts" loading="lazy" decoding="async"></figure>
-        <figure class="rv" style="--d:.2s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-5.webp?v=1" alt="" role="img" aria-label="Story graphic of two chefs in blue shirts" loading="lazy" decoding="async"></figure>
-        <figure class="rv" style="--d:.25s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-6.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a white coat" loading="lazy" decoding="async"></figure>
-      </div>
-      <p class="cap rv">Every Royal chef gets a personalized graphic to share on Instagram stories, hyping their audience for the sweepstakes and the takeover.</p>
-    </div>
-    <div class="blk">
-      <div class="bh rv"><h3>Echo</h3><span>Chef Life Memes</span></div>
-      <div class="mm">
-        <figure class="a rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-1.webp?v=1" alt="" role="img" aria-label="Chef in a light blue shirt with a caption about a customer complimenting the chef" loading="lazy" decoding="async"></figure>
-        <figure class="g rv" style="--d:.08s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-gif.gif?v=1" alt="" role="img" aria-label="Animated meme of a chef plating food with a caption about being a chef first and a foodie right after" loading="lazy" decoding="async"></figure>
-        <figure class="a rv" style="--d:.16s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-3.webp?v=1" alt="" role="img" aria-label="Chef seasoning a pan with a caption about making sure the dish is seasoned" loading="lazy" decoding="async"></figure>
-      </div>
-      <p class="cap rv">On site, the crew captures the realities of chef life during brunch service. After the event, the clips come back as meme-format Reels and TikToks that Royals share on their own feeds.</p>
-    </div>
-    <div class="blk">
-      <div class="bh rv"><h3>Spread the Word</h3><span>Calling All Black Restaurateurs</span></div>
-      <div class="spw">
-        <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-onesheet.webp?v=1" alt="" role="img" aria-label="One-sheet inviting Black-owned restaurants to get on the map and into the ultimate Black-owned guides" loading="lazy" decoding="async"></figure>
-        <div class="rv" style="--d:.1s"><p class="cap" style="margin-top:0">A one-sheet for Royals to post on their stories opens the movement to every Black-owned restaurant. The ask is a Reel showing why they are number one at brunch: show the dishes, introduce the staff or share a limited-time brunch special.</p>
-        <p class="cap">It is the dual plane idea in a single frame. Restaurants post online to get on the map, and the guides send people to their real tables.</p></div>
-      </div>
-    </div>
+    <div class="sh rv"><span class="lb"><b>05</b>Bottomless Brunch Sweepstakes</span><h2 class="x m c">Every Entry, A Local Spot</h2></div>
+    <p class="bdy rv" style="grid-column:1/13;max-width:calc(var(--u)*60)">To enter, contestants submitted a review shouting out their favorite local Black-owned brunch spots. Creators amplified with partner content, sharing their own Reel reviews and interactive story content.</p>
+    <div class="sgr"><figure class="rv" style="--d:0.00s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-1.gif?v=1" alt="" role="img" aria-label="Creator review video: Seafood in Buckhead, Atlanta" loading="lazy" decoding="async"></div><figcaption>Seafood in Buckhead, Atlanta</figcaption></figure><figure class="rv" style="--d:0.05s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-2.gif?v=1" alt="" role="img" aria-label="Creator review video: A new must try spot" loading="lazy" decoding="async"></div><figcaption>A new must try spot</figcaption></figure><figure class="rv" style="--d:0.10s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-3.gif?v=1" alt="" role="img" aria-label="Creator review video: Breakfast sandwiches and giant doughnuts" loading="lazy" decoding="async"></div><figcaption>Breakfast sandwiches and giant doughnuts</figcaption></figure><figure class="rv" style="--d:0.15s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-4.gif?v=1" alt="" role="img" aria-label="Creator review video: A favorite Harlem cafe" loading="lazy" decoding="async"></div><figcaption>A favorite Harlem cafe</figcaption></figure><figure class="rv" style="--d:0.20s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-5.gif?v=1" alt="" role="img" aria-label="Creator review video: Coffee shop and car wash" loading="lazy" decoding="async"></div><figcaption>Coffee shop and car wash</figcaption></figure><figure class="rv" style="--d:0.00s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-6.gif?v=1" alt="" role="img" aria-label="Creator review video: BYOB brunch in Houston" loading="lazy" decoding="async"></div><figcaption>BYOB brunch in Houston</figcaption></figure><figure class="rv" style="--d:0.05s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-7.gif?v=1" alt="" role="img" aria-label="Creator review video: Weekend brunch with good people" loading="lazy" decoding="async"></div><figcaption>Weekend brunch with good people</figcaption></figure><figure class="rv" style="--d:0.10s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-8.gif?v=1" alt="" role="img" aria-label="Creator review video: A lit brunch in Houston" loading="lazy" decoding="async"></div><figcaption>A lit brunch in Houston</figcaption></figure><figure class="rv" style="--d:0.15s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-9.gif?v=1" alt="" role="img" aria-label="Creator review video: Catfish and shrimp po boy" loading="lazy" decoding="async"></div><figcaption>Catfish and shrimp po boy</figcaption></figure><figure class="rv" style="--d:0.20s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-10.gif?v=1" alt="" role="img" aria-label="Creator review video: Three spots in Atlanta and Duluth" loading="lazy" decoding="async"></div><figcaption>Three spots in Atlanta and Duluth</figcaption></figure></div>
   </div>
 </section>
-
 
 <section class="sc rs" id="results">
   <div class="gr">
     <div class="sh rv"><span class="lb"><b>06</b>The Results</span><h2 class="x m c">Earned, Fast</h2></div>
     <div class="big">
       <div class="num rv">4.7 Billion<small>Earned Media Impressions</small></div>
-      <p class="rv" style="--d:.1s">Half of those impressions landed in the first 24 hours after the social announcement.</p>
+      <p class="rv" style="--d:.1s">Half of those impressions landed in the first 24 hours after the social announcement, as the campaign tapped the culture&rsquo;s craving for food content with rich meaning.</p>
     </div>
   </div>
 </section>
@@ -580,17 +533,20 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
       if(t){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
     });
   });
-  var poll=rr.querySelector('#poll');
-  if(poll){
-    var btns=[].slice.call(poll.querySelectorAll('button'));
-    var st=poll.querySelector('.st');
-    btns.forEach(function(b){
-      b.addEventListener('click',function(){
-        btns.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});
-        st.textContent='Vote counted';
-      });
-    });
-  }
+
+  [].forEach.call(rr.querySelectorAll('.sv'),function(sv){
+    var sl=[].slice.call(sv.querySelectorAll('.sl img')),bars=[].slice.call(sv.querySelectorAll('.bars i')),i=0,t=null,vis=false;
+    var rm=win.matchMedia&&win.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(n){i=(n+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===i)});bars.forEach(function(b,k){b.className=k<i?'done':(k===i?'now':'')});sv.setAttribute('data-i',i);var c=sv.querySelector('.ct');if(c)c.textContent=(i+1)+' of '+sl.length}
+    function play(){stop();if(rm||!vis)return;t=win.setInterval(function(){go(i+1)},3400)}
+    function stop(){if(t){win.clearInterval(t);t=null}}
+    sv.querySelector('.nx').addEventListener('click',function(){go(i+1);play()});
+    sv.querySelector('.pv').addEventListener('click',function(){go(i-1);play()});
+    sv.goTo=function(n){go(n);play()};
+    if('IntersectionObserver' in win){new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isIntersecting;vis?play():stop()})},{threshold:.35}).observe(sv)}
+    go(0);
+  });
+
 })();
 </script>
 </body></html>
