@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AT&amp;T Just OK Valentines: a hidden-camera pop-up stunt and greeting card series from BBDO LA that extended AT&amp;T's &ldquo;Just OK is not OK&rdquo; network campaign into Valentine's Day.">
+<title>Nina Austin | OK V-Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..900,100;1,9..144,400..900,100&family=Yellowtail&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#2A1420}
+.ok{--u:clamp(11px,1.1111vw,28px);--bl:#F9D6D2;--pa:#FFF6F1;--rd:#EE4436;--pk:#E63E78;--pw:#9AA6EC;--mg:#F5A623;--lf:#3E9E7E;--att:#009FDB;--ik:#2A1420;--df:Fraunces,'Hoefler Text',Georgia,serif;--sc:Yellowtail,'Brush Script MT',cursive;--mo:'DM Mono',ui-monospace,Menlo,monospace;--ui:Figtree,system-ui,sans-serif;display:block;position:relative;overflow:hidden;width:100%;background:var(--pa);color:var(--ik);font-family:var(--ui);font-size:calc(var(--u)*1.05);font-weight:500;line-height:1.6;letter-spacing:normal;text-transform:none;text-align:left}
+.ok *,.ok *::before,.ok *::after{box-sizing:border-box}
+.ok a{color:inherit;text-decoration:none}
+.ok h1,.ok h2,.ok h3{font-family:var(--df);font-variation-settings:'SOFT' 100;font-weight:800;margin:0;color:inherit!important;text-transform:none;letter-spacing:-.01em;line-height:1}
+.ok p,.ok ol,.ok ul,.ok dl,.ok dd,.ok figure{margin:0}
+.ok img{display:block;max-width:100%;height:auto}
+.ok button{font:inherit;color:inherit}
+.ok .w{width:100%;max-width:calc(var(--u)*72);margin:0 auto;padding:0 calc(var(--u)*2)}
+.ok .tab{display:inline-block;font:500 calc(var(--u)*.78)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;padding:.65em 1.1em;border-radius:99px;background:var(--ik);color:var(--pa)}
+.ok .scr{font-family:var(--sc);font-weight:400;font-variation-settings:normal;letter-spacing:0}
+.ok .sec-h{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.1)}
+.ok .sec-h h2{font-size:calc(var(--u)*4.4)}
+.ok .sec-h h2 .scr{font-size:1.08em;color:var(--rd)}
+.ok .sub{font-weight:600;font-size:calc(var(--u)*1.3);line-height:1.4;max-width:calc(var(--u)*44)}
+.ok .fine{font:400 calc(var(--u)*.78)/1.5 var(--mo);letter-spacing:.04em}
+.ok .hrt{--hr:polygon(50% 100%,8% 58%,2% 40%,4% 24%,12% 11%,25% 5%,38% 8%,50% 20%,62% 8%,75% 5%,88% 11%,96% 24%,98% 40%,92% 58%)}
+
+/* signal bars */
+.ok .sig{display:inline-flex;align-items:flex-end;gap:calc(var(--u)*.22);height:calc(var(--u)*1.5)}
+.ok .sig i{display:block;width:calc(var(--u)*.42);border-radius:calc(var(--u)*.1);background:currentColor;opacity:.22}
+.ok .sig i:nth-child(1){height:25%}.ok .sig i:nth-child(2){height:43%}.ok .sig i:nth-child(3){height:62%}.ok .sig i:nth-child(4){height:81%}.ok .sig i:nth-child(5){height:100%}
+.ok .sig i.on{opacity:1}
+
+/* HERO */
+.ok .hero{position:relative;background-color:var(--bl);background-image:radial-gradient(circle at 50% 50%,rgba(238,68,54,.13) 0 calc(var(--u)*.32),transparent calc(var(--u)*.32 + .5px));background-size:calc(var(--u)*2.6) calc(var(--u)*2.6);padding:calc(var(--u)*5.5) 0 calc(var(--u)*7)}
+.ok .hg{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center}
+.ok .hero h1{font-size:calc(var(--u)*6.6);line-height:.9;margin:calc(var(--u)*1.6) 0 calc(var(--u)*1.8);color:var(--ik)!important}
+.ok .hero h1 .scr{display:block;font-size:.78em;line-height:.9;color:var(--rd);transform:rotate(-4deg);transform-origin:0 100%;margin-bottom:.08em}
+.ok .hero h1 .ok-w{font-style:italic;font-weight:400;font-variation-settings:'SOFT' 0}
+.ok .lead{font-size:calc(var(--u)*1.35);font-weight:600;line-height:1.45;max-width:calc(var(--u)*31)}
+.ok .lead b{font-family:var(--df);font-style:italic;font-weight:700}
+.ok .skl{list-style:none;padding:0;margin:calc(var(--u)*1.9) 0 0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.55);max-width:calc(var(--u)*34)}
+.ok .skl li{font:500 calc(var(--u)*.74)/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;padding:.65em 1em;border-radius:99px;border:calc(var(--u)*.12) solid var(--ik);background:rgba(255,246,241,.7)}
+.ok .fan{position:relative;aspect-ratio:1/1;max-width:calc(var(--u)*34);margin-left:auto;width:100%}
+.ok .fan img{position:absolute;width:52%;top:12%;left:24%;border-radius:calc(var(--u)*.35);box-shadow:0 calc(var(--u)*.3) calc(var(--u)*.6) rgba(42,20,32,.12),0 calc(var(--u)*1.2) calc(var(--u)*2.4) rgba(42,20,32,.2);transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
+.ok .fan img:nth-child(1){transform:translate(-38%,6%) rotate(-14deg)}
+.ok .fan img:nth-child(2){transform:translate(38%,6%) rotate(13deg)}
+.ok .fan img:nth-child(3){transform:translateY(-3%) rotate(-1.5deg)}
+.ok .fan:hover img:nth-child(1){transform:translate(-50%,8%) rotate(-19deg)}
+.ok .fan:hover img:nth-child(2){transform:translate(50%,8%) rotate(18deg)}
+.ok .fan:hover img:nth-child(3){transform:translateY(-6%) rotate(0)}
+.ok .tag{position:absolute;z-index:4;display:grid;place-items:center;text-align:center;width:calc(var(--u)*8.4);aspect-ratio:1;border-radius:50%;background:var(--mg);color:var(--ik);border:calc(var(--u)*.16) dashed var(--ik);outline:calc(var(--u)*.35) solid var(--mg);font:500 calc(var(--u)*.7)/1.25 var(--mo);letter-spacing:.08em;text-transform:uppercase;transform:rotate(-12deg)}
+.ok .tag b{display:block;font:italic 800 calc(var(--u)*2.1)/1 var(--df);letter-spacing:0;text-transform:none}
+.ok .fan .tag{right:2%;top:2%}
+.ok .meter{position:absolute;z-index:4;left:0;bottom:4%;display:flex;align-items:center;gap:calc(var(--u)*.8);background:var(--pa);border:calc(var(--u)*.14) solid var(--ik);border-radius:calc(var(--u)*.7);padding:calc(var(--u)*.7) calc(var(--u)*1);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--ik);transform:rotate(3deg);color:var(--att)}
+.ok .meter span{font:500 calc(var(--u)*.72)/1.3 var(--mo);letter-spacing:.08em;text-transform:uppercase;color:var(--ik)}
+.ok .meter span b{display:block;font:italic 800 calc(var(--u)*1.25)/1.1 var(--df);letter-spacing:0;text-transform:none}
+
+/* lace edge */
+.ok .lace{position:absolute;left:0;right:0;height:calc(var(--u)*1.6);background:radial-gradient(circle at 50% 0,var(--c) calc(var(--u)*.8 - .5px),transparent calc(var(--u)*.8)) 0 0/calc(var(--u)*1.6) 100% repeat-x;z-index:2}
+.ok .lace.t{top:0}
+.ok .lace.b{bottom:0;transform:scaleY(-1)}
+
+/* ticker */
+.ok .tkr{background:var(--att);color:#fff;overflow:hidden;padding:calc(var(--u)*1) 0}
+.ok .tkt{display:flex;width:max-content;animation:oktk 60s linear infinite}
+.ok .tkh{display:flex;flex:none;align-items:center}
+.ok .tkh span{font:italic 600 calc(var(--u)*1.7)/1.2 var(--df);white-space:nowrap;padding:0 calc(var(--u)*1.2)}
+.ok .tkh i{display:block;flex:none;width:calc(var(--u)*1);height:calc(var(--u)*.9);background:#fff;clip-path:polygon(50% 100%,8% 58%,2% 40%,4% 24%,12% 11%,25% 5%,38% 8%,50% 20%,62% 8%,75% 5%,88% 11%,96% 24%,98% 40%,92% 58%)}
+@keyframes oktk{to{transform:translateX(-50%)}}
+.ok .tkr:hover .tkt{animation-play-state:paused}
+
+/* BRIEF */
+.ok .brief{background:#FBE3A1;padding:calc(var(--u)*7) 0 calc(var(--u)*7.5)}
+.ok .bg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2.6);margin-top:calc(var(--u)*3.6)}
+.ok .gc{position:relative;background:#fff;border-radius:calc(var(--u)*.5);padding:calc(var(--u)*.7);box-shadow:0 calc(var(--u)*.2) calc(var(--u)*.4) rgba(42,20,32,.08),0 calc(var(--u)*1) calc(var(--u)*2.2) rgba(42,20,32,.1);transform:rotate(var(--r,0deg));transition:transform .3s ease}
+.ok .gc .in{height:100%;border:calc(var(--u)*.12) solid var(--k);outline:calc(var(--u)*.06) solid var(--k);outline-offset:calc(var(--u)*-.4);border-radius:calc(var(--u)*.3);padding:calc(var(--u)*2.2) calc(var(--u)*2.2) calc(var(--u)*2.2)}
+.ok .gc .nm{display:flex;align-items:center;justify-content:space-between;font:500 calc(var(--u)*.74)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;color:var(--k)}
+.ok .gc h3{font-size:calc(var(--u)*2.3);margin:calc(var(--u)*.9) 0 calc(var(--u)*.8);color:var(--k)!important}
+.ok .gc h3 .scr{font-size:1.15em}
+.ok .gc p{font-size:calc(var(--u)*1.05);line-height:1.62}
+.ok .gc .in{display:flex;flex-direction:column}
+.ok .gc .ld{font:italic 500 calc(var(--u)*1.42)/1.38 var(--df);font-variation-settings:'SOFT' 100;color:var(--ik)}
+.ok .gc .mt{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.45);margin:calc(var(--u)*1.2) 0 calc(var(--u)*1.6)}
+.ok .gc .mt span{font:500 calc(var(--u)*.66)/1.2 var(--mo);letter-spacing:.08em;text-transform:uppercase;color:var(--k);border:calc(var(--u)*.1) solid var(--k);border-radius:99px;padding:.55em .9em}
+.ok .rows{list-style:none;padding:0;margin:auto 0 0;border-top:calc(var(--u)*.08) dotted rgba(42,20,32,.4)}
+.ok .rows li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1);align-items:start;padding:calc(var(--u)*.95) 0;border-bottom:calc(var(--u)*.08) dotted rgba(42,20,32,.4)}
+.ok .rows li::before{display:grid;place-items:center;width:calc(var(--u)*1.9);aspect-ratio:1;border-radius:50%;background:var(--k);color:#fff;font:700 calc(var(--u)*.9)/1 var(--ui)}
+.ok .rows.ck li::before{content:'\2713'}
+.ok .rows.ht li::before{content:'\2665';font-size:calc(var(--u)*.85)}
+.ok .rows b{display:block;font-weight:800;font-size:calc(var(--u)*1.02);line-height:1.3}
+.ok .rows span{display:block;font-size:calc(var(--u)*.95);line-height:1.5;margin-top:.2em;opacity:.85}
+.ok .g1{--k:var(--rd);--r:-.7deg}.ok .g2{--k:var(--lf);--r:.6deg}.ok .g3{--k:#5562C9;--r:.5deg}.ok .g4{--k:var(--pk);--r:-.5deg}
+.ok .crd{list-style:none;padding:0;margin:calc(var(--u)*1.2) 0 0;display:grid;gap:calc(var(--u)*.35)}
+.ok .crd li{display:flex;justify-content:space-between;gap:1em;font-size:calc(var(--u)*.95);border-bottom:calc(var(--u)*.08) dotted rgba(42,20,32,.4);padding-bottom:.3em}
+.ok .crd li span:first-child{font:500 .82em/1.6 var(--mo);letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.ok .crd li span:last-child{font-weight:700;text-align:right}
+
+/* STUNT */
+.ok .stunt{position:relative;background:var(--ik);color:var(--pa);padding:calc(var(--u)*8) 0 calc(var(--u)*7.5)}
+.ok .stunt .tab{background:var(--pa);color:var(--ik)}
+.ok .stunt .sec-h h2 .scr{color:var(--bl)}
+.ok .film{margin-top:calc(var(--u)*3.4);display:grid;grid-template-columns:minmax(0,1fr)}
+.ok .env{position:relative;background:var(--bl);border-radius:calc(var(--u)*.6);padding:calc(var(--u)*1.1);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--rd)}
+.ok .vid{position:relative;aspect-ratio:16/9;border-radius:calc(var(--u)*.3);overflow:hidden;background:#000}
+.ok .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ok .env .fine{color:var(--ik);margin-top:calc(var(--u)*.8);display:flex;justify-content:space-between;gap:1em}
+.ok .kpis{display:grid;gap:calc(var(--u)*1.4);align-content:stretch}
+.ok .kp{border:calc(var(--u)*.12) solid rgba(255,246,241,.45);border-radius:calc(var(--u)*.6);padding:calc(var(--u)*1.5) calc(var(--u)*1.6);display:flex;flex-direction:column;justify-content:center}
+.ok .kp .n{font:italic 800 calc(var(--u)*4.6)/1 var(--df);color:var(--bl)}
+.ok .kp p{font-size:calc(var(--u)*.98);line-height:1.5;margin-top:calc(var(--u)*.5)}
+
+/* RACK */
+.ok .rack{position:relative;background-color:var(--pa);background-image:linear-gradient(rgba(42,20,32,.06) calc(var(--u)*.12),transparent calc(var(--u)*.12));background-size:100% calc(var(--u)*1.6);padding:calc(var(--u)*8.5) 0 calc(var(--u)*8)}
+.ok .rg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*3.4) calc(var(--u)*1.8);margin-top:calc(var(--u)*4)}
+.ok .slot{position:relative;padding-top:calc(var(--u)*1.2)}
+.ok .slot::before{content:'';position:absolute;left:-8%;right:-8%;top:calc(var(--u)*-.1);height:calc(var(--u)*.55);background:linear-gradient(#C9B3AC,#A8918A);border-radius:calc(var(--u)*.2);box-shadow:0 calc(var(--u)*.15) 0 rgba(42,20,32,.18)}
+.ok .fl{display:block;width:100%}
+.ok .fi{position:relative;display:block;aspect-ratio:5/7;transition:transform .3s ease}
+.ok .fi>span{position:absolute;inset:0;border-radius:calc(var(--u)*.3);overflow:hidden;box-shadow:0 calc(var(--u)*.2) calc(var(--u)*.4) rgba(42,20,32,.1),0 calc(var(--u)*.9) calc(var(--u)*1.8) rgba(42,20,32,.18);background:#fff}
+.ok .fi>span img{width:100%;height:100%;object-fit:cover}
+.ok .pt{display:flex;justify-content:space-between;align-items:center;margin-top:calc(var(--u)*.9);font:500 calc(var(--u)*.68)/1.3 var(--mo);letter-spacing:.06em;text-transform:uppercase}
+.ok .pt b{font-weight:500;background:var(--ik);color:var(--pa);padding:.35em .6em;border-radius:calc(var(--u)*.2);white-space:nowrap}
+.ok .pt span{opacity:.75;padding-right:.5em}
+
+/* SIGNAL CHECK */
+.ok .chk{position:relative;background:var(--att);color:#fff;padding:calc(var(--u)*8) 0 calc(var(--u)*7.5)}
+.ok .chk .sec-h h2{font-size:calc(var(--u)*3.8);max-width:calc(var(--u)*44)}
+.ok .chk .sec-h h2 .scr{color:#fff;font-size:1.12em}
+.ok .chk .tab{background:#fff;color:var(--att)}
+.ok .cg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:calc(var(--u)*3.4);align-items:center;margin-top:calc(var(--u)*3.2)}
+.ok .cbk{display:grid;grid-template-columns:minmax(0,15fr) minmax(0,17fr);gap:calc(var(--u)*2.2);align-items:center}
+.ok .cbk img{width:100%;border-radius:calc(var(--u)*.3);transform:rotate(-3deg);box-shadow:0 calc(var(--u)*.3) calc(var(--u)*.6) rgba(42,20,32,.15),calc(var(--u)*.7) calc(var(--u)*.9) 0 var(--ik);transition:transform .3s ease}
+.ok .cbk p{font-size:calc(var(--u)*1.1);line-height:1.6}
+.ok .phone{background:var(--pa);color:var(--ik);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*2) calc(var(--u)*2.2) calc(var(--u)*1.8);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--ik)}
+.ok .phone .q{font:500 calc(var(--u)*.78)/1.3 var(--mo);letter-spacing:.12em;text-transform:uppercase}
+.ok .bars{display:flex;align-items:flex-end;gap:calc(var(--u)*.8);height:calc(var(--u)*9);margin:calc(var(--u)*1.4) 0 calc(var(--u)*1.2)}
+.ok .bars button{flex:1;appearance:none;-webkit-appearance:none;border:calc(var(--u)*.14) solid var(--ik);border-radius:calc(var(--u)*.4);background:transparent;cursor:pointer;padding:0;transition:background .25s ease,transform .2s ease}
+.ok .bars button:nth-child(1){height:22%}.ok .bars button:nth-child(2){height:41%}.ok .bars button:nth-child(3){height:60%}.ok .bars button:nth-child(4){height:80%}.ok .bars button:nth-child(5){height:100%}
+.ok .bars button.on{background:var(--att)}
+.ok .bars.l3 button.on{background:var(--mg)}
+.ok .bars.l1 button.on,.ok .bars.l2 button.on{background:var(--rd)}
+.ok .bars button:focus-visible{outline:calc(var(--u)*.2) solid var(--pk);outline-offset:calc(var(--u)*.2)}
+.ok .rd{min-height:calc(var(--u)*4.6)}
+.ok .rd b{display:block;font:italic 800 calc(var(--u)*2)/1.1 var(--df)}
+.ok .rd span{display:block;margin-top:calc(var(--u)*.35);font-size:calc(var(--u)*1)}
+
+/* ANIMATED */
+.ok .anim{position:relative;background:var(--pk);color:var(--pa);padding:calc(var(--u)*8.5) 0 calc(var(--u)*8)}
+.ok .anim .tab{background:var(--pa);color:var(--pk)}
+.ok .anim .sec-h h2 .scr{color:var(--bl)}
+.ok .phs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.8);margin-top:calc(var(--u)*4);align-items:start}
+.ok .phs>figure:nth-child(even){margin-top:calc(var(--u)*3)}
+.ok .dev{position:relative;background:var(--ik);border-radius:calc(var(--u)*2.2);padding:calc(var(--u)*.5);box-shadow:calc(var(--u)*.55) calc(var(--u)*.55) 0 rgba(42,20,32,.45);transition:transform .25s ease}
+.ok .scr9{position:relative;aspect-ratio:9/16;border-radius:calc(var(--u)*1.75);overflow:hidden;background:var(--bl)}
+.ok .scr9 img,.ok .scr9 iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.ok figcaption{margin-top:calc(var(--u)*.9);font:500 calc(var(--u)*.72)/1.4 var(--mo);letter-spacing:.06em;text-transform:uppercase;text-align:center}
+
+/* RESULTS */
+.ok .res{position:relative;background:var(--bl);padding:calc(var(--u)*8.5) 0 calc(var(--u)*8)}
+.ok .rc{margin-top:calc(var(--u)*3.4);background:#fff;border-radius:calc(var(--u)*.5);padding:calc(var(--u)*.8);box-shadow:0 calc(var(--u)*1) calc(var(--u)*2.4) rgba(42,20,32,.14)}
+.ok .rc .in{border:calc(var(--u)*.12) solid var(--rd);outline:calc(var(--u)*.06) solid var(--rd);outline-offset:calc(var(--u)*-.4);border-radius:calc(var(--u)*.3);display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.ok .sx{position:relative;padding:calc(var(--u)*2.6) calc(var(--u)*2.8);border-bottom:calc(var(--u)*.1) dashed rgba(42,20,32,.35)}
+.ok .sx:nth-child(odd){border-right:calc(var(--u)*.1) dashed rgba(42,20,32,.35)}
+.ok .sx:nth-child(n+3){border-bottom:0}
+.ok .sx .k{font:500 calc(var(--u)*.72)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;color:var(--rd)}
+.ok .sn{font:italic 800 calc(var(--u)*5.2)/1 var(--df);color:var(--ik);margin-top:calc(var(--u)*.7)}
+.ok .sn.wd{font-size:calc(var(--u)*3.6);line-height:1.15}
+.ok .sl{font-weight:600;font-size:calc(var(--u)*1.08);line-height:1.45;max-width:calc(var(--u)*25);margin-top:calc(var(--u)*.6)}
+.ok .sx .sig{position:absolute;right:calc(var(--u)*2.4);top:calc(var(--u)*2.4);color:var(--att)}
+.ok .res .sec-h{align-items:center;text-align:center}
+.ok .out{max-width:calc(var(--u)*60);font-size:calc(var(--u)*1.2);line-height:1.55;font-weight:600}
+.ok .out em{font-family:var(--df);font-weight:700}
+
+/* CREDITS */
+.ok .cred{position:relative;background:var(--ik);color:var(--pa);padding:calc(var(--u)*7.5) 0 calc(var(--u)*6.5)}
+.ok .cred .tab{background:var(--pa);color:var(--ik)}
+.ok .cr2{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*4);margin-top:calc(var(--u)*2.6)}
+.ok .cred h3{font-size:calc(var(--u)*2.2);margin-bottom:calc(var(--u)*1.2)}
+.ok .cred h3 .scr{color:var(--bl)}
+.ok .cred .crd li{border-color:rgba(255,246,241,.35)}
+.ok .press{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7)}
+.ok .press a{display:inline-flex;align-items:center;gap:.5em;border:calc(var(--u)*.12) solid var(--pa);border-radius:99px;padding:.75em 1.3em;font-weight:700;font-size:calc(var(--u)*1);transition:background .2s,color .2s}
+.ok .press a::after{content:'\2197';font-weight:400}
+
+/* FOOTER */
+.ok .foot{background:var(--rd);padding:calc(var(--u)*2.6) 0 calc(var(--u)*2.8);color:var(--pa)}
+.ok .foot .w{display:flex;justify-content:space-between;align-items:center;gap:1em;flex-wrap:wrap}
+.ok .btn{display:inline-flex;align-items:center;gap:.6em;border:calc(var(--u)*.16) solid var(--pa);border-radius:99px;padding:.9em 1.9em;font:500 calc(var(--u)*.85)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
+
+@media(hover:hover){
+.ok .cbk img:hover{transform:rotate(0) translateY(calc(var(--u)*-.3))}
+.ok .gc:hover{transform:rotate(0) translateY(calc(var(--u)*-.4))}
+.ok .fl:hover .fi{transform:translateY(calc(var(--u)*-.5)) rotate(-1.5deg)}
+.ok .dev:hover{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}
+.ok .bars button:hover{transform:translateY(calc(var(--u)*-.2))}
+.ok .press a:hover{background:var(--pa);color:var(--ik)}
+.ok .btn:hover{background:var(--pa);color:var(--rd)}
+}
+@media(prefers-reduced-motion:reduce){.ok .tkt{animation-duration:140s}.ok *{transition:none!important}}
+
+@media(max-width:1000px){
+.ok{--u:16px}
+.ok .w{padding:0 calc(var(--u)*1.25)}
+.ok .hero{padding:calc(var(--u)*3.6) 0 calc(var(--u)*5)}
+.ok .hg{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*2)}
+.ok .hero h1{font-size:min(calc(var(--u)*5),15vw)}
+.ok .lead{font-size:calc(var(--u)*1.15)}
+.ok .skl li{font-size:calc(var(--u)*.64);letter-spacing:.06em}
+.ok .fan{max-width:calc(var(--u)*24);margin:0 auto}
+.ok .tag{width:calc(var(--u)*6.6)}
+.ok .tag b{font-size:calc(var(--u)*1.6)}
+.ok .meter{bottom:0;padding:calc(var(--u)*.55) calc(var(--u)*.75)}
+.ok .sec-h h2{font-size:calc(var(--u)*3)}
+.ok .chk .sec-h h2{font-size:calc(var(--u)*2.5)}
+.ok .sub{font-size:calc(var(--u)*1.1)}
+.ok .tkh span{font-size:calc(var(--u)*1.3)}
+.ok .brief,.ok .stunt,.ok .rack,.ok .chk,.ok .anim,.ok .res,.ok .cred{padding:calc(var(--u)*5) 0 calc(var(--u)*4.8)}
+.ok .bg{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*1.8)}
+.ok .gc .in{padding:calc(var(--u)*1.6) calc(var(--u)*1.4)}
+.ok .gc h3{font-size:calc(var(--u)*1.9)}
+.ok .gc .ld{font-size:calc(var(--u)*1.2)}
+.ok .film{grid-template-columns:minmax(0,1fr)}
+.ok .env{padding:calc(var(--u)*.7);box-shadow:calc(var(--u)*.45) calc(var(--u)*.45) 0 var(--rd)}
+.ok .env .fine{flex-direction:column;gap:.2em}
+.ok .kpis{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*.9)}
+.ok .kp{padding:calc(var(--u)*1.1)}
+.ok .kp .n{font-size:calc(var(--u)*2.9)}
+.ok .kp p{font-size:calc(var(--u)*.86)}
+.ok .rg{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2.6) calc(var(--u)*1.3)}
+.ok .pt{flex-direction:column;align-items:flex-start;gap:.45em}
+.ok .cg{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*2.6)}
+.ok .cbk{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*2)}
+.ok .cbk img{max-width:calc(var(--u)*15);margin-left:calc(var(--u)*.6)}
+.ok .phone{padding:calc(var(--u)*1.5) calc(var(--u)*1.3) calc(var(--u)*1.3);box-shadow:calc(var(--u)*.45) calc(var(--u)*.45) 0 var(--ik)}
+.ok .bars{height:calc(var(--u)*7)}
+.ok .rd b{font-size:calc(var(--u)*1.6)}
+.ok .phs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:calc(var(--u)*1.2);margin-left:calc(var(--u)*-1.25);margin-right:calc(var(--u)*-1.25);padding:calc(var(--u)*.5) calc(var(--u)*1.25) calc(var(--u)*1.4);scrollbar-width:none}
+.ok .phs::-webkit-scrollbar{display:none}
+.ok .phs>figure{flex:0 0 62%;scroll-snap-align:center}
+.ok .phs>figure:nth-child(even){margin-top:0}
+.ok .rc .in{grid-template-columns:minmax(0,1fr)}
+.ok .sx{border-right:0!important;border-bottom:calc(var(--u)*.1) dashed rgba(42,20,32,.35)!important;padding:calc(var(--u)*1.8) calc(var(--u)*1.4)}
+.ok .sx:last-child{border-bottom:0!important}
+.ok .sn{font-size:calc(var(--u)*3.6)}
+.ok .sn.wd{font-size:calc(var(--u)*2.6)}
+.ok .sx .sig{right:calc(var(--u)*1.4);top:calc(var(--u)*1.6)}
+.ok .out{font-size:calc(var(--u)*1.05)}
+.ok .cr2{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*2.6)}
+.ok .crd li{font-size:calc(var(--u)*.9)}
+}
+</style></head><body>
+<div class="ok">
+
+<header class="hero">
+  <div class="w hg">
+    <div>
+      <span class="tab">AT&amp;T</span>
+      <h1><span class="scr">Just</span><span class="ok-w">OK</span> Valentines</h1>
+      <p class="lead">This Valentine&rsquo;s Day, give the gift of <b>mediocrity.</b> A pop-up card shop, a hidden camera, and ten gorgeous cards with deeply lukewarm messages, built to extend AT&amp;T&rsquo;s &ldquo;Just OK is not OK&rdquo; network campaign.</p>
+      <ul class="skl" aria-label="Skills">
+        <li>Copywriting</li><li>Experiential</li><li>Pop-Up Activation</li><li>Hidden Camera</li><li>Social Content</li><li>Humor &amp; Satire</li>
+      </ul>
+    </div>
+    <div class="fan">
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-bare-minimum.webp" width="500" height="700" alt="Card reading Here's a token of me doing the bare minimum">
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-future-ex.webp" width="500" height="700" alt="Card reading To my future ex">
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-average.webp" width="600" height="840" alt="Card reading What we have is average, framed in red roses">
+      <div class="meter"><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span>Romance signal<b>Just OK</b></span></div>
+    </div>
+  </div>
+  <div class="lace b" style="--c:var(--att)"></div>
+</header>
+
+<div class="tkr" aria-hidden="true"><div class="tkt">
+  <div class="tkh"><span>All of me likes some of you</span><i></i><span>What we have is average</span><i></i><span>I don&rsquo;t dis-like you</span><i></i><span>To my future ex</span><i></i><span>You&rsquo;re my&hellip; something</span><i></i><span>You&rsquo;re better than being single</span><i></i></div>
+  <div class="tkh"><span>All of me likes some of you</span><i></i><span>What we have is average</span><i></i><span>I don&rsquo;t dis-like you</span><i></i><span>To my future ex</span><i></i><span>You&rsquo;re my&hellip; something</span><i></i><span>You&rsquo;re better than being single</span><i></i></div>
+</div></div>
+
+<section class="brief">
+  <div class="w">
+    <div class="sec-h"><span class="tab">The Brief</span><h2>Keep it <span class="scr">just OK</span></h2></div>
+    <div class="bg">
+      <article class="gc g1"><div class="in">
+        <div class="nm"><span>01 &middot; The Ask</span><span aria-hidden="true">&hearts;</span></div>
+        <h3>Past the <span class="scr">holidays</span></h3>
+        <p class="ld">Extend AT&amp;T&rsquo;s &ldquo;Just OK&rdquo; platform past peak holiday season, into a Q1 audience worn out on spending but still hunting for a deal, in an original, attention-grabbing way.</p>
+        <p class="mt"><span>Q1 / Post-holiday</span><span>Value-seeking</span><span>Budget-conscious</span></p>
+        <ol class="rows ck">
+          <li><div><b>Spending fatigue</b><span>After the holidays, wallets are tired and wary of one more ask.</span></div></li>
+          <li><div><b>Deal-seeking intent</b><span>Tired wallets still hunt for value, so something free earns a look.</span></div></li>
+          <li><div><b>A budget-conscious mindset</b><span>Every dollar gets weighed, and &ldquo;just OK&rdquo; isn&rsquo;t worth paying for.</span></div></li>
+        </ol>
+      </div></article>
+      <article class="gc g3"><div class="in">
+        <div class="nm"><span>02 &middot; The Idea</span><span aria-hidden="true">&hearts;</span></div>
+        <h3>Gorgeous cards, <span class="scr">lukewarm</span> feelings</h3>
+        <p class="ld">A series of &ldquo;just OK&rdquo; Valentine&rsquo;s cards with all the lush, hand-lettered trimmings of the real thing and none of the commitment.</p>
+        <p class="mt"><span>Anti-aspirational</span><span>Deadpan</span><span>Deeply affectionate, in its own cynical way</span></p>
+        <ol class="rows ht">
+          <li><div><b>Given away free</b><span>At a Los Angeles pop-up.</span></div></li>
+          <li><div><b>Caught on camera</b><span>With a hidden camera rolling.</span></div></li>
+          <li><div><b>Every card flipped to the point</b><span>Networks, like Valentines, should never be just OK.</span></div></li>
+        </ol>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="stunt">
+  <div class="w">
+    <div class="sec-h"><span class="tab">The Stunt</span><h2>A card shop <span class="scr">for settling</span></h2><p class="sub">We opened a Valentine&rsquo;s pop-up in Los Angeles, stocked it with just OK cards, and let a hidden camera catch people reading them.</p></div>
+    <div class="film">
+      <div class="env">
+        <div class="vid"><iframe src="https://player.vimeo.com/video/317394662?h=6d787f941d&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1&amp;like=0&amp;watchlater=0&amp;share=0&amp;embed=0&amp;speed=0&amp;pip=0&amp;vimeo_logo=0&amp;volume=0&amp;quality_selector=0&amp;fullscreen=0&amp;badge=0" title="AT&amp;T Just OK Valentines film" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p class="fine"><span>AT&amp;T &ldquo;Just OK Valentines&rdquo;</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rack">
+  <div class="lace t" style="--c:var(--ik)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">The Cards</span><h2>The card <span class="scr">rack</span></h2><p class="sub">Ten cards. Lavish on the outside, underwhelming on the inside.</p></div>
+    <div class="rg">
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-all-of-me.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading All of me likes some of you"></span></span></div><div class="pt"><span>All of me</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-average.webp" width="600" height="840" loading="lazy" decoding="async" alt="Card reading What we have is average"></span></span></div><div class="pt"><span>Average</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-bare-minimum.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading Here's a token of me doing the bare minimum"></span></span></div><div class="pt"><span>Bare minimum</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-dislike.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading I don't dis-like you"></span></span></div><div class="pt"><span>Dis-like</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-end-of-it.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading I got you this card because if I didn't, I would never hear the end of it"></span></span></div><div class="pt"><span>End of it</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-future-ex.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading To my future ex"></span></span></div><div class="pt"><span>Future ex</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-handwritten.webp" width="500" height="690" loading="lazy" decoding="async" alt="Card reading You're not expecting anything handwritten inside, are you?"></span></span></div><div class="pt"><span>Handwritten</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-single.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading You're better than being single"></span></span></div><div class="pt"><span>Single</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-something.webp" width="500" height="690" loading="lazy" decoding="async" alt="Card reading You're my... something"></span></span></div><div class="pt"><span>Something</span></div></div>
+      <div class="slot"><div class="fl"><span class="fi"><span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-together.webp" width="500" height="700" loading="lazy" decoding="async" alt="Card reading We go together like two people with limited options"></span></span></div><div class="pt"><span>Together</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chk">
+  <div class="lace t" style="--c:var(--pa)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">The Flip Side</span><p class="sub">Every card reliably delivered the message:</p><h2>Networks, like Valentines, should <span class="scr">never</span> be just OK.</h2></div>
+    <div class="cg">
+      <div class="cbk">
+        <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-card-back.webp" width="600" height="840" loading="lazy" decoding="async" alt="Back of the card: the AT&amp;T logo, the line Networks, like Valentines, should never be just OK, and the note This card is free btw">
+        <p>The cards were the joke. The network was the point: you can laugh off a mediocre Valentine, but nobody laughs off mediocre coverage.</p>
+      </div>
+      <div class="phone" role="group" aria-labelledby="okq">
+        <p class="q" id="okq">Signal check: how are things with your Valentine?</p>
+        <div class="bars l0">
+          <button type="button" data-l="1" aria-label="One bar" aria-pressed="false"></button>
+          <button type="button" data-l="2" aria-label="Two bars" aria-pressed="false"></button>
+          <button type="button" data-l="3" aria-label="Three bars" aria-pressed="false"></button>
+          <button type="button" data-l="4" aria-label="Four bars" aria-pressed="false"></button>
+          <button type="button" data-l="5" aria-label="Five bars" aria-pressed="false"></button>
+        </div>
+        <div class="rd" aria-live="polite"><b>Tap a bar.</b><span>Be honest. Nobody&rsquo;s reading this but you.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="anim">
+  <div class="lace t" style="--c:var(--att)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">Social</span><h2>Animated <span class="scr">cards</span></h2><p class="sub">Five cards, made to move for Stories and feeds, so the mediocrity could travel past the pop-up.</p></div>
+    <div class="phs">
+      <figure><div class="dev"><div class="scr9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-gif-future-ex.gif" width="300" height="534" loading="lazy" decoding="async" alt="Animated card: To my future ex"></div></div><figcaption>To my future ex</figcaption></figure>
+      <figure><div class="dev"><div class="scr9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-gif-average.gif" width="300" height="534" loading="lazy" decoding="async" alt="Animated card: What we have is average"></div></div><figcaption>What we have is average</figcaption></figure>
+      <figure><div class="dev"><div class="scr9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-gif-single.gif" width="300" height="534" loading="lazy" decoding="async" alt="Animated card: You're better than being single"></div></div><figcaption>Better than being single</figcaption></figure>
+      <figure><div class="dev"><div class="scr9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-gif-something.gif" width="300" height="534" loading="lazy" decoding="async" alt="Animated card: You're my... something"></div></div><figcaption>You&rsquo;re my&hellip; something</figcaption></figure>
+      <figure><div class="dev"><div class="scr9"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/okv-gif-end-of-it.gif" width="300" height="534" loading="lazy" decoding="async" alt="Animated card: I got you this card because if I didn't, I would never hear the end of it"></div></div><figcaption>Never hear the end of it</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="res">
+  <div class="lace t" style="--c:var(--pk)"></div>
+  <div class="w">
+    <div class="sec-h"><span class="tab">Results</span><h2>How it did <span class="scr">(better than OK)</span></h2><p class="out">By celebrating comedic, subpar milestones, the campaign cut through one of the most cluttered advertising holidays of the year with a distinct, memorable voice, and landed the core brand message: <em>like a card for someone you love, your network coverage shouldn&rsquo;t be just OK.</em></p></div>
+    <div class="rc"><div class="in">
+      <div class="sx"><span class="k">Kiosk</span><div class="sn">48 hrs</div><p class="sl">To give away 100% of the physical card inventory at the Los Angeles pop-up.</p><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="sx"><span class="k">Sentiment</span><div class="sn">94%</div><p class="sl">Positive or amused reactions from participants interviewed on site during the hidden-camera shoot.</p><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="sx"><span class="k">Sharing</span><div class="sn wd">Higher share rate</div><p class="sl">Organic share rate beat previous traditional holiday campaigns, driven entirely by relatability.</p><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="sx"><span class="k">UGC</span><div class="sn wd">Hundreds</div><p class="sl">of people shared photos of their cards on dinner tables, next to takeout boxes and taped to fridges.</p><span class="sig" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="cred">
+  <div class="w">
+    <span class="tab">Press</span>
+    <div class="cr2">
+      <div>
+        <h3>As <span class="scr">seen in</span></h3>
+        <ul class="press">
+          <li><a href="https://musebycl.io/advertising/mountain-reads-love-poems-sodastream-plus-other-fun-valentines-day-stunts" target="_blank" rel="noopener">Muse by Clio</a></li>
+          <li><a href="https://www.thedrum.com/creative-works/project/bbdo-att-just-ok-valentines-day-cards" target="_blank" rel="noopener">The Drum</a></li>
+          <li><a href="https://www.thelaegotist.com/news/2019/02/14/att-opens-valentines-day-pop-up-in-la-offering-just-ok-valentines-day-cards/" target="_blank" rel="noopener">LA Egotist</a></li>
+          <li><a href="http://www.lebook.com/creative/att-wishing-you-good-enough-valentines-day-advertising-2019" target="_blank" rel="noopener">Le Book</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="w"><a class="btn" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a></div></footer>
+
+</div>
+<script>
+(function(){
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var od=host.ownerDocument,de=od.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var fit=function(){
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      set('background','none');
+    };
+    fit();
+    window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+    window.addEventListener('load',fit);
+    setTimeout(fit,700);
+  }
+})();
+(function(){
+  var root=document.querySelector('.ok');if(!root)return;
+  /* signal check */
+  var bars=root.querySelector('.bars'),rd=root.querySelector('.rd');
+  if(bars&&rd){
+    var lines={
+      1:['One bar.','Maybe just get them a card. We know a place.'],
+      2:['Two bars.','Spotty, but technically a connection.'],
+      3:['Three bars. Just OK.','Which, for the record, is not OK.'],
+      4:['Four bars.','Solid. Bordering on romantic.'],
+      5:['Full bars.','Strong signal. Never settle for anything less.']
+    };
+    var bs=bars.querySelectorAll('button');
+    bars.addEventListener('click',function(e){
+      var t=e.target.closest?e.target.closest('button'):null;if(!t)return;
+      var l=+t.getAttribute('data-l');
+      bars.className='bars l'+l;
+      for(var i=0;i<bs.length;i++){bs[i].classList.toggle('on',i<l);bs[i].setAttribute('aria-pressed',i===l-1?'true':'false')}
+      rd.innerHTML='<b>'+lines[l][0]+'</b><span>'+lines[l][1]+'</span>';
+    });
+  }
+})();
+</script>
+</body></html>
