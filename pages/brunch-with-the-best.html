@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Pepsi Dig In Brunch With The Best, a social, digital and in-person Brunch Royale that put regional brunch cultures head to head online and united them in one menu.">
+<meta name="description" content="Pepsi Dig In Brunch With The Best, a social, digital and in-person Brunch Royale that took Pepsi into one of the biggest casual dining occasions in the country with restaurateur relationships at the center.">
 <title>Pepsi Dig In: Brunch With The Best</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Unbounded:wght@800;900&display=swap" rel="stylesheet">
@@ -347,7 +347,28 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .rs .num{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*7);line-height:.95;letter-spacing:-.02em;color:var(--cream);text-shadow:calc(var(--u)*-.12) calc(var(--u)*.12) 0 #000,calc(var(--u)*-.24) calc(var(--u)*.24) 0 #000,calc(var(--u)*-.36) calc(var(--u)*.36) 0 #000,calc(var(--u)*-.48) calc(var(--u)*.48) 0 #000,calc(var(--u)*-.6) calc(var(--u)*.6) 0 #000}
 .rr .rs .num small{display:block;margin-top:calc(var(--u)*.8);font-family:var(--bd);font-weight:800;letter-spacing:.14em;font-size:calc(var(--u)*1.4);text-shadow:none}
 .rr .rs p{font-size:calc(var(--u)*1.4);line-height:1.55;background:var(--black);color:var(--cream);border:1px solid #000;padding:calc(var(--u)*1.4) calc(var(--u)*1.8);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--gold)}
+/* strategy strip and partners */
+.rr .fl{grid-column:1/13;margin-top:calc(var(--u)*2.4);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);border:1px solid var(--ink);background:var(--paper)}
+.rr .fl>div{padding:calc(var(--u)*2) calc(var(--u)*2.2) calc(var(--u)*2.4);border-right:1px solid var(--ink);position:relative}
+.rr .fl>div:last-child{border-right:0;background:var(--black);color:var(--cream)}
+.rr .fl>div:nth-child(2){background:var(--blue);color:#fff}
+.rr .fl .n{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:max(9px,calc(var(--u)*.8));color:var(--blue)}
+.rr .fl>div:nth-child(2) .n,.rr .fl>div:last-child .n{color:var(--gold)}
+.rr .fl h3{margin-top:calc(var(--u)*.9);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.8);line-height:1.04;letter-spacing:-.01em}
+.rr .fl p{margin-top:calc(var(--u)*1);font-size:calc(var(--u)*1.12);line-height:1.55}
+.rr .rp{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--ink);background:var(--paper)}
+.rr .rp>article{padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.4);border-right:1px solid var(--ink)}
+.rr .rp>article:last-child{border-right:0}
+.rr .rp .n{font-family:var(--disp);font-weight:900;font-size:calc(var(--u)*3.2);line-height:1;color:transparent;-webkit-text-stroke:1px var(--ink)}
+.rr .rp h3{margin-top:calc(var(--u)*1.2);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.6);line-height:1.05;letter-spacing:-.01em}
+.rr .rp p{margin-top:calc(var(--u)*.9);font-size:calc(var(--u)*1.1);line-height:1.55}
 @media (max-width:1000px){
+.rr .fl{grid-template-columns:minmax(0,1fr)}
+.rr .fl>div{border-right:0;border-bottom:1px solid var(--ink)}.rr .fl>div:last-child{border-bottom:0}
+.rr .fl h3{font-size:calc(var(--u)*2.4)}.rr .fl p{font-size:calc(var(--u)*1.5)}
+.rr .rp{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.rr .rp>article{border-bottom:1px solid var(--ink)}.rr .rp>article:nth-child(2n){border-right:0}.rr .rp>article:nth-last-child(-n+2){border-bottom:0}
+.rr .rp h3{font-size:calc(var(--u)*2)}.rr .rp p{font-size:calc(var(--u)*1.4)}
 .rr .hero h1.b3{font-size:calc(var(--u)*4.5)}
 .rr .iw{grid-template-columns:minmax(0,1fr)}
 .rr .rs .big{grid-template-columns:minmax(0,1fr)}
@@ -356,6 +377,8 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .poll h3{font-size:calc(var(--u)*2.4)}.rr .poll button{font-size:calc(var(--u)*1.5)}
 }
 @media (max-width:700px){
+.rr .rp{grid-template-columns:minmax(0,1fr)}.rr .rp>article{border-right:0;border-bottom:1px solid var(--ink)!important}.rr .rp>article:last-child{border-bottom:0!important}
+.rr .fl h3{font-size:calc(var(--u)*2.2)}.rr .fl p{font-size:calc(var(--u)*1.5)}
 .rr .hero h1.b3{font-size:calc(var(--u)*3)}
 .rr .iw .fm{grid-template-columns:repeat(2,minmax(0,1fr))}
 .rr .rs .num{font-size:calc(var(--u)*5.2)}.rr .rs .num small{font-size:calc(var(--u)*1.5)}
@@ -365,7 +388,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 </style></head><body>
 <div class="rr">
 <div class="fr">
-<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#experience">The Experience</a><a href="#interactive">Play Along</a><a href="#chefs">Chef Moments</a><a href="#results">The Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#experience">The Experience</a><a href="#partners">Partners</a><a href="#interactive">Play Along</a><a href="#chefs">Chef Moments</a><a href="#results">The Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
 
 <header class="hero" id="top">
   <h1 class="x h b3" aria-label="Brunch With The Best"><span>Brunch</span><span>With The</span><span class="l2"><span>Best</span><span class="mk"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-logo.webp?v=1" alt="" role="img" aria-label="Pepsi Dig In logo" loading="lazy" decoding="async"></span></span></h1>
@@ -373,20 +396,24 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
     <div class="p"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-1.webp?v=1" alt="" role="img" aria-label="Guests raising drinks around a crowded brunch table" loading="lazy" decoding="async"></div>
     <div class="p q"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-1.webp?v=1" alt="" role="img" aria-label="Story frame with a chef, a Pepsi and a plate of brunch" loading="lazy" decoding="async"></div>
   </div>
-  <div class="hl"><span class="lb">The Headline</span><p>A social, digital and in-person Brunch Royale that put regional brunch cultures head to head online, then united them in one culturally infused menu during Super Bowl weekend.</p></div>
+  <div class="hl"><span class="lb">The Headline</span><p>After the Better With Pepsi repositioning, Brunch With The Best took Pepsi into one of the biggest casual dining occasions in the country, a social, digital and in-person Brunch Royale with restaurateur relationships at the center.</p></div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="tr"><span>Brunch With The Best</span><span>Dig In Show Love</span><span>Head to Head</span><span>One Menu</span><span>Brunch With The Best</span><span>Dig In Show Love</span><span>Head to Head</span><span>One Menu</span><span>Brunch With The Best</span><span>Dig In Show Love</span><span>Head to Head</span><span>One Menu</span><span>Brunch With The Best</span><span>Dig In Show Love</span><span>Head to Head</span><span>One Menu</span></div></div>
+<div class="mq" aria-hidden="true"><div class="tr"><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span><span>Better With Pepsi</span><span>Brunch With The Best</span><span>Restaurant Partners</span><span>Dig In Show Love</span></div></div>
 
 <section class="sc" id="idea">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>01</b>The Territory</span><h2 class="x m">The Insight and The Idea</h2></div>
+    <div class="sh rv"><span class="lb"><b>01</b>The Strategy</span><h2 class="x m">From Platform to Partnerships</h2></div>
     <div class="idea rv">
-      <div class="a"><span class="lb">The Insight</span><p class="big">Brunch is a sacred occasion for chosen family, gossip and nourishment in Black culture.</p></div>
-      <div class="b"><span class="lb">The Idea</span><p class="big">Put regional brunch cultures head to head online, then unite them in one menu with chef backstories that nourish community beyond food.</p></div>
+      <div class="a"><span class="lb">The Insight</span><p class="big">Better With Pepsi made the meal the hero and Pepsi the perfect pairing. That gave restaurant partners a reason to lean in.</p></div>
+      <div class="b"><span class="lb">The Idea</span><p class="big">Enter brunch, one of the biggest casual dining occasions in the country, by putting the restaurateurs who own it at the center.</p></div>
     </div>
-    <ul class="tone"><li class="rv">Social</li><li class="rv" style="--d:.05s">Digital</li><li class="rv" style="--d:.1s">In Person</li></ul>
-    <p class="bdy rv" style="grid-column:1/13;margin-top:calc(var(--u)*2.4)">Pepsi Dig In is PepsiCo&rsquo;s platform empowering Black-owned restaurants. Brunch With The Best culminates its Restaurant Royalty residency, amplifying Black culinary talent and cultivating long-term restaurant partnerships. The activation satisfies the craving for meaningful Black food content.</p>
+    <div class="fl">
+      <div class="rv"><span class="n">Step One</span><h3>Better With Pepsi</h3><p>The brand platform introduction. It elevated the meal occasion and positioned Pepsi as the ideal companion.</p></div>
+      <div class="rv" style="--d:.08s"><span class="n">Step Two</span><h3>Brunch With The Best</h3><p>The occasion play. A social, digital and in-person Brunch Royale with chefs and restaurateurs at the table.</p></div>
+      <div class="rv" style="--d:.16s"><span class="n">Step Three</span><h3>Restaurant Partnerships</h3><p>Built to give foodservice and restaurant relationship teams narrative and proof points for pouring rights, menu presence, co-marketing and long-term operator partnerships.</p></div>
+    </div>
+    <p class="bdy rv" style="grid-column:1/13;margin-top:calc(var(--u)*2.4)">Pepsi Dig In, PepsiCo&rsquo;s platform for Black-owned restaurants, carried the work. Brunch With The Best culminates its Restaurant Royalty residency, amplifying Black culinary talent and cultivating long-term restaurant partnerships.</p>
   </div>
 </section>
 
@@ -394,7 +421,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
   <div class="gr">
     <div class="sh rv"><span class="lb"><b>02</b>Dual Plane Activation</span><h2 class="x m">One Menu, Two Planes</h2></div>
     <div class="exl">
-      <p class="bdy rv">The Royal chefs take the campaign off the feed and onto the Las Vegas Strip. Pepsi Dig In stages a brunch takeover with top Black chefs and a mixologist from across the country, each serving signature dishes, to celebrate the way Black foodies and chefs have rebranded brunch as an art form.</p>
+      <p class="bdy rv">Brunch is one of the biggest casual dining occasions in the country, and Pepsi Dig In stepped into it with restaurateurs at the center. A brunch takeover on the Las Vegas Strip brought top chefs and a mixologist from across the country to the table, each serving signature dishes.</p>
       <p class="bdy rv" style="--d:.1s">Online and in person run as one dual plane activation. Engagement stories send people to a real table, and the moments captured on site feed the next posts. The two planes keep passing the energy back and forth across three beats.</p>
     </div>
     <div class="dp">
@@ -438,9 +465,22 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 </section>
 
 
+<section class="sc" id="partners">
+  <div class="gr">
+    <div class="sh rv"><span class="lb"><b>03</b>Restaurateur Relationships</span><h2 class="x m">What Restaurateurs Got</h2></div>
+    <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*2.8)">Every beat of the activation was built to put restaurants in front of the occasion, and to give Pepsi a reason to be at their tables long after the takeover.</p>
+    <div class="rp">
+      <article class="rv"><span class="n">01</span><h3>On The Menu</h3><p>Each featured chef served signature dishes at the takeover, with the food at the center of the occasion and Pepsi at the table.</p></article>
+      <article class="rv" style="--d:.07s"><span class="n">02</span><h3>On The Map</h3><p>Sweepstakes entries tagged local Black-owned brunch spots, putting each restaurant&rsquo;s location in front of the community.</p></article>
+      <article class="rv" style="--d:.14s"><span class="n">03</span><h3>In The Feed</h3><p>Each Royal chef got a personalized story, a feature on the Dig In channels and a collaborative in-feed carousel to share with their own audience.</p></article>
+      <article class="rv" style="--d:.21s"><span class="n">04</span><h3>At The Door</h3><p>Tagged locations and hyperlinked reservation stickers sent engaged followers toward a real table.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="sc" id="interactive" style="background:var(--cream)">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>03</b>Interactive Owned Content</span><h2 class="x m">Head to Head, Vote by Vote</h2></div>
+    <div class="sh rv"><span class="lb"><b>04</b>Interactive Owned Content</span><h2 class="x m">Head to Head, Vote by Vote</h2></div>
     <div class="iw">
       <div class="tx rv">
         <p>On Pepsi Dig In&rsquo;s own channels, regional brunch cultures went head to head and the community did the deciding. Votes, polls, questions and a countdown turned every story into a pick, a conversation or a plan.</p>
@@ -468,7 +508,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 
 <section class="sc cr ch" id="chefs">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>04</b>Chef Moments</span><h2 class="x m c">Six Chefs, Told Twice</h2></div>
+    <div class="sh rv"><span class="lb"><b>05</b>Chef Moments</span><h2 class="x m c">Six Chefs, Told Twice</h2></div>
     <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*3.4)">Each Royal feature gets a day in the spotlight, first as a sweepstakes story and then, after the takeover, as a behind-the-scenes meme. The chef moments keep the brunch going long after the last plate.</p>
     <div class="blk">
       <div class="bh rv"><h3>Amplification</h3><span>Sweepstakes Stories</span></div>
@@ -505,7 +545,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 
 <section class="sc rs" id="results">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>05</b>The Results</span><h2 class="x m c">Earned, Fast</h2></div>
+    <div class="sh rv"><span class="lb"><b>06</b>The Results</span><h2 class="x m c">Earned, Fast</h2></div>
     <div class="big">
       <div class="num rv">4.7 Billion<small>Earned Media Impressions</small></div>
       <p class="rv" style="--d:.1s">Half of those impressions landed in the first 24 hours after the social announcement.</p>
