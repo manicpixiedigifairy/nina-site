@@ -69,8 +69,6 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .cred .cap{display:block;color:#FFC220}
 .dd .cred .nm2{margin-top:calc(var(--u)*1.2);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 calc(var(--u)*1.8);font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*5.6);line-height:1;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
 .dd .cred .nm2 em{font-style:italic;color:#FFC220}
-.dd .cred .rl{margin-top:calc(var(--u)*1.6);opacity:.85}
-.dd .cred .sp{margin-top:calc(var(--u)*.6);opacity:.65}
 .dd .prog{grid-column:1/13;margin-top:calc(var(--u)*10)}
 .dd .prog .cap{display:block;color:#FFC220}
 .dd .prog h3{margin-top:calc(var(--u)*1);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*5.2);line-height:.95;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
@@ -94,7 +92,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 /* series + panel */
 .dd .ser{grid-column:1/13;margin-top:calc(var(--u)*7);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:start}
 .dd .ser .cp{grid-column:1/7}
-.dd .ser .more{grid-column:8/13}
+.dd .ser .more{grid-column:8/13;align-self:center;padding-top:calc(var(--u)*2)}
 .dd .ser .more p{font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
 .dd .ser .more p+p{margin-top:calc(var(--u)*1.2)}
 .dd .ser .cp .cap{display:block;color:var(--y)}
@@ -224,7 +222,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .ser .cp{padding:0}
 .dd .ser .cp h3{font-size:calc(var(--u)*4.6)}
 .dd .ser .cp p,.dd .ser .more p{font-size:calc(var(--u)*1.6)}
-.dd .ser .more{display:block;margin-top:calc(var(--u)*2)}
+.dd .ser .more{display:block;margin-top:calc(var(--u)*2);padding-top:0}
 .dd .ser .more p+p{margin-top:calc(var(--u)*1.2)}
 .dd .fm .bt{font-size:calc(var(--u)*2.3);padding:calc(var(--u)*1) calc(var(--u)*2.6)}
 .dd .stp{--m:calc(var(--u)*.9);--r:calc(var(--u)*.44);--s:calc(var(--u)*1.4)}
@@ -313,8 +311,6 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
     <div class="cred rv">
       <span class="cap">The Premiere Panel</span>
       <div class="nm2"><span>Morris Chestnut</span><em>&amp;</em><span>Lorenz Tate</span><em>&amp;</em><span>Malcolm Lee</span></div>
-      <p class="rl cap">Actors and Filmmaker, in Live Conversation After the Films</p>
-      <p class="sp cap">Making Strides Every Day to Keep Rewriting the Narrative</p>
     </div>
 
     <div class="prog rv"><span class="cap">Now Showing</span><h3>The Short Film Series</h3><p>Pointed intergenerational conversations directed by three emerging filmmakers. By scratching beneath the surface of the daily lives of a few real fathers, each film offered a new perspective on fatherhood today.</p></div>
