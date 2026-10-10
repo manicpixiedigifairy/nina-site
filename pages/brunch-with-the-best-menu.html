@@ -8,7 +8,7 @@
 *,*::before,*::after{box-sizing:border-box}
 .rr{--cream:#FBF1E3;--paper:#FFF8EE;--ink:#1F1209;--blue:#0B22E4;--navy:#0318C7;--gold:#F7A81B;--orange:#F26A2E;
 --disp:Unbounded,"Archivo Black",Impact,sans-serif;--sf:"Playfair Display",Georgia,"Times New Roman",serif;--bd:Archivo,"Helvetica Neue",Arial,sans-serif;
-container-type:inline-size;font-family:var(--bd);color:var(--ink);background:var(--blue) url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-doodle-mir.webp?v=1) center top/1600px auto repeat;-webkit-font-smoothing:antialiased;line-height:1.5}
+container-type:inline-size;font-family:var(--bd);color:var(--ink);background:var(--blue) url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-doodle-mir.webp?v=1) center top/2200px auto repeat;-webkit-font-smoothing:antialiased;line-height:1.5}
 .rr *{margin:0;padding:0}
 .rr img{display:block;max-width:100%}
 .rr a{color:inherit;text-decoration:none}
@@ -72,11 +72,49 @@ container-type:inline-size;font-family:var(--bd);color:var(--ink);background:var
 .rr .kt figure{position:relative;aspect-ratio:9/16;overflow:hidden;border:1px solid var(--ink);border-radius:calc(var(--u)*.6);background:#000}
 .rr .kt .r3 figure{aspect-ratio:250/445}
 .rr .kt figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* bottomless */
-.rr .bt{margin-top:calc(var(--u)*2.6);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.4) calc(var(--u)*1)}
-.rr .bt .f{position:relative;aspect-ratio:250/445;overflow:hidden;border:1px solid var(--ink);border-radius:calc(var(--u)*.6);background:#000}
-.rr .bt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.rr .bt figcaption{margin-top:calc(var(--u)*.6);font-family:var(--sf);font-style:italic;font-size:calc(var(--u)*1.02);line-height:1.35;text-align:center}
+/* filter */
+.rr .ff{margin-top:calc(var(--u)*2.6);background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*1.8) calc(var(--u)*2)}
+.rr .ff .fn{font-family:var(--sf);font-style:italic;font-size:calc(var(--u)*1.3);line-height:1.5}
+.rr .ff .fn b{font-family:var(--disp);font-style:normal;font-weight:900;text-transform:uppercase;color:var(--blue);margin-right:calc(var(--u)*.4)}
+.rr .ff .fg{display:flex;align-items:baseline;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.2)}
+.rr .ff .fg>.sc{flex:none;width:calc(var(--u)*6);color:var(--blue)}
+.rr .ff .cs{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}
+.rr .ff .ch{all:unset;cursor:pointer;border:1px solid var(--ink);border-radius:999px;padding:calc(var(--u)*.3) calc(var(--u)*.9);font-weight:700;font-size:max(10px,calc(var(--u)*.85));background:#fff;transition:background .2s,color .2s}
+.rr .ff .ch:hover,.rr .ff .ch:focus-visible{background:var(--cream);outline:2px solid var(--blue);outline-offset:1px}
+.rr .ff .ch[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.rr .ff .rc{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.4);padding-top:calc(var(--u)*1.1);border-top:1px dashed rgba(31,18,9,.4)}
+.rr .ff .rec{font-weight:700;font-size:calc(var(--u)*1.05);line-height:1.4}
+.rr .ff .rs0{all:unset;cursor:pointer;flex:none;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:max(9px,calc(var(--u)*.72));border-bottom:2px solid var(--ink)}
+.rr .rv2[hidden],.rr .ff .rs0[hidden]{display:none}
+/* bottomless: horizontal review rail */
+.rr .rl{position:relative;margin-top:calc(var(--u)*2.6)}
+.rr .rl .tr{display:flex;gap:calc(var(--u)*1.6);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:2px;padding:2px 2px calc(var(--u)*1.6);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rr .rl .tr::-webkit-scrollbar{display:none}
+.rr .rv2{flex:none;width:calc(var(--u)*36);scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);background:#fff;border:1px solid var(--ink);border-radius:calc(var(--u)*.8);overflow:hidden;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--ink)}
+.rr .rv2 .f{position:relative;aspect-ratio:250/445;background:#000;border-right:1px solid var(--ink)}
+.rr .rv2 .f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .rv2 .f .rb{position:absolute;left:calc(var(--u)*.6);top:calc(var(--u)*.6);background:var(--gold);color:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:calc(var(--u)*.15) calc(var(--u)*.7);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:max(8px,calc(var(--u)*.62))}
+.rr .rv2 .bx{display:flex;flex-direction:column;padding:calc(var(--u)*1.3) calc(var(--u)*1.3) calc(var(--u)*1.2);min-width:0}
+.rr .rv2 .hd{display:flex;gap:calc(var(--u)*.8);align-items:center}
+.rr .rv2 .av{flex:none;width:calc(var(--u)*3);height:calc(var(--u)*3);border-radius:calc(var(--u)*.5);background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:900;font-size:calc(var(--u)*1.3)}
+.rr .rv2 .nm{min-width:0}
+.rr .rv2 .nm b{display:block;font-family:var(--bd);font-weight:800;font-size:calc(var(--u)*1.15);line-height:1.15;color:var(--blue)}
+.rr .rv2 .nm span{display:block;margin-top:2px;font-size:calc(var(--u)*.8);line-height:1.3;color:#5b4c40}
+.rr .rv2 .bd{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.4);margin-top:calc(var(--u)*.9)}
+.rr .rv2 .bd i{font-style:normal;border:1px solid var(--ink);border-radius:999px;padding:calc(var(--u)*.12) calc(var(--u)*.6);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:max(8px,calc(var(--u)*.6))}
+.rr .rv2 .bd i.k{background:var(--ink);color:var(--cream)}
+.rr .rv2 .lbl{margin-top:calc(var(--u)*1.1);display:flex;align-items:center;gap:calc(var(--u)*.5);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:max(8px,calc(var(--u)*.66));color:var(--orange)}
+.rr .rv2 .lbl svg{width:calc(var(--u)*1);height:auto}
+.rr .rv2 q{display:block;margin-top:calc(var(--u)*.5);font-family:var(--sf);font-style:italic;font-size:calc(var(--u)*1.08);line-height:1.45;quotes:"\201C" "\201D"}
+.rr .rv2 .mo{margin-top:auto;padding-top:calc(var(--u)*1);border-top:1px dashed rgba(31,18,9,.4);font-size:calc(var(--u)*.85);line-height:1.35}
+.rr .rv2 .mo b{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:max(8px,calc(var(--u)*.62));color:#5b4c40}
+.rr .rl .ctl{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*.6)}
+.rr .rl .ctl button{all:unset;cursor:pointer;flex:none;width:calc(var(--u)*3);height:calc(var(--u)*3);border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;background:var(--cream);transition:background .25s,color .25s}
+.rr .rl .ctl button:hover,.rr .rl .ctl button:focus-visible{background:var(--ink);color:var(--cream)}
+.rr .rl .ctl button[disabled]{opacity:.3;cursor:default}
+.rr .rl .ctl svg{width:calc(var(--u)*1.3)}
+.rr .rl .pg{flex:1;height:3px;background:rgba(31,18,9,.15);border-radius:2px;overflow:hidden}
+.rr .rl .pg i{display:block;height:100%;width:20%;background:var(--blue);transform-origin:left;transition:margin-left .2s}
 /* check */
 .rr .ck{margin:calc(var(--u)*2.6) auto 0;max-width:calc(var(--u)*52);background:#fff;border:1px solid var(--ink);padding:calc(var(--u)*2.4) calc(var(--u)*2.6) calc(var(--u)*3.4);
 -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/24px 12px repeat-x;
@@ -109,12 +147,11 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 .rr .two,.rr .kt{grid-template-columns:minmax(0,1fr)}
 .rr .sp{grid-template-columns:minmax(0,1fr)}
 .rr .sp .vw{position:relative;top:auto;max-width:calc(var(--u)*40);margin:0 auto;width:100%;order:-1}
-.rr .bt{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rr .rv2{width:calc(var(--u)*46)}.rr .rv2 .nm b{font-size:calc(var(--u)*1.5)}.rr .rv2 .nm span,.rr .rv2 .mo{font-size:calc(var(--u)*1.1)}.rr .rv2 q{font-size:calc(var(--u)*1.35)}
 .rr .mz{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:calc(var(--u)*18)}
 .rr .mz .lg{grid-row:span 2}.rr .mz .w{grid-column:auto}
 .rr .it p,.rr .sp .ds{font-size:calc(var(--u)*1.45)}
 .rr .co p,.rr .note p,.rr .mh .lead{font-size:calc(var(--u)*1.6)}
-.rr .bt figcaption{font-size:calc(var(--u)*1.3)}
 .rr .ck .row{font-size:calc(var(--u)*1.45)}
 }
 @media (max-width:700px){
@@ -125,8 +162,10 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 .rr .co h2{font-size:calc(var(--u)*2.4)}
 .rr .ln{flex-wrap:wrap}
 .rr .ln b{font-size:calc(var(--u)*1.7)}
-.rr .bt{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .rv2{width:calc(var(--u)*27);grid-template-columns:minmax(0,1fr)}.rr .rv2 .f{aspect-ratio:4/5;border-right:0;border-bottom:1px solid var(--ink)}.rr .rv2 .nm b{font-size:calc(var(--u)*1.45)}.rr .rv2 q{font-size:calc(var(--u)*1.3)}.rr .rv2 .nm span,.rr .rv2 .mo{font-size:calc(var(--u)*1.05)}
 .rr .kt .r4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .xdg{grid-auto-flow:dense}
+.rr .ff .fg{flex-direction:column;gap:calc(var(--u)*.5)}.rr .ff .fg>.sc{width:auto}.rr .ff .ch{font-size:calc(var(--u)*1.05)}.rr .ff .fn{font-size:calc(var(--u)*1.45)}.rr .ff .rec{font-size:calc(var(--u)*1.2)}
 .rr .mz{grid-auto-rows:calc(var(--u)*22)}
 .rr .ck{padding:calc(var(--u)*2) calc(var(--u)*1.6) calc(var(--u)*3)}
 .rr .ck .row{flex-wrap:wrap}
@@ -147,9 +186,26 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 .rr .sv button{all:unset;position:absolute;z-index:2;top:0;bottom:0;width:50%;cursor:pointer}
 .rr .sv .pv{left:0}.rr .sv .nx{right:0}
 .rr .sv button:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+
+.rr .xdg{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:calc(var(--u)*11);gap:calc(var(--u)*.9);margin-top:calc(var(--u)*2.6)}
+.rr .xdg figure{position:relative;margin:0;overflow:hidden;border:1px solid var(--ink);background:#000}
+.rr .xdg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.rr .xdg figure:hover img{transform:scale(1.04)}
+.rr .xdg figcaption{position:absolute;left:calc(var(--u)*.7);bottom:calc(var(--u)*.7);background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:calc(var(--u)*.2) calc(var(--u)*.7);font-family:var(--bd);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:max(8px,calc(var(--u)*.66))}
+.rr .xdg .ga{grid-column:1/5;grid-row:span 2}
+.rr .xdg .gb{grid-column:5/7;grid-row:span 2}
+.rr .xdg .gc{grid-column:1/3}.rr .xdg .gd{grid-column:3/5}.rr .xdg .ge{grid-column:5/7}
+.rr .xdg .gf{grid-column:1/4;grid-row:span 2}.rr .xdg .gg{grid-column:4/7;grid-row:span 2}
+.rr .xdg .gh{grid-column:1/3;grid-row:span 2}.rr .xdg .gi{grid-column:3/5;grid-row:span 2}.rr .xdg .gj{grid-column:5/7;grid-row:span 2}
+@media (max-width:700px){
+.rr .xdg{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:calc(var(--u)*13)}
+.rr .xdg figure{grid-column:auto!important;grid-row:span 1!important}
+.rr .xdg .ga,.rr .xdg .gf{grid-column:1/3!important;grid-row:span 2!important}
+.rr .xdg .gb,.rr .xdg .gh{grid-row:span 2!important}
+}
 </style></head><body>
 <div class="rr"><div class="fr">
-<nav class="nv sc" aria-label="Courses"><a href="#start">To Start</a><a href="#room">The Room</a><a href="#plates">Signature Plates</a><a href="#kitchen">From The Kitchen</a><a href="#bottomless">Bottomless</a><a href="#check">The Check</a><a href="https://www.byninaaustin.com/experiential">Back</a></nav>
+<nav class="nv sc" aria-label="Courses"><a href="#start">To Start</a><a href="#room">The Room</a><a href="#setting">The Setting</a><a href="#plates">Signature Plates</a><a href="#kitchen">From The Kitchen</a><a href="#bottomless">Bottomless</a><a href="#check">The Check</a></nav>
 <article class="card"><div class="in">
 
 <header class="mh" id="top">
@@ -184,8 +240,14 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-event-5.webp?v=1" alt="" role="img" aria-label="Dig In signage at the venue entrance" loading="lazy" decoding="async"></figure></div>
 </section>
 
+<section id="setting">
+  <div class="co rv"><span class="sc">Course Three</span><h2>The Setting</h2><p>Working with production partners across Pepsi&rsquo;s IAT, we translated the momentum on social into a conceptually aligned in-person experience, designed so the room itself would keep traveling organically.</p></div>
+  <div class="two"><div class="it rv"><div class="ln"><b>Arrival</b><i aria-hidden="true"></i><span>Design</span></div><p>Larger than life chef portraits and Brunch With The Best signage carried the look of the feed into the hallway, with the same reserve your seat call to action guests had seen on social.</p></div><div class="it rv"><div class="ln"><b>The Table</b><i aria-hidden="true"></i><span>Design</span></div><p>Branded tabletops, printed menus and a custom cocktail card put every chef&rsquo;s signature dishes and drinks in front of every guest.</p></div><div class="it rv"><div class="ln"><b>The Bar</b><i aria-hidden="true"></i><span>Design</span></div><p>A Pepsi bar at the center of the room, with the mixologist behind it, gave every toast a moment worth posting.</p></div><div class="it rv"><div class="ln"><b>The Backdrop</b><i aria-hidden="true"></i><span>Design</span></div><p>Doodle walls, a mission wall and photo-ready Show Love textures turned the space into content that kept moving after the plates were cleared.</p></div></div>
+  <div class="xdg rv"><figure class="ga"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-arrival.webp?v=1" alt="" role="img" aria-label="Hallway lined with large chef portrait walls inviting guests to reserve a seat" loading="lazy" decoding="async"><figcaption>Arrival</figcaption></figure><figure class="gb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-mission.webp?v=1" alt="" role="img" aria-label="Mission wall about empowering Black-owned restaurants" loading="lazy" decoding="async"><figcaption>The Backdrop</figcaption></figure><figure class="gc"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-table.webp?v=1" alt="" role="img" aria-label="Branded tabletop set for brunch" loading="lazy" decoding="async"><figcaption>The Table</figcaption></figure><figure class="gd"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-menu.webp?v=1" alt="" role="img" aria-label="Printed brunch menu on a branded table" loading="lazy" decoding="async"><figcaption>The Table</figcaption></figure><figure class="ge"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-cocktail.webp?v=1" alt="" role="img" aria-label="Custom cocktail menu card on the bar" loading="lazy" decoding="async"><figcaption>The Table</figcaption></figure><figure class="gf"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-bar.webp?v=1" alt="" role="img" aria-label="Circular Pepsi bar at the center of the room" loading="lazy" decoding="async"><figcaption>The Bar</figcaption></figure><figure class="gg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-mixology.webp?v=1" alt="" role="img" aria-label="Mixologist pouring for guests at the bar" loading="lazy" decoding="async"><figcaption>The Bar</figcaption></figure><figure class="gh"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-backdrop.webp?v=1" alt="" role="img" aria-label="Guests posing in front of the branded photo wall" loading="lazy" decoding="async"><figcaption>The Backdrop</figcaption></figure><figure class="gi"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-sign.webp?v=1" alt="" role="img" aria-label="Brunch With The Best hanging sign at the venue" loading="lazy" decoding="async"><figcaption>Arrival</figcaption></figure><figure class="gj"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-xd-wall.webp?v=1" alt="" role="img" aria-label="Textured Show Love wall graphic" loading="lazy" decoding="async"><figcaption>The Backdrop</figcaption></figure></div>
+</section>
+
 <section id="plates">
-  <div class="co rv"><span class="sc">Course Three</span><h2>Signature Plates</h2><p>We created individual brunch backstories for each chef that described their relationship to brunch as a culinary art and the significance of their signature dishes.</p></div>
+  <div class="co rv"><span class="sc">Course Four</span><h2>Signature Plates</h2><p>We created individual brunch backstories for each chef that described their relationship to brunch as a culinary art and the significance of their signature dishes.</p></div>
   <div class="sp">
     <ol class="rv" aria-label="Signature plates"><li><button class="di" type="button" aria-pressed="true" data-k="0"><span class="ln"><b>Garden of Eden</b><i aria-hidden="true"></i><span>Cocktail</span></span><span class="by">The Drink Coach &middot; Atlanta</span><span class="ds">A custom cocktail from a world-class mixologist</span></button></li><li><button class="di" type="button" aria-pressed="false" data-k="1"><span class="ln"><b>Jerk Ribs</b><i aria-hidden="true"></i><span>Plate</span></span><span class="by">Lolo&rsquo;s On The Water &middot; New York</span><span class="ds">Caribbean spice and soul food, mashed up</span></button></li><li><button class="di" type="button" aria-pressed="false" data-k="2"><span class="ln"><b>Steak N Eggs &lsquo;Dilla</b><i aria-hidden="true"></i><span>Plate</span></span><span class="by">Taylor&rsquo;s Tacos &middot; Chicago</span><span class="ds">Soulful classics in street taco form</span></button></li><li><button class="di" type="button" aria-pressed="false" data-k="3"><span class="ln"><b>Peach Cobbler French Toast</b><i aria-hidden="true"></i><span>Sweet</span></span><span class="by">Cranky Granny&rsquo;s &middot; Austin</span><span class="ds">Dessert for brunch, inspired by a grandmother&rsquo;s cooking</span></button></li><li><button class="di" type="button" aria-pressed="false" data-k="4"><span class="ln"><b>Biscuits &amp; Gravy Goodness</b><i aria-hidden="true"></i><span>Plate</span></span><span class="by">Bridgetown Roti &middot; Los Angeles</span><span class="ds">An all new brunch original, savory and Caribbean-rooted</span></button></li><li><button class="di" type="button" aria-pressed="false" data-k="5"><span class="ln"><b>Tide to Table Omelette</b><i aria-hidden="true"></i><span>Plate</span></span><span class="by">Blk Swan &middot; Baltimore</span><span class="ds">A signature dish from the talk of the town</span></button></li></ol>
     <div class="vw rv" style="--d:.08s"><div class="sv act" role="group" aria-label="Brunch backstory for The Drink Coach, Atlanta"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for The Drink Coach" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for The Drink Coach" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-drink-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for The Drink Coach" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><div class="sv" role="group" aria-label="Brunch backstory for Lolo&rsquo;s On The Water, New York"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-lolo-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Lolo&rsquo;s On The Water" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><div class="sv" role="group" aria-label="Brunch backstory for Taylor&rsquo;s Tacos, Chicago"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-taylor-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Taylor&rsquo;s Tacos" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><div class="sv" role="group" aria-label="Brunch backstory for Cranky Granny&rsquo;s, Austin"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-sianni-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Cranky Granny&rsquo;s" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><div class="sv" role="group" aria-label="Brunch backstory for Bridgetown Roti, Los Angeles"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Bridgetown Roti" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Bridgetown Roti" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-rashida-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Bridgetown Roti" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><div class="sv" role="group" aria-label="Brunch backstory for Blk Swan, Baltimore"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-1.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 1 of 5 for Blk Swan" loading="lazy" decoding="async" class="on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-2.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 2 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-3.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 3 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-4.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 4 of 5 for Blk Swan" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-bs-saon-5.webp?v=1" alt="" role="img" aria-label="Brunch backstory story frame 5 of 5 for Blk Swan" loading="lazy" decoding="async"></div><button class="pv" type="button" aria-label="Previous frame"></button><button class="nx" type="button" aria-label="Next frame"></button></div><p class="tip sc">Choose a plate, tap to read its backstory</p></div>
@@ -193,7 +255,7 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 </section>
 
 <section id="kitchen">
-  <div class="co rv"><span class="sc">Course Four</span><h2>From The Kitchen</h2></div>
+  <div class="co rv"><span class="sc">Course Five</span><h2>From The Kitchen</h2></div>
   <div class="kt">
     <div class="rv"><div class="it rv"><div class="ln"><b>Compliments To The Chef</b><i aria-hidden="true"></i><span>Interviews</span></div><p>We gave our chefs their flowers by using real comments from their followers to generate questions for our pre-event interviews.</p></div><div class="row r4"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-1.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-2.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-3.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-cttc-4.webp?v=1" alt="" role="img" aria-label="Compliments To The Chef interview cover" loading="lazy" decoding="async"></figure></div></div>
     <div class="rv" style="--d:.08s"><div class="it rv"><div class="ln"><b>Back Of House</b><i aria-hidden="true"></i><span>Social</span></div><p>We gave our audience a sneak peek into the back of house experience by turning candid BTS footage of the chefs into organic social content.</p></div><div class="row r3"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-1.gif?v=1" alt="" role="img" aria-label="Raising a toast to close the residency" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-2.gif?v=1" alt="" role="img" aria-label="A signature sweet roll recipe on the brunch menu" loading="lazy" decoding="async"></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-boh-3.gif?v=1" alt="" role="img" aria-label="Baltimore energy heating up the kitchen" loading="lazy" decoding="async"></figure></div></div>
@@ -202,11 +264,75 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
 
 <section id="bottomless">
   <div class="co rv"><span class="sc">Bottomless</span><h2>Brunch Sweepstakes</h2><p>To enter, contestants submitted a review shouting out their favorite local Black-owned brunch spots. Creators amplified with partner content, sharing their own Reel reviews and interactive story content.</p></div>
-  <div class="bt"><figure class="rv" style="--d:0.00s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-1.gif?v=1" alt="" role="img" aria-label="Creator review video: Seafood in Buckhead, Atlanta" loading="lazy" decoding="async"></div><figcaption>Seafood in Buckhead, Atlanta</figcaption></figure><figure class="rv" style="--d:0.05s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-2.gif?v=1" alt="" role="img" aria-label="Creator review video: A new must try spot" loading="lazy" decoding="async"></div><figcaption>A new must try spot</figcaption></figure><figure class="rv" style="--d:0.10s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-3.gif?v=1" alt="" role="img" aria-label="Creator review video: Breakfast sandwiches and giant doughnuts" loading="lazy" decoding="async"></div><figcaption>Breakfast sandwiches and giant doughnuts</figcaption></figure><figure class="rv" style="--d:0.15s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-4.gif?v=1" alt="" role="img" aria-label="Creator review video: A favorite Harlem cafe" loading="lazy" decoding="async"></div><figcaption>A favorite Harlem cafe</figcaption></figure><figure class="rv" style="--d:0.20s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-5.gif?v=1" alt="" role="img" aria-label="Creator review video: Coffee shop and car wash" loading="lazy" decoding="async"></div><figcaption>Coffee shop and car wash</figcaption></figure><figure class="rv" style="--d:0.00s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-6.gif?v=1" alt="" role="img" aria-label="Creator review video: BYOB brunch in Houston" loading="lazy" decoding="async"></div><figcaption>BYOB brunch in Houston</figcaption></figure><figure class="rv" style="--d:0.05s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-7.gif?v=1" alt="" role="img" aria-label="Creator review video: Weekend brunch with good people" loading="lazy" decoding="async"></div><figcaption>Weekend brunch with good people</figcaption></figure><figure class="rv" style="--d:0.10s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-8.gif?v=1" alt="" role="img" aria-label="Creator review video: A lit brunch in Houston" loading="lazy" decoding="async"></div><figcaption>A lit brunch in Houston</figcaption></figure><figure class="rv" style="--d:0.15s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-9.gif?v=1" alt="" role="img" aria-label="Creator review video: Catfish and shrimp po boy" loading="lazy" decoding="async"></div><figcaption>Catfish and shrimp po boy</figcaption></figure><figure class="rv" style="--d:0.20s"><div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-10.gif?v=1" alt="" role="img" aria-label="Creator review video: Three spots in Atlanta and Duluth" loading="lazy" decoding="async"></div><figcaption>Three spots in Atlanta and Duluth</figcaption></figure></div>
+  <div class="ff rv"><p class="fn"><b>Still hungry?</b> Brunch is over, the cravings are not. Pick a craving, a city or both and we&rsquo;ll point you to dinner.</p>
+<div class="fg"><span class="sc">Craving</span><div class="cs" role="group" aria-label="Filter by craving"><button type="button" class="ch" data-c="Seafood" aria-pressed="false">Seafood</button><button type="button" class="ch" data-c="Southern" aria-pressed="false">Southern</button><button type="button" class="ch" data-c="Coffee" aria-pressed="false">Coffee</button><button type="button" class="ch" data-c="Sweet" aria-pressed="false">Sweet</button><button type="button" class="ch" data-c="Breakfast" aria-pressed="false">Breakfast</button><button type="button" class="ch" data-c="BYOB" aria-pressed="false">BYOB</button><button type="button" class="ch" data-c="Brunch Vibes" aria-pressed="false">Brunch Vibes</button><button type="button" class="ch" data-c="Must Try" aria-pressed="false">Must Try</button></div></div>
+<div class="fg"><span class="sc">City</span><div class="cs" role="group" aria-label="Filter by city"><button type="button" class="ch" data-l="Atlanta" aria-pressed="false">Atlanta</button><button type="button" class="ch" data-l="Houston" aria-pressed="false">Houston</button><button type="button" class="ch" data-l="New York" aria-pressed="false">New York</button><button type="button" class="ch" data-l="Las Vegas" aria-pressed="false">Las Vegas</button></div></div>
+<div class="rc"><p class="rec" aria-live="polite">Ten spots on the list. Tap a craving to narrow it down.</p><button type="button" class="rs0" hidden>Clear</button></div></div><div class="rl rv"><div class="tr" tabindex="0" role="region" aria-label="Sweepstakes reviews, scroll sideways"><article class="rv2" data-c="Seafood" data-l="Atlanta" data-n="The Boiler" data-m="Seafood &middot; Buckhead, Atlanta" aria-label="Review of The Boiler">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-1.gif?v=1" alt="" role="img" aria-label="Creator review video for The Boiler" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">B</span><div class="nm"><b>The Boiler</b><span>Seafood &middot; Buckhead, Atlanta &middot; @theboileratlanta</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Seafood</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Have you been to this seafood restaurant in Buckhead?</q>
+<div class="mo"><b>Must Order</b>Garlic Crab Noodles</div></div></article><article class="rv2" data-c="Must Try" data-l="" data-n="Shad&rsquo;s One Stop Express" data-m="New spot" aria-label="Review of Shad&rsquo;s One Stop Express">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-2.gif?v=1" alt="" role="img" aria-label="Creator review video for Shad&rsquo;s One Stop Express" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">S</span><div class="nm"><b>Shad&rsquo;s One Stop Express</b><span>New spot &middot; @shadsonestopexpress</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>New Spot</i><i>Must Try</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Listen! Shad&rsquo;s One Stop Express is a MUST TRY! He&rsquo;s doing it!</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="Sweet|Breakfast" data-l="" data-n="Blondie&rsquo;s Doughnuts" data-m="Doughnuts &middot; Breakfast" aria-label="Review of Blondie&rsquo;s Doughnuts">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-3.gif?v=1" alt="" role="img" aria-label="Creator review video for Blondie&rsquo;s Doughnuts" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">B</span><div class="nm"><b>Blondie&rsquo;s Doughnuts</b><span>Doughnuts &middot; Breakfast &middot; @blondiesdoughnuts</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Doughnuts</i><i>20+ Flavors</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Serves up the most amazing breakfast sandwiches and giant, delicious doughnuts you&rsquo;ve ever tasted!</q>
+<div class="mo"><b>Must Order</b>Breakfast sandwiches</div></div></article><article class="rv2" data-c="Coffee" data-l="New York" data-n="NBHD Brulee" data-m="Cafe &middot; Harlem, New York" aria-label="Review of NBHD Brulee">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-4.gif?v=1" alt="" role="img" aria-label="Creator review video for NBHD Brulee" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">N</span><div class="nm"><b>NBHD Brulee</b><span>Cafe &middot; Harlem, New York</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Cafe</i><i>Neighborhood Fave</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>I&rsquo;m a Harlem resident, and my favorite cafe is a Black-owned business called NBHD Brulee.</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="Coffee" data-l="Houston" data-n="Drip Cars and Coffee" data-m="Coffee &middot; Houston" aria-label="Review of Drip Cars and Coffee">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-5.gif?v=1" alt="" role="img" aria-label="Creator review video for Drip Cars and Coffee" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">D</span><div class="nm"><b>Drip Cars and Coffee</b><span>Coffee &middot; Houston &middot; @dripcarsandcoffee</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Coffee</i><i>Car Wash</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>A cool coffee shop with a car wash! I found one of the coolest coffee shops in the city!</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="BYOB|Brunch Vibes" data-l="Houston" data-n="Nomad" data-m="Brunch &middot; Houston" aria-label="Review of Nomad">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-6.gif?v=1" alt="" role="img" aria-label="Creator review video for Nomad" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">N</span><div class="nm"><b>Nomad</b><span>Brunch &middot; Houston &middot; @nomad_houston</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>BYOB</i><i>Brunch</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Brunch at Nomad was so lit! It&rsquo;s BYOB, plus the food is delicious!</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="Brunch Vibes" data-l="Las Vegas" data-n="eat." data-m="Brunch &middot; Downtown Las Vegas" aria-label="Review of eat.">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-7.gif?v=1" alt="" role="img" aria-label="Creator review video for eat." loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">E</span><div class="nm"><b>eat.</b><span>Brunch &middot; Downtown Las Vegas</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Brunch</i><i>Weekend</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>I love me a good brunch, I look forward to it every weekend.</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="Brunch Vibes" data-l="Houston" data-n="Kamp" data-m="Brunch &middot; Houston" aria-label="Review of Kamp">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-8.gif?v=1" alt="" role="img" aria-label="Creator review video for Kamp" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">K</span><div class="nm"><b>Kamp</b><span>Brunch &middot; Houston &middot; @kamphouston</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Brunch</i><i>Vibes</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>If you&rsquo;re looking for a lit brunch, Kamp is my go-to spot!</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article><article class="rv2" data-c="Seafood|Southern" data-l="" data-n="Court Cafe" data-m="Southern &middot; Brunch" aria-label="Review of Court Cafe">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-9.gif?v=1" alt="" role="img" aria-label="Creator review video for Court Cafe" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">C</span><div class="nm"><b>Court Cafe</b><span>Southern &middot; Brunch</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Southern</i><i>Brunch</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Can we take a moment to appreciate the catfish and shrimp po boy?</q>
+<div class="mo"><b>Must Order</b>Catfish and shrimp po boy</div></div></article><article class="rv2" data-c="Brunch Vibes|Southern" data-l="Atlanta" data-n="Three Black-Owned Spots" data-m="Brunch &middot; Atlanta and Duluth, GA" aria-label="Review of Three Black-Owned Spots">
+<div class="f"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sw-10.gif?v=1" alt="" role="img" aria-label="Creator review video for Three Black-Owned Spots" loading="lazy" decoding="async"><span class="rb">Reel Review</span></div>
+<div class="bx"><div class="hd"><span class="av" aria-hidden="true">T</span><div class="nm"><b>Three Black-Owned Spots</b><span>Brunch &middot; Atlanta and Duluth, GA</span></div></div>
+<div class="bd"><i class="k">Black-Owned</i><i>Roundup</i><i>Brunch</i></div>
+<div class="lbl"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v9H6l-4 3z" fill="currentColor"/></svg>Recent Review</div>
+<q>Here are 3 Black-owned brunch restaurants in Atlanta (and Duluth) to support now and forever!</q>
+<div class="mo"><b>Shouted Out In</b>Bottomless Brunch Sweepstakes</div></div></article></div>
+<div class="ctl"><button class="pv" type="button" aria-label="Previous reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="pg" aria-hidden="true"><i></i></div><button class="nx" type="button" aria-label="Next reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div></div>
 </section>
 
 <section id="check">
-  <div class="co rv"><span class="sc">Course Five</span><h2>The Check</h2></div>
+  <div class="co rv"><span class="sc">Course Six</span><h2>The Check</h2></div>
   <div class="ck rv" role="group" aria-label="Results">
     <div class="hd"><span class="sc">Brunch With The Best &middot; Table For The Culture</span></div>
     <div class="row"><span>Earned media impressions</span><i aria-hidden="true"></i><b>4.7 Billion</b></div>
@@ -255,6 +381,34 @@ mask:linear-gradient(#000 0 0) top/100% calc(100% - 12px) no-repeat,conic-gradie
     sv.goTo=function(n){go(n);play()};
     if('IntersectionObserver' in win){new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isIntersecting;vis?play():stop()})},{threshold:.35}).observe(sv)}
     go(0);
+  });
+
+  (function(){
+    var ff=rr.querySelector('.ff');if(!ff)return;
+    var cards=[].slice.call(rr.querySelectorAll('.rl .rv2')),tr=rr.querySelector('.rl .tr'),rec=ff.querySelector('.rec'),clr=ff.querySelector('.rs0');
+    var sel={c:null,l:null};
+    var lines=['Your table is set at ','Tonight, go with ','Our pick: ','Pull up a chair at '];
+    function apply(){
+      var hit=cards.filter(function(c){var ok=true;if(sel.c)ok=c.getAttribute('data-c').split('|').indexOf(sel.c)>-1;if(ok&&sel.l)ok=c.getAttribute('data-l')===sel.l;return ok});
+      cards.forEach(function(c){c.hidden=hit.indexOf(c)<0});
+      [].forEach.call(ff.querySelectorAll('.ch'),function(b){var k=b.hasAttribute('data-c')?'c':'l';b.setAttribute('aria-pressed',sel[k]===b.getAttribute('data-'+k)?'true':'false')});
+      clr.hidden=!(sel.c||sel.l);
+      if(!sel.c&&!sel.l){rec.textContent='Ten spots on the list. Tap a craving to narrow it down.'}
+      else if(!hit.length){rec.textContent='Nothing on the list matches that combo yet. Try another city or craving.'}
+      else{var pick=hit[Math.floor(Math.random()*hit.length)],t=document.createElement('div');t.innerHTML=pick.getAttribute('data-n')+' ('+pick.getAttribute('data-m')+')';
+        rec.textContent=lines[Math.floor(Math.random()*lines.length)]+t.textContent+'.'+(hit.length>1?' '+(hit.length-1)+' more '+(hit.length===2?'spot matches':'spots match')+'.':'');}
+      tr.scrollLeft=0;tr.dispatchEvent(new Event('scroll'));
+    }
+    [].forEach.call(ff.querySelectorAll('.ch'),function(b){b.addEventListener('click',function(){var k=b.hasAttribute('data-c')?'c':'l',v=b.getAttribute('data-'+k);sel[k]=sel[k]===v?null:v;apply()})});
+    clr.addEventListener('click',function(){sel={c:null,l:null};apply()});
+  })();
+  [].forEach.call(rr.querySelectorAll('.rl'),function(rl){
+    var tr=rl.querySelector('.tr'),pv=rl.querySelector('.ctl .pv'),nx=rl.querySelector('.ctl .nx'),bar=rl.querySelector('.pg i');
+    function step(){var c=tr.querySelector('.rv2');return c?c.getBoundingClientRect().width+parseFloat(win.getComputedStyle(tr).columnGap||0):tr.clientWidth}
+    function upd(){var m=tr.scrollWidth-tr.clientWidth,p=m>0?tr.scrollLeft/m:0,w=Math.max(.12,tr.clientWidth/tr.scrollWidth);bar.style.width=(w*100)+'%';bar.style.marginLeft=(p*(1-w)*100)+'%';pv.disabled=tr.scrollLeft<4;nx.disabled=tr.scrollLeft>m-4}
+    pv.addEventListener('click',function(){tr.scrollBy({left:-step(),behavior:'smooth'})});
+    nx.addEventListener('click',function(){tr.scrollBy({left:step(),behavior:'smooth'})});
+    tr.addEventListener('scroll',upd,{passive:true});win.addEventListener('resize',upd);upd();
   });
 
   var dis=[].slice.call(rr.querySelectorAll('.sp .di')),svs=[].slice.call(rr.querySelectorAll('.sp .vw .sv'));
