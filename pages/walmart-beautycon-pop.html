@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Walmart x Beautycon: reintroducing the Super Bowl of beauty, with For Every It Girl as the creative ethos behind the experiential design, the shoppable digital experience and the renewed messaging.">
+<title>Nina Austin | Walmart x Beautycon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=DM+Serif+Display:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#F7F1DE}
+.pz{--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*4);--cream:#F7F1DE;--ink:#1A1416;--pink:#F290C2;--hot:#E8409A;--lime:#C6EC6A;--lime2:#B4DE4F;
+--fun:Shrikhand,"Cooper Black",Georgia,serif;--se:"DM Serif Display",Georgia,serif;--bd:"Bodoni Moda",Didot,Georgia,serif;--sa:"DM Sans","Helvetica Neue",Arial,sans-serif;
+display:block;position:relative;overflow:hidden;overflow:clip;container-type:inline-size;background:var(--cream);color:var(--ink);font:400 calc(var(--u)*1.02)/1.55 var(--sa);-webkit-font-smoothing:antialiased}
+@supports (width:1cqw){.pz{--u:clamp(11px,1.1111cqw,28px)}}
+.pz *,.pz *::before,.pz *::after{box-sizing:border-box}
+.pz img{display:block;max-width:100%;height:auto}
+.pz a{color:inherit;text-decoration:none}
+.pz h1,.pz h2,.pz h3,.pz p,.pz ul,.pz ol,.pz figure,.pz blockquote{margin:0;padding:0}
+.pz ul,.pz ol{list-style:none}
+.pz .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pz .cap{font:500 max(10px,calc(var(--u)*.72))/1.3 var(--sa);letter-spacing:.14em;text-transform:uppercase}
+.pz .btn{display:inline-flex;align-items:center;gap:.6em;padding:.6em 1.3em;border-radius:99px;background:var(--lime);color:var(--ink);border:1.5px solid var(--ink);font:500 max(11px,calc(var(--u)*.86))/1 var(--sa);cursor:pointer;transition:transform .25s cubic-bezier(.2,1.6,.4,1),background .2s}
+.pz .btn:hover{transform:translateY(-3px) rotate(-2deg);background:#fff}
+.pz .btn svg{width:1.1em;height:1.1em}
+.pz .star{position:absolute;color:var(--lime);pointer-events:none}
+.pz .star path{fill:currentColor;stroke:var(--ink);stroke-width:1.2}
+.pz .spin{animation:pzSpin 14s linear infinite}
+@keyframes pzSpin{to{transform:rotate(360deg)}}
+/* top bar */
+.pz .top{display:flex;justify-content:space-between;align-items:center;padding:calc(var(--u)*.9) var(--g);background:var(--pink);font:400 max(10px,calc(var(--u)*.8))/1 var(--se)}
+.pz .top nav{display:flex;gap:calc(var(--u)*1.8)}
+.pz .top a:hover{color:#fff}
+/* hero */
+.pz .hero{position:relative;background:var(--pink);padding:0 var(--g) calc(var(--u)*2.2)}
+.pz .hph{position:relative;height:calc(var(--u)*34);overflow:hidden;border:2px solid var(--ink)}
+.pz .hph img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;transform:scale(1.04);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.pz .hph::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,20,22,.55),rgba(26,20,22,.1) 45%,transparent)}
+.pz .hcopy{position:absolute;z-index:2;left:calc(var(--u)*2.4);top:calc(var(--u)*2.4);max-width:calc(var(--u)*24);color:#fff}
+.pz .hcopy .kk{font:400 calc(var(--u)*1.9)/1.05 var(--se)}
+.pz .hcopy .kk i{font-style:italic}
+.pz .hcopy p{margin-top:calc(var(--u)*1);font-size:calc(var(--u)*.92)}
+.pz .hcopy .btn{margin-top:calc(var(--u)*1.4)}
+.pz .ttl{position:relative;z-index:3;margin-top:calc(var(--u)*-8.6);text-align:center;line-height:.86}
+.pz .ttl h1{display:inline-block;font:400 calc(var(--u)*13)/1 var(--fun);color:var(--pink);-webkit-text-stroke:calc(var(--u)*.42) var(--ink);paint-order:stroke fill;text-shadow:0 0 0 var(--ink),calc(var(--u)*.35) calc(var(--u)*.45) 0 var(--ink);transform:rotate(-2deg);letter-spacing:-.01em}
+.pz .ttl h1 span{display:block;font-size:.34em;margin-bottom:-.12em;color:var(--cream)}
+.pz .badge{position:absolute;z-index:4;right:calc(var(--u)*10);top:calc(var(--u)*-1);padding:.5em 1.1em;border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);font:400 calc(var(--u)*1.25)/1 var(--se);transform:rotate(-8deg)}
+/* ticker */
+.pz .tk{overflow:hidden;white-space:nowrap;background:var(--lime);border-block:1.5px solid var(--ink);padding:calc(var(--u)*.5) 0}
+.pz .tk div{display:inline-flex;animation:pzTk 30s linear infinite}
+.pz .tk.rv2 div{animation-direction:reverse}
+.pz .tk span{display:inline-flex;align-items:center;gap:calc(var(--u)*1.2);padding-right:calc(var(--u)*1.2);font:400 max(11px,calc(var(--u)*.86))/1 var(--se);text-transform:uppercase;letter-spacing:.04em}
+.pz .tk span::after{content:'\2605';font-size:.9em}
+@keyframes pzTk{to{transform:translateX(-50%)}}
+/* boutique / comeback */
+.pz .bq{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:calc(var(--u)*4);align-items:center;padding:calc(var(--u)*6) var(--g)}
+.pz .bq .cap{display:block;margin-bottom:calc(var(--u)*1.4)}
+.pz .h2{font:400 calc(var(--u)*4.4)/.98 var(--se);letter-spacing:-.01em}
+.pz .h2 i{font-style:italic}
+.pz .h2 .pk{color:var(--hot)}
+.pz .bq p.b{margin-top:calc(var(--u)*1.5);max-width:calc(var(--u)*34)}
+.pz .bq p.b+p.b{margin-top:calc(var(--u)*.9)}
+.pz .bq .btn{margin-top:calc(var(--u)*1.8)}
+.pz .bw{position:relative}
+.pz .bw img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.08);border:2px solid var(--ink)}
+.pz .bw .tag{position:absolute;left:calc(var(--u)*-1.4);bottom:calc(var(--u)*2);padding:.55em 1em;background:var(--pink);border:1.5px solid var(--ink);font:400 calc(var(--u)*1.1)/1 var(--se);transform:rotate(-4deg)}
+/* it girl */
+.pz .ig{position:relative;padding:calc(var(--u)*6) var(--g) calc(var(--u)*6);text-align:center;background:var(--cream)}
+.pz .big{position:relative;font:400 calc(var(--u)*14)/.8 var(--bd);letter-spacing:-.02em;transform:scaleY(1.32);transform-origin:50% 0;margin-bottom:calc(var(--u)*4.4);text-transform:uppercase}
+.pz .big i{font-style:italic;text-transform:none;color:var(--hot)}
+.pz .fl{position:absolute;z-index:2;border:2px solid var(--ink);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--ink);background:#fff;padding:calc(var(--u)*.35)}
+.pz .fl img{width:100%;height:100%;object-fit:cover}
+.pz .fl1{left:calc(var(--u)*6);top:calc(var(--u)*5);width:calc(var(--u)*13);height:calc(var(--u)*17);transform:rotate(-12deg)}
+.pz .fl2{right:calc(var(--u)*7);top:calc(var(--u)*9);width:calc(var(--u)*12);height:calc(var(--u)*15);transform:rotate(10deg)}
+.pz .shopnow{position:absolute;z-index:3;left:50%;top:calc(var(--u)*11);transform:translateX(-50%) rotate(-6deg)}
+.pz .ig .lede{position:relative;z-index:2;max-width:calc(var(--u)*44);margin:0 auto;font:400 calc(var(--u)*1.55)/1.35 var(--se)}
+.pz .ig .lede i{font-style:italic}
+.pz .pil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.4);margin-top:calc(var(--u)*3.4);text-align:left}
+.pz .pil li{padding:calc(var(--u)*1.6);border:1.5px solid var(--ink);border-radius:calc(var(--u)*1.6);background:var(--pink);transition:transform .3s cubic-bezier(.2,1.6,.4,1)}
+.pz .pil li:nth-child(2){background:var(--lime)}
+.pz .pil li:nth-child(3){background:#fff}
+.pz .pil li:hover{transform:rotate(-1.5deg) translateY(-4px)}
+.pz .pil b{display:block;font:400 calc(var(--u)*1.7)/1.05 var(--fun);margin:calc(var(--u)*.5) 0 calc(var(--u)*.6)}
+.pz .pil p{font-size:calc(var(--u)*.92)}
+/* slayground */
+.pz .sl{position:relative;background:var(--pink);padding:calc(var(--u)*6) var(--g);border-block:1.5px solid var(--ink)}
+.pz .slh{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:calc(var(--u)*4);align-items:end;margin-bottom:calc(var(--u)*3.4)}
+.pz .slh .h2 .fn{display:block;font-family:var(--fun);font-size:1.1em;color:var(--cream);-webkit-text-stroke:calc(var(--u)*.2) var(--ink);paint-order:stroke fill;text-shadow:calc(var(--u)*.22) calc(var(--u)*.26) 0 var(--ink)}
+.pz .slh .cap{display:block;margin-bottom:calc(var(--u)*1.2)}
+.pz .slt p{font-size:calc(var(--u)*.95)}
+.pz .slt p+p{margin-top:calc(var(--u)*.8)}
+.pz .slt p:first-child{font:400 calc(var(--u)*1.4)/1.3 var(--se)}
+.pz .col{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.pz .col figure{position:relative;background:#fff;padding:calc(var(--u)*.45) calc(var(--u)*.45) calc(var(--u)*2.4);border:1.5px solid var(--ink);transition:transform .35s cubic-bezier(.2,1.4,.4,1)}
+.pz .col figure:nth-child(odd){transform:rotate(-2deg)}.pz .col figure:nth-child(even){transform:rotate(1.8deg) translateY(calc(var(--u)*1.6))}
+.pz .col figure:hover{transform:rotate(0) scale(1.03);z-index:2}
+.pz .col img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.pz .col .wd{grid-column:span 2}
+.pz .col .wd img{aspect-ratio:16/10}
+.pz .col figcaption{position:absolute;left:calc(var(--u)*.6);right:calc(var(--u)*.6);bottom:calc(var(--u)*.6);font:400 calc(var(--u)*1)/1.15 var(--se)}
+.pz .col figcaption i{font-style:italic;color:var(--hot)}
+/* program row */
+.pz .pg{padding:calc(var(--u)*6) 0 calc(var(--u)*5)}
+.pz .pgh{display:flex;align-items:flex-end;justify-content:space-between;gap:calc(var(--u)*2);padding:0 var(--g) calc(var(--u)*2.4)}
+.pz .arw{display:flex;gap:calc(var(--u)*.6)}
+.pz .arw button{width:calc(var(--u)*3);height:calc(var(--u)*3);border-radius:50%;border:1.5px solid var(--ink);background:var(--lime);color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .2s}
+.pz .arw button:hover{transform:scale(1.08)}
+.pz .arw svg{width:1.1em;height:1.1em}
+.pz .row{display:flex;gap:calc(var(--u)*1.6);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--g);padding:calc(var(--u)*.6) var(--g) calc(var(--u)*1.2);scrollbar-width:none;cursor:grab}
+.pz .row::-webkit-scrollbar{display:none}
+.pz .row.drag{cursor:grabbing;scroll-snap-type:none}
+.pz .row li{flex:0 0 calc(var(--u)*21);scroll-snap-align:start;min-width:0;border:1.5px solid var(--ink);border-radius:calc(var(--u)*1.6);overflow:hidden;background:#fff;transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.pz .row li:hover{transform:translateY(-6px) rotate(-1deg)}
+.pz .row .ph{position:relative;aspect-ratio:1;background:radial-gradient(circle at 50% 70%,#fff,var(--pink));border-bottom:1.5px solid var(--ink)}
+.pz .row .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:calc(var(--u)*1.2);pointer-events:none}
+.pz .row .ph.cv img{object-fit:cover;padding:0}
+.pz .row .n{position:absolute;left:calc(var(--u)*.9);top:calc(var(--u)*.9);width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);display:grid;place-items:center;border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);font:400 calc(var(--u)*.95)/1 var(--se)}
+.pz .row .tx{padding:calc(var(--u)*1.1) calc(var(--u)*1.2) calc(var(--u)*1.4)}
+.pz .row h3{font:400 calc(var(--u)*1.55)/1.05 var(--se)}
+.pz .row p{margin-top:calc(var(--u)*.5);font-size:calc(var(--u)*.88)}
+/* manifesto */
+.pz .mf{position:relative;background:var(--lime);padding:calc(var(--u)*6.4) var(--g);text-align:center;border-block:1.5px solid var(--ink)}
+.pz .mf blockquote{max-width:calc(var(--u)*60);margin:calc(var(--u)*1.4) auto 0;font:400 calc(var(--u)*4.6)/1.02 var(--fun);color:var(--cream);-webkit-text-stroke:calc(var(--u)*.22) var(--ink);paint-order:stroke fill;text-shadow:calc(var(--u)*.26) calc(var(--u)*.3) 0 var(--ink)}
+.pz .mf p.b{max-width:calc(var(--u)*44);margin:calc(var(--u)*2.2) auto 0;font:400 calc(var(--u)*1.25)/1.45 var(--se)}
+.pz .soc{padding:calc(var(--u)*6) var(--g) 0}
+.pz .soch{display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*.6) calc(var(--u)*3);align-items:end;margin-bottom:calc(var(--u)*2.4)}
+.pz .soch .cap{grid-column:1/-1}
+.pz .soch p{max-width:calc(var(--u)*32);justify-self:end;font:400 calc(var(--u)*1.15)/1.4 var(--se)}
+.pz .soc figure{border:2px solid var(--ink);border-radius:calc(var(--u)*1.6);overflow:hidden;box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink)}
+.pz .soc img{width:100%}
+/* shop menu */
+.pz .shop{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*3.4);padding:calc(var(--u)*6) var(--g)}
+.pz .shop .intro p{margin-top:calc(var(--u)*1.3);font-size:calc(var(--u)*.95)}
+.pz .shop .intro .btn{margin-top:calc(var(--u)*1.8)}
+.pz .menu{padding:calc(var(--u)*1.8);border:1.5px solid var(--ink);border-radius:calc(var(--u)*1.6);background:#fff}
+.pz .menu h3{font:400 calc(var(--u)*1.7)/1.05 var(--fun);color:var(--hot);margin-bottom:calc(var(--u)*.6)}
+.pz .menu li{padding:calc(var(--u)*.75) 0;border-bottom:1.5px dotted rgba(26,20,22,.35)}
+.pz .menu li:last-child{border-bottom:0}
+.pz .menu b{display:block;font:400 calc(var(--u)*1.2)/1.15 var(--se)}
+.pz .menu span{display:block;margin-top:.2em;font-size:calc(var(--u)*.84);color:#4b4245}
+.pz .menu.l{background:var(--lime)}
+/* press */
+.pz .pr{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center;padding:calc(var(--u)*6) var(--g);background:var(--pink);border-top:1.5px solid var(--ink)}
+.pz .pr figure{position:relative;max-width:calc(var(--u)*22);justify-self:center;transform:rotate(-3deg);border:2px solid var(--ink);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink);background:#fff;padding:calc(var(--u)*.4)}
+.pz .pr figure img{aspect-ratio:2/3;object-fit:cover;width:100%}
+.pz .pr .src{display:flex;gap:calc(var(--u)*.7);flex-wrap:wrap}
+.pz .pr .src span{padding:.4em .8em;border-radius:99px;border:1.5px solid var(--ink);background:var(--cream);font:500 max(10px,calc(var(--u)*.7))/1 var(--sa);letter-spacing:.12em;text-transform:uppercase}
+.pz .pr h3{margin-top:calc(var(--u)*1.4);font:400 calc(var(--u)*4.4)/.98 var(--se)}
+.pz .pr p.d{margin-top:calc(var(--u)*1.3);max-width:calc(var(--u)*38);font:400 calc(var(--u)*1.35)/1.4 var(--se)}
+.pz .pr p.d i{font-style:italic}
+.pz .pr .by{margin-top:calc(var(--u)*1.2)}
+.pz .pr .btn{margin-top:calc(var(--u)*1.8)}
+.pz .ft{display:flex;justify-content:center;padding:calc(var(--u)*3) var(--g) calc(var(--u)*3.4);background:var(--cream);border-top:1.5px solid var(--ink)}
+/* reveal */
+.pz .rv{opacity:0;transform:translateY(calc(var(--u)*1.8));transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.pz .rv.on{opacity:1;transform:none}
+.pz .col figure.rv{transform:translateY(calc(var(--u)*1.8))}
+.pz .col figure.rv.on:nth-child(odd){transform:rotate(-2deg)}.pz .col figure.rv.on:nth-child(even){transform:rotate(1.8deg) translateY(calc(var(--u)*1.6))}
+@media(max-width:1000px){
+.pz{--u:16px;--g:1.25rem;font-size:1rem}
+.pz .top{flex-direction:column;gap:.7rem;padding:.9rem var(--g)}
+.pz .top nav{gap:1rem;flex-wrap:wrap;justify-content:center;font-size:.85rem}
+.pz .hph{height:30rem}
+.pz .hph::after{background:linear-gradient(180deg,rgba(26,20,22,.6),rgba(26,20,22,.15) 55%,transparent)}
+.pz .hcopy{left:1.1rem;right:1.1rem;top:1.2rem}
+.pz .hcopy .kk{font-size:1.7rem}
+.pz .ttl{margin-top:-3.6rem}
+.pz .ttl h1{font-size:min(5.6rem,16.5cqw);-webkit-text-stroke:.22rem var(--ink)}
+.pz .badge{right:.6rem;top:-3.4rem;font-size:.95rem}
+.pz .h2{font-size:min(3rem,12cqw)}
+.pz .bq,.pz .slh,.pz .pr{grid-template-columns:1fr;gap:2.4rem}
+.pz .bq,.pz .sl,.pz .shop,.pz .pr,.pz .mf{padding-top:4rem;padding-bottom:4rem}
+.pz .bw{max-width:22rem}
+.pz .bw .tag{left:-.5rem}
+.pz .ig{padding:4rem var(--g)}
+.pz .big{font-size:min(6.4rem,27cqw);margin-bottom:2.8rem}
+.pz .fl{display:none}
+.pz .shopnow{position:relative;left:auto;top:auto;transform:rotate(-4deg);margin:0 auto 1.6rem;display:inline-flex}
+.pz .ig .lede{font-size:1.25rem}
+.pz .pil{grid-template-columns:1fr;gap:1rem}
+.pz .col{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.pz .col .wd{grid-column:1/-1}
+.pz .col figcaption{font-size:.85rem}
+.pz .pgh{flex-direction:column;align-items:flex-start}
+.pz .arw{display:none}
+.pz .row li{flex-basis:min(74%,17rem)}
+.pz .mf blockquote{font-size:min(2.7rem,11cqw)}
+.pz .mf p.b{font-size:1.1rem}
+.pz .shop{grid-template-columns:1fr;gap:1.6rem}
+.pz .soc{padding-top:4rem}
+.pz .soch{grid-template-columns:1fr}.pz .soch p{justify-self:start}
+.pz .pr h3{font-size:2.8rem}
+.pz .pr figure{max-width:15rem}
+}
+@media(prefers-reduced-motion:reduce){
+.pz .tk div,.pz .spin{animation:none}
+.pz .rv{opacity:1;transform:none;transition:none}
+.pz .btn,.pz .pil li,.pz .row li,.pz .col figure,.pz .hph img{transition:none}
+}
+</style></head><body>
+<div class="pz" id="top">
+
+<header class="top"><a href="#top" data-go>Walmart x Beautycon</a><nav aria-label="Sections"><a href="#pzC" data-go>The comeback</a><a href="#pzE" data-go>It Girl</a><a href="#pzL" data-go>The Slayground</a><a href="#pzS" data-go>Shop</a><a href="#pzP" data-go>Press</a></nav></header>
+
+<section class="hero" aria-labelledby="pzH">
+  <div class="hph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lips.webp?v=1" alt="Two guests laughing and posing with lip props at the Walmart counter at Beautycon LA" width="1800" height="1125" fetchpriority="high">
+    <div class="hcopy"><p class="kk">Super Bowl. <i>Of beauty.</i></p><p>Beautycon made a comeback, and Walmart came in as the exclusive retail destination, with one creative ethos for every touchpoint: For Every It Girl.</p><a class="btn" href="#pzS" data-go>Shop the portfolio <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></div>
+  </div>
+  <div class="ttl"><h1 id="pzH"><span>Walmart x</span>Beautycon</h1><span class="badge" aria-hidden="true">for every it girl</span></div>
+</section>
+
+<div class="tk" aria-hidden="true"><div><span>New: it girl energy</span><span>Super Bowl of beauty</span><span>Walmart x Beautycon</span><span>Content, community, commerce</span><span>New: it girl energy</span><span>Super Bowl of beauty</span><span>Walmart x Beautycon</span><span>Content, community, commerce</span><span>New: it girl energy</span><span>Super Bowl of beauty</span><span>Walmart x Beautycon</span><span>Content, community, commerce</span><span>New: it girl energy</span><span>Super Bowl of beauty</span><span>Walmart x Beautycon</span><span>Content, community, commerce</span></div></div>
+
+<section class="bq" id="pzC" aria-labelledby="pzCh">
+  <svg class="star spin" style="left:calc(var(--u)*46);top:calc(var(--u)*3);width:calc(var(--u)*3.4)" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1l4.6 12.4L38 15l-10 8.6L31 37l-11-7-11 7 3-13.4L2 15l13.4-1.6z"/></svg>
+  <svg class="star" style="left:calc(var(--u)*50);top:calc(var(--u)*8);width:calc(var(--u)*2)" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1l4.6 12.4L38 15l-10 8.6L31 37l-11-7-11 7 3-13.4L2 15l13.4-1.6z"/></svg>
+  <div class="rv">
+    <span class="cap">Designed for the girls who still believe in beauty</span>
+    <h2 class="h2" id="pzCh">The <span class="pk">Super Bowl of beauty</span> you <i>never</i> saw coming back.</h2>
+    <p class="b">They called it the Super Bowl of beauty. Beautycon, the high-profile festival that closed in 2021 amid financial turbulence, made a comeback, reimagined under Essence Ventures around merging content, community and commerce.</p>
+    <p class="b">Walmart partnered as the exclusive retail destination, amplifying diverse, rising creators and the unique beauty styles they bring.</p>
+    <a class="btn" href="#pzP" data-go>Read the Vogue feature</a>
+  </div>
+  <figure class="bw rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-man.webp?v=1" alt="A guest in a yellow tee smiling with arms crossed in front of the chrome sculpture" width="1067" height="1600" loading="lazy" decoding="async"><figcaption class="tag">Beautycon LA</figcaption></figure>
+</section>
+
+<div class="tk rv2" aria-hidden="true"><div><span>Powered</span><span>By</span><span>For every it girl</span><span>Powered</span><span>By</span><span>For every it girl</span><span>Powered</span><span>By</span><span>For every it girl</span><span>Powered</span><span>By</span><span>For every it girl</span><span>Powered</span><span>By</span><span>For every it girl</span><span>Powered</span><span>By</span><span>For every it girl</span></div></div>
+
+<section class="ig" id="pzE" aria-labelledby="pzEh">
+  <figure class="fl fl1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-combo-sign.webp?v=1" alt="" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+  <figure class="fl fl2" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-phone.webp?v=1" alt="" width="1236" height="1600" loading="lazy" decoding="async"></figure>
+  <h2 class="big" id="pzEh">It <i>girl</i></h2>
+  <a class="btn shopnow" href="#pzS" data-go>Shop now <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+  <p class="lede rv"><i>For Every It Girl</i> was the creative ethos that guided and anchored the event&rsquo;s resurrection. Beautycon&rsquo;s bold, rebellious and inclusive identity reimagined traditional beauty standards for Gen Z and millennial audiences, and the it girl gave Walmart its way in.</p>
+  <ol class="pil">
+    <li class="rv"><span class="cap">01</span><b>Experiential design</b><p>A modern beauty playspace where it girls could try everything, build their look and get seen doing it.</p></li>
+    <li class="rv"><span class="cap">02</span><b>Shoppable digital</b><p>The Walmart Beautycon digital storefront put the full brand portfolio a tap away, live on the floor and online.</p></li>
+    <li class="rv"><span class="cap">03</span><b>Renewed messaging</b><p>A manifesto that retired &ldquo;wearing your worth&rdquo; and put originality, value and every it girl at the center.</p></li>
+  </ol>
+</section>
+
+<section class="sl" id="pzL" aria-labelledby="pzLh">
+  <div class="slh">
+    <div class="rv"><span class="cap">Walmart Makers Studio . Beautycon LA 2023</span><h2 class="h2" id="pzLh">Welcome to <span class="fn">The Slayground</span></h2></div>
+    <div class="slt rv">
+      <p>Walmart&rsquo;s haven of beauty exploration, where attendees played with new beauty trends, new products and new friends, no pressure.</p>
+      <p>Familiar beauty spaces and scenes, from your at-home vanity to getting ready with friends for a night out, were reimagined into a contemporary beauty play space. From experimenting with new beauty cores to boosting content capture confidence with posing coaches, Makers Studio at Beautycon LA offered the ultimate journey to re-upping that it girl energy and confidence.</p>
+      <p>Walmart Makers Studio is a multi-seasonal experiential campaign giving emerging Gen Z creators creative resources and chances to collaborate. Its third edition showcased Walmart&rsquo;s beauty offerings across a series of interactive moments: personalized product combinations, Cottagecore and Mermaidcore at AR-enhanced vanities designed by beauty creators, and posing sessions with creator David Suh in a dedicated photo studio.</p>
+    </div>
+  </div>
+  <div class="col">
+    <figure class="wd rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-arch-wide.webp?v=1" alt="Wide view of the space with sweeping red arches and a Makers Studio badge" width="1800" height="1012" loading="lazy" decoding="async"><figcaption>The <i>Slayground</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-ar-mirror.webp?v=1" alt="Chrome-framed AR mirror with an Explore your core screen" width="1000" height="1600" loading="lazy" decoding="async"><figcaption>Explore your <i>core</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-combo-bar.webp?v=1" alt="Trays of accessories on a numbered combo counter" width="1067" height="1600" loading="lazy" decoding="async"><figcaption>Build your <i>combo</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-studio.webp?v=1" alt="A guest posing in the photo studio as a photographer shoots" width="1125" height="1800" loading="lazy" decoding="async"><figcaption>Strike a <i>pose</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-green.webp?v=1" alt="A guest in a green dress beside the chrome balloon sculpture" width="1000" height="1600" loading="lazy" decoding="async"><figcaption>Chrome <i>moment</i></figcaption></figure>
+    <figure class="wd rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-looks.webp?v=1" alt="Four creator makeup looks shot against a sequin backdrop" width="1200" height="675" loading="lazy" decoding="async"><figcaption>New beauty <i>cores</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-about.webp?v=1" alt="About Makers Studio sign set into a red arch, looking toward the chrome sculpture" width="1400" height="1750" loading="lazy" decoding="async"><figcaption>Swing, skip or <i>pretty girl rock</i></figcaption></figure>
+    <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-entry-model.webp?v=1" alt="A guest posing in front of the Walmart Makers Studio sign" width="1800" height="1125" loading="lazy" decoding="async"><figcaption>Made for the <i>feed</i></figcaption></figure>
+  </div>
+</section>
+
+<section class="pg" aria-labelledby="pzGh">
+  <div class="pgh"><div><span class="cap">On the floor</span><h2 class="h2" id="pzGh" style="margin-top:calc(var(--u)*1)">The <i>It Girl</i> program</h2></div>
+    <div class="arw"><button type="button" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button><button type="button" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div></div>
+  <ul class="row" tabindex="0" aria-label="It Girl program activations, scroll sideways">
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-hair.webp?v=1" alt="It Girl Hair Show stage with a model on the runway" width="1300" height="1042" loading="lazy" decoding="async"><span class="n">01</span></div><div class="tx"><h3>It Girl Hair Show</h3><p>A modern-day hair show honoring the legacy of Black women&rsquo;s creative beauty aesthetic.</p></div></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lab.webp?v=1" alt="It Girl Beauty Lab, a pink branded booth with vanities" width="1300" height="865" loading="lazy" decoding="async"><span class="n">02</span></div><div class="tx"><h3>It Girl Beauty Lab</h3><p>A branded lab for experimenting with a look across Walmart&rsquo;s range of products.</p></div></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-stage.webp?v=1" alt="Soft Beat Showcase stage with a performer" width="1810" height="744" loading="lazy" decoding="async"><span class="n">03</span></div><div class="tx"><h3>Soft Beat Showcase</h3><p>Music&rsquo;s it girls on stage in their own signature glam.</p></div></li>
+    <li><div class="ph cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-display.webp?v=1" alt="Digital display wall of it girl UGC on oversized phone screens" width="1400" height="1081" loading="lazy" decoding="async"><span class="n">04</span></div><div class="tx"><h3>It Girl Digital Display</h3><p>It girl UGC on a custom display, with on-site photos featured live.</p></div></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-booth.webp?v=1" alt="Cell Phone Paparazzi photo booth with a red carpet" width="1000" height="959" loading="lazy" decoding="async"><span class="n">05</span></div><div class="tx"><h3>Cell Phone Paparazzi</h3><p>A red carpet photo booth that uploaded straight into the display.</p></div></li>
+  </ul>
+</section>
+
+<section class="mf" aria-labelledby="pzMh">
+  <span class="cap" id="pzMh">The manifesto</span>
+  <blockquote class="rv">The girls that get it, get &ldquo;it&rdquo; at Walmart.</blockquote>
+  <p class="b rv">The days when being an it girl meant &ldquo;wearing your worth&rdquo; are over. Real originality is taking something anyone can have and making it uniquely your own, like a six-dollar palette turned into a runway-worthy smoky eye. The place for every it girl.</p>
+</section>
+
+<section class="soc" aria-labelledby="pzDh">
+  <div class="soch rv"><span class="cap">The feed</span><h2 class="h2" id="pzDh">Beautycon <i>is back.</i></h2><p>The renewed messaging carried the comeback into the feed, with bold, color-blocked posts calling every beauty rebel back.</p></div>
+  <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-social-grid.webp?v=1" alt="A grid of Beautycon social posts in pink, lime, blue and red reading Beautycon is back, Beauty rebels and Calling all" width="1800" height="1012" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="shop" id="pzS" aria-labelledby="pzSh">
+  <div class="intro rv"><span class="cap">Shop the portfolio</span><h2 class="h2" id="pzSh" style="margin-top:calc(var(--u)*1)">The <i>Beautycon</i> menu</h2>
+    <p>Walmart curated a multi-tiered portfolio spanning mass-market favorites, trending indie cosmetics and premium skincare. Shop it live on the floor, or browse the trending edit on the Walmart Beautycon digital storefront.</p>
+    <a class="btn" href="https://www.walmart.com/browse/beauty/beautycon/1085666_3580425" target="_blank" rel="noopener">Shop the storefront <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></div>
+  <div class="menu rv"><h3>Cosmetics + indie</h3><ul>
+    <li><b>NYX Professional Makeup</b><span>Viral picks like the Duck Plump plumping lip glosses.</span></li>
+    <li><b>af94 by Halsey</b><span>A vivid, highly expressive color line for the beauty rebels.</span></li>
+    <li><b>The Lip Bar</b><span>Inclusive, high-performing, easy-to-use color.</span></li>
+    <li><b>Milani + CoverGirl</b><span>Accessible staples with clean palettes and pigment.</span></li>
+    <li><b>Vani Cosmetics + Hard Candy</b><span>Glow kits, high-shine finishes and setting sprays.</span></li>
+  </ul></div>
+  <div class="menu l rv"><h3>Skincare + essentials</h3><ul>
+    <li><b>La Roche-Posay</b><span>Dermatologist-tested lines, like Toleriane Double Repair Lotion and UV Air Serum.</span></li>
+    <li><b>Medicube</b><span>K-beauty innovation, from Zero Pore Pads to the PDRN Pink Collagen night mask.</span></li>
+    <li><b>4U by Tia</b><span>Clean, texture-focused hair care co-founded by Tia Mowry.</span></li>
+    <li><b>Hero Cosmetics + Peach Slices</b><span>Acne patches and brightening, targeted solutions.</span></li>
+  </ul></div>
+</section>
+
+<section class="pr" id="pzP" aria-labelledby="pzPh">
+  <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-vogue.webp?v=1" alt="Guests mingling under a Beautycon sign, the lead photo from the Vogue Business feature" width="854" height="1280" loading="lazy" decoding="async"></figure>
+  <div class="rv">
+    <div class="src"><span>Press</span><span>Vogue Business</span><span>Influencers</span></div>
+    <h3 id="pzPh">Reinventing Beautycon</h3>
+    <p class="d">&ldquo;They called it the Super Bowl of beauty. Now Beautycon, a high-profile festival that closed in 2021 amid financial turbulence, is making a comeback.&rdquo; Speaking exclusively to <i>Vogue Business</i>, Erika Bennett, CMO of new parent company Essence Ventures, explains how.</p>
+    <p class="by cap">By Kati Chitrakorn . June 23, 2023</p>
+    <a class="btn" href="https://www.vogue.com/article/reinventing-beautycon-the-super-bowl-of-beauty" target="_blank" rel="noopener">Read the feature <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+  </div>
+</section>
+
+<footer class="ft"><a class="btn" href="https://www.byninaaustin.com/content"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Back to Content</a></footer>
+</div>
+<script>
+(function(){
+  var R=document,pz=R.querySelector('.pz');if(!pz)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $$=function(s){return Array.prototype.slice.call(pz.querySelectorAll(s))};
+  var rv=$$('.rv');
+  if(reduce||!('IntersectionObserver' in window))rv.forEach(function(e){e.classList.add('on')});
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(e){io.observe(e)})}
+  $$('[data-go]').forEach(function(a){a.addEventListener('click',function(ev){var h=a.getAttribute('href')||'';if(h.charAt(0)!=='#')return;var t=h==='#top'?pz:(R.getElementById?R.getElementById(h.slice(1)):pz.querySelector(h));if(!t)return;ev.preventDefault();window.scrollTo({top:Math.max(0,t.getBoundingClientRect().top+(window.pageYOffset||0)),behavior:reduce?'auto':'smooth'})})});
+  /* hero photo settles in */
+  var hi=pz.querySelector('.hph img');if(hi&&!reduce)requestAnimationFrame(function(){hi.style.transform='scale(1)'});
+  var row=pz.querySelector('.row');
+  if(row){
+    $$('.arw button').forEach(function(b){b.addEventListener('click',function(){var li=row.querySelector('li');var w=li?li.getBoundingClientRect().width+24:300;row.scrollBy({left:w*(+b.getAttribute('data-dir')),behavior:reduce?'auto':'smooth'})})});
+    var down=false,sx=0,sl=0;
+    row.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=row.scrollLeft});
+    window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4)row.classList.add('drag');row.scrollLeft=sl-dx});
+    window.addEventListener('pointerup',function(){if(!down)return;down=false;row.classList.remove('drag')});
+    row.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){row.scrollBy({left:300,behavior:'smooth'});e.preventDefault()}if(e.key==='ArrowLeft'){row.scrollBy({left:-300,behavior:'smooth'});e.preventDefault()}});
+  }
+})();
+</script>
+</body></html>

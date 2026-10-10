@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Walmart x Beautycon: reintroducing the Super Bowl of beauty, with For Every It Girl as the creative ethos behind the experiential design, the shoppable digital experience and the renewed messaging.">
+<title>Nina Austin | Walmart x Beautycon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#EFEDE8}
+.jb{--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*4);--paper:#EFEDE8;--ink:#141214;--pink:#FF4FC4;--blush:#F8B7E4;--soft:#FFD3EF;--line:#F3A8DA;
+--se:"Instrument Serif","Iowan Old Style",Georgia,serif;--sa:"Instrument Sans","Helvetica Neue",Arial,sans-serif;--mo:"Courier Prime","Courier New",monospace;--sc:Pacifico,cursive;
+display:block;position:relative;overflow:hidden;overflow:clip;container-type:inline-size;background:var(--paper);color:var(--ink);font:400 calc(var(--u)*1.05)/1.55 var(--sa);-webkit-font-smoothing:antialiased;padding:calc(var(--u)*2.4) 0 calc(var(--u)*3)}
+@supports (width:1cqw){.jb{--u:clamp(11px,1.1111cqw,28px)}}
+.jb *,.jb *::before,.jb *::after{box-sizing:border-box}
+.jb img{display:block;max-width:100%;height:auto}
+.jb a{color:inherit;text-decoration:none}
+.jb h1,.jb h2,.jb h3,.jb p,.jb ul,.jb ol,.jb figure{margin:0;padding:0}
+.jb ul,.jb ol{list-style:none}
+.jb .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* panels: the framed "slides" */
+.jb .pn{position:relative;margin:0 var(--g) calc(var(--u)*2.4);border:3px solid var(--line);background:var(--paper);overflow:hidden;isolation:isolate}
+.jb .pn.glow::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(90% 70% at 50% 115%,var(--pink) 0%,rgba(255,79,196,.55) 30%,rgba(255,211,239,.4) 58%,transparent 80%)}
+.jb .pn.glowtop::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 85% 0%,rgba(255,79,196,.45),transparent 70%),radial-gradient(60% 60% at 0% 100%,rgba(255,79,196,.35),transparent 70%)}
+.jb .in{padding:calc(var(--u)*4) calc(var(--u)*4.4)}
+.jb .mo{font:700 max(10px,calc(var(--u)*.78))/1.2 var(--mo);letter-spacing:.02em}
+.jb .pill{display:inline-flex;align-items:center;gap:.6em;padding:.55em 1.1em;background:var(--ink);color:#fff;font:700 max(11px,calc(var(--u)*.82))/1 var(--mo);letter-spacing:.02em;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.jb .pill:hover{background:var(--pink);transform:translateY(-2px)}
+.jb .pill.lt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.jb .pill.lt:hover{background:var(--ink);color:#fff}
+.jb .h2{font:400 calc(var(--u)*3.6)/1.02 var(--se);letter-spacing:-.01em}
+.jb .h2 i{font-style:italic;color:var(--pink)}
+/* nav */
+.jb .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(var(--u)*1.6) calc(var(--u)*3) 0}
+.jb .nav ul{display:flex;gap:calc(var(--u)*2.2)}
+.jb .nav ul:last-child{justify-content:flex-end}
+.jb .nav a{font:400 max(10px,calc(var(--u)*.74))/1 var(--mo);text-transform:lowercase}
+.jb .nav a:hover{color:var(--pink)}
+.jb .logo{display:block;text-align:center;line-height:.85}
+.jb .logo small{display:block;font:700 max(9px,calc(var(--u)*.62))/1 var(--mo);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.35em}
+.jb .logo b{display:inline-block;font:400 calc(var(--u)*2.1)/1 var(--sc);color:var(--pink);-webkit-text-stroke:calc(var(--u)*.16) var(--ink);paint-order:stroke fill;text-shadow:calc(var(--u)*.14) calc(var(--u)*.16) 0 var(--ink);transform:rotate(-4deg)}
+/* hero */
+.jb .hero{text-align:center;padding-bottom:0}
+.jb .hero h1{max-width:calc(var(--u)*52);margin:calc(var(--u)*3.2) auto 0;font:400 calc(var(--u)*3.9)/1.04 var(--se);letter-spacing:-.012em;position:relative}
+.jb .hero h1 i{font-style:italic}
+.jb .spk{position:absolute;width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);color:var(--pink)}
+.jb .hrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:calc(var(--u)*3);margin-top:calc(var(--u)*2.8);padding:0 calc(var(--u)*4)}
+.jb .hrow .pill:first-child{justify-self:end}
+.jb .hrow .pill:last-child{justify-self:start}
+.jb .pol{width:calc(var(--u)*17);padding:calc(var(--u)*.55) calc(var(--u)*.55) calc(var(--u)*2.2);background:#fff;border:1px solid #ddd;box-shadow:0 calc(var(--u)*1) calc(var(--u)*2.4) rgba(20,18,20,.18);transform:rotate(-3deg);position:relative}
+.jb .pol img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.jb .pol .mo{position:absolute;left:0;right:0;bottom:calc(var(--u)*.6);text-align:center;font-weight:400}
+.jb .tk{margin-top:calc(var(--u)*3.4);background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:calc(var(--u)*.55) 0}
+.jb .tk div{display:inline-flex;gap:calc(var(--u)*3);animation:jbTk 38s linear infinite;padding-left:calc(var(--u)*3)}
+.jb .tk span{display:inline-flex;align-items:center;gap:calc(var(--u)*3);font:400 max(10px,calc(var(--u)*.74))/1 var(--mo)}
+.jb .tk span::after{content:'\2665';font-size:1.2em}
+@keyframes jbTk{to{transform:translateX(-50%)}}
+/* comeback */
+.jb .cb{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center}
+.jb .cb .k{display:inline-block;margin-bottom:calc(var(--u)*1.4)}
+.jb .cb p.b{margin-top:calc(var(--u)*1.6);max-width:calc(var(--u)*34)}
+.jb .cb p.b+p.b{margin-top:calc(var(--u)*1)}
+.jb .stack{position:relative;height:calc(var(--u)*30)}
+.jb .stack figure{position:absolute;background:#fff;padding:calc(var(--u)*.5);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(20,18,20,.16)}
+.jb .stack img{width:100%;height:100%;object-fit:cover}
+.jb .stack .s1{left:0;top:calc(var(--u)*2);width:62%;height:calc(var(--u)*21);transform:rotate(-2.5deg)}
+.jb .stack .s2{right:0;top:calc(var(--u)*8);width:50%;height:calc(var(--u)*21);transform:rotate(3deg)}
+.jb .stack figcaption{position:absolute;left:calc(var(--u)*.5);bottom:calc(var(--u)*-1.6);font:400 max(10px,calc(var(--u)*.72))/1 var(--mo)}
+.jb .heart{position:absolute;z-index:2;left:44%;top:0;width:calc(var(--u)*4.2);color:var(--pink);transform:rotate(-12deg)}
+/* ethos */
+.jb .eth{text-align:center}
+.jb .eth .h2{max-width:calc(var(--u)*46);margin:calc(var(--u)*1) auto 0}
+.jb .eth .lede{max-width:calc(var(--u)*40);margin:calc(var(--u)*1.4) auto 0}
+.jb .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*3.4);text-align:left}
+.jb .three li{position:relative;padding:calc(var(--u)*1.8) calc(var(--u)*1.6) calc(var(--u)*2);background:rgba(255,255,255,.72);border:1.5px solid var(--ink);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--ink);transition:transform .25s,box-shadow .25s}
+.jb .three li:hover{transform:translate(-3px,-3px);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--pink)}
+.jb .three b{display:block;font:400 calc(var(--u)*2)/1.05 var(--se);margin:calc(var(--u)*.8) 0 calc(var(--u)*.6)}
+.jb .three p{font-size:calc(var(--u)*.95)}
+/* portfolio row */
+.jb .row{display:flex;gap:calc(var(--u)*1.4);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 calc(var(--u)*4.4);padding:0 calc(var(--u)*4.4) calc(var(--u)*.4);scrollbar-width:none;cursor:grab}
+.jb .row::-webkit-scrollbar{display:none}
+.jb .row.drag{cursor:grabbing;scroll-snap-type:none}
+.jb .row li{flex:0 0 calc(var(--u)*20);scroll-snap-align:start;min-width:0}
+.jb .row .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#111}
+.jb .row .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.jb .row li:hover .ph img{transform:scale(1.05)}
+.jb .row .ph.ct img{object-fit:contain;padding:calc(var(--u)*1)}
+.jb .row .ph.ct{background:linear-gradient(180deg,#fff,var(--soft))}
+.jb .row .tg{position:absolute;left:calc(var(--u)*.8);top:calc(var(--u)*.8);padding:.35em .6em;background:#fff;font:700 max(9px,calc(var(--u)*.66))/1 var(--mo)}
+.jb .row h3{margin-top:calc(var(--u)*.9);font:400 calc(var(--u)*1.55)/1.1 var(--se)}
+.jb .row p{margin-top:calc(var(--u)*.4);font-size:calc(var(--u)*.88);color:#4a454a}
+.jb .rhead{display:flex;align-items:center;gap:calc(var(--u)*1.4);padding:calc(var(--u)*2.4) calc(var(--u)*4.4) calc(var(--u)*1.8)}
+.jb .rhead .h2{font-size:calc(var(--u)*2.4)}
+.jb .rhead .h2 span{font-style:normal;color:var(--ink)}
+.jb .arw{display:flex;gap:calc(var(--u)*.6);margin-left:auto}
+.jb .arw button{width:calc(var(--u)*2.8);height:calc(var(--u)*2.8);border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s}
+.jb .arw button:hover{background:var(--ink);color:#fff}
+.jb .arw svg,.jb .pill svg{width:1.1em;height:1.1em}
+.jb .rnote{padding:calc(var(--u)*1.6) calc(var(--u)*4.4) calc(var(--u)*3)}
+/* quote / manifesto */
+.jb .qt{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:calc(var(--u)*3);align-items:center}
+.jb .dood{width:100%;max-width:calc(var(--u)*24);justify-self:center;color:var(--ink)}
+.jb .dood .sw{transform-origin:50% 8%;animation:jbSwing 4.5s ease-in-out infinite}
+@keyframes jbSwing{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.jb .qt blockquote{margin:0;font:400 calc(var(--u)*3.2)/1.04 var(--se);text-indent:-.4em}
+.jb .qt .b{margin-top:calc(var(--u)*1.4);max-width:calc(var(--u)*36);font-size:calc(var(--u)*.95)}
+.jb .qt .b+.b{margin-top:calc(var(--u)*.8)}
+.jb .qt .act{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*1.8)}
+.jb .squig{width:calc(var(--u)*4);color:var(--ink)}
+/* live gallery */
+.jb .gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:calc(var(--u)*4.6);gap:calc(var(--u)*1.2)}
+.jb .gal figure{position:relative;overflow:hidden;background:#ddd}
+.jb .gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.jb .gal figure:hover img{transform:scale(1.04)}
+.jb .gal figcaption{position:absolute;left:calc(var(--u)*.7);bottom:calc(var(--u)*.7);right:calc(var(--u)*.7);padding:.4em .6em;background:rgba(255,255,255,.92);font:400 max(9px,calc(var(--u)*.68))/1.3 var(--mo)}
+.jb .g1{grid-column:1/6;grid-row:span 9}.jb .g2{grid-column:6/13;grid-row:span 4}.jb .g3{grid-column:6/9;grid-row:span 5}.jb .g4{grid-column:9/13;grid-row:span 5}
+.jb .g5{grid-column:1/5;grid-row:span 6}.jb .g6{grid-column:5/13;grid-row:span 6}.jb .g7{grid-column:1/8;grid-row:span 5}.jb .g8{grid-column:8/13;grid-row:span 5}
+.jb .gh{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*2);margin-bottom:calc(var(--u)*2.2)}
+.jb .gh>div:first-child{flex:0 0 auto}
+.jb .gtx{max-width:calc(var(--u)*40);columns:2;column-gap:calc(var(--u)*2);font-size:calc(var(--u)*.92)}
+.jb .gtx p{break-inside:avoid;margin-bottom:calc(var(--u)*.9)}
+.jb .soc{border:1.5px solid var(--ink);overflow:hidden}
+.jb .soc img{width:100%}
+/* shop */
+.jb .shop{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*3)}
+.jb .shop .intro p{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*.95)}
+.jb .shop .intro .pill{margin-top:calc(var(--u)*1.8)}
+.jb .shop h3{padding-bottom:calc(var(--u)*.7);margin-bottom:calc(var(--u)*.4);border-bottom:1.5px solid var(--ink);font:700 max(10px,calc(var(--u)*.8))/1.2 var(--mo)}
+.jb .shop li{display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*.8);padding:calc(var(--u)*.85) 0;border-bottom:1px dashed rgba(20,18,20,.25)}
+.jb .shop li::before{content:'\2665';color:var(--pink);font-size:calc(var(--u)*.9);line-height:1.6}
+.jb .shop li b{display:block;font:400 calc(var(--u)*1.3)/1.15 var(--se)}
+.jb .shop li span{display:block;font-size:calc(var(--u)*.86);color:#4a454a}
+/* press */
+.jb .pr{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center}
+.jb .pr .pol{width:100%;max-width:calc(var(--u)*22);justify-self:center;transform:rotate(2.5deg)}
+.jb .pr .pol img{aspect-ratio:2/3}
+.jb .pr .src{display:flex;gap:calc(var(--u)*1);align-items:center;flex-wrap:wrap}
+.jb .pr .src span{padding:.35em .6em;box-shadow:inset 0 0 0 1.5px var(--ink);font:700 max(9px,calc(var(--u)*.7))/1 var(--mo)}
+.jb .pr h3{margin-top:calc(var(--u)*1.3);font:400 calc(var(--u)*4)/1 var(--se)}
+.jb .pr p.d{margin-top:calc(var(--u)*1.2);max-width:calc(var(--u)*36);font:400 calc(var(--u)*1.4)/1.4 var(--se)}
+.jb .pr p.d i{font-style:italic}
+.jb .pr .by{margin-top:calc(var(--u)*1.2)}
+.jb .pr .pill{margin-top:calc(var(--u)*1.8)}
+/* footer */
+.jb .ft{display:flex;justify-content:center;padding:calc(var(--u)*1) var(--g) 0}
+/* reveal */
+.jb .rv{opacity:0;transform:translateY(calc(var(--u)*1.6));transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.jb .rv.on{opacity:1;transform:none}
+@media(max-width:1000px){
+.jb{--u:16px;--g:1rem;font-size:1rem;padding-top:1rem}
+.jb .in{padding:2.4rem 1.25rem}
+.jb .nav{grid-template-columns:1fr;justify-items:center;gap:1rem;padding:1.2rem 1rem 0}
+.jb .nav ul{gap:1.1rem;flex-wrap:wrap;justify-content:center}
+.jb .nav ul:last-child{justify-content:center}
+.jb .nav ul:first-child{order:2}.jb .nav ul:last-child{order:3}
+.jb .logo b{font-size:2.1rem}
+.jb .hero h1{font-size:min(2.6rem,10.4cqw);margin-top:1.6rem;padding:0 .4rem}
+.jb .hrow{grid-template-columns:1fr 1fr;gap:1rem 1rem;padding:0 1rem}
+.jb .hrow .pol{grid-column:1/-1;grid-row:1;justify-self:center;width:min(15rem,62cqw)}
+.jb .hrow .pill:first-child,.jb .hrow .pill:last-child{justify-self:center}
+.jb .h2{font-size:2.5rem}
+.jb .cb,.jb .qt,.jb .pr{grid-template-columns:1fr;gap:2.4rem}
+.jb .stack{height:23rem}
+.jb .stack .s1{height:15rem}.jb .stack .s2{height:15rem;top:6.4rem}
+.jb .three{grid-template-columns:1fr;gap:1.2rem}
+.jb .row{scroll-padding:0 1.25rem;padding:0 1.25rem .4rem}
+.jb .row li{flex-basis:min(70%,17rem)}
+.jb .rhead{padding:2rem 1.25rem 1.2rem;flex-wrap:wrap}
+.jb .rhead .h2{font-size:1.9rem}
+.jb .arw{display:none}
+.jb .rnote{padding:1.2rem 1.25rem 2.2rem}
+.jb .qt blockquote{font-size:2.3rem}
+.jb .dood{max-width:14rem}
+.jb .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto}
+.jb .gal figure{grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/5}
+.jb .gal .g1,.jb .gal .g2,.jb .gal .g6,.jb .gal .g7{grid-column:1/-1!important;aspect-ratio:16/10}
+.jb .gh{flex-direction:column;align-items:flex-start}
+.jb .gtx{columns:1}
+.jb .shop{grid-template-columns:1fr;gap:2.2rem}
+.jb .pr h3{font-size:2.7rem}
+.jb .pr .pol{max-width:15rem}
+}
+@media(prefers-reduced-motion:reduce){
+.jb .tk div,.jb .dood .sw{animation:none}
+.jb .rv{opacity:1;transform:none;transition:none}
+.jb .row .ph img,.jb .gal img,.jb .three li,.jb .pill{transition:none}
+}
+</style></head><body>
+<div class="jb" id="top">
+
+<section class="pn glow hero" aria-labelledby="jbH">
+  <header class="nav">
+    <ul><li><a href="#jbC" data-go>the comeback</a></li><li><a href="#jbE" data-go>the ethos</a></li><li><a href="#jbF" data-go>on the floor</a></li></ul>
+    <a class="logo" href="#top" data-go aria-label="Walmart x Beautycon, back to top"><small>Walmart x</small><b>Beautycon</b></a>
+    <ul><li><a href="#jbL" data-go>live from LA</a></li><li><a href="#jbS" data-go>shop</a></li><li><a href="#jbP" data-go>press</a></li></ul>
+  </header>
+  <h1 id="jbH">reintroducing the <i>Super Bowl of beauty</i>, for every it girl
+    <svg class="spk" style="left:-2%;top:6%" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>
+    <svg class="spk" style="right:2%;top:-8%;color:#141214" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.4L21 9.3l-5 4.4 1.5 6.8L12 17l-5.5 3.5L8 13.7 3 9.3l6.4-.9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    <svg class="spk" style="right:-1%;bottom:4%" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z" fill="currentColor"/></svg>
+  </h1>
+  <div class="hrow">
+    <a class="pill" href="#jbF" data-go>on the floor</a>
+    <figure class="pol"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-green.webp?v=1" alt="A guest in a green dress posing beside the chrome balloon sculpture at the Walmart space at Beautycon LA" width="1000" height="1600" fetchpriority="high"><p class="mo">beautycon LA, 2023</p></figure>
+    <a class="pill" href="#jbS" data-go>shop the portfolio</a>
+  </div>
+  <div class="tk" aria-hidden="true"><div><span>walmart x beautycon</span><span>for every it girl</span><span>the exclusive retail destination</span><span>content, community, commerce</span><span>walmart x beautycon</span><span>for every it girl</span><span>the exclusive retail destination</span><span>content, community, commerce</span></div></div>
+</section>
+
+<section class="pn glowtop" id="jbC" aria-labelledby="jbCh"><div class="in cb">
+  <div class="rv">
+    <span class="pill k">01 . the comeback</span>
+    <h2 class="h2" id="jbCh">They called it the <i>Super Bowl</i> of beauty.</h2>
+    <p class="b">Beautycon, the high-profile festival that closed in 2021 amid financial turbulence, made a comeback. Reimagined under Essence Ventures, the new Beautycon was built on merging content, community and commerce.</p>
+    <p class="b">Walmart partnered as the exclusive retail destination, amplifying diverse, rising creators and the unique beauty styles they bring to the floor.</p>
+  </div>
+  <div class="stack rv" aria-hidden="true">
+    <svg class="heart" viewBox="0 0 48 44"><path d="M24 42S2 28.6 2 14.2A11.4 11.4 0 0 1 24 8.6a11.4 11.4 0 0 1 22 5.6C46 28.6 24 42 24 42z" fill="currentColor" stroke="#141214" stroke-width="2.4"/></svg>
+    <figure class="s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-entrance.webp?v=1" alt="" width="1600" height="1000" loading="lazy" decoding="async"><figcaption>the entrance</figcaption></figure>
+    <figure class="s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-arch-tall.webp?v=1" alt="" width="1200" height="1800" loading="lazy" decoding="async"><figcaption>the arch</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="pn glow" id="jbE" aria-labelledby="jbEh"><div class="in eth">
+  <span class="pill">02 . the ethos</span>
+  <h2 class="h2 rv" id="jbEh"><i>For Every It Girl</i> anchored the event&rsquo;s resurrection.</h2>
+  <p class="lede rv">One creative ethos guided every touchpoint, from the floor plan to the storefront to the words on the walls. Beautycon&rsquo;s bold, rebellious and inclusive identity reimagined traditional beauty standards for Gen Z and millennial audiences, and the It Girl gave Walmart its way in.</p>
+  <ol class="three">
+    <li class="rv"><span class="mo">01</span><b>Experiential design</b><p>A modern beauty playspace where it girls could try everything, build their look and get seen doing it.</p></li>
+    <li class="rv"><span class="mo">02</span><b>Shoppable digital experience</b><p>The Walmart Beautycon digital storefront put the full brand portfolio a tap away, live on the floor and online.</p></li>
+    <li class="rv"><span class="mo">03</span><b>Renewed messaging</b><p>A manifesto that retired &ldquo;wearing your worth&rdquo; and put originality, value and every it girl at the center.</p></li>
+  </ol>
+</div></section>
+
+<section class="pn" id="jbF" aria-labelledby="jbFh">
+  <div class="rhead">
+    <h2 class="h2" id="jbFh"><span>On the floor</span> . <i>the it girl program</i></h2>
+    <div class="arw"><button type="button" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button><button type="button" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div>
+  </div>
+  <ul class="row" tabindex="0" aria-label="Activations, scroll sideways">
+    <li><div class="ph ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-hair.webp?v=1" alt="It Girl Hair Show stage with a model on the runway between For Every It Girl and Black and Unlimited banners" width="1300" height="1042" loading="lazy" decoding="async"><span class="tg">live on stage</span></div><h3>It Girl Hair Show</h3><p>A modern-day hair show honoring the legacy of Black women&rsquo;s creative beauty aesthetic.</p></li>
+    <li><div class="ph ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lab.webp?v=1" alt="It Girl Beauty Lab, a pink branded booth with vanities and product walls" width="1300" height="865" loading="lazy" decoding="async"><span class="tg">try everything</span></div><h3>It Girl Beauty Lab</h3><p>A branded lab for experimenting with a look across Walmart&rsquo;s range of products.</p></li>
+    <li><div class="ph ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-stage.webp?v=1" alt="Soft Beat Showcase stage with a performer and It Girl banners" width="1810" height="744" loading="lazy" decoding="async"><span class="tg">stage glam</span></div><h3>Soft Beat Showcase</h3><p>Music&rsquo;s it girls on stage in their own signature glam.</p></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-display.webp?v=1" alt="Digital display wall of it girl UGC on oversized phone screens" width="1400" height="1081" loading="lazy" decoding="async"><span class="tg">interactive</span></div><h3>It Girl Digital Display</h3><p>It girl UGC on a custom display, with on-site photos featured live.</p></li>
+    <li><div class="ph ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-booth.webp?v=1" alt="Cell Phone Paparazzi photo booth with a red carpet" width="1000" height="959" loading="lazy" decoding="async"><span class="tg">red carpet</span></div><h3>Cell Phone Paparazzi</h3><p>A red carpet photo booth that uploaded straight into the display.</p></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-ar-try.webp?v=1" alt="A guest trying on a look at an AR vanity framed in chrome" width="1800" height="1125" loading="lazy" decoding="async"><span class="tg">AR vanities</span></div><h3>Explore Your Core</h3><p>AR-enhanced vanities, designed by beauty creators, for trying Cottagecore and Mermaidcore.</p></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-combo-bar.webp?v=1" alt="Clear trays of hair accessories on a numbered build-your-combo counter" width="1067" height="1600" loading="lazy" decoding="async"><span class="tg">build it</span></div><h3>Iconic Beauty Combo</h3><p>Personalized product combinations, built by hand at the counter.</p></li>
+    <li><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-studio.webp?v=1" alt="A guest posing in the photo studio as a photographer shoots" width="1125" height="1800" loading="lazy" decoding="async"><span class="tg">strike a pose</span></div><h3>The Posing Studio</h3><p>A dedicated photo studio where creator David Suh helped guests refine their posing.</p></li>
+  </ul>
+  <p class="rnote mo">drag, swipe or use the arrows</p>
+</section>
+
+<section class="pn glow" aria-labelledby="jbMh"><div class="in qt">
+  <svg class="dood" viewBox="0 0 240 230" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <g transform="rotate(-24 120 50)"><rect x="40" y="36" width="160" height="26" rx="13" fill="#fff"/><path d="M70 36v26M100 36v26M130 36v26M160 36v26" stroke-width="2"/><path d="M200 49h18l6-6v12l-6-6" fill="#141214"/></g>
+    <g class="sw">
+      <circle cx="74" cy="92" r="10"/><path d="M74 102v16"/><path d="M74 158s-26-15-26-32a13 13 0 0 1 26-6 13 13 0 0 1 26 6c0 17-26 32-26 32z" fill="#FF4FC4"/>
+      <circle cx="120" cy="84" r="10"/><path d="M120 94v22"/><circle cx="120" cy="136" r="20" fill="#141214"/><circle cx="120" cy="132" r="8" fill="#fff" stroke="none"/><text x="120" y="137" text-anchor="middle" font-family="Courier Prime,monospace" font-size="12" font-weight="700" fill="#141214" stroke="none">8</text>
+      <circle cx="166" cy="92" r="10"/><path d="M166 102v14"/><path d="M166 116l6 13 14 2-10 10 3 14-13-7-13 7 3-14-10-10 14-2z" fill="#fff"/>
+      <circle cx="98" cy="96" r="7"/><path d="M98 103v40"/><path d="M90 150q8-10 16 0q-8 10-16 0z" fill="#FFD3EF"/><path d="M88 160h20v26a10 10 0 0 1-20 0z" fill="#fff"/>
+    </g>
+    <path d="M22 40l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#141214"/><path d="M212 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#141214"/><path d="M30 190l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#141214"/>
+  </svg>
+  <div class="rv">
+    <span class="pill lt">03 . the manifesto</span>
+    <blockquote style="margin-top:calc(var(--u)*1.4)">&ldquo;The girls that get it, get &lsquo;it&rsquo; at Walmart.&rdquo;</blockquote>
+    <p class="b">The days when being an it girl meant &ldquo;wearing your worth&rdquo; are over. Today&rsquo;s it girl knows exclusivity is the least original way to stand out. Real originality is taking something anyone can have and making it uniquely your own, like a six-dollar palette turned into a runway-worthy smoky eye.</p>
+    <p class="b">Walmart&rsquo;s beauty aisles have always been where she turns for a foundation in her shade or self-care that doesn&rsquo;t cost all her coin. The place for every it girl.</p>
+    <div class="act"><a class="pill" href="#jbF" data-go>see the program</a><svg class="squig" viewBox="0 0 60 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M58 4C46 2 40 14 30 18S10 20 4 26M4 26l2-9M4 26l9-1"/></svg></div>
+  </div>
+</div></section>
+
+<section class="pn" id="jbL" aria-labelledby="jbLh"><div class="in">
+  <div class="gh rv"><div><span class="pill lt">04 . live from LA</span><h2 class="h2" id="jbLh" style="margin-top:calc(var(--u)*1.2)">Welcome to <i>The Slayground</i>.</h2><p class="mo" style="margin-top:calc(var(--u)*1.2)">Walmart Makers Studio . Beautycon LA 2023</p></div>
+    <div class="gtx"><p>Welcome to Walmart&rsquo;s haven of beauty exploration, where attendees played with new beauty trends, new products and new friends, no pressure. Familiar beauty spaces and scenes, from your at-home vanity to getting ready with friends for a night out, were reimagined into a contemporary beauty play space.</p>
+    <p>From experimenting with new beauty cores to boosting content capture confidence with posing coaches, Makers Studio at Beautycon LA offered the ultimate journey to re-upping that it girl energy and confidence.</p>
+    <p>Walmart Makers Studio is a multi-seasonal experiential campaign giving emerging Gen Z creators creative resources and chances to collaborate. Its third edition showcased Walmart&rsquo;s beauty offerings across a series of interactive moments. Attendees curated personalized product combinations, tried Cottagecore and Mermaidcore at AR-enhanced vanities designed by beauty creators, and worked with creator David Suh on their posing in a dedicated photo studio.</p></div></div>
+  <div class="gal">
+    <figure class="g1 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-smile.webp?v=1" alt="A guest in sunglasses smiling in front of the chrome sculpture" width="1067" height="1600" loading="lazy" decoding="async"><figcaption>chrome, but make it a backdrop</figcaption></figure>
+    <figure class="g2 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lounge.webp?v=1" alt="Lounge with chrome stools, wire chairs and the Makers Studio sign; wide view of the space with sweeping red arches and a Makers Studio badge" width="1800" height="1012" loading="lazy" decoding="async"><figcaption>the floor</figcaption></figure>
+    <figure class="g3 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-luna.webp?v=1" alt="Luna Magic creator display with an eyeshadow palette" width="1280" height="1600" loading="lazy" decoding="async"><figcaption>creator spotlights</figcaption></figure>
+    <figure class="g4 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lips.webp?v=1" alt="Two guests posing with lip props at the counter" width="1800" height="1125" loading="lazy" decoding="async"><figcaption>try everything</figcaption></figure>
+    <figure class="g5 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-ar-screen.webp?v=1" alt="Chrome-framed AR screen on a vanity with product trays" width="1067" height="1600" loading="lazy" decoding="async"><figcaption>AR vanity</figcaption></figure>
+    <figure class="g6 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-looks.webp?v=1" alt="Four creator makeup looks shot against a sequin backdrop" width="1200" height="675" loading="lazy" decoding="async"><figcaption>looks from the studio</figcaption></figure>
+    <figure class="g7 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-vanities.webp?v=1" alt="Guests at a row of vanities under an Explore your core sign" width="1600" height="900" loading="lazy" decoding="async"><figcaption>explore your core</figcaption></figure>
+    <figure class="g8 rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-entry-model.webp?v=1" alt="A guest posing in front of the Walmart Makers Studio sign" width="1800" height="1125" loading="lazy" decoding="async"><figcaption>made for the feed</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="pn glowtop" aria-labelledby="jbDh"><div class="in">
+  <div class="gh rv"><div><span class="pill lt">05 . the feed</span><h2 class="h2" id="jbDh" style="margin-top:calc(var(--u)*1.2)">Beautycon <i>is back</i>.</h2></div><p>The renewed messaging carried the comeback into the feed: bold, rebellious, color-blocked posts calling every beauty rebel back to Beautycon.</p></div>
+  <figure class="soc rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-social-grid.webp?v=1" alt="A grid of Beautycon social posts in pink, lime, blue and red reading Beautycon is back, Beauty rebels and Calling all" width="1800" height="1012" loading="lazy" decoding="async"></figure>
+</div></section>
+
+<section class="pn glowtop" id="jbS" aria-labelledby="jbSh"><div class="in shop">
+  <div class="intro rv">
+    <span class="pill lt">06 . shop the portfolio</span>
+    <h2 class="h2" id="jbSh" style="margin-top:calc(var(--u)*1.2)">The <i>Beautycon</i> portfolio.</h2>
+    <p>Walmart curated a multi-tiered portfolio spanning mass-market favorites, trending indie cosmetics and premium skincare. Shop it live on the floor, or browse the trending edit on the Walmart Beautycon digital storefront.</p>
+    <a class="pill" href="https://www.walmart.com/browse/beauty/beautycon/1085666_3580425" target="_blank" rel="noopener">shop the storefront <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+  </div>
+  <div class="rv"><h3>trending cosmetics + indie beauty</h3><ul>
+    <li><div><b>NYX Professional Makeup</b><span>Viral picks like the Duck Plump plumping lip glosses.</span></div></li>
+    <li><div><b>af94 by Halsey</b><span>A vivid, highly expressive color line for the beauty rebels.</span></div></li>
+    <li><div><b>The Lip Bar</b><span>Inclusive, high-performing, easy-to-use color.</span></div></li>
+    <li><div><b>Milani + CoverGirl</b><span>Accessible staples with clean palettes and pigment.</span></div></li>
+    <li><div><b>Vani Cosmetics + Hard Candy</b><span>Glow kits, high-shine finishes and setting sprays.</span></div></li>
+  </ul></div>
+  <div class="rv"><h3>skincare + multi-tier essentials</h3><ul>
+    <li><div><b>La Roche-Posay</b><span>Dermatologist-tested lines, like Toleriane Double Repair Lotion and UV Air Serum.</span></div></li>
+    <li><div><b>Medicube</b><span>K-beauty innovation, from Zero Pore Pads to the PDRN Pink Collagen night mask.</span></div></li>
+    <li><div><b>4U by Tia</b><span>Clean, texture-focused hair care co-founded by Tia Mowry.</span></div></li>
+    <li><div><b>Hero Cosmetics + Peach Slices</b><span>Acne patches and brightening, targeted solutions.</span></div></li>
+  </ul></div>
+</div></section>
+
+<section class="pn glow" id="jbP" aria-labelledby="jbPh"><div class="in pr">
+  <figure class="pol rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-vogue.webp?v=1" alt="Guests mingling under a Beautycon sign, the lead photo from the Vogue Business feature" width="854" height="1280" loading="lazy" decoding="async"><p class="mo">as seen in vogue business</p></figure>
+  <div class="rv">
+    <div class="src"><span>07 . press</span><span>vogue business</span><span>influencers</span></div>
+    <h3 id="jbPh">Reinventing Beautycon</h3>
+    <p class="d">&ldquo;They called it the Super Bowl of beauty. Now Beautycon, a high-profile festival that closed in 2021 amid financial turbulence, is making a comeback.&rdquo; Speaking exclusively to <i>Vogue Business</i>, Erika Bennett, CMO of new parent company Essence Ventures, explains how.</p>
+    <p class="by mo">by Kati Chitrakorn . June 23, 2023</p>
+    <a class="pill" href="https://www.vogue.com/article/reinventing-beautycon-the-super-bowl-of-beauty" target="_blank" rel="noopener">read the feature <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+  </div>
+</div></section>
+
+<footer class="ft"><a class="pill" href="https://www.byninaaustin.com/content"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>back to content</a></footer>
+</div>
+<script>
+(function(){
+  var R=document,jb=R.querySelector('.jb');if(!jb)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $$=function(s){return Array.prototype.slice.call(jb.querySelectorAll(s))};
+  /* reveal */
+  var rv=$$('.rv');
+  if(reduce||!('IntersectionObserver' in window))rv.forEach(function(e){e.classList.add('on')});
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(e){io.observe(e)})}
+  /* anchors */
+  $$('[data-go]').forEach(function(a){a.addEventListener('click',function(ev){var h=a.getAttribute('href')||'';if(h.charAt(0)!=='#')return;var t=h==='#top'?jb:R.getElementById?R.getElementById(h.slice(1)):jb.querySelector(h);if(!t)return;ev.preventDefault();window.scrollTo({top:Math.max(0,t.getBoundingClientRect().top+(window.pageYOffset||0)-16),behavior:reduce?'auto':'smooth'})})});
+  /* activation row: arrows + drag */
+  var row=jb.querySelector('.row');
+  if(row){
+    $$('.arw button').forEach(function(b){b.addEventListener('click',function(){var li=row.querySelector('li');var w=li?li.getBoundingClientRect().width+20:300;row.scrollBy({left:w*(+b.getAttribute('data-dir')),behavior:reduce?'auto':'smooth'})})});
+    var down=false,sx=0,sl=0,moved=false;
+    row.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=row.scrollLeft});
+    window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4){moved=true;row.classList.add('drag')}row.scrollLeft=sl-dx});
+    window.addEventListener('pointerup',function(){if(!down)return;down=false;row.classList.remove('drag')});
+    row.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){row.scrollBy({left:300,behavior:'smooth'});e.preventDefault()}if(e.key==='ArrowLeft'){row.scrollBy({left:-300,behavior:'smooth'});e.preventDefault()}});
+  }
+})();
+</script>
+</body></html>
