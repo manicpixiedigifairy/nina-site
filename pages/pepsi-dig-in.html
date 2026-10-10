@@ -26,7 +26,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .x.c{color:var(--cream);--ink:#000}
 /* frame */
 .rr .fr{margin:calc(var(--u)*1) calc(var(--u)*1);border:1px solid var(--ink);background:var(--cream)}
-.rr .nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;align-items:center;border-bottom:1px solid var(--ink)}
+.rr .nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;align-items:center;border-bottom:1px solid var(--ink)}
 .rr .nav a{display:block;padding:calc(var(--u)*1.35) calc(var(--u)*2);font-family:var(--bd);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:max(9px,calc(var(--u)*.85));line-height:1.2;transition:background .3s,color .3s}
 .rr .nav a:hover{background:var(--ink);color:var(--cream)}
 .rr .nav .bk{display:flex;align-items:center;gap:calc(var(--u)*.9);border-left:1px solid var(--ink)}
@@ -130,6 +130,62 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .tl .wd p{max-width:calc(var(--u)*46);font-size:calc(var(--u)*1.25)}
 .rr .tl .wd .q{flex:none;width:40%;display:flex;align-items:center;justify-content:center;background:var(--black) url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-pattern.webp?v=1) center/cover;border-left:1px solid var(--ink);padding:calc(var(--u)*2)}
 .rr .tl .wd .q span{display:block;background:var(--cream);color:var(--ink);padding:calc(var(--u)*1.2) calc(var(--u)*1.6);border:1px solid var(--ink);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--blue);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.7);line-height:1.1;text-align:center}
+/* experience */
+.rr .ex{background:var(--paper)}
+.rr .exl{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*2.4);margin-bottom:calc(var(--u)*3)}
+.rr .dp{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto auto;border:1px solid var(--ink);background:var(--cream)}
+.rr .dp>article{display:grid;grid-template-rows:subgrid;grid-row:span 4;border-right:1px solid var(--ink);min-width:0}
+.rr .dp>article:last-child{border-right:0}
+.rr .dp .hd{padding:calc(var(--u)*1.6) calc(var(--u)*1.8);border-bottom:1px solid var(--ink);background:var(--cream)}
+.rr .dp .hd h3{color:var(--ink);font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.7);line-height:1.05;letter-spacing:-.01em}
+.rr .dp .hd span{display:block;margin-top:calc(var(--u)*.6);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:max(9px,calc(var(--u)*.8));color:var(--blue)}
+.rr .dp .c{padding:calc(var(--u)*1.5) calc(var(--u)*1.8) calc(var(--u)*1.8);font-size:calc(var(--u)*1.08);line-height:1.5;border-bottom:1px solid var(--ink)}
+.rr .dp .c:last-child{border-bottom:0}
+.rr .dp .c::before{content:attr(data-l);display:block;margin-bottom:calc(var(--u)*.8);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:max(9px,calc(var(--u)*.78))}
+.rr .dp .on{background:var(--blue);color:#fff}
+.rr .dp .on::before{color:var(--gold)}
+.rr .dp .br{background:var(--gold);color:var(--ink)}
+.rr .dp .rw{background:var(--black);color:var(--cream)}
+.rr .dp .rw::before{color:var(--gold)}
+.rr .art{grid-column:1/13;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*5);align-items:stretch}
+.rr .art .ph3{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-rows:1fr 1fr;gap:calc(var(--u)*1)}
+.rr .art .ph3 figure{position:relative;overflow:hidden;border:1px solid var(--ink);background:#bbb;min-height:calc(var(--u)*14)}
+.rr .art .ph3 figure:first-child{grid-row:1/3}
+.rr .art .ph3 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .art .tx h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*2.6);line-height:1.02;letter-spacing:-.01em}
+.rr .art .tx ul{margin-top:calc(var(--u)*1.6);border-top:1px solid var(--ink)}
+.rr .art .tx li{padding:calc(var(--u)*1.2) 0;border-bottom:1px solid var(--ink);font-size:calc(var(--u)*1.15);line-height:1.5}
+.rr .art .tx li b{display:block;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.05);letter-spacing:.02em;margin-bottom:calc(var(--u)*.25);color:var(--blue)}
+.rr .sw{grid-column:1/13;margin-top:calc(var(--u)*3);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid var(--ink);background:var(--black);color:var(--cream)}
+.rr .sw>div{padding:calc(var(--u)*2.4) calc(var(--u)*2.6)}
+.rr .sw>div+div{border-left:1px solid var(--cream)}
+.rr .sw h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*1.9);line-height:1.05;letter-spacing:-.01em}
+.rr .sw .lb{color:var(--gold);display:block;margin-bottom:calc(var(--u)*.9)}
+.rr .sw p,.rr .sw li{font-size:calc(var(--u)*1.1);line-height:1.55;margin-top:calc(var(--u)*.8)}
+.rr .sw li{padding-left:calc(var(--u)*1.4);position:relative}
+.rr .sw li::before{content:"";position:absolute;left:0;top:calc(var(--u)*.78);width:calc(var(--u)*.6);height:calc(var(--u)*.6);background:var(--gold)}
+/* chef moments */
+.rr .cr.ch{background:var(--blue) url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-doodle-mir.webp?v=1) center top/calc(var(--u)*175) auto repeat}
+.rr .ch .blk{grid-column:1/13;margin-top:calc(var(--u)*4)}
+.rr .ch .blk:first-of-type{margin-top:0}
+.rr .ch .bh{display:flex;align-items:baseline;justify-content:space-between;gap:calc(var(--u)*2);flex-wrap:wrap;margin-bottom:calc(var(--u)*1.6);padding-bottom:calc(var(--u)*1);border-bottom:1px solid #fff}
+.rr .ch .bh h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:calc(var(--u)*2.2);line-height:1;letter-spacing:-.01em;color:#fff}
+.rr .ch .bh span{font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:max(9px,calc(var(--u)*.85));color:var(--gold)}
+.rr .ch .cap{margin-top:calc(var(--u)*1.6);font-size:calc(var(--u)*1.2);line-height:1.55;max-width:calc(var(--u)*56);color:#fff;background:var(--blue);border:1px solid #000;padding:calc(var(--u)*1.1) calc(var(--u)*1.5);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 #000}
+.rr .ch>.gr>.bdy{background:var(--blue);border:1px solid #000;padding:calc(var(--u)*1.3) calc(var(--u)*1.6);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 #000}
+.rr .ph9{display:grid;gap:calc(var(--u)*1.2)}
+.rr .ph9.s6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.rr .ph9.s4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rr .ph9.s4 figure{aspect-ratio:18/25}
+.rr .ph9 figure{position:relative;aspect-ratio:9/16;overflow:hidden;border:1px solid #000;border-radius:calc(var(--u)*1);background:#000;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--black)}
+.rr .ph9 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .mm{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,.5625fr) minmax(0,.8fr);gap:calc(var(--u)*1.4);align-items:start}
+.rr .mm figure{position:relative;overflow:hidden;border:1px solid #000;border-radius:calc(var(--u)*1);background:#000;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--black)}
+.rr .mm figure.a{aspect-ratio:4/5}.rr .mm figure.g{aspect-ratio:9/16}
+.rr .mm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rr .spw{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:calc(var(--u)*2.6);align-items:center}
+.rr .spw figure{position:relative;aspect-ratio:9/16;overflow:hidden;border:1px solid #000;border-radius:calc(var(--u)*1);background:#000;box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 var(--black)}
+.rr .spw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* motion */
 .rr .mo{background:var(--black);color:#fff;border-top:1px solid var(--ink)}
 .rr .mo .sh .lb{color:#fff}
@@ -167,6 +223,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .nav{grid-template-columns:repeat(2,minmax(0,1fr))}
 .rr .nav a{border-bottom:1px solid var(--ink)}
 .rr .nav .bk{grid-column:1/3;border-left:0;border-bottom:0}
+.rr .nav a:nth-last-child(2){grid-column:1/3}
 .rr .hero h1{font-size:calc(var(--u)*4.5)}
 .rr .hero .mk{width:calc(var(--u)*13)}
 .rr .hl{grid-template-columns:minmax(0,1fr)}
@@ -185,6 +242,21 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .tl>article:nth-child(2n){border-right:0}
 .rr .tl .wd{grid-column:1/3}
 .rr .tk{grid-template-columns:minmax(0,1fr)}
+.rr .exl{grid-template-columns:minmax(0,1fr)}
+.rr .dp{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+.rr .dp>article{grid-template-rows:auto;grid-row:auto;border-right:0;border-bottom:1px solid var(--ink)}
+.rr .dp>article:last-child{border-bottom:0}
+.rr .dp .c{font-size:calc(var(--u)*1.5)}
+.rr .dp .hd h3{font-size:calc(var(--u)*2.2)}
+.rr .art{grid-template-columns:minmax(0,1fr)}
+.rr .art .tx li{font-size:calc(var(--u)*1.5)}
+.rr .art .tx h3{font-size:calc(var(--u)*3)}
+.rr .sw{grid-template-columns:minmax(0,1fr)}
+.rr .sw>div+div{border-left:0;border-top:1px solid var(--cream)}
+.rr .sw h3{font-size:calc(var(--u)*2.4)}.rr .sw p,.rr .sw li{font-size:calc(var(--u)*1.4)}
+.rr .ph9.s6{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rr .ch .bh h3{font-size:calc(var(--u)*2.8)}.rr .ch .cap{font-size:calc(var(--u)*1.5)}
+.rr .spw{grid-template-columns:minmax(0,.5fr) minmax(0,1fr)}
 .rr .mg{grid-template-columns:repeat(6,minmax(0,1fr))}.rr .mg figure{grid-column:span 2}.rr .mg figure:nth-child(n+4){grid-column:span 3}
 .rr .mg figcaption{font-size:calc(var(--u)*1.2)}
 .rr .ft h2{font-size:calc(var(--u)*3.8)}
@@ -223,6 +295,12 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 .rr .bt{grid-template-columns:minmax(0,1fr)}
 .rr .bt .im{aspect-ratio:4/4}
 .rr .bt figcaption b{font-size:calc(var(--u)*1.8)}.rr .bt figcaption span{font-size:max(8px,calc(var(--u)*1))}
+.rr .cr.ch{background-size:calc(var(--u)*100) auto}
+.rr .dp .hd h3{font-size:calc(var(--u)*1.7)}.rr .ch .bh h3{font-size:calc(var(--u)*1.9)}.rr .art .tx h3{font-size:calc(var(--u)*2.2)}.rr .sw h3{font-size:calc(var(--u)*1.9)}
+.rr .ph9.s6{grid-template-columns:repeat(2,minmax(0,1fr))}.rr .ph9.s4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rr .mm{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.rr .mm figure.g{grid-row:1/3;grid-column:2}.rr .mm figure.a{grid-column:1}
+.rr .spw{grid-template-columns:minmax(0,1fr)}.rr .spw figure{max-width:70%}
+.rr .art .ph3{grid-template-columns:minmax(0,1fr)}.rr .art .ph3 figure:first-child{grid-row:auto}.rr .art .ph3 figure{min-height:calc(var(--u)*20)}
 .rr .tl{grid-template-columns:minmax(0,1fr)}
 .rr .mg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.rr .mg figure,.rr .mg figure:nth-child(n+4){grid-column:auto}.rr .mg figure:last-child{grid-column:1/3}.rr .mg figure:last-child .im{aspect-ratio:16/10}.rr .mg figcaption{font-size:calc(var(--u)*1.4)}
 .rr .tl>article{border-right:0!important}
@@ -247,7 +325,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 </style></head><body>
 <div class="rr">
 <div class="fr">
-<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#program">The Program</a><a href="#creative">The Creative</a><a href="#toolkit">The Toolkit</a><a class="bk" href="https://www.byninaaustin.com/content"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#idea">The Idea</a><a href="#program">The Program</a><a href="#creative">The Creative</a><a href="#experience">The Experience</a><a href="#toolkit">The Toolkit</a><a class="bk" href="https://www.byninaaustin.com/content"><i aria-hidden="true"></i>Back</a></nav>
 
 <header class="hero" id="top">
   <h1 class="x h" aria-label="Restaurant Royalty"><span>Restaurant</span><span class="l2"><span>Royalty</span><span class="mk"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-logo.webp?v=1" alt="" role="img" aria-label="Pepsi Dig In logo" loading="lazy" decoding="async"></span></span></h1>
@@ -327,9 +405,102 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
   </div>
 </section>
 
+<section class="sc ex" id="experience">
+  <div class="gr">
+    <div class="sh rv"><span class="lb"><b>06</b>The Next Chapter: Brunch With The Best</span><h2 class="x m">One Experience, Two Planes</h2></div>
+    <div class="exl">
+      <p class="bdy rv">The Royal chefs take the campaign off the feed and onto the Las Vegas Strip. Pepsi Dig In stages a brunch takeover with top Black chefs and a mixologist from across the country, each serving signature dishes, to celebrate the way Black foodies and chefs have rebranded brunch as an art form.</p>
+      <p class="bdy rv" style="--d:.1s">Online and in person run as one dual plane activation. Engagement stories send people to a real table, and the moments captured on site feed the next posts. The two planes keep passing the energy back and forth across three beats.</p>
+    </div>
+    <div class="dp">
+      <article class="rv"><div class="hd"><h3>Amplification</h3><span>Jan 26 to 29</span></div>
+        <div class="c on" data-l="Online Plane">Each Royal chef shares a personalized sweepstakes story to hype their audience.</div>
+        <div class="c br" data-l="The Bridge">Entering means tagging a location, which puts the spot on the map.</div>
+        <div class="c rw" data-l="Real World Plane">Fans share a favorite memory from a local Black-owned brunch spot, with the food, the ambiance and their own experience in frame.</div></article>
+      <article class="rv" style="--d:.1s"><div class="hd"><h3>Storytelling</h3><span>Jan 29 to Feb 10</span></div>
+        <div class="c on" data-l="Online Plane">A daily chef story series, collaborative in-feed carousels and interactive story templates with polls, questions and a countdown.</div>
+        <div class="c br" data-l="The Bridge">Every engagement story carries a tagged location, a hyperlinked reservation sticker and &ldquo;meet me there gameday weekend&rdquo; copy.</div>
+        <div class="c rw" data-l="Real World Plane">The takeover opens on the Vegas Strip. Each featured chef serves signature dishes, with cocktails from a featured mixologist.</div></article>
+      <article class="rv" style="--d:.2s"><div class="hd"><h3>Echo</h3><span>Feb 13 to 18</span></div>
+        <div class="c on" data-l="Online Plane">Meme-format Reels and TikToks, shared by each Royal and on the Dig In channels.</div>
+        <div class="c br" data-l="The Bridge">On site capture turns brunch service into content.</div>
+        <div class="c rw" data-l="Real World Plane">Cameras catch behind-the-scenes moments of chef life during brunch service.</div></article>
+    </div>
+    <div class="art">
+      <div class="ph3 rv">
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-1.webp?v=1" alt="" role="img" aria-label="Guests raising drinks around a crowded brunch table" loading="lazy" decoding="async"></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-2.webp?v=1" alt="" role="img" aria-label="A table of fried chicken, waffles, eggs and mimosas" loading="lazy" decoding="async"></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-take-3.webp?v=1" alt="" role="img" aria-label="A dusted pancake beside a plate of greens" loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="tx rv" style="--d:.1s">
+        <span class="lb" style="color:var(--blue)">Experience Design</span>
+        <h3 style="margin-top:calc(var(--u)*.8)">Brunch as an Art Form</h3>
+        <ul>
+          <li><b>The Takeover Menu</b>Signature dishes from each featured chef, with a mixologist and cocktail menus to match.</li>
+          <li><b>Chef Wall Coverings</b>17 foot tall wall coverings promote each chef in the room.</li>
+          <li><b>One Visual World</b>The same hand-drawn doodle pattern and Brunch With The Best wordmark carry across every story template.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sw rv">
+      <div><span class="lb">The Online Hook</span><h3>Brunch With The Best Sweepstakes</h3>
+        <p>Fans and foodies share a favorite memory at a local Black-owned brunch spot, listing the restaurant location. Entries are posted in-feed on Instagram and can be shared through stories or Reels.</p>
+        <ul><li>Show the food, the ambiance and the personal experience</li><li>Tag the location, tag @pepsidigin and use #DigInShowLove</li><li>Follow @pepsidigin on Instagram</li></ul></div>
+      <div><span class="lb">The Prizes</span><h3>Win the Real World Plane</h3>
+        <ul><li>Grand prize: a VIP trip for two to Vegas for gameday weekend, with roundtrip transportation, a 4-night hotel stay and $500 to spend at the Brunch With The Best experience</li><li>Second prize: a $2,500 gift card for a brunch party</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sc cr ch" id="chefs">
+  <div class="gr">
+    <div class="sh rv"><span class="lb"><b>07</b>Chef Moments</span><h2 class="x m c">Six Chefs, Told Twice</h2></div>
+    <p class="bdy rv" style="grid-column:1/13;margin-bottom:calc(var(--u)*3.4)">Each Royal feature gets a day in the spotlight, first as a chef story and then, after the takeover, as a behind-the-scenes meme. The chef moments keep the brunch going long after the last plate.</p>
+    <div class="blk">
+      <div class="bh rv"><h3>Amplification</h3><span>Sweepstakes Stories</span></div>
+      <div class="ph9 s6">
+        <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-1.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a patterned jacket pointing at the camera" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.05s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-2.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef on the phone in a white top" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-3.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a light blue shirt" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.15s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-4.webp?v=1" alt="" role="img" aria-label="Story graphic of two chefs in matching taco shop shirts" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.2s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-5.webp?v=1" alt="" role="img" aria-label="Story graphic of two chefs in blue shirts" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.25s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-sweeps-6.webp?v=1" alt="" role="img" aria-label="Story graphic of a chef in a white coat" loading="lazy" decoding="async"></figure>
+      </div>
+      <p class="cap rv">Every Royal chef gets a personalized graphic to share on Instagram stories, hyping their audience for the sweepstakes and the takeover.</p>
+    </div>
+    <div class="blk">
+      <div class="bh rv"><h3>Storytelling</h3><span>Interactive Story Frames</span></div>
+      <div class="ph9 s4">
+        <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-1.webp?v=1" alt="" role="img" aria-label="Story frame with a chef, a Pepsi and a plate of brunch, with an ask me your brunch questions sticker" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.07s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-2.webp?v=1" alt="" role="img" aria-label="Story frame with a poll sticker asking where the host sits at brunch" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.14s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-3.webp?v=1" alt="" role="img" aria-label="Story frame with a countdown sticker to the brunch" loading="lazy" decoding="async"></figure>
+        <figure class="rv" style="--d:.21s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-int-4.webp?v=1" alt="" role="img" aria-label="Story frame with a question sticker about the worst brunch item to cook" loading="lazy" decoding="async"></figure>
+      </div>
+      <p class="cap rv">The template turns every chef story into a conversation. Royals add a question, a poll or a countdown, plus the reservation link, so each tap on the feed leads to a table.</p>
+    </div>
+    <div class="blk">
+      <div class="bh rv"><h3>Echo</h3><span>Chef Life Memes</span></div>
+      <div class="mm">
+        <figure class="a rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-1.webp?v=1" alt="" role="img" aria-label="Chef in a light blue shirt with a caption about a customer complimenting the chef" loading="lazy" decoding="async"></figure>
+        <figure class="g rv" style="--d:.08s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-gif.gif?v=1" alt="" role="img" aria-label="Animated meme of a chef plating food with a caption about being a chef first and a foodie right after" loading="lazy" decoding="async"></figure>
+        <figure class="a rv" style="--d:.16s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-meme-3.webp?v=1" alt="" role="img" aria-label="Chef seasoning a pan with a caption about making sure the dish is seasoned" loading="lazy" decoding="async"></figure>
+      </div>
+      <p class="cap rv">On site, the crew captures the realities of chef life during brunch service. After the event, the clips come back as meme-format Reels and TikToks that Royals share on their own feeds.</p>
+    </div>
+    <div class="blk">
+      <div class="bh rv"><h3>Spread the Word</h3><span>Calling All Black Restaurateurs</span></div>
+      <div class="spw">
+        <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bwb-onesheet.webp?v=1" alt="" role="img" aria-label="One-sheet inviting Black-owned restaurants to get on the map and into the ultimate Black-owned guides" loading="lazy" decoding="async"></figure>
+        <div class="rv" style="--d:.1s"><p class="cap" style="margin-top:0">A one-sheet for Royals to post on their stories opens the movement to every Black-owned restaurant. The ask is a Reel showing why they are number one at brunch: show the dishes, introduce the staff or share a limited-time brunch special.</p>
+        <p class="cap">It is the dual plane idea in a single frame. Restaurants post online to get on the map, and the guides send people to their real tables.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sc mo" id="motion">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>06</b>Recap Reel</span><h2 class="x m c">The Program in Motion</h2></div>
+    <div class="sh rv"><span class="lb"><b>08</b>Recap Reel</span><h2 class="x m c">The Program in Motion</h2></div>
     <div class="mg">
       <figure class="rv"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-gif-opening.gif?v=1" alt="" role="img" aria-label="Crowds and scissors at a restaurant grand opening" loading="lazy" decoding="async"></div><figcaption>Opening Day</figcaption></figure>
       <figure class="rv" style="--d:0.08s"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-gif-kitchen.gif?v=1" alt="" role="img" aria-label="Cooks working in a restaurant kitchen and pouring a drink" loading="lazy" decoding="async"></div><figcaption>In the Kitchen</figcaption></figure>
@@ -342,7 +513,7 @@ font-family:var(--bd);color:var(--ink);font-size:calc(var(--u)*1.2);line-height:
 
 <section class="sc" id="toolkit">
   <div class="gr">
-    <div class="sh rv"><span class="lb"><b>07</b>Fuel for Sharing</span><h2 class="x m">The Toolkit</h2></div>
+    <div class="sh rv"><span class="lb"><b>09</b>Fuel for Sharing</span><h2 class="x m">The Toolkit</h2></div>
     <div class="tkb"><p class="bdy rv">Every nominated chef, and the talent who nominated them, gets a bespoke graphic kit so their audience can join in. A custom GIPHY sticker library keeps the conversation going.</p></div>
     <div class="tk">
       <div class="im rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/rr-stickers.webp?v=1" alt="" role="img" aria-label="Custom GIPHY sticker library shown on a phone beside the Restaurant Royalty crown logo" loading="lazy" decoding="async"></div>
