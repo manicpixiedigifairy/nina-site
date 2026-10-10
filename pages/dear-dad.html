@@ -49,13 +49,6 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .tt i em{font-style:italic}
 .dd .tt i.cm{color:#FFC220;position:relative;top:-.17em}
 @keyframes fRise{to{transform:none}}
-/* ticker */
-.dd .tk{position:relative;background:var(--red);color:var(--cream);overflow:hidden;padding:calc(var(--u)*1.7) 0}
-.dd .tk .rl{display:flex;width:max-content;animation:fTk 38s linear infinite}
-.dd .tk .gp{display:flex;align-items:center;flex:none}
-.dd .tk .gp span{font-family:var(--disp);text-transform:uppercase;font-size:calc(var(--u)*3.2);line-height:1;padding:0 calc(var(--u)*2.2);white-space:nowrap;-webkit-text-stroke:calc(var(--u)*.04) currentColor}
-.dd .tk .gp i{width:calc(var(--u)*.8);height:calc(var(--u)*.8);background:var(--cream);transform:rotate(45deg);flex:none}
-@keyframes fTk{to{transform:translateX(-50%)}}
 /* sections */
 .dd .st{position:relative;padding:var(--sp) var(--g)}
 .dd .th-l{background:var(--cream);color:var(--burg)}
@@ -103,13 +96,11 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .tx2{grid-column:7/13;margin-top:calc(var(--u)*6)}
 .dd .tx2 .bdy{max-width:none}
 /* series + panel */
-.dd .ser{grid-column:1/13;margin-top:calc(var(--u)*8);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:start}
-.dd .ser .pic{grid-column:1/8;position:relative;overflow:hidden;aspect-ratio:16/9;background:#0053E2}
-.dd .ser .pic img{width:100%;height:100%;object-fit:cover}
-.dd .ser .cp{grid-column:8/13;padding-left:calc(var(--u)*1.2)}
-.dd .ser .more{grid-column:1/13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*4)}
-.dd .ser .more p{grid-column:span 6;font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
-.dd .ser .more p:nth-child(2){grid-column:8/13}
+.dd .ser{grid-column:1/13;margin-top:calc(var(--u)*7);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:calc(var(--u)*2.4);align-items:start}
+.dd .ser .cp{grid-column:1/7}
+.dd .ser .more{grid-column:8/13}
+.dd .ser .more p{font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
+.dd .ser .more p+p{margin-top:calc(var(--u)*1.2)}
 .dd .ser .cp .cap{display:block;color:var(--y)}
 .dd .ser .cp h3{margin-top:calc(var(--u)*.8);font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:calc(var(--u)*5.2);line-height:.95;-webkit-text-stroke:calc(var(--u)*.05) currentColor}
 .dd .ser .cp p{margin-top:calc(var(--u)*1.2);font-weight:300;font-size:calc(var(--u)*1.3);opacity:.9}
@@ -227,9 +218,8 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .crd b{font-size:calc(var(--u)*2.9)}
 .dd .ft .end{font-size:calc(var(--u)*10)}
 .dd .ft a{font-size:calc(var(--u)*2.8)}
-.dd .tk .gp span{font-size:calc(var(--u)*3.4)}
 .dd .ser{display:block;margin-top:calc(var(--u)*6)}
-.dd .ser .cp{padding:calc(var(--u)*2) 0 0}
+.dd .ser .cp{padding:0}
 .dd .ser .cp h3{font-size:calc(var(--u)*4.6)}
 .dd .ser .cp p,.dd .ser .more p{font-size:calc(var(--u)*1.6)}
 .dd .ser .more{display:block;margin-top:calc(var(--u)*2)}
@@ -275,7 +265,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
 .dd .ft a{justify-content:center;font-size:calc(var(--u)*2.3);white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){
-.dd .hero .ph,.dd .hero .ph img,.dd .tk .rl{animation:none!important}
+.dd .hero .ph,.dd .hero .ph img{animation:none!important}
 .dd .hero .tag,.dd .hero .mt{animation:none!important;opacity:1;transform:none}
 .dd .tt i{animation:none!important;transform:none}
 .dd.js .rv,.dd.js .rv.on{opacity:1;transform:none;transition:none}
@@ -311,19 +301,14 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
   </div>
 </section>
 
-<div class="tk" data-th="r" aria-hidden="true"><div class="rl"><div class="gp"><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i></div><div class="gp"><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i><span>Modern Fatherhood</span><i></i><span>Everyday Families</span><i></i><span>Dear Dad</span><i></i></div></div></div>
-
 <section class="st th-d what" id="what" data-th="d">
   <div class="gr">
     <div class="hd rv"><h2><span class="k">What:</span><span class="c">The Campaign</span></h2></div>
-    <div class="tx rv" style="--d:.15s"><p class="bdy">Developed and launched <mark>Dear Dad</mark>, a Father&rsquo;s Day campaign celebrating modern fatherhood. It was anchored by a docu-style short film series that premiered at the American Black Film Festival, and extended on TikTok through a microcreator campaign of user-generated content.</p></div>
+    <div class="tx rv" style="--d:.15s"><p class="bdy">Developed and launched <mark>Dear Dad</mark>, a Father&rsquo;s Day campaign celebrating modern fatherhood. It was anchored by a docu-style short film series and extended on TikTok through a microcreator campaign of user-generated content.</p></div>
 
     <div class="ser rv">
-      <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-series.gif?v=1" alt="" role="img" aria-label="Walmart presents the Black and Unlimited Fatherhood Series, a preview of the three short films" width="680" height="383" loading="lazy"></div>
-      <div class="cp"><span class="cap">The Series</span><h3>An Ode to Modern Fatherhood</h3>
-        <p>We worked with Walmart to launch a series of docu-style short films to serve as both an ode to modern fatherhood and an exploration of its evolution.</p>
-        </div>
-      <div class="more"><p>By scratching beneath the surface of the daily lives of a few real Black fathers, each film offered a new perspective on fatherhood today. Pointed intergenerational conversations were juxtaposed with the visual narrative of intimate, everyday moments. Directed by emerging filmmakers Jared Malik Royal, Dior Rodriguez, and Rodney Rikai, the films captured authentic, nuanced stories of real dads who are shifting the narrative in their day-to-day lives.</p><p>In honor of Father&rsquo;s Day, the series launched to encourage families everywhere to celebrate the amazing fathers in their lives, and premiered at the American Black Film Festival.</p></div>
+      <div class="cp"><span class="cap">The Series</span><h3>An Ode to Modern Fatherhood</h3></div>
+      <div class="more"><p>We worked with Walmart to launch a series of docu-style short films to serve as both an ode to modern fatherhood and an exploration of its evolution.</p><p>By scratching beneath the surface of the daily lives of a few real fathers, each film offered a new perspective on fatherhood today. Pointed intergenerational conversations were juxtaposed with the visual narrative of intimate, everyday moments. Directed by emerging filmmakers Jared Malik Royal, Dior Rodriguez, and Rodney Rikai, the films captured authentic, nuanced stories of real dads who are shifting the narrative in their day-to-day lives.</p></div>
     </div>
 
     <div class="cred rv">
@@ -336,7 +321,7 @@ font-family:var(--bd);color:var(--cream);font-size:calc(var(--u)*1.25);line-heig
     <div class="prog rv"><span class="cap">Now Showing</span><h3>The Short Film Series</h3></div>
 
     <div class="films">
-      <article class="fm rv"><a class="pic" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-legacy.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Legacy of the Sea" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film I</span><h4>Legacy of the Sea</h4><span class="by cap">A film by Dior Rodriguez</span><p>Legacy of the Sea is a story of preserving and passing down traditions. Dior&rsquo;s concept was born from her own experience with her late father, who was a maker and empowered an entire generation by sharing his wisdom. This poetic story explores themes of family traditions and heritage in a way that is relatable yet refreshingly nuanced and original. Not only does this short expand viewers&rsquo; understanding of modern fatherhood, it also introduces an all-together new understanding of Blackness and identity.</p><a class="bt" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
+      <article class="fm rv"><a class="pic" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-legacy.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Legacy of the Sea" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film I</span><h4>Legacy of the Sea</h4><span class="by cap">A film by Dior Rodriguez</span><p>Legacy of the Sea is a story of preserving and passing down traditions. Dior&rsquo;s concept was born from her own experience with her late father, who was a maker and empowered an entire generation by sharing his wisdom. This poetic story explores themes of family traditions and heritage in a way that is relatable yet refreshingly nuanced and original.</p><a class="bt" href="https://vimeo.com/837227877/edb16d04c7" data-vid="837227877" data-h="edb16d04c7" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
       <article class="fm rev rv"><a class="pic" href="https://vimeo.com/837227378/81213cac25" data-vid="837227378" data-h="81213cac25" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-dear-dad.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Dear Dad" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film II</span><h4>Dear Dad</h4><span class="by cap">A film by Jared M. Royal</span><p>Jared&rsquo;s Dear Dad takes place on Sankofa Farms and explores the story of father and farmer Kamal Bell. This poetic doc explores how Kamal is using foundational knowledge in innovative new ways to create a lasting legacy. Jared drew inspiration for this theme from his own family history and the generations of fathers that paved the way for him. The result is a compelling, cinematic portrayal of a new kind of family story.</p><a class="bt" href="https://vimeo.com/837227378/81213cac25" data-vid="837227378" data-h="81213cac25" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
       <article class="fm rv"><a class="pic" href="https://vimeo.com/837226684/b311579f97" data-vid="837226684" data-h="b311579f97" data-ar="h" tabindex="-1" aria-hidden="true"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/dd-film-breathe.gif?v=1" alt="" role="img" aria-label="Moving still from the short film Just Breathe" width="680" height="383" loading="lazy"><span class="go"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="#001E60"/></svg></span></a><div class="cp"><span class="no cap">Film III</span><h4>Just Breathe</h4><span class="by cap">A film by Rodney Rikai</span><p>Rodney&rsquo;s story is a reflective, autobiographical homage to his journey as a full-time single father and uncle. As a self-titled Dunkle, Rodney has learned to juggle becoming his own man while also raising his son and nephew to become the men they are meant to be. Just Breathe is a commentary on modern fatherhood and parenting styles that both draws from and departs from the models of prior generations. This refreshing new story is an inspiration for the new fathers of today to feel seen.</p><a class="bt" href="https://vimeo.com/837226684/b311579f97" data-vid="837226684" data-h="b311579f97" data-ar="h" target="_blank" rel="noopener">Watch the Film<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></div></article>
     </div>
