@@ -182,8 +182,6 @@ html,body{margin:0;background:#2A1420}
 .ok .press a::after{content:'\2197';font-weight:400}
 
 /* FOOTER */
-.ok .foot{background:var(--rd);padding:calc(var(--u)*2.6) 0 calc(var(--u)*2.8);color:var(--pa)}
-.ok .foot .w{display:flex;justify-content:space-between;align-items:center;gap:1em;flex-wrap:wrap}
 .ok .btn{display:inline-flex;align-items:center;gap:.6em;border:calc(var(--u)*.16) solid var(--pa);border-radius:99px;padding:.9em 1.9em;font:500 calc(var(--u)*.85)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
 
 @media(hover:hover){
@@ -193,7 +191,8 @@ html,body{margin:0;background:#2A1420}
 .ok .dev:hover{transform:translateY(calc(var(--u)*-.4)) rotate(-1deg)}
 .ok .bars button:hover{transform:translateY(calc(var(--u)*-.2))}
 .ok .press a:hover{background:var(--pa);color:var(--ik)}
-.ok .btn:hover{background:var(--pa);color:var(--rd)}
+.ok .btn:hover{background:var(--pa);color:var(--ik)}
+.ok .cred .btn{margin-top:calc(var(--u)*3.2)}
 }
 @media(prefers-reduced-motion:reduce){.ok .tkt{animation-duration:140s}.ok *{transition:none!important}}
 
@@ -401,10 +400,10 @@ html,body{margin:0;background:#2A1420}
         </ul>
       </div>
     </div>
+    <a class="btn" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a>
   </div>
 </section>
 
-<footer class="foot"><div class="w"><a class="btn" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a></div></footer>
 
 </div>
 <script>
