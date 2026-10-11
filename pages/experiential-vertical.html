@@ -1,90 +1,298 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nina Austin | Experiential</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:wght@300;400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Jost:wght@400;500&display=swap">
 <style>
-html,body{margin:0;background:#000}
-
-.pg{--u:clamp(11px,1.1111vw,28px);--lime:#F5D98A;width:100%;background:#000;color:#fff;font-family:Marcellus,Georgia,serif;padding:calc(var(--u)*2) 0 calc(var(--u)*8)}
-.pg *{box-sizing:border-box}
-.pg a{color:inherit;text-decoration:none}
-.pg .sm{font-family:Jost,sans-serif;font-weight:500;font-size:calc(var(--u)*0.72);letter-spacing:.16em;text-transform:uppercase}
-.pg .rd{position:absolute;opacity:0;pointer-events:none}
-.pg .tabs{display:flex;gap:calc(var(--u)*2.2);padding:calc(var(--u)*2.5) calc(var(--u)*5.5) 0;flex-wrap:wrap}
-.pg .tabs a{color:rgba(255,255,255,.5);padding-bottom:.45em;border-bottom:1px solid transparent;transition:color .2s}
-.pg .tabs a:hover{color:#fff}
-.pg .tabs a.on{color:#fff;border-bottom-color:var(--lime)}
-.pg .q{padding:calc(var(--u)*3.5) calc(var(--u)*5.5) 0;max-width:calc(var(--u)*46);font-family:'Source Serif 4',Georgia,serif;font-weight:300;font-size:calc(var(--u)*1.35);line-height:1.5}
-.pg .q p{margin:0}.pg .q cite{display:block;margin-top:calc(var(--u)*0.8);font-style:normal;font-size:.62em;opacity:.65;letter-spacing:.04em}
-.pg .ft{position:relative;display:block;margin:calc(var(--u)*2.5) calc(var(--u)*5.5) 0;border-radius:calc(var(--u)*0.6);overflow:hidden}
-.pg .md{position:relative;overflow:hidden;display:block;background:linear-gradient(135deg,#1b1b1b,#0c0c0c);background-position:50% 50%;background-size:cover;background-repeat:no-repeat;aspect-ratio:16/9;width:100%;transition:transform .6s ease}
-.pg .md i{position:absolute;inset:0;display:block;background-position:50% 50%;background-size:cover;background-repeat:no-repeat;transform:scale(var(--z,1));transform-origin:var(--o,50% 50%);transition:transform .6s ease}
-.pg .md{isolation:isolate}
-.pg .cd .md{clip-path:inset(0 round calc(var(--u)*0.5))}
-.pg .ft{clip-path:inset(0 round calc(var(--u)*0.6))}
-.pg .cd .md{--r:calc(var(--u)*0.5)}
-.pg .ft .md{--r:calc(var(--u)*0.6)}
-.pg .md::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 100% 100%,transparent var(--r),#000 calc(var(--r) + .75px)) 0 0/var(--r) var(--r) no-repeat,radial-gradient(circle at 0 100%,transparent var(--r),#000 calc(var(--r) + .75px)) 100% 0/var(--r) var(--r) no-repeat,radial-gradient(circle at 100% 0,transparent var(--r),#000 calc(var(--r) + .75px)) 0 100%/var(--r) var(--r) no-repeat,radial-gradient(circle at 0 0,transparent var(--r),#000 calc(var(--r) + .75px)) 100% 100%/var(--r) var(--r) no-repeat}
-.pg .md img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 50%!important;display:block!important}
-.pg .ft .md{aspect-ratio:21/10}
-.pg .bg{position:absolute;z-index:3;top:calc(var(--u)*1.5);left:calc(var(--u)*1.5);display:inline-flex;align-items:center;gap:.65em;background:var(--lime);color:#0A0A0A;border-radius:99px;padding:.32em .9em .32em .6em;white-space:nowrap}
-.pg .ft:after{display:none}
-.pg .fo{position:static;padding:calc(var(--u)*2.2) calc(var(--u)*0.4) calc(var(--u)*0.4);display:grid;grid-template-columns:1.25fr 1fr;gap:calc(var(--u)*3);align-items:start}
-.pg .fo .bt{margin-top:calc(var(--u)*1.8)}.pg .fo .fm{margin-top:0}
-.pg .fo .lb{color:var(--lime);display:block;margin-bottom:calc(var(--u)*0.9)}
-.pg .fo h2{margin:0;font-weight:400;font-size:calc(var(--u)*3.8);line-height:1.04;letter-spacing:-.005em}
-.pg .fo .br{display:block;margin-bottom:calc(var(--u)*0.7);opacity:.8}
-.pg .fo p{margin:0 0 calc(var(--u)*1.6);font-size:calc(var(--u)*1.1);line-height:1.4;opacity:.92}
-.pg .bt{display:inline-block;background:var(--lime);color:#0A0A0A;border-radius:99px;padding:calc(var(--u)*0.52) calc(var(--u)*1.8);transition:transform .2s,background .2s}
-.pg .bt:hover{background:#fff;transform:translateX(.25rem)}
-@media(hover:hover){.pg .ft:hover .md i{transform:scale(calc(var(--z,1)*1.03))}}
-.pg .fb{display:flex;align-items:center;gap:calc(var(--u)*0.8);flex-wrap:wrap;padding:calc(var(--u)*4.5) calc(var(--u)*5.5) calc(var(--u)*1.8)}
-.pg .fb .ct{margin-left:auto;opacity:.5}
-.pg .fb label{cursor:pointer;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:calc(var(--u)*0.36) calc(var(--u)*1.05);transition:all .2s}
-.pg .fb label:hover{border-color:#fff}
-.pg #f0:checked~.fbw label[for=f0],.pg:has(#f0:checked) label[for=f0]{background:#F5D98A;color:#0A0A0A;border-color:#F5D98A}
-.pg .rd:focus-visible+*{outline:2px solid #fff}
-.pg .gr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.6) calc(var(--u)*1.75);padding:0 calc(var(--u)*5.5)}
-.pg .soon .md{background:#0A0A0A;border:1px dashed rgba(245,217,138,.45);border-radius:inherit}.pg .soon .qm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Marcellus,serif;font-weight:400;font-size:calc(var(--u)*9);color:var(--lime);opacity:.9}.pg .soon h3{opacity:.85}
-.pg .cd{display:block;min-width:0;content-visibility:auto;contain-intrinsic-size:auto 42rem}
-.pg .cd .mw{overflow:hidden;border-radius:calc(var(--u)*0.5);margin-bottom:calc(var(--u)*1.1)}
-.pg .cd .md{aspect-ratio:auto;height:0;padding-bottom:56.25%;border-radius:calc(var(--u)*0.5)}
-.pg .cd .br{display:block;opacity:.6;margin-bottom:calc(var(--u)*0.5)}
-.pg .cd h3{margin:0 0 calc(var(--u)*0.6);font-weight:400;font-size:calc(var(--u)*1.75);line-height:1.12;transition:color .2s}
-.pg .cd p{margin:0 0 calc(var(--u)*0.9);font-size:calc(var(--u)*0.95);line-height:1.4;opacity:.75}
-.pg .tg{display:flex;gap:calc(var(--u)*0.5);flex-wrap:wrap}
-.pg .tg span{border:1px solid rgba(255,255,255,.28);border-radius:99px;padding:.35em .9em;font-size:calc(var(--u)*0.62)}
-@media(hover:hover){.pg .cd:hover .md i{transform:scale(calc(var(--z,1)*1.05))}.pg .cd:hover h3{color:var(--lime)}}
-.pg a:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
-.pg:has(#f1:checked) .cd:not(.t1){display:none}.pg:has(#f1:checked) label[for=f1]{background:#F5D98A;color:#0A0A0A;border-color:#F5D98A}
-.pg:has(#f2:checked) .cd:not(.t2){display:none}.pg:has(#f2:checked) label[for=f2]{background:#F5D98A;color:#0A0A0A;border-color:#F5D98A}
-.pg:has(#f3:checked) .cd:not(.t3){display:none}.pg:has(#f3:checked) label[for=f3]{background:#F5D98A;color:#0A0A0A;border-color:#F5D98A}
-.pg .cd .md{padding-bottom:125%}
-.pg .fm{display:flex;flex-wrap:wrap;gap:calc(var(--u)*0.6);margin:calc(var(--u)*1.2) 0}.pg .fm .sm{display:inline-flex;align-items:center;gap:.6em;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:.55em 1.1em .55em .8em;font-size:calc(var(--u)*0.68)}
-.pg .mt{position:absolute;z-index:3;left:calc(var(--u)*0.9);right:calc(var(--u)*0.9);bottom:calc(var(--u)*0.9);display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*0.45)}
-.pg .mt .sm{display:inline-flex;align-items:center;gap:.6em;background:rgba(0,0,0,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:99px;padding:.55em 1.1em .55em .8em;font-size:calc(var(--u)*0.68);white-space:nowrap}
-.pg .mt b{font-size:1.35em;line-height:1;font-weight:400}
-@media(max-width:1000px){.pg .mt{left:.7rem;bottom:.7rem}.pg .mt .sm{font-size:.62rem}}
-@media(max-width:1000px){
-.pg{--u:16px;padding-bottom:4rem}
-.pg .tabs{padding:1.5rem 1.75rem 0;gap:1.4rem}
-.pg .q{padding:2rem 1.75rem 0;font-size:1.1rem}
-.pg .ft{margin:1.75rem 0 0;border-radius:0;clip-path:none}
-.pg .md img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 50%!important;display:block!important}
-.pg .ft .md{aspect-ratio:4/3}
-.pg .bg{top:1rem;left:1rem;font-size:.7rem}
-.pg .ft:after{display:none}
-.pg .fo{position:static;grid-template-columns:1fr;gap:1rem;padding:1.5rem 1.75rem 0}
-.pg .fo h2{font-size:2.4rem}.pg .fo p{font-size:1rem;margin-bottom:1.25rem}
-.pg .bt{padding:.5rem 1.4rem}
-.pg .fb{padding:2.5rem 1.75rem 1.25rem;gap:.6rem}
-.pg .fb label{padding:.34rem .9rem}
-.pg .fb .ct{display:none}
-.pg .gr{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1rem;padding:0 1.75rem}
-.pg .cd h3{font-size:1.4rem}.pg .cd p{font-size:.9rem}.pg .sm{font-size:.7rem}.pg .tg span{font-size:.62rem}
+/* Layout: featured Walmart x Beautycon campaign on top, then a hover-card accordion of the other case studies. */
+:host{
+  --bg:#0A0A0A; --gold:#F5D98A; --pink:#F5D98A; --soft:#1b1b1b; --line:rgba(255,255,255,.18); --paper:#0A0A0A; --ink:#fff; --mute:rgba(255,255,255,.5); --white:#0c0c0c;
+  --serif:'Marcellus',Georgia,'Times New Roman',serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Jost',system-ui,sans-serif;
+  --script:'Marcellus',Georgia,serif;
+  color-scheme:dark;
 }
-@media(max-width:600px){.pg .gr{grid-template-columns:1fr}.pg .cd h3{font-size:1.7rem}}
-</style></head><body>
-<div class="pg"><nav class="tabs" aria-label="Work categories"><a class="sm" href="https://www.byninaaustin.com/commercials">Commercials</a><a class="sm" href="https://www.byninaaustin.com/content">Content</a><a class="sm on" href="https://www.byninaaustin.com/experiential">Experiential</a></nav><a class="ft" href="https://www.byninaaustin.com/ok-v-day"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/b33cd864-3025-4b86-90ba-476217189afc/just_ok.jpg?format=1500w')"></i></span><div class="fo"><div><span class="sm lb">Featured</span><span class="sm br">AT&amp;T</span><h2>OK V-Day</h2><span class="bt sm">Explore</span></div><div><p>A hidden-camera pop-up stunt capturing real reaction to 'Just Ok' Valentine's Day cards.</p></div></div></a><div class="fb"><input class="rd" type="radio" name="f" id="f0" checked><label class="sm" for="f0">All</label><input class="rd" type="radio" name="f" id="f1"><label class="sm" for="f1">Creator-Led</label><input class="rd" type="radio" name="f" id="f2"><label class="sm" for="f2">Retail</label><input class="rd" type="radio" name="f" id="f3"><label class="sm" for="f3">Pop-Up</label><span class="sm ct">5 more projects</span></div><div class="gr"><a class="cd t1 t2" href="https://www.byninaaustin.com/hbcu-tour"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/677581db-7f91-4449-bd53-98527452511a/Photo-4-of-4-1-scaled-1.webp?format=1000w')"></i></span><span class="mt"><span class="sm"><b aria-hidden="true">👀</b>500K+ Organic impressions</span></span></div><span class="sm br">Walmart</span><h3>HBCU Tour</h3><p>A mobile creator studio bringing on-campus activations to leading HBCUs across the country.</p><div class="tg"><span class="sm">Creator-Led</span><span class="sm">Retail</span></div></a><a class="cd t3 " href="https://www.byninaaustin.com/brunch-with-the-best"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/45ecbfc5-ace2-479c-ac5e-22808e432221/Screenshot+2025-10-11+at+10.17.02%E2%80%AFPM.png?format=1000w')"></i></span><span class="mt"><span class="sm"><b aria-hidden="true">👀</b>13M+ Organic views</span></span></div><span class="sm br">Pepsico</span><h3>Brunch With The Best</h3><p>A Super Bowl-weekend social, digital, and in-person activation uniting regional brunch cultures through chef-driven storytelling and a Las Vegas pop-up at Della's Kitchen.</p><div class="tg"><span class="sm">Pop-Up</span><span class="sm">Food</span></div></a><a class="cd t1 t3" href="https://www.byninaaustin.com/walmart-beautycon"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-arch-tall.webp?v=1')"></i></span></div><span class="sm br">Walmart</span><h3>Walmart x Beautycon</h3><p>Reintroducing the Super Bowl of beauty with For Every It Girl, an experiential, shoppable and social program for the next generation of it girls.</p><div class="tg"><span class="sm">Pop-Up</span><span class="sm">Beauty</span></div></a><a class="cd t3 " href="https://www.byninaaustin.com/the-85-shop"><div class="mw" style="position:relative"><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/c3d450b6-c04e-48b6-b236-6ca224f32e0f/imgi_50_The_85_Shop_curated_in_partnership.png?format=1000w')"></i></span></div><span class="sm br">eBay</span><h3>The '85 Shop</h3><p>A nostalgic Chicago pop-up and global auction that solidified eBay's cultural claim in the sneaker game</p><div class="tg"><span class="sm">Pop-Up</span><span class="sm">Fashion</span></div></a><a class="cd t1 t2" href="https://www.byninaaustin.com/fathers-day-streamathon"><div class="mw" style="position:relative"><span class="bg sm"><svg viewBox="0 0 24 24" width="1.3em" height="1.3em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m12 6.4.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 8.5l2-.3z"/><path d="M8.6 13.6 7 21l5-2.6 5 2.6-1.6-7.4"/></svg>Shorty Impact Award</span><span class="md" aria-hidden="true"><i style="background-image:url('https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/6ecc2270-cd0f-4d36-8129-c2e7a8f84435/imgi_3_PJNITZA0N0TcDglnxwfq81ykH7k.jpg?format=1000w')"></i></span><span class="mt"><span class="sm"><b aria-hidden="true">👀</b>15M Impressions</span><span class="sm"><b aria-hidden="true">🖱️</b>7.5x Click-through rate</span></span></div><span class="sm br">Walmart</span><h3>Father’s Day Streamathon</h3><p>A next-gen Father’s Day activation where gaming became a holiday gathering, bringing fathers and families together on stream.</p><div class="tg"><span class="sm">Creator-Led</span><span class="sm">Retail</span></div></a></div></div>
-</body></html>
+:host{ background:var(--paper); color:var(--ink) }
+:host{ margin:0; background:var(--bg); color:var(--ink); font:300 17px/1.6 var(--body); -webkit-font-smoothing:antialiased }
+img{ display:block; max-width:100%; height:auto }
+a{ color:inherit }
+:focus-visible{ outline:2px solid var(--pink); outline-offset:3px }
+
+.wrap{ padding-block:0; padding-inline:clamp(16px,4vw,48px); max-width:1320px; margin-inline:auto }
+
+/* top bar */
+.top{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-block:20px; border-bottom:1px solid var(--line) }
+.mark{ font:400 1.4rem/1 var(--serif); letter-spacing:.04em; text-decoration:none }
+.mark em{ font-style:normal; color:var(--gold) }
+.nav{ display:flex; gap:20px; flex-wrap:wrap; font:500 13px/1 var(--sans); letter-spacing:.06em; text-transform:uppercase }
+.nav a{ text-decoration:none }
+.nav a[aria-current]{ color:var(--gold) }
+.nav a:hover{ color:var(--gold) }
+
+/* featured campaign */
+.feat{ padding-block:clamp(40px,6vw,72px) clamp(56px,8vw,112px) }
+.kicker{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; font:500 12px/1.2 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--mute) }
+.pill{ display:inline-block; padding:6px 12px; border-radius:99px; border:1px solid var(--gold); background:transparent; color:var(--gold); letter-spacing:.08em }
+.feat-grid{ display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(28px,5vw,72px); align-items:center; margin-top:28px }
+.feat h1{ font:400 clamp(2.4rem,5.6vw,5.4rem)/1 var(--serif); overflow-wrap:anywhere; margin:0; text-wrap:balance; text-transform:uppercase; letter-spacing:.01em }
+.feat h1 .script{ color:var(--gold); font-style:normal; font-size:.6em; vertical-align:.18em; margin-inline:.08em }
+.lede{ font:300 clamp(1.15rem,1.9vw,1.4rem)/1.5 var(--body); margin:24px 0 0; max-width:34ch; text-wrap:pretty }
+.facts{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; margin:28px 0 0; padding:0; list-style:none; border-top:1px solid var(--line) }
+.facts li{ padding:14px 0; border-bottom:1px solid var(--line); min-width:0 }
+.facts b{ display:block; font:500 11px/1.2 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--mute); margin-bottom:6px }
+.facts span{ font:300 16px/1.4 var(--body) }
+.pillars{ display:flex; flex-wrap:wrap; gap:8px; margin:24px 0 0; padding:0; list-style:none }
+.pillars li{ font:400 14px/1.2 var(--body); padding:8px 12px; border:1px solid var(--line); border-radius:99px; background:var(--white) }
+.actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:32px }
+.btn{ display:inline-flex; align-items:center; gap:10px; padding:14px 22px; border-radius:99px; text-decoration:none; font:500 14px/1 var(--sans); letter-spacing:.08em; text-transform:uppercase; background:var(--gold); color:var(--bg) }
+.btn.ghost{ background:transparent; color:var(--ink); box-shadow:inset 0 0 0 1px rgba(255,255,255,.35) }
+.btn:hover{ background:#fff; color:var(--bg); box-shadow:none }
+.btn.ghost:hover{ background:transparent; color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold) }
+.hero{ position:relative; margin:0; background:var(--soft); border-radius:2px; overflow:hidden; aspect-ratio:4/5; max-height:80vh; width:100%; }
+.hero img{ width:100%; height:100%; object-fit:cover; object-position:50% 40% }
+.hero figcaption{ position:absolute; left:16px; bottom:16px; right:16px; display:flex; justify-content:space-between; gap:12px; font:400 14px/1.3 var(--mono); color:#fff; background:rgba(10,10,10,.82); padding:10px 14px; border-radius:2px; font-family:var(--sans); letter-spacing:.06em; text-transform:uppercase; font-size:12px }
+.stamp{ position:absolute; top:16px; right:16px; width:clamp(84px,9vw,112px); aspect-ratio:1; display:grid; place-items:center; border-radius:50%; border:1px solid var(--gold); background:var(--bg); color:var(--gold); font:400 1rem/1.1 var(--serif); letter-spacing:.04em; text-align:center; padding:10px; transform:rotate(-8deg) }
+
+.strip{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(10px,2vw,20px); margin-top:clamp(40px,6vw,72px) }
+.strip figure{ margin:0; min-width:0 }
+.strip img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:2px; background:var(--soft) }
+.strip figcaption{ margin-top:8px; font:400 13px/1.3 var(--sans); color:var(--mute) }
+
+.press{ margin-top:clamp(48px,7vw,88px); display:grid; grid-template-columns:minmax(0,1fr) auto; gap:20px; align-items:center; padding:clamp(20px,3vw,32px); background:var(--white); border-radius:2px; border:1px solid rgba(245,217,138,.35) }
+.press p{ margin:0; font:400 clamp(1.2rem,2.2vw,1.6rem)/1.3 var(--serif); text-wrap:balance }
+.press small{ display:block; margin-top:8px; font:500 12px/1.2 var(--sans); letter-spacing:.12em; text-transform:uppercase; color:var(--mute) }
+
+/* accordion of hover cards */
+.more{ border-top:1px solid rgba(245,217,138,.6); padding-block:clamp(40px,6vw,80px) clamp(56px,8vw,112px) }
+.more-head{ display:flex; justify-content:space-between; align-items:end; gap:16px; flex-wrap:wrap; margin-bottom:24px }
+.more h2{ font:400 clamp(2.2rem,5.4vw,4rem)/1 var(--serif); margin:0; text-transform:uppercase; letter-spacing:.02em }
+.more-head p{ margin:0; color:var(--mute); max-width:36ch; font:300 16px/1.6 var(--body) }
+.acc{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line) }
+.acc li{ border-bottom:1px solid var(--line) }
+.acc-btn{ all:unset; box-sizing:border-box; cursor:pointer; width:100%; display:grid; grid-template-columns:minmax(0,auto) minmax(0,1fr) auto; gap:clamp(12px,3vw,40px); align-items:baseline; padding:22px 4px; }
+.acc-btn:focus-visible{ outline:2px solid var(--pink); outline-offset:-2px }
+.acc-n{ font:400 13px/1 var(--sans); letter-spacing:.08em; color:var(--mute); min-width:2ch }
+.acc-t{ font:400 clamp(1.6rem,3.8vw,2.75rem)/1.1 var(--serif); min-width:0; text-wrap:balance; transition:color .2s ease, transform .3s ease }
+.acc-b{ font:500 12px/1 var(--sans); letter-spacing:.12em; text-transform:uppercase; color:var(--mute); white-space:nowrap }
+.acc-btn[aria-expanded="true"] .acc-t, .acc-btn:hover .acc-t{ color:var(--gold) }
+.acc-btn:hover .acc-t{ transform:translateX(6px) }
+.acc-plus{ font:300 1.6rem/1 var(--sans); transition:transform .3s ease }
+.acc-btn[aria-expanded="true"] .acc-plus{ transform:rotate(45deg) }
+.acc-panel{ display:grid; grid-template-columns:minmax(0,300px) minmax(0,1fr); gap:clamp(16px,3vw,40px); padding:0 4px 28px calc(2ch + clamp(12px,3vw,40px)); }
+.acc-panel[hidden]{ display:none !important }
+.acc-panel img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:2px; background:var(--soft) }
+.acc-panel .txt{ min-width:0; align-self:center }
+.acc-panel p{ margin:0 0 18px; font:300 17px/1.6 var(--body); max-width:52ch; text-wrap:pretty }
+.acc-panel .tags{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 20px; padding:0; list-style:none }
+.acc-panel .tags li{ font:400 12px/1 var(--sans); letter-spacing:.08em; text-transform:uppercase; padding:7px 10px; border:1px solid rgba(245,217,138,.5); color:var(--gold); border-radius:99px }
+.acc-panel a.more-link{ font:500 15px/1 var(--sans); color:var(--ink); text-underline-offset:4px }
+.acc-panel a.more-link:hover{ color:var(--gold) }
+
+/* floating hover card (fine pointers only) */
+.hc{ position:fixed; left:0; top:0; width:min(280px,30vw); pointer-events:none; opacity:0; transform:translate(-50%,-50%) scale(.96); transition:opacity .18s ease, transform .18s ease; z-index:20; display:none; visibility:hidden }
+@media (hover:hover) and (pointer:fine){
+  .hc{ display:block }
+  .hc.on{ opacity:1; visibility:visible; transform:translate(-50%,-50%) scale(1) }
+}
+.hc img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:2px; box-shadow:0 18px 40px rgba(0,0,0,.5); background:var(--soft) }
+.hc p{ margin:0; font:300 14px/1.45 var(--body); color:var(--ink); background:var(--bg); border:1px solid rgba(245,217,138,.5); padding:10px 12px; border-radius:2px; margin-top:-16px; margin-inline:12px; position:relative; box-shadow:0 6px 18px rgba(0,0,0,.5) }
+
+.end{ border-top:1px solid var(--line); padding-block:24px 40px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font:400 12px/1.4 var(--sans); letter-spacing:.08em; text-transform:uppercase; color:var(--mute) }
+
+@media (max-width:820px){
+  .feat-grid{ grid-template-columns:minmax(0,1fr) }
+  .hero{ aspect-ratio:4/5; max-height:none }
+  .press{ grid-template-columns:minmax(0,1fr) }
+  .acc-panel{ grid-template-columns:minmax(0,1fr); padding-left:4px }
+  .acc-panel img{ max-width:320px }
+  .acc-b{ display:none }
+  .acc-btn{ grid-template-columns:minmax(0,auto) minmax(0,1fr) auto }
+  .acc-panel img{ aspect-ratio:4/3 }
+}
+@media (max-width:460px){
+  .facts{ grid-template-columns:minmax(0,1fr) }
+  .strip{ grid-template-columns:minmax(0,1fr) 1fr }
+  .strip figure:last-child{ display:none }
+  .acc-t{ font-size:1.6rem }
+}
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important } }
+
+/* header: matches the site's top bar */
+.top{ display:flex; justify-content:flex-end; padding-block:clamp(20px,3vw,32px) 0; border-bottom:0 }
+.menu{ all:unset; cursor:pointer; display:inline-flex; align-items:center; gap:18px; font:400 15px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:#fff }
+.menu:focus-visible{ outline:2px solid var(--gold); outline-offset:6px }
+.burger{ display:grid; gap:9px; width:56px }
+.burger i{ display:block; height:2px; background:#fff }
+.tabs{ display:flex; flex-wrap:wrap; gap:clamp(18px,3vw,36px); margin-top:clamp(56px,9vw,120px); padding-block:0 }
+.tabs a{ position:relative; padding-block:10px; font:400 13px/1 var(--sans); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.5); text-decoration:none }
+.tabs a:hover{ color:#fff }
+.tabs a[aria-current]{ color:#fff }
+.tabs a[aria-current]::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--gold) }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="tabs" aria-label="Work categories">
+    <a href="https://www.byninaaustin.com/commercials">Commercials</a>
+    <a href="https://www.byninaaustin.com/content">Content</a>
+    <a href="https://www.byninaaustin.com/experiential" aria-current="page">Experiential</a>
+  </nav>
+
+  <!-- FEATURED CAMPAIGN -->
+  <section class="feat" aria-labelledby="feat-title">
+    <div class="kicker"><span class="pill">Featured campaign</span></div>
+
+    <div class="feat-grid">
+      <div>
+        <h1 id="feat-title">Walmart <span class="script">x</span> Beautycon</h1>
+        <p class="lede">Reintroducing the Super Bowl with an experiential, shoppable and social program for the next generation of it girls.</p>
+
+        <ul class="facts">
+          <li><b>Client</b><span>Walmart</span></li>
+          <li><b>Partner</b><span>Beautycon</span></li>
+          <li><b>Format</b><span>Experiential, shoppable, social</span></li>
+          <li><b>Audience</b><span>Next-generation it girls</span></li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn" href="https://www.byninaaustin.com/walmart-beautycon">Explore <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <figure class="hero">
+        <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lips.webp?v=2" alt="Close-up beauty campaign image from Walmart x Beautycon" style="object-position:50% 40%">
+      </figure>
+    </div>
+
+    </section>
+
+  <!-- ACCORDION OF OTHER CASE STUDIES -->
+  <section class="more" aria-labelledby="more-title">
+    <div class="more-head">
+      <h2 id="more-title">More case studies</h2>
+      <p>Hover a title to preview it. Select a title to open the full write-up.</p>
+    </div>
+
+    <ul class="acc" id="acc">
+      <li>
+        <button class="acc-btn" aria-expanded="false" aria-controls="p1" id="b1" data-img="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/b33cd864-3025-4b86-90ba-476217189afc/just_ok.jpg?format=1500w" data-copy="A hidden-camera pop-up stunt capturing real reaction to 'Just Ok' Valentine's Day cards.">
+          <span class="acc-n">01</span><span class="acc-t">OK V-Day</span><span class="acc-b">AT&amp;T</span><span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-panel" id="p1" role="region" aria-labelledby="b1" hidden>
+          <img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/b33cd864-3025-4b86-90ba-476217189afc/just_ok.jpg?format=1500w" alt="OK V-Day pop-up stunt" loading="lazy">
+          <div class="txt">
+            <ul class="tags"><li>Pop-Up</li><li>Stunt</li></ul>
+            <p>A hidden-camera pop-up stunt capturing real reaction to 'Just Ok' Valentine's Day cards.</p>
+            <a class="more-link" href="https://www.byninaaustin.com/ok-v-day">View case study →</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <button class="acc-btn" aria-expanded="false" aria-controls="p2" id="b2" data-img="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/677581db-7f91-4449-bd53-98527452511a/Photo-4-of-4-1-scaled-1.webp?format=1000w" data-copy="A mobile creator studio bringing on-campus activations to leading HBCUs across the country.">
+          <span class="acc-n">02</span><span class="acc-t">HBCU Tour</span><span class="acc-b">Walmart</span><span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-panel" id="p2" role="region" aria-labelledby="b2" hidden>
+          <img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/677581db-7f91-4449-bd53-98527452511a/Photo-4-of-4-1-scaled-1.webp?format=1000w" alt="HBCU Tour creator studio" loading="lazy">
+          <div class="txt">
+            <ul class="tags"><li>Creator-Led</li><li>Retail</li></ul>
+            <p>A mobile creator studio bringing on-campus activations to leading HBCUs across the country. Over 500K organic impressions.</p>
+            <a class="more-link" href="https://www.byninaaustin.com/hbcu-tour">View case study →</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <button class="acc-btn" aria-expanded="false" aria-controls="p3" id="b3" data-img="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/45ecbfc5-ace2-479c-ac5e-22808e432221/Screenshot+2025-10-11+at+10.17.02%E2%80%AFPM.png?format=1000w" data-copy="A Super Bowl-weekend social, digital, and in-person activation uniting regional brunch cultures through chef-driven storytelling and a Las Vegas pop-up at Della's Kitchen.">
+          <span class="acc-n">03</span><span class="acc-t">Brunch With The Best</span><span class="acc-b">Pepsico</span><span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-panel" id="p3" role="region" aria-labelledby="b3" hidden>
+          <img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/45ecbfc5-ace2-479c-ac5e-22808e432221/Screenshot+2025-10-11+at+10.17.02%E2%80%AFPM.png?format=1000w" alt="Brunch With The Best activation" loading="lazy">
+          <div class="txt">
+            <ul class="tags"><li>Pop-Up</li><li>Food</li></ul>
+            <p>A Super Bowl-weekend social, digital, and in-person activation uniting regional brunch cultures through chef-driven storytelling and a Las Vegas pop-up at Della's Kitchen. Over 13M organic views.</p>
+            <a class="more-link" href="https://www.byninaaustin.com/brunch-with-the-best">View case study →</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <button class="acc-btn" aria-expanded="false" aria-controls="p4" id="b4" data-img="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/c3d450b6-c04e-48b6-b236-6ca224f32e0f/imgi_50_The_85_Shop_curated_in_partnership.png?format=1000w" data-copy="A nostalgic Chicago pop-up and global auction that solidified eBay's cultural claim in the sneaker game.">
+          <span class="acc-n">04</span><span class="acc-t">The '85 Shop</span><span class="acc-b">eBay</span><span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-panel" id="p4" role="region" aria-labelledby="b4" hidden>
+          <img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/c3d450b6-c04e-48b6-b236-6ca224f32e0f/imgi_50_The_85_Shop_curated_in_partnership.png?format=1000w" alt="The '85 Shop pop-up" loading="lazy">
+          <div class="txt">
+            <ul class="tags"><li>Pop-Up</li><li>Fashion</li></ul>
+            <p>A nostalgic Chicago pop-up and global auction that solidified eBay's cultural claim in the sneaker game.</p>
+            <a class="more-link" href="https://www.byninaaustin.com/the-85-shop">View case study →</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <button class="acc-btn" aria-expanded="false" aria-controls="p5" id="b5" data-img="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/6ecc2270-cd0f-4d36-8129-c2e7a8f84435/imgi_3_PJNITZA0N0TcDglnxwfq81ykH7k.jpg?format=1000w" data-copy="A next-gen Father's Day activation where gaming became a holiday gathering, bringing fathers and families together on stream. 15M impressions and a 7.5x click-through rate.">
+          <span class="acc-n">05</span><span class="acc-t">Father’s Day Streamathon</span><span class="acc-b">Walmart</span><span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="acc-panel" id="p5" role="region" aria-labelledby="b5" hidden>
+          <img src="https://images.squarespace-cdn.com/content/v1/68e2f7dcd71dde015221c1d4/6ecc2270-cd0f-4d36-8129-c2e7a8f84435/imgi_3_PJNITZA0N0TcDglnxwfq81ykH7k.jpg?format=1000w" alt="Father's Day Streamathon stream" loading="lazy">
+          <div class="txt">
+            <ul class="tags"><li>Creator-Led</li><li>Retail</li></ul>
+            <p>A next-gen Father's Day activation where gaming became a holiday gathering, bringing fathers and families together on stream. 15M impressions and a 7.5x click-through rate.</p>
+            <a class="more-link" href="https://www.byninaaustin.com/fathers-day-streamathon">View case study →</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<div class="hc" id="hc" aria-hidden="true"><img id="hc-img" alt=""><p id="hc-copy"></p></div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.acc-btn');
+  function setOpen(btn, open){
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    panel.hidden = !open;
+  }
+  items.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      items.forEach(function(other){ if(other !== btn) setOpen(other, false); });
+      setOpen(btn, open);
+    });
+  });
+
+  // floating hover card for fine pointers
+  var card = document.getElementById('hc');
+  var cimg = document.getElementById('hc-img');
+  var ccopy = document.getElementById('hc-copy');
+  var mq = window.matchMedia('(hover:hover) and (pointer:fine)');
+  if (mq.matches) {
+    items.forEach(function(btn){
+      btn.addEventListener('mouseenter', function(){
+        cimg.src = btn.getAttribute('data-img');
+        ccopy.textContent = btn.getAttribute('data-copy');
+        card.classList.add('on');
+      });
+      btn.addEventListener('mouseleave', function(){ card.classList.remove('on'); });
+      btn.addEventListener('mousemove', function(e){
+        var x = Math.min(window.innerWidth - 160, Math.max(160, e.clientX + 180));
+        var y = Math.min(window.innerHeight - 200, Math.max(200, e.clientY));
+        card.style.left = x + 'px';
+        card.style.top = y + 'px';
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
