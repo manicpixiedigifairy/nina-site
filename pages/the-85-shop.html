@@ -134,8 +134,8 @@
 .s85 .vd .pl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .s85 .vd h2{font-size:calc(var(--u)*5.2);margin:calc(var(--u)*1.2) 0 calc(var(--u)*1.8)}
 /* results */
-.s85 .rs .gx{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:stretch}
-.s85 .rs .card{background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--grn)}
+.s85 .rs .gx{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:stretch}
+.s85 .rs .card{max-width:calc(var(--u)*62);background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--grn)}
 .s85 .rs .card h2{font-size:calc(var(--u)*4);margin:calc(var(--u)*1) 0 calc(var(--u)*1.4)}
 .s85 .rs .card p{font-size:calc(var(--u)*1.5);line-height:1.5;font-weight:700}
 .s85 .rs .role{background:var(--ink);color:#fff;border:1px solid var(--ink);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--yel);display:flex;flex-direction:column;gap:calc(var(--u)*1.4)}
@@ -150,6 +150,10 @@
 .s85 .ft .bars{margin-top:calc(var(--u)*2.2)}
 .s85 .ft a.bk{display:inline-flex;align-items:center;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.6);font-family:var(--mo);font-weight:700;font-size:max(10px,calc(var(--u)*.85));letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;padding:calc(var(--u)*.8) calc(var(--u)*1.6);transition:background .2s,color .2s}
 .s85 .ft a.bk:hover{background:#fff;color:var(--ink)}
+.s85 .ft .ctas{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*2.6)}
+.s85 .ft .ctas a.bk{margin-top:0}
+.s85 .ft a.bk.fp{background:var(--yel);color:var(--ink);border-color:var(--yel)}
+.s85 .ft a.bk.fp:hover{background:#fff;border-color:#fff}
 @media (max-width:1000px){
 .s85 .fr{--u:clamp(11px,1.9cqw,28px)}
 .s85 .hero h1{font-size:calc(var(--u)*8.4)}
@@ -191,7 +195,7 @@
 <header class="hero" id="top">
   <h1 class="x" aria-label="The &rsquo;85 Shop"><span>The &rsquo;85</span><span class="l2"><span>Shop</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></h1>
   <div class="hg">
-    <div class="ph rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-case.webp?v=1" alt="" role="img" aria-label="Open leather briefcase holding a pair of red and white Air Jordan 1 sneakers beside The &rsquo;85 Shop floor lettering" loading="lazy" decoding="async"><span class="tg">Fulton Market &middot; Chicago</span></div>
+    <div class="ph rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-case.webp?v=1" alt="" role="img" aria-label="Open leather briefcase holding a pair of red and white Air Jordan 1 sneakers beside The &rsquo;85 Shop floor lettering" loading="lazy" decoding="async"></div>
     <div class="hl rv" style="--d:.1s"><span class="lb"><b>eBay</b>The Headline</span><p class="big">After the success of the digital sneaker history museum, this pop-up was a way to give the fans a chance to physically experience the iconic sneaker artifacts.</p></div>
   </div>
 </header>
@@ -208,7 +212,7 @@
   </div>
   <div class="gx">
     <div class="fm rv">
-      <figure class="a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-flatlay.webp?v=1" alt="" role="img" aria-label="Overhead view of Air Jordan 1 sneakers in many colorways laid out on a white floor with The &rsquo;85 Shop lettering" loading="lazy" decoding="async"><span class="hand">Every colorway.</span></figure>
+      <figure class="a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-flatlay.webp?v=1" alt="" role="img" aria-label="Overhead view of Air Jordan 1 sneakers in many colorways laid out on a white floor with The &rsquo;85 Shop lettering" loading="lazy" decoding="async"></figure>
       <figure class="b"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-shelves.webp?v=1" alt="" role="img" aria-label="Visitor in a Chicago Bulls jacket browsing sneakers on wooden shelves" loading="lazy" decoding="async"></figure>
       <figure class="c"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-floor.webp?v=1" alt="" role="img" aria-label="Wide view of the shop floor with long shelves of sneakers and wooden benches" loading="lazy" decoding="async"></figure>
       <figure class="d"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-fulton.webp?v=1" alt="" role="img" aria-label="The &rsquo;85 Shop window graphics on a brick building at Fulton Market" loading="lazy" decoding="async"><figcaption>Fulton Market</figcaption></figure>
@@ -235,14 +239,13 @@
 <section class="sc rs" id="results">
   <div class="gx">
     <div class="card rv"><span class="lb"><b>04</b>How It Did</span><h2 class="x">Results</h2><p>Enabled collectors to own pieces of history through the pop-up and auction, with qualitative success in community engagement and attendance.</p></div>
-    <div class="role rv" style="--d:.1s"><span class="lb"><b>05</b>My Role</span><p>As Associate Creative Director at The Many, I led the development of The Footprint social series. This pop-up was the next chapter of that narrative, bringing the story to life with immersive storytelling and participatory community building.</p><a class="nx" href="https://www.byninaaustin.com/the-footprint">The Footprint &rarr;</a></div>
   </div>
 </section>
 
 <footer class="ft">
   <h2 class="x" aria-label="The &rsquo;85 Shop">The &rsquo;85<br><span>Shop</span></h2>
   <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  <a class="bk" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a>
+  <div class="ctas"><a class="bk" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a><a class="bk fp" href="https://www.byninaaustin.com/the-footprint">Explore The Footprint &rarr;</a></div>
 </footer>
 </div></div>
 <script>
