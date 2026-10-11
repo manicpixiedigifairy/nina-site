@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="eBay's The '85 Shop, a sneaker pop-up in Chicago that paid homage to the Air Jordan 1's 1985 birth, paired with a 10-day online auction.">
+<title>eBay: The '85 Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+.s85,.s85 *{box-sizing:border-box}
+.s85{container-type:inline-size;display:block;width:100%;background:#F6F4EE;color:#0A0A0A;font-family:'Archivo',system-ui,sans-serif;overflow:hidden;position:relative;-webkit-font-smoothing:antialiased}
+.s85 .fr{--u:clamp(11px,1.1111cqw,28px);--ink:#0A0A0A;--paper:#fff;--tile:#F6F4EE;--red:#E53238;--blue:#0064D2;--yel:#F5AF02;--grn:#86B817;--hd:'Archivo',system-ui,sans-serif;--mk:'Permanent Marker','Marker Felt',cursive;--mo:'Space Mono',ui-monospace,monospace;
+  position:relative;
+  background-color:var(--tile);
+  background-image:linear-gradient(rgba(10,10,10,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,10,.075) 1px,transparent 1px);
+  background-size:calc(var(--u)*5) calc(var(--u)*5);
+  padding:calc(var(--u)*2.4) 0 0}
+.s85 a{color:inherit;text-decoration:none}
+.s85 img{display:block;max-width:100%}
+.s85 p{margin:0}
+.s85 h1,.s85 h2,.s85 h3{margin:0;font-weight:900}
+.s85 .x{font-family:var(--hd);font-style:italic;font-weight:900;font-stretch:125%;text-transform:uppercase;letter-spacing:-.025em;line-height:.88}
+.s85 .lb{font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.78));letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:calc(var(--u)*.7)}
+.s85 .lb b{font-weight:700;background:var(--ink);color:#fff;padding:calc(var(--u)*.15) calc(var(--u)*.55)}
+.s85 .bdy{font-size:calc(var(--u)*1.2);line-height:1.6;font-weight:500}
+.s85 .gx{padding:0 calc(var(--u)*5.5);position:relative}
+.s85 .sc{padding:calc(var(--u)*7) 0}
+.s85 .sh{margin-bottom:calc(var(--u)*3.2);display:grid;gap:calc(var(--u)*1.2)}
+.s85 .sh h2{font-size:calc(var(--u)*5.6)}
+.s85 .bars{display:flex;gap:calc(var(--u)*.55)}
+.s85 .bars i{display:block;height:calc(var(--u)*.7);flex:none}
+.s85 .bars i:nth-child(1){background:var(--red);width:calc(var(--u)*7)}
+.s85 .bars i:nth-child(2){background:var(--blue);width:calc(var(--u)*4)}
+.s85 .bars i:nth-child(3){background:var(--yel);width:calc(var(--u)*10)}
+.s85 .bars i:nth-child(4){background:var(--grn);width:calc(var(--u)*5)}
+/* reveal */
+.s85.js .rv{opacity:0;transform:translateY(calc(var(--u)*1.6));transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.s85.js .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.s85.js .rv{opacity:1;transform:none;transition:none}}
+/* nav */
+.s85 .nav{position:relative;z-index:5;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);padding:0 calc(var(--u)*5.5)}
+.s85 .nav a{font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.74));letter-spacing:.12em;text-transform:uppercase;background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*.55) calc(var(--u)*1.1);transition:background .2s,color .2s}
+.s85 .nav a:hover{background:var(--ink);color:#fff}
+.s85 .nav .bk{margin-left:auto;background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:calc(var(--u)*.6)}
+.s85 .nav .bk:hover{background:var(--red);border-color:var(--red)}
+.s85 .nav .bk i{width:calc(var(--u)*.9);height:calc(var(--u)*.9);border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) scale(.7)}
+/* hero */
+.s85 .hero{padding:calc(var(--u)*4.4) calc(var(--u)*5.5) 0}
+.s85 .hero h1{font-size:calc(var(--u)*13.4)}
+.s85 .hero .l2{display:flex;align-items:center;gap:calc(var(--u)*2.4)}
+.s85 .hero .l2 .bars{flex:1;align-self:center;transform:translateY(calc(var(--u)*.8));flex-wrap:nowrap;min-width:0}
+.s85 .hero .l2 .bars i{height:calc(var(--u)*1.6)}
+.s85 .hero .l2 .bars i:nth-child(n){width:auto}
+.s85 .hero .l2 .bars i:nth-child(1){flex:1.4}
+.s85 .hero .l2 .bars i:nth-child(2){flex:.8}
+.s85 .hero .l2 .bars i:nth-child(3){flex:2}
+.s85 .hero .l2 .bars i:nth-child(4){flex:1}
+.s85 .hg{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*2.8);align-items:end}
+.s85 .hg .ph{position:relative;border:1px solid var(--ink);background:#fff;box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink);aspect-ratio:1800/1125;overflow:hidden}
+.s85 .hg .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s85 .hl{background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*2) calc(var(--u)*2.2) calc(var(--u)*2.4);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--red)}
+.s85 .hl .lb{margin-bottom:calc(var(--u)*1.2)}
+.s85 .hl p.big{font-size:calc(var(--u)*1.75);line-height:1.3;font-weight:800;letter-spacing:-.01em}
+.s85 .tg{position:absolute;z-index:3;left:calc(var(--u)*1.2);bottom:calc(var(--u)*1.2);background:var(--yel);color:var(--ink);border:1px solid var(--ink);font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.8));letter-spacing:.1em;text-transform:uppercase;padding:calc(var(--u)*.55) calc(var(--u)*1.2) calc(var(--u)*.55) calc(var(--u)*2.2);transform:rotate(-2deg);clip-path:polygon(calc(var(--u)*1) 0,100% 0,100% 100%,calc(var(--u)*1) 100%,0 50%)}
+.s85 .tg:before{content:"";position:absolute;left:calc(var(--u)*.85);top:50%;width:calc(var(--u)*.6);height:calc(var(--u)*.6);border-radius:50%;background:var(--tile);transform:translateY(-50%);border:1px solid var(--ink)}
+/* marquee */
+.s85 .mq{margin-top:calc(var(--u)*5);background:var(--red);color:#fff;overflow:hidden;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-1.2deg);width:104%;margin-left:-2%}
+.s85 .mq .tr{display:flex;width:max-content;animation:mq 36s linear infinite}
+.s85 .mq span{font-family:var(--hd);font-style:italic;font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:calc(var(--u)*2.1);padding:calc(var(--u)*1) calc(var(--u)*1.6);white-space:nowrap;display:flex;align-items:center;gap:calc(var(--u)*3.2)}
+.s85 .mq span:after{content:"\2605";font-style:normal;font-size:.7em}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.s85 .mq .tr{animation:none}}
+/* brief tags */
+.s85 .tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.4);align-items:start}
+.s85 .tag{position:relative;background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*4) calc(var(--u)*2.2) calc(var(--u)*2.4);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--ink);margin-top:calc(var(--u)*2.4)}
+.s85 .tag:before{content:"";position:absolute;left:50%;top:calc(var(--u)*1);width:calc(var(--u)*1.3);height:calc(var(--u)*1.3);margin-left:calc(var(--u)*-.65);border-radius:50%;background:var(--tile);border:1px solid var(--ink)}
+.s85 .tag:after{content:"";position:absolute;left:50%;top:calc(var(--u)*-2.4);width:1px;height:calc(var(--u)*3.6);background:var(--ink)}
+.s85 .tag .lb{margin-bottom:calc(var(--u)*1)}
+.s85 .tag h3{font-family:var(--hd);font-style:italic;font-stretch:125%;text-transform:uppercase;font-size:calc(var(--u)*2.3);line-height:.95;letter-spacing:-.02em;margin-bottom:calc(var(--u)*1.2)}
+.s85 .tag:nth-child(1){--c:var(--red)}.s85 .tag:nth-child(2){--c:var(--blue)}.s85 .tag:nth-child(3){--c:var(--grn)}
+.s85 .tag h3{color:var(--c)}
+.s85 .tag.wide{grid-column:span 2}
+/* why */
+.s85 .why{background:var(--ink);color:#fff;position:relative}
+.s85 .why .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:calc(var(--u)*3.2);align-items:start}
+.s85 .why h2{font-size:calc(var(--u)*5.2);color:var(--yel)}
+.s85 .why .lb b{background:#fff;color:var(--ink)}
+.s85 .why p.big{font-size:calc(var(--u)*2);line-height:1.45;font-weight:700}
+.s85 .why .mkr{font-family:var(--mk);font-size:calc(var(--u)*2.6);color:var(--grn);transform:rotate(-3deg);display:inline-block;margin-top:calc(var(--u)*1.4)}
+/* inside strip */
+.s85 .strip{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0 calc(var(--u)*5.5)}
+.s85 .strip .p{position:relative;margin-left:calc(var(--u)*-1.6)}
+.s85 .strip .p:first-child{margin-left:0}
+.s85 .strip .p:first-child .spec{padding-left:0}
+.s85 .strip .p:nth-child(2){z-index:2}.s85 .strip .p:nth-child(3){z-index:3}.s85 .strip .p:nth-child(4){z-index:4}
+.s85 .strip .p:nth-child(even){margin-top:calc(var(--u)*3.4)}
+.s85 .strip .im{position:relative;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--ink);background:#fff;box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--ink)}
+.s85 .strip .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.s85 .strip .p:hover img{transform:scale(1.04)}
+.s85 .spec{margin-top:calc(var(--u)*1.4);padding:0 calc(var(--u)*1.8) 0 calc(var(--u)*2.4);font-family:var(--mo);font-size:max(9px,calc(var(--u)*.78));line-height:1.55;letter-spacing:.06em;text-transform:uppercase}
+.s85 .spec:before{content:"";display:block;width:calc(var(--u)*3.2);height:calc(var(--u)*.7);margin-bottom:calc(var(--u)*.7);background:repeating-linear-gradient(135deg,var(--ink) 0 2px,transparent 2px 5px);opacity:.75}
+.s85 .spec b{display:block;font-weight:700}
+.s85 .mkn{font-family:var(--mk);text-transform:none;letter-spacing:0;font-size:calc(var(--u)*1.9);display:inline-block;transform:rotate(-3deg)}
+.s85 .hand{position:absolute;z-index:4;font-family:var(--mk);font-size:calc(var(--u)*2.6);line-height:1;color:var(--red);transform:rotate(-5deg);pointer-events:none;text-shadow:0 0 0 #fff}
+/* floor mosaic */
+.s85 .fm{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:calc(var(--u)*26) calc(var(--u)*18);gap:calc(var(--u)*1.4);margin-top:calc(var(--u)*5)}
+.s85 .fm figure{position:relative;margin:0;overflow:hidden;border:1px solid var(--ink);background:#fff}
+.s85 .fm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s85 .fm .a{grid-column:1/6;grid-row:1/3}
+.s85 .fm .b{grid-column:6/10;grid-row:1}
+.s85 .fm .c{grid-column:10/13;grid-row:1}
+.s85 .fm .d{grid-column:6/13;grid-row:2}
+.s85 .fm .a .hand{left:calc(var(--u)*2);bottom:calc(var(--u)*2.4);white-space:nowrap;background:#fff;padding:calc(var(--u)*.2) calc(var(--u)*.8);border:1px solid var(--ink)}
+.s85 .fm figcaption{position:absolute;left:calc(var(--u)*.8);bottom:calc(var(--u)*.8);background:var(--paper);border:1px solid var(--ink);font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.7));letter-spacing:.1em;text-transform:uppercase;padding:calc(var(--u)*.3) calc(var(--u)*.8)}
+/* auction */
+.s85 .au{background:var(--blue);color:#fff}
+.s85 .au .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:calc(var(--u)*3.2);align-items:center}
+.s85 .au .lb b{background:#fff;color:var(--blue)}
+.s85 .au h2{font-size:calc(var(--u)*5.2);margin:calc(var(--u)*1.2) 0 calc(var(--u)*2.2)}
+.s85 .nums{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.6);margin-bottom:calc(var(--u)*2.4)}
+.s85 .nums div{background:var(--paper);color:var(--ink);border:1px solid var(--ink);box-shadow:calc(var(--u)*.45) calc(var(--u)*.45) 0 var(--yel);padding:calc(var(--u)*1.4) calc(var(--u)*1.6)}
+.s85 .nums b{display:block;font-family:var(--hd);font-style:italic;font-stretch:125%;font-weight:900;font-size:calc(var(--u)*5.4);line-height:.9;letter-spacing:-.03em}
+.s85 .nums span{display:block;margin-top:calc(var(--u)*.6);font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.76));letter-spacing:.12em;text-transform:uppercase}
+.s85 .au .bdy{font-weight:600}
+.s85 .au .pic{position:relative;border:1px solid var(--ink);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ink);aspect-ratio:1500/998;background:#fff;overflow:hidden}
+.s85 .au .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* video */
+.s85 .vd .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*3.2);align-items:center}
+.s85 .vd .pl{position:relative;justify-self:center;width:min(100%,calc(var(--u)*24));aspect-ratio:9/16;border:1px solid var(--ink);border-radius:calc(var(--u)*1);overflow:hidden;background:#000;box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--red)}
+.s85 .vd .pl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.s85 .vd .pl button{all:unset;cursor:pointer;position:absolute;inset:0;display:grid;place-items:center}
+.s85 .vd .pl button:focus-visible{outline:3px solid var(--yel);outline-offset:-3px}
+.s85 .vd .pl .ply{width:calc(var(--u)*5);height:calc(var(--u)*5);border-radius:50%;background:var(--yel);border:1px solid var(--ink);display:grid;place-items:center;transition:transform .25s}
+.s85 .vd .pl button:hover .ply{transform:scale(1.08)}
+.s85 .vd .pl .ply:after{content:"";margin-left:calc(var(--u)*.4);border-left:calc(var(--u)*1.5) solid var(--ink);border-top:calc(var(--u)*1) solid transparent;border-bottom:calc(var(--u)*1) solid transparent}
+.s85 .vd .pl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.s85 .vd h2{font-size:calc(var(--u)*5.2);margin:calc(var(--u)*1.2) 0 calc(var(--u)*1.8)}
+/* results */
+.s85 .rs .gx{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:stretch}
+.s85 .rs .card{background:var(--paper);border:1px solid var(--ink);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--grn)}
+.s85 .rs .card h2{font-size:calc(var(--u)*4);margin:calc(var(--u)*1) 0 calc(var(--u)*1.4)}
+.s85 .rs .card p{font-size:calc(var(--u)*1.5);line-height:1.5;font-weight:700}
+.s85 .rs .role{background:var(--ink);color:#fff;border:1px solid var(--ink);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--yel);display:flex;flex-direction:column;gap:calc(var(--u)*1.4)}
+.s85 .rs .role .lb b{background:#fff;color:var(--ink)}
+.s85 .rs .role p{font-size:calc(var(--u)*1.2);line-height:1.6;font-weight:500}
+.s85 .rs .role a.nx{margin-top:auto;align-self:flex-start;background:var(--yel);color:var(--ink);border:1px solid #fff;font-family:var(--mo);font-weight:700;font-size:max(10px,calc(var(--u)*.85));letter-spacing:.12em;text-transform:uppercase;padding:calc(var(--u)*.8) calc(var(--u)*1.6);display:inline-flex;gap:calc(var(--u)*.8);align-items:center;transition:background .2s}
+.s85 .rs .role a.nx:hover{background:#fff}
+/* footer */
+.s85 .ft{background:var(--ink);color:#fff;padding:calc(var(--u)*6) calc(var(--u)*5.5) calc(var(--u)*5);position:relative;overflow:hidden}
+.s85 .ft h2{font-size:calc(var(--u)*11);color:#fff}
+.s85 .ft h2 span{color:var(--yel)}
+.s85 .ft .bars{margin-top:calc(var(--u)*2.2)}
+.s85 .ft a.bk{display:inline-flex;align-items:center;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.6);font-family:var(--mo);font-weight:700;font-size:max(10px,calc(var(--u)*.85));letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;padding:calc(var(--u)*.8) calc(var(--u)*1.6);transition:background .2s,color .2s}
+.s85 .ft a.bk:hover{background:#fff;color:var(--ink)}
+@media (max-width:1000px){
+.s85 .fr{--u:clamp(11px,1.9cqw,28px)}
+.s85 .hero h1{font-size:calc(var(--u)*8.4)}
+.s85 .hg{grid-template-columns:minmax(0,1fr)}
+.s85 .tags{grid-template-columns:minmax(0,1fr)}
+.s85 .tag.wide{grid-column:auto}
+.s85 .why .gx,.s85 .au .gx,.s85 .vd .gx,.s85 .rs .gx{grid-template-columns:minmax(0,1fr)}
+.s85 .sh h2,.s85 .why h2,.s85 .au h2,.s85 .vd h2{font-size:calc(var(--u)*4.6)}
+.s85 .strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2) calc(var(--u)*1.4)}
+.s85 .strip .p,.s85 .strip .p:first-child{margin-left:0}
+.s85 .strip .spec{padding:0}
+.s85 .strip .p:nth-child(even){margin-top:calc(var(--u)*2.4)}
+.s85 .bdy{font-size:calc(var(--u)*1.6)}
+.s85 .hl p.big{font-size:calc(var(--u)*2.2)}
+.s85 .why p.big{font-size:calc(var(--u)*2.4)}
+.s85 .tag h3{font-size:calc(var(--u)*3)}
+.s85 .rs .card p{font-size:calc(var(--u)*1.9)}.s85 .rs .role p{font-size:calc(var(--u)*1.6)}
+.s85 .ft h2{font-size:calc(var(--u)*9)}
+.s85 .nums b{font-size:calc(var(--u)*6)}
+.s85 .fm{grid-template-rows:none}
+.s85 .fm .a{grid-column:1/13;grid-row:auto;aspect-ratio:4/3}
+.s85 .fm .b{grid-column:1/7;grid-row:auto;aspect-ratio:4/5}.s85 .fm .c{grid-column:7/13;grid-row:auto;aspect-ratio:4/5}.s85 .fm .d{grid-column:1/13;grid-row:auto;aspect-ratio:1000/666}
+}
+@media (max-width:700px){
+.s85 .fr{--u:clamp(9px,3.15cqw,28px)}
+.s85 .gx,.s85 .nav,.s85 .hero,.s85 .ft{padding-left:calc(var(--u)*2.4);padding-right:calc(var(--u)*2.4)}
+.s85 .strip{margin:0 calc(var(--u)*2.4)}
+.s85 .hero h1{font-size:calc(var(--u)*7.4)}
+.s85 .hero .l2 .bars{display:none}
+.s85 .sc{padding:calc(var(--u)*5) 0}
+.s85 .nums{grid-template-columns:1fr}
+.s85 .hand{font-size:calc(var(--u)*2.4)}
+.s85 .mq span{font-size:calc(var(--u)*2.6)}
+.s85 .ft h2{font-size:calc(var(--u)*7)}
+}
+</style></head><body style="margin:0">
+<div class="s85"><div class="fr">
+<nav class="nav" aria-label="Sections"><a href="#brief">The Brief</a><a href="#why">Why It Matters</a><a href="#inside">Inside The Shop</a><a href="#auction">The Auction</a><a href="#results">Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<header class="hero" id="top">
+  <h1 class="x" aria-label="The &rsquo;85 Shop"><span>The &rsquo;85</span><span class="l2"><span>Shop</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></h1>
+  <div class="hg">
+    <div class="ph rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-case.webp?v=1" alt="" role="img" aria-label="Open leather briefcase holding a pair of red and white Air Jordan 1 sneakers beside The &rsquo;85 Shop floor lettering" loading="lazy" decoding="async"><span class="tg">Fulton Market &middot; Chicago</span></div>
+    <div class="hl rv" style="--d:.1s"><span class="lb"><b>eBay</b>The Headline</span><p class="big">eBay opened The &rsquo;85 Shop in Chicago to pay homage to the Air Jordan 1&rsquo;s 1985 birth and its role in modern sneaker culture.</p></div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="tr"><span>The &rsquo;85 Shop</span><span>Fulton Market, Chicago</span><span>Two-Day Pop-Up</span><span>10-Day Online Auction</span><span>Air Jordan 1</span><span>The &rsquo;85 Shop</span><span>Fulton Market, Chicago</span><span>Two-Day Pop-Up</span><span>10-Day Online Auction</span><span>Air Jordan 1</span><span>The &rsquo;85 Shop</span><span>Fulton Market, Chicago</span><span>Two-Day Pop-Up</span><span>10-Day Online Auction</span><span>Air Jordan 1</span><span>The &rsquo;85 Shop</span><span>Fulton Market, Chicago</span><span>Two-Day Pop-Up</span><span>10-Day Online Auction</span><span>Air Jordan 1</span></div></div>
+
+<section class="sc" id="brief">
+  <div class="gx">
+    <div class="sh rv"><span class="lb"><b>01</b>The Brief</span><h2 class="x">Who and What</h2></div>
+    <div class="tags">
+      <div class="tag rv"><span class="lb">The Client</span><h3>Who</h3><p class="bdy">eBay, the online marketplace carving out a distinct lane in sneaker culture by celebrating Black sneaker history, building collector loyalty, and setting itself apart from competitors like StockX through authenticity and cultural storytelling.</p></div>
+      <div class="tag wide rv" style="--d:.08s"><span class="lb">The Campaign</span><h3>What</h3><p class="bdy">Opened &lsquo;The &rsquo;85 Shop&rsquo; pop-up in Chicago to pay homage to the Air Jordan 1&rsquo;s 1985 birth and its role in modern sneaker culture, featuring a complete collection of original Air Jordan 1s in every colorway, a never-released sample, era sneakers like Puma Clyde and Adidas Forum, memorabilia from the Air homage film, and modern retro offerings, complemented by a 10-day online auction of featured items.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sc why" id="why">
+  <div class="gx">
+    <div class="rv"><span class="lb"><b>02</b>Cultural Impact</span><h2 class="x" style="margin-top:calc(var(--u)*1.2)">Why It Matters</h2></div>
+    <div class="rv" style="--d:.1s"><p class="big">This unique sneaker exhibit tackled the underrecognition of Black sneaker origins by immersing visitors in the Air Jordan 1&rsquo;s transformative history, countered exclusivity in resale markets with accessible celebrations, and positioned eBay as a heritage curator in the modern era of sneaker culture.</p></div>
+  </div>
+</section>
+
+<section class="sc" id="inside">
+  <div class="gx"><div class="sh rv"><span class="lb"><b>03</b>Inside The Shop</span><h2 class="x">Before The One</h2></div></div>
+  <div class="strip">
+    <div class="p rv"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-before.webp?v=1" alt="" role="img" aria-label="Display with a Chicago Bulls number 23 jersey and sneakers under the heading Before The One" loading="lazy" decoding="async"></div><div class="spec"><b>Before The One</b>Pre 1985</div></div>
+    <div class="p rv" style="--d:.08s"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-pedestals.webp?v=1" alt="" role="img" aria-label="White pedestals with vintage Adidas and Converse high-top sneakers and a red and white Air Jordan 1" loading="lazy" decoding="async"></div><div class="spec"><b>Era Sneakers</b>On the pedestal</div></div>
+    <div class="p rv" style="--d:.16s"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-vitrine.webp?v=1" alt="" role="img" aria-label="Vintage sneakers in red shoeboxes inside a clear display case" loading="lazy" decoding="async"></div><div class="spec"><b>Display Cases</b>Up close</div></div>
+    <div class="p rv" style="--d:.24s"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-theone.webp?v=1" alt="" role="img" aria-label="Visitor facing a red wall of Air Jordan 1 sneakers on shelves under the heading The One" loading="lazy" decoding="async"></div><div class="spec"><b>The One</b>Air Jordan 1</div></div>
+  </div>
+  <div class="gx">
+    <div class="fm rv">
+      <figure class="a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-flatlay.webp?v=1" alt="" role="img" aria-label="Overhead view of Air Jordan 1 sneakers in many colorways laid out on a white floor with The &rsquo;85 Shop lettering" loading="lazy" decoding="async"><span class="hand">Every colorway.</span></figure>
+      <figure class="b"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-shelves.webp?v=1" alt="" role="img" aria-label="Visitor in a Chicago Bulls jacket browsing sneakers on wooden shelves" loading="lazy" decoding="async"></figure>
+      <figure class="c"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-floor.webp?v=1" alt="" role="img" aria-label="Wide view of the shop floor with long shelves of sneakers and wooden benches" loading="lazy" decoding="async"></figure>
+      <figure class="d"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-fulton.webp?v=1" alt="" role="img" aria-label="The &rsquo;85 Shop window graphics on a brick building at Fulton Market" loading="lazy" decoding="async"><figcaption>Fulton Market</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sc au" id="auction">
+  <div class="gx">
+    <div class="rv"><span class="lb"><b>04</b>Channels</span><h2 class="x">On Site, Then Online</h2>
+      <div class="nums"><div><b>2</b><span>Day Pop-Up</span></div><div><b>10</b><span>Day Online Auction</span></div></div>
+      <p class="bdy">Hosted on-site at Fulton Market in Chicago for a two-day pop-up, with an online auction via eBay&rsquo;s marketplace for global access and bidding.</p></div>
+    <div class="pic rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-wall.webp?v=1" alt="" role="img" aria-label="Sneakers on white pedestals in front of a tiled wall with The &rsquo;85 Shop sign" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="sc vd" id="watch">
+  <div class="gx">
+    <div class="rv"><span class="lb"><b>05</b>Watch</span><h2 class="x">The &rsquo;85 Shop</h2><p class="bdy" style="max-width:calc(var(--u)*34)">Press play to watch it.</p></div>
+    <div class="pl rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/s85-flatlay.webp?v=1" alt="" role="img" aria-label="The &rsquo;85 Shop video poster frame" loading="lazy" decoding="async"><button type="button" aria-label="Play The &rsquo;85 Shop video"><span class="ply" aria-hidden="true"></span></button></div>
+  </div>
+</section>
+
+<section class="sc rs" id="results">
+  <div class="gx">
+    <div class="card rv"><span class="lb"><b>06</b>How It Did</span><h2 class="x">Results</h2><p>Enabled collectors to own pieces of history through the pop-up and auction, with qualitative success in community engagement and attendance.</p></div>
+    <div class="role rv" style="--d:.1s"><span class="lb"><b>07</b>My Role</span><p>As Associate Creative Director at The Many, I led the development of The Footprint social series. This pop-up was the next chapter of that narrative, bringing the story to life with immersive storytelling and participatory community building.</p><a class="nx" href="https://www.byninaaustin.com/the-footprint">The Footprint &rarr;</a></div>
+  </div>
+</section>
+
+<footer class="ft">
+  <h2 class="x" aria-label="The &rsquo;85 Shop">The &rsquo;85<br><span>Shop</span></h2>
+  <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <a class="bk" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a>
+</footer>
+</div></div>
+<script>
+(function(){
+  var root=document;
+  var rr=root.querySelector('.s85');
+  if(!rr)return;
+  rr.classList.add('js');
+  var win=window;
+  (function(){
+    var nav=rr.querySelector('nav');if(!nav)return;
+    var d=win.document;
+    function hdr(){var c=d.querySelectorAll('#header, header, .header, [data-nc-group="top"]');for(var i=0;i<c.length;i++){var el=c[i];if(rr.contains(el))continue;var r=el.getBoundingClientRect();if(r.height>20&&r.width>200)return el}return null}
+    function fit(){
+      rr.style.paddingTop='';
+      var h=hdr();if(!h)return;
+      var hb=h.getBoundingClientRect().bottom,nt=nav.getBoundingClientRect().top,need=Math.ceil(hb-nt+16);
+      if(need>0&&need<400)rr.style.paddingTop=need+'px';
+    }
+    fit();win.addEventListener('load',fit);win.addEventListener('resize',fit);win.setTimeout(fit,800);win.setTimeout(fit,2000);
+  })();
+  var rv=[].slice.call(rr.querySelectorAll('.rv'));
+  function show(el){el.classList.add('on')}
+  if('IntersectionObserver' in win){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+    win.setTimeout(function(){if(!rr.querySelector('.rv.on')){rv.forEach(show)}},2500);
+  }else{rv.forEach(show)}
+  [].forEach.call(rr.querySelectorAll('a[href^="#"]'),function(a){
+    a.addEventListener('click',function(ev){
+      var t=root.getElementById(a.getAttribute('href').slice(1));
+      if(t){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+  });
+  var pl=rr.querySelector('.vd .pl'),pb=pl&&pl.querySelector('button');
+  if(pb){pb.addEventListener('click',function(){
+    var f=win.document.createElement('iframe');
+    f.src='https://player.vimeo.com/video/824567011?h=ecfd8afcc8&autoplay=1&app_id=122963';
+    f.setAttribute('allow','autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share');
+    f.setAttribute('title','The ‘85 Shop');f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    pl.innerHTML='';pl.appendChild(f);
+  })}
+})();
+</script>
+</body></html>
