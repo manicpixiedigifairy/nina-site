@@ -251,9 +251,10 @@ html,body{margin:0;background:#F5EFEC}
 .tr .by{margin-top:calc(var(--u)*1.6);font:700 max(10px,calc(var(--u)*.76))/1.4 var(--lab);letter-spacing:.06em;text-transform:uppercase}
 
 /* 11 end credits */
-.tr .s-end{background:var(--ink);color:#fff;text-align:center;min-height:calc(var(--u)*34)}
+.tr .s-end{background:var(--ink);color:#fff;text-align:center;min-height:calc(var(--u)*40);display:flex;flex-direction:column}
+.tr .s-end .back{text-align:left}
 .tr .s-end .rail{text-align:left}
-.tr .s-end .h2{margin-left:auto;margin-right:auto;max-width:calc(var(--u)*48)}
+.tr .s-end .h2{margin:auto;padding-block:calc(var(--u)*5);width:100%;max-width:calc(var(--u)*48);text-align:center}
 .tr .s-end .h2 i{color:var(--pink)}
 .tr .s-end .rail .lb svg{color:var(--pink)}
 .tr .roll{margin:calc(var(--u)*3) auto 0;max-width:calc(var(--u)*44);display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.9) calc(var(--u)*2.4)}
@@ -533,7 +534,7 @@ html,body{margin:0;background:#F5EFEC}
   <div class="orb o2 float" aria-hidden="true" style="--d:6s;--dl:-2s"></div>
   <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Beautycon Is Back</span><span class="ln"></span><span class="pg">08 / 08</span></div>
   <h2 class="h2 rv" id="trS11h">The Place For <i>Every</i> It Girl.</h2>
-  <div><a class="btn" href="https://www.byninaaustin.com/experiential"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Back To Experiential</a></div>
+  <div class="back"><a class="btn" href="https://www.byninaaustin.com/experiential"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Back To Experiential</a></div>
 </section>
 
 </article>
