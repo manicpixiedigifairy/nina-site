@@ -64,6 +64,9 @@
 .hb .tape:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 2px,transparent 2px 5px)}
 .hb .tape.a{left:calc(var(--u)*-2.4);top:calc(var(--u)*1.2);transform:rotate(-38deg)}
 .hb .tape.b{right:calc(var(--u)*-2.2);top:calc(var(--u)*.6);transform:rotate(34deg)}
+.hb .loop{position:absolute;left:-6%;top:-8%;width:112%;height:116%;pointer-events:none;overflow:visible;z-index:3}
+.hb .loop path{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;vector-effect:non-scaling-stroke}
+.hb.js .hero.on .loop path{animation:hbdraw 1.6s .9s ease forwards}
 .hb .badge{position:absolute;right:calc(var(--u)*-2.4);bottom:calc(var(--u)*-3.6);width:calc(var(--u)*12.5);height:calc(var(--u)*12.5);z-index:3}
 .hb .badge svg{width:100%;height:100%;overflow:visible}
 .hb .badge .ring{transform-origin:50% 50%;animation:hbspin 22s linear infinite}
@@ -80,6 +83,49 @@
 .hb .tk .tr span:after{content:"";width:calc(var(--u)*1.4);height:calc(var(--u)*1.4);background:var(--ink);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 @keyframes hbtk{to{transform:translateX(-25%)}}
 @media (prefers-reduced-motion:reduce){.hb .tk .tr{animation:none}}
+
+.hb .scr{-webkit-text-fill-color:transparent;-webkit-text-stroke:calc(var(--u)*.14) var(--sc,#fff);filter:url(#hbrough)}
+.hb .mt{position:absolute;top:calc(var(--u)*2.4);right:calc(var(--u)*5.5);text-align:right;font-family:var(--mo);font-weight:700;font-size:max(8px,calc(var(--u)*.62));letter-spacing:.14em;text-transform:uppercase;line-height:1.55;opacity:.9;z-index:2;pointer-events:none}
+.hb .mt b{display:block;font-weight:700;color:var(--spark)}
+.hb .paper .mt b{color:var(--blue)}
+.hb .pn{position:absolute;left:calc(var(--u)*5.5);bottom:calc(var(--u)*2.2);font-family:var(--mo);font-weight:700;font-size:max(8px,calc(var(--u)*.7));letter-spacing:.1em;opacity:.8;z-index:2}
+.hb .edge{position:absolute;left:0;right:0;white-space:nowrap;overflow:hidden;font-family:var(--mo);font-weight:700;font-size:max(7px,calc(var(--u)*.6));letter-spacing:.2em;color:#FF8A3D;z-index:1;pointer-events:none}
+.hb .edge.t{top:calc(var(--u)*2.65)}
+.hb .edge.b{bottom:calc(var(--u)*2.65)}
+.hb .fm .im:before,.hb .fm .im:after{content:"";position:absolute;left:0;right:0;height:calc(var(--u)*1.2);background:var(--paper);z-index:2}
+.hb .fm .im:before{top:-1px;clip-path:polygon(0% 100%,0.00% 50.4%,1.43% 61.0%,2.86% 74.0%,4.29% 78.0%,5.71% 78.0%,7.14% 78.0%,8.57% 57.3%,10.00% 55.8%,11.43% 75.3%,12.86% 78.0%,14.29% 78.0%,15.71% 61.0%,17.14% 59.6%,18.57% 48.5%,20.00% 50.4%,21.43% 53.6%,22.86% 32.2%,24.29% 19.8%,25.71% 10.1%,27.14% 28.4%,28.57% 40.1%,30.00% 25.1%,31.43% 38.2%,32.86% 22.3%,34.29% 27.4%,35.71% 11.0%,37.14% 8.0%,38.57% 24.3%,40.00% 11.6%,41.43% 8.0%,42.86% 29.2%,44.29% 45.6%,45.71% 36.3%,47.14% 56.6%,48.57% 58.4%,50.00% 66.2%,51.43% 53.2%,52.86% 72.6%,54.29% 78.0%,55.71% 78.0%,57.14% 78.0%,58.57% 69.1%,60.00% 63.0%,61.43% 48.3%,62.86% 32.8%,64.29% 13.6%,65.71% 8.0%,67.14% 12.5%,68.57% 8.0%,70.00% 15.8%,71.43% 8.7%,72.86% 8.0%,74.29% 22.0%,75.71% 21.2%,77.14% 13.1%,78.57% 12.2%,80.00% 21.2%,81.43% 8.0%,82.86% 28.9%,84.29% 8.0%,85.71% 19.0%,87.14% 34.2%,88.57% 13.0%,90.00% 25.6%,91.43% 19.7%,92.86% 23.2%,94.29% 8.0%,95.71% 8.0%,97.14% 8.0%,98.57% 28.0%,100.00% 14.7%,100% 100%)}
+.hb .fm .im:after{bottom:-1px;transform:scaleY(-1);clip-path:polygon(0% 100%,0.00% 50.4%,1.43% 61.0%,2.86% 74.0%,4.29% 78.0%,5.71% 78.0%,7.14% 78.0%,8.57% 57.3%,10.00% 55.8%,11.43% 75.3%,12.86% 78.0%,14.29% 78.0%,15.71% 61.0%,17.14% 59.6%,18.57% 48.5%,20.00% 50.4%,21.43% 53.6%,22.86% 32.2%,24.29% 19.8%,25.71% 10.1%,27.14% 28.4%,28.57% 40.1%,30.00% 25.1%,31.43% 38.2%,32.86% 22.3%,34.29% 27.4%,35.71% 11.0%,37.14% 8.0%,38.57% 24.3%,40.00% 11.6%,41.43% 8.0%,42.86% 29.2%,44.29% 45.6%,45.71% 36.3%,47.14% 56.6%,48.57% 58.4%,50.00% 66.2%,51.43% 53.2%,52.86% 72.6%,54.29% 78.0%,55.71% 78.0%,57.14% 78.0%,58.57% 69.1%,60.00% 63.0%,61.43% 48.3%,62.86% 32.8%,64.29% 13.6%,65.71% 8.0%,67.14% 12.5%,68.57% 8.0%,70.00% 15.8%,71.43% 8.7%,72.86% 8.0%,74.29% 22.0%,75.71% 21.2%,77.14% 13.1%,78.57% 12.2%,80.00% 21.2%,81.43% 8.0%,82.86% 28.9%,84.29% 8.0%,85.71% 19.0%,87.14% 34.2%,88.57% 13.0%,90.00% 25.6%,91.43% 19.7%,92.86% 23.2%,94.29% 8.0%,95.71% 8.0%,97.14% 8.0%,98.57% 28.0%,100.00% 14.7%,100% 100%)}
+.hb .vt .ply{width:calc(var(--u)*9);height:calc(var(--u)*3.8);margin:calc(var(--u)*-1.9) 0 0 calc(var(--u)*-4.5);border-radius:99px;background:transparent;border:calc(var(--u)*.14) solid #fff;display:grid;place-items:center}
+.hb .vt .ply:before{content:"play";position:static;transform:none;border:0;font-family:var(--hd);font-weight:500;font-stretch:100%;font-size:calc(var(--u)*1.6);color:#fff;text-transform:lowercase;letter-spacing:.01em}
+.hb .vt:hover .ply{background:#fff}
+.hb .vt:hover .ply:before{color:var(--blue)}
+/* role slide */
+.hb .roles{position:relative;background:var(--navy);padding:0}
+.hb .rsplit{position:relative;display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);min-height:calc(var(--u)*52)}
+.hb .rph{position:relative;overflow:hidden}
+.hb .rph .main{position:absolute;inset:0}
+.hb .rph .main img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.hb .rph .main:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,30,66,0) 55%,rgba(4,30,66,.55))}
+.hb .pip{position:absolute;left:calc(var(--u)*3);bottom:calc(var(--u)*3.4);width:calc(var(--u)*13);aspect-ratio:415/739;background:var(--paper);padding:calc(var(--u)*.6);transform:rotate(-5deg);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(0,0,0,.5);z-index:3}
+.hb .pip img{width:100%;height:100%;object-fit:cover}
+.hb .pip:before{content:"";position:absolute;left:50%;top:calc(var(--u)*-1.1);width:calc(var(--u)*6);height:calc(var(--u)*2);margin-left:calc(var(--u)*-3);background:rgba(255,194,32,.85);transform:rotate(3deg)}
+.hb .rpa{position:relative;margin-left:calc(var(--u)*-3.6);filter:drop-shadow(calc(var(--u)*-.14) 0 0 #fff)}
+.hb .rpaper{position:relative;background-color:var(--paper);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .09 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");color:var(--ink);clip-path:polygon(100% 0,1.32% 0.0%,1.43% 1.7%,1.10% 3.3%,1.37% 5.0%,1.69% 6.7%,0.56% 8.3%,0.20% 10.0%,1.08% 11.7%,0.45% 13.3%,0.20% 15.0%,1.49% 16.7%,1.41% 18.3%,2.29% 20.0%,2.22% 21.7%,2.59% 23.3%,1.68% 25.0%,2.03% 26.7%,2.99% 28.3%,3.05% 30.0%,3.67% 31.7%,4.12% 33.3%,2.99% 35.0%,3.66% 36.7%,3.89% 38.3%,3.38% 40.0%,2.16% 41.7%,3.11% 43.3%,3.04% 45.0%,3.61% 46.7%,4.20% 48.3%,4.20% 50.0%,4.20% 51.7%,3.93% 53.3%,4.20% 55.0%,4.06% 56.7%,4.20% 58.3%,4.20% 60.0%,3.15% 61.7%,2.21% 63.3%,1.47% 65.0%,2.68% 66.7%,2.52% 68.3%,2.84% 70.0%,2.33% 71.7%,2.35% 73.3%,2.05% 75.0%,1.66% 76.7%,1.88% 78.3%,2.10% 80.0%,3.15% 81.7%,3.63% 83.3%,4.20% 85.0%,4.20% 86.7%,4.20% 88.3%,4.20% 90.0%,3.32% 91.7%,4.20% 93.3%,4.20% 95.0%,4.20% 96.7%,4.20% 98.3%,4.20% 100.0%,100% 100%);padding:calc(var(--u)*8) calc(var(--u)*5.5) calc(var(--u)*8) calc(var(--u)*7.5);height:100%;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*1.6)}
+.hb .rpaper .lb b{background:var(--blue);color:#fff}
+.hb .rpaper h2{font-size:calc(var(--u)*9.4);color:var(--blue)}
+.hb .rpaper .lead{font-size:calc(var(--u)*2.45);line-height:1.22;font-weight:700;color:var(--ink);letter-spacing:-.01em;max-width:calc(var(--u)*38)}
+.hb .rpaper .bdy{max-width:calc(var(--u)*36);color:#23324A}
+.hb .chips{list-style:none;margin:calc(var(--u)*.8) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7)}
+.hb .chips li{font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.72));letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--blue);color:var(--blue);padding:calc(var(--u)*.5) calc(var(--u)*1.1);border-radius:99px;transform:rotate(var(--r,0deg))}
+.hb .chips li:nth-child(2n){background:var(--spark);border-color:var(--spark);color:var(--ink);--r:-1.5deg}
+.hb .chips li:nth-child(3n){--r:1.2deg}
+.hb .rsq{position:absolute;pointer-events:none;overflow:visible;z-index:3}
+.hb .rsq path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.hb .rsq.a{right:calc(var(--u)*3);top:calc(var(--u)*4.4);width:calc(var(--u)*14);height:calc(var(--u)*8)}
+/* results slide */
+.hb .resb .rbox{max-width:calc(var(--u)*78)}
+.hb .resb h2{font-size:calc(var(--u)*9)}
+.hb .resb p.st{font-size:calc(var(--u)*2.6);line-height:1.24;font-weight:700;margin-top:calc(var(--u)*2);max-width:calc(var(--u)*68);letter-spacing:-.01em}
 /* hustle board */
 .hb .board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*3);align-items:start}
 .hb .fly{position:relative;background:#fff;color:var(--ink);box-shadow:0 calc(var(--u)*.7) calc(var(--u)*1.8) rgba(4,30,66,.28);transform:rotate(var(--r,-1.5deg));transition:transform .4s cubic-bezier(.2,.8,.2,1)}
@@ -126,7 +172,7 @@
 .hb .strip{display:flex;gap:calc(var(--u)*2);padding:calc(var(--u)*4.6) calc(var(--u)*5.5);overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:calc(var(--u)*5.5);-webkit-overflow-scrolling:touch;cursor:grab;scrollbar-width:none;background:var(--ink);position:relative}
 .hb .strip::-webkit-scrollbar{display:none}
 .hb .strip:before,.hb .strip:after{content:"";position:sticky;left:0;display:none}
-.hb .holes{position:absolute;left:0;right:0;height:calc(var(--u)*1.1);background:repeating-linear-gradient(90deg,transparent 0 calc(var(--u)*.6),rgba(255,255,255,.88) calc(var(--u)*.6) calc(var(--u)*1.8),transparent calc(var(--u)*1.8) calc(var(--u)*2.6));z-index:1;pointer-events:none}
+.hb .holes{position:absolute;left:0;right:0;height:calc(var(--u)*1.1);background:repeating-linear-gradient(90deg,transparent 0 calc(var(--u)*.6),rgba(200,208,220,.9) calc(var(--u)*.6) calc(var(--u)*1.8),transparent calc(var(--u)*1.8) calc(var(--u)*2.6));border-radius:calc(var(--u)*.3);z-index:1;pointer-events:none}
 .hb .holes.t{top:calc(var(--u)*1.2)}
 .hb .holes.b{bottom:calc(var(--u)*1.2)}
 .hb .fm{flex:none;scroll-snap-align:start;position:relative}
@@ -186,8 +232,6 @@
 /* footer */
 .hb .ft{background:var(--navy);color:#fff;padding:calc(var(--u)*8) calc(var(--u)*5.5) calc(var(--u)*5);position:relative;overflow:hidden;text-align:left}
 .hb .ft h2{font-size:calc(var(--u)*13)}
-.hb .ft .bdg{position:absolute;right:calc(var(--u)*7);top:50%;width:calc(var(--u)*22);height:calc(var(--u)*22);margin-top:calc(var(--u)*-11);transform:rotate(-8deg)}
-.hb .ft .bdg svg{width:100%;height:100%}
 .hb .ft h2 span{color:var(--spark)}
 .hb .ft .ctas{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*3)}
 .hb .ft .ctas a{display:inline-flex;align-items:center;gap:calc(var(--u)*.8);font-family:var(--mo);font-weight:700;font-size:max(10px,calc(var(--u)*.85));letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;border-radius:99px;padding:calc(var(--u)*.9) calc(var(--u)*1.8);transition:background .2s,color .2s}
@@ -209,7 +253,18 @@
 .hb .vt.w{grid-column:1/-1}
 .hb .res .rgrid{grid-template-columns:minmax(0,1fr)}
 .hb .ft h2{font-size:calc(var(--u)*10)}
-.hb .ft .bdg{width:calc(var(--u)*14);height:calc(var(--u)*14);margin-top:calc(var(--u)*-7);right:calc(var(--u)*4)}
+
+.hb .rsplit{grid-template-columns:minmax(0,1fr);min-height:0}
+.hb .rph{aspect-ratio:4/3.2}
+.hb .rph .main img{object-position:50% 25%}
+.hb .pip{width:calc(var(--u)*10);left:calc(var(--u)*2);bottom:calc(var(--u)*-1.5)}
+.hb .rpa{margin:calc(var(--u)*-2.2) 0 0 0;filter:drop-shadow(0 calc(var(--u)*-.14) 0 #fff)}
+.hb .rpaper{clip-path:polygon(0 100%,0.00% 0.96%,1.67% 0.80%,3.33% 0.37%,5.00% 0.81%,6.67% 0.22%,8.33% 0.22%,10.00% 0.70%,11.67% 0.20%,13.33% 0.26%,15.00% 0.40%,16.67% 0.10%,18.33% 0.10%,20.00% 0.34%,21.67% 0.29%,23.33% 0.56%,25.00% 0.15%,26.67% 0.10%,28.33% 0.10%,30.00% 0.11%,31.67% 0.62%,33.33% 0.72%,35.00% 1.05%,36.67% 0.91%,38.33% 1.21%,40.00% 0.73%,41.67% 0.48%,43.33% 0.69%,45.00% 0.96%,46.67% 0.87%,48.33% 0.37%,50.00% 0.10%,51.67% 0.10%,53.33% 0.10%,55.00% 0.47%,56.67% 0.11%,58.33% 0.57%,60.00% 1.03%,61.67% 0.50%,63.33% 0.35%,65.00% 0.34%,66.67% 0.10%,68.33% 0.10%,70.00% 0.59%,71.67% 0.12%,73.33% 0.24%,75.00% 0.10%,76.67% 0.19%,78.33% 0.67%,80.00% 0.31%,81.67% 0.10%,83.33% 0.10%,85.00% 0.15%,86.67% 0.10%,88.33% 0.10%,90.00% 0.10%,91.67% 0.61%,93.33% 0.51%,95.00% 0.39%,96.67% 0.55%,98.33% 0.10%,100.00% 0.20%,100% 100%);padding:calc(var(--u)*5.5) calc(var(--u)*2.4) calc(var(--u)*6)}
+.hb .rpaper h2{font-size:calc(var(--u)*7.8)}
+.hb .rpaper .lead{font-size:calc(var(--u)*2.1)}
+.hb .resb h2{font-size:calc(var(--u)*7)}
+.hb .resb p.st{font-size:calc(var(--u)*2.1)}
+.hb .mt{right:calc(var(--u)*2.4)}.hb .pn{left:calc(var(--u)*2.4)}
 }
 /* ---- ≤700 ---- */
 @media (max-width:700px){
@@ -246,25 +301,26 @@
 .hb .rcard p{font-size:calc(var(--u)*1.9)}
 .hb .role p{font-size:calc(var(--u)*1.5)}
 .hb .ft h2{font-size:calc(var(--u)*8)}
-.hb .ft .bdg{width:calc(var(--u)*10);height:calc(var(--u)*10);margin-top:calc(var(--u)*-8);right:calc(var(--u)*1.6);top:56%}
 .hb .nav a{font-size:max(9px,calc(var(--u)*.95))}
 }
 </style></head><body style="margin:0">
 <div class="hb"><div class="fr">
-<nav class="nav" aria-label="Sections"><a href="#studio">The Studio</a><a href="#oncampus">On Campus</a><a href="#tour">The Tour</a><a href="#watch">Watch</a><a href="#results">Results</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#studio">The Studio</a><a href="#oncampus">On Campus</a><a href="#tour">The Tour</a><a href="#watch">Watch</a><a href="#results">Results</a><a href="#role">My Role</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="hbrough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
 <header class="hero" id="top">
+  <span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">01</span>
   <svg class="squig s1" viewBox="0 0 140 80" aria-hidden="true"><path d="M4 50c10-30 26-34 30-14s-16 30-4 34 24-30 40-34 10 22 28 18 12-26 30-26 14 14 24 12"/></svg><svg class="squig s2" viewBox="0 0 90 90" aria-hidden="true"><path d="M12 70c-8-20 6-40 24-42s30 12 20 28-30 10-26-8 24-22 36-8"/></svg>
   <div class="hgrid">
     <div class="rv">
       <span class="lb"><b>Walmart</b>Black &amp; Unlimited</span>
-      <h1 class="x" aria-label="HBCU Tour"><span>HBCU</span><span class="l2">Tour<svg class="ul" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 20C60 6 120 26 180 12S270 18 296 8"/></svg></span></h1>
+      <h1 class="x" aria-label="HBCU Tour"><span>HB<span class="scr" style="display:inline">CU</span></span><span class="l2">Tour<svg class="ul" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 20C60 6 120 26 180 12S270 18 296 8"/></svg></span></h1>
       <p class="big">A mobile creator studio rolled onto HBCU campuses, giving student entrepreneurs a stage for their side hustles, the know-how to monetize them, and a crowd to show up for it.</p>
     </div>
     <div class="rv" style="--d:.12s">
       <div class="shot"><i class="tape a"></i><i class="tape b"></i>
         <div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="The Walmart Black and Unlimited HBCU Tour studio trailer parked on campus" loading="lazy" decoding="async"></div>
         <span class="cap mk">Studio on wheels.</span>
-        <div class="badge"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="hbc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><g class="ring"><circle cx="100" cy="100" r="96" fill="#FFC220" stroke="#06142B" stroke-width="3"/><circle cx="100" cy="100" r="54" fill="none" stroke="#06142B" stroke-width="2" stroke-dasharray="3 5"/><text font-family="Space Mono,monospace" font-weight="700" font-size="13" fill="#06142B"><textPath href="#hbc" textLength="446" lengthAdjust="spacing">CAMPUS SIDE HUSTLE SHOWCASE ✦ BLACK &amp; UNLIMITED ✦ </textPath></text></g><text x="100" y="116" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="46" fill="#06142B">HBCU</text></svg></div>
+        <svg class="loop" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M30 40C70 4 330 -8 378 36c28 40 10 190-14 230-40 34-280 40-340 10C-6 250 4 90 36 52 60 30 170 22 330 30"/></svg>
       </div>
     </div>
   </div>
@@ -273,9 +329,9 @@
 <div class="tk" aria-hidden="true"><div class="tr"><span>Beauty</span><span>Photography</span><span>Videography</span><span>Design</span><span>Artisanship</span><span>Beauty</span><span>Photography</span><span>Videography</span><span>Design</span><span>Artisanship</span><span>Beauty</span><span>Photography</span><span>Videography</span><span>Design</span><span>Artisanship</span><span>Beauty</span><span>Photography</span><span>Videography</span><span>Design</span><span>Artisanship</span></div></div>
 
 <section class="sc paper" id="board">
-  <i class="te t" aria-hidden="true"></i><i class="te b" aria-hidden="true"></i>
+  <i class="te t" aria-hidden="true"></i><i class="te b" aria-hidden="true"></i><span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">02</span>
   <div class="gx">
-    <div class="sh rv"><span class="lb"><b>01</b>The Campus Board</span><h2 class="x">Pinned Up, Tear One Off</h2></div>
+    <div class="sh rv"><span class="lb"><b>01</b>The Campus Board</span><h2 class="x">Pinned Up, Tear One <span class="scr" style="--sc:#06142B">Off</span></h2></div>
     <div class="board">
       <article class="fly rv"><div class="top"><span class="lb">The Client</span><span class="lb">Who</span></div><div class="in"><h3 class="x">Who</h3><p class="bdy">Walmart, the world&rsquo;s largest retailer, strategically empowering a wider student demographic during the back-to-school season with on-campus resources for academic success, creative expression, and personal resilience.</p></div><div class="tabs"><button type="button" class="tab" aria-label="Tear off Academic Success" style="--tr:22deg"><span>Academic Success</span></button><button type="button" class="tab" aria-label="Tear off Creative Expression" style="--tr:-18deg"><span>Creative Expression</span></button><button type="button" class="tab" aria-label="Tear off Resilience" style="--tr:30deg"><span>Resilience</span></button></div></article>
       <article class="fly rv" style="--d:.1s"><div class="top"><span class="lb">The Campaign</span><span class="lb">What</span></div><div class="in"><h3 class="x">What</h3><p class="bdy">Launched the Black &amp; Unlimited HBCU Tour, featuring a mobile creator studio for student entrepreneurs to showcase skills in beauty, photography, videography, design, and artisanship, learn monetization strategies, and engage in interactive booths, live DJ sets, and presentations.</p></div><div class="tabs"><button type="button" class="tab" aria-label="Tear off Beauty" style="--tr:22deg"><span>Beauty</span></button><button type="button" class="tab" aria-label="Tear off Photography" style="--tr:-18deg"><span>Photography</span></button><button type="button" class="tab" aria-label="Tear off Videography" style="--tr:30deg"><span>Videography</span></button><button type="button" class="tab" aria-label="Tear off Design" style="--tr:-26deg"><span>Design</span></button><button type="button" class="tab" aria-label="Tear off Artisanship" style="--tr:16deg"><span>Artisanship</span></button></div></article>
@@ -286,6 +342,7 @@
 </section>
 
 <section class="sc navy studio" id="studio">
+  <span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">03</span>
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>02</b>The Studio</span><h2 class="x">A Content Lab <em>On Wheels</em></h2></div>
     <div class="sgrid">
@@ -301,9 +358,10 @@
 </section>
 
 <section class="sc blue film" id="oncampus">
-  <div class="gx"><div class="sh rv"><span class="lb"><b>03</b>On Campus</span><h2 class="x">Loud, Live And Gone By Sunset</h2></div></div>
+  <span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">04</span>
+  <div class="gx"><div class="sh rv"><span class="lb"><b>03</b>On Campus</span><h2 class="x">Loud, Live And Gone By <span class="scr">Sunset</span></h2></div></div>
   <div class="reel rv">
-    <div class="holes t" aria-hidden="true"></div><div class="holes b" aria-hidden="true"></div>
+    <div class="holes t" aria-hidden="true"></div><div class="holes b" aria-hidden="true"></div><div class="edge t" aria-hidden="true">31B ▸ HBCU TOUR ▸ 32 ▸ BLACK &amp; UNLIMITED ▸ 32A ▸ 33 ▸ HBCU TOUR ▸ 33A ▸ BLACK &amp; UNLIMITED ▸ 34 ▸ HBCU TOUR ▸ 34A ▸ BLACK &amp; UNLIMITED ▸ 35 ▸ HBCU TOUR ▸ 35A ▸ BLACK &amp; UNLIMITED ▸ 36 ▸ HBCU TOUR ▸ 36A ▸ BLACK &amp; UNLIMITED ▸</div><div class="edge b" aria-hidden="true">30A ▸ BLACK &amp; UNLIMITED ▸ 31 ▸ HBCU TOUR ▸ 31A ▸ BLACK &amp; UNLIMITED ▸ 32 ▸ HBCU TOUR ▸ 32A ▸ BLACK &amp; UNLIMITED ▸ 33 ▸ HBCU TOUR ▸ 33A ▸ BLACK &amp; UNLIMITED ▸ 34 ▸ HBCU TOUR ▸ 34A ▸ BLACK &amp; UNLIMITED ▸ 35 ▸ HBCU TOUR ▸ 35A ▸</div>
     <div class="strip" id="hbstrip" tabindex="0" aria-label="Film strip of tour moments, scroll sideways">
       <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band.webp?v=1" alt="" role="img" aria-label="Student drumline marching at an HBCU tour stop" loading="lazy" decoding="async"></div><figcaption class="no"><span>Frame 01</span><span>Drumline</span></figcaption></figure>
       <figure class="fm w" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="The HBCU Tour studio trailer" loading="lazy" decoding="async"></div><figcaption class="no"><span>Frame 02</span><span>The Studio</span></figcaption></figure>
@@ -324,14 +382,15 @@
 </section>
 
 <section class="sc paper tour" id="tour">
-  <i class="te t" aria-hidden="true"></i><i class="te b" aria-hidden="true"></i>
+  <i class="te t" aria-hidden="true"></i><i class="te b" aria-hidden="true"></i><span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">05</span>
   <div class="gx">
-    <div class="sh rv"><span class="lb"><b>04</b>The Tour</span><h2 class="x">Collect The Stops</h2><p class="bdy" style="max-width:calc(var(--u)*44)">Conducted on campus at HBCUs, with digital amplification through social media, partners like Blavity, and paid creator partnerships.</p></div>
+    <div class="sh rv"><span class="lb"><b>04</b>The Tour</span><h2 class="x">Collect The <span class="scr" style="--sc:#06142B">Stops</span></h2><p class="bdy" style="max-width:calc(var(--u)*44)">Conducted on campus at HBCUs, with digital amplification through social media, partners like Blavity, and paid creator partnerships.</p></div>
     <div class="stamps" id="hbst"><button type="button" class="stp" style="--r:-5deg" aria-label="Central State University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 01</i><b>Central State</b><i>OH</i></span></button><button type="button" class="stp" style="--r:4deg" aria-label="Virginia State University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 02</i><b>Virginia State</b><i>VA</i></span></button><button type="button" class="stp" style="--r:-3deg" aria-label="North Carolina Central University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 03</i><b>North Carolina Central</b><i>NC</i></span></button><button type="button" class="stp" style="--r:6deg" aria-label="Mississippi Valley State University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 04</i><b>Mississippi Valley State</b><i>MS</i></span></button><button type="button" class="stp" style="--r:-6deg" aria-label="Florida A&amp;M University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 05</i><b>Florida A&amp;M</b><i>FL</i></span></button><button type="button" class="stp" style="--r:3deg" aria-label="Winston-Salem State University"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 06</i><b>Winston-Salem State</b><i>NC</i></span></button><button type="button" class="stp" style="--r:-4deg" aria-label="Morehouse College"><span class="ghost"></span><span class="ink"></span><span class="tx2"><i>STOP 07</i><b>Morehouse</b><i>GA</i></span></button><div class="done mk rv" style="grid-column:auto;align-self:center;font-family:var(--mk)">Seven stops. Zero off days.</div></div>
   </div>
 </section>
 
 <section class="sc navy watch" id="watch">
+  <span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">06</span>
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>05</b>Watch</span><h2 class="x">Press Play On <em style="font-style:normal;color:var(--spark)">The Hustle</em></h2></div>
     <div class="wgrid">
@@ -342,18 +401,33 @@
   </div>
 </section>
 
-<section class="sc paper res" id="results">
-  <i class="te t" aria-hidden="true"></i>
-  <div class="gx">
-    <div class="rgrid">
-      <div class="rcard rv"><span class="lb"><b>06</b>How It Did</span><h2 class="x">Results</h2><p>Generated strong on-campus engagement with events like homecoming kickoffs and motivational series, contributing to broader impacts through stories of alumni success and student empowerment.</p></div>
-      <div class="role rv" style="--d:.1s"><i class="tape a" style="left:auto;right:calc(var(--u)*3);top:calc(var(--u)*-1.2);transform:rotate(4deg)"></i><span class="lb"><b>07</b>My Role</span><p>As Associate Creative Director at Publicis Groupe, I led the conceptual development for tour activations and content capture protocols. I also developed activation blueprints and event flow maps clearly articulating the vision to production partners and vendors.</p></div>
+<section class="sc blue resb" id="results">
+  <span class="mt" aria-hidden="true"><b>Black &amp; Unlimited</b>HBCU Tour</span><span class="pn" aria-hidden="true">07</span>
+  <div class="gx"><div class="rbox rv"><span class="lb"><b>06</b>How It Did</span><h2 class="x" style="margin-top:calc(var(--u)*1.4)"><span class="scr">Res</span>ults</h2><p class="st">Generated strong on-campus engagement with events like homecoming kickoffs and motivational series, contributing to broader impacts through stories of alumni success and student empowerment.</p></div></div>
+</section>
+
+<section class="roles" id="role">
+  <div class="rsplit">
+    <div class="rph rv">
+      <div class="main"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-hd.webp?v=1" alt="" role="img" aria-label="Students lining up to step into the Black and Unlimited tour studio" loading="lazy" decoding="async"></div>
+      <div class="pip"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band-hd.webp?v=1" alt="" role="img" aria-label="A student drumline member playing a snare at an HBCU tour stop" loading="lazy" decoding="async"></div>
+      <span class="pn" style="left:auto;right:calc(var(--u)*5.5);color:#fff;bottom:calc(var(--u)*2.2)" aria-hidden="true">08</span>
+    </div>
+    <div class="rpa rv" style="--d:.12s">
+      <div class="rpaper">
+        <span class="mt" aria-hidden="true" style="color:var(--ink)"><b>Black &amp; Unlimited</b>HBCU Tour</span>
+        <svg class="rsq a" viewBox="0 0 140 80" aria-hidden="true"><path d="M4 50c10-30 26-34 30-14s-16 30-4 34 24-30 40-34 10 22 28 18 12-26 30-26 14 14 24 12"/></svg>
+        <span class="lb"><b>07</b>My Role</span>
+        <h2 class="x">My <span class="scr" style="--sc:#0071CE">Role</span></h2>
+        <p class="lead">As Associate Creative Director at Publicis Groupe, I led the conceptual development for tour activations and content capture protocols.</p>
+        <p class="bdy">I also developed activation blueprints and event flow maps clearly articulating the vision to production partners and vendors.</p>
+        <ul class="chips"><li>Tour Activations</li><li>Content Capture Protocols</li><li>Activation Blueprints</li><li>Event Flow Maps</li></ul>
+      </div>
     </div>
   </div>
 </section>
 
 <footer class="ft">
-  <div class="bdg"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="hbc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs><g class="ring"><circle cx="100" cy="100" r="96" fill="#FFC220" stroke="#06142B" stroke-width="3"/><circle cx="100" cy="100" r="54" fill="none" stroke="#06142B" stroke-width="2" stroke-dasharray="3 5"/><text font-family="Space Mono,monospace" font-weight="700" font-size="13" fill="#06142B"><textPath href="#hbc" textLength="446" lengthAdjust="spacing">CAMPUS SIDE HUSTLE SHOWCASE ✦ BLACK &amp; UNLIMITED ✦ </textPath></text></g><text x="100" y="116" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="46" fill="#06142B">HBCU</text></svg></div>
   <h2 class="x" aria-label="HBCU Tour">HBCU<br><span>Tour</span></h2>
   <div class="ctas"><a class="pr" href="https://www.byninaaustin.com/experiential">&larr; Back to Experiential</a></div>
 </footer>
