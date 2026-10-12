@@ -85,7 +85,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/silkpressconference` | `silk-press-conference.html` | built |
 | `/air-max-day` | `air-max-day.html` | not in PAGES, not in SQUARESPACE_ONLY (gap) |
 | Restaurant Royalty | `pepsi-dig-in.html` and `restaurant-royalty.html` | not mapped, no Squarespace slug assigned yet |
-| `/walmart-beautycon` | `walmart-beautycon.html`, `-pop`, `-pink` | not mapped, tracker status Editing (Unpublished) |
+| `/walmart-beautycon` | `walmart-beautycon-treatment.html` (source), mirrored into `walmart-beautycon-pink.html` so the pink loader serves it; `walmart-beautycon.html` and `-pop` are history | not mapped, tracker status Editing (Unpublished) |
 
 ### Experiential projects
 
