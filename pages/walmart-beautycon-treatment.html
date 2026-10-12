@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <style>
-/* Chrome Daydream Treatment: a film-treatment deck printed on blush paper. Arches as portals, chrome as weather, screenplay type as the voice. */
+/* Chrome Daydream: a branded presentation on blush paper. Arches as portals, chrome as weather, typewriter labels as the voice. */
 html,body{margin:0;background:#F5EFEC}
 .tr{
   --u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*4);--pad:calc(var(--u)*5.2);
@@ -65,14 +65,15 @@ html,body{margin:0;background:#F5EFEC}
 .tr .cov .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:calc(var(--u)*3);align-items:end;margin-top:calc(var(--u)*2.4)}
 .tr .cov .txt{align-self:center;padding-bottom:calc(var(--u)*2)}
 .tr .cov .fade{font:700 max(10px,calc(var(--u)*.8))/1 var(--lab);letter-spacing:.06em}
-.tr .cov .pre{display:block;margin-top:calc(var(--u)*1.6);font:400 calc(var(--u)*1.7)/1 var(--dis)}
+.tr .cov .pre{display:block;margin-top:0;font:400 calc(var(--u)*1.7)/1 var(--dis)}
 .tr .cov h1{margin-top:calc(var(--u)*.6);font:400 calc(var(--u)*8.6)/.86 var(--dis);letter-spacing:-.02em}
 .tr .cov h1 span{display:block}
 .tr .cov h1 i{font-style:italic;color:var(--hot);display:inline-block;transform:scaleY(1.18);transform-origin:50% 85%;margin-right:.06em}
-.tr .cov .log{margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*32);display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*1.2);align-items:baseline}
+.tr .cov .log{margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*32)}
 .tr .cov .log b{font:700 max(10px,calc(var(--u)*.74))/1 var(--lab);letter-spacing:.08em;text-transform:uppercase;color:var(--hot)}
 .tr .cov .log p{font:400 calc(var(--u)*1.3)/1.45 var(--body)}
 .tr .stage{position:relative;height:calc(var(--u)*40)}
+.tr .stage .star{z-index:3}
 .tr .portal{position:absolute;left:50%;bottom:0;width:calc(var(--u)*29);height:calc(var(--u)*37);translate:-50% 0;transform-origin:50% 100%;will-change:transform;
   -webkit-box-reflect:below 0 linear-gradient(transparent 58%,rgba(255,255,255,.32))}
 .tr .portal .ar{position:absolute;left:50%;bottom:0;translate:-50% 0;border-radius:999px 999px 0 0;box-shadow:inset 0 calc(var(--u)*.9) calc(var(--u)*1.6) rgba(27,18,32,.2)}
@@ -92,7 +93,7 @@ html,body{margin:0;background:#F5EFEC}
 .tr .tk span::after{content:'';width:calc(var(--u)*.7);height:calc(var(--u)*.7);background:var(--pink);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 @keyframes trTk{to{transform:translateX(-50%)}}
 .tr .idx{padding:calc(var(--u)*4) var(--g) calc(var(--u)*3.4);background:var(--paper)}
-.tr .idx ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*.4) calc(var(--u)*1.6);margin-top:calc(var(--u)*1.8);counter-reset:sc}
+.tr .idx ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.4) calc(var(--u)*1.6);margin-top:calc(var(--u)*1.8);counter-reset:sc}
 .tr .idx a{display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*.8);align-items:baseline;padding:calc(var(--u)*.9) 0;border-bottom:1px solid rgba(27,18,32,.18);transition:color .2s,padding .25s}
 .tr .idx a:hover{color:var(--hot);padding-left:calc(var(--u)*.4)}
 .tr .idx a span{font:700 max(10px,calc(var(--u)*.72))/1 var(--lab);color:var(--hot)}
@@ -152,7 +153,7 @@ html,body{margin:0;background:#F5EFEC}
 .tr .sheet{margin-top:calc(var(--u)*2.4);display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*.7) calc(var(--u)*1.4);font:400 max(11px,calc(var(--u)*.86))/1.45 var(--lab)}
 .tr .sheet dt{font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--hot)}
 .tr .sp{font:400 max(12px,calc(var(--u)*1.02))/1.6 var(--lab);max-width:calc(var(--u)*40)}
-.tr .sp .cue{display:block;padding-left:calc(var(--u)*13);font-weight:700;letter-spacing:.04em}
+.tr .sp .cue{display:block;padding-left:calc(var(--u)*5);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hot)}
 .tr .sp .par{display:block;padding-left:calc(var(--u)*10);font-style:italic}
 .tr .sp p{padding-left:calc(var(--u)*5);margin-top:calc(var(--u)*1)}
 .tr .tag{margin-top:calc(var(--u)*2.4);padding-left:calc(var(--u)*5);font:400 calc(var(--u)*3)/1 var(--dis)}
@@ -249,7 +250,7 @@ html,body{margin:0;background:#F5EFEC}
 .tr .by{margin-top:calc(var(--u)*1.6);font:700 max(10px,calc(var(--u)*.76))/1.4 var(--lab);letter-spacing:.06em;text-transform:uppercase}
 
 /* 11 end credits */
-.tr .s-end{background:var(--ink);color:#fff;text-align:center}
+.tr .s-end{background:var(--ink);color:#fff;text-align:center;min-height:calc(var(--u)*34)}
 .tr .s-end .rail{text-align:left}
 .tr .s-end .h2{margin-left:auto;margin-right:auto;max-width:calc(var(--u)*48)}
 .tr .s-end .h2 i{color:var(--pink)}
@@ -293,7 +294,7 @@ html,body{margin:0;background:#F5EFEC}
 .tr .arcs li{padding-top:6.4rem}
 .tr .cast{max-width:min(18rem,78cqw)}
 .tr .cast .iy{width:7rem;right:-1.2rem}
-.tr .sp .cue{padding-left:4rem}.tr .sp .par{padding-left:3rem}.tr .sp p,.tr .tag{padding-left:0}
+.tr .sp .cue{padding-left:0}.tr .sp .par{padding-left:3rem}.tr .sp p,.tr .tag{padding-left:0}
 .tr .tag{font-size:2.2rem}
 .tr .rnd{grid-template-columns:minmax(0,1fr);gap:2rem}
 .tr .rnd li,.tr .rnd li.w4{grid-column:auto}
@@ -323,7 +324,7 @@ html,body{margin:0;background:#F5EFEC}
 .tr .obj{grid-template-columns:repeat(2,minmax(0,1fr))}
 .tr .arcs{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .tr .arcs li{padding:6rem 1rem 1.6rem}
-.tr .idx ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tr .idx ol{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 }
 @media(prefers-reduced-motion:reduce){
@@ -335,19 +336,17 @@ html,body{margin:0;background:#F5EFEC}
 </style></head><body>
 <article class="tr" id="trTop">
 
-<!-- 01 . title card -->
+<!-- 01 . cover -->
 <section class="sl cov" aria-labelledby="trH">
   <div class="cloud" aria-hidden="true" style="width:calc(var(--u)*30);height:calc(var(--u)*9);left:-6%;top:12%;background:#fff;--d:46s"></div>
   <div class="cloud" aria-hidden="true" style="width:calc(var(--u)*22);height:calc(var(--u)*7);right:4%;top:6%;background:#F8E2FB;--d:38s"></div>
   <div class="cloud" aria-hidden="true" style="width:calc(var(--u)*18);height:calc(var(--u)*6);left:38%;top:40%;background:#FFF2F9;--d:52s"></div>
   <div class="floor" aria-hidden="true"></div>
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Treatment: For Every It Girl</span><span class="ln"></span><span class="pg">01 / 11</span></div>
   <div class="grid">
     <div class="txt">
-      <span class="fade">FADE IN:</span>
       <span class="pre">Walmart x Beautycon</span>
       <h1 id="trH"><span>For Every</span><span><i>It</i> Girl</span></h1>
-      <div class="log"><b>Logline:</b><p>Reintroducing the Super Bowl with an experiential, shoppable and social program for the next generation of it girls.</p></div>
+      <div class="log"><p>Reintroducing the Super Bowl with an experiential, shoppable and social program for the next generation of it girls.</p></div>
     </div>
     <div class="stage" aria-hidden="true">
       <div class="orb float" style="width:calc(var(--u)*7.4);left:2%;top:4%;--d:9s"></div>
@@ -361,29 +360,11 @@ html,body{margin:0;background:#F5EFEC}
       </div>
     </div>
   </div>
-  <div class="meta"><span>Walmart Makers Studio</span><span>Beautycon LA, 2023</span><span>An immersive recap</span></div>
 </section>
-<div class="tk" aria-hidden="true"><div><span>walmart x beautycon</span><span>the exclusive retail destination</span><span>for every it girl</span><span>content, community, commerce</span><span>walmart x beautycon</span><span>the exclusive retail destination</span><span>for every it girl</span><span>content, community, commerce</span><span>walmart x beautycon</span><span>the exclusive retail destination</span><span>for every it girl</span><span>content, community, commerce</span><span>walmart x beautycon</span><span>the exclusive retail destination</span><span>for every it girl</span><span>content, community, commerce</span></div></div>
-
-<nav class="idx" aria-label="Scene selection">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Scene Selection</span><span class="ln"></span><span class="pg">10 Scenes</span></div>
-  <ol>
-    <li><a href="#trS02" data-go><span>02</span><b>The Comeback</b></a></li>
-    <li><a href="#trS03" data-go><span>03</span><b>The Way In</b></a></li>
-    <li><a href="#trS04" data-go><span>04</span><b>The Idea</b></a></li>
-    <li><a href="#trS05" data-go><span>05</span><b>The It Girl</b></a></li>
-    <li><a href="#trS06" data-go><span>06</span><b>The Program</b></a></li>
-    <li><a href="#trS07" data-go><span>07</span><b>The Slayground</b></a></li>
-    <li><a href="#trS08" data-go><span>08</span><b>Calling All Originals</b></a></li>
-    <li><a href="#trS09" data-go><span>09</span><b>The Portfolio</b></a></li>
-    <li><a href="#trS10" data-go><span>10</span><b>Vogue Business</b></a></li>
-    <li><a href="#trS11" data-go><span>11</span><b>End Credits</b></a></li>
-  </ol>
-</nav>
 
 <!-- 02 . act i -->
 <section class="sl s-come" id="trS02" aria-labelledby="trS02h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Act I: The Comeback</span><span class="ln"></span><span class="pg">02 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The Comeback</span><span class="ln"></span><span class="pg">01 / 09</span></div>
   <div class="two">
     <div class="rv">
       <h2 class="h2" id="trS02h">The <i>Super Bowl</i> Of Beauty Came Back.</h2>
@@ -403,7 +384,7 @@ html,body{margin:0;background:#F5EFEC}
 
 <!-- 03 . act ii -->
 <section class="sl s-way" id="trS03" aria-labelledby="trS03h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Act II: The Way In</span><span class="ln"></span><span class="pg">03 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The Way In</span><span class="ln"></span><span class="pg">02 / 09</span></div>
   <div class="two" style="margin-top:calc(var(--u)*3)">
     <div class="gate" aria-hidden="true">
       <div class="ring r3"></div><div class="ring r2"></div>
@@ -424,7 +405,7 @@ html,body{margin:0;background:#F5EFEC}
 
 <!-- 04 . act iii -->
 <section class="sl s-idea" id="trS04" aria-labelledby="trS04h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Act III: The Idea</span><span class="ln"></span><span class="pg">04 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The Idea</span><span class="ln"></span><span class="pg">03 / 09</span></div>
   <div class="top rv">
     <h2 class="h2" id="trS04h">A 360 Program For <i>Every</i> It Girl.</h2>
     <div>
@@ -441,7 +422,7 @@ html,body{margin:0;background:#F5EFEC}
 
 <!-- 05 . character -->
 <section class="sl s-char" id="trS05" aria-labelledby="trS05h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Character: The It Girl</span><span class="ln"></span><span class="pg">05 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The It Girl</span><span class="ln"></span><span class="pg">04 / 09</span></div>
   <h2 class="h2 rv" id="trS05h">She Knows Exclusivity Is The <i>Least Original</i> Way To Stand Out.</h2>
   <div class="two">
     <div>
@@ -451,15 +432,14 @@ html,body{margin:0;background:#F5EFEC}
         <img class="star st1 twk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-star.webp?v=1" alt="" aria-hidden="true" width="167" height="157" loading="lazy" decoding="async">
       </div>
       <dl class="sheet rv">
-        <dt>Character</dt><dd>The It Girl</dd>
+        <dt>Who</dt><dd>The It Girl</dd>
         <dt>Audience</dt><dd>Gen Z and millennial beauty lovers</dd>
         <dt>Signature</dt><dd>A six-dollar palette, a runway-worthy smoky eye</dd>
         <dt>Shops At</dt><dd>Walmart&rsquo;s beauty aisles</dd>
       </dl>
     </div>
     <div class="sp rv">
-      <span class="cue">THE MANIFESTO (V.O.)</span>
-      <span class="par">(to every it girl)</span>
+      <span class="cue">The Manifesto</span>
       <p>The days when being an it girl meant &ldquo;wearing your worth&rdquo; are finally over. Today, the true it girl knows exclusivity is the least original way to stand out.</p>
       <p>Real originality is taking something anyone can have and making it uniquely your own. It&rsquo;s knowing how to use a six-dollar eyeshadow palette to create a runway-worthy smoky eye. It&rsquo;s having the vision to transform an everyday oversized t-shirt into a trendy two-piece set. It&rsquo;s knowing how to look past the price and see the value in everything around you.</p>
       <p>And when you&rsquo;re looking for an affordable foundation in your shade or self-care that doesn&rsquo;t cost you all your coin, Walmart&rsquo;s beauty aisles have always been the place to turn. Whether it&rsquo;s the most affordable long-wear lip liner ever or the newest wash day remedy, the girls that get it, get &ldquo;it&rdquo; at Walmart.</p>
@@ -468,27 +448,11 @@ html,body{margin:0;background:#F5EFEC}
   </div>
 </section>
 
-<!-- 06 . on paper -->
-<section class="sl s-paper" id="trS06" aria-labelledby="trS06h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>On Paper: The Program</span><span class="ln"></span><span class="pg">06 / 11</span></div>
-  <div class="top rv">
-    <h2 class="h2" id="trS06h">The Program, <i>Rendered</i>.</h2>
-    <p class="p">Before the floor, the program lived in renders. Five moments gave every it girl a way to perform, experiment, share and step onto the red carpet.</p>
-  </div>
-  <ul class="rnd">
-    <li class="rv" style="--r:-1.4deg"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-hair.webp?v=1" alt="Render of a runway stage framed by For Every It Girl and Black and Unlimited panels" width="1300" height="1042" loading="lazy" decoding="async"></div><span>Concept 01</span><b>It Girl Hair Show</b><p>A modern-day hair show honoring the legacy of Black women&rsquo;s creative beauty aesthetic.</p></li>
-    <li class="rv" style="--r:1deg;--tr:4deg"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lab.webp?v=1" alt="Render of a pink For Every It Girl beauty lab with vanities and product walls" width="1300" height="865" loading="lazy" decoding="async"></div><span>Concept 02</span><b>It Girl Beauty Lab</b><p>A branded lab for experimenting with a look across Walmart&rsquo;s range of products.</p></li>
-    <li class="rv" style="--r:-.8deg"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-display.webp?v=1" alt="Render of a digital display wall of it girl content in a lounge" width="1400" height="1081" loading="lazy" decoding="async"></div><span>Concept 03</span><b>It Girl Digital Display</b><p>It girl UGC on a custom display, with on-site photos featured live.</p></li>
-    <li class="rv w4" style="--r:.8deg;--tr:-5deg"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-stage.webp?v=1" alt="Render of a concert stage with For Every It Girl screens" width="1810" height="744" loading="lazy" decoding="async"></div><span>Concept 04</span><b>Soft Beat Showcase</b><p>Music&rsquo;s it girls on stage in their own signature glam.</p></li>
-    <li class="rv" style="--r:-1.2deg;--tr:2deg"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-booth.webp?v=1" alt="Render of a round red carpet photo booth with a For Every It Girl crown" width="1000" height="959" loading="lazy" decoding="async"></div><span>Concept 05</span><b>Cell Phone Paparazzi</b><p>A red carpet photo booth that uploaded straight into the display.</p></li>
-  </ul>
-</section>
-
 <!-- 07 . on the floor -->
 <section class="sl s-floor" id="trS07" aria-labelledby="trS07h">
   <div class="hd">
-    <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>On The Floor: The Slayground</span><span class="ln"></span><span class="pg">07 / 11</span></div>
-    <span class="slug rv">INT. Walmart Makers Studio, Beautycon LA. 2023.</span>
+    <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The Slayground</span><span class="ln"></span><span class="pg">05 / 09</span></div>
+    <span class="slug rv">Walmart Makers Studio . Beautycon LA . 2023</span>
     <h2 class="h2 rv" id="trS07h" style="margin-top:calc(var(--u)*1.2)">Welcome To <i>The Slayground</i>.</h2>
     <div class="cols rv">
       <p class="p">Walmart&rsquo;s haven of beauty exploration, where attendees played with new beauty trends, new products and new friends, no pressure. Familiar beauty scenes, from the at-home vanity to getting ready with friends for a night out, were reimagined into a contemporary beauty play space built for next-generation audience engagement.</p>
@@ -496,27 +460,27 @@ html,body{margin:0;background:#F5EFEC}
     </div>
   </div>
   <div class="film">
-    <ol class="reel" tabindex="0" aria-label="Shot list from the Makers Studio floor, scroll sideways">
-      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-arch-wide.webp?v=1" alt="The Makers Studio entrance with sweeping red arches" width="1800" height="1012" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 01</span><b>The Arch</b><p>Sweeping red arches opened onto the Makers Studio floor.</p></div></li>
-      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-combo-bar.webp?v=1" alt="The combo counter lined with numbered product trays" width="1067" height="1600" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 02</span><b>Build Your Combo</b><p>Guests curated personalized product combinations.</p></div></li>
-      <li class="shot" style="--a:1.5"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-ar-try.webp?v=1" alt="A guest trying a look at an AR-enhanced vanity mirror" width="1800" height="1125" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 03</span><b>Explore Your Core</b><p>Cottagecore and Mermaidcore at AR-enhanced vanities designed by beauty creators.</p></div></li>
-      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-looks.webp?v=1" alt="Four creator makeup looks shot against a sequin backdrop" width="1200" height="675" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 04</span><b>New Beauty Cores</b><p>Creator looks for experimenting with a new beauty core.</p></div></li>
-      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-studio.webp?v=1" alt="A guest posing in the photo studio while a creator directs" width="1125" height="1800" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 05</span><b>Strike A Pose</b><p>Posing sessions with creator David Suh in a dedicated photo studio.</p></div></li>
-      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-green.webp?v=1" alt="A guest in a green dress beside the chrome balloon sculpture" width="1000" height="1600" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 06</span><b>The Chrome Moment</b><p>Guests posed beside the chrome balloon sculpture.</p></div></li>
-      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lounge.webp?v=1" alt="The lounge with chrome stools, wire chairs and the Makers Studio sign" width="1800" height="1012" loading="lazy" decoding="async"></figure><div class="cap"><span>Shot 07</span><b>The Lounge</b><p>Chrome stools, wire chairs and the Makers Studio sign.</p></div></li>
+    <ol class="reel" tabindex="0" aria-label="Moments from the Makers Studio floor, scroll sideways">
+      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-arch-wide.webp?v=1" alt="The Makers Studio entrance with sweeping red arches" width="1800" height="1012" loading="lazy" decoding="async"></figure><div class="cap"><span>01</span><b>The Arch</b><p>Sweeping red arches opened onto the Makers Studio floor.</p></div></li>
+      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-combo-bar.webp?v=1" alt="The combo counter lined with numbered product trays" width="1067" height="1600" loading="lazy" decoding="async"></figure><div class="cap"><span>02</span><b>Build Your Combo</b><p>Guests curated personalized product combinations.</p></div></li>
+      <li class="shot" style="--a:1.5"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-ar-try.webp?v=1" alt="A guest trying a look at an AR-enhanced vanity mirror" width="1800" height="1125" loading="lazy" decoding="async"></figure><div class="cap"><span>03</span><b>Explore Your Core</b><p>Cottagecore and Mermaidcore at AR-enhanced vanities designed by beauty creators.</p></div></li>
+      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-looks.webp?v=1" alt="Four creator makeup looks shot against a sequin backdrop" width="1200" height="675" loading="lazy" decoding="async"></figure><div class="cap"><span>04</span><b>New Beauty Cores</b><p>Creator looks for experimenting with a new beauty core.</p></div></li>
+      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-studio.webp?v=1" alt="A guest posing in the photo studio while a creator directs" width="1125" height="1800" loading="lazy" decoding="async"></figure><div class="cap"><span>05</span><b>Strike A Pose</b><p>Posing sessions with creator David Suh in a dedicated photo studio.</p></div></li>
+      <li class="shot" style="--a:.72"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-chrome-green.webp?v=1" alt="A guest in a green dress beside the chrome balloon sculpture" width="1000" height="1600" loading="lazy" decoding="async"></figure><div class="cap"><span>06</span><b>The Chrome Moment</b><p>Guests posed beside the chrome balloon sculpture.</p></div></li>
+      <li class="shot" style="--a:1.6"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-lounge.webp?v=1" alt="The lounge with chrome stools, wire chairs and the Makers Studio sign" width="1800" height="1012" loading="lazy" decoding="async"></figure><div class="cap"><span>07</span><b>The Lounge</b><p>Chrome stools, wire chairs and the Makers Studio sign.</p></div></li>
     </ol>
   </div>
   <div class="ctl">
-    <span class="ct" data-ct>Shot 01 / 07</span><span class="ln" aria-hidden="true"><i data-pr></i></span>
-    <button type="button" data-dir="-1" aria-label="Previous shot"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
-    <button type="button" data-dir="1" aria-label="Next shot"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    <span class="ct" data-ct>01 / 07</span><span class="ln" aria-hidden="true"><i data-pr></i></span>
+    <button type="button" data-dir="-1" aria-label="Previous photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    <button type="button" data-dir="1" aria-label="Next photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
   </div>
 </section>
 
 <!-- 08 . on the street -->
 <section class="sl s-street" id="trS08" aria-labelledby="trS08h">
   <div class="orb o1 float" aria-hidden="true" style="--d:9s"></div>
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>On The Street: Calling All Originals</span><span class="ln"></span><span class="pg">08 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Calling All Originals</span><span class="ln"></span><span class="pg">06 / 09</span></div>
   <div class="top rv">
     <h2 class="h2" id="trS08h">Calling All <i>Originals</i>.</h2>
     <div>
@@ -539,7 +503,7 @@ html,body{margin:0;background:#F5EFEC}
 
 <!-- 09 . props -->
 <section class="sl s-props" id="trS09" aria-labelledby="trS09h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Props Department: The Portfolio</span><span class="ln"></span><span class="pg">09 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>The Portfolio</span><span class="ln"></span><span class="pg">07 / 09</span></div>
   <div class="two">
     <div class="rv">
       <h2 class="h2" id="trS09h">The <i>Beautycon</i> Portfolio.</h2>
@@ -551,7 +515,7 @@ html,body{margin:0;background:#F5EFEC}
       </div>
     </div>
     <div class="cs rv">
-      <div class="csh"><span>Call Sheet</span><span>Props And Product</span></div>
+      <div class="csh"><span>Shop The Edit</span><span>Cosmetics + Skincare</span></div>
       <h3>Cosmetics + Indie Beauty</h3>
       <ul>
         <li><span>01</span><b>NYX Professional Makeup</b><em>Viral picks like the Duck Plump plumping lip glosses.</em></li>
@@ -573,7 +537,7 @@ html,body{margin:0;background:#F5EFEC}
 
 <!-- 10 . reviews -->
 <section class="sl s-rev" id="trS10" aria-labelledby="trS10h">
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Reviews: Vogue Business</span><span class="ln"></span><span class="pg">10 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Press</span><span class="ln"></span><span class="pg">08 / 09</span></div>
   <div class="two">
     <div class="arch rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-vogue.webp?v=1" alt="Guests mingling under a Beautycon sign, the lead photo from the Vogue Business feature" width="854" height="1280" loading="lazy" decoding="async"></div>
     <div class="rv">
@@ -591,18 +555,8 @@ html,body{margin:0;background:#F5EFEC}
 <section class="sl s-end" id="trS11" aria-labelledby="trS11h">
   <div class="orb o1 float" aria-hidden="true" style="--d:8s"></div>
   <div class="orb o2 float" aria-hidden="true" style="--d:6s;--dl:-2s"></div>
-  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>End Credits: Beautycon Is Back</span><span class="ln"></span><span class="pg">11 / 11</span></div>
+  <div class="rail"><span class="lb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></svg>Beautycon Is Back</span><span class="ln"></span><span class="pg">09 / 09</span></div>
   <h2 class="h2 rv" id="trS11h">The Place For <i>Every</i> It Girl.</h2>
-  <dl class="roll rv">
-    <dt>Client</dt><dd>Walmart</dd>
-    <dt>Event</dt><dd>Beautycon LA, 2023</dd>
-    <dt>Parent Company</dt><dd>Essence Ventures</dd>
-    <dt>Activation</dt><dd>Walmart Makers Studio, Third Edition</dd>
-    <dt>Creative Ethos</dt><dd>For Every It Girl</dd>
-    <dt>Retail Role</dt><dd>Exclusive Retail Destination</dd>
-    <dt>As Featured In</dt><dd>Vogue Business</dd>
-  </dl>
-  <div class="slate rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bc-isback.webp?v=1" alt="Beautycon Is Back, with Beautycon in a scrawled hand and Back on a lime block" width="2052" height="404" loading="lazy" decoding="async"></div>
   <div><a class="btn" href="https://www.byninaaustin.com/experiential"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Back To Experiential</a></div>
 </section>
 
@@ -631,7 +585,7 @@ html,body{margin:0;background:#F5EFEC}
   var reel=tr.querySelector('.reel'),ct=tr.querySelector('[data-ct]'),pr=tr.querySelector('[data-pr]');
   if(reel){var shots=$$('.shot'),n=shots.length;
     function cur(){var x=reel.scrollLeft,best=0,bd=1e9,o=shots[0].offsetLeft;shots.forEach(function(s,i){var d=Math.abs((s.offsetLeft-o)-x);if(d<bd){bd=d;best=i}});if(x+reel.clientWidth>=reel.scrollWidth-4)best=n-1;return best}
-    function upd(){var i=cur();if(ct)ct.textContent='Shot '+String(i+1).padStart(2,'0')+' / '+String(n).padStart(2,'0');if(pr)pr.parentNode.style.setProperty('--pr',(((i+1)/n)*100).toFixed(1)+'%')}
+    function upd(){var i=cur();if(ct)ct.textContent=String(i+1).padStart(2,'0')+' / '+String(n).padStart(2,'0');if(pr)pr.parentNode.style.setProperty('--pr',(((i+1)/n)*100).toFixed(1)+'%')}
     reel.addEventListener('scroll',function(){W.requestAnimationFrame(upd)},{passive:true});upd();
     $$('.ctl button').forEach(function(b){b.addEventListener('click',function(){var i=cur()+(+b.getAttribute('data-dir'));i=Math.max(0,Math.min(n-1,i));reel.scrollTo({left:shots[i].offsetLeft-shots[0].offsetLeft,behavior:reduce?'auto':'smooth'})})});
     var down=false,sx=0,sl=0;
