@@ -137,6 +137,7 @@ html,body{margin:0;background:#000}
 .sw[data-view=contact] #contact{display:block}
 .sw[data-view=contact] #works{display:none}
 .sw[data-view=works] #contact{display:none}
+@media (max-width:360px){.sw .tog{padding:8px 12px;font-size:14px}.sw .toggles{max-width:100%}}
 </style>
 </head>
 <body>
@@ -164,6 +165,7 @@ html,body{margin:0;background:#000}
       <p class="bio">Hi, I'm Nina. I'm a Brooklyn-based writer and creative exploring the people, sounds, and ideas reshaping the world around us. My writing lives where fashion, music, and <em>culture</em><span class="tm">™︎</span> are created.</p>
       <div class="workshead"><h1>Selected Works</h1>
         <div class="toggles" role="group" aria-label="Filter works">
+          <button type="button" class="tog" data-f="featured" aria-pressed="true">Featured</button>
           <button type="button" class="tog" data-f="music" aria-pressed="false">Music</button>
           <button type="button" class="tog" data-f="more" aria-pressed="false">More</button>
         </div></div>
@@ -175,14 +177,14 @@ html,body{margin:0;background:#000}
    <div class="cbody"><strong>I'm Not Talking Fast; You're Listening Slow.</strong><span>Offset's Viral Interview Was a Subtle Act of Social Rebellion</span><small>mythingisss.substack.com</small></div>
   </a>
  </article>
- <article class="piece" data-g="more">
+ <article class="piece" data-feat="1" data-g="more">
   <div><h3>What Doechii is Doing for Fashion</h3><p class="dek">The Making of a Modern Style Icon</p><span class="tag">Fashion</span></div>
   <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
    <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-doechii.webp?v=1" alt=""></div>
    <div class="cbody"><strong>What Doechii is Doing for Fashion</strong><span>The Making of a Modern Style Icon</span><small>mythingisss.substack.com</small></div>
   </a>
  </article>
- <article class="piece" data-g="music">
+ <article class="piece" data-feat="1" data-g="music">
   <div><h3>Andre All Grown Up</h3><p class="dek">Maybe It's Ok 3000 Is Done Rapping.</p><span class="tag">Music</span></div>
   <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
    <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-andre.webp?v=1" alt=""></div>
@@ -196,7 +198,7 @@ html,body{margin:0;background:#000}
    <div class="cbody"><strong>Every Good Dope Dealer Takes Sundays Off</strong><span>Cyhi Da Prince Album Review</span><small>mythingisss.substack.com</small></div>
   </a>
  </article>
- <article class="piece" data-g="music">
+ <article class="piece" data-feat="1" data-g="music">
   <div><h3>WPGM Interviews: JayProb &amp; Rocky Snyda. Reinventing Drill Music, Good Timing and 'Bronxlyn'</h3><p class="dek">Seeing JayProb and Rocky Snyda together, you would think they've known each other forever. But according to Jay, their path to making music started with an Instagram DM.</p><span class="tag">Interview</span></div>
   <a class="card" href="https://www.wepluggoodmusic.com/wpgm-interviews-jayprob-rocky-snyda-reinventing-drill-music-good-timing-and-bronxlyn/" target="_blank" rel="noopener">
    <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-wpgm.webp?v=1" alt=""></div>
@@ -215,13 +217,6 @@ html,body{margin:0;background:#000}
   <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
    <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-dying.webp?v=1" alt=""></div>
    <div class="cbody"><strong>Dying Breed: How the Sudden Death of Dreamy Mid-Budget Filmmaking Made Way For Today's Limited Series Boom.</strong><span>Why TV Today Feels Way More Cinematic Than Most Movies</span><small>mythingisss.substack.com</small></div>
-  </a>
- </article>
- <article class="piece" data-g="more">
-  <div><h3>Black Art Round Up #1</h3><p class="dek">Contemporary Black Collage</p><span class="tag">Art</span></div>
-  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
-   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-blackart.webp?v=1" alt=""></div>
-   <div class="cbody"><strong>Black Art Round Up #1</strong><span>Contemporary Black Collage</span><small>mythingisss.substack.com</small></div>
   </a>
  </article>
       </div>
@@ -245,16 +240,16 @@ html,body{margin:0;background:#000}
 </div>
 <script>
 const R=document.querySelector(".sw");R.classList.add("js");
-let filter=null;
+let filter="featured";
 function applyFilter(){
   let first=true;
   document.querySelectorAll(".piece").forEach(el=>{
-    const show=!filter||el.dataset.g===filter;el.hidden=!show;
+    const show=filter==="featured"?el.dataset.feat==="1":el.dataset.g===filter;el.hidden=!show;
     el.classList.toggle("first",show&&first);if(show)first=false;
   });
   document.querySelectorAll(".tog").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===filter));
 }
-document.querySelectorAll(".tog").forEach(b=>b.addEventListener("click",()=>{filter=filter===b.dataset.f?null:b.dataset.f;applyFilter()}));
+document.querySelectorAll(".tog").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.f;applyFilter()}));
 applyFilter();
 function syncNav(){
   const page=location.hash==="#contact"?"contact":"works";R.dataset.view=page;
