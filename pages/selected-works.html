@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nina Austin | Selected Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+html,body{margin:0;background:#000}
+/* Single dark theme by choice: black ground. Layout: three-column reading layout (nav / bio + selected works / profile), bio leads the page. */
+.sw{
+  --bg:#000000; --dot:#1c1c1e; --surface:#0f0f10; --fg:#f4f3f1; --muted:#a3a3a8; --faint:#76767b;
+  --line:#232325; --chip:#1a1a1c; --active:#1f1f21; --shadow:0 18px 50px rgba(0,0,0,.6),0 2px 8px rgba(0,0,0,.4);
+  --accent:#f08a45;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  color-scheme:dark;
+}
+.sw *{box-sizing:border-box}
+.sw [hidden]{display:none!important}
+.sw{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.sw a{color:inherit}
+.sw :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+/* ---------- Inner pages ---------- */
+.sw #site{display:grid;grid-template-columns:minmax(0,1fr) 340px;max-width:1240px;margin:0 auto;min-height:100vh}
+.sw .nav{grid-column:1/-1;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:16px 56px}
+.sw .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto}
+.sw .nav a{display:block;padding:9px 16px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:16px;white-space:nowrap}
+.sw .nav a:hover{color:var(--fg)}
+.sw .nav .ext{font-size:.8em;opacity:.6}
+.sw .nav a[aria-current="page"]{background:var(--active);color:var(--fg)}
+.sw .content{padding:48px 56px 120px;min-width:0;container:works/inline-size}
+.sw .content h1{font:400 clamp(36px,4vw,48px)/1.1 var(--display);letter-spacing:-.025em;margin:0 0 48px;text-wrap:balance}
+.sw .profile{padding:48px 40px}
+.sw .profile h2{font:400 40px/1 var(--display);letter-spacing:-.02em;margin:0}
+.sw .profile p{color:var(--faint);font-size:14px;margin:8px 0 28px;line-height:1.35}
+.sw .profile img{width:100%;max-width:280px;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block}
+/* loading block */
+.sw .loader{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;pointer-events:none;animation:loaderOut .5s ease 1.5s forwards}
+.sw .loader-in{display:grid;gap:18px;justify-items:center}
+.sw .loader-mark{font:400 44px/1 var(--display);letter-spacing:-.02em;color:var(--fg)}
+.sw .loader-mark em{font-family:var(--serif);font-size:1.1em}
+.sw .loader-bar{width:160px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.sw .loader-bar i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0);animation:loadBar 1.3s cubic-bezier(.6,0,.2,1) .1s forwards}
+.sw .loader-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+@keyframes loadBar{to{transform:scaleX(1)}}
+@keyframes loaderOut{to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){.sw .loader{animation:loaderOut .01s linear .3s forwards}
+.sw .loader-bar i{animation:none;transform:none}
+}
+/* pages: Contact shows when targeted, otherwise Selected Works */
+.sw #contact{display:none}
+.sw #contact:target{display:block}
+.sw main:has(#contact:target) #works{display:none}
+.sw [data-page]{scroll-margin-top:200px}
+/* script-only controls stay hidden when scripts are off */
+.sw:not(.js) .toggles,.sw:not(.js) #copy{display:none}
+/* bio */
+.sw .tm{color:#c9c9cc;font-family:var(--sans);font-size:.62em;vertical-align:super;line-height:0;margin-left:.08em}
+.sw .bio{font:400 clamp(24px,2.6vw,34px)/1.28 var(--display);letter-spacing:-.02em;margin:0 0 64px;max-width:30ch;text-wrap:pretty}
+.sw .bio em{font-family:var(--serif);font-size:1.1em;letter-spacing:0}
+.sw .mail{display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-size:18px}
+.sw .mail span{user-select:all}
+.sw button.chip{border:0;color:var(--fg);font-family:var(--sans);cursor:pointer}
+/* filter toggles */
+.sw .workshead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px 24px;margin-bottom:48px}
+.sw .workshead h1{margin:0!important}
+.sw .toggles{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--chip)}
+.sw .tog{border:0;background:transparent;color:var(--muted);font:500 15px/1 var(--sans);padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.sw .tog:hover{color:var(--fg)}
+.sw .tog[aria-pressed="true"]{background:var(--surface);color:var(--fg);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.sw .piece.first,.sw:not(.js) .piece:first-child{border-top:0;padding-top:0}
+/* portfolio rows */
+.sw .pieces{display:grid}
+.sw .piece{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:48px;padding:32px 0;border-top:1px solid var(--line)}
+.sw .piece h3{font-size:18px;font-weight:500;margin:0 0 10px;line-height:1.4;text-wrap:balance}
+.sw .piece .dek{color:var(--muted);font-size:17px;margin:0;max-width:60ch}
+.sw .piece .tag{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.sw .card{align-self:start;display:grid;grid-template-columns:150px minmax(0,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;background:var(--surface);transition:transform .2s,box-shadow .2s;min-height:170px}
+.sw .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.sw .thumb{position:relative;overflow:hidden;background:#111}
+.sw .thumb svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.sw .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.sw .card:hover .thumb svg,.sw .card:hover .thumb img{transform:scale(1.06)}
+.sw .cbody{padding:18px 20px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.sw .cbody strong{font-size:19px;font-weight:500;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sw .cbody span{color:var(--muted);font-size:15px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sw .cbody small{margin-top:auto;color:var(--faint);font-size:13px}
+/* about / journey / contact */
+.sw .prose{max-width:62ch;font-size:19px;line-height:1.6;color:var(--fg)}
+.sw .prose p{margin:0 0 20px}
+.sw .beats{display:grid;gap:12px;margin-top:40px;max-width:640px}
+.sw .beat{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.sw .beat dt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);padding-top:4px}
+.sw .beat dd{margin:0}
+.sw .beat dd strong{display:block;font-weight:500;font-size:18px}
+.sw .beat dd span{color:var(--muted)}
+.sw .sec{padding:36px 0;border-top:1px solid var(--line)}
+.sw .sec:first-of-type{border-top:0;padding-top:0}
+.sw .sec h2{font-size:22px;font-weight:500;margin:0 0 14px}
+.sw .sec .big{font-size:20px;font-weight:500;margin:0}
+.sw .sec .sub{color:var(--muted);font-size:18px;margin:6px 0 0}
+.sw .sec .loc{color:var(--faint);font-size:16px;margin:4px 0 0}
+.sw .chips{display:flex;flex-wrap:wrap;gap:10px}
+.sw .chip{background:var(--chip);border-radius:999px;padding:8px 18px;text-decoration:none;font-size:15px}
+.sw .chip:hover{background:var(--active);color:var(--accent)}
+.sw .empty{color:var(--faint);font-style:italic}
+.sw .view{animation:fade .35s ease both}
+@keyframes fade{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.sw .view{animation:none}
+.sw .card{transition:none}
+}
+@media (max-width:1180px){.sw #site{grid-template-columns:minmax(0,1fr)}
+.sw .profile{display:none}
+.sw .mobileprofile{display:flex!important}
+}
+@container works (max-width:760px){.sw .piece{grid-template-columns:1fr;gap:20px}
+.sw .card{max-width:460px}
+}
+@media (max-width:760px){.sw .bio{margin-bottom:44px}
+.sw .nav{padding:12px 16px}
+.sw .nav ul{gap:2px}
+.sw .nav a{padding:8px 12px;font-size:15px}
+.sw .content{padding:28px 16px 100px}
+.sw .card{grid-template-columns:110px minmax(0,1fr);min-height:140px}
+.sw .beat{grid-template-columns:1fr;gap:4px}
+.sw .mobileprofile{display:flex!important}
+
+}
+.sw .mobileprofile{display:none;gap:14px;align-items:center;margin-bottom:28px}
+.sw .mobileprofile img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.sw .mobileprofile div{font-size:14px;color:var(--faint);line-height:1.3}
+.sw .mobileprofile strong{display:block;color:var(--fg);font-size:18px;font-weight:500}
+
+.sw[data-view=contact] #contact{display:block}
+.sw[data-view=contact] #works{display:none}
+.sw[data-view=works] #contact{display:none}
+</style>
+</head>
+<body>
+<div class="sw">
+<!-- ================= INNER SITE ================= -->
+<div class="loader" aria-hidden="true"><div class="loader-in">
+  <div class="loader-mark">Nina A.</div>
+  <div class="loader-bar"><i></i></div>
+  <div class="loader-label">Selected Works</div>
+</div></div>
+<div id="site">
+  <nav class="nav" aria-label="Site">
+    <ul>
+      <li><a href="#works" data-go="works" aria-current="page">Selected Works</a></li>
+      <li><a href="#contact" data-go="contact">Contact</a></li>
+      <li><a href="https://mythingisss.substack.com" target="_blank" rel="noopener">My Thing Is <span class="ext" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="mobileprofile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-headshot.webp?v=1" alt="" role="img" aria-label="Nina Austin portrait"><div><strong>Nina A.</strong>Award-Winning Creative | Cultural Commentator</div></div>
+
+    <!-- SELECTED WORKS -->
+    <section id="works" data-page="works" class="view">
+      <p class="bio">Hi, I'm Nina. I'm a Brooklyn-based writer and creative exploring the people, sounds, and ideas reshaping the world around us. My writing lives where fashion, music, and <em>culture</em><span class="tm">™︎</span> are created.</p>
+      <div class="workshead"><h1>Selected Works</h1>
+        <div class="toggles" role="group" aria-label="Filter works">
+          <button type="button" class="tog" data-f="music" aria-pressed="false">Music</button>
+          <button type="button" class="tog" data-f="more" aria-pressed="false">More</button>
+        </div></div>
+      <div class="pieces" id="pieces">
+ <article class="piece" data-g="music">
+  <div><h3>I'm Not Talking Fast; You're Listening Slow.</h3><p class="dek">Offset's Viral Interview Was a Subtle Act of Social Rebellion</p><span class="tag">Commentary</span></div>
+  <a class="card" href="https://mythingisss.substack.com/p/im-not-talking-fast-youre-listening" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-offset.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>I'm Not Talking Fast; You're Listening Slow.</strong><span>Offset's Viral Interview Was a Subtle Act of Social Rebellion</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="more">
+  <div><h3>What Doechii is Doing for Fashion</h3><p class="dek">The Making of a Modern Style Icon</p><span class="tag">Fashion</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-doechii.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>What Doechii is Doing for Fashion</strong><span>The Making of a Modern Style Icon</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="music">
+  <div><h3>Andre All Grown Up</h3><p class="dek">Maybe It's Ok 3000 Is Done Rapping.</p><span class="tag">Music</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-andre.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>Andre All Grown Up</strong><span>Maybe It's Ok 3000 Is Done Rapping.</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="music">
+  <div><h3>Every Good Dope Dealer Takes Sundays Off</h3><p class="dek">Cyhi Da Prince Album Review</p><span class="tag">Review</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-cyhi.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>Every Good Dope Dealer Takes Sundays Off</strong><span>Cyhi Da Prince Album Review</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="music">
+  <div><h3>WPGM Interviews: JayProb &amp; Rocky Snyda. Reinventing Drill Music, Good Timing and 'Bronxlyn'</h3><p class="dek">Seeing JayProb and Rocky Snyda together, you would think they've known each other forever. But according to Jay, their path to making music started with an Instagram DM.</p><span class="tag">Interview</span></div>
+  <a class="card" href="https://www.wepluggoodmusic.com/wpgm-interviews-jayprob-rocky-snyda-reinventing-drill-music-good-timing-and-bronxlyn/" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-wpgm.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>WPGM Interviews: JayProb &amp; Rocky Snyda. Reinventing Drill Music, Good Timing and 'Bronxlyn'</strong><span>Seeing JayProb and Rocky Snyda together, you would think they've known each other forever. But according to Jay, their path to making music started with an Instagram DM.</span><small>wepluggoodmusic.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="music">
+  <div><h3>Do Men In Rap Face Colorism?</h3><p class="dek">Wale Suggests Colorism Slowed Down His Career</p><span class="tag">Commentary</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-wale.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>Do Men In Rap Face Colorism?</strong><span>Wale Suggests Colorism Slowed Down His Career</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="more">
+  <div><h3>Dying Breed: How the Sudden Death of Dreamy Mid-Budget Filmmaking Made Way For Today's Limited Series Boom.</h3><p class="dek">Why TV Today Feels Way More Cinematic Than Most Movies</p><span class="tag">Film &amp; TV</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-dying.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>Dying Breed: How the Sudden Death of Dreamy Mid-Budget Filmmaking Made Way For Today's Limited Series Boom.</strong><span>Why TV Today Feels Way More Cinematic Than Most Movies</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+ <article class="piece" data-g="more">
+  <div><h3>Black Art Round Up #1</h3><p class="dek">Contemporary Black Collage</p><span class="tag">Art</span></div>
+  <a class="card" href="https://mythingisss.substack.com" target="_blank" rel="noopener">
+   <div class="thumb"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-blackart.webp?v=1" alt=""></div>
+   <div class="cbody"><strong>Black Art Round Up #1</strong><span>Contemporary Black Collage</span><small>mythingisss.substack.com</small></div>
+  </a>
+ </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-page="contact" class="view">
+      <h1>Get in touch</h1>
+      <div class="sec"><p class="big">Nina A.</p><p class="sub">Award-Winning Creative | Cultural Commentator</p><p class="loc">New York City, United States</p></div>
+      <div class="sec"><h2>Find me on</h2><div class="chips"><a class="chip" href="https://mythingisss.substack.com" target="_blank" rel="noopener">substack</a></div></div>
+      <div class="sec"><h2>Email</h2><div class="mail"><span id="addr">ninaaustincreative@gmail.com</span><button type="button" id="copy" class="chip">Copy</button></div></div>
+    </section>
+  </main>
+
+  <aside class="profile">
+    <h2>Nina A.</h2>
+    <p>Award-Winning Creative | Cultural Commentator</p>
+    <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/sw-headshot.webp?v=1" alt="" role="img" aria-label="Nina Austin in a black knit dress with bright orange hair, in front of a wall of vintage magazine clippings">
+  </aside>
+</div>
+</div>
+<script>
+const R=document.querySelector(".sw");R.classList.add("js");
+let filter=null;
+function applyFilter(){
+  let first=true;
+  document.querySelectorAll(".piece").forEach(el=>{
+    const show=!filter||el.dataset.g===filter;el.hidden=!show;
+    el.classList.toggle("first",show&&first);if(show)first=false;
+  });
+  document.querySelectorAll(".tog").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===filter));
+}
+document.querySelectorAll(".tog").forEach(b=>b.addEventListener("click",()=>{filter=filter===b.dataset.f?null:b.dataset.f;applyFilter()}));
+applyFilter();
+function syncNav(){
+  const page=location.hash==="#contact"?"contact":"works";R.dataset.view=page;
+  document.querySelectorAll(".nav a[data-go]").forEach(a=>{if(a.dataset.go===page)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",syncNav);
+syncNav();
+
+// Copy email
+document.getElementById("copy").addEventListener("click",e=>{
+  const b=e.currentTarget,t=document.getElementById("addr").textContent;
+  const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1600)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("addr"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected"};
+  try{navigator.clipboard.writeText(t).then(done,sel)}catch(_){sel()}
+});
+</script>
+</body>
+</html>
