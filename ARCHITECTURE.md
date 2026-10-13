@@ -64,7 +64,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/` | `home-gallery/index.html` | built | 3D Portfolio Gallery. Squarespace Home is still the old page (Notion row "Home (OLD)"). |
 | `/commercials` | `commercials-vertical.html` | built | Landing, 8 cards. |
 | `/content` | `content-vertical.html` | built | Landing, 9 cards plus Coming Soon. No Restaurant Royalty card yet. |
-| `/experiential` | `experiential-vertical.html` | built | Landing, Walmart x Beautycon featured plus 5-row accordion (OK V-Day, HBCU Tour, Brunch With The Best, The '85 Shop, Father's Day Streamathon). Nav matches the other two landings as of 686f2a5. `experiential-carousel.html` is the earlier carousel version. |
+| `/experiential` | `experiential-vertical.html` | built | Landing, Walmart x Beautycon featured plus 5-row accordion (OK V-Day, The '85 Shop, Father's Day Streamathon, Brunch With The Best, HBCU Tour). Nav matches the other two landings as of 686f2a5. `experiential-carousel.html` is the earlier carousel version. |
 | `/about-me` | `about.html` | built | Hides Squarespace header via `data-global` style. Footer removed by project-pages.js. |
 | `/creative-dna` | `creative-dna-emboss.html` | built | Shown in nav as "Methodology". `creative-dna-magazine.html` is the earlier version. |
 | `/capabilities` | none | none | Live on Squarespace, listed in CORE in project-pages.js. |
