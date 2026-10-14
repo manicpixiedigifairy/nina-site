@@ -498,18 +498,15 @@
 /* ---- stop board: photo reacts to a click ---- */
 .tb .dates{position:relative}
 .tb .dates .stn{margin-top:calc(var(--u)*1.2);max-width:calc(var(--u)*44);color:rgba(11,11,13,.88)}
-.tb .pvc{position:absolute;right:calc(var(--u)*5.2);top:calc(var(--u)*-.6);width:calc(var(--u)*13.4);height:calc(var(--u)*17.4);background:#fbf5e4;border:1px solid rgba(0,0,0,.18);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl),calc(var(--u)*1.1) calc(var(--u)*1.6) calc(var(--u)*1.6) rgba(0,0,0,.25);transform:rotate(4deg) scale(.9);opacity:0;visibility:hidden;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .25s;z-index:6;pointer-events:none}
+.tb .pvc{position:absolute;right:calc(var(--u)*5.2);top:calc(var(--u)*-.6);width:calc(var(--u)*13.4);height:calc(var(--u)*17.8);background:#fbf5e4;border:1px solid rgba(0,0,0,.18);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl),calc(var(--u)*1.1) calc(var(--u)*1.6) calc(var(--u)*1.6) rgba(0,0,0,.25);transform:rotate(4deg) scale(.9);opacity:0;visibility:hidden;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .25s;z-index:6;pointer-events:none}
 .tb .pvc.has{opacity:1;visibility:visible;transform:rotate(4deg) scale(1);transition-delay:0s}
-.tb .pvc .pvw{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);top:calc(var(--u)*.9);bottom:calc(var(--u)*3.9);background:var(--k);overflow:hidden;box-shadow:inset 0 0 0 calc(var(--u)*.15) rgba(0,0,0,.85)}
+.tb .pvc .pvw{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);top:calc(var(--u)*.9);bottom:calc(var(--u)*4.3);background:var(--k);overflow:hidden;box-shadow:inset 0 0 0 calc(var(--u)*.15) rgba(0,0,0,.85)}
 .tb .pvc .pvw::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.22) 0,rgba(255,255,255,0) 38%,rgba(0,0,0,.18) 100%);pointer-events:none}
 .tb .pvc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s ease}
 .tb .pvc img.on{opacity:1}
-.tb .pvc .pvk{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);bottom:calc(var(--u)*.7);height:calc(var(--u)*2.6);display:flex;flex-direction:column;justify-content:center;font-family:var(--hd);font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:.03em;color:var(--k);line-height:1}
-.tb .pvc .pvk b{font-size:calc(var(--u)*1.5);font-weight:800}
-.tb .pvc .pvk i{font-style:normal;font-family:var(--mono,"Space Mono",monospace);font-weight:700;font-stretch:100%;font-size:calc(var(--u)*.62);letter-spacing:.14em;color:var(--bl);margin-top:calc(var(--u)*.35)}
-.tb .pvc::before,.tb .pvc::after{content:"";position:absolute;width:calc(var(--u)*4.6);height:calc(var(--u)*1.5);background:rgba(240,200,60,.82);box-shadow:0 1px 3px rgba(0,0,0,.25);z-index:2;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 2px,transparent 2px 5px)}
-.tb .pvc::before{left:calc(var(--u)*-1.3);top:calc(var(--u)*.4);transform:rotate(-38deg)}
-.tb .pvc::after{right:calc(var(--u)*-1.3);bottom:calc(var(--u)*.4);transform:rotate(-38deg)}
+.tb .pvc .pvk{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);bottom:calc(var(--u)*.5);height:calc(var(--u)*3.3);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*.5);white-space:nowrap;overflow:hidden;font-family:var(--hd);font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:.03em;color:var(--k);line-height:1}
+.tb .pvc .pvk b{font-size:calc(var(--u)*1.45);font-weight:800;line-height:1}
+.tb .pvc .pvk i{font-style:normal;font-family:var(--mono,"Space Mono",monospace);font-weight:700;font-stretch:100%;font-size:calc(var(--u)*.6);letter-spacing:.06em;color:var(--bl);margin:0}
 @media (min-width:701px){
 .tb .dates .led,.tb .dates .rt{margin-right:calc(var(--u)*17)}
 .tb .dates .rt{margin-left:calc(var(--u)*.8)}
@@ -521,13 +518,11 @@
 .tb .dates .led .l2{font-size:calc(var(--u)*2.1);min-height:calc(var(--u)*5)}
 }
 @media (max-width:700px){
-.tb .pvc{position:relative;right:auto;top:auto;margin:0 auto;width:calc(var(--u)*11);height:0;border-width:0;box-shadow:none;transform:none;overflow:hidden;transition:height .35s ease,opacity .25s ease,visibility 0s linear .25s}
-.tb .pvc::before,.tb .pvc::after{display:none}
-.tb .pvc.has{height:calc(var(--u)*14.8);overflow:visible;border-width:1px;margin:calc(var(--u)*-1.2) auto calc(var(--u)*2.8);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--bl);transform:rotate(-2deg)}
-.tb .pvc.has::before{display:block;width:calc(var(--u)*3.6);height:calc(var(--u)*1.2)}
-.tb .pvc .pvw{left:calc(var(--u)*.7);right:calc(var(--u)*.7);top:calc(var(--u)*.7);bottom:calc(var(--u)*3.3)}
-.tb .pvc .pvk{left:calc(var(--u)*.7);right:calc(var(--u)*.7);bottom:calc(var(--u)*.5);height:calc(var(--u)*2.3)}
-.tb .pvc .pvk b{font-size:calc(var(--u)*1.3)}
+.tb .pvc{position:relative;right:auto;top:auto;margin:0 auto;width:calc(var(--u)*12);height:0;border-width:0;box-shadow:none;transform:none;overflow:hidden;transition:height .35s ease,opacity .25s ease,visibility 0s linear .25s}
+.tb .pvc.has{height:calc(var(--u)*16);overflow:visible;border-width:1px;margin:calc(var(--u)*-1.2) auto calc(var(--u)*2.8);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--bl);transform:rotate(-2deg)}
+.tb .pvc .pvw{left:calc(var(--u)*.7);right:calc(var(--u)*.7);top:calc(var(--u)*.7);bottom:calc(var(--u)*3.6)}
+.tb .pvc .pvk{left:calc(var(--u)*.7);right:calc(var(--u)*.7);bottom:calc(var(--u)*.4);height:calc(var(--u)*2.8);gap:calc(var(--u)*.4)}
+.tb .pvc .pvk b{font-size:calc(var(--u)*1.05)}
 }
 @media (prefers-reduced-motion:reduce){.tb .pvc,.tb .pvc img{transition:none!important}}
 .tb #board .x,.tb #studio .x,.tb #oncampus .x,.tb #results .x{color:#fff}
@@ -596,7 +591,7 @@
     <div class="pvc" id="tbpv" aria-hidden="true"><div class="pvw"><img data-i="0" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g2.webp?v=1" alt="" role="img" aria-label="" loading="eager" decoding="async"><img data-i="1" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g1.webp?v=1" alt="" role="img" aria-label="" loading="eager" decoding="async"><img data-i="2" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g1-clean.webp?v=1" alt="" role="img" aria-label="" loading="eager" decoding="async"><img data-i="3" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g2.webp?v=1" alt="" role="img" aria-label="" loading="eager" decoding="async"></div><div class="pvk"><b id="tbpk">Central State</b><i id="tbpd">Oct 10 / Wilberforce, OH</i></div></div>
   </div>
   <div class="pi">
-    <p class="big rv">As a campus staple in college areas, Walmart set out to do a different kind of back to school campaign that tapped into the modern student state of mind, aka the <em>grind</em>set. A mobile creator studio rolled onto four HBCU campuses this October, giving student entrepreneurs a stage for their side hustles, the know-how to monetize them, and a crowd to show up for it.</p>
+    <p class="big rv">As a campus staple in college areas, Walmart set out to do a different kind of back to school campaign. One that tapped into the modern student state of mind, aka the <em>grind</em>set.</p>
   </div>
 </header>
 
@@ -605,7 +600,7 @@
 <section class="sc board" id="board">
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>01</b>The Bill</span><h2 class="x">Admit One To <em>The Hustle</em></h2></div>
-    <div class="tkts"><article class="tkt rv" style="--d:0s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Client</span></div><h3 class="x">Who</h3><p class="bdy">Walmart, the world&rsquo;s largest retailer, strategically empowering a wider student demographic during the back-to-school season with on-campus resources for academic success, creative expression, and personal resilience.</p></div></article><article class="tkt rv" style="--d:0.1s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Campaign</span></div><h3 class="x">What</h3><p class="bdy">Launched the Black &amp; Unlimited HBCU Tour, featuring a mobile creator studio for student entrepreneurs to showcase skills in beauty, photography, videography, design, and artisanship, learn monetization strategies, and engage in interactive booths, live DJ sets, and presentations.</p></div></article><article class="tkt rv" style="--d:0.2s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">Cultural Impact</span></div><h3 class="x">Why</h3><p class="bdy">Invested resources into empowering Black students with tools for legacies and resilience, countering underrepresentation in entrepreneurship to translate &ldquo;sparks&rdquo; into long-term success.</p></div></article></div>
+    <div class="tkts"><article class="tkt rv" style="--d:0s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Client</span></div><h3 class="x">Who</h3><p class="bdy">Walmart, a campus staple in college areas, meeting students where they already are during back to school, with on-campus resources for academic success, creative expression, and personal resilience.</p></div></article><article class="tkt rv" style="--d:0.1s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Campaign</span></div><h3 class="x">What</h3><p class="bdy">The Side Hustle Spotlight Tour, a mobile creator studio that rolled onto four HBCU campuses in October. Student entrepreneurs showcased skills in beauty, photography, videography, design, and artisanship, learned how to monetize them, and drew a crowd through interactive booths, live DJ sets, and presentations.</p></div></article><article class="tkt rv" style="--d:0.2s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">Cultural Impact</span></div><h3 class="x">Why</h3><p class="bdy">Back to school looks different when students are building side hustles alongside their degrees. Walmart tapped into that grindset, giving Black student entrepreneurs the tools, the stage, and the audience to turn their sparks into long-term success.</p></div></article></div>
   </div>
 </section>
 
@@ -729,7 +724,7 @@
   })();
 
   var pvc=root.getElementById('tbpv'),pvi=pvc?[].slice.call(pvc.querySelectorAll('img')):[];
-  var pk=root.getElementById('tbpk'),pd=root.getElementById('tbpd'),PC=[["Central State", "Oct 10 / Wilberforce, OH"], ["Virginia State", "Oct 12 / Petersburg, VA"], ["N.C. Central", "Oct 18 / Durham, NC"], ["Mississippi Valley State", "Oct 21 / Itta Bena, MS"]];
+  var pk=root.getElementById('tbpk'),pd=root.getElementById('tbpd'),PC=[["Central State", "Oct 10 / Wilberforce, OH"], ["Virginia State", "Oct 12 / Petersburg, VA"], ["N.C. Central", "Oct 18 / Durham, NC"], ["Miss. Valley State", "Oct 21 / Itta Bena, MS"]];
   function showPv(i){if(!pvc)return;if(pk&&PC[i]){pk.textContent=PC[i][0];pd.textContent=PC[i][1]}pvi.forEach(function(m,k){m.classList.toggle('on',k===i)});pvc.classList[i<pvi.length?'add':'remove']('has')}
   [].slice.call(rr.querySelectorAll('.rd')).forEach(function(b){b.addEventListener('click',function(){showPv(+b.getAttribute('data-i'))})});
   var rv=[].slice.call(rr.querySelectorAll('.rv'));
