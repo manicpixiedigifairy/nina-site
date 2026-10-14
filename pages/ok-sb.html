@@ -32,12 +32,12 @@ html,body{margin:0;background:#050E1C}
 .ob .hero h1 .ol{display:inline-block;vertical-align:top;height:.88em;overflow:visible;fill:none;stroke:var(--ch);stroke-width:calc(var(--u)*.16);vector-effect:non-scaling-stroke;stroke-linejoin:miter}
 .ob .hero h1 .ol path{vector-effect:non-scaling-stroke}
 .ob .hero h1 .ok{color:var(--gd);-webkit-text-stroke:0}
-.ob .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:calc(var(--u)*4.5);align-items:end;margin-top:calc(var(--u)*4.2)}
+.ob .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:calc(var(--u)*4.5);align-items:start;margin-top:calc(var(--u)*4.2)}
 .ob .hero .dk{font-size:calc(var(--u)*1.55);line-height:1.38;font-weight:500;max-width:calc(var(--u)*27)}
 .ob .hero .dk .it{display:block;font-size:calc(var(--u)*2.7);line-height:1.04;color:var(--ch);margin-bottom:calc(var(--u)*1.4)}
 .ob .jt{position:relative;border:calc(var(--u)*.22) solid var(--gd);background:#000;box-shadow:0 calc(var(--u)*2) calc(var(--u)*5) rgba(0,0,0,.55)}
 .ob .jt img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.ob .sbd{position:relative;max-width:calc(var(--u)*17);margin-bottom:calc(var(--u)*2.6);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 rgba(43,151,255,.35);background:rgba(5,14,28,.92);border:1px solid rgba(240,193,75,.6);min-width:calc(var(--u)*17);font-family:var(--hd);text-transform:uppercase}
+.ob .sbd{position:relative;max-width:calc(var(--u)*17);margin-bottom:calc(var(--u)*5);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 rgba(43,151,255,.35);background:rgba(5,14,28,.92);border:1px solid rgba(240,193,75,.6);min-width:calc(var(--u)*17);font-family:var(--hd);text-transform:uppercase}
 .ob .sbd .hd{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.45) calc(var(--u)*.9);background:var(--bl);color:var(--nv);font:800 calc(var(--u)*.74)/1 var(--ui);letter-spacing:.2em}
 .ob .sbd .r{display:flex;justify-content:space-between;align-items:center;gap:1em;padding:calc(var(--u)*.35) calc(var(--u)*.9);font-weight:800;font-size:calc(var(--u)*1.35);line-height:1.1;letter-spacing:.04em;border-top:1px solid rgba(244,241,232,.14)}
 .ob .sbd .r b{font-weight:900;color:var(--gd);text-shadow:0 0 calc(var(--u)*.7) rgba(240,193,75,.65);min-width:1.6em;text-align:right}
@@ -66,7 +66,7 @@ html,body{margin:0;background:#050E1C}
 .ob .mi{border-top:calc(var(--u)*.24) solid var(--nv);padding-top:calc(var(--u)*1.6)}
 .ob .tg{display:block;font:900 calc(var(--u)*9)/.88 var(--hd);text-transform:uppercase;color:#0B6BD3;letter-spacing:-.005em;margin-bottom:calc(var(--u)*2)}
 .ob .mi .ld{font:600 calc(var(--u)*1.9)/1.36 var(--ui);max-width:calc(var(--u)*36)}
-.ob .mi .it{font-size:calc(var(--u)*3.6);line-height:1.04;margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34)}
+.ob .mi .it{color:var(--rd);font-size:calc(var(--u)*3.6);line-height:1.04;margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34)}
 .ob .mi .sm{font-size:calc(var(--u)*1.32);line-height:1.5;margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34);opacity:.85}
 .ob .dp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:calc(var(--u)*5);border-top:calc(var(--u)*.2) solid var(--nv);border-bottom:1px solid rgba(5,14,28,.25)}
 .ob .dp li{padding:calc(var(--u)*1.8) calc(var(--u)*2) calc(var(--u)*2.2) 0;border-right:1px solid rgba(5,14,28,.2);margin-right:calc(var(--u)*2)}
@@ -85,11 +85,10 @@ html,body{margin:0;background:#050E1C}
 
 
 /* overview sign */
-.ob .sg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:calc(var(--u)*4);align-items:center;margin-top:calc(var(--u)*6)}
+.ob .sg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3.4fr);gap:calc(var(--u)*4);align-items:end;margin-top:calc(var(--u)*6)}
 .ob .sg .ph{position:relative;border:calc(var(--u)*.24) solid var(--nv);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 #0B6BD3;background:#000}
-.ob .sg img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%}
-.ob .sg figcaption .it{display:block;font-size:calc(var(--u)*3.2);line-height:1.04;margin-bottom:calc(var(--u)*1.4)}
-.ob .sg figcaption b{display:block;font:900 calc(var(--u)*3.4)/.95 var(--hd);text-transform:uppercase;color:#0B6BD3;letter-spacing:.005em}
+.ob .sg figcaption{font:400 calc(var(--u)*2.3)/1.12 var(--sf);font-style:italic;color:var(--nv);padding-bottom:calc(var(--u)*.8)}
+.ob .sg img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%}
 /* store */
 .ob .bn{margin:0 0 calc(var(--u)*3);border:calc(var(--u)*.24) solid var(--gd);background:#000}
 .ob .bn img{width:100%;aspect-ratio:3/1;object-fit:cover;object-position:50% 40%}
@@ -193,7 +192,7 @@ html,body{margin:0;background:#050E1C}
 .ob .hero h1{font-size:calc(var(--u)*11.5)}
 .ob .hero .dk .it{font-size:calc(var(--u)*3.3)}
 .ob .hero .dk{font-size:calc(var(--u)*1.7)}
-.ob .sbd{max-width:calc(var(--u)*20);margin-bottom:calc(var(--u)*2)}
+.ob .sbd{max-width:calc(var(--u)*20);margin-bottom:calc(var(--u)*3.6)}
 .ob .sc{padding:calc(var(--u)*6) 0}
 .ob .sh h2{font-size:calc(var(--u)*5.2)}
 .ob .yd{display:none}
@@ -213,8 +212,6 @@ html,body{margin:0;background:#050E1C}
 .ob .st b{font-size:calc(var(--u)*5.4)}
 .ob .st span{font-size:calc(var(--u)*.85)}
 .ob .fc .gx,.ob .ts .gx{grid-template-columns:1fr}
-.ob .sg figcaption .it{font-size:calc(var(--u)*3.4)}
-.ob .sg figcaption b{font-size:calc(var(--u)*3.8)}
 .ob .vi li{font-size:calc(var(--u)*3.2)}
 .ob .cd h3{font-size:calc(var(--u)*4.2)}
 .ob .bn img{aspect-ratio:16/9}
@@ -248,11 +245,10 @@ html,body{margin:0;background:#050E1C}
 <div class="mi rv"><span class="tg">Mission</span><p class="ld">Take advantage of the biggest national sports event and media holiday of the year, during one of the rare years AT&amp;T was not a sponsor.</p></div>
 <div class="mi rv" style="--d:.1s"><span class="tg">Method</span>
 <p class="ld">AT&amp;T handed out free, gloriously mediocre sports merch outside the big football event in Atlanta, to show how absurd settling for just OK really is.</p>
-<p class="it">All without ever using the words &ldquo;Super Bowl.&rdquo;</p>
-<p class="sm">The stand inspired a collection of merch built on big game vagueisms. Who wouldn&rsquo;t want that?</p></div>
+<p class="it">All without ever using the words &ldquo;Super Bowl.&rdquo;</p></div>
 </div>
 <figure class="sg rv"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-sign.webp?v=1" alt="" role="img" aria-label="A staffer in an I Attended Football Event shirt beside a sign that reads Sports merchandise should never be just OK. Same for wireless networks." loading="lazy"></div>
-<figcaption><span class="it">The sign out front said it plainly.</span><b>Sports merchandise should never be just OK. Same for wireless networks.</b></figcaption></figure>
+<figcaption>The stand inspired a collection of merch built on big game vagueisms. Who wouldn&rsquo;t want that?</figcaption></figure>
 </div></section>
 
 <section class="st" aria-label="Game stats"><div class="w"><ul>
