@@ -522,8 +522,10 @@
 .tb #results p{color:rgba(255,255,255,.92)}
 .tb .tkt .tm{padding-bottom:calc(var(--u)*2.4)}
 .tb .rph .main img{object-position:50% 70%;filter:none}
-.tb .rph .main:after{background:linear-gradient(90deg,rgba(2,8,19,0) 62%,var(--bk))}
-@media (max-width:1000px){.tb .rph .main:after{background:linear-gradient(180deg,rgba(2,8,19,0) 65%,var(--bk))}}
+.tb .rph .main:after{background:linear-gradient(90deg,rgba(2,8,19,.88),rgba(2,8,19,.45) 28%,rgba(2,8,19,.22) 50%,rgba(2,8,19,.45) 72%,rgba(2,8,19,.88)),linear-gradient(180deg,rgba(2,8,19,.7),rgba(2,8,19,0) 28%,rgba(2,8,19,0) 70%,rgba(2,8,19,.75))}
+.tb .roles .pip{left:50%;width:calc(var(--u)*11);margin-left:calc(var(--u)*-5.5)}
+@media (min-width:1001px){.tb .roles .rph{position:absolute;inset:0;height:auto;z-index:0}.tb .roles .rpa{position:relative;z-index:2;grid-column:2}}
+@media (max-width:1000px){.tb .roles .pip{margin-left:calc(var(--u)*-4.2)}}
 .tb #board .x em,.tb #studio .x em,.tb #oncampus .x em,.tb #results .x em{color:var(--y)}
 .tb .pi{display:block;padding:0 calc(var(--u)*5.5)}
 .tb .pi .big{max-width:calc(var(--u)*46);margin:0}
