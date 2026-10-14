@@ -531,10 +531,14 @@
 .tb .tkt .tm{padding-bottom:calc(var(--u)*2.4)}
 .tb .rph .main img{object-position:50% 70%;filter:none}
 .tb .rph .main:after{background:linear-gradient(90deg,rgba(2,8,19,.88),rgba(2,8,19,.45) 28%,rgba(2,8,19,.22) 50%,rgba(2,8,19,.45) 72%,rgba(2,8,19,.88)),linear-gradient(180deg,rgba(2,8,19,.7),rgba(2,8,19,0) 28%,rgba(2,8,19,0) 70%,rgba(2,8,19,.75))}
-.tb .roles .pip{left:50%;width:calc(var(--u)*11);margin-left:calc(var(--u)*-5.5)}
-@media (min-width:1001px){.tb .roles .pip{left:26%}}
+.tb .roles .pip{background:#fbf5e4;border:1px solid rgba(0,0,0,.18);padding:calc(var(--u)*.8);transform:rotate(-3deg);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl),calc(var(--u)*1.1) calc(var(--u)*1.6) calc(var(--u)*1.6) rgba(0,0,0,.35);aspect-ratio:415/739;z-index:3}
+.tb .roles .pip img{display:block;width:100%;height:100%;object-fit:cover}
+/* stacked: anchor to the gutter, sit inside the band above the fade, clear of the lanyard */
+.tb .roles .pip{left:calc(var(--u)*3.4);right:auto;top:auto;bottom:12%;width:auto;height:56%;margin-left:0}
+@media (max-width:700px){.tb .roles .pip{left:calc(var(--u)*2.2);bottom:13%;height:54%}}
+/* desktop: centred in the left space, bottom aligned to the pass */
+@media (min-width:1001px){.tb .roles .pip{left:28%;width:calc(var(--u)*17);height:auto;margin-left:calc(var(--u)*-8.5);bottom:calc(var(--u)*6)}}
 @media (min-width:1001px){.tb .roles .rph{position:absolute;inset:0;height:auto;z-index:0}.tb .roles .rpa{position:relative;z-index:2;grid-column:2}}
-@media (max-width:1000px){.tb .roles .pip{margin-left:calc(var(--u)*-4.2)}}
 .tb #board .x em,.tb #studio .x em,.tb #oncampus .x em,.tb #results .x em{color:var(--y)}
 .tb .pi{display:block;padding:0 calc(var(--u)*5.5)}
 .tb .pi .big{max-width:calc(var(--u)*58);margin:0;font-family:var(--hd);font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:.015em;line-height:1.08;color:var(--k)}
@@ -553,6 +557,40 @@
 .tb .sh h2,.tb .tkt h3{font-size:calc(var(--u)*4.4)}
 .tb .resb h2{font-size:calc(var(--u)*5.2)}
 .tb .ft h2{font-size:calc(var(--u)*5)}
+}
+
+/* ---- the sequel ---- */
+.tb .sq{background:var(--y);color:var(--k);padding:calc(var(--u)*9) 0;position:relative;overflow:hidden}
+.tb .sq .gx{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:center}
+.tb .sq .sh{margin-bottom:calc(var(--u)*2.4)}
+.tb .sq .sh .lb{color:var(--k)}
+.tb .sq .bdy{font-size:calc(var(--u)*1.9);line-height:1.4;font-weight:600;max-width:calc(var(--u)*46);color:var(--k);margin:0}
+.tb .sq .sqc{list-style:none;display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);margin:calc(var(--u)*2.4) 0 0;padding:0}
+.tb .sq .sqc li{border:2px solid var(--k);font-family:var(--mo);font-weight:700;font-size:max(9px,calc(var(--u)*.78));letter-spacing:.12em;text-transform:uppercase;padding:calc(var(--u)*.6) calc(var(--u)*1)}
+.tb .sq .sqa{display:inline-block;margin-top:calc(var(--u)*2.4);background:var(--k);color:var(--y);font-family:var(--mo);font-weight:700;font-size:max(10px,calc(var(--u)*.85));letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:calc(var(--u)*1) calc(var(--u)*1.6);transition:background .2s,color .2s}
+.tb .sq .sqa:hover{background:var(--bl);color:#fff}
+.tb .sq .sqf{position:relative;margin:0;justify-self:center;width:calc(var(--u)*32);height:calc(var(--u)*38)}
+.tb .sq .sqp{position:absolute;margin:0;background:#fbf5e4;border:1px solid rgba(0,0,0,.18);padding:calc(var(--u)*1) calc(var(--u)*1) calc(var(--u)*4.4);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl),calc(var(--u)*1.1) calc(var(--u)*1.6) calc(var(--u)*1.6) rgba(0,0,0,.25)}
+.tb .sq .sqp.a{right:0;top:0;width:calc(var(--u)*17);transform:rotate(4deg)}
+.tb .sq .sqp.a figcaption{align-items:flex-end;text-align:right}
+.tb .sq .sqp.b{left:0;bottom:0;width:calc(var(--u)*18);transform:rotate(-3deg);z-index:2}
+.tb .sq .sqp .w{aspect-ratio:3/4;overflow:hidden;background:var(--k)}
+.tb .sq .sqp img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.tb .sq .sqp figcaption{position:absolute;left:calc(var(--u)*1);right:calc(var(--u)*1);bottom:calc(var(--u)*.6);height:calc(var(--u)*3.4);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*.5);white-space:nowrap;overflow:hidden;font-family:var(--hd);font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+.tb .sq .sqp figcaption b{font-size:calc(var(--u)*1.35);font-weight:800}
+.tb .sq .sqp figcaption i{font-style:normal;font-family:var(--mo);font-weight:700;font-stretch:100%;font-size:calc(var(--u)*.6);letter-spacing:.06em;color:var(--bl)}
+@media (max-width:1000px){
+.tb .sq{padding:calc(var(--u)*6) 0}
+.tb .sq .gx{grid-template-columns:1fr;gap:calc(var(--u)*4)}
+.tb .sq .sqf{width:calc(var(--u)*32);height:calc(var(--u)*38)}
+}
+@media (max-width:700px){
+.tb .sq .bdy{font-size:calc(var(--u)*1.7)}
+.tb .sq .sqf{width:calc(var(--u)*28);height:calc(var(--u)*34)}
+.tb .sq .sqp.a{width:calc(var(--u)*15)}
+.tb .sq .sqp.b{width:calc(var(--u)*16)}
+.tb .sq .sqp figcaption b{font-size:calc(var(--u)*1.1)}
+.tb .sq .sqp figcaption i{font-size:calc(var(--u)*.55)}
 }
 
 .tb .note .arr button{background:var(--k);color:var(--y);border-color:var(--k);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 rgba(0,0,0,.35)}
@@ -581,7 +619,7 @@
 <div class="tb"><div class="fr">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="tbrough" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/></filter></svg>
 <div class="gr" aria-hidden="true"></div>
-<nav class="nav" aria-label="Sections"><a href="#board">The Bill</a><a href="#oncampus">On Campus</a><a href="#campus">Campuses</a><a href="#role">My Role</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#board">The Bill</a><a href="#oncampus">On Campus</a><a href="#campus">Campuses</a><a href="#role">My Role</a><a href="#sequel">The Sequel</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
 <header class="hero" id="top">
   <div class="pt rv"><span class="lb">Walmart Presents</span></div>
   <h1 class="x pz rv" style="--d:.06s" aria-label="Side Hustle Spotlight Tour"><span class="big2">Side<br class="m"> Hustle</span><span class="sc2" aria-hidden="true">Spotlight Tour</span></h1>
@@ -666,6 +704,21 @@
   </div>
 </section>
 
+<section class="sc sq" id="sequel">
+  <div class="gx">
+    <div class="sqt">
+      <div class="sh rv"><span class="lb"><b>05</b>The Sequel</span><h2 class="x">Stay <em>Up</em></h2></div>
+      <p class="bdy rv">The 2023 activation landed so well that Walmart brought it back in 2025, only bigger. This round went on screen. Stay Up, a series with Complex News, followed host Jillian Hardeman-Webb to four HBCUs to quiz students on their school&rsquo;s history and ask what it means to stay up.</p>
+      <ul class="sqc rv"><li>Texas Southern</li><li>Prairie View A&amp;M</li><li>North Carolina A&amp;T</li><li>North Carolina Central</li></ul>
+      <a class="sqa rv" href="https://www.complex.com/pop-culture/a/complexstaff3/stay-up-hbcu-walmart" target="_blank" rel="noopener">Read the Complex Feature &rarr;</a>
+    </div>
+    <div class="sqf rv" style="--d:.12s">
+      <figure class="sqp a"><div class="w"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-stayup-jillian.webp?v=1" alt="" role="img" aria-label="Host Jillian Hardeman-Webb at North Carolina Central University for the Stay Up series" loading="lazy" decoding="async"></div><figcaption><b>Stay Up x Complex</b><i>NC Central University</i></figcaption></figure>
+      <figure class="sqp b"><div class="w"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-stayup-tour.gif?v=1" alt="" role="img" aria-label="Animated scenes from the Stay Up Tour at North Carolina Central: the glass Stay Up pod, a student with a Walmart tote, a pop-up barber chair, and students posing with totes" loading="lazy" decoding="async"></div><figcaption><b>Stay Up Tour, 2025</b><i>On campus at NCCU</i></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <footer class="ft">
   <h2 class="x" aria-label="Side Hustle Spotlight Tour">Side Hustle<br>Spotlight <span>Tour</span></h2>
   <p class="wrap">That&rsquo;s a wrap.</p>
@@ -727,6 +780,24 @@
   var pk=root.getElementById('tbpk'),pd=root.getElementById('tbpd'),PC=[["Central State", "Oct 10 / Wilberforce, OH"], ["Virginia State", "Oct 12 / Petersburg, VA"], ["N.C. Central", "Oct 18 / Durham, NC"], ["Miss. Valley State", "Oct 21 / Itta Bena, MS"]];
   function showPv(i){if(!pvc)return;if(pk&&PC[i]){pk.textContent=PC[i][0];pd.textContent=PC[i][1]}pvi.forEach(function(m,k){m.classList.toggle('on',k===i)});pvc.classList[i<pvi.length?'add':'remove']('has')}
   [].slice.call(rr.querySelectorAll('.rd')).forEach(function(b){b.addEventListener('click',function(){showPv(+b.getAttribute('data-i'))})});
+  (function(){
+    var box=rr.querySelector('.roles .rph'),im=box&&box.querySelector('.main img'),p=box&&box.querySelector('.pip');
+    if(!p||!im)return;
+    function fit(){
+      var W=box.clientWidth,H=box.clientHeight;if(!W||!H)return;
+      var k=Math.max(W/1500,H/1012),w=1500*k,h=1012*k,ox=(W-w)*.5,oy=(H-h)*.7;
+      var desk=rr.getBoundingClientRect().width>1000;
+      var x=ox+(desk?440:300)*k,y=oy+520*k;
+      var pw=p.offsetWidth,ph=p.offsetHeight,g=Math.max(12,W*.03);
+      x=Math.min(Math.max(x,g+pw/2),W-g-pw/2);
+      y=Math.min(Math.max(y,ph/2+H*.04),H-ph/2-H*(desk?.04:.1));
+      p.style.left=x+'px';p.style.top=y+'px';p.style.bottom='auto';p.style.margin='0';
+      p.style.transform='translate(-50%,-50%) rotate(-3deg)';
+    }
+    fit();win.addEventListener('resize',fit);win.addEventListener('load',fit);
+    setTimeout(fit,300);setTimeout(fit,1200);
+    try{if(win.document.fonts&&win.document.fonts.ready)win.document.fonts.ready.then(fit)}catch(e){}
+  })();
   var rv=[].slice.call(rr.querySelectorAll('.rv'));
   function show(el){el.classList.add('on')}
   if('IntersectionObserver' in win){
