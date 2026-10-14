@@ -99,13 +99,36 @@ html,body{margin:0;background:#050E1C}
 .ob .st b{display:block;text-transform:uppercase;font:900 calc(var(--u)*7.4)/.95 var(--hd);color:var(--gd);letter-spacing:-.01em}
 .ob .st span{display:block;margin-top:calc(var(--u)*.7);font:700 calc(var(--u)*.84)/1.35 var(--ui);letter-spacing:.18em;text-transform:uppercase;opacity:.85}
 
+
+/* overview sign */
+.ob .sg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:calc(var(--u)*4);align-items:center;margin-top:calc(var(--u)*6)}
+.ob .sg .ph{position:relative;border:calc(var(--u)*.24) solid var(--nv);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 #0B6BD3;background:#000}
+.ob .sg img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%}
+.ob .sg figcaption .it{display:block;font-size:calc(var(--u)*3.2);line-height:1.04;margin-bottom:calc(var(--u)*1.4)}
+.ob .sg figcaption b{display:block;font:900 calc(var(--u)*3.4)/.95 var(--hd);text-transform:uppercase;color:#0B6BD3;letter-spacing:.005em}
+/* store */
+.ob .bn{margin:0 0 calc(var(--u)*3);border:calc(var(--u)*.24) solid var(--gd);background:#000}
+.ob .bn img{width:100%;aspect-ratio:3/1;object-fit:cover;object-position:50% 40%}
+.ob .cd .ph{position:relative;background:#0b2a1e;border-bottom:calc(var(--u)*.24) solid var(--gd)}
+.ob .cd .ph img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.ob .cd .no{position:absolute;left:0;top:0;background:var(--gd);color:var(--nv);font:900 calc(var(--u)*2.2)/1 var(--hd);padding:calc(var(--u)*.4) calc(var(--u)*.9) calc(var(--u)*.3);letter-spacing:.04em}
+.ob .cd .bd{display:flex;flex-direction:column;flex:1;padding:calc(var(--u)*1.4) calc(var(--u)*1.5) calc(var(--u)*1.6)}
+.ob .cd .tp{font:800 calc(var(--u)*.74)/1 var(--ui);letter-spacing:.22em;text-transform:uppercase;color:var(--gd)}
+.ob .vx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:calc(var(--u)*4);align-items:center;margin-top:calc(var(--u)*4)}
+.ob .vx .ph{border:calc(var(--u)*.24) solid var(--ch);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 rgba(0,0,0,.4);background:#000}
+.ob .vx img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.ob .vi .lb{margin-bottom:calc(var(--u)*1.8)}
+.ob .vi ol{display:grid;gap:0}
+.ob .vi li{display:flex;align-items:baseline;gap:calc(var(--u)*1.4);padding:calc(var(--u)*.9) 0;border-top:1px solid rgba(244,241,232,.24);font:900 calc(var(--u)*3.3)/1 var(--hd);text-transform:uppercase;letter-spacing:.01em}
+.ob .vi li:last-child{border-bottom:1px solid rgba(244,241,232,.24)}
+.ob .vi li i{font:800 calc(var(--u)*.8)/1 var(--ui);font-style:normal;letter-spacing:.2em;color:var(--gd);min-width:2.2em}
 /* fan cam */
 .ob .fc{background:linear-gradient(180deg,var(--nv),var(--n2))}
-.ob .fc .gx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.2);align-items:start}
+.ob .fc .gx{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);align-items:start}
 .ob .fc figure{position:relative}
 .ob .fc .fr{position:relative;border:calc(var(--u)*.2) solid var(--ch);background:#000;overflow:hidden}
-.ob .fc .fr img{width:100%;aspect-ratio:3/2.15;object-fit:cover}
-.ob .fc figure:nth-child(2){margin-top:calc(var(--u)*5)}
+.ob .fc .fr img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.ob .fc figure:nth-child(even){margin-top:calc(var(--u)*5)}
 .ob .fc .rec{position:absolute;right:calc(var(--u)*.9);top:calc(var(--u)*.8);display:flex;align-items:center;gap:.5em;font:800 calc(var(--u)*.72)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;background:rgba(5,14,28,.82);padding:.5em .8em}
 .ob .fc .rec::before{content:"";width:.8em;height:.8em;border-radius:50%;background:var(--rd);animation:obrec 1.2s steps(2,start) infinite}
 @keyframes obrec{to{opacity:.15}}
@@ -117,14 +140,14 @@ html,body{margin:0;background:#050E1C}
 /* team store */
 .ob .ts{background:var(--tf);background-image:repeating-linear-gradient(90deg,transparent 0 calc(var(--u)*6),rgba(255,255,255,.035) calc(var(--u)*6) calc(var(--u)*12))}
 .ob .ts .sh h2 .g{color:var(--gd)}
-.ob .ts .gx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.4)}
-.ob .cd{position:relative;display:flex;flex-direction:column;background:var(--nv);border:calc(var(--u)*.24) solid var(--gd);padding:calc(var(--u)*1.6) calc(var(--u)*1.8) calc(var(--u)*1.8);min-height:calc(var(--u)*30);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 rgba(0,0,0,.4)}
+.ob .ts .gx{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
+.ob .cd{position:relative;display:flex;flex-direction:column;background:var(--nv);border:calc(var(--u)*.24) solid var(--gd);padding:0;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 rgba(0,0,0,.4)}
 .ob .cd::before{content:"";position:absolute;inset:calc(var(--u)*.5);border:1px solid rgba(244,241,232,.2);pointer-events:none}
 .ob .cd .top{display:flex;justify-content:space-between;align-items:flex-start;font:800 calc(var(--u)*.78)/1 var(--ui);letter-spacing:.22em;text-transform:uppercase;color:var(--gd)}
 .ob .cd .no{font:900 calc(var(--u)*7)/.8 var(--hd);color:transparent;-webkit-text-stroke:1px rgba(240,193,75,.7);letter-spacing:.02em}
-.ob .cd h3{margin-top:auto;font-size:calc(var(--u)*4.7);line-height:.9;padding-top:calc(var(--u)*2)}
+.ob .cd h3{margin:calc(var(--u)*1.1) 0 calc(var(--u)*1.8);font-size:calc(var(--u)*3.2);line-height:.92}
 .ob .cd h3 .g{color:var(--gd)}
-.ob .cd dl{display:grid;grid-template-columns:auto 1fr;gap:.3em 1.2em;margin-top:calc(var(--u)*1.8);padding-top:calc(var(--u)*1.2);border-top:1px solid rgba(244,241,232,.25);font:600 calc(var(--u)*.84)/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase}
+.ob .cd dl{display:grid;grid-template-columns:auto 1fr;gap:.3em 1.2em;margin-top:auto;padding-top:calc(var(--u)*1.2);border-top:1px solid rgba(244,241,232,.25);font:600 calc(var(--u)*.84)/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase}
 .ob .cd dt{opacity:.6}
 .ob .cd dd{text-align:right;color:var(--ch)}
 .ob .mn{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.4) calc(var(--u)*3);margin-top:calc(var(--u)*4);padding:calc(var(--u)*1.6) calc(var(--u)*2.2);background:var(--ch);color:var(--nv)}
@@ -138,7 +161,7 @@ html,body{margin:0;background:#050E1C}
 .ob .rc .gx{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:calc(var(--u)*4.5);align-items:start}
 .ob .vd{position:relative;border:calc(var(--u)*.22) solid var(--gd);background:#000;aspect-ratio:16/9;overflow:hidden}
 .ob .vd img,.ob .vd iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
-.ob .vd img{transform:scale(1.55);transform-origin:34% 74%;filter:saturate(.85) contrast(1.05)}
+.ob .vd img{object-position:50% 30%}
 .ob .vd button{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;background:linear-gradient(180deg,rgba(5,14,28,.05),rgba(5,14,28,.55));display:flex;align-items:center;justify-content:center}
 .ob .vd .pl{display:flex;align-items:center;gap:calc(var(--u)*1.2);background:var(--gd);color:var(--nv);padding:calc(var(--u)*1) calc(var(--u)*1.8) calc(var(--u)*1) calc(var(--u)*1.2);font:900 calc(var(--u)*1.6)/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;transition:transform .25s ease}
 .ob .vd button:hover .pl{transform:scale(1.05)}
@@ -174,9 +197,10 @@ html,body{margin:0;background:#050E1C}
 .ob .st ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:calc(var(--u)*3)}
 .ob .st li:nth-child(4){border-left:0;padding-left:0}
 .ob .fc .gx,.ob .ts .gx{grid-template-columns:1fr 1fr}
-.ob .fc figure:nth-child(2){margin-top:0}
-.ob .fc figure:nth-child(3),.ob .ts .cd:nth-child(3){grid-column:1/-1}
-.ob .cd{min-height:calc(var(--u)*24)}
+.ob .fc figure:nth-child(even){margin-top:0}
+.ob .sg,.ob .vx{grid-template-columns:1fr;gap:calc(var(--u)*3)}
+.ob .cd h3{font-size:calc(var(--u)*3.6)}
+.ob .vi li{font-size:calc(var(--u)*3.6)}
 .ob .fin{grid-template-columns:1fr;text-align:center;justify-items:center;gap:calc(var(--u)*1.4)}
 .ob .nv nav{gap:calc(var(--u)*1.6)}
 }
@@ -210,9 +234,13 @@ html,body{margin:0;background:#050E1C}
 .ob .st b{font-size:calc(var(--u)*5.4)}
 .ob .st span{font-size:calc(var(--u)*.85)}
 .ob .fc .gx,.ob .ts .gx{grid-template-columns:1fr}
+.ob .sg figcaption .it{font-size:calc(var(--u)*3.4)}
+.ob .sg figcaption b{font-size:calc(var(--u)*3.8)}
+.ob .vi li{font-size:calc(var(--u)*3.2)}
+.ob .cd h3{font-size:calc(var(--u)*4.2)}
+.ob .bn img{aspect-ratio:16/9}
 .ob .fc figcaption b{font-size:calc(var(--u)*3)}
 .ob .fc figcaption span{font-size:calc(var(--u)*1.8)}
-.ob .cd{min-height:calc(var(--u)*24)}
 .ob .cd h3{font-size:calc(var(--u)*4.6)}
 .ob .cd dl{font-size:calc(var(--u)*.95)}
 .ob .mn{padding:calc(var(--u)*1.6)}
@@ -255,7 +283,10 @@ html,body{margin:0;background:#050E1C}
 <p class="ld">AT&amp;T handed out free, gloriously mediocre sports merch outside the big football event in Atlanta, to show how absurd settling for just OK really is.</p>
 <p class="it">All without ever using the words &ldquo;Super Bowl.&rdquo;</p>
 <p class="sm">The stand inspired a collection of merch built on big game vagueisms. Who wouldn&rsquo;t want that?</p></div>
-</div></div></section>
+</div>
+<figure class="sg rv"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-sign.webp?v=1" alt="" role="img" aria-label="A staffer in an I Attended Football Event shirt beside a sign that reads Sports merchandise should never be just OK. Same for wireless networks." loading="lazy"></div>
+<figcaption><span class="it">The sign out front said it plainly.</span><b>Sports merchandise should never be just OK. Same for wireless networks.</b></figcaption></figure>
+</div></section>
 
 <section class="st" aria-label="Game stats"><div class="w"><ul>
 <li class="rv"><b>2</b><span>Teams On The Field</span></li>
@@ -268,20 +299,29 @@ html,body{margin:0;background:#050E1C}
 <section class="sc fc" id="fancam"><span class="yd" aria-hidden="true">40 50 40</span><div class="w">
 <div class="sh rv"><span class="lb"><b>02</b>The Stand: Fan Cam</span><h2>Live From <span class="g">The Merch Line</span></h2></div>
 <div class="gx">
-<figure class="rv"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-stand.webp?v=1" alt="" role="img" aria-label="Fans browsing shirts and hats at the Just OK Game Merch stand" loading="lazy"><span class="rec">Fan Cam 01</span></div>
+<figure class="rv"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-couple.webp?v=1" alt="" role="img" aria-label="Two fans holding up a black Special Football Match shirt at the stand" loading="lazy"><span class="rec">Fan Cam 01</span></div>
 <figcaption><b>Browsing. <i>Intensely.</i></b><span>Shirts, hats, koozies and meh-mories. All free.</span></figcaption></figure>
-<figure class="rv" style="--d:.1s"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-tee.webp?v=1" alt="" role="img" aria-label="Two fans inspecting a gray shirt at the merch stand" loading="lazy"><span class="rec">Fan Cam 02</span></div>
-<figcaption><b>Quality Control. <i>Pending.</i></b><span>The fans have questions about the shirt. The shirt has no answers.</span></figcaption></figure>
-<figure class="rv" style="--d:.2s"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-crowd.webp?v=1" alt="" role="img" aria-label="A crowd gathering around the Just OK Game Merch stand in the sun" loading="lazy"><span class="rec">Fan Cam 03</span></div>
-<figcaption><b>The Crowd <i>Goes Mild.</i></b><span>A standing ovation, if everyone could decide to stand.</span></figcaption></figure>
+<figure class="rv" style="--d:.08s"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-woman.webp?v=1" alt="" role="img" aria-label="A fan laughing as she flips through a rack of Go Football Game shirts" loading="lazy"><span class="rec">Fan Cam 02</span></div>
+<figcaption><b>Quality Control. <i>Pending.</i></b><span>The shirt has no answers. The fans are delighted anyway.</span></figcaption></figure>
+<figure class="rv" style="--d:.16s"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-men.webp?v=1" alt="" role="img" aria-label="Two men holding stacks of koozies, one giving the camera a deadpan look" loading="lazy"><span class="rec">Fan Cam 03</span></div>
+<figcaption><b>The Crowd <i>Goes Mild.</i></b><span>Enthusiasm level: OK. Koozie count: plenty.</span></figcaption></figure>
+<figure class="rv" style="--d:.24s"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-selfie.webp?v=1" alt="" role="img" aria-label="A fan taking a selfie in front of the Just OK Game Merch stand" loading="lazy"><span class="rec">Fan Cam 04</span></div>
+<figcaption><b>Posting. <i>Immediately.</i></b><span>Proof of attendance, delivered in real time.</span></figcaption></figure>
 </div></div></section>
 
 <section class="sc ts" id="store"><div class="w">
 <div class="sh rv"><span class="lb"><b>03</b>Team Store: The Starting Lineup</span><h2>Would You <span class="g">Settle For This?</span></h2></div>
+<figure class="bn rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-banner.webp?v=1" alt="" role="img" aria-label="The stand header reading The most OK souvenirs all in one place" loading="lazy"></figure>
 <div class="gx">
-<article class="cd rv"><div class="top"><span>Crewneck Tee</span><span class="no">01</span></div><h3>I Attended <span class="g">Football Event</span></h3><dl><dt>Position</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></article>
-<article class="cd rv" style="--d:.08s"><div class="top"><span>Statement Tee</span><span class="no">02</span></div><h3>I Went To A Football Game In Atlanta <span class="g">Between Two Teams</span></h3><dl><dt>Position</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></article>
-<article class="cd rv" style="--d:.16s"><div class="top"><span>Fan Tee</span><span class="no">03</span></div><h3>Go <span class="g">Football Game</span></h3><dl><dt>Position</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></article>
+<article class="cd rv" style="--d:0.07s"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-cap.webp?v=1" alt="" role="img" aria-label="An embroidered black cap reading I Attended Football Event ATL 2019 with a Just OK is not OK tag" loading="lazy"><span class="no">01</span></div><div class="bd"><span class="tp">Cap</span><h3>I Attended <span class="g">Football Event</span></h3><dl><dt>Item</dt><dd>Hat</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></div></article>
+<article class="cd rv" style="--d:0.14s"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-tee-atlanta.webp?v=1" alt="" role="img" aria-label="A white tee reading I went to a football game in Atlanta between two football teams" loading="lazy"><span class="no">02</span></div><div class="bd"><span class="tp">Statement Tee</span><h3>I Went To A Football Game In Atlanta <span class="g">Between Two Teams</span></h3><dl><dt>Item</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></div></article>
+<article class="cd rv" style="--d:0.21s"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-tee-go.webp?v=1" alt="" role="img" aria-label="A gray tee reading Go Football Game ATL 2019" loading="lazy"><span class="no">03</span></div><div class="bd"><span class="tp">Fan Tee</span><h3>Go <span class="g">Football Game</span></h3><dl><dt>Item</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></div></article>
+<article class="cd rv" style="--d:0.28s"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-tee-special.webp?v=1" alt="" role="img" aria-label="A black tee reading I went to a Special Football Match Inside the Dome" loading="lazy"><span class="no">04</span></div><div class="bd"><span class="tp">Match Tee</span><h3>I Went To A <span class="g">Special Football Match</span></h3><dl><dt>Item</dt><dd>Shirt</dd><dt>Effort</dt><dd>OK</dd><dt>Hype</dt><dd>OK</dd></dl></div></article>
+</div>
+<div class="vx">
+<figure class="rv"><div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-bench.webp?v=1" alt="" role="img" aria-label="A sideline bench styled with the full merch collection, a cooler, cleats and a football" loading="lazy"></div></figure>
+<div class="vi rv" style="--d:.1s"><span class="lb"><b>Bonus</b>The Vagueism Index</span>
+<ol><li><i>01</i>Sports Game MMXIX</li><li><i>02</i>Big Football Contest</li><li><i>03</i>Grand Prize Game</li><li><i>04</i>Special Football Match</li><li><i>05</i>Attendee Of Football Event</li><li><i>06</i>An OK Koozie Is Not OK</li></ol></div>
 </div>
 <div class="mn rv"><b>Team Store Menu</b><ul><li>Shirts</li><li>Hats</li><li>Koozies</li><li>Meh-mories</li></ul><span class="fr">Free</span></div>
 </div></section>
@@ -289,7 +329,7 @@ html,body{margin:0;background:#050E1C}
 <section class="sc rc" id="final"><span class="yd" aria-hidden="true">50 40 30</span><div class="w">
 <div class="sh rv"><span class="lb"><b>04</b>Postgame: The Recap</span><h2>Two Days. <span class="g">One Very OK Takeover.</span></h2></div>
 <div class="gx">
-<div class="vd rv" id="obvd"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-hero.webp?v=1" alt="" role="img" aria-label="Still from the Just OK Game Merch timelapse" loading="lazy"><button type="button" aria-label="Play the timelapse"><span class="pl"><i></i>Watch The Timelapse</span></button></div>
+<div class="vd rv" id="obvd"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-shelves.webp?v=1" alt="" role="img" aria-label="Shelves of folded shirts, koozies and caps under the Just OK Game Merch sign" loading="lazy"><button type="button" aria-label="Play the timelapse"><span class="pl"><i></i>Watch The Timelapse</span></button></div>
 <div class="cp rv" style="--d:.1s">
 <p>AT&amp;T was not an official sponsor of the game that year, with no access to official NFL messaging, logos, or any other property.</p>
 <p><strong>It did not matter.</strong> Across two days we tapped into the national attention and the staggering foot traffic around the city to deliver our hilariously OK message.</p>
