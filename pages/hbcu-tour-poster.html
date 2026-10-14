@@ -503,8 +503,9 @@
 .tb .pvc.has{opacity:1;visibility:visible;transform:rotate(4deg) scale(1);transition-delay:0s}
 .tb .pvc .pvw{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);top:calc(var(--u)*.9);bottom:calc(var(--u)*4.3);background:var(--k);overflow:hidden;box-shadow:inset 0 0 0 calc(var(--u)*.15) rgba(0,0,0,.85)}
 .tb .pvc .pvw::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.22) 0,rgba(255,255,255,0) 38%,rgba(0,0,0,.18) 100%);pointer-events:none}
-.tb .pvc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s ease}
+.tb .pvc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;object-position:50% 8%;transition:opacity .3s ease}
 .tb .pvc img.on{opacity:1}
+.tb .pvc img[data-i="3"]{object-position:50% 0}
 .tb .pvc .pvk{position:absolute;left:calc(var(--u)*.9);right:calc(var(--u)*.9);bottom:calc(var(--u)*.5);height:calc(var(--u)*3.3);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*.5);white-space:nowrap;overflow:hidden;font-family:var(--hd);font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:.03em;color:var(--k);line-height:1}
 .tb .pvc .pvk b{font-size:calc(var(--u)*1.45);font-weight:800;line-height:1}
 .tb .pvc .pvk i{font-style:normal;font-family:var(--mono,"Space Mono",monospace);font-weight:700;font-stretch:100%;font-size:calc(var(--u)*.6);letter-spacing:.06em;color:var(--bl);margin:0}
