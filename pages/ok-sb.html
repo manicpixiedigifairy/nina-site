@@ -19,11 +19,6 @@ html,body{margin:0;background:#050E1C}
 .ob .it{font-family:var(--sf);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
 
 /* ticker */
-.ob .tk{position:relative;overflow:hidden;background:var(--bl);color:var(--nv);border-bottom:calc(var(--u)*.22) solid var(--gd)}
-.ob .tk .rl{display:flex;width:max-content;animation:obtk 46s linear infinite}
-.ob .tk span{display:block;white-space:nowrap;font:800 calc(var(--u)*.92)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;padding:calc(var(--u)*.95) calc(var(--u)*1.4)}
-.ob .tk span::after{content:"\25C6";margin-left:calc(var(--u)*2.8);color:var(--nv);opacity:.55}
-@keyframes obtk{to{transform:translateX(-50%)}}
 
 /* nav */
 .ob .nv{position:sticky;top:0;z-index:20;background:rgba(5,14,28,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(240,193,75,.28)}
@@ -39,15 +34,15 @@ html,body{margin:0;background:#050E1C}
  radial-gradient(120% 60% at 80% 0,rgba(43,151,255,.22),transparent 60%),
  linear-gradient(180deg,var(--nv) 0,var(--n2) 100%)}
 .ob .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*1.4);background:repeating-linear-gradient(90deg,var(--tf) 0 calc(var(--u)*5),#0F4631 calc(var(--u)*5) calc(var(--u)*10));border-top:calc(var(--u)*.2) solid rgba(244,241,232,.85)}
-.ob .hero .lb{margin-bottom:calc(var(--u)*2.2)}
 .ob .hero h1{font-size:calc(var(--u)*15.5);letter-spacing:-.012em}
-.ob .hero h1 .l2{display:block;color:transparent;-webkit-text-stroke:calc(var(--u)*.16) var(--ch)}
+.ob .hero h1 .l2{display:block}
+.ob .hero h1 .ol{display:inline-block;vertical-align:top;height:.88em;overflow:visible;fill:none;stroke:var(--ch);stroke-width:calc(var(--u)*.16);vector-effect:non-scaling-stroke;stroke-linejoin:miter}
+.ob .hero h1 .ol path{vector-effect:non-scaling-stroke}
 .ob .hero h1 .ok{color:var(--gd);-webkit-text-stroke:0}
 .ob .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:calc(var(--u)*4.5);align-items:end;margin-top:calc(var(--u)*4.2)}
 .ob .hero .dk{font-size:calc(var(--u)*1.55);line-height:1.38;font-weight:500;max-width:calc(var(--u)*27)}
 .ob .hero .dk .it{display:block;font-size:calc(var(--u)*2.7);line-height:1.04;color:var(--ch);margin-bottom:calc(var(--u)*1.4)}
 .ob .hero .dk em{font-style:normal;color:var(--gd);font-weight:700}
-.ob .hero .meta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6) calc(var(--u)*1.6);margin-top:calc(var(--u)*2.4);font:700 calc(var(--u)*.8)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;opacity:.75}
 .ob .jt{position:relative;border:calc(var(--u)*.22) solid var(--gd);background:#000;box-shadow:0 calc(var(--u)*2) calc(var(--u)*5) rgba(0,0,0,.55)}
 .ob .jt img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .ob .sbd{position:relative;max-width:calc(var(--u)*17);margin-bottom:calc(var(--u)*2.6);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 rgba(43,151,255,.35);background:rgba(5,14,28,.92);border:1px solid rgba(240,193,75,.6);min-width:calc(var(--u)*17);font-family:var(--hd);text-transform:uppercase}
@@ -55,9 +50,6 @@ html,body{margin:0;background:#050E1C}
 .ob .sbd .r{display:flex;justify-content:space-between;align-items:center;gap:1em;padding:calc(var(--u)*.35) calc(var(--u)*.9);font-weight:800;font-size:calc(var(--u)*1.35);line-height:1.1;letter-spacing:.04em;border-top:1px solid rgba(244,241,232,.14)}
 .ob .sbd .r b{font-weight:900;color:var(--gd);text-shadow:0 0 calc(var(--u)*.7) rgba(240,193,75,.65);min-width:1.6em;text-align:right}
 .ob .sbd .ck{color:var(--rd);font-variant-numeric:tabular-nums}
-.ob .lt{position:absolute;left:calc(var(--u)*-1.8);bottom:calc(var(--u)*-1.6);display:flex;align-items:stretch;max-width:92%}
-.ob .lt b{display:flex;align-items:center;background:var(--gd);color:var(--nv);font:800 calc(var(--u)*.8)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;padding:0 calc(var(--u)*1.1)}
-.ob .lt span{display:block;background:rgba(5,14,28,.94);padding:calc(var(--u)*.75) calc(var(--u)*1.4);font:800 calc(var(--u)*1.55)/1.05 var(--hd);letter-spacing:.03em;text-transform:uppercase}
 
 /* sections */
 .ob .sc{position:relative;padding:calc(var(--u)*9) 0}
@@ -213,8 +205,6 @@ html,body{margin:0;background:#050E1C}
 .ob .hero .dk .it{font-size:calc(var(--u)*3.3)}
 .ob .hero .dk{font-size:calc(var(--u)*1.7)}
 .ob .sbd{max-width:calc(var(--u)*20);margin-bottom:calc(var(--u)*2)}
-.ob .lt b{display:none}
-.ob .lt span{font-size:calc(var(--u)*1.15);padding:calc(var(--u)*.55) calc(var(--u)*.9)}
 .ob .sc{padding:calc(var(--u)*6) 0}
 .ob .sh h2{font-size:calc(var(--u)*5.2)}
 .ob .yd{display:none}
@@ -247,31 +237,22 @@ html,body{margin:0;background:#050E1C}
 .ob .mn li{font-size:calc(var(--u)*1.2)}
 .ob .fin .s{font-size:calc(var(--u)*4.4);gap:calc(var(--u)*1.6)}
 .ob .ft h2{font-size:calc(var(--u)*8.2)}
-.ob .tk span{font-size:calc(var(--u)*.95)}
 }
 </style></head>
 <body>
 <div class="ob" id="ob">
 
-<div class="tk" aria-hidden="true"><div class="rl">
-<div style="display:flex"><span>Breaking: two teams playing football in Atlanta</span><span>Sources confirm it is a football event</span><span>Merch stand now open</span><span>Every item free</span><span>Nobody settles for OK souvenirs</span><span>Why settle for OK wireless</span><span>Just OK is not OK</span></div>
-<div style="display:flex"><span>Breaking: two teams playing football in Atlanta</span><span>Sources confirm it is a football event</span><span>Merch stand now open</span><span>Every item free</span><span>Nobody settles for OK souvenirs</span><span>Why settle for OK wireless</span><span>Just OK is not OK</span></div>
-</div></div>
-
 <header class="nv"><div class="w"><a class="mk" href="#ob">OK <i>SB</i></a>
 <nav aria-label="Sections"><a href="#overview">Overview</a><a href="#fancam">The Stand</a><a href="#store">Team Store</a><a href="#final">Final Score</a></nav></div></header>
 
 <section class="hero" id="kickoff"><div class="w">
-<span class="lb rv"><b>Atlanta</b>Game Weekend Activation</span>
-<h1 class="rv">Just <span class="ok">OK</span><span class="l2">Game Merch</span></h1>
+<h1 class="rv">Just <span class="ok">OK</span><span class="l2" role="img" aria-label="Game Merch"><svg class="ol" viewBox="0 0 4166 1760" style="width:2.083em;margin-right:0.196em" aria-hidden="true" focusable="false"><path transform="translate(0 1651)" d="M1964 0V-1600H2446L2578 -994L2604 -264H2656L2680 -994L2814 -1600H3294V0H2994V-492L2914 -472L2790 0H2468L2346 -472L2264 -492V0ZM972 0 1194 -1600H1666L1888 0H1580L1546 -334H1314L1280 0ZM498 20Q347 20 256 -20.5Q165 -61 123 -149.5Q81 -238 76 -382Q73 -466 71.5 -573.5Q70 -681 70 -795Q70 -909 71.5 -1015Q73 -1121 76 -1202Q82 -1354 125.5 -1446Q169 -1538 259.5 -1579Q350 -1620 498 -1620Q708 -1620 804.5 -1527.5Q901 -1435 914 -1220Q917 -1174 917 -1110.5Q917 -1047 914 -1000H614Q617 -1056 617 -1138.5Q617 -1221 614 -1276Q611 -1324 581 -1350Q551 -1376 498 -1376Q440 -1376 409.5 -1350Q379 -1324 376 -1276Q370 -1171 367 -1049.5Q364 -928 364 -801Q364 -674 367 -552.5Q370 -431 376 -326Q379 -277 409.5 -250.5Q440 -224 498 -224Q555 -224 589.5 -250.5Q624 -277 628 -326Q630 -349 630.5 -386.5Q631 -424 630.5 -461.5Q630 -499 628 -522H518V-782H920Q925 -691 924 -582.5Q923 -474 918 -382Q908 -166 810.5 -73Q713 20 498 20ZM3430 0V-1600H4122V-1336H3730V-946H4102V-682H3730V-264H4122V0ZM1342 -598H1518L1482 -952L1458 -1336H1402L1378 -952Z"/></svg><svg class="ol" viewBox="0 0 5114 1760" style="width:2.557em" aria-hidden="true" focusable="false"><path transform="translate(0 1651)" d="M80 0V-1600H562L694 -994L720 -264H772L796 -994L930 -1600H1410V0H1110V-492L1030 -472L906 0H584L462 -472L380 -492V0ZM2338 0V-1600H2724Q2948 -1600 3047.5 -1509.5Q3147 -1419 3154 -1210Q3156 -1154 3156.5 -1112Q3157 -1070 3156.5 -1028Q3156 -986 3154 -930Q3150 -800 3110.5 -717Q3071 -634 2988 -590L3176 0H2858L2706 -540H2638V0ZM4224 0V-1600H4524V-946H4734V-1600H5034V0H4734V-682H4524V0ZM3683 20Q3457 20 3361.5 -73Q3266 -166 3261 -382Q3260 -465 3259 -574Q3258 -683 3258 -800.5Q3258 -918 3259 -1027.5Q3260 -1137 3261 -1222Q3264 -1405 3363.5 -1512.5Q3463 -1620 3683 -1620Q3899 -1620 3996 -1527.5Q4093 -1435 4099 -1220Q4100 -1187 4100 -1148.5Q4100 -1110 4099 -1071.5Q4098 -1033 4097 -1000H3797Q3798 -1037 3799 -1087.5Q3800 -1138 3800 -1188.5Q3800 -1239 3799 -1276Q3798 -1324 3767.5 -1350Q3737 -1376 3683 -1376Q3626 -1376 3594.5 -1350Q3563 -1324 3561 -1276Q3557 -1171 3555.5 -1049Q3554 -927 3554 -800Q3554 -673 3555.5 -551.5Q3557 -430 3561 -326Q3563 -277 3594.5 -250.5Q3626 -224 3683 -224Q3742 -224 3774 -250.5Q3806 -277 3807 -326Q3808 -362 3808.5 -412.5Q3809 -463 3808.5 -513.5Q3808 -564 3807 -600H4107Q4109 -552 4109 -491Q4109 -430 4107 -382Q4101 -166 4002.5 -73Q3904 20 3683 20ZM1546 0V-1600H2238V-1336H1846V-946H2218V-682H1846V-264H2238V0ZM2638 -804H2724Q2787 -804 2819 -833Q2851 -862 2854 -914Q2857 -963 2858 -1016.5Q2859 -1070 2858 -1123.5Q2857 -1177 2854 -1226Q2851 -1279 2819 -1307.5Q2787 -1336 2724 -1336H2638Z"/></svg></span></h1>
 <div class="gx">
 <div class="dk rv" style="--d:.1s"><div class="sbd" aria-hidden="true"><div class="hd"><span>Atlanta</span><span>Live</span></div>
 <div class="r"><span>Team One</span><b>0</b></div><div class="r"><span>Team Two</span><b>0</b></div>
-<div class="r"><span>Clock</span><b class="ck" id="obck">0:OK</b></div></div><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span><em>Even on your wireless.</em>
-<div class="meta"><span>Atlanta</span><span>Two Days</span><span>#justOKisnotOK</span></div></div>
+<div class="r"><span>Clock</span><b class="ck" id="obck">0:OK</b></div></div><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span><em>Even on your wireless.</em></div>
 <figure class="jt rv" style="--d:.2s">
 <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-hero.webp?v=2" alt="" role="img" aria-label="The Just OK Game Merch stand, stocked with shirts, hats and koozies, with a free price list below">
-<figcaption class="lt"><b>Now Showing</b><span>A Merch Stand. Just OK.</span></figcaption>
 </figure>
 </div></div></section>
 
