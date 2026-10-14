@@ -49,13 +49,13 @@ html,body{margin:0;background:#050E1C}
 .ob .hero .dk em{font-style:normal;color:var(--gd);font-weight:700}
 .ob .hero .meta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6) calc(var(--u)*1.6);margin-top:calc(var(--u)*2.4);font:700 calc(var(--u)*.8)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;opacity:.75}
 .ob .jt{position:relative;border:calc(var(--u)*.22) solid var(--gd);background:#000;box-shadow:0 calc(var(--u)*2) calc(var(--u)*5) rgba(0,0,0,.55)}
-.ob .jt img{width:100%;aspect-ratio:16/9;object-fit:cover}
-.ob .sbd{position:absolute;right:calc(var(--u)*1.4);top:calc(var(--u)*1.4);background:rgba(5,14,28,.92);border:1px solid rgba(240,193,75,.6);min-width:calc(var(--u)*17);font-family:var(--hd);text-transform:uppercase}
+.ob .jt img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.ob .sbd{position:relative;max-width:calc(var(--u)*17);margin-bottom:calc(var(--u)*2.6);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 rgba(43,151,255,.35);background:rgba(5,14,28,.92);border:1px solid rgba(240,193,75,.6);min-width:calc(var(--u)*17);font-family:var(--hd);text-transform:uppercase}
 .ob .sbd .hd{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.45) calc(var(--u)*.9);background:var(--bl);color:var(--nv);font:800 calc(var(--u)*.74)/1 var(--ui);letter-spacing:.2em}
 .ob .sbd .r{display:flex;justify-content:space-between;align-items:center;gap:1em;padding:calc(var(--u)*.35) calc(var(--u)*.9);font-weight:800;font-size:calc(var(--u)*1.35);line-height:1.1;letter-spacing:.04em;border-top:1px solid rgba(244,241,232,.14)}
 .ob .sbd .r b{font-weight:900;color:var(--gd);text-shadow:0 0 calc(var(--u)*.7) rgba(240,193,75,.65);min-width:1.6em;text-align:right}
 .ob .sbd .ck{color:var(--rd);font-variant-numeric:tabular-nums}
-.ob .lt{position:absolute;left:0;bottom:calc(var(--u)*1.6);display:flex;align-items:stretch;max-width:92%}
+.ob .lt{position:absolute;left:calc(var(--u)*-1.8);bottom:calc(var(--u)*-1.6);display:flex;align-items:stretch;max-width:92%}
 .ob .lt b{display:flex;align-items:center;background:var(--gd);color:var(--nv);font:800 calc(var(--u)*.8)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;padding:0 calc(var(--u)*1.1)}
 .ob .lt span{display:block;background:rgba(5,14,28,.94);padding:calc(var(--u)*.75) calc(var(--u)*1.4);font:800 calc(var(--u)*1.55)/1.05 var(--hd);letter-spacing:.03em;text-transform:uppercase}
 
@@ -188,9 +188,7 @@ html,body{margin:0;background:#050E1C}
 .ob .hero h1{font-size:calc(var(--u)*11.5)}
 .ob .hero .dk .it{font-size:calc(var(--u)*3.3)}
 .ob .hero .dk{font-size:calc(var(--u)*1.7)}
-.ob .sbd{right:calc(var(--u)*.8);top:calc(var(--u)*.8);min-width:calc(var(--u)*12.5)}
-.ob .sbd .r{font-size:calc(var(--u)*1.05);padding:calc(var(--u)*.25) calc(var(--u)*.6)}
-.ob .sbd .hd{font-size:calc(var(--u)*.6);padding:calc(var(--u)*.35) calc(var(--u)*.6)}
+.ob .sbd{max-width:calc(var(--u)*20);margin-bottom:calc(var(--u)*2)}
 .ob .lt b{display:none}
 .ob .lt span{font-size:calc(var(--u)*1.15);padding:calc(var(--u)*.55) calc(var(--u)*.9)}
 .ob .sc{padding:calc(var(--u)*6) 0}
@@ -239,13 +237,12 @@ html,body{margin:0;background:#050E1C}
 <span class="lb rv"><b>Atlanta</b>Game Weekend Activation</span>
 <h1 class="rv">Just <span class="ok">OK</span><span class="l2">Game Merch</span></h1>
 <div class="gx">
-<div class="dk rv" style="--d:.1s"><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span><em>Even on your wireless.</em>
+<div class="dk rv" style="--d:.1s"><div class="sbd" aria-hidden="true"><div class="hd"><span>Atlanta</span><span>Live</span></div>
+<div class="r"><span>Team One</span><b>0</b></div><div class="r"><span>Team Two</span><b>0</b></div>
+<div class="r"><span>Clock</span><b class="ck" id="obck">0:OK</b></div></div><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span><em>Even on your wireless.</em>
 <div class="meta"><span>Atlanta</span><span>Two Days</span><span>#justOKisnotOK</span></div></div>
 <figure class="jt rv" style="--d:.2s">
-<img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-hero.webp?v=1" alt="" role="img" aria-label="The Just OK Game Merch stand and a crowd of fans in front of the Atlanta skyline">
-<div class="sbd" aria-hidden="true"><div class="hd"><span>Atlanta</span><span>Live</span></div>
-<div class="r"><span>Team One</span><b>0</b></div><div class="r"><span>Team Two</span><b>0</b></div>
-<div class="r"><span>Clock</span><b class="ck" id="obck">0:OK</b></div></div>
+<img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-hero.webp?v=2" alt="" role="img" aria-label="The Just OK Game Merch stand, stocked with shirts, hats and koozies, with a free price list below">
 <figcaption class="lt"><b>Now Showing</b><span>A Merch Stand. Just OK.</span></figcaption>
 </figure>
 </div></div></section>
