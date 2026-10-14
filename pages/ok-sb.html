@@ -125,11 +125,6 @@ html,body{margin:0;background:#050E1C}
 .ob .cd dl{display:grid;grid-template-columns:auto 1fr;gap:.3em 1.2em;margin-top:auto;padding-top:calc(var(--u)*1.2);border-top:1px solid rgba(244,241,232,.25);font:600 calc(var(--u)*.84)/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase}
 .ob .cd dt{opacity:.6}
 .ob .cd dd{text-align:right;color:var(--ch)}
-.ob .mn{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.4) calc(var(--u)*3);margin-top:calc(var(--u)*4);padding:calc(var(--u)*1.6) calc(var(--u)*2.2);background:var(--ch);color:var(--nv)}
-.ob .mn b{font:900 calc(var(--u)*2.1)/1 var(--hd);text-transform:uppercase;letter-spacing:.04em}
-.ob .mn ul{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6) calc(var(--u)*2.6)}
-.ob .mn li{font:800 calc(var(--u)*1.1)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase}
-.ob .mn .fr{text-transform:uppercase;font:900 calc(var(--u)*2.1)/1 var(--hd);letter-spacing:.06em;color:#0B6BD3;border:calc(var(--u)*.2) solid #0B6BD3;padding:.12em .5em}
 
 /* recap */
 .ob .rc{background:var(--n2)}
@@ -145,17 +140,16 @@ html,body{margin:0;background:#050E1C}
 .ob .rc .cp p{font-size:calc(var(--u)*1.32);line-height:1.5}
 .ob .rc .cp p strong{color:var(--gd);font-weight:700}
 .ob .rc .cp .it{display:block;font-size:calc(var(--u)*2.4);line-height:1.08;margin-top:calc(var(--u)*.6)}
-.ob .fin{margin-top:calc(var(--u)*6);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:calc(var(--u)*3);border:calc(var(--u)*.22) solid var(--gd);background:var(--nv);padding:calc(var(--u)*1.6) calc(var(--u)*2.4)}
-.ob .fin .f{font:900 calc(var(--u)*1.1)/1 var(--ui);letter-spacing:.3em;text-transform:uppercase;color:var(--nv);background:var(--gd);padding:.6em .9em .5em}
-.ob .fin .s{display:flex;align-items:baseline;justify-content:center;gap:calc(var(--u)*2.4);font:900 calc(var(--u)*6)/1 var(--hd);text-transform:uppercase;letter-spacing:.02em}
-.ob .fin .s small{font:800 calc(var(--u)*.84)/1 var(--ui);letter-spacing:.22em;opacity:.65;display:block;margin-bottom:.8em}
-.ob .fin .s div:nth-child(2){color:var(--gd)}
-.ob .fin .h{font:900 calc(var(--u)*2)/1 var(--hd);text-transform:uppercase;letter-spacing:.08em;color:var(--bl)}
 
 /* footer */
 .ob .ft{position:relative;text-align:center;background:var(--bl);color:var(--nv);padding:calc(var(--u)*7) 0;border-top:calc(var(--u)*.22) solid var(--gd)}
 .ob .ft h2{font-size:calc(var(--u)*11);line-height:.86}
 .ob .ft h2 .l2{display:block;color:var(--ch)}
+.ob .bkr{display:flex;justify-content:flex-start;margin-top:calc(var(--u)*5)}
+.ob .bk{display:inline-flex;align-items:center;gap:.8em;padding:calc(var(--u)*1) calc(var(--u)*1.8);background:var(--nv);color:var(--ch);font:800 calc(var(--u)*1.05)/1 var(--ui);letter-spacing:.2em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}
+.ob .bk span{font-size:1.3em;line-height:1;transition:transform .2s}
+.ob .bk:hover,.ob .bk:focus-visible{background:var(--gd);color:var(--nv)}
+.ob .bk:hover span{transform:translateX(-.3em)}
 .ob .ft p{margin-top:calc(var(--u)*2.4);font:800 calc(var(--u)*.95)/1 var(--ui);letter-spacing:.3em;text-transform:uppercase}
 
 /* reveal */
@@ -193,7 +187,6 @@ html,body{margin:0;background:#050E1C}
 .ob .sg,.ob .vx{grid-template-columns:1fr;gap:calc(var(--u)*3)}
 .ob .cd h3{font-size:calc(var(--u)*3.6)}
 .ob .vi li{font-size:calc(var(--u)*3.6)}
-.ob .fin{grid-template-columns:1fr;text-align:center;justify-items:center;gap:calc(var(--u)*1.4)}
 }
 @media (max-width:700px){
 .ob{font-size:calc(var(--u)*1.25)}
@@ -225,9 +218,6 @@ html,body{margin:0;background:#050E1C}
 .ob .cd h3{font-size:calc(var(--u)*4.2)}
 .ob .cd h3{font-size:calc(var(--u)*4.6)}
 .ob .cd dl{font-size:calc(var(--u)*.95)}
-.ob .mn{padding:calc(var(--u)*1.6)}
-.ob .mn li{font-size:calc(var(--u)*1.2)}
-.ob .fin .s{font-size:calc(var(--u)*4.4);gap:calc(var(--u)*1.6)}
 .ob .ft h2{font-size:calc(var(--u)*8.2)}
 }
 </style></head>
@@ -295,7 +285,6 @@ html,body{margin:0;background:#050E1C}
 <div class="vi rv" style="--d:.1s"><span class="lb"><b>Bonus</b>The Vagueism Index</span>
 <ol><li><i>01</i>Sports Game MMXIX</li><li><i>02</i>Big Football Contest</li><li><i>03</i>Grand Prize Game</li><li><i>04</i>Special Football Match</li><li><i>05</i>Attendee Of Football Event</li><li><i>06</i>An OK Koozie Is Not OK</li></ol></div>
 </div>
-<div class="mn rv"><b>Team Store Menu</b><ul><li>Shirts</li><li>Hats</li><li>Koozies</li><li>Meh-mories</li></ul><span class="fr">Free</span></div>
 </div></section>
 
 <section class="sc rc" id="final"><div class="w">
@@ -307,13 +296,10 @@ html,body{margin:0;background:#050E1C}
 <p><strong>It did not matter.</strong> Across two days we tapped into the national attention and the staggering foot traffic around the city to deliver our hilariously OK message.</p>
 <p><span class="it">Nobody should settle for OK. Not on a shirt. Not on a network.</span></p>
 </div></div>
-<div class="fin rv" aria-label="Final score">
-<span class="f">Final</span>
-<div class="s"><div><small>Team One</small>0</div><div><small>Team Two</small>0</div><div><small>Merch Stand</small>OK</div></div>
-<span class="h">#justOKisnotOK</span></div>
 </div></section>
 
-<footer class="ft"><div class="w"><h2 class="rv">Just OK<span class="l2">Is Not OK</span></h2></div></footer>
+<footer class="ft"><div class="w"><h2 class="rv">Just OK<span class="l2">Is Not OK</span></h2>
+<div class="bkr"><a class="bk" href="https://www.byninaaustin.com/experiential"><span aria-hidden="true">&larr;</span>Back To Experiential</a></div></div></footer>
 
 </div>
 <script>
