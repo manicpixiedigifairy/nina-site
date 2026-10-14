@@ -429,6 +429,29 @@
 .tb .wc{gap:calc(var(--u)*1.6)}
 }
 
+.tb .strip{justify-content:center;overflow:visible;cursor:default;scroll-snap-type:none;gap:calc(var(--u)*2)}
+.tb .fm,.tb .fm.v,.tb .fm.w{flex:1 1 0;min-width:0}
+.tb .fm .im,.tb .fm.v .im,.tb .fm.w .im{width:100%;height:auto;aspect-ratio:9/16}
+@media (max-width:700px){
+.tb .strip{gap:calc(var(--u)*1.2)}
+.tb .fm:nth-child(n+4){display:none}
+}
+
+.tb .trl .sl{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility 0s linear .5s;overflow:hidden}
+.tb .trl .sl.on{opacity:1;visibility:visible;transition-delay:0s}
+.tb .trl .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tb .trl .sl.two{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.5)}
+.tb .trl .sl.two img{position:static}
+.tb .trl .sl.two img:first-child{object-position:50% 40%}
+.tb .trl .sl .stk{display:grid;grid-template-rows:1fr 1fr;gap:calc(var(--u)*.5);min-height:0;position:relative}
+.tb .trl .sl .stk img{position:static;width:100%;height:100%;min-height:0}
+.tb .note{padding-bottom:calc(var(--u)*6)}
+.tb .note .arr{position:absolute;right:calc(var(--u)*2.4);bottom:calc(var(--u)*2.2);display:flex;gap:calc(var(--u)*.7)}
+.tb .note .arr button{appearance:none;cursor:pointer;width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);padding:calc(var(--u)*.8);display:grid;place-items:center;border:calc(var(--u)*.2) solid var(--ink,#06142B);background:var(--cA2,#FFC220);color:var(--ink,#06142B);transition:transform .15s ease,background .15s ease,color .15s ease}
+.tb .note .arr button svg{width:100%;height:100%;display:block}
+.tb .note .arr button:hover{transform:translateY(calc(var(--u)*-.2));background:#fff}
+.tb .note .arr button:focus-visible{outline:calc(var(--u)*.25) solid #fff;outline-offset:calc(var(--u)*.2)}
+
 .tb .cs{background:var(--nv);--cA:var(--sp)}
 .tb .cs .sh h2 em{font-style:normal;color:var(--sp)}
 .tb .cst button{background:rgba(2,8,19,.6);color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:0}
@@ -472,111 +495,28 @@
 .tb .dates{list-style:none;margin:calc(var(--u)*10.4) 0 0;padding:0 calc(var(--u)*5.5)}
 .tb .dates li{display:grid;grid-template-columns:calc(var(--u)*12) calc(var(--u)*7) minmax(0,1fr);gap:calc(var(--u)*1);font-family:var(--hd);font-weight:700;font-stretch:100%;text-transform:uppercase;font-size:calc(var(--u)*1.7);line-height:1.6;letter-spacing:.01em}
 .tb .dates li span:last-child{text-align:right}
-.tb .fn{padding:calc(var(--u)*.6) calc(var(--u)*5.5) 0;text-align:right;font-family:var(--hd);font-weight:700;font-stretch:100%;font-size:calc(var(--u)*.95);text-transform:uppercase}
-.tb .band{position:relative;margin-top:calc(var(--u)*4);background:var(--bl);aspect-ratio:2.3/1;overflow:hidden}
-.tb .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;filter:grayscale(1) contrast(1.55) brightness(1.08);mix-blend-mode:multiply}
-.tb .band:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,rgba(0,0,0,.4) 1px,transparent 1.6px) 0 0/4px 4px;mix-blend-mode:multiply}
-.tb .band .dot{--d:calc(var(--u)*11);position:absolute;width:var(--d);height:var(--d);border-radius:50%;background:var(--y);z-index:2}
-.tb .band .dot.a{left:calc(13% - var(--d)/2 + var(--u)*3);top:calc(60% - var(--d)/2)}
-.tb .band .dot.b{left:calc(40% - var(--d)/2);top:calc(48% - var(--d)/2);--d:calc(var(--u)*13)}
-.tb .band .dot.c{left:calc(67% - var(--d)/2);top:calc(52% - var(--d)/2);--d:calc(var(--u)*10)}
-.tb .pi{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:calc(var(--u)*4);padding:calc(var(--u)*4) calc(var(--u)*5.5) 0;align-items:start}
-.tb .hero .big{color:var(--k);margin:0;max-width:none;text-align:left;font-size:calc(var(--u)*2.2);font-weight:700;line-height:1.3}
-.tb .bill{margin:0;color:var(--k);justify-content:flex-start;font-family:var(--hd);font-weight:800;font-stretch:100%;font-size:calc(var(--u)*1.35);letter-spacing:.02em;line-height:1.5}
-.tb .bill i{color:var(--bl);margin-right:calc(var(--u)*1.2)}
-.tb .road{background:var(--k);border-color:var(--k)}
-/* tickets */
-.tb .board{background:none}
-.tb .tkt{background:var(--k);border:0;border-radius:0;box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--bl)}
-.tb .tkt:hover{box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--bl)}
-.tb .tkt .top{color:var(--y);border-color:rgba(255,255,255,.25)}
-.tb .tkt h3{color:#fff;font-stretch:100%;letter-spacing:-.03em;font-size:calc(var(--u)*5.4)}
-.tb .tkt:nth-child(2) h3{color:var(--y)}
-.tb .tkt .bdy{color:rgba(255,255,255,.88)}
-.tb .sw:after,.tb .sw i.nr{display:none}
-.tb .sw:before{border-top-color:rgba(255,255,255,.4)}
-.tb .stub{background:var(--bl);color:#fff;border-radius:0}
-.tb .stub .chips i{border-color:#fff}
-.tb .tabs-h{color:var(--k)}
-/* studio */
-.tb .studio{background:var(--bl)}
-.tb .studio .sh h2{color:#fff}
-.tb .studio .sh h2 em{color:var(--y)}
-.tb .studio .lb b{background:var(--k);color:var(--y)}
-.tb .trl{border:calc(var(--u)*.5) solid var(--k);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--y)}
-.tb .trl:after{display:none}
-.tb .hs{background:var(--y);color:var(--k);border:2px solid var(--k)}
-.tb .note{background:var(--y);color:var(--k);border:calc(var(--u)*.4) solid var(--k);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--k)}
-.tb .note:before{display:none}
-.tb .note h3{color:var(--k)}
-.tb .note p{color:var(--k)}
-.tb .note .pg i{background:rgba(0,0,0,.25)}
-.tb .note .pg i.on{background:var(--k)}
-.tb .studio .lead{color:#fff}
-/* on campus */
-.tb .film{background:var(--k)}
-.tb .film .sh h2,.tb .watch .sh h2{color:#fff}
-.tb .film .sh h2 em,.tb .watch .sh h2 em{color:var(--y)}
-.tb .film .lb b,.tb .watch .lb b{background:var(--y);color:var(--k)}
-.tb .film .lb,.tb .watch .lb{color:#fff}
-.tb .hint{color:var(--y)}
-.tb .set{box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--bl)}
-/* route */
-.tb .tour{background:none}
-.tb .rt:before{border-top-color:rgba(0,0,0,.45)}
-.tb .rd{background:var(--y);border-color:var(--k)}
-.tb .rd.done{background:var(--bl);border-color:var(--bl)}
-.tb .rd.on{background:var(--k);border-color:var(--k);box-shadow:none}
-/* watch */
-.tb .watch{background:var(--k)}
-.tb .vt{border:calc(var(--u)*.4) solid #fff;box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 var(--y)}
-/* results */
-.tb .resb{background:var(--bl)}
-.tb .resb h2{color:#fff;font-stretch:100%;letter-spacing:-.035em}
-.tb .resb h2 em{color:var(--y)}
-.tb .resb .lb b{background:var(--k);color:var(--y)}
-.tb .resb p.st{color:#fff;border-left-color:var(--y)}
-/* role */
-.tb .roles{background:none}
-.tb .rph{border-right:calc(var(--u)*.5) solid var(--k)}
-.tb .rph .main:after{display:none}
-.tb .pip{border:calc(var(--u)*.4) solid var(--k);background:#fff}
-.tb .rpa{background:none}
-.tb .pass{border-radius:0;border:calc(var(--u)*.4) solid var(--k);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--k);background:#fff}
-.tb .pass:before{background:var(--y);border:2px solid var(--k)}
-.tb .pass .ph1{background:var(--k);color:var(--y)}
-.tb .pass .ph1 em{color:#fff}
-.tb .pass h2{font-stretch:100%;letter-spacing:-.035em;font-size:calc(var(--u)*5)}
-/* footer */
-.tb .ft{background:var(--k);color:#fff}
-.tb .ft h2{font-stretch:100%;letter-spacing:-.035em;font-size:calc(var(--u)*7.4)}
-.tb .ft .wrap{color:var(--y)}
-@media (max-width:1000px){
-.tb .hero h1.pz{--fs:9;--sy:1.7;padding:0 calc(var(--u)*3.4)}
-.tb .hero h1.pz .sc2{left:calc(var(--u)*5);bottom:calc(var(--u)*-5.4);font-size:calc(var(--u)*5.2)}
-.tb .pt,.tb .fn,.tb .pi,.tb .dates{padding-left:calc(var(--u)*3.4);padding-right:calc(var(--u)*3.4)}
-.tb .dates{margin-top:calc(var(--u)*7.4)}
-.tb .dates li{grid-template-columns:calc(var(--u)*9) calc(var(--u)*5) minmax(0,1fr);font-size:calc(var(--u)*1.7)}
-.tb .band .dot{--d:calc(var(--u)*7)}
-.tb .band .dot.b{--d:calc(var(--u)*8.6)}
-.tb .band .dot.c{--d:calc(var(--u)*6.4)}
-.tb .band{aspect-ratio:2/1}
-.tb .pi{grid-template-columns:1fr;gap:calc(var(--u)*2.4)}
-.tb .hero .big{font-size:calc(var(--u)*2.2)}
-.tb .bill{font-size:calc(var(--u)*1.5)}
-.tb .sh h2,.tb .tkt h3{font-size:calc(var(--u)*5)}
-.tb .resb h2{font-size:calc(var(--u)*6.4)}
-.tb .ft h2{font-size:calc(var(--u)*6)}
-.tb .rph{border-right:0;border-bottom:calc(var(--u)*.5) solid var(--k)}
+/* ---- stop board: photo reacts to a click ---- */
+.tb .dates{position:relative}
+.tb .dates .stn{margin-top:calc(var(--u)*1.2);max-width:calc(var(--u)*44);color:rgba(11,11,13,.88)}
+.tb .pvc{position:absolute;right:calc(var(--u)*5.5);top:calc(var(--u)*.4);width:calc(var(--u)*13);height:calc(var(--u)*16.2);border:calc(var(--u)*.4) solid var(--k);background:#fff;box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--bl);transform:rotate(3deg) scale(.9);opacity:0;visibility:hidden;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .25s;z-index:6;overflow:hidden;pointer-events:none}
+.tb .pvc.has{opacity:1;visibility:visible;transform:rotate(3deg) scale(1);transition-delay:0s}
+.tb .pvc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s ease}
+.tb .pvc img.on{opacity:1}
+@media (min-width:701px){
+.tb .dates .led,.tb .dates .rt{margin-right:calc(var(--u)*17)}
+.tb .dates .rt{margin-left:calc(var(--u)*.8)}
+.tb .dates .led .l2{font-size:calc(var(--u)*2.5);min-height:calc(var(--u)*3.2)}
+}
+@media (min-width:701px) and (max-width:1000px){
+.tb .dates .led,.tb .dates .rt{margin-right:calc(var(--u)*15)}
+.tb .pvc{right:calc(var(--u)*3.4)}
+.tb .dates .led .l2{font-size:calc(var(--u)*2.1);min-height:calc(var(--u)*5)}
 }
 @media (max-width:700px){
-.tb .hero h1.pz{--fs:9.2;--sy:1.3;--ln:2;padding:0 calc(var(--u)*2.2)}
-.tb .hero h1.pz .m{display:inline}
-.tb .hero h1.pz .sc2{left:calc(var(--u)*3);bottom:calc(var(--u)*-4.8);font-size:calc(var(--u)*4.6)}
-.tb .pt,.tb .fn,.tb .pi,.tb .dates{padding-left:calc(var(--u)*2.2);padding-right:calc(var(--u)*2.2)}
-.tb .pt{flex-direction:column;gap:calc(var(--u)*.4)}
-.tb .dates{margin-top:calc(var(--u)*7)}
-.tb .dates li{grid-template-columns:calc(var(--u)*6.4) calc(var(--u)*3.2) minmax(0,1fr);gap:calc(var(--u)*.6);font-size:calc(var(--u)*1.05);line-height:1.7}
+.tb .pvc{position:relative;right:auto;top:auto;margin:0 auto;width:calc(var(--u)*11);height:0;border-width:0;box-shadow:none;transform:none;transition:height .35s ease,opacity .25s ease,visibility 0s linear .25s}
+.tb .pvc.has{height:calc(var(--u)*14);border-width:calc(var(--u)*.35);margin:calc(var(--u)*-1.2) auto calc(var(--u)*1.6);box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--bl);transform:none}
+}
+@media (prefers-reduced-motion:reduce){.tb .pvc,.tb .pvc img{transition:none!important}}
 .tb .fn{font-size:calc(var(--u)*.8)}
 .tb .band{aspect-ratio:1.5/1}
 .tb .band .dot{--d:calc(var(--u)*4.6)}
@@ -588,6 +528,9 @@
 .tb .resb h2{font-size:calc(var(--u)*5.2)}
 .tb .ft h2{font-size:calc(var(--u)*5)}
 }
+
+.tb .note .arr button{background:var(--k);color:var(--y);border-color:var(--k);box-shadow:calc(var(--u)*.35) calc(var(--u)*.35) 0 rgba(0,0,0,.35)}
+.tb .note .arr button:hover{background:var(--k);color:#fff}
 
 .tb .cs{background:var(--bl);--cA:var(--y)}
 .tb .cs .sh h2{color:var(--k)}
@@ -612,15 +555,19 @@
 <div class="tb"><div class="fr">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="tbrough" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/></filter></svg>
 <div class="gr" aria-hidden="true"></div>
-<nav class="nav" aria-label="Sections"><a href="#board">The Bill</a><a href="#studio">The Bus</a><a href="#oncampus">On Campus</a><a href="#campus">Campuses</a><a href="#tour">The Route</a><a href="#watch">Watch</a><a href="#results">Results</a><a href="#role">My Role</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
+<nav class="nav" aria-label="Sections"><a href="#board">The Bill</a><a href="#studio">The Bus</a><a href="#oncampus">On Campus</a><a href="#campus">Campuses</a><a href="#results">Results</a><a href="#role">My Role</a><a class="bk" href="https://www.byninaaustin.com/experiential"><i aria-hidden="true"></i>Back</a></nav>
 <header class="hero" id="top">
-  <div class="pt rv"><span class="lb">Walmart Presents</span><span class="lb">Black &amp; Unlimited</span></div>
+  <div class="pt rv"><span class="lb">Walmart Presents</span></div>
   <h1 class="x pz rv" style="--d:.06s" aria-label="Side Hustle Spotlight Tour"><span class="big2">Side<br class="m"> Hustle</span><span class="sc2" aria-hidden="true">Spotlight Tour</span></h1>
-  <ol class="dates rv" style="--d:.12s" aria-label="Tour stops"><li><span>Stop 01</span><span>OH</span><span>Central State University</span></li><li><span>Stop 02</span><span>VA</span><span>Virginia State University</span></li><li><span>Stop 03</span><span>NC</span><span>North Carolina Central University</span></li><li><span>Stop 04</span><span>MS</span><span>Mississippi Valley State University</span></li><li><span>Stop 05</span><span>FL</span><span>Florida A&amp;M University</span></li><li><span>Stop 06</span><span>NC</span><span>Winston-Salem State University</span></li><li><span>Stop 07</span><span>GA</span><span>Morehouse College</span></li></ol>
-  <div class="band rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="The Walmart Black and Unlimited HBCU Tour studio trailer parked on campus" loading="lazy" decoding="async"><i class="dot a"></i><i class="dot b"></i><i class="dot c"></i></div>
+  <div class="dates rv" style="--d:.12s">
+    <div class="led" id="tbled" aria-hidden="true"><div class="l1"><span>Now Boarding</span><span id="tbc">01 / 07</span></div><div class="l2" id="tbl">Central State University</div><div class="l3" id="tbt">Ohio Bound</div></div>
+    <div class="rt" id="tbr" role="group" aria-label="Tour stops"><button type="button" class="rd" data-i="0" aria-label="Stop 1"></button><button type="button" class="rd" data-i="1" aria-label="Stop 2"></button><button type="button" class="rd" data-i="2" aria-label="Stop 3"></button><button type="button" class="rd" data-i="3" aria-label="Stop 4"></button><button type="button" class="rd" data-i="4" aria-label="Stop 5"></button><button type="button" class="rd" data-i="5" aria-label="Stop 6"></button><button type="button" class="rd" data-i="6" aria-label="Stop 7"></button></div>
+    <div class="pvc" id="tbpv" aria-hidden="true"><img data-i="0" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-9.webp?v=1" alt="" role="img" aria-label="" loading="lazy" decoding="async"><img data-i="1" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-5.webp?v=1" alt="" role="img" aria-label="" loading="lazy" decoding="async"><img data-i="2" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-film-perf.webp?v=1" alt="" role="img" aria-label="" loading="lazy" decoding="async"><img data-i="3" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-film-sign.webp?v=1" alt="" role="img" aria-label="" loading="lazy" decoding="async"></div>
+    <p class="bdy stn">Conducted on campus at HBCUs, with digital amplification through social media, partners like Blavity, and paid creator partnerships.</p>
+  </div>
+  <div class="band rv" style="--d:.1s"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer-clean.webp?v=1" alt="" role="img" aria-label="The Walmart Black and Unlimited HBCU Tour studio trailer parked on campus" loading="lazy" decoding="async"></div>
   <div class="pi">
     <p class="big rv">A mobile creator studio rolled onto HBCU campuses, giving student entrepreneurs a stage for their side hustles, the know-how to monetize them, and a crowd to show up for it.</p>
-    <p class="bill rv" style="--d:.08s"><i>Featuring</i>Beauty<b class="sp"></b>Photography<b class="sp"></b>Videography<b class="sp"></b>Design<b class="sp"></b>Artisanship</p>
   </div>
 </header>
 
@@ -630,7 +577,6 @@
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>01</b>The Bill</span><h2 class="x">Admit One To <em>The Hustle</em></h2></div>
     <div class="tkts"><article class="tkt rv" style="--d:0s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Client</span></div><h3 class="x">Who</h3><p class="bdy">Walmart, the world&rsquo;s largest retailer, strategically empowering a wider student demographic during the back-to-school season with on-campus resources for academic success, creative expression, and personal resilience.</p></div><div class="sw"><i class="nr"></i><button type="button" class="stub" aria-label="Tear the stub for Who"><span class="chips"><i>Academic Success</i><i>Creative Expression</i><i>Resilience</i></span><i class="no"><span>No. 0001</span><span>Tear Here</span></i></button></div></article><article class="tkt rv" style="--d:0.1s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">The Campaign</span></div><h3 class="x">What</h3><p class="bdy">Launched the Black &amp; Unlimited HBCU Tour, featuring a mobile creator studio for student entrepreneurs to showcase skills in beauty, photography, videography, design, and artisanship, learn monetization strategies, and engage in interactive booths, live DJ sets, and presentations.</p></div><div class="sw"><i class="nr"></i><button type="button" class="stub" aria-label="Tear the stub for What"><span class="chips"><i>Beauty</i><i>Photography</i><i>Videography</i><i>Design</i><i>Artisanship</i></span><i class="no"><span>No. 0002</span><span>Tear Here</span></i></button></div></article><article class="tkt rv" style="--d:0.2s"><div class="tm"><div class="top"><span class="lb">Admit One</span><span class="lb">Cultural Impact</span></div><h3 class="x">Why</h3><p class="bdy">Invested resources into empowering Black students with tools for legacies and resilience, countering underrepresentation in entrepreneurship to translate &ldquo;sparks&rdquo; into long-term success.</p></div><div class="sw"><i class="nr"></i><button type="button" class="stub" aria-label="Tear the stub for Why"><span class="chips"><i>Legacies</i><i>Resilience</i><i>Long Term Success</i></span><i class="no"><span>No. 0003</span><span>Tear Here</span></i></button></div></article></div>
-    <p class="tabs-h rv">Go on. Tear a stub. They&rsquo;re all yours.</p>
   </div>
 </section>
 
@@ -638,12 +584,12 @@
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>02</b>The Bus</span><h2 class="x">A Content Lab <em>On Wheels</em></h2></div>
     <div class="sgrid">
-      <div class="trl rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="The HBCU Tour mobile creator studio with arched windows and Black and Unlimited signage" loading="lazy" decoding="async">
-        <button type="button" class="hs on" style="--x:36%;--y:55%" data-i="0" aria-label="Show detail 1">1</button>
-        <button type="button" class="hs" style="--x:84%;--y:84%" data-i="1" aria-label="Show detail 2">2</button>
-        <button type="button" class="hs" style="--x:87%;--y:27%" data-i="2" aria-label="Show detail 3">3</button>
+      <div class="trl rv">
+        <div class="sl on"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-int.webp?v=1" alt="" role="img" aria-label="Inside the HBCU Tour studio with its arched Black and Unlimited backdrop and styling chair" loading="lazy" decoding="async"></div>
+        <div class="sl two"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-sign.webp?v=1" alt="" role="img" aria-label="A stylist working on a client inside the tour studio" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g3.webp?v=1" alt="" role="img" aria-label="Students chatting in styling chairs inside the tour studio" loading="lazy" decoding="async"></div>
+        <div class="sl two st3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio.webp?v=1" alt="" role="img" aria-label="A nail tech working inside the tour studio" loading="lazy" decoding="async"><div class="stk"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g4.webp?v=1" alt="" role="img" aria-label="A barber working with a client inside the tour studio" loading="lazy" decoding="async"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g3.webp?v=1" alt="" role="img" aria-label="A tech preparing supplies inside the tour studio" loading="lazy" decoding="async"></div></div>
       </div>
-      <div class="note rv" style="--d:.1s" aria-live="polite"><span class="lb"><b id="tbn">01</b>Tap A Dot</span><h3 id="tbh" class="x">Step Inside</h3><p id="tbp">A branded bus transformed into a traveling content lab, where students could step inside to explore hands-on learning in photography, beauty, design, and video editing.</p><div class="pg" id="tbg"><i class="on"></i><i></i><i></i></div></div>
+      <div class="note rv" style="--d:.1s" aria-live="polite"><span class="lb"><b id="tbn">01</b>Inside The Studio</span><h3 id="tbh" class="x">Step Inside</h3><p id="tbp">A branded bus transformed into a traveling content lab, where students could step inside to explore hands-on learning in photography, beauty, design, and video editing.</p><div class="pg" id="tbg"><i class="on"></i><i></i><i></i></div><div class="arr"><button type="button" class="ap" aria-label="Previous detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square"/></svg></button><button type="button" class="an" aria-label="Next detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square"/></svg></button></div></div>
     </div>
     <p class="lead rv">Turning creative skills into entrepreneurial pathways, one campus parking lot at a time.</p>
   </div>
@@ -653,22 +599,17 @@
   <div class="gx"><div class="sh rv"><span class="lb"><b>03</b>On Campus</span><h2 class="x">Loud, Live And Gone By <em>Sunset</em></h2></div></div>
   <div class="reel rv">
     <div class="holes t" aria-hidden="true"></div><div class="holes b" aria-hidden="true"></div><div class="edge t" aria-hidden="true">31B &#9656; HBCU TOUR &#9656; 32 &#9656; BLACK &amp; UNLIMITED &#9656; 32A &#9656; HBCU TOUR &#9656; 33 &#9656; BLACK &amp; UNLIMITED &#9656; 33A &#9656; HBCU TOUR &#9656; 34 &#9656; BLACK &amp; UNLIMITED &#9656; 34A &#9656; HBCU TOUR &#9656; 35 &#9656; BLACK &amp; UNLIMITED &#9656; 35A &#9656; HBCU TOUR &#9656; 36 &#9656; BLACK &amp; UNLIMITED &#9656; 36A &#9656; HBCU TOUR &#9656; 37 &#9656; BLACK &amp; UNLIMITED &#9656; 31B &#9656; HBCU TOUR &#9656; 32 &#9656; BLACK &amp; UNLIMITED &#9656; 32A &#9656; HBCU TOUR &#9656; 33 &#9656; BLACK &amp; UNLIMITED &#9656; 33A &#9656; HBCU TOUR &#9656; 34 &#9656; BLACK &amp; UNLIMITED &#9656; 34A &#9656; HBCU TOUR &#9656; 35 &#9656; BLACK &amp; UNLIMITED &#9656; 35A &#9656; HBCU TOUR &#9656; 36 &#9656; BLACK &amp; UNLIMITED &#9656; 36A &#9656; HBCU TOUR &#9656; 37 &#9656; BLACK &amp; UNLIMITED &#9656;</div><div class="edge b" aria-hidden="true">31B &#9656; BLACK &amp; UNLIMITED &#9656; 32 &#9656; HBCU TOUR &#9656; 32A &#9656; BLACK &amp; UNLIMITED &#9656; 33 &#9656; HBCU TOUR &#9656; 33A &#9656; BLACK &amp; UNLIMITED &#9656; 34 &#9656; HBCU TOUR &#9656; 34A &#9656; BLACK &amp; UNLIMITED &#9656; 35 &#9656; HBCU TOUR &#9656; 35A &#9656; BLACK &amp; UNLIMITED &#9656; 36 &#9656; HBCU TOUR &#9656; 36A &#9656; BLACK &amp; UNLIMITED &#9656; 37 &#9656; HBCU TOUR &#9656; 31B &#9656; BLACK &amp; UNLIMITED &#9656; 32 &#9656; HBCU TOUR &#9656; 32A &#9656; BLACK &amp; UNLIMITED &#9656; 33 &#9656; HBCU TOUR &#9656; 33A &#9656; BLACK &amp; UNLIMITED &#9656; 34 &#9656; HBCU TOUR &#9656; 34A &#9656; BLACK &amp; UNLIMITED &#9656; 35 &#9656; HBCU TOUR &#9656; 35A &#9656; BLACK &amp; UNLIMITED &#9656; 36 &#9656; HBCU TOUR &#9656; 36A &#9656; BLACK &amp; UNLIMITED &#9656; 37 &#9656; HBCU TOUR &#9656;</div>
-    <div class="strip" id="tbstrip" tabindex="0" aria-label="Film strip of tour moments, scroll sideways">
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band.webp?v=1" alt="" role="img" aria-label="Student drumline marching at an HBCU tour stop" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm w" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="The HBCU Tour studio trailer" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio.webp?v=1" alt="" role="img" aria-label="Students filing into the Black and Unlimited studio while a stylist works inside" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band-still.webp?v=1" alt="" role="img" aria-label="Close up of a bass drum at an HBCU tour stop" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-still.webp?v=1" alt="" role="img" aria-label="A student nail tech working inside the tour studio" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-film-sign.webp?v=1" alt="" role="img" aria-label="The Black and Unlimited prize wheel at a tour stop" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm w" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-int.webp?v=1" alt="" role="img" aria-label="Inside the HBCU Tour studio with its arched Black and Unlimited backdrop" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-film-aerial.webp?v=1" alt="" role="img" aria-label="Aerial view of the tour trailer and a crowd on campus" loading="lazy" decoding="async"></div></figure>
-      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-film-perf.webp?v=1" alt="" role="img" aria-label="A student in a North Carolina Central sweatshirt at a tour stop" loading="lazy" decoding="async"></div></figure>
+    <div class="strip" id="tbstrip" aria-label="Film strip of student moments from the tour">
+      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g1.webp?v=1" alt="" role="img" aria-label="Students gathered on campus at a tour stop" loading="lazy" decoding="async"></div></figure>
+      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g1.webp?v=1" alt="" role="img" aria-label="A DJ at the turntables during the tour" loading="lazy" decoding="async"></div></figure>
+      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g3.webp?v=1" alt="" role="img" aria-label="A student performing outdoors at a tour stop" loading="lazy" decoding="async"></div></figure>
+      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band.webp?v=1" alt="" role="img" aria-label="A student drumline member playing a bass drum at a tour stop" loading="lazy" decoding="async"></div></figure>
+      <figure class="fm v" style="margin:0"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g1.webp?v=1" alt="" role="img" aria-label="A student posing in front of a campus wall" loading="lazy" decoding="async"></div></figure>
     </div>
   </div>
-  <p class="hint">Drag the film. It keeps rolling.</p>
   <div class="setw">
     <div class="set rv"><i class="tape a"></i><i class="tape b"></i>
-      <div class="hd"><h3>Set List</h3><span>HBCU Tour<br>Every Stop</span></div>
+      <div class="hd"><h3>Set List</h3></div>
       <ol>
         <li><span class="n">1</span><div><h4>HBCU Marching Band Showcases</h4><p>We collaborated with campus and alumni groups to host pop-up performances by student drumlines and dancers.</p></div></li>
         <li><span class="n">2</span><div><h4>Live DJ Sets + Motivational Talks</h4><p>Events were elevated with DJ sets, emcee moments, and drop-ins from community figures and alumni who shared actionable tips for personal growth and career building.</p></div></li>
@@ -685,47 +626,20 @@
   <div class="gx">
     <div class="sh rv"><span class="lb"><b>04</b>Campus Spotlights</span><h2 class="x">Four Campuses, <em>Up Close</em></h2></div>
     <div class="cst rv" role="tablist" aria-label="Campuses"><button type="button" role="tab" id="cst0" class="cur" aria-selected="true" aria-controls="csp0" data-i="0" tabindex="0"><span class="n">01</span><span class="nm">Central State</span><span class="s">Ohio</span></button><button type="button" role="tab" id="cst1" class="" aria-selected="false" aria-controls="csp1" data-i="1" tabindex="-1"><span class="n">02</span><span class="nm">Virginia State</span><span class="s">Virginia</span></button><button type="button" role="tab" id="cst2" class="" aria-selected="false" aria-controls="csp2" data-i="2" tabindex="-1"><span class="n">03</span><span class="nm">North Carolina Central</span><span class="s">North Carolina</span></button><button type="button" role="tab" id="cst3" class="" aria-selected="false" aria-controls="csp3" data-i="3" tabindex="-1"><span class="n">04</span><span class="nm">Mississippi Valley State</span><span class="s">Mississippi</span></button></div>
-    <div class="cpw"><div class="csp cur" id="csp0" role="tabpanel" aria-labelledby="cst0"><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-photo.webp?v=1" alt="" role="img" aria-label="A student at the Central State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>OH</b><span>Central State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g1.webp?v=1" alt="" role="img" aria-label="Moment 1 from the Central State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/168" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g3.webp?v=1" alt="" role="img" aria-label="Moment 3 from the Central State University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g2.webp?v=1" alt="" role="img" aria-label="Moment 2 from the Central State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/168" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g4.webp?v=1" alt="" role="img" aria-label="Moment 4 from the Central State University stop" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp1" role="tabpanel" aria-labelledby="cst1" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-photo.webp?v=1" alt="" role="img" aria-label="A student at the Virginia State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>VA</b><span>Virginia State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g1.webp?v=1" alt="" role="img" aria-label="Moment 1 from the Virginia State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g3.webp?v=1" alt="" role="img" aria-label="Moment 3 from the Virginia State University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g2.webp?v=1" alt="" role="img" aria-label="Moment 2 from the Virginia State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g4.webp?v=1" alt="" role="img" aria-label="Moment 4 from the Virginia State University stop" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp2" role="tabpanel" aria-labelledby="cst2" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-photo.webp?v=1" alt="" role="img" aria-label="A student at the North Carolina Central University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>NC</b><span>North Carolina Central University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g1.webp?v=1" alt="" role="img" aria-label="Moment 1 from the North Carolina Central University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g4.webp?v=1" alt="" role="img" aria-label="Moment 4 from the North Carolina Central University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/168" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g2.webp?v=1" alt="" role="img" aria-label="Moment 2 from the North Carolina Central University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g3.webp?v=1" alt="" role="img" aria-label="Moment 3 from the North Carolina Central University stop" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp3" role="tabpanel" aria-labelledby="cst3" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1125" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-photo.webp?v=1" alt="" role="img" aria-label="A student at the Mississippi Valley State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>MS</b><span>Mississippi Valley State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g1.webp?v=1" alt="" role="img" aria-label="Moment 1 from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g4.webp?v=1" alt="" role="img" aria-label="Moment 4 from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/376" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g2.webp?v=1" alt="" role="img" aria-label="Moment 2 from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g3.webp?v=1" alt="" role="img" aria-label="Moment 3 from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div></div></div></div></div>
+    <div class="cpw"><div class="csp cur" id="csp0" role="tabpanel" aria-labelledby="cst0"><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-photo.webp?v=1" alt="" role="img" aria-label="A student at the Central State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>OH</b><span>Central State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c1-g2.webp?v=1" alt="" role="img" aria-label="Moment from the Central State University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:750/933" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-3.webp?v=1" alt="" role="img" aria-label="Central State University pennant, hoodie and tees hung on a blue backdrop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-2.webp?v=1" alt="" role="img" aria-label="Students posing on the lawn in front of the tour trailer" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp1" role="tabpanel" aria-labelledby="cst1" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-photo.webp?v=1" alt="" role="img" aria-label="A student at the Virginia State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>VA</b><span>Virginia State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g2.webp?v=1" alt="" role="img" aria-label="Moment from the Virginia State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:750/937" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-4.webp?v=1" alt="" role="img" aria-label="Trojan mascots posing on the field with a student" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c2-g4.webp?v=1" alt="" role="img" aria-label="Moment from the Virginia State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:800/533" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-8.webp?v=1" alt="" role="img" aria-label="A student standing in front of the Black and Unlimited trailer" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp2" role="tabpanel" aria-labelledby="cst2" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1124" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-photo.webp?v=1" alt="" role="img" aria-label="A student at the North Carolina Central University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>NC</b><span>North Carolina Central University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g3.webp?v=1" alt="" role="img" aria-label="Moment from the North Carolina Central University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:750/844" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-6.webp?v=1" alt="" role="img" aria-label="Student leaders in sashes posing in front of a projected Black and Unlimited slide" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c3-g4.webp?v=1" alt="" role="img" aria-label="Moment from the North Carolina Central University stop" loading="lazy" decoding="async"></div></div></div></div><div class="csp" id="csp3" role="tabpanel" aria-labelledby="cst3" hidden><figure class="cph"><div class="pw"><img style="aspect-ratio:900/1125" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-photo.webp?v=1" alt="" role="img" aria-label="A student at the Mississippi Valley State University stop of the HBCU Tour" loading="lazy" decoding="async"></div><figcaption><b>MS</b><span>Mississippi Valley State University</span></figcaption></figure><div class="cg"><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g1.webp?v=1" alt="" role="img" aria-label="Moment from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div><div class="ct"><img style="aspect-ratio:300/376" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g2.webp?v=1" alt="" role="img" aria-label="Moment from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div></div><div class="cc"><div class="ct"><img style="aspect-ratio:300/534" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-c4-g4.webp?v=1" alt="" role="img" aria-label="Moment from the Mississippi Valley State University stop" loading="lazy" decoding="async"></div></div></div></div></div>
   </div>
 </section>
 
-<section class="sc cw" id="wall">
-  
-  <div class="gx">
-    <div class="sh rv"><span class="lb"><b>04+</b>Photo Wall</span><h2 class="x">Scenes From <em>The Road</em></h2></div>
-    <div class="wl w3"><div class="wc"><figure class="wf rv" style="--d:0.00s;--r:-1.6deg"><div class="pl"><img style="aspect-ratio:750/933" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-3.webp?v=1" alt="" role="img" aria-label="Central State University pennant, hoodie and tees hung on a blue backdrop" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:1.2deg"><div class="pl"><img style="aspect-ratio:750/937" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-4.webp?v=1" alt="" role="img" aria-label="Trojan mascots posing on the field with a student" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.00s;--r:1.8deg"><div class="pl"><img style="aspect-ratio:750/844" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-6.webp?v=1" alt="" role="img" aria-label="Student leaders in sashes posing in front of a projected Black and Unlimited slide" loading="lazy" decoding="async"></div></figure></div><div class="wc"><figure class="wf rv" style="--d:0.16s;--r:-0.8deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-2.webp?v=1" alt="" role="img" aria-label="Students posing on the lawn in front of the tour trailer" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:-1.2deg"><div class="pl"><img style="aspect-ratio:800/533" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-8.webp?v=1" alt="" role="img" aria-label="A student standing in front of the Black and Unlimited trailer" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.16s;--r:0.9deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-1.webp?v=1" alt="" role="img" aria-label="Students posing in front of a campus hall" loading="lazy" decoding="async"></div></figure></div><div class="wc"><figure class="wf rv" style="--d:0.00s;--r:-1.9deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-7.webp?v=1" alt="" role="img" aria-label="A packed audience in a campus lecture room" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:1.4deg"><div class="pl"><img style="aspect-ratio:500/889" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-5.webp?v=1" alt="" role="img" aria-label="A student on the steps of the HBCU Tour trailer" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.16s;--r:-0.6deg"><div class="pl"><img style="aspect-ratio:800/400" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-9.webp?v=1" alt="" role="img" aria-label="A hand holding a #BlackAndUnlimited sign on the lawn" loading="lazy" decoding="async"></div></figure></div></div><div class="wl w2"><div class="wc"><figure class="wf rv" style="--d:0.00s;--r:-1.6deg"><div class="pl"><img style="aspect-ratio:750/933" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-3.webp?v=1" alt="" role="img" aria-label="Central State University pennant, hoodie and tees hung on a blue backdrop" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:1.2deg"><div class="pl"><img style="aspect-ratio:750/937" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-4.webp?v=1" alt="" role="img" aria-label="Trojan mascots posing on the field with a student" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.00s;--r:1.8deg"><div class="pl"><img style="aspect-ratio:750/844" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-6.webp?v=1" alt="" role="img" aria-label="Student leaders in sashes posing in front of a projected Black and Unlimited slide" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:1.4deg"><div class="pl"><img style="aspect-ratio:500/889" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-5.webp?v=1" alt="" role="img" aria-label="A student on the steps of the HBCU Tour trailer" loading="lazy" decoding="async"></div></figure></div><div class="wc"><figure class="wf rv" style="--d:0.16s;--r:-0.8deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-2.webp?v=1" alt="" role="img" aria-label="Students posing on the lawn in front of the tour trailer" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.08s;--r:-1.2deg"><div class="pl"><img style="aspect-ratio:800/533" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-8.webp?v=1" alt="" role="img" aria-label="A student standing in front of the Black and Unlimited trailer" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.16s;--r:0.9deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-1.webp?v=1" alt="" role="img" aria-label="Students posing in front of a campus hall" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.00s;--r:-1.9deg"><div class="pl"><img style="aspect-ratio:750/938" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-7.webp?v=1" alt="" role="img" aria-label="A packed audience in a campus lecture room" loading="lazy" decoding="async"></div></figure><figure class="wf rv" style="--d:0.16s;--r:-0.6deg"><div class="pl"><img style="aspect-ratio:800/400" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-9.webp?v=1" alt="" role="img" aria-label="A hand holding a #BlackAndUnlimited sign on the lawn" loading="lazy" decoding="async"></div></figure></div></div>
-  </div>
-</section>
-
-
-<section class="sc tour" id="tour">
-  <div class="gx">
-    <div class="sh rv"><span class="lb"><b>05</b>The Route</span><h2 class="x">Next Stop, <em>Every Campus</em></h2><p class="bdy">Conducted on campus at HBCUs, with digital amplification through social media, partners like Blavity, and paid creator partnerships.</p></div>
-    <div class="led rv" id="tbled" aria-hidden="true"><div class="l1"><span>Now Boarding</span><span id="tbc">01 / 07</span></div><div class="l2" id="tbl">Central State University</div><div class="l3" id="tbt">Ohio Bound</div></div>
-    <div class="rt rv" id="tbr" aria-hidden="true"><button type="button" class="rd" data-i="0" aria-label="Stop 1"></button><button type="button" class="rd" data-i="1" aria-label="Stop 2"></button><button type="button" class="rd" data-i="2" aria-label="Stop 3"></button><button type="button" class="rd" data-i="3" aria-label="Stop 4"></button><button type="button" class="rd" data-i="4" aria-label="Stop 5"></button><button type="button" class="rd" data-i="5" aria-label="Stop 6"></button><button type="button" class="rd" data-i="6" aria-label="Stop 7"></button></div>
-  </div>
-</section>
-
-<section class="sc watch" id="watch">
-  <div class="gx">
-    <div class="sh rv"><span class="lb"><b>06</b>Watch</span><h2 class="x">Press Play On <em>The Hustle</em></h2></div>
-    <div class="wgrid">
-      <div class="rv"><button type="button" class="vt w" data-v="889190981" data-t="HBCU Tour film"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-trailer.webp?v=1" alt="" role="img" aria-label="HBCU Tour film poster" loading="lazy" decoding="async"><span class="ply"></span><span class="tt">The Tour Film</span></button></div>
-      <div class="rv" style="--d:.08s"><button type="button" class="vt v" data-v="887565035" data-h="a48e6429ed" data-t="HBCU Tour reel one"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band-still.webp?v=1" alt="" role="img" aria-label="HBCU Tour reel one poster" loading="lazy" decoding="async"><span class="ply"></span><span class="tt">Reel 01</span></button></div>
-      <div class="rv" style="--d:.16s"><button type="button" class="vt v" data-v="887280384" data-h="bcac0fdd59" data-t="HBCU Tour reel two"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-still.webp?v=1" alt="" role="img" aria-label="HBCU Tour reel two poster" loading="lazy" decoding="async"><span class="ply"></span><span class="tt">Reel 02</span></button></div>
-    </div>
-  </div>
-</section>
 
 <section class="sc resb" id="results">
-  <div class="gx"><div class="rbox rv"><span class="lb"><b>07</b>How It Did</span><h2 class="x" style="margin-top:calc(var(--u)*1.4)">The <em>Results</em></h2><p class="st">Generated strong on-campus engagement with events like homecoming kickoffs and motivational series, contributing to broader impacts through stories of alumni success and student empowerment.</p></div></div>
+  <div class="gx"><div class="rbox rv"><span class="lb"><b>05</b>How It Did</span><h2 class="x" style="margin-top:calc(var(--u)*1.4)">The <em>Results</em></h2><p class="st">Generated strong on-campus engagement with events like homecoming kickoffs and motivational series, contributing to broader impacts through stories of alumni success and student empowerment.</p></div></div>
 </section>
 
 <section class="roles" id="role">
   <div class="rsplit">
     <div class="rph rv">
-      <div class="main"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-studio-hd.webp?v=1" alt="" role="img" aria-label="Students lining up to step into the Black and Unlimited tour studio" loading="lazy" decoding="async"></div>
-      <div class="pip"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-band-hd.webp?v=1" alt="" role="img" aria-label="A student drumline member playing a snare at an HBCU tour stop" loading="lazy" decoding="async"></div>
+      <div class="main"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-7.webp?v=1" alt="" role="img" aria-label="A packed audience of students gathered in a campus lecture room for a tour talk" loading="lazy" decoding="async"></div>
+      <div class="pip"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/hbcu-wall-1.webp?v=1" alt="" role="img" aria-label="Students posing in front of a campus hall" loading="lazy" decoding="async"></div>
     </div>
     <div class="rpa rv" style="--d:.12s">
       <div class="swing">
@@ -733,7 +647,7 @@
         <div class="pass">
           <div class="ph1"><span>All Access</span><em>Black &amp; Unlimited HBCU Tour</em></div>
           <div class="pb">
-            <span class="lb"><b>08</b>Backstage</span>
+            <span class="lb"><b>06</b>Backstage</span>
             <h2 class="x">My Role</h2>
             <p class="lead">As Associate Creative Director at Publicis Groupe, I led the conceptual development for tour activations and content capture protocols.</p>
             <p class="bdy">I also developed activation blueprints and event flow maps clearly articulating the vision to production partners and vendors.</p>
@@ -803,6 +717,9 @@
     });
   })();
 
+  var pvc=root.getElementById('tbpv'),pvi=pvc?[].slice.call(pvc.querySelectorAll('img')):[];
+  function showPv(i){if(!pvc)return;pvi.forEach(function(m,k){m.classList.toggle('on',k===i)});pvc.classList[i<pvi.length?'add':'remove']('has')}
+  [].slice.call(rr.querySelectorAll('.rd')).forEach(function(b){b.addEventListener('click',function(){showPv(+b.getAttribute('data-i'))})});
   var rv=[].slice.call(rr.querySelectorAll('.rv'));
   function show(el){el.classList.add('on')}
   if('IntersectionObserver' in win){
@@ -836,13 +753,16 @@
     ['03','Write Your Own Legacy','Black & Unlimited put tools for legacies and resilience in students’ hands, turning creative skills into entrepreneurial pathways.']
   ];
   var hn=root.getElementById('tbn'),hh=root.getElementById('tbh'),hp=root.getElementById('tbp'),hg=root.getElementById('tbg');
-  var dots=[].slice.call(rr.querySelectorAll('.hs'));
+  var dots=[].slice.call(rr.querySelectorAll('.trl .sl'));
   function pick(i){
     dots.forEach(function(d,k){d.classList.toggle('on',k===i)});
     if(hn)hn.textContent=HS[i][0];if(hh)hh.textContent=HS[i][1];if(hp)hp.textContent=HS[i][2];
     if(hg)[].forEach.call(hg.children,function(c,k){c.classList.toggle('on',k===i)});
   }
-  dots.forEach(function(d,k){d.addEventListener('click',function(){pick(k)})});
+  var ap=rr.querySelector('.arr .ap'),an=rr.querySelector('.arr .an');
+  function stepTo(d){cur=(cur+d+dots.length)%dots.length;pick(cur);if(auto){win.clearInterval(auto);auto=null}}
+  if(ap)ap.addEventListener('click',function(){stepTo(-1)});
+  if(an)an.addEventListener('click',function(){stepTo(1)});
   var cur=0,auto=null;
   function cycle(){cur=(cur+1)%dots.length;pick(cur)}
   if(!reduce&&'IntersectionObserver' in win){
