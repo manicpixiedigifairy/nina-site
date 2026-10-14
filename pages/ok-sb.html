@@ -78,6 +78,12 @@ html,body{margin:0;background:#050E1C}
 .ob .pre .cp{display:grid;gap:calc(var(--u)*1.6)}
 .ob .pre .cp p{font-size:calc(var(--u)*1.32);line-height:1.5;font-weight:500}
 .ob .pre .cp p:first-child::first-letter{font:900 calc(var(--u)*4.6)/.8 var(--hd);float:left;padding:.08em .1em 0 0;color:#0B6BD3}
+.ob .mm{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:calc(var(--u)*5)}
+.ob .mi{border-top:calc(var(--u)*.24) solid var(--nv);padding-top:calc(var(--u)*1.6)}
+.ob .tg{display:block;font:900 calc(var(--u)*9)/.88 var(--hd);text-transform:uppercase;color:#0B6BD3;letter-spacing:-.005em;margin-bottom:calc(var(--u)*2)}
+.ob .mi .ld{font:600 calc(var(--u)*1.9)/1.36 var(--ui);max-width:calc(var(--u)*36)}
+.ob .mi .it{font-size:calc(var(--u)*3.6);line-height:1.04;margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34)}
+.ob .mi .sm{font-size:calc(var(--u)*1.32);line-height:1.5;margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34);opacity:.85}
 .ob .dp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:calc(var(--u)*5);border-top:calc(var(--u)*.2) solid var(--nv);border-bottom:1px solid rgba(5,14,28,.25)}
 .ob .dp li{padding:calc(var(--u)*1.8) calc(var(--u)*2) calc(var(--u)*2.2) 0;border-right:1px solid rgba(5,14,28,.2);margin-right:calc(var(--u)*2)}
 .ob .dp li:last-child{border-right:0;margin-right:0}
@@ -164,6 +170,7 @@ html,body{margin:0;background:#050E1C}
 .ob .hero .gx{grid-template-columns:1fr;gap:calc(var(--u)*3.5)}
 .ob .hero .dk{max-width:calc(var(--u)*44)}
 .ob .pre .gx,.ob .rc .gx{grid-template-columns:1fr;gap:calc(var(--u)*3.2)}
+.ob .mm{grid-template-columns:1fr;gap:calc(var(--u)*4)}
 .ob .st ul{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:calc(var(--u)*3)}
 .ob .st li:nth-child(4){border-left:0;padding-left:0}
 .ob .fc .gx,.ob .ts .gx{grid-template-columns:1fr 1fr}
@@ -189,7 +196,10 @@ html,body{margin:0;background:#050E1C}
 .ob .sc{padding:calc(var(--u)*6) 0}
 .ob .sh h2{font-size:calc(var(--u)*5.2)}
 .ob .yd{display:none}
-.ob .pre .big{font-size:calc(var(--u)*4.4)}
+.ob .tg{font-size:calc(var(--u)*7)}
+.ob .mi .ld{font-size:calc(var(--u)*1.9)}
+.ob .mi .it{font-size:calc(var(--u)*3.8)}
+.ob .mi .sm{font-size:calc(var(--u)*1.55)}
 .ob .pre .cp p,.ob .rc .cp p{font-size:calc(var(--u)*1.55)}
 .ob .dp{grid-template-columns:1fr}
 .ob .dp li{border-right:0;margin-right:0;padding-right:0;border-bottom:1px solid rgba(5,14,28,.2)}
@@ -223,13 +233,13 @@ html,body{margin:0;background:#050E1C}
 </div></div>
 
 <header class="nv"><div class="w"><a class="mk" href="#ob">OK <i>SB</i></a>
-<nav aria-label="Sections"><a href="#pregame">Pregame</a><a href="#fancam">The Stand</a><a href="#store">Team Store</a><a href="#final">Final Score</a></nav></div></header>
+<nav aria-label="Sections"><a href="#overview">Overview</a><a href="#fancam">The Stand</a><a href="#store">Team Store</a><a href="#final">Final Score</a></nav></div></header>
 
 <section class="hero" id="kickoff"><div class="w">
 <span class="lb rv"><b>Atlanta</b>Game Weekend Activation</span>
 <h1 class="rv">Just <span class="ok">OK</span><span class="l2">Game Merch</span></h1>
 <div class="gx">
-<div class="dk rv" style="--d:.1s"><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span>AT&amp;T handed out free, gloriously mediocre sports merch outside the big football event in Atlanta, to show how absurd settling for just OK really is. <em>Even on your wireless.</em>
+<div class="dk rv" style="--d:.1s"><span class="it">Nobody settles for just OK at the biggest game of the year. So why settle anywhere else?</span><em>Even on your wireless.</em>
 <div class="meta"><span>Atlanta</span><span>Two Days</span><span>#justOKisnotOK</span></div></div>
 <figure class="jt rv" style="--d:.2s">
 <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ok-sb-hero.webp?v=1" alt="" role="img" aria-label="The Just OK Game Merch stand and a crowd of fans in front of the Atlanta skyline">
@@ -240,20 +250,15 @@ html,body{margin:0;background:#050E1C}
 </figure>
 </div></div></section>
 
-<section class="sc pre" id="pregame"><span class="yd" aria-hidden="true">10 20 30</span><div class="w">
-<div class="sh rv"><span class="lb"><b>01</b>Pregame: The Setup</span></div>
-<div class="gx">
-<h2 class="big rv">Nobody settles for <em>just OK</em> at the big game.<span class="it">Ridiculous on a souvenir. Strangely normal on a phone plan.</span></h2>
-<div class="cp rv" style="--d:.1s">
-<p>The Super Bowl is not an average football game. It is the biggest football event of the year, so fans expect every part of it to be the best, down to the souvenirs they carry home to prove they were there.</p>
-<p>So we built the opposite. An &ldquo;OK&rdquo; merch stand giving out &ldquo;OK&rdquo; sports gear with &ldquo;OK&rdquo; messages, exactly what an average experience at the biggest sporting event of the year would look like. Nobody would accept it here. Plenty of people accept it from their wireless service every day.</p>
-</div></div>
-<ol class="dp">
-<li class="rv"><span class="n">The Event</span><h3>The Biggest Game</h3><p>One weekend, one city, every fan in the country chasing the best of everything.</p></li>
-<li class="rv" style="--d:.08s"><span class="n">The Standard</span><h3>The Souvenir</h3><p>The shirt, the hat, the thing you hand a friend to prove you were there. It had better be great.</p></li>
-<li class="rv" style="--d:.16s"><span class="n">The Settle</span><h3>Just OK</h3><p>The same shrug people give their wireless service, printed on a T-shirt where it finally looks as silly as it is.</p></li>
-</ol>
-</div></section>
+<section class="sc pre" id="overview"><span class="yd" aria-hidden="true">10 20 30</span><div class="w">
+<div class="sh rv"><span class="lb"><b>01</b>The Overview: Mission And Method</span></div>
+<div class="mm">
+<div class="mi rv"><span class="tg">Mission</span><p class="ld">Take advantage of the biggest national sports event and media holiday of the year, during one of the rare years AT&amp;T was not a sponsor.</p></div>
+<div class="mi rv" style="--d:.1s"><span class="tg">Method</span>
+<p class="ld">AT&amp;T handed out free, gloriously mediocre sports merch outside the big football event in Atlanta, to show how absurd settling for just OK really is.</p>
+<p class="it">All without ever using the words &ldquo;Super Bowl.&rdquo;</p>
+<p class="sm">The stand inspired a collection of merch built on big game vagueisms. Who wouldn&rsquo;t want that?</p></div>
+</div></div></section>
 
 <section class="st" aria-label="Game stats"><div class="w"><ul>
 <li class="rv"><b>2</b><span>Teams On The Field</span></li>
