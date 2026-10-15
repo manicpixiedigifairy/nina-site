@@ -297,7 +297,7 @@ html,body{margin:0}
       <p class="lb rv"><i></i>Chapter II: The Wrapper</p>
       <h2 class="h2 exy rv" id="h-wp" style="--d:.08s">Three Packs, One Family</h2>
     </div>
-    <p class="sub rv" style="--d:.15s">Limited-edition wrappers across the three formats on shelf, at US retailers nationwide while supplies lasted.</p>
+    <p class="sub rv" style="--d:.15s">Limited-edition wrappers across the three formats on shelf, at US retailers nationwide.</p>
   </div>
   <div class="grid">
     <div class="rv">
@@ -315,13 +315,7 @@ html,body{margin:0}
     <div class="pkt rv" style="--d:.12s" aria-live="polite">
       <h3 class="pt">Bart Takes The Bar</h3>
       <span class="who pw">Starring Bart</span>
-      <p class="pd">The everyday bar goes full party: Bart mid-celebration, confetti and streamers across the yellow, and the Celebrating 100 Years shield where the eye lands first.</p>
     </div>
-  </div>
-  <div class="note">
-    <div class="rv"><b>Regular Bar</b><span>Bart Simpson</span></div>
-    <div class="rv" style="--d:.08s"><b>2 Piece Share Pack</b><span>Homer Simpson</span></div>
-    <div class="rv" style="--d:.16s"><b>Fun Size Bag</b><span>The whole family</span></div>
   </div>
 </section>
 
@@ -517,12 +511,12 @@ var mk=function(tag){return window.document.createElement(tag)};
     {t:'Homer Gets The Share Pack',w:'Starring Homer',d:'Two pieces, one Homer, arms in the air. The share pack carries the same balloon and confetti system with a 2 Piece Share Pack panel on the end.'},
     {t:'The Whole Family Shows Up',w:'Starring The Simpsons',d:'Marge, Homer, Bart, Lisa and Maggie line up in party clothes on the fun size laydown bag, under a Fun Size script and a birthday sky of balloons.'}
   ];
-  var tabs=qa('.wp .tab'),imgs=qa('.wp .pk img'),pt=q('.pt'),pw=q('.pw'),pd=q('.pd');
+  var tabs=qa('.wp .tab'),imgs=qa('.wp .pk img'),pt=q('.pt'),pw=q('.pw');
   tabs.forEach(function(b){b.addEventListener('click',function(){
     var k=+b.getAttribute('data-k');
     tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
     imgs.forEach(function(im,i){im.classList.toggle('on',i===k)});
-    pt.textContent=P[k].t;pw.textContent=P[k].w;pd.textContent=P[k].d;
+    pt.textContent=P[k].t;pw.textContent=P[k].w;
   })});
 })();
 
