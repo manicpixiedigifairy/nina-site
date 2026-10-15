@@ -506,10 +506,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     </div>
     <div class="pn on" id="zmp-h" role="tabpanel">
      <h3>Your Zamundan Horoscope</h3>
-     <p class="sub">Choose your sign. The royal astrologer is ready.</p>
+     <p class="sub">Choose your sign.</p>
      <div class="signs" id="zmsg"></div>
      <div class="hs" id="zmhs" aria-live="polite">
-      <div class="md"><div><b id="zmhn"></b><small id="zmhd"></small></div></div>
+      <div class="md"><div><b id="zmhn"></b></div></div>
       <div><p class="k" id="zmhk">Today's Reading From The Palace</p><p class="r" id="zmhr"></p><div class="ex"><span>Royal Accessory: <em id="zmha"></em></span><span>Lucky Number: <em id="zmhl"></em></span></div></div>
      </div>
     </div>
@@ -763,7 +763,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
   var sgw=root.querySelector('#zmsg');
   if(sgw){
     var pick=function(i){
-      var s=SG[i];root.querySelector('#zmhn').textContent=ZS[i]+'\uFE0E';root.querySelector('#zmhn').setAttribute('aria-label',s[0]);root.querySelector('#zmhk').textContent='Today\'s Reading For '+s[0];root.querySelector('#zmhd').textContent=s[1];root.querySelector('#zmhr').textContent=s[2];root.querySelector('#zmha').textContent=s[3];root.querySelector('#zmhl').textContent=s[4];
+      var s=SG[i];root.querySelector('#zmhn').textContent=ZS[i]+'\uFE0E';root.querySelector('#zmhn').setAttribute('aria-label',s[0]);root.querySelector('#zmhk').textContent='Today\'s Reading For '+s[0]+' ('+s[1]+')';root.querySelector('#zmhr').textContent=s[2];root.querySelector('#zmha').textContent=s[3];root.querySelector('#zmhl').textContent=s[4];
       [].slice.call(sgw.children).forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});
       var hs=root.querySelector('#zmhs');hs.style.animation='none';void hs.offsetWidth;hs.style.animation='zmIn .45s ease both';
     };
