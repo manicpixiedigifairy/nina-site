@@ -162,21 +162,18 @@ html,body{margin:0}
 .bh .bnr img{width:100%}
 
 .bh .ug{--bgc:var(--rd);background:var(--rd);color:#fff}
-.bh .ug .grid{display:grid;grid-template-columns:minmax(0,1.35fr) repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);align-items:start}
+.bh .ug .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);align-items:start}
 .bh .ug figure{margin:0;position:relative}
 .bh .ug .tile{background:var(--nv);border-radius:calc(var(--u)*1.8);padding:calc(var(--u)*.6);box-shadow:calc(var(--u)*.6) calc(var(--u)*.6) 0 var(--ch)}
 .bh .ug .tile img{width:100%;border-radius:calc(var(--u)*1.3);background:var(--y)}
 .bh .ug .vid img{aspect-ratio:9/16;object-fit:cover}
-.bh .ug .ph1{--rr:-2.5deg}
-.bh .ug .ph1 img{aspect-ratio:1/1;object-fit:cover}
+.bh .ug figure:nth-child(1){--rr:-2deg}
 .bh .ug figure:nth-child(2){--rr:2deg;margin-top:calc(var(--u)*2.5)}
 .bh .ug figure:nth-child(3){--rr:-2deg}
 .bh .ug figure:nth-child(4){--rr:2.5deg;margin-top:calc(var(--u)*3)}
-.bh .ug figure:nth-child(5){--rr:-1.5deg;margin-top:calc(var(--u)*1)}
 .bh .ug figcaption{display:flex;align-items:center;gap:.45em;padding:calc(var(--u)*.8) calc(var(--u)*.4) calc(var(--u)*.3);font:700 calc(var(--u)*1.05)/1.2 var(--lab);color:#fff;overflow-wrap:anywhere}
 .bh .ug figcaption .av{flex:none;width:1.9em;height:1.9em;border-radius:50%;background:var(--y);display:grid;place-items:center;color:var(--nv);font:400 .95em/1 var(--disp);box-shadow:0 0 0 .14em var(--nv),0 0 0 .28em #E1306C}
 .bh .ug figcaption small{display:block;font:500 .85em/1.3 var(--lab);color:#AFC3F2}
-.bh .ug .ph1 .note{margin:calc(var(--u)*1.6) 0 0;font:400 calc(var(--u)*1.55)/1.45 var(--bd);color:#fff}
 /* OUTRO */
 .bh .out{--bgc:var(--nv);background:var(--nv);color:#fff;text-align:center;padding-bottom:calc(var(--sp)*1.2);overflow:hidden;overflow:clip}
 .bh .out .big{margin:0 auto;font:400 calc(var(--u)*7.4)/.98 var(--disp);max-width:12em}
@@ -212,7 +209,6 @@ html,body{margin:0}
 .bh .snap{max-width:calc(var(--u)*38)}
 .bh .fd .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .bh .ug .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-.bh .ug .ph1{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:calc(var(--u)*2.5);align-items:center}
 .bh .ug figure{margin-top:0!important}
 .bh .fdc{grid-column:1/-1;grid-row:1}
 }
@@ -231,7 +227,6 @@ html,body{margin:0}
 .bh .note{grid-template-columns:1fr}
 .bh .fd .grid{grid-template-columns:1fr}
 .bh .ug .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2.6)}
-.bh .ug .ph1{grid-template-columns:1fr}
 .bh .ph{max-width:26rem}
 .bh .cap{flex-basis:78%}
 .bh .out .big{font-size:min(13vw,calc(var(--u)*9))}
@@ -386,8 +381,7 @@ html,body{margin:0}
     <p class="sub rv" style="--d:.15s">Birthday boxes landed with creators and fans throughout the contest to keep momentum high.</p>
   </div>
   <div class="grid">
-    <figure class="ph1 rv"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-box.webp?v=1" alt="" role="img" aria-label="Fan photo of an opened Butterfinger birthday box with the Nobody Lays A Finger cup, a tee, a cap and Simpsons wrapper bars"></div><figcaption><span class="av" aria-hidden="true">F</span><span>@foodiewiththebeasts<small>The birthday box, opened</small></span></figcaption></figure>
-    <figure class="vid rv" style="--d:.06s"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-dadbodsnacks.gif?v=1" alt="" role="img" aria-label="Unboxing: the lid comes off to the cup, cap and bars"></div><figcaption><span class="av" aria-hidden="true">D</span><span>@dadbodsnacks<small>Lid off, swag out</small></span></figcaption></figure>
+    <figure class="vid rv"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-dadbodsnacks.gif?v=1" alt="" role="img" aria-label="Unboxing: the lid comes off to the cup, cap and bars"></div><figcaption><span class="av" aria-hidden="true">D</span><span>@dadbodsnacks<small>Lid off, swag out</small></span></figcaption></figure>
     <figure class="vid rv" style="--d:.12s"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-trinh.gif?v=1" alt="" role="img" aria-label="Unboxing: a creator pulls the cap, fun size bag and tee from the box"></div><figcaption><span class="av" aria-hidden="true">T</span><span>@trinhdoesthings<small>Cap, bag, tee</small></span></figcaption></figure>
     <figure class="vid rv" style="--d:.18s"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-unbox.gif?v=1" alt="" role="img" aria-label="Unboxing: a fan unpacks the cup and Butterfinger bars at a table"></div><figcaption><span class="av" aria-hidden="true">&#9733;</span><span>Fan unboxing<small>&ldquo;They sent me a fun box&rdquo;</small></span></figcaption></figure>
     <figure class="vid rv" style="--d:.24s"><div class="tile"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-ugc-skate.gif?v=1" alt="" role="img" aria-label="The Bite Me Butterfinger skateboard, flipped and shown up close"></div><figcaption><span class="av" aria-hidden="true">B</span><span>@butterfinger<small>The Bite Me board</small></span></figcaption></figure>
