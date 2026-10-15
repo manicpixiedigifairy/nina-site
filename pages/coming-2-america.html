@@ -61,8 +61,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .pt.burst{z-index:7}
 .zm .hero .w{z-index:2}
 .zm .val{position:absolute;left:0;right:0;top:0;height:calc(var(--u)*7.6);z-index:6;pointer-events:none;background:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-valance.webp?v=1) 50% 0/auto 100% repeat-x;filter:drop-shadow(0 8px 10px rgba(40,6,4,.35))}
-.zm .ct{position:absolute;top:0;bottom:0;width:52%;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 20%,transparent 80%,rgba(0,0,0,.35)),repeating-linear-gradient(90deg,#5C0713 0,#9B1022 calc(var(--u)*1.6),#C21F36 calc(var(--u)*2.4),#8A0F20 calc(var(--u)*3.6),#4E0610 calc(var(--u)*5));animation:zmOpen 1.9s cubic-bezier(.7,0,.2,1) .35s both}
-.zm .ct::after{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*1.4);background:repeating-linear-gradient(90deg,var(--g3) 0 2px,var(--g1) 2px 4px,transparent 4px 7px);border-top:4px solid var(--g2)}
+.zm .ct{position:absolute;top:0;bottom:0;width:52%;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.28),transparent 18%,transparent 82%,rgba(0,0,0,.35)),url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-velvet.webp?v=1) 0 0/calc(var(--u)*7) 100% repeat-x,#7A0E1E;animation:zmOpen 1.9s cubic-bezier(.7,0,.2,1) .35s both}
 .zm .ct.l{left:0;--x:-90%;box-shadow:inset -14px 0 22px rgba(0,0,0,.35)}
 .zm .ct.r{right:0;--x:90%;box-shadow:inset 14px 0 22px rgba(0,0,0,.35)}
 @keyframes zmOpen{from{transform:translateX(0)}to{transform:translateX(var(--x))}}
@@ -78,8 +77,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 @keyframes zmGlint{from{transform:translateX(-140%)}to{transform:translateX(140%)}}
 .zm .scr{font-family:var(--sc);font-size:calc(var(--u)*3.3);line-height:1.1;color:var(--cr);margin-top:calc(var(--u)*.6)}
 .zm .hg{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:center;margin-top:calc(var(--u)*4.4)}
-.zm .hg .gf{grid-column:1/7}
-.zm .hg .gf .in{aspect-ratio:1000/560}
+.zm .hg .rf{grid-column:1/7;position:relative;aspect-ratio:1800/1199;filter:drop-shadow(0 calc(var(--u)*1.2) calc(var(--u)*1.6) rgba(40,8,4,.35))}
+.zm .rf .ph{position:absolute;left:12.6%;top:18.9%;width:74.4%;height:62%;object-fit:cover}
+.zm .rf .fr{position:absolute;inset:0;width:100%;height:100%;max-width:none}
 .zm .hg .tx{grid-column:7/13}
 .zm .hg .tx p{font-size:calc(var(--u)*1.3);line-height:1.55;font-weight:400}
 .zm .meta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*2.2)}
@@ -97,9 +97,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .g12{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2)}
 .zm .d1 .tx{grid-column:1/8}
 .zm .d1 .bdy{margin-top:calc(var(--u)*2);color:rgba(251,245,232,.9);max-width:none}
-.zm .duties{grid-column:8/13;align-self:start;position:relative;padding:calc(var(--u)*4) calc(var(--u)*2.4) calc(var(--u)*2.4);background:linear-gradient(180deg,#FFF8E6,#F2E2BC);color:var(--ink);box-shadow:0 0 0 calc(var(--u)*.45) var(--g2),0 0 0 calc(var(--u)*.6) var(--g1),0 24px 50px rgba(0,0,0,.45)}
+.zm .duties{grid-column:8/13;align-self:center;position:relative;padding:calc(var(--u)*4) calc(var(--u)*2.4) calc(var(--u)*2.4);background:linear-gradient(180deg,#FFF8E6,#F2E2BC);color:var(--ink);box-shadow:0 0 0 calc(var(--u)*.45) var(--g2),0 0 0 calc(var(--u)*.6) var(--g1),0 24px 50px rgba(0,0,0,.45)}
 .zm .duties h3{font-size:calc(var(--u)*1.05);letter-spacing:.24em;text-transform:uppercase;color:var(--cr);text-align:center;font-weight:800}
-.zm .duties .scr{text-align:center;font-size:calc(var(--u)*2.5);margin:0 0 calc(var(--u)*1.2);color:var(--vl2)}
+.zm .duties .scr{text-align:center;font-size:calc(var(--u)*2.5);line-height:1.15;margin:calc(var(--u)*1.1) 0 calc(var(--u)*1.2);color:var(--vl2)}
 .zm .duties li{display:flex;align-items:center;gap:.9em;padding:.72em 0;border-bottom:1px solid rgba(122,84,24,.3);font:700 calc(var(--u)*.98)/1.2 var(--hd);letter-spacing:.08em;text-transform:uppercase}
 .zm .duties li:last-child{border-bottom:0}
 .zm .duties li::before{content:"";width:.6em;height:.6em;flex:none;transform:rotate(45deg);background:var(--cr);box-shadow:0 0 0 2px var(--g2)}
@@ -317,7 +317,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 @media (max-width:1000px){
  .zm{--g:1.75rem;--sp:calc(var(--u)*7.5);font-size:15px}
  .zm .g12,.zm .hg,.zm .d3 .hd,.zm .d4 .hd,.zm .d5 .hd,.zm .d8 .hd{display:block}
- .zm .hg .gf,.zm .d2 .gf,.zm .d7 .gf,.zm .d8 .hd .gf{margin-bottom:calc(var(--u)*3.6)}
+ .zm .hg .rf,.zm .d2 .gf,.zm .d7 .gf,.zm .d8 .hd .gf{margin-bottom:calc(var(--u)*3.6)}
  .zm .hg .tx p,.zm .lede{font-size:17px}
  .zm .duties,.zm .d3 .hd .bdy,.zm .d4 .hd .bdy,.zm .d5 .hd .bdy{margin-top:calc(var(--u)*3)}
  .zm .seals{margin-top:calc(var(--u)*4)}
@@ -418,11 +418,11 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
    <p class="scr">The Royal Family Has Arrived</p>
   </div>
   <div class="hg">
-   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-throne.webp?v=1" alt="" role="img" aria-label="King Akeem seated on a gilded leopard print throne, wearing his crown" width="1000" height="560"></div></figure>
+   <figure class="rf sl"><img class="ph" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-throne.webp?v=1" alt="" role="img" aria-label="King Akeem seated on a gilded leopard print throne, wearing his crown" width="1000" height="560"><img class="fr" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ruffle-frame.webp?v=1" alt="" aria-hidden="true" width="1800" height="1199"></figure>
    <div class="tx rv">
     <p>For the long awaited sequel to Eddie Murphy's Coming to America, we stopped marketing a movie and opened the gates to a kingdom. Zamunda went live on social as a real place with a real royal family, and fans were invited inside as citizens.</p>
     <p style="margin-top:1em;font-weight:700;color:var(--cr)">The rollout helped make Coming 2 America the number one most streamed movie in the US during premiere week.</p>
-    <div class="meta"><span>Amazon Studios</span><span>Prime Video</span><span>March 2021</span></div>
+    <div class="meta"><span>Amazon Studios</span><span>Prime Video</span></div>
    </div>
   </div>
  </div>
