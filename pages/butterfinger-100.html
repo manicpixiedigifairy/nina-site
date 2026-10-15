@@ -225,11 +225,6 @@ html,body{margin:0}
 .bh .out .big{font-size:min(13vw,calc(var(--u)*9))}
 .bh .pq p{font-size:calc(var(--u)*3.6)}
 }
-@media (prefers-reduced-motion:reduce){
-.bh .tt .ch{animation:none}
-.bh .osnap .ol,.bh .osnap .or{transform:none!important;animation:none!important}
-.bh .shield{animation:sh 1s .9s both}
-.bh .bl,.bh .bl img{animation:none}
 }
 </style>
 </head>
@@ -400,7 +395,7 @@ function q(s,r){return (r||D).querySelector(s)}
 function qa(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s))}
 var root=q('.bh');if(!root)return;
 root.classList.add('js');
-var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var RM=false; /* motion is part of the piece: play it for everyone */
 
 /* reveal */
 (function(){
