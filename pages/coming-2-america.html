@@ -116,7 +116,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .d2 .tx{grid-column:6/13;align-self:center}
 .zm .d2 .bdy{margin-top:calc(var(--u)*2)}
 .zm .ql{margin-top:calc(var(--u)*2.6);padding:calc(var(--u)*1.8) 0 0;border-top:2px solid var(--g2);font:italic 600 calc(var(--u)*2.6)/1.15 var(--bd);color:var(--cr)}
-.zm .ql .scr{display:block;font-size:1.25em;margin:0 0 .1em;color:var(--g1)}
+.zm blockquote.ql{margin:calc(var(--u)*2.6) 0 0}
+.zm .ql p{font:inherit}
+.zm .ql cite{display:block;margin-top:calc(var(--u)*1.2);font:800 calc(var(--u)*.86)/1.3 var(--hd);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--vl2)}
+.zm .ql cite span{display:block;margin-top:.5em;font-weight:700;font-size:.86em;letter-spacing:.14em;color:var(--g1)}
 
 /* decree III palace feed */
 .zm .d3{background:linear-gradient(180deg,rgba(29,12,7,.84),rgba(29,12,7,.9)),url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-leopard.webp?v=1) 0 0/calc(var(--u)*22) auto repeat,var(--ink);color:var(--pp)}
@@ -185,7 +188,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 
 /* decree IV procession */
 .zm .d4{padding-bottom:0}
-.zm .d4 .hd{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:end}
+.zm .d4 .hd,.zm .d6x{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:end}
 .zm .d4 .hd>div:first-child{grid-column:1/8}
 .zm .d4 .hd .bdy{grid-column:8/13;color:rgba(251,245,232,.88)}
 .zm .run{position:relative}
@@ -194,6 +197,43 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .card{flex:none;width:calc(var(--u)*29);display:flex;flex-direction:column}
 .zm .card .gf{flex:none}
 .zm .card .in{aspect-ratio:16/10}
+.zm .card.sq .in{aspect-ratio:1/1}
+.zm .card.tp .in img{object-position:50% 12%}
+.zm .sgw{position:relative;width:100%;height:100%}
+.zm .sgw img{position:absolute;inset:0;opacity:0;animation:zmCycle 10s linear infinite}
+.zm .sgw img:nth-child(1){animation-delay:0s}.zm .sgw img:nth-child(2){animation-delay:-7.5s}.zm .sgw img:nth-child(3){animation-delay:-5s}.zm .sgw img:nth-child(4){animation-delay:-2.5s}
+@keyframes zmCycle{0%{opacity:1}22%{opacity:1}27%{opacity:0}95%{opacity:0}100%{opacity:1}}
+.zm .prof{position:relative;margin-top:calc(var(--u)*4.5)}
+.zm .prof .pc .in{aspect-ratio:1800/560}
+.zm .prof .pc .in img{object-position:50% 30%}
+.zm .pid{display:flex;align-items:center;gap:calc(var(--u)*1.6);margin:calc(var(--u)*-4.6) 0 0 calc(var(--u)*3);position:relative;z-index:5}
+.zm .av{flex:none;width:calc(var(--u)*9.5);height:calc(var(--u)*9.5);border-radius:50%;overflow:hidden;box-shadow:0 0 0 calc(var(--u)*.45) var(--ink),0 0 0 calc(var(--u)*.85) var(--g2),0 14px 28px rgba(0,0,0,.5)}
+.zm .av img{width:100%;height:100%;object-fit:cover}
+.zm .pid>div{padding-top:calc(var(--u)*4.2)}
+.zm .nm{font:900 calc(var(--u)*2)/1 var(--hd);color:var(--g3)}
+.zm .hn{margin-top:.5em;font:700 calc(var(--u)*.8)/1.3 var(--hd);letter-spacing:.16em;text-transform:uppercase;color:rgba(251,245,232,.75)}
+.zm .bio{margin:calc(var(--u)*1.6) 0 0 calc(var(--u)*3);font:italic 600 calc(var(--u)*2)/1.25 var(--bd);color:var(--pp)}
+.zm .rail{margin-top:calc(var(--u)*5)}
+.zm .rh{display:flex;align-items:center;justify-content:space-between;gap:1em}
+.zm .rb{display:flex;gap:calc(var(--u)*.8)}
+.zm .rbt{width:calc(var(--u)*3.6);height:calc(var(--u)*3.6);border-radius:50%!important;display:grid;place-items:center;font:700 calc(var(--u)*1.3)/1 var(--hd)!important;color:var(--vl)!important;background:var(--frame)!important;box-shadow:0 6px 14px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,244,204,.8);transition:transform .25s}
+.zm .rbt:hover{transform:scale(1.08)}
+.zm .rt{display:flex;gap:calc(var(--u)*2);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;margin-top:calc(var(--u)*1.8);padding:calc(var(--u)*.8) 2px calc(var(--u)*1.6);scrollbar-width:thin;scrollbar-color:var(--g2) transparent}
+.zm .ri{flex:none;scroll-snap-align:start;height:calc(var(--u)*30);padding:calc(var(--u)*.55);background:var(--frame);box-shadow:0 12px 26px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,244,204,.7)}
+.zm .ri img{height:100%;width:auto;max-width:none;box-shadow:0 0 0 2px #4A300A}
+.zm .rwd{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:calc(var(--u)*3.4);align-items:center;margin-top:calc(var(--u)*4.4)}
+.zm .rwd .in{aspect-ratio:1/1}
+.zm .rwd .gv{margin-top:0;flex-direction:column;padding:calc(var(--u)*2.6) calc(var(--u)*2)}
+.zm .gq{font:italic 600 calc(var(--u)*1.6)/1.3 var(--bd);color:var(--ink)}
+.zm .d6 .hd{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:end}
+.zm .d6 .hd>div:first-child{grid-column:1/7}
+.zm .d6 .hd .bdy{grid-column:7/13;color:rgba(251,245,232,.88)}
+.zm .posts{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*2.6);margin-top:calc(var(--u)*4.4)}
+.zm .posts .in{aspect-ratio:4/5}
+.zm .posts .in img{object-position:50% 0}
+.zm .press{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*2.6);margin-top:calc(var(--u)*5)}
+.zm .press .in{aspect-ratio:4/5;background:#fff}
+.zm .press .in img{object-position:50% 0}
 .zm .card .crest{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;padding:calc(var(--u)*1.5);position:relative;background:radial-gradient(80% 80% at 50% 40%,rgba(255,255,255,.12),transparent 70%),var(--cc,var(--cr))}
 .zm .card .crest::before{content:"";position:absolute;inset:calc(var(--u)*.9);border:1.5px solid rgba(241,209,132,.75);outline:1px solid rgba(241,209,132,.35);outline-offset:4px}
 .zm .card .crest b{display:block;font-family:var(--sc);font-weight:400;font-size:calc(var(--u)*3.6);line-height:1;color:var(--g3);text-shadow:0 3px 0 rgba(0,0,0,.25)}
@@ -247,13 +287,24 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .d8 .hd .gf .in{aspect-ratio:960/450}
 .zm .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*2);margin-top:calc(var(--u)*5)}
 .zm .st{position:relative;text-align:center;padding:calc(var(--u)*3) calc(var(--u)*1.4) calc(var(--u)*2.4);background:linear-gradient(180deg,rgba(255,244,204,.1),rgba(255,244,204,.03));border:2px solid rgba(241,209,132,.7);outline:1px solid rgba(241,209,132,.3);outline-offset:6px}
-.zm .st b{display:block;font:900 calc(var(--u)*4.4)/1 var(--dc);background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.zm .st b{display:block;font:900 calc(var(--u)*3.9)/1 var(--dc);background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.zm .guests{margin-top:calc(var(--u)*6);text-align:center}
+.zm .guests .lb{justify-content:center}
+.zm .gl{margin:calc(var(--u)*1.2) auto 0;max-width:calc(var(--u)*48);font-size:calc(var(--u)*1.5);color:rgba(251,245,232,.9)}
+.zm .tk2{margin:calc(var(--u)*2.6) calc(var(--u)*-2) 0;transform:rotate(1.2deg);background:var(--ink)}
+.zm .tk2 .tp{animation-duration:60s;animation-direction:reverse}
+.zm .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .zm .st span{display:block;margin-top:calc(var(--u)*1.1);font:700 calc(var(--u)*.86)/1.45 var(--hd);letter-spacing:.14em;text-transform:uppercase;color:rgba(251,245,232,.88)}
 
 /* footer */
 .zm .ft{position:relative;overflow:hidden;padding:var(--sp) 0 calc(var(--u)*4);background:radial-gradient(60% 50% at 50% 40%,rgba(255,244,204,.95),transparent 70%),var(--iv)}
 .zm .ft .w{z-index:2;text-align:center}
-.zm .ft .gf .in{aspect-ratio:1500/500}
+.zm .ft .w.gf,.zm .ft .gf:not(.spf) .in{aspect-ratio:1500/500}
+.zm .ft .sp{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:center;text-align:left;margin-bottom:calc(var(--u)*7)}
+.zm .ft .sx{grid-column:1/6}
+.zm .ft .spf{grid-column:6/13}
+.zm .spf .in{background:#121212;border-radius:0}
+.zm .spf iframe{display:block;width:100%;height:352px;border:0}
 .zm .ft .scr{font-size:calc(var(--u)*5);margin-top:calc(var(--u)*3.4);color:var(--cr)}
 .zm .ft .bkr{display:flex;justify-content:flex-start;margin-top:calc(var(--u)*4.6)}
 .zm .bk{display:inline-flex;align-items:center;gap:.8em;padding:1.15em 1.8em 1.05em;font:800 calc(var(--u)*.9)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--g4);background:var(--vl2);box-shadow:0 0 0 3px var(--g2),0 10px 22px rgba(60,8,4,.35);transition:transform .3s cubic-bezier(.3,1.6,.5,1),background .2s}
@@ -270,6 +321,16 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm .d6 .tx{position:static;margin-bottom:calc(var(--u)*4)}
  .zm .d8 .hd .gf{margin-top:calc(var(--u)*3);margin-bottom:0}
  .zm .stats{grid-template-columns:1fr 1fr}
+ .zm .d6 .hd{display:block}
+ .zm .d6 .hd .bdy{margin-top:calc(var(--u)*3)}
+ .zm .posts{grid-template-columns:1fr 1fr}
+ .zm .rwd{grid-template-columns:1fr 1fr}
+ .zm .rwd .gv{grid-column:1/3;grid-row:1}
+ .zm .ri{height:340px}
+ .zm .pid{margin-left:calc(var(--u)*2)}
+ .zm .bio{margin-left:0;font-size:22px}
+ .zm .ft .sp{display:block}
+ .zm .ft .spf{margin-top:calc(var(--u)*3.4)}
  .zm h2{font-size:min(54px,8.6vw)}
  .zm .signs{grid-template-columns:repeat(4,1fr)}
  .zm .card{width:min(76vw,calc(var(--u)*34))}
@@ -305,6 +366,17 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm .d6 .gifs .gf:first-child{grid-column:auto}
  .zm .d6 .gifs .gf:nth-child(3){margin-top:0}
  .zm .stats{grid-template-columns:1fr;gap:calc(var(--u)*2.6)}
+ .zm .press{grid-template-columns:1fr;gap:calc(var(--u)*3.4)}
+ .zm .posts{grid-template-columns:1fr;gap:calc(var(--u)*3.4)}
+ .zm .rwd{grid-template-columns:1fr}
+ .zm .rwd .gv{grid-column:auto}
+ .zm .av{width:76px;height:76px}
+ .zm .pid{margin:-34px 0 0 14px;gap:12px}
+ .zm .pid>div{padding-top:34px}
+ .zm .nm{font-size:20px}
+ .zm .hn{font-size:10px}
+ .zm .ri{height:300px}
+ .zm .gq{font-size:18px}
  .zm .st b{font-size:46px}
  .zm .pl{font-size:10px;letter-spacing:.16em;bottom:18px}
  .zm .ql{font-size:24px}
@@ -320,6 +392,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 @media (prefers-reduced-motion:reduce){
  .zm .ct{animation:none;transform:translateX(var(--x))}
  .zm h1 .gt,.zm .crown .sh{animation:none}
+ .zm .sgw img{animation:none}
+ .zm .sgw img:first-child{opacity:1}
  .zm .rv,.zm .sl{opacity:1;transform:none;transition:none}
 }
 </style></head><body>
@@ -397,7 +471,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     <p class="lede">Coming to America has lived in Black culture for decades. Fans already knew the royal court, the barbershop and the Soul Glo jingle by heart.</p>
     <p style="margin-top:1em">So we treated the IP as a living universe rather than a movie to be marketed. If Zamunda were real, it would have a royal feed, daily rituals, a fashion house and a palace that talks back. Every post was written from inside the kingdom.</p>
    </div>
-   <p class="ql"><span class="scr">The Strategy</span>Don't market the movie. Open the kingdom.</p>
+   <blockquote class="ql"><p>&ldquo;Coming 2 America is a quintessential film in pop culture, as such, we needed a campaign at the intersection of marketing and culture.&rdquo;</p><cite>Ukonwa Ojo<span>Global Chief Marketing Officer, Prime Video and Amazon Studios</span></cite></blockquote>
   </div>
  </div>
 </section>
@@ -413,6 +487,11 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     <p>@ZamundaRoyals launched on Instagram and Twitter from the point of view of the royal family's own live feeds. Daily Zamundan horoscopes, royal declarations issued from the palace, in-world lifestyle and fashion content, and shareable quizzes, filters and prompts asked fans to engage as citizens of the kingdom.</p>
     <p>Daily content creation and dedicated community management grew the account to 36.1K followers on Instagram. Step inside and try a few rituals of the realm.</p>
    </div>
+  </div>
+  <div class="prof rv">
+   <figure class="gf pc"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-royal-family.webp?v=1" alt="" role="img" aria-label="The royal family of Zamunda in a painted jungle landscape, King Akeem crowned at center" width="1800" height="687" loading="lazy"></div></figure>
+   <div class="pid"><span class="av"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lion.webp?v=1" alt="" role="img" aria-label="The golden lion crest used as the @ZamundaRoyals avatar" width="400" height="400" loading="lazy"></span><div><p class="nm">Zamunda Royals</p><p class="hn">@ZamundaRoyals on Instagram and Twitter</p></div></div>
+   <p class="bio">&ldquo;Behold, the official propaganda arm of the Kingdom of Zamunda.&rdquo;</p>
   </div>
   <figure class="gf pf rv"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
    <div class="in">
@@ -447,6 +526,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     </div>
    </div>
   </figure>
+  <div class="rail rv">
+   <div class="rh"><p class="lb">From The Feed</p><div class="rb"><button type="button" class="rbt" data-d="-1" aria-label="Previous posts">&larr;</button><button type="button" class="rbt" data-d="1" aria-label="Next posts">&rarr;</button></div></div>
+   <div class="rt" id="zmrt"><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-zorbes.webp?v=1" alt="" role="img" aria-label="Zorbes magazine parody cover naming King Akeem Zamunda's wealthiest person" width="1000" height="1250" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-mirembe.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Mirembe as a breath of fresh air for the long lost royal heir" width="678" height="1158" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-lavelle.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Lavelle Junson as the long lost royal heir" width="683" height="1149" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-cleo-maurice.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet bringing the King of burgers to the kingdom, with Cleo and Maurice" width="699" height="1123" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-portrait.webp?v=1" alt="" role="img" aria-label="Queen Lisa standing beside King Akeem seated on his throne in the palace" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-bank-of-zamunda.webp?v=1" alt="" role="img" aria-label="Bank of Zamunda one hundred pound notes with King Akeem's portrait and the golden lion" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-varsity-briefcase.webp?v=1" alt="" role="img" aria-label="King Akeem's New York varsity jacket and royal chain laid in a briefcase of gold bars" width="1000" height="1251" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-sexual-chocolate.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet announcing a Sexual Chocolate giveaway from Queens legend Randy Watson" width="852" height="924" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-party.webp?v=1" alt="" role="img" aria-label="Queen Lisa and King Akeem smiling at a royal celebration" width="1000" height="1191" loading="lazy"></figure></div>
+  </div>
  </div>
 </section>
 <div class="trim" aria-hidden="true"></div>
@@ -458,19 +541,22 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     <p class="lb">Decree IV: The Royal Procession</p>
     <h2>Tentpoles And A <em>Daily</em> Drumbeat</h2>
    </div>
-   <div class="bdy rv"><p>Between the everyday rituals, partnerships with cultural icons and nostalgic giveaways gave the kingdom its big moments, each one built to be passed around, not just watched.</p></div>
+   <div class="bdy rv"><p>Between the everyday rituals, a viral dance challenge, partnerships with cultural icons and nostalgic giveaways gave the kingdom its big moments, each one built to be passed around, not just watched.</p></div>
   </div>
  </div>
  <div class="run" id="zmrun">
   <div class="stage" id="zmstage">
    <div class="strip" id="zmstrip">
     <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-akeem-laugh.gif?v=1" alt="" role="img" aria-label="King Akeem laughing at a royal celebration" width="480" height="268" loading="lazy"></div></figure><p class="ck">Every Day</p><h3>The Daily Drumbeat</h3><p>Horoscopes, decrees, lifestyle and fashion from inside the palace across four platforms, so the kingdom never went quiet between tentpoles.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="crest" style="--cc:#7E0B1C"><div><b>Sexual Chocolate</b><small>Valentine's Day</small></div></div></figure><p class="ck">Royal Giveaway</p><h3>Sexual Chocolate Boxes</h3><p>A Valentine's Day giveaway gave legacy fans a nostalgic, culturally fluent tie-in to the original film.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="crest" style="--cc:#173E9C"><div><b>UOMA Beauty</b><small>Royal Palettes</small></div></div></figure><p class="ck">Royal Giveaway</p><h3>UOMA Beauty Palettes</h3><p>Palettes for a new generation of fans, with inspiration for exactly how they do it in Zamunda.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="crest" style="--cc:#1F6B45"><div><b>Soul Glo</b><small>With Bronner Brothers</small></div></div></figure><p class="ck">The Legacy</p><h3>Soul Glo, With A New Glow</h3><p>Soul Glo came to life with Bronner Brothers. Talent posed for posters and recreated soulful commercials, and fans and influencers found bottles of their own in the mail.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="crest" style="--cc:#5E0918"><div><b>Rent The Runway</b><small>Premiere Attire</small></div></div></figure><p class="ck">Partnership</p><h3>Dressed For The Premiere</h3><p>A custom Coming 2 America discount code with Rent The Runway made it easy for fans to dress like royalty for premiere night.</p></article>
+    <article class="card sq"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-royal-rewatch.webp?v=1" alt="" role="img" aria-label="Invitation to the original Coming to America watch party on February 1, 2021, with a live DJ set by D-Nice" width="1100" height="1100" loading="lazy"></div></figure><p class="ck">February 1, 2021</p><h3>The Royal Rewatch</h3><p>Before the sequel, fans rewatched the original together and live tweeted along at #RoyalRewatch, followed by a live DJ set from D-Nice on Instagram.</p></article>
+    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-sexual-chocolate-banner.webp?v=1" alt="" role="img" aria-label="Sexual Chocolate decadent dark chocolate banner with Randy Watson mid song" width="1182" height="665" loading="lazy"></div></figure><p class="ck">Valentine's Day</p><h3>Sexual Chocolate Boxes</h3><p>Fans tagged @ZamundaRoyals with #Coming2America and #giveaway for a chance to win real Sexual Chocolate, straight from Queens legend Randy Watson.</p></article>
+    <article class="card sq"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-uoma.webp?v=1" alt="" role="img" aria-label="UOMA Beauty Coming 2 America collection of palettes and lipsticks scattered with rose petals" width="888" height="884" loading="lazy"></div></figure><p class="ck">Royal Giveaway</p><h3>The UOMA Beauty Royal Edit</h3><p>Fans posted their best royal look for the watch party for a chance to win the nine piece UOMA Beauty Coming 2 America collection.</p></article>
+    <article class="card sq"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><div class="sgw"><img class="sgl" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-soulglo-0.webp?v=1" alt="" role="img" aria-label="Soul Glo poster, For the sensual soul" width="800" height="800" loading="lazy"><img class="sgl" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-soulglo-1.webp?v=1" alt="" role="img" aria-label="Soul Glo poster, Dare to be desired" width="800" height="800" loading="lazy"><img class="sgl" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-soulglo-2.webp?v=1" alt="" role="img" aria-label="Soul Glo poster, Find your luscious self" width="800" height="800" loading="lazy"><img class="sgl" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-soulglo-3.webp?v=1" alt="" role="img" aria-label="Soul Glo poster, From fine to divine" width="800" height="800" loading="lazy"></div></div></figure><p class="ck">The Legacy</p><h3>Soul Glo, With A New Glow</h3><p>Soul Glo came to life with Bronner Brothers. Talent posed for posters and recreated soulful commercials, and fans and influencers found bottles of their own in the mail.</p></article>
+    <article class="card sq tp"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-barbershop-box.webp?v=1" alt="" role="img" aria-label="Open Coming 2 America barbershop gift box with a gold framed letter, a pick comb and grooming products" width="1000" height="1248" loading="lazy"></div></figure><p class="ck">Influencer Gifting</p><h3>The Barbershop Box</h3><p>A gift box honoring the Black barbershop, where jokes are told, advice is shared and bonds are made, filled with curated products from Black owned businesses.</p></article>
+    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-rtr.webp?v=1" alt="" role="img" aria-label="The royal family of Zamunda posed around the throne, shared by Rent The Runway" width="1000" height="521" loading="lazy"></div></figure><p class="ck">Partnership</p><h3>What To Wear In Zamunda</h3><p>Rent The Runway sent fans a royal invite and a custom Coming 2 America discount code to dress like royalty for premiere night.</p></article>
     <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-queens.gif?v=1" alt="" role="img" aria-label="King Akeem and Semmi in royal dress on the streets of Queens" width="498" height="247" loading="lazy"></div></figure><p class="ck">Partnership</p><h3>The Brooklyn Nets Takeover</h3><p>Zamunda took over a Brooklyn Nets game and the team's social handles, bringing the kingdom to the home court.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="crest" style="--cc:#1D0C07"><div><b>HSTRY</b><small>By Nas</small></div></div></figure><p class="ck">Partnership</p><h3>Zamundan Fashion By Nas</h3><p>Nas created a special line of Zamundan inspired pieces with his clothing company, HSTRY.</p></article>
+    <article class="card sq tp"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-hstry-hoodie.webp?v=1" alt="" role="img" aria-label="Nas in a gold HSTRY Unity and Pride hoodie with the Zamundan flag" width="1000" height="1250" loading="lazy"></div></figure><p class="ck">Partnership</p><h3>Zamundan Fashion By Nas</h3><p>Nas created a special line of Zamundan inspired pieces with his clothing company, HSTRY.</p></article>
+    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-meeka-dance.gif?v=1" alt="" role="img" aria-label="Princess Meeka dancing through a joyful royal celebration" width="480" height="269" loading="lazy"></div></figure><p class="ck">Premiere Day</p><h3>The I'm A King Challenge</h3><p>A TikTok dance challenge set to "I'm A King" from the official soundtrack, choreographed by Fatima Robinson, had influencers and fans dancing in celebration of their inner royalty. It drew 5.6 billion global views.</p></article>
    </div>
    <div class="chain" aria-hidden="true"><i id="zmch"></i></div>
   </div>
@@ -488,27 +574,19 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
   <div class="fleet">
    <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-plane.webp?v=1" alt="" role="img" aria-label="Amazon cargo plane wrapped in gold reading The Royal Family Has Arrived" width="1000" height="563" loading="lazy"></div><figcaption class="pl">By Royal Air</figcaption></figure>
    <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-truck.webp?v=1" alt="" role="img" aria-label="Amazon delivery truck wrapped in gold with King Akeem and the line The Royal Family Has Arrived" width="1000" height="563" loading="lazy"></div><figcaption class="pl">By Royal Road</figcaption></figure>
-   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-van.webp?v=1" alt="" role="img" aria-label="Amazon delivery van wrapped in gold with King Akeem, parked on a residential street as a driver walks toward it" width="1012" height="568" loading="lazy"></div><figcaption class="pl">To Your Door</figcaption></figure>
+   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-van-house.webp?v=1" alt="" role="img" aria-label="Gold wrapped Amazon delivery van with King Akeem and The Royal Family Has Arrived, parked outside a house" width="1000" height="750" loading="lazy"></div><figcaption class="pl">To Your Door</figcaption></figure>
   </div>
-  <div class="gv rv"><b>#RoyalGiveaway</b><span>Six weeks of prizes that made fans feel like royalty</span></div>
+  <div class="rwd"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-royal-reward.webp?v=1" alt="" role="img" aria-label="Framed post of the gold Royal Family Has Arrived cargo plane in a hangar, promising a royal reward" width="900" height="900" loading="lazy"></div></figure><div class="gv rv"><b>#RoyalGiveaway</b><p class="gq">&ldquo;Our royal family may surprise you with a royal reward from their kingdom to yours.&rdquo;</p><span>Six weeks of prizes that made fans feel like royalty</span></div><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-royal-reward-van.webp?v=1" alt="" role="img" aria-label="Framed post of a gold royal van and an Amazon driver, promising a royal reward" width="1000" height="1000" loading="lazy"></div></figure></div>
  </div>
 </section>
 
 <section class="sec dk d6" id="engagement">
- <div class="w g12">
-  <div class="tx rv">
-   <p class="lb">Decree VI: Royal Engagement</p>
-   <h2>No Citizen <em>Left</em> On Read</h2>
-   <div class="bdy">
-    <p class="lede">Round the clock community management kept the world of the royal family intact. Reactive and proactive, the palace prioritized high profile moments with celebrities and key influencers and answered its citizens in character.</p>
-    <p style="margin-top:1em">Talent and influencers shared creative on their own channels and amplified owned messages. Scripted self shoot prompts let talent create assets from the safety of home, and social toolkits guided content creation across the court.</p>
-   </div>
+ <div class="w">
+  <div class="hd">
+   <div class="rv"><p class="lb">Decree VI: Royal Engagement</p><h2>No Citizen <em>Left</em> On Read</h2></div>
+   <div class="bdy rv"><p>Round the clock community management kept the world of the royal family intact. Reactive and proactive, the palace prioritized high profile moments with celebrities and key influencers and answered its citizens in character.</p><p>Talent and influencers shared creative on their own channels and amplified owned messages. Scripted self shoot prompts let talent create assets from the safety of home, and social toolkits guided content creation across the court.</p></div>
   </div>
-  <div class="gifs">
-   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-meeka-dance.gif?v=1" alt="" role="img" aria-label="Princess Meeka dancing through a joyful royal celebration" width="480" height="269" loading="lazy"></div></figure>
-   <figure class="gf sl pt2"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-new-york.webp?v=1" alt="" role="img" aria-label="King Akeem grinning in his crown from a car window beside a New York exit sign" width="640" height="960" loading="lazy"></div></figure>
-   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-watchparty.gif?v=1" alt="" role="img" aria-label="The royal family and court celebrating together" width="480" height="269" loading="lazy"></div></figure>
-  </div>
+  <div class="posts"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-jessiewoo.webp?v=1" alt="" role="img" aria-label="Influencer post in a Zamunda inspired print gown in front of the Coming 2 America title screen" width="1000" height="1722" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-martin.webp?v=1" alt="" role="img" aria-label="Martin Lawrence post of the black and gold Coming 2 America gift boxes" width="1000" height="1511" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-brittanysky.webp?v=1" alt="" role="img" aria-label="Influencer post of a custom bomber jacket in a Coming 2 America box, tagged @ZamundaRoyals" width="1000" height="1594" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-danelle.webp?v=1" alt="" role="img" aria-label="Two influencers in crowns holding Coming 2 America boxes and premiere tickets" width="1000" height="1238" loading="lazy"></div></figure></div>
  </div>
 </section>
 
@@ -520,7 +598,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
    <h2 data-fit style="white-space:nowrap">#RoyalWatchParty</h2>
    <div class="bdy">
     <p>On premiere day, a virtual watch party made up for the feeling of a communal night at the theater and gave the premiere its own trending moment.</p>
-    <p>Hosted by icon Dionne Warwick and supported by high visibility talent and influencer partners, the palace led real time content and engagement through a live tweet of the film. Detailed toolkits gave influencers, cast and hosts copy and assets to share before, during and after.</p>
+    <p>Hosted on Twitter by icon Dionne Warwick and supported by high visibility talent and influencer partners, the palace led real time content and engagement through a live tweet of the film, then kept the celebration going with an Instagram Live after party with Nigerian singer and songwriter Tiwa Savage. Detailed toolkits gave influencers, cast and hosts copy and assets to share before, during and after.</p>
+    <p class="lede" style="font-size:calc(var(--u)*1.5)">The watch party generated higher engagement than any previous Prime Video movie.</p>
    </div>
    <div class="dt"><b>March 5, 2021</b><small>Premiere Night</small></div>
   </div>
@@ -531,20 +610,38 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 <section class="sec dk d8" id="proof">
  <div class="w">
   <div class="hd">
-   <div class="rv"><p class="lb">Decree VIII: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">The kingdom opened its gates and the people came. Coming 2 America became Nielsen's number one streamed movie during premiere week.</p></div>
+   <div class="rv"><p class="lb">Decree VIII: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">Coming 2 America was the number one streamed movie of its opening weekend and posted the biggest opening weekend of any streaming movie in the previous 12 months, per Screen Engine/ASI. It was also Nielsen's number one streamed movie during premiere week.</p></div>
    <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-number-one.webp?v=1" alt="" role="img" aria-label="Prime Video banner reading Number One Movie In America, Coming 2 America" width="960" height="450" loading="lazy"></div></figure>
   </div>
+  <div class="press"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-thewrap.webp?v=1" alt="" role="img" aria-label="TheWrap headline: Coming 2 America draws most viewers for streaming film launch of the past year, ratings firm says" width="937" height="1171" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-variety.webp?v=1" alt="" role="img" aria-label="Variety headline: Coming 2 America hits No. 1 on Nielsen U.S. streaming rankings" width="1000" height="1250" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-deadline.webp?v=1" alt="" role="img" aria-label="Deadline headline: Coming 2 America gives Amazon Prime Video its first No. 1 finish on Nielsen weekly streaming chart" width="673" height="841" loading="lazy"></div></figure></div>
   <div class="stats">
-   <div class="st rv"><b>#1</b><span>Most streamed movie in the US during premiere week, per Nielsen</span></div>
+   <div class="st rv"><b>#1</b><span>Opening weekend of any streaming movie in the past 12 months, per Screen Engine/ASI</span></div>
+   <div class="st rv"><b data-count="1.4" data-suf="B">1.4B</b><span>Minutes viewed in premiere week, per Nielsen</span></div>
+   <div class="st rv"><b>#1</b><span>First number one finish for Prime Video on Nielsen's weekly streaming chart</span></div>
+   <div class="st rv"><b data-count="5.6" data-suf="B">5.6B</b><span>Global TikTok views for the I'm A King dance challenge</span></div>
+   <div class="st rv"><b>#1</b><span>Most talked about movie of 2021 on Twitter, per ListenFirst Media</span></div>
+   <div class="st rv"><b>#1</b><span>Entertainment app on the App Store for Prime Video over debut weekend, and #2 across all free apps</span></div>
+   <div class="st rv"><b data-count="12000" data-int="1" data-suf="+">12,000+</b><span>Customer reviews on Prime Video</span></div>
    <div class="st rv"><b data-count="36.1" data-suf="K">36.1K</b><span>Instagram followers built for @ZamundaRoyals</span></div>
-   <div class="st rv"><b>6</b><span>Weeks of #RoyalGiveaway prizes fulfilled</span></div>
-   <div class="st rv"><b>4</b><span>Platforms, one kingdom</span></div>
+  </div>
+  <div class="guests rv">
+   <p class="lb">The Royal Guest List</p>
+   <p class="gl">Coming 2 America trended nationally on Twitter across multiple conversations through opening weekend, with posts from</p>
   </div>
  </div>
+ <div class="tk tk2" aria-hidden="true"><div class="tp">
+  <div class="gp"><span>LeBron James</span><i></i><span>Regina King</span><i></i><span>Gladys Knight</span><i></i><span>Ice-T</span><i></i><span>Chance The Rapper</span><i></i><span>Alicia Keys</span><i></i><span>Amy Schumer</span><i></i><span>Tracee Ellis Ross</span><i></i><span>Ayesha Curry</span><i></i><span>Snoop Dogg</span><i></i><span>Kerry Washington</span><i></i></div>
+  <div class="gp"><span>LeBron James</span><i></i><span>Regina King</span><i></i><span>Gladys Knight</span><i></i><span>Ice-T</span><i></i><span>Chance The Rapper</span><i></i><span>Alicia Keys</span><i></i><span>Amy Schumer</span><i></i><span>Tracee Ellis Ross</span><i></i><span>Ayesha Curry</span><i></i><span>Snoop Dogg</span><i></i><span>Kerry Washington</span><i></i></div>
+ </div></div>
+ <p class="sr">Posts from LeBron James, Regina King, Gladys Knight, Ice-T, Chance The Rapper, Alicia Keys, Amy Schumer, Tracee Ellis Ross, Ayesha Curry, Snoop Dogg and Kerry Washington.</p>
 </section>
 
 <footer class="ft">
  <canvas class="pt" data-petals="20" data-src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-petal-0.webp?v=1,https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-petal-1.webp?v=1,https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-petal-2.webp?v=1,https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-petal-3.webp?v=1,https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-petal-4.webp?v=1" aria-hidden="true"></canvas>
+ <div class="w sp">
+  <div class="sx rv"><p class="lb">The Royal Soundtrack</p><h2>Press Play, <em>Your Majesty</em></h2><p class="lede">The Coming 2 America Official Playlist, from &ldquo;I&rsquo;m A King&rdquo; to &ldquo;Gett Off.&rdquo; Keep the celebration going with music fit for the kingdom.</p></div>
+  <figure class="gf sl spf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><iframe title="Spotify playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5qwcPue6e01?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></figure>
+ </div>
  <div class="w">
   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-keyart-wide.webp?v=1" alt="" role="img" aria-label="Coming 2 America key art, the full royal cast inside a gilded frame above a golden skyline" width="1500" height="500" loading="lazy"></div></figure>
   <p class="scr">Long Live Zamunda</p>
@@ -719,6 +816,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     render();
   }
 
+  /* feed rail */
+  var rt=root.querySelector('#zmrt');
+  if(rt){$$('.rbt').forEach(function(b){b.addEventListener('click',function(){var d=+b.getAttribute('data-d');rt.scrollBy({left:d*rt.clientWidth*.8,behavior:'smooth'})})})}
+
   /* sideways procession */
   var run=root.querySelector('#zmrun'),stage=root.querySelector('#zmstage'),strip=root.querySelector('#zmstrip'),chain=root.querySelector('#zmch'),travel=0,raf=0;
   var layout=function(){
@@ -746,9 +847,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 
   /* count up */
   $$('[data-count]').forEach(function(el){
-    var to=parseFloat(el.getAttribute('data-count')),suf=el.getAttribute('data-suf')||'',done=false;
+    var to=parseFloat(el.getAttribute('data-count')),suf=el.getAttribute('data-suf')||'',isInt=el.hasAttribute('data-int'),done=false;
     if(RM||!('IntersectionObserver' in W))return;
-    var go=function(){if(done)return;done=true;var t0=0;var f=function(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(1)+suf;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+    var go=function(){if(done)return;done=true;var t0=0;var f=function(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-p,3);el.textContent=(isInt?Math.round(to*e).toLocaleString('en-US'):(to*e).toFixed(1))+suf;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
     var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){go();o.disconnect()}},{threshold:.4});o.observe(el);
   });
 })();
