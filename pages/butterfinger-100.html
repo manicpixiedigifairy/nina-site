@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Butterfinger turns 100. Limited-edition The Simpsons wrappers and the Butterfinger Birthday Sweepstakes, built as a playful, touchable page.">
+<title>Butterfinger: 100 Years</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Lilita+One&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0}
+.bh{display:block;position:relative;overflow:hidden;overflow:clip;background:#FFE500;color:#0B2466;--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*4.5);--sp:calc(var(--u)*7.5);--y:#FFE500;--y2:#FFF6B8;--b:#1F4FB8;--sk:#2EA6EC;--nv:#0B2466;--rd:#E5322D;--ch:#4A220C;--cr:#FFFBEA;--disp:"Lilita One","Arial Black",Impact,sans-serif;--lab:Fredoka,"Trebuchet MS",Arial,sans-serif;--bd:Newsreader,Georgia,"Times New Roman",serif;font-family:var(--bd);-webkit-font-smoothing:antialiased}
+.bh *{box-sizing:border-box}
+.bh img{display:block;max-width:100%;height:auto}
+.bh button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bh a{color:inherit}
+.bh :focus-visible{outline:calc(var(--u)*.22) solid var(--rd);outline-offset:calc(var(--u)*.25)}
+
+/* shared section rhythm */
+.bh .sc{position:relative;padding:var(--sp) var(--g) calc(var(--sp)*1.1);isolation:isolate}
+.bh .sc,.bh .hero{z-index:var(--z,1)}
+.bh .crimp::after{content:"";position:absolute;left:0;right:0;bottom:calc(var(--u)*-1.3 + 1px);height:calc(var(--u)*1.3);background:var(--bgc);-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(var(--u)*2.6) 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(var(--u)*2.6) 100%;z-index:3;pointer-events:none}
+.bh .lb{display:inline-flex;align-items:center;gap:.65em;margin:0;font:600 calc(var(--u)*1.2)/1 var(--lab);letter-spacing:.04em}
+.bh .lb i{display:inline-block;width:.95em;height:.95em;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8 0 18%,#0000 19%),var(--rd);box-shadow:.55em -.25em 0 -.18em var(--sk),.35em .45em 0 -.22em var(--b)}
+.bh .h2{margin:.38em 0 0;font:400 calc(var(--u)*5.4)/1 var(--disp);letter-spacing:.005em}
+.bh .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*2.5);flex-wrap:wrap;margin-bottom:calc(var(--u)*3.6)}
+.bh .sub{margin:0;font:500 calc(var(--u)*1.5)/1.4 var(--lab);max-width:30em}
+.bh .ext{color:var(--b);text-shadow:0 .03em 0 #fff,0 .06em 0 #fff,0 .09em 0 var(--nv),0 .12em 0 var(--nv),0 .2em .12em rgba(11,36,102,.25)}
+.bh .exy{color:var(--y);text-shadow:0 .03em 0 #fff,0 .06em 0 var(--nv),0 .09em 0 var(--nv),0 .12em 0 var(--nv),0 .2em .12em rgba(0,0,0,.25)}
+/* reveal */
+.bh.js .rv{opacity:0;translate:0 calc(var(--u)*3);scale:.94;rotate:var(--rr,0deg);transition:opacity .5s ease,translate .75s cubic-bezier(.3,1.5,.5,1),scale .75s cubic-bezier(.3,1.5,.5,1),rotate .75s cubic-bezier(.3,1.5,.5,1);transition-delay:var(--d,0s)}
+.bh.js .rv.in{opacity:1;translate:0 0;scale:1;rotate:0deg}
+/* confetti ground */
+.bh .cft{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,var(--rd) 0 2.5px,#0000 3px),radial-gradient(circle,var(--b) 0 2px,#0000 2.5px),radial-gradient(circle,var(--sk) 0 3px,#0000 3.5px),radial-gradient(circle,#fff 0 2px,#0000 2.5px),radial-gradient(circle,#2BB673 0 2px,#0000 2.5px);background-size:calc(var(--u)*13) calc(var(--u)*11),calc(var(--u)*9) calc(var(--u)*14),calc(var(--u)*17) calc(var(--u)*12),calc(var(--u)*7) calc(var(--u)*9),calc(var(--u)*15) calc(var(--u)*16);background-position:0 0,calc(var(--u)*4) calc(var(--u)*6),calc(var(--u)*9) calc(var(--u)*2),calc(var(--u)*2) calc(var(--u)*5),calc(var(--u)*11) calc(var(--u)*9);opacity:.8}
+
+/* HERO */
+.bh .hero{position:relative;--bgc:var(--y);background:var(--y);padding:calc(var(--u)*6) var(--g) calc(var(--u)*6.5);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:calc(var(--u)*3) calc(var(--u)*4);align-items:center;isolation:isolate;min-height:min(92vh,calc(var(--u)*62))}
+.bh .hl{position:relative;z-index:2}
+.bh .tt{margin:calc(var(--u)*1.4) 0 0;font:400 calc(var(--u)*8.6)/.93 var(--disp)}
+.bh .tt .wd{display:block;white-space:nowrap;width:max-content}
+.bh .tt .ch{display:inline-block;transform-origin:50% 100%;animation:bw 2.8s ease-in-out infinite;animation-delay:calc(var(--i)*-.19s);-webkit-user-select:none;user-select:none}
+.bh .tt .ch.hp{animation:hop .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bw{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-.045em) rotate(1.3deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1)}28%{transform:translateY(-.28em) rotate(-9deg) scale(1.1,.94)}58%{transform:translateY(.02em) rotate(3deg) scale(.95,1.06)}100%{transform:none}}
+.bh .tt .n100{color:var(--rd);text-shadow:0 .03em 0 #fff,0 .06em 0 #fff,0 .09em 0 var(--ch),0 .12em 0 var(--ch),0 .2em .12em rgba(74,34,12,.3)}
+.bh .dek{margin:calc(var(--u)*2.4) 0 0;max-width:25em;font:500 calc(var(--u)*1.7)/1.42 var(--lab)}
+.bh .stage{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(var(--u)*30)}
+.bh .shield{position:absolute;top:calc(var(--u)*-.5);left:calc(var(--u)*1);width:calc(var(--u)*9.5);aspect-ratio:.84;background:var(--b);color:#fff;clip-path:polygon(0 0,100% 0,100% 74%,50% 100%,0 74%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:calc(var(--u)*1.2);font:400 calc(var(--u)*1)/1 var(--disp);letter-spacing:.06em;rotate:-9deg;filter:drop-shadow(0 calc(var(--u)*.5) 0 var(--nv));animation:sh 1s .9s cubic-bezier(.3,1.6,.5,1) both;z-index:3}
+.bh .shield b{display:block;font:400 calc(var(--u)*4)/.95 var(--disp);letter-spacing:0;margin:.08em 0 .02em}
+.bh .shield s{text-decoration:none;font-size:calc(var(--u)*.9);letter-spacing:.3em;color:var(--y)}
+@keyframes sh{0%{transform:scale(0) rotate(-40deg)}100%{transform:none}}
+.bh .snap{position:relative;display:block;width:100%;max-width:calc(var(--u)*50);touch-action:manipulation}
+.bh .hang{position:relative;display:block;will-change:transform;transform-origin:50% -60%}
+.bh .half{display:block;width:100%;transition:transform .55s cubic-bezier(.3,1.6,.5,1)}
+.bh .half.l{clip-path:polygon(0 0,51% 0,49% 30%,52% 52%,48% 74%,51% 100%,0 100%)}
+.bh .half.r{position:absolute;inset:0;clip-path:polygon(51% 0,100% 0,100% 100%,51% 100%,48% 74%,52% 52%,49% 30%)}
+.bh .snap.on .half.l{transform:translate(-5%,4%) rotate(-9deg)}
+.bh .snap.on .half.r{transform:translate(5%,4%) rotate(9deg)}
+.bh .snap:hover:not(.on) .half{transform:rotate(-1.5deg)}
+.bh .bshadow{width:70%;height:calc(var(--u)*1.6);margin:calc(var(--u)*1.2) auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(11,36,102,.28),#0000)}
+.bh .hint{margin:calc(var(--u)*1.2) 0 0;display:inline-flex;align-items:center;gap:.5em;padding:.55em 1.2em .6em;border-radius:99px;background:var(--b);color:#fff;font:600 calc(var(--u)*1.15)/1 var(--lab);letter-spacing:.04em;box-shadow:0 .25em 0 var(--nv);pointer-events:none}
+.bh .crumb{position:absolute;left:50%;top:40%;width:var(--s);height:calc(var(--s)*.8);border-radius:40% 55% 45% 50%;background:var(--c);pointer-events:none;z-index:4}
+
+/* TICKER */
+.bh .tk{position:relative;z-index:20;margin:calc(var(--u)*-1.4) 0;rotate:-2deg;background:var(--b);color:var(--y);border-block:calc(var(--u)*.3) solid var(--nv);overflow:hidden;white-space:nowrap;font:400 calc(var(--u)*2.1)/1 var(--disp);padding:calc(var(--u)*1.1) 0 calc(var(--u)*1.2);box-shadow:0 calc(var(--u)*.6) 0 rgba(11,36,102,.25)}
+.bh .tk .tr{display:inline-flex;animation:tk 34s linear infinite}
+.bh .tk .gp{display:inline-flex;align-items:center;flex:none}
+.bh .tk span{padding:0 .55em}
+.bh .tk em{font-style:normal;color:#fff}
+.bh .tk .st{color:var(--rd);font-size:.8em}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* CHAPTER I */
+.bh .oc{--bgc:var(--cr);background:var(--cr)}
+.bh .oc .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:start}
+.bh .lead{margin:0;font:400 calc(var(--u)*2.05)/1.45 var(--bd)}
+.bh .lead+.lead{margin-top:1em}
+.bh .pq{position:relative;margin:0;padding:calc(var(--u)*3) calc(var(--u)*3) calc(var(--u)*2.6);background:var(--b);color:#fff;border-radius:calc(var(--u)*1.6);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 var(--nv);rotate:1.5deg}
+.bh .pq p{margin:0;font:400 calc(var(--u)*3)/1.12 var(--disp);color:var(--y)}
+.bh .pq p::before{content:"\201C";display:block;font-size:2em;line-height:.6;color:#fff}
+.bh .pq cite{display:block;margin-top:1.1em;font:600 calc(var(--u)*1.15)/1.3 var(--lab);font-style:normal;letter-spacing:.03em}
+.bh .rail-h{display:flex;justify-content:space-between;align-items:center;gap:1em;margin:calc(var(--u)*5.5) 0 calc(var(--u)*1.8);font:600 calc(var(--u)*1.25)/1 var(--lab)}
+.bh .rail-h .nb{display:flex;gap:.5em}
+.bh .rail-h button{width:2.6em;height:2.6em;border-radius:50%;background:var(--y);border:calc(var(--u)*.2) solid var(--nv);box-shadow:0 .2em 0 var(--nv);font:600 calc(var(--u)*1.3)/1 var(--lab);color:var(--nv)}
+.bh .rail-h button:active{transform:translateY(.15em);box-shadow:0 .05em 0 var(--nv)}
+.bh .rail{display:flex;gap:calc(var(--u)*2.2);overflow-x:auto;scroll-snap-type:x mandatory;padding:calc(var(--u)*1) calc(var(--u)*.4) calc(var(--u)*2.4);margin:0 calc(var(--u)*-.4);scrollbar-width:none;cursor:grab}
+.bh .rail::-webkit-scrollbar{display:none}
+.bh .cap{flex:0 0 calc(var(--u)*25);scroll-snap-align:start;position:relative;background:var(--y);padding:calc(var(--u)*2.6) calc(var(--u)*2.4) calc(var(--u)*2.4);border-radius:calc(var(--u)*.6);box-shadow:0 calc(var(--u)*.6) 0 rgba(11,36,102,.18);--zz:calc(var(--u)*1.1)}
+.bh .cap::before,.bh .cap::after{content:"";position:absolute;top:0;bottom:0;width:var(--zz);background:var(--y)}
+.bh .cap::before{left:calc(var(--zz)*-1 + 1px);-webkit-mask:conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% calc(var(--u)*1.6);mask:conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% calc(var(--u)*1.6)}
+.bh .cap::after{right:calc(var(--zz)*-1 + 1px);-webkit-mask:conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% calc(var(--u)*1.6);mask:conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% calc(var(--u)*1.6)}
+.bh .cap:nth-child(even){background:var(--sk);color:#fff}.bh .cap:nth-child(even)::before,.bh .cap:nth-child(even)::after{background:var(--sk)}
+.bh .cap .yr{display:block;font:400 calc(var(--u)*4)/1 var(--disp);color:var(--b)}
+.bh .cap:nth-child(even) .yr{color:var(--y);text-shadow:0 .05em 0 var(--nv)}
+.bh .cap h3{margin:.6em 0 .35em;font:700 calc(var(--u)*1.35)/1.2 var(--lab);letter-spacing:.02em}
+.bh .cap p{margin:0;font:400 calc(var(--u)*1.45)/1.4 var(--bd)}
+.bh .cap:last-child{background:var(--rd);color:#fff}.bh .cap:last-child::before,.bh .cap:last-child::after{background:var(--rd)}
+.bh .cap:last-child .yr{color:var(--y);text-shadow:0 .05em 0 var(--ch)}
+
+/* CHAPTER II */
+.bh .wp{--bgc:var(--b);background:var(--b);color:#fff}
+.bh .wp .grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:calc(var(--u)*4.5);align-items:center}
+.bh .tabs{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.9);margin-bottom:calc(var(--u)*2.6)}
+.bh .tab{padding:.7em 1.3em .75em;border-radius:99px;border:calc(var(--u)*.2) solid #fff;font:600 calc(var(--u)*1.25)/1 var(--lab);color:#fff;transition:background .2s,color .2s,transform .15s}
+.bh .tab[aria-selected=true]{background:var(--y);color:var(--nv);border-color:var(--y);box-shadow:0 .22em 0 var(--nv)}
+.bh .tab:hover{transform:translateY(-.08em)}
+.bh .pk{position:relative;display:grid;place-items:center;min-height:calc(var(--u)*34);background:radial-gradient(closest-side,rgba(255,255,255,.22),#0000 72%)}
+.bh .pk img{grid-area:1/1;width:100%;max-height:calc(var(--u)*34);object-fit:contain;filter:drop-shadow(0 calc(var(--u)*1.2) calc(var(--u)*1.2) rgba(4,15,60,.45));opacity:0;transform:scale(.7) rotate(-8deg);transition:opacity .25s,transform .6s cubic-bezier(.3,1.6,.5,1);pointer-events:none}
+.bh .pk img.bag{max-width:78%}
+.bh .pk img.on{opacity:1;transform:rotate(var(--r,-3deg))}
+.bh .pkt h3{margin:0;font:400 calc(var(--u)*3.4)/1.02 var(--disp);color:var(--y)}
+.bh .pkt .who{display:inline-block;margin:calc(var(--u)*1.2) 0 0;padding:.45em .9em .5em;border-radius:99px;background:#fff;color:var(--b);font:700 calc(var(--u)*1.1)/1 var(--lab);letter-spacing:.05em}
+.bh .pkt p{margin:calc(var(--u)*1.4) 0 0;font:400 calc(var(--u)*1.7)/1.45 var(--bd)}
+.bh .note{margin:calc(var(--u)*4) 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}
+.bh .note div{border-top:calc(var(--u)*.25) solid var(--y);padding-top:calc(var(--u)*1.2)}
+.bh .note b{display:block;font:400 calc(var(--u)*2.1)/1.05 var(--disp);color:var(--y)}
+.bh .note span{display:block;margin-top:.5em;font:500 calc(var(--u)*1.3)/1.4 var(--lab)}
+
+/* CHAPTER III */
+.bh .sw{--bgc:var(--y);background:var(--y)}
+.bh .how{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.2);margin:0 0 calc(var(--u)*3.4);padding:0;list-style:none;counter-reset:s}
+.bh .how li{counter-increment:s;display:flex;align-items:center;gap:.7em;padding:.6em 1.2em .65em .65em;border-radius:99px;background:#fff;border:calc(var(--u)*.2) solid var(--nv);font:600 calc(var(--u)*1.3)/1.15 var(--lab)}
+.bh .how li::before{content:counter(s);display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--b);color:#fff;font:400 1em/1 var(--disp)}
+.bh .pzg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.8)}
+.bh .pz{position:relative;aspect-ratio:3/4;border-radius:calc(var(--u)*1);text-align:center;perspective:800px}
+.bh .pz .pr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*1);padding:calc(var(--u)*1.4) calc(var(--u)*1);border-radius:inherit;background:#fff;border:calc(var(--u)*.22) solid var(--nv);box-shadow:0 calc(var(--u)*.45) 0 var(--nv)}
+.bh .pz .pr img{height:62%;width:auto;max-width:92%;object-fit:contain;transform:scale(.4);opacity:0;transition:transform .6s .12s cubic-bezier(.3,1.7,.5,1),opacity .2s .12s}
+.bh .pz .pr b{font:700 calc(var(--u)*1.12)/1.2 var(--lab);color:var(--nv);opacity:0;transition:opacity .3s .3s}
+.bh .pz.op .pr img{transform:none;opacity:1}
+.bh .pz.op .pr b{opacity:1}
+.bh .pz .wt,.bh .pz .wb{position:absolute;left:0;right:0;background:linear-gradient(100deg,#FFF6B8 0 8%,#FFE500 22% 60%,#F5D600 78%,#FFF1A0);border:calc(var(--u)*.22) solid var(--nv);overflow:hidden;transition:transform .7s cubic-bezier(.5,-0.2,.6,1),opacity .5s .2s}
+.bh .pz .wt{top:0;height:30%;border-bottom:0;border-radius:calc(var(--u)*1) calc(var(--u)*1) 0 0;transform-origin:8% 100%;clip-path:polygon(0 0,100% 0,100% 100%,90% 86%,80% 100%,70% 86%,60% 100%,50% 86%,40% 100%,30% 86%,20% 100%,10% 86%,0 100%)}
+.bh .pz .wb{top:calc(30% - 1px);bottom:0;border-top:0;border-radius:0 0 calc(var(--u)*1) calc(var(--u)*1);box-shadow:0 calc(var(--u)*.45) 0 var(--nv);clip-path:polygon(0 14%,10% 0,20% 14%,30% 0,40% 14%,50% 0,60% 14%,70% 0,80% 14%,90% 0,100% 14%,100% 120%,0 120%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*.6);padding-top:calc(var(--u)*1)}
+.bh .pz .wt::after{content:"Tear Here";position:absolute;left:0;right:0;bottom:22%;font:700 calc(var(--u)*.85)/1 var(--lab);letter-spacing:.2em;text-transform:uppercase;color:var(--b);opacity:.75}
+.bh .pz .wb .mini{width:46%;aspect-ratio:.84;background:var(--b);clip-path:polygon(0 0,100% 0,100% 74%,50% 100%,0 74%);display:grid;place-items:center;padding-bottom:18%;color:#fff;font:400 calc(var(--u)*2.2)/1 var(--disp)}
+.bh .pz .wb .tap{font:700 calc(var(--u)*1)/1 var(--lab);letter-spacing:.14em;text-transform:uppercase;color:var(--nv)}
+.bh .pz:not(.op):hover .wt{transform:rotate(-6deg)}
+.bh .pz.op .wt{transform:translate(-30%,-140%) rotate(-38deg);opacity:0}
+.bh .pz.op .wb{transform:translateY(115%) rotate(4deg);opacity:0}
+.bh .pz.gp .pr{background:var(--rd);border-color:var(--ch);box-shadow:0 calc(var(--u)*.45) 0 var(--ch)}
+.bh .pz.gp .pr .big{font:400 calc(var(--u)*4.4)/.9 var(--disp);color:var(--y);text-shadow:0 .05em 0 var(--ch),0 .1em 0 var(--ch);transform:scale(.3);opacity:0;transition:transform .6s .12s cubic-bezier(.3,1.7,.5,1),opacity .2s .12s}
+.bh .pz.gp .pr b{color:#fff}
+.bh .pz.gp.op .pr .big{transform:rotate(-6deg);opacity:1}
+.bh .pz.gp .wb .mini{background:var(--rd)}
+.bh .swf{display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*2);flex-wrap:wrap;margin-top:calc(var(--u)*3)}
+.bh .oa{display:inline-flex;align-items:center;gap:.6em;padding:.8em 1.6em .85em;border-radius:99px;background:var(--b);color:#fff;border:calc(var(--u)*.22) solid var(--nv);box-shadow:0 .26em 0 var(--nv);font:600 calc(var(--u)*1.3)/1 var(--lab)}
+.bh .oa:active{transform:translateY(.2em);box-shadow:0 .06em 0 var(--nv)}
+.bh .cnt{font:600 calc(var(--u)*1.3)/1 var(--lab)}
+.bh .fine{margin:calc(var(--u)*2.6) 0 0;font:500 calc(var(--u)*1)/1.5 var(--lab);opacity:.8;max-width:70em}
+
+/* CHAPTER IV */
+.bh .fd{--bgc:var(--sk);background:var(--sk);color:#fff}
+.bh .fd .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,1.25fr);gap:calc(var(--u)*3);align-items:start}
+.bh .ph{position:relative;background:var(--nv);border-radius:calc(var(--u)*2.6);padding:calc(var(--u)*.9);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 rgba(11,36,102,.35)}
+.bh .ph:nth-child(1){--rr:-3deg}.bh .ph:nth-child(2){--rr:3deg}
+.bh .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--u)*1.8);background:var(--y)}
+.bh .ph .stat{display:flex;gap:.5em;flex-wrap:wrap;padding:calc(var(--u)*1) calc(var(--u)*.6) calc(var(--u)*.4)}
+.bh .ph .stat span{padding:.45em .85em .5em;border-radius:99px;background:var(--y);color:var(--nv);font:700 calc(var(--u)*1.05)/1 var(--lab)}
+.bh .ph .stat span+span{background:#fff}
+.bh .ph p{margin:0;padding:calc(var(--u)*.6) calc(var(--u)*.7) calc(var(--u)*.9);font:400 calc(var(--u)*1.3)/1.4 var(--bd);color:#E6EEFF}
+.bh .fdc .lead{color:#fff}
+.bh .bnr{margin-top:calc(var(--u)*2.8);border-radius:calc(var(--u)*1.4);overflow:hidden;border:calc(var(--u)*.25) solid var(--nv);box-shadow:calc(var(--u)*.7) calc(var(--u)*.7) 0 rgba(11,36,102,.35);rotate:-1.5deg}
+.bh .bnr img{width:100%}
+
+/* OUTRO */
+.bh .out{--bgc:var(--nv);background:var(--nv);color:#fff;text-align:center;padding-bottom:calc(var(--sp)*1.2);overflow:hidden;overflow:clip}
+.bh .out .big{margin:0 auto;font:400 calc(var(--u)*7.4)/.98 var(--disp);max-width:12em}
+.bh .out .big span{display:block}
+.bh .out .snp{width:min(100%,calc(var(--u)*44));margin:calc(var(--u)*3.5) auto 0;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*1.4) rgba(0,0,0,.45));animation:fl 4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(calc(var(--u)*-1)) rotate(1deg)}}
+.bh .ft{background:var(--y);padding:calc(var(--u)*4.5) var(--g);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*1.5);flex-wrap:wrap}
+.bh .bk{display:inline-flex;align-items:center;gap:.6em;padding:.8em 1.7em .85em;border-radius:99px;background:var(--b);color:#fff;border:calc(var(--u)*.25) solid var(--nv);box-shadow:0 .28em 0 var(--nv);font:600 1rem/1 var(--lab);text-decoration:none;transition:transform .15s,box-shadow .15s,color .2s}
+.bh .bk.alt{background:#fff;color:var(--nv)}
+.bh .bk:hover{transform:translateY(-.1em);color:var(--y)}
+.bh .bk.alt:hover{color:var(--rd)}
+.bh .bk:active{transform:translateY(.24em);box-shadow:0 .04em 0 var(--nv)}
+.bh .bk span{display:inline-block;transition:transform .2s}
+.bh .bk:hover span{transform:translateX(-.25em)}
+.bh .bk.alt:hover span{transform:translateX(.25em)}
+
+@media (max-width:1000px){
+.bh{--u:2.1vw;--g:1.75rem;--sp:calc(var(--u)*9)}
+.bh .hero{grid-template-columns:1fr;min-height:0;padding-top:calc(var(--u)*7)}
+.bh .stage{min-height:0;margin-top:calc(var(--u)*2)}
+.bh .oc .grid,.bh .wp .grid{grid-template-columns:1fr}
+.bh .pzg{grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.2)}
+.bh .pz .pr b{font-size:calc(var(--u)*.82)}
+.bh .pz .wb .tap{font-size:calc(var(--u)*.75)}
+.bh .pz.gp .pr .big{font-size:calc(var(--u)*3.2)}
+.bh .snap{max-width:calc(var(--u)*38)}
+.bh .shield{top:calc(var(--u)*-2.5);left:calc(50% - var(--u)*21)}
+.bh .fd .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.bh .fdc{grid-column:1/-1;grid-row:1}
+}
+@media (max-width:700px){
+.bh{--u:3.15vw;--g:1.25rem}
+.bh .tt{font-size:min(15.5vw,calc(var(--u)*9))}
+.bh .h2{font-size:min(11.5vw,calc(var(--u)*6.4))}
+.bh .shield{width:calc(var(--u)*7.5);top:calc(var(--u)*-5);left:0}
+.bh .stage{margin-top:calc(var(--u)*7)}
+.bh .snap{max-width:88%}
+.bh .pz .pr b{font-size:calc(var(--u)*1.2)}
+.bh .pz .wb .tap{font-size:calc(var(--u)*1)}
+.bh .pz.gp .pr .big{font-size:calc(var(--u)*5)}
+.bh .pzg{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2)}
+.bh .note{grid-template-columns:1fr}
+.bh .fd .grid{grid-template-columns:1fr}
+.bh .ph{max-width:26rem}
+.bh .cap{flex-basis:78%}
+.bh .out .big{font-size:min(13vw,calc(var(--u)*9))}
+.bh .pq p{font-size:calc(var(--u)*3.6)}
+}
+@media (prefers-reduced-motion:reduce){
+.bh .tt .ch,.bh .out .snp{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="bh">
+
+<header class="hero crimp" style="--z:9">
+  <div class="cft" aria-hidden="true"></div>
+  <div class="hl">
+    <p class="lb rv"><i></i>Butterfinger x The Simpsons</p>
+    <h1 class="tt ext" aria-label="Happy 100th, Butterfinger"><span class="wd">Happy</span><span class="wd n100">100th,</span><span class="wd">Butterfinger</span></h1>
+    <p class="dek rv" style="--d:.15s">A century in, Butterfinger threw itself a birthday party and invited The Simpsons back onto the wrapper. Three limited-edition packs, one sweepstakes, and hundreds of instant wins hiding behind every bar.</p>
+  </div>
+  <div class="stage">
+    <div class="shield" aria-hidden="true">Celebrating<b>100</b><s>Years</s></div>
+    <button class="snap" type="button" aria-pressed="false" aria-label="Snap the birthday Butterfinger bar in half">
+      <span class="hang">
+        <img class="half l" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-bar-bart.webp?v=1" alt="" role="img" aria-label="Limited-edition Butterfinger bar wrapper with Bart Simpson and the Celebrating 100 Years shield">
+        <img class="half r" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-bar-bart.webp?v=1" alt="" aria-hidden="true">
+      </span>
+      <span class="bshadow" aria-hidden="true"></span>
+    </button>
+    <p class="hint" aria-hidden="true">Tap To Snap</p>
+  </div>
+</header>
+
+<div class="tk" aria-hidden="true"><div class="tr">
+  <div class="gp"><span>Crispety</span><span class="st">&#10022;</span><span>Crunchety</span><span class="st">&#10022;</span><span>Peanut-Buttery</span><span class="st">&#10022;</span><span><em>100 Years</em></span><span class="st">&#10022;</span><span>Back With The Simpsons</span><span class="st">&#10022;</span><span>Hundreds Of Instant Wins</span><span class="st">&#10022;</span></div>
+  <div class="gp"><span>Crispety</span><span class="st">&#10022;</span><span>Crunchety</span><span class="st">&#10022;</span><span>Peanut-Buttery</span><span class="st">&#10022;</span><span><em>100 Years</em></span><span class="st">&#10022;</span><span>Back With The Simpsons</span><span class="st">&#10022;</span><span>Hundreds Of Instant Wins</span><span class="st">&#10022;</span></div>
+</div></div>
+
+<section class="sc oc crimp" style="--z:8" aria-labelledby="h-oc">
+  <div class="hd">
+    <div>
+      <p class="lb rv"><i></i>Chapter I: The Occasion</p>
+      <h2 class="h2 ext rv" id="h-oc" style="--d:.08s">A Century Of Crunch Calls For Old Friends</h2>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="rv">
+      <p class="lead">Butterfinger turned 100 in 2024. For a bar that got its name from a sportscaster&rsquo;s word for players who couldn&rsquo;t hold onto the ball, the birthday needed a guest who could hold a room.</p>
+      <p class="lead">So the brand brought back The Simpsons, the family that fronted Butterfinger from the late 1980s into the early 2000s, and put them on limited-edition wrappers with confetti, balloons and a Celebrating 100 Years shield.</p>
+    </div>
+    <blockquote class="pq rv" style="--d:.15s;--rr:6deg">
+      <p>Evolve with modern culture to reach new audiences.</p>
+      <cite>Neal Finkler, VP of Marketing, Butterfinger, on honoring the brand&rsquo;s legacy at 100</cite>
+    </blockquote>
+  </div>
+  <div class="rail-h"><span>Time Capsule: Drag Through The Years</span><span class="nb"><button type="button" class="pv" aria-label="Previous">&larr;</button><button type="button" class="nx" aria-label="Next">&rarr;</button></span></div>
+  <div class="rail" tabindex="0" aria-label="Butterfinger timeline">
+    <article class="cap"><span class="yr">1920s</span><h3>The Drop</h3><p>Butterfinger debuts, with chartered planes dropping bars over cities across the country.</p></article>
+    <article class="cap"><span class="yr">The Name</span><h3>Fumble Proof</h3><p>Borrowed from a sportscaster&rsquo;s term for players who couldn&rsquo;t hold onto the ball.</p></article>
+    <article class="cap"><span class="yr">1934</span><h3>Screen Time</h3><p>The bar shows up on the big screen in a Shirley Temple movie.</p></article>
+    <article class="cap"><span class="yr">Late 1980s</span><h3>Enter Springfield</h3><p>The Simpsons start fronting Butterfinger, a run that carries into the early 2000s.</p></article>
+    <article class="cap"><span class="yr">2017</span><h3>Trick Or Treat</h3><p>Bart appears as a Butterfinger bar in the Treehouse of Horror XXVIII opening.</p></article>
+    <article class="cap"><span class="yr">2024</span><h3>100 Years</h3><p>The family is back on the wrapper for the Butterfinger birthday.</p></article>
+  </div>
+</section>
+
+<section class="sc wp crimp" style="--z:7" aria-labelledby="h-wp">
+  <div class="hd">
+    <div>
+      <p class="lb rv"><i></i>Chapter II: The Wrapper</p>
+      <h2 class="h2 exy rv" id="h-wp" style="--d:.08s">Three Packs, One Family</h2>
+    </div>
+    <p class="sub rv" style="--d:.15s">Limited-edition wrappers across the three formats on shelf, at US retailers nationwide while supplies lasted.</p>
+  </div>
+  <div class="grid">
+    <div class="rv">
+      <div class="tabs" role="tablist" aria-label="Pick a pack">
+        <button class="tab" role="tab" type="button" aria-selected="true" data-k="0">Regular Bar</button>
+        <button class="tab" role="tab" type="button" aria-selected="false" data-k="1">2 Piece Share Pack</button>
+        <button class="tab" role="tab" type="button" aria-selected="false" data-k="2">Fun Size Bag</button>
+      </div>
+      <div class="pk" role="tabpanel" aria-live="polite">
+        <img class="on" style="--r:-4deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-bar-bart.webp?v=1" alt="" role="img" aria-label="Regular size Butterfinger wrapper with Bart Simpson, arms up">
+        <img style="--r:3deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-share-pack.webp?v=1" alt="" role="img" aria-label="Two piece share pack wrapper with Homer Simpson cheering">
+        <img class="bag" style="--r:-2deg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-funsize.webp?v=1" alt="" role="img" aria-label="Fun size bag with the Simpson family in party clothes">
+      </div>
+    </div>
+    <div class="pkt rv" style="--d:.12s" aria-live="polite">
+      <h3 class="pt">Bart Takes The Bar</h3>
+      <span class="who pw">Starring Bart</span>
+      <p class="pd">The everyday bar goes full party: Bart mid-celebration, confetti and streamers across the yellow, and the Celebrating 100 Years shield where the eye lands first.</p>
+    </div>
+  </div>
+  <div class="note">
+    <div class="rv"><b>Regular Bar</b><span>Bart Simpson</span></div>
+    <div class="rv" style="--d:.08s"><b>2 Piece Share Pack</b><span>Homer Simpson</span></div>
+    <div class="rv" style="--d:.16s"><b>Fun Size Bag</b><span>The whole family</span></div>
+  </div>
+</section>
+
+<section class="sc sw crimp" style="--z:6" aria-labelledby="h-sw">
+  <div class="cft" aria-hidden="true"></div>
+  <div class="hd">
+    <div>
+      <p class="lb rv"><i></i>Chapter III: The Sweepstakes</p>
+      <h2 class="h2 ext rv" id="h-sw" style="--d:.08s">Every Bar Is A Ticket</h2>
+    </div>
+    <p class="sub rv" style="--d:.15s">The Butterfinger Birthday Sweepstakes turned the wrapper into the way in. Hundreds of instant win prizes, plus the chance to win $10K. Tear one open.</p>
+  </div>
+  <ol class="how rv">
+    <li>Buy a limited-edition bar</li>
+    <li>Find the 12-digit UPC on the back</li>
+    <li>Enter at ButterfingerBirthday.com</li>
+  </ol>
+  <div class="pzg">
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.00s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-arcade.webp?v=1" alt="" aria-hidden="true"><b>Simpsons Arcade Cabinet</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Simpsons Arcade Cabinet</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.06s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-funko.webp?v=1" alt="" aria-hidden="true"><b>Gamer Bart Funko Pop!</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Gamer Bart Funko Pop!</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.12s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-skateboard.webp?v=1" alt="" aria-hidden="true"><b>&ldquo;Bite Me&rdquo; Skateboard</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: &ldquo;Bite Me&rdquo; Skateboard</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.18s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-hat.webp?v=1" alt="" aria-hidden="true"><b>Butterfinger Snapback</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Butterfinger Snapback</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.24s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-chair.webp?v=1" alt="" aria-hidden="true"><b>Throne Of Butterfinger Bliss Chair</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Throne Of Butterfinger Bliss Chair</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.00s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-tumbler.webp?v=1" alt="" aria-hidden="true"><b>Nobody Lays A Finger Cup</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Nobody Lays A Finger Cup</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.06s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-backpack.webp?v=1" alt="" aria-hidden="true"><b>El Barto Backpack</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: El Barto Backpack</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.12s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-funko-astro.webp?v=1" alt="" aria-hidden="true"><b>Space Bart Funko Pop!</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: Space Bart Funko Pop!</span></button>
+    <button class="pz rv" type="button" aria-expanded="false" style="--d:0.18s"><span class="pr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-prize-bag.webp?v=1" alt="" aria-hidden="true"><b>&ldquo;A Place For All My Butterfingers&rdquo; Bag</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">100</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Instant win prize: &ldquo;A Place For All My Butterfingers&rdquo; Bag</span></button>
+    <button class="pz gp rv" type="button" aria-expanded="false" style="--d:.24s"><span class="pr"><span class="big">$10K</span><b>The Grand Prize Chance</b></span><span class="wt" aria-hidden="true"></span><span class="wb" aria-hidden="true"><span class="mini">$</span><span class="tap">Tear Open</span></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Grand prize: the chance to win $10K</span></button>
+  </div>
+  <div class="swf">
+    <button class="oa" type="button">Tear Them All Open</button>
+    <span class="cnt" aria-live="polite">0 of 10 opened</span>
+  </div>
+  <p class="fine">No purchase necessary. Open to legal residents of the 50 U.S. and D.C., 18 and older. Ran April 1 to August 30, 2024. Sponsor: Ferrero U.S.A., Inc. The Simpsons TM and &copy; 20th Television.</p>
+</section>
+
+<section class="sc fd crimp" style="--z:5" aria-labelledby="h-fd">
+  <div class="hd">
+    <div>
+      <p class="lb rv"><i></i>Chapter IV: In The Feed</p>
+      <h2 class="h2 exy rv" id="h-fd" style="--d:.08s">Two Colorways, Same Party</h2>
+    </div>
+  </div>
+  <div class="grid">
+    <figure class="ph rv" style="margin:0">
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-reel-y.gif?v=1" alt="" role="img" aria-label="Yellow sweepstakes spot: the birthday bar, then prizes cycling with the chance to win $10K">
+      <div class="stat"><span>1.6K views</span><span>45 reactions</span></div>
+      <p>&ldquo;It&rsquo;s not everyday you turn 100. It&rsquo;s time to celebrate! Enter our Butterfinger Birthday Sweepstakes with hundreds of instant win prizes and the chance to win $10K!&rdquo;</p>
+    </figure>
+    <figure class="ph rv" style="margin:0;--d:.1s">
+      <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-reel-b.gif?v=1" alt="" role="img" aria-label="Blue sweepstakes spot: Bart's hair rises into a pile of birthday bars, then prizes cycle">
+      <div class="stat"><span>31K views</span><span>169 reactions</span></div>
+      <p>&ldquo;We just turned 100 and it&rsquo;s time to celebrate! Enter our Butterfinger Birthday Sweepstakes with hundreds of instant win prizes and the chance to win $10K!&rdquo;</p>
+    </figure>
+    <div class="fdc rv" style="--d:.15s">
+      <p class="lead">Six seconds each, built for the scroll. One spot in wrapper yellow, one in sky blue, both landing on the same three beats: enter the sweepstakes, hundreds of instant wins, the chance to win $10K.</p>
+      <div class="bnr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-instant-win.webp?v=1" alt="" role="img" aria-label="Banner: Look who's back to celebrate our birthday with hundreds of instant win prizes"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sc out" style="--z:4" aria-label="Outro">
+  <p class="big exy rv"><span>Crispety.</span><span>Crunchety.</span><span>One Hundred.</span></p>
+  <img class="snp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-snap.webp?v=1" alt="" role="img" aria-label="A Butterfinger bar snapped in half, crumbs flying">
+</section>
+
+<footer class="ft">
+  <a class="bk" href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a>
+  <a class="bk alt" href="https://www.byninaaustin.com/never-ever">More Butterfinger: Never Ever <span aria-hidden="true">&rarr;</span></a>
+</footer>
+
+</div>
+<script>
+(function(){
+var D=document;
+function q(s,r){return (r||D).querySelector(s)}
+function qa(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s))}
+var root=q('.bh');if(!root)return;
+root.classList.add('js');
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* reveal */
+(function(){
+  var els=qa('.rv');
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if(!('IntersectionObserver' in window)){all();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){qa('.rv:not(.in)').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in')})},2500);
+})();
+
+/* title letters */
+(function(){
+  var n=0;
+  qa('.tt .wd').forEach(function(w){
+    var t=w.textContent;w.textContent='';
+    t.split('').forEach(function(c){var sp=window.document.createElement('span');sp.className='ch';sp.setAttribute('aria-hidden','true');sp.style.setProperty('--i',n++);sp.textContent=c;w.appendChild(sp)});
+  });
+  var chs=qa('.tt .ch');
+  function hop(c){c.classList.remove('hp');void c.offsetWidth;c.classList.add('hp')}
+  chs.forEach(function(c){
+    c.addEventListener('pointerenter',function(){hop(c)});
+    c.addEventListener('animationend',function(e){if(e.animationName==='hop')c.classList.remove('hp')});
+  });
+  if(!RM)chs.forEach(function(c,i){setTimeout(function(){hop(c)},900+i*60)});
+})();
+
+var mk=function(tag){return window.document.createElement(tag)};
+
+/* fit the title so its longest word never runs into the bar */
+(function(){
+  var tt=q('.tt'),hl=q('.hl');if(!tt||!hl)return;
+  function fit(){
+    tt.style.fontSize='';
+    var base=parseFloat(getComputedStyle(tt).fontSize),avail=hl.clientWidth,wmax=0;
+    qa('.tt .wd').forEach(function(w){wmax=Math.max(wmax,w.scrollWidth)});
+    if(wmax>avail)tt.style.fontSize=(base*avail/wmax*.98).toFixed(2)+'px';
+  }
+  fit();window.addEventListener('load',fit);window.addEventListener('resize',fit);
+  if(window.document.fonts&&window.document.fonts.ready)window.document.fonts.ready.then(fit);
+  setTimeout(fit,1200);
+})();
+
+/* hero: one-time spring drop, then tap to snap */
+(function(){
+  var hang=q('.hang'),btn=q('.snap'),stage=q('.stage');if(!hang||!btn)return;
+  if(!RM){
+    var S={y:-window.innerHeight*1.05,vy:0,a:-22,va:0},last=performance.now(),t0=last;
+    var step=function(t){
+      var dt=Math.min(.033,Math.max(.001,(t-last)/1000));last=t;
+      S.vy+=(-S.y*70-S.vy*12)*dt;S.y+=S.vy*dt;
+      S.va+=(-S.a*38-S.va*3.2)*dt;S.a+=S.va*dt;
+      hang.style.transform='translate3d(0,'+S.y.toFixed(1)+'px,0) rotate('+S.a.toFixed(2)+'deg)';
+      if(t-t0>600&&Math.abs(S.y)<.3&&Math.abs(S.vy)<.3&&Math.abs(S.a)<.05&&Math.abs(S.va)<.05){hang.style.transform='';return}
+      requestAnimationFrame(step);
+    };
+    hang.style.transform='translate3d(0,'+S.y+'px,0) rotate(-22deg)';
+    setTimeout(function(){last=t0=performance.now();requestAnimationFrame(step)},250);
+  }
+  var cols=['#C77A2A','#8A4A16','#E9B35A','#5A2A0E','#F2C46B'];
+  function burst(){
+    if(RM)return;
+    var br=btn.getBoundingClientRect(),sr=stage.getBoundingClientRect();
+    var cx=br.left-sr.left+br.width/2,cy=br.top-sr.top+br.height*.45;
+    for(var i=0;i<26;i++){
+      var c=mk('span');c.className='crumb';
+      var s=4+Math.random()*9;c.style.setProperty('--s',s+'px');c.style.setProperty('--c',cols[i%cols.length]);
+      c.style.left=cx+'px';c.style.top=cy+'px';stage.appendChild(c);
+      var ang=(-Math.PI/2)+(Math.random()-.5)*2.6,v=80+Math.random()*190,dx=Math.cos(ang)*v,dy=Math.sin(ang)*v;
+      var an=c.animate([{transform:'translate(-50%,-50%) rotate(0)',opacity:1},{transform:'translate('+(dx*.6)+'px,'+(dy*.7)+'px) rotate(200deg)',opacity:1,offset:.45},{transform:'translate('+dx+'px,'+(dy*.2+260)+'px) rotate(420deg)',opacity:0}],{duration:900+Math.random()*500,easing:'cubic-bezier(.2,.6,.4,1)'});
+      an.onfinish=(function(el){return function(){el.remove()}})(c);
+    }
+  }
+  btn.addEventListener('click',function(){
+    var on=!btn.classList.contains('on');btn.classList.toggle('on',on);btn.setAttribute('aria-pressed',on?'true':'false');
+    if(on)burst();
+  });
+})();
+
+/* time capsule rail */
+(function(){
+  var r=q('.rail');if(!r)return;
+  function by(d){var c=q('.cap',r);var w=c?c.getBoundingClientRect().width+parseFloat(getComputedStyle(r).columnGap||0):300;r.scrollBy({left:d*w,behavior:'smooth'})}
+  q('.pv').addEventListener('click',function(){by(-1)});
+  q('.nx').addEventListener('click',function(){by(1)});
+  var down=false,sx=0,sl=0,moved=false;
+  r.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=r.scrollLeft;r.style.scrollSnapType='none';r.style.cursor='grabbing'});
+  window.addEventListener('pointermove',function(e){if(!down)return;var d=e.clientX-sx;if(Math.abs(d)>3)moved=true;r.scrollLeft=sl-d});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;r.style.cursor='';r.style.scrollSnapType='';});
+})();
+
+/* pick a pack */
+(function(){
+  var P=[
+    {t:'Bart Takes The Bar',w:'Starring Bart',d:'The everyday bar goes full party: Bart mid-celebration, confetti and streamers across the yellow, and the Celebrating 100 Years shield where the eye lands first.'},
+    {t:'Homer Gets The Share Pack',w:'Starring Homer',d:'Two pieces, one Homer, arms in the air. The share pack carries the same balloon and confetti system with a 2 Piece Share Pack panel on the end.'},
+    {t:'The Whole Family Shows Up',w:'Starring The Simpsons',d:'Marge, Homer, Bart, Lisa and Maggie line up in party clothes on the fun size laydown bag, under a Fun Size script and a birthday sky of balloons.'}
+  ];
+  var tabs=qa('.wp .tab'),imgs=qa('.wp .pk img'),pt=q('.pt'),pw=q('.pw'),pd=q('.pd');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    var k=+b.getAttribute('data-k');
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
+    imgs.forEach(function(im,i){im.classList.toggle('on',i===k)});
+    pt.textContent=P[k].t;pw.textContent=P[k].w;pd.textContent=P[k].d;
+  })});
+})();
+
+/* instant win tiles */
+(function(){
+  var tiles=qa('.pz'),cnt=q('.cnt'),oa=q('.oa');
+  function upd(){var n=qa('.pz.op').length;cnt.textContent=n+' of '+tiles.length+' opened';oa.textContent=n===tiles.length?'Wrap Them Back Up':'Tear Them All Open'}
+  function set(t,on){t.classList.toggle('op',on);t.setAttribute('aria-expanded',on?'true':'false')}
+  tiles.forEach(function(t){t.addEventListener('click',function(){set(t,!t.classList.contains('op'));upd()})});
+  oa.addEventListener('click',function(){
+    var all=qa('.pz.op').length===tiles.length;
+    tiles.forEach(function(t,i){setTimeout(function(){set(t,!all)},RM?0:i*90)});
+    setTimeout(upd,RM?0:tiles.length*90+20);
+  });
+})();
+})();
+</script>
+</body></html>
