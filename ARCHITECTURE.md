@@ -1,6 +1,6 @@
 # byninaaustin.com Page Architecture
 
-Snapshot taken 2026-10-10 at commit 686f2a5 (main). Repo: github.com/manicpixiedigifairy/nina-site (public). Owner: Nina Austin, creative director and copywriter, Brooklyn.
+Snapshot taken 2026-10-10 at commit 686f2a5 (main). Updated 2026-10-13 at commit 6d86543 (Selected Works page added). Updated 2026-10-15 at commit df158c5 (Butterfinger 100 page added). Repo: github.com/manicpixiedigifairy/nina-site (public). Owner: Nina Austin, creative director and copywriter, Brooklyn.
 
 ## 1. System Overview
 
@@ -16,9 +16,9 @@ Header injection on Squarespace loads two shared scripts from `custom-js/` the s
 
 | Path | Role |
 | --- | --- |
-| `pages/*.html` | 33 standalone page files, one per page or variant. Source of truth for every live page. |
-| `loaders/*.loader.html` | 33 paste-ready Code Block loaders, generated, one per page file. |
-| `assets/` | 399 flat image files (webp, gif, jpg), about 235 MB, referenced by absolute raw GitHub URL with `?v=N` cache busters. |
+| `pages/*.html` | Standalone page files, one per page or variant. Source of truth for every live page. |
+| `loaders/*.loader.html` | Paste-ready Code Block loaders, generated, one per page file. |
+| `assets/` | Flat image files (webp, gif, jpg), referenced by absolute raw GitHub URL with `?v=N` cache busters. |
 | `loader.template.html`, `make_loaders.py` | Loader template and generator. Run `python3 make_loaders.py manicpixiedigifairy nina-site`. |
 | `custom-js/` | `project-pages.js` (hides Squarespace header and footer on project pages, edge to edge on phones), `sitewide-menu.js` (hamburger MENU and full-screen numbered overlay), their loaders, and `header-injection.html` (single Header Code Injection block that loads both). |
 | `custom-css/` | `footprint-ebay-header-footer.html`, page-level CSS injection that turns the header and footer white for the eBay Footprint page. |
@@ -38,6 +38,7 @@ Every page file follows the same rules so loaders and the Netlify build can trea
 - Fonts come from Google Fonts links in the page head.
 - Copy rules: no em or en dashes, no underlines, no byline or personal name on project pages, "case study" never appears in new project page copy, no placeholder text, no fabricated quotes, handles, credits, URLs or stats.
 - Reveals use IntersectionObserver with a 2.5 second fallback so content never stays hidden.
+- Loader regeneration rewrites every loader from the template. Keep `loaders/creative-dna-emboss.loader.html` and `loaders/ok-v-day.loader.html` (pink `#F9D6D2` host background) as hand-kept: run `git checkout` on both after `make_loaders.py`.
 
 ## 4. Design Families
 
@@ -46,12 +47,15 @@ Every page file follows the same rules so loaders and the Netlify build can trea
 | Landing | `.pg` (Commercials, Content) and `:host` (Experiential) | `commercials-vertical`, `content-vertical`, `experiential-vertical`, `about` | Black ground, Marcellus display, Source Serif body, Jost labels, gold `#F5D98A` accent. `--u:clamp(11px,1.1111vw,28px)`, gutter 5.5u (1.75rem at 1000px and below). Three-tab nav at x 88, y 72 at 1440, identical on all three landings. Content starts 2.5u (1.75rem at 1000px and below) below the nav on all three, measured at 1920, 1440, 1000 and 390. |
 | Campaign editorial (RR) | `.rr` | `pepsi-dig-in`, `restaurant-royalty`, `brunch-with-the-best`, `brunch-with-the-best-menu`, `shea-us-what-you-got-v2` and `-v2-site-fonts` | Container-query scale `--u:clamp(11px,1.1111cqw,28px)`, breakpoints 1000px (`2.1cqw`) and 700px (`3.15cqw`). Retro Haus extruded Unbounded 900 headlines, cream `#FBF1E3`, paper `#FFF8EE`, ink `#1F1209`, blue `#0B22E4`, orange `#F26A2E`, gold `#F7A81B`, Archivo body, Anton accents. HD blue doodle backgrounds `rr-doodle.webp` and `rr-doodle-mir.webp`. |
 | Menu variant | `.rr` | `brunch-with-the-best-menu` | Cream menu card with double border over the blue doodle, Playfair Display italic, courses and a receipt. |
-| Immersive project pages | `.pg` or bare | Air Max Day, Seize The Summer, Walmart x Beautycon (three variants), Dear Dad, Streamathon, Nike Come Thru, TH Monogram, Sponsored By Suave, Big New Yorker, OK V-Day, Butterfinger, Butterfinger 100 (`.bh`, Lilita One, Fredoka, Newsreader, wrapper yellow with crimped section edges), Silk Press, Shea (v1) | One-off aesthetics per campaign, built from the immersive case study recipe (tickers, sticker art, sideways scroll). |
+| Writing portfolio | `.sw` | `selected-works` | Black `#000` ground, system sans, Instrument Serif italic accents, orange `#F08A45` accent. Sticky top nav (Selected Works, Contact, My Thing Is), bio lead, Music and More filter toggles, article rows with cover thumbnail cards, right profile column above 1180px. CSS-timed loading block. Articles are static HTML; Contact switches by `data-view` (loader) or `:target` (bare file). |
+| Immersive project pages | `.pg` or bare | Air Max Day, Seize The Summer, Walmart x Beautycon (three variants), Dear Dad, Streamathon, Nike Come Thru, TH Monogram, Sponsored By Suave, Big New Yorker, OK V-Day, Butterfinger, Butterfinger 100, Silk Press, Shea (v1), HBCU Tour | One-off aesthetics per campaign, built from the immersive case study recipe (tickers, sticker art, sideways scroll). Butterfinger 100 uses root `.bh`: Lilita One display, Fredoka labels, Newsreader body, wrapper yellow `#FFE500`, logo blue `#1F4FB8`, sky `#2EA6EC`, navy `#0B2466`, red `#E5322D`, crimped wrapper edges between sections. |
 | Large embeds | none | `the-footprint`, `the-footprint-ebay`, `creative-dna-magazine`, `creative-dna-emboss` | Assets inlined in the file (the two Footprint files are about 4 MB each). |
 
 Shared RR section vocabulary: `.nav` (sticky pill tabs plus Back), `.hero` (h1.x, `.pan` photo pair, `.hl` headline), `.mq` marquee, `.sc` sections with `.sh` header (`.lb` numbered label, `h2.x.m`), `.gr` 12-column grid, `.rv` reveal, `.ft` footer card.
 
 Components built in the Brunch work and reusable: story viewer `.sv` (five-frame tap-through with progress bars), review rail `.rl` (scroll-snap cards, prev/next, progress bar) with Craving and City filter `.ff`, experience gallery `.xdg`, `hdrfix` (measures the Squarespace header and pads `.rr` so the nav is never covered).
+
+Components built in Butterfinger 100 and reusable: tap-to-snap hero object (one image split by two clip-paths, crumb burst), Pick a Pack tab switcher, Time Capsule scroll-snap rail with drag and prev/next, Tear Open instant win tiles (wrapper top and bottom fly apart to reveal a prize, plus an open-all button and counter), title fitter that shrinks the hero title until its longest word fits.
 
 ## 5. Site Map and Page Status
 
@@ -63,12 +67,13 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | --- | --- | --- | --- |
 | `/` | `home-gallery/index.html` | built | 3D Portfolio Gallery. Squarespace Home is still the old page (Notion row "Home (OLD)"). |
 | `/commercials` | `commercials-vertical.html` | built | Landing, 8 cards. |
-| `/content` | `content-vertical.html` | built | Landing, 9 cards plus Coming Soon. No Restaurant Royalty card yet. |
-| `/experiential` | `experiential-vertical.html` | built | Landing, Walmart x Beautycon featured plus 5-row accordion (OK V-Day, The '85 Shop, Father's Day Streamathon, Brunch With The Best, HBCU Tour). Nav matches the other two landings as of 686f2a5. `experiential-carousel.html` is the earlier carousel version. |
+| `/content` | `content-vertical.html` | built | Landing, 9 cards plus Coming Soon. No Restaurant Royalty or Butterfinger 100 card yet. |
+| `/experiential` | `experiential-vertical.html` | built | Landing, Walmart x Beautycon featured plus 5-row accordion (OK V-Day, HBCU Tour, Brunch With The Best, The '85 Shop, Father's Day Streamathon). Nav matches the other two landings as of 686f2a5. `experiential-carousel.html` is the earlier carousel version. |
 | `/about-me` | `about.html` | built | Hides Squarespace header via `data-global` style. Footer removed by project-pages.js. |
 | `/creative-dna` | `creative-dna-emboss.html` | built | Shown in nav as "Methodology". `creative-dna-magazine.html` is the earlier version. |
 | `/capabilities` | none | none | Live on Squarespace, listed in CORE in project-pages.js. |
 | `/portfolio-giveaway` | `giveaway/index.html` | built | Separate Netlify project. |
+| not assigned | `selected-works.html` | not mapped | Writing portfolio (Music and Culture journalism). Bio, 8 articles (Offset, Doechii, Andre 3000, Cyhi Da Prince, WPGM JayProb & Rocky Snyda, Wale, Dying Breed, Black Art Round Up #1), Contact with ninaaustincreative@gmail.com, My Thing Is link. Assets `sw-*.webp`. Tracker row "Selected Works" (Standalone, Editing). Loader Block not pasted yet. Six Substack cards link to the publication home until per-article URLs are added; WPGM and Offset link to their articles. |
 
 ### Content projects
 
@@ -85,8 +90,8 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/silkpressconference` | `silk-press-conference.html` | built |
 | `/air-max-day` | `air-max-day.html` | not in PAGES, not in SQUARESPACE_ONLY (gap) |
 | Restaurant Royalty | `pepsi-dig-in.html` and `restaurant-royalty.html` | not mapped, no Squarespace slug assigned yet |
-| not assigned | `butterfinger-100.html` | not mapped. Butterfinger 100th birthday: The Simpsons wrappers, Pick a Pack, Time Capsule rail, Tear Open instant win tiles. Tracker row "Butterfinger: 100 Years" (Content, Editing). Back goes to `/content`, second button to `/never-ever`. |
-| `/walmart-beautycon` | `walmart-beautycon-treatment.html` (source), mirrored into `walmart-beautycon-pink.html` so the pink loader serves it; `walmart-beautycon.html` and `-pop` are history | not mapped, tracker status Editing (Unpublished) |
+| `/walmart-beautycon` | `walmart-beautycon.html`, `-pop`, `-pink` | not mapped, tracker status Editing (Unpublished) |
+| Butterfinger 100 (no slug yet) | `butterfinger-100.html` | not mapped. 100th birthday with The Simpsons wrappers and the Birthday Sweepstakes. Tracker row "Butterfinger: 100 Years" (Content, Editing (Unpublished)). Back goes to `/content`, second button to `/never-ever`. Assets `bf100-*`. |
 
 ### Experiential projects
 
@@ -95,7 +100,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/fathers-day-streamathon` | `dear-dad-streamathon.html` | built |
 | `/brunch-with-the-best` | `brunch-with-the-best.html` and `brunch-with-the-best-menu.html` | redirects to Squarespace (not mapped to the repo files). Tracker: Editing (Unpublished). |
 | `/ok-v-day` | `ok-v-day.html` | redirects to Squarespace |
-| `/hbcu-tour`, `/the-85-shop` | none | redirect to Squarespace |
+| `/hbcu-tour`, `/the-85-shop` | `hbcu-tour.html` (plus `-bus`, `-bus-mature`, `-poster`), `the-85-shop.html` | redirect to Squarespace |
 
 ### Commercials
 
@@ -114,14 +119,14 @@ Navigation: landing tabs link Commercials, Content, Experiential. Project pages 
 
 ## 7. Assets
 
-Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `bf100` Butterfinger 100, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart, `dd` Dear Dad, `suave`, `silk`. Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
+Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `bf100` Butterfinger 100, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart, `dd` Dear Dad, `suave`, `silk`, `sw` Selected Works (8 article covers plus `sw-headshot.webp`). Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
 
 Rules: WebP for stills, real animated GIF kept as GIF (optimized with ffmpeg palettegen and gifsicle lossy), no deck-only or non-live assets, cache bust with `?v=N` after replacing a file. Assets can not be uploaded to Notion from the shell, so Nina adds new assets to the Notion Assets property by hand.
 
 ## 8. Build, Test and Release Workflow
 
 1. Edit or generate the page into `pages/<slug>.html`.
-2. Run `python3 make_loaders.py manicpixiedigifairy nina-site`, then `git checkout loaders/creative-dna-emboss.loader.html` (that loader is hand-kept).
+2. Run `python3 make_loaders.py manicpixiedigifairy nina-site`, then `git checkout loaders/creative-dna-emboss.loader.html loaders/ok-v-day.loader.html` (those loaders are hand-kept).
 3. Test through the loader in headless Chromium at 1440, 1000, 390 and 280 wide (no overflow, no console errors). Pages are tested through the shadow DOM loader, never as a bare file.
 4. Run the dash check (grep for em and en dashes) and confirm the count is 0.
 5. Commit with the Co-Authored-By and Claude-Session trailers, push to main (`git pull --rebase origin main` first if rejected), verify with `git ls-remote origin main`.
@@ -129,13 +134,15 @@ Rules: WebP for stills, real animated GIF kept as GIF (optimized with ffmpeg pal
 7. Update only the Notion tracker rows of pages changed.
 8. Tell Nina when a new Loader Block must be pasted. Existing pages never need a re-paste.
 
-Notion tracker: "Portfolio Pages: Edits and Assets" under her hub "Portfolio Web Design". Data source `collection://24c56467-cdad-4b70-abdc-c395956ea387`. Properties: Page, Section, Status, Loader Block Added, Live URL, Page #, Last updated, Latest update notes. 37 rows at this snapshot.
+Notion tracker: "Portfolio Pages: Edits and Assets" under her hub "Portfolio Web Design". Data source `collection://24c56467-cdad-4b70-abdc-c395956ea387`. Properties: Page, Section, Status, Loader Block Added, Live URL, Page #, Last updated, Latest update notes, Assets, Current HTML.
 
 ## 9. Known Gaps and Open Items
 
-- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty` and `butterfinger-100` (needs a Squarespace page and slug first). Streamathon loader unconfirmed.
-- Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best` and `ok-v-day` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
-- Content landing has no Restaurant Royalty card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
+- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty`, `selected-works` and `butterfinger-100` (needs a Squarespace page and slug first). Streamathon loader unconfirmed.
+- Butterfinger 100: Nina's role line not on the page yet (to add once she confirms). The $15,000 sweepstakes square was left out because the videos and banner say $10K.
+- Selected Works: needs a Squarespace slug; six Substack article cards need their per-article URLs; covers came from screenshots and uploads, so higher-resolution originals would sharpen them.
+- Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best`, `ok-v-day`, `selected-works` and `butterfinger-100` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
+- Content landing has no Restaurant Royalty or Butterfinger 100 card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
 - Experiential landing accordion "+" icon sits on its own line under each title (pre-existing). Landing copy still uses the phrase "case study" in the section heading and link text.
 - Brunch: confirm header overlap fix on the live Squarespace header, Super Bowl Weekend year ('23 or '24), "Battalion" spelling on the menu page, Nomad tags, MGM activation content, Vimeo link `https://vimeo.com/1234630272` placement, restaurant detail accuracy on the review rail (eat. may have closed, Blondie's location least certain).
 - Main Brunch page has no Hybrid Rollout section yet (only the menu page does).
