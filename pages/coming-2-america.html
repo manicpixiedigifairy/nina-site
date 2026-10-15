@@ -25,7 +25,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 
 /* label + headline */
 .zm .lb{display:inline-flex;align-items:center;gap:.9em;font:700 calc(var(--u)*.86)/1.2 var(--hd);letter-spacing:.24em;text-transform:uppercase;color:var(--cr)}
-.zm .lb::before{content:"";width:.78em;height:.78em;flex:none;transform:rotate(45deg);background:var(--gold);box-shadow:0 0 0 2px var(--g1),0 0 0 4px rgba(201,150,46,.35)}
 .zm .dk .lb{color:var(--g3)}
 .zm h2{font-size:calc(var(--u)*5.1);margin-top:calc(var(--u)*1.5);color:var(--vl2)}
 .zm h2 em{font-style:normal;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(122,84,24,.55)}
@@ -61,8 +60,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .pt{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .zm .pt.burst{z-index:7}
 .zm .hero .w{z-index:2}
-.zm .val{position:absolute;left:0;right:0;top:0;height:calc(var(--u)*4);z-index:6;pointer-events:none;background:radial-gradient(circle at 50% 0,#8F0E20 0,#B4182D 52%,#6A0915 69%,transparent 70.5%) 0 0/calc(var(--u)*9) calc(var(--u)*4.6) repeat-x;filter:drop-shadow(0 6px 8px rgba(40,6,4,.35))}
-.zm .val::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(var(--u)*1.3);background:linear-gradient(180deg,#5E0918,#A3172C);border-bottom:3px solid var(--g2)}
+.zm .val{position:absolute;left:0;right:0;top:0;height:calc(var(--u)*7.6);z-index:6;pointer-events:none;background:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-valance.webp?v=1) 50% 0/auto 100% repeat-x;filter:drop-shadow(0 8px 10px rgba(40,6,4,.35))}
 .zm .ct{position:absolute;top:0;bottom:0;width:52%;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 20%,transparent 80%,rgba(0,0,0,.35)),repeating-linear-gradient(90deg,#5C0713 0,#9B1022 calc(var(--u)*1.6),#C21F36 calc(var(--u)*2.4),#8A0F20 calc(var(--u)*3.6),#4E0610 calc(var(--u)*5));animation:zmOpen 1.9s cubic-bezier(.7,0,.2,1) .35s both}
 .zm .ct::after{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*1.4);background:repeating-linear-gradient(90deg,var(--g3) 0 2px,var(--g1) 2px 4px,transparent 4px 7px);border-top:4px solid var(--g2)}
 .zm .ct.l{left:0;--x:-90%;box-shadow:inset -14px 0 22px rgba(0,0,0,.35)}
@@ -99,7 +97,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .g12{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2)}
 .zm .d1 .tx{grid-column:1/8}
 .zm .d1 .bdy{margin-top:calc(var(--u)*2);color:rgba(251,245,232,.9);max-width:none}
-.zm .duties{grid-column:8/13;align-self:start;position:relative;padding:calc(var(--u)*2.6) calc(var(--u)*2.4) calc(var(--u)*2.4);background:linear-gradient(180deg,#FFF8E6,#F2E2BC);color:var(--ink);box-shadow:0 0 0 calc(var(--u)*.45) var(--g2),0 0 0 calc(var(--u)*.6) var(--g1),0 24px 50px rgba(0,0,0,.45)}
+.zm .duties{grid-column:8/13;align-self:start;position:relative;padding:calc(var(--u)*4) calc(var(--u)*2.4) calc(var(--u)*2.4);background:linear-gradient(180deg,#FFF8E6,#F2E2BC);color:var(--ink);box-shadow:0 0 0 calc(var(--u)*.45) var(--g2),0 0 0 calc(var(--u)*.6) var(--g1),0 24px 50px rgba(0,0,0,.45)}
 .zm .duties h3{font-size:calc(var(--u)*1.05);letter-spacing:.24em;text-transform:uppercase;color:var(--cr);text-align:center;font-weight:800}
 .zm .duties .scr{text-align:center;font-size:calc(var(--u)*2.5);margin:0 0 calc(var(--u)*1.2);color:var(--vl2)}
 .zm .duties li{display:flex;align-items:center;gap:.9em;padding:.72em 0;border-bottom:1px solid rgba(122,84,24,.3);font:700 calc(var(--u)*.98)/1.2 var(--hd);letter-spacing:.08em;text-transform:uppercase}
@@ -108,7 +106,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .seals{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*4.2);grid-column:1/13}
 .zm .seal{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.9)}
 .zm .seal b{display:grid;place-items:center;width:calc(var(--u)*6.8);height:calc(var(--u)*6.8);border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF4CC,#E2B95A 40%,#9C6D1F 75%,#6A4710);box-shadow:inset 0 0 0 calc(var(--u)*.35) rgba(255,244,204,.6),inset 0 0 0 calc(var(--u)*.7) rgba(90,58,12,.45),0 10px 22px rgba(0,0,0,.45);font:900 calc(var(--u)*2)/1 var(--dc);color:var(--vl2);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
-.zm .seal:hover b{transform:rotate(-10deg) scale(1.06)}
+.zm a.seal{cursor:pointer}
+.zm a.seal:hover b,.zm a.seal:focus-visible b{transform:rotate(-10deg) scale(1.08);box-shadow:inset 0 0 0 calc(var(--u)*.35) rgba(255,244,204,.6),inset 0 0 0 calc(var(--u)*.7) rgba(90,58,12,.45),0 0 0 calc(var(--u)*.3) rgba(241,209,132,.55),0 10px 26px rgba(241,209,132,.35)}
+.zm a.seal:hover span{color:var(--g4)}
+.zm a.seal span::after{content:" \2197";font-size:.9em}
 .zm .seal span{font:800 calc(var(--u)*.86)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--g3)}
 
 /* decree II */
@@ -343,6 +344,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm h1{white-space:normal;line-height:.92}
  .zm h1 .ln{display:block}
  .zm .h1w{display:block;margin-top:.9em}
+ .zm .val{height:58px}
  .zm .crown{left:50%;margin-left:-.3em;top:-.62em;width:.6em}
  .zm .crown svg{transform:rotate(-6deg)}
  .zm .scr{font-size:min(27px,7vw)}
@@ -454,8 +456,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
    </ul>
   </div>
   <div class="seals">
-   <div class="seal rv"><b>I</b><span>Instagram</span></div>
-   <div class="seal rv"><b>II</b><span>Twitter</span></div>
+   <a class="seal rv" href="https://www.instagram.com/zamundaroyals/" target="_blank" rel="noopener" aria-label="@ZamundaRoyals on Instagram"><b>I</b><span>Instagram</span></a>
+   <a class="seal rv" href="https://x.com/ZamundaRoyals" target="_blank" rel="noopener" aria-label="@ZamundaRoyals on Twitter"><b>II</b><span>Twitter</span></a>
    <div class="seal rv"><b>III</b><span>Facebook</span></div>
    <div class="seal rv"><b>IV</b><span>TikTok</span></div>
   </div>
@@ -470,8 +472,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
    <p class="lb">Decree II: The Insight</p>
    <h2>A Kingdom, <em>Not</em> A Release Date</h2>
    <div class="bdy">
-    <p class="lede">Coming to America has lived in Black culture for decades. Fans already knew the royal court, the barbershop and the Soul Glo jingle by heart.</p>
-    <p style="margin-top:1em">So we treated the IP as a living universe rather than a movie to be marketed. If Zamunda were real, it would have a royal feed, daily rituals, a fashion house and a palace that talks back. Every post was written from inside the kingdom.</p>
+    <p>We treated the IP as a living universe rather than a movie to be marketed. If Zamunda were real, it would have a royal feed, daily rituals, a fashion house and a palace that talks back. Every post was written from inside the kingdom.</p>
    </div>
    <blockquote class="ql"><p>&ldquo;Coming 2 America is a quintessential film in pop culture, as such, we needed a campaign at the intersection of marketing and culture.&rdquo;</p><cite>Ukonwa Ojo<span>Global Chief Marketing Officer, Prime Video and Amazon Studios</span></cite></blockquote>
   </div>
@@ -530,7 +531,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
   </figure>
   <div class="rail rv">
    <div class="rh"><p class="lb">From The Feed</p><div class="rb"><button type="button" class="rbt" data-d="-1" aria-label="Previous posts">&larr;</button><button type="button" class="rbt" data-d="1" aria-label="Next posts">&rarr;</button></div></div>
-   <div class="rt" id="zmrt"><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-zorbes.webp?v=1" alt="" role="img" aria-label="Zorbes magazine parody cover naming King Akeem Zamunda's wealthiest person" width="1000" height="1250" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-mirembe.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Mirembe as a breath of fresh air for the long lost royal heir" width="678" height="1158" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-lavelle.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Lavelle Junson as the long lost royal heir" width="683" height="1149" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-cleo-maurice.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet bringing the King of burgers to the kingdom, with Cleo and Maurice" width="699" height="1123" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-portrait.webp?v=1" alt="" role="img" aria-label="Queen Lisa standing beside King Akeem seated on his throne in the palace" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-bank-of-zamunda.webp?v=1" alt="" role="img" aria-label="Bank of Zamunda one hundred pound notes with King Akeem's portrait and the golden lion" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-varsity-briefcase.webp?v=1" alt="" role="img" aria-label="King Akeem's New York varsity jacket and royal chain laid in a briefcase of gold bars" width="1000" height="1251" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-sexual-chocolate.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet announcing a Sexual Chocolate giveaway from Queens legend Randy Watson" width="852" height="924" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-party.webp?v=1" alt="" role="img" aria-label="Queen Lisa and King Akeem smiling at a royal celebration" width="1000" height="1191" loading="lazy"></figure></div>
+   <div class="rt" id="zmrt"><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-zorbes.webp?v=1" alt="" role="img" aria-label="Zorbes magazine parody cover naming King Akeem Zamunda's wealthiest person" width="1000" height="1250" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-mirembe.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Mirembe as a breath of fresh air for the long lost royal heir" width="678" height="1030" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-lavelle.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet introducing Lavelle Junson as the long lost royal heir" width="683" height="1012" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-cleo-maurice.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet bringing the King of burgers to the kingdom, with Cleo and Maurice" width="699" height="1123" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-portrait.webp?v=1" alt="" role="img" aria-label="Queen Lisa standing beside King Akeem seated on his throne in the palace" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-bank-of-zamunda.webp?v=1" alt="" role="img" aria-label="Bank of Zamunda one hundred pound notes with King Akeem's portrait and the golden lion" width="1000" height="1000" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-varsity-briefcase.webp?v=1" alt="" role="img" aria-label="King Akeem's New York varsity jacket and royal chain laid in a briefcase of gold bars" width="1000" height="1251" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-tweet-sexual-chocolate.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals tweet announcing a Sexual Chocolate giveaway from Queens legend Randy Watson" width="852" height="862" loading="lazy"></figure><figure class="ri"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lisa-akeem-party.webp?v=1" alt="" role="img" aria-label="Queen Lisa and King Akeem smiling at a royal celebration" width="1000" height="1191" loading="lazy"></figure></div>
   </div>
  </div>
 </section>
@@ -711,7 +712,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     var imgs=[],src=(cv.getAttribute('data-src')||'').split(',').filter(Boolean);
     src.forEach(function(u){var im=new Image();im.crossOrigin='anonymous';im.onload=function(){imgs.push(im)};im.src=u});
     var size=function(){var b=cv.getBoundingClientRect();dpr=Math.min(2,W.devicePixelRatio||1);w=b.width;h=b.height;cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)};
-    var mk=function(init,b){var s=b?11+Math.random()*16:9+Math.random()*13;return{b:b,x:b?w*(.5+(Math.random()-.5)*(.3+Math.random()*.9)):Math.random()*w,y:b?-30-Math.random()*h*1.1:init?Math.random()*h:-20-Math.random()*h*.3,s:s,vy:b?120+Math.random()*170:18+Math.random()*26,sw:Math.random()*6.28,sws:.6+Math.random()*1.2,amp:14+Math.random()*30,r:Math.random()*6.28,vr:(Math.random()-.5)*1.6,f:Math.random()*6.28,vf:1+Math.random()*2.2,c:cols[(Math.random()*cols.length)|0],k:(Math.random()*5)|0}};
+    var mk=function(init,b){var s=b?11+Math.random()*16:9+Math.random()*13;return{b:b,x:b!==undefined&&b!==false?w*b:Math.random()*w,y:b?-30-Math.random()*h*1.1:init?Math.random()*h:-20-Math.random()*h*.3,s:s,vy:b?120+Math.random()*170:18+Math.random()*26,sw:Math.random()*6.28,sws:.6+Math.random()*1.2,amp:8+Math.random()*14,r:Math.random()*6.28,vr:(Math.random()-.5)*1.6,f:Math.random()*6.28,vf:1+Math.random()*2.2,c:cols[(Math.random()*cols.length)|0],k:(Math.random()*5)|0}};
     size();for(var i=0;i<n;i++)P.push(mk(true));
     var draw=function(p){
       ctx.save();ctx.translate(p.x+Math.sin(p.sw)*p.amp,p.y);ctx.rotate(p.r);ctx.scale(1,Math.max(.18,Math.abs(Math.cos(p.f))));
@@ -732,7 +733,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     };
     var start=function(){if(run)return;run=true;last=0;requestAnimationFrame(tick)};
     W.addEventListener('resize',size);W.addEventListener('load',size);
-    if(B){setTimeout(function(){size();for(var j=0;j<B;j++)P.push(mk(false,true));start()},450);return}
+    if(B){setTimeout(function(){size();var cols=W.innerWidth<700?7:14,rows=Math.ceil(B/cols);for(var j=0;j<B;j++){var c=j%cols,r=(j/cols)|0,q=mk(false,(c+.15+Math.random()*.7)/cols);q.y=-30-((r+Math.random())/rows)*h*1.1;P.push(q)}start()},450);return}
     if('IntersectionObserver' in W){new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)start()}).observe(cv)}else start();
   });
 
