@@ -58,7 +58,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 /* HERO */
 .zm .hero{position:relative;overflow:hidden;padding:calc(var(--u)*9.5) 0 calc(var(--u)*7);background:radial-gradient(60% 55% at 50% 30%,rgba(255,244,204,.95),transparent 70%),radial-gradient(120% 90% at 50% 120%,rgba(201,150,46,.35),transparent 60%),var(--iv)}
 .zm .pt{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-.zm .pt.burst{z-index:7}
+.zm .pt.burst{z-index:4}
 .zm .hero .w{z-index:2}
 .zm .val{position:absolute;left:0;right:0;top:0;height:calc(var(--u)*7.6);z-index:6;pointer-events:none;background:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-valance.webp?v=1) 50% 0/auto 100% repeat-x;filter:drop-shadow(0 8px 10px rgba(40,6,4,.35))}
 .zm .ct{position:absolute;top:0;bottom:0;width:52%;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.28),transparent 18%,transparent 82%,rgba(0,0,0,.35)),url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-velvet.webp?v=1) 0 0/calc(var(--u)*7) 100% repeat-x,#7A0E1E;animation:zmOpen 1.9s cubic-bezier(.7,0,.2,1) .35s both}
@@ -224,8 +224,18 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .card .gf{flex:none}
 .zm .card .in{aspect-ratio:16/10}
 .zm .card.sq .in{aspect-ratio:1/1}
-.zm .card .in.tw{aspect-ratio:auto;height:calc(var(--u)*27);background:#fff;overflow:hidden}
-.zm .card .in.tw iframe{display:block;width:100%;height:calc(var(--u)*40);border:0;background:#fff}
+.zm .card .in.xt{aspect-ratio:auto;background:#fff;color:#0F1419}
+.zm .xt a{display:block;padding:calc(var(--u)*1.2) calc(var(--u)*1.3) calc(var(--u)*1.3);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.zm .xh{display:flex;align-items:center;gap:.7em}
+.zm .card .xt img.xa{flex:none;width:calc(var(--u)*3)!important;height:calc(var(--u)*3)!important;min-width:36px;min-height:36px;border-radius:6px;object-fit:cover}
+.zm .xh b{display:block;font-size:calc(var(--u)*1);font-weight:700;line-height:1.2}
+.zm .xh span{display:block;font-size:calc(var(--u)*.9);color:#536471}
+.zm .xl{margin-left:auto;font-style:normal;font-size:calc(var(--u)*1.6);line-height:1}
+.zm .card .xt p.xr{margin-top:.8em!important;font-size:calc(var(--u)*.92);line-height:1.3;color:#536471}
+.zm .xr em{font-style:normal;color:#1D9BF0}
+.zm .card .xt p.xp{margin-top:.3em!important;font-size:calc(var(--u)*1.05);line-height:1.35;color:#0F1419}
+.zm .card .xt img.xg{display:block;width:100%!important;height:auto!important;margin-top:.8em;border-radius:12px}
+
 .zm .card.tp .in img{object-position:50% 12%}
 .zm .tv{position:absolute;right:calc(var(--u)*.9);bottom:calc(var(--u)*.9);width:34%;aspect-ratio:147/120;border-radius:12%/14%;overflow:hidden;box-shadow:0 0 0 3px #2A1A0A,0 0 0 6px var(--g2),0 8px 16px rgba(0,0,0,.5);z-index:2}
 .zm .tv img{width:100%;height:100%;object-fit:cover}
@@ -376,9 +386,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm h2{font-size:min(54px,8.6vw)}
  .zm .signs{grid-template-columns:repeat(4,1fr)}
  .zm .card{width:min(76vw,calc(var(--u)*34))}
- .zm .card .in.tw{height:330px}
- .zm .card .in.tw iframe{height:600px}
- .zm .card h3{font-size:22px}.zm .card p{font-size:15px}
+   .zm .card h3{font-size:22px}.zm .card p{font-size:15px}
 }
 @media (max-width:640px){
  .zm .h1w{font-size:min(84px,21vw)!important}
@@ -598,7 +606,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
     <article class="card sq"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-gif-soulglo.gif?v=1" alt="" role="img" aria-label="Soul Glo spot with talent posing in front of Soul Glo bottles on an orange set" width="320" height="320" loading="lazy"><span class="tv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-gif-soulglo-classic.gif?v=1" alt="" role="img" aria-label="The original Soul Glo commercial hair flip" width="147" height="120" loading="lazy"></span></div></figure><p class="ck">The Legacy</p><h3>Soul Glo, With A New Glow</h3><p>Soul Glo came to life with Bronner Brothers. Talent posed for posters and recreated soulful commercials, and fans and influencers found bottles of their own in the mail.</p></article>
     <article class="card sq tp"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-barbershop-box.webp?v=1" alt="" role="img" aria-label="Open Coming 2 America barbershop gift box with a gold framed letter, a pick comb and grooming products" width="1000" height="1248" loading="lazy"></div></figure><p class="ck">Influencer Gifting</p><h3>The Barbershop Box</h3><p>A gift box honoring the Black barbershop, where jokes are told, advice is shared and bonds are made, filled with curated products from Black owned businesses.</p></article>
     <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-rtr.webp?v=1" alt="" role="img" aria-label="The royal family of Zamunda posed around the throne, shared by Rent The Runway" width="1000" height="521" loading="lazy"></div></figure><p class="ck">Partnership</p><h3>What To Wear In Zamunda</h3><p>Rent The Runway sent fans a royal invite and a custom Coming 2 America discount code to dress like royalty for premiere night.</p></article>
-    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in tw"><iframe title="@ZamundaRoyals post to the Brooklyn Nets, February 28, 2021" src="https://platform.twitter.com/embed/Tweet.html?id=1365874425913081856&amp;theme=light&amp;dnt=true&amp;hideThread=true" loading="lazy" scrolling="no" frameborder="0" allowfullscreen></iframe></div></figure><p class="ck">Partnership</p><h3>The Brooklyn Nets Takeover</h3><p>Zamunda took over a Brooklyn Nets game and the team's social handles, bringing the kingdom to the home court.</p></article>
+    <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in xt"><a href="https://x.com/ZamundaRoyals/status/1365874425913081856" target="_blank" rel="noopener" aria-label="@ZamundaRoyals post to the Brooklyn Nets on X"><div class="xh"><img class="xa" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-lion.webp?v=1" alt="" aria-hidden="true"><div><b>Zamunda Royals</b><span>@ZamundaRoyals</span></div><i class="xl" aria-hidden="true">&#x1D54F;</i></div><p class="xr">Replying to <em>@BrooklynNets</em></p><p class="xp">We salute you all, until we meet again. March 5th, maybe?</p><img class="xg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-gif-nets.gif?v=1" alt="" role="img" aria-label="King Akeem turning with a knowing look" width="498" height="247" loading="lazy"></a></div></figure><p class="ck">Partnership</p><h3>The Brooklyn Nets Takeover</h3><p>Zamunda took over a Brooklyn Nets game and the team's social handles, bringing the kingdom to the home court.</p></article>
     <article class="card sq tp"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-hstry-hoodie.webp?v=1" alt="" role="img" aria-label="Nas in a gold HSTRY Unity and Pride hoodie with the Zamundan flag" width="1000" height="1250" loading="lazy"></div></figure><p class="ck">Partnership</p><h3>Zamundan Fashion By Nas</h3><p>Nas created a special line of Zamundan inspired pieces with his clothing company, HSTRY.</p></article>
     <article class="card"><figure class="gf"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-gif-tiktok.gif?v=1" alt="" role="img" aria-label="Fans dancing to I'm A King in TikTok videos for the Coming 2 America challenge" width="400" height="400" loading="lazy"></div></figure><p class="ck">Premiere Day</p><h3>The I'm A King Challenge</h3><p>A TikTok dance challenge set to "I'm A King" from the official soundtrack, choreographed by Fatima Robinson, had influencers and fans dancing in celebration of their inner royalty. It drew 5.6 billion global views.</p></article>
    </div>
@@ -877,32 +885,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
       }
     };
     render();
-  }
-
-  var twFit=function(){[].slice.call(root.querySelectorAll('.in.tw')).forEach(function(c){var w=c.clientWidth;if(!w)return;var top=w<430?282:254;c.style.height=Math.round(top+(w-50)*.494+8)+'px';var f=c.querySelector('iframe');f.style.height=Math.round(top+(w-50)*.494+260)+'px'})};
-  twFit();W.addEventListener('resize',twFit);W.addEventListener('load',twFit);setTimeout(twFit,800);
-  /* X embed: size to the post, then trim the date, likes and reply row */
-  W.addEventListener('message',function(e){
-    if(!/platform\.(twitter|x)\.com/.test(e.origin||''))return;
-    var d=e.data;try{if(typeof d==='string')d=JSON.parse(d)}catch(x){return}
-    var m=d&&d['twttr.embed'];if(!m||m.method!=='twttr.private.resize')return;
-    var h=m.params&&m.params[0]&&m.params[0].height;if(!h)return;
-    [].slice.call(root.querySelectorAll('.in.tw iframe')).forEach(function(f){if(f.contentWindow===e.source){f.style.height=h+'px';f.parentNode.style.height=Math.max(160,h-150)+'px'}});
-  });
-
-  /* then and now */
-  var WD=[{"k": "wedding", "r": "2/1", "o": "50% 40%", "a": "King Akeem and Lisa on their wedding day in 1988", "b": "Queen Lisa and King Akeem at a palace celebration in 2021"}, {"k": "duo", "r": "2/1", "o": "50% 30%", "a": "Semmi and Akeem in winter coats on the streets of Queens in 1988", "b": "Semmi and Akeem in royal brocade in the barbershop in 2021"}, {"k": "semmi", "r": "4/5", "o": "50% 20%", "a": "Semmi in a patterned overcoat and gold chain in 1988", "b": "Semmi in a navy brocade cape and hat in 2021"}, {"k": "jaffe", "r": "16/10", "o": "58% 30%", "a": "King Jaffe Joffer in a jeweled crown in 1988", "b": "King Jaffe Joffer in his jeweled crown in 2021"}, {"k": "randy", "r": "5/6", "o": "50% 15%", "a": "Randy Watson singing in 1988", "b": "Randy Watson singing with a gold microphone in 2021"}, {"k": "cleo", "r": "16/10", "o": "50% 25%", "a": "Cleo McDowell behind the counter at McDowell's in 1988", "b": "Cleo McDowell in a kente sash at McDowell's in 2021"}, {"k": "singers", "r": "2/1", "o": "50% 35%", "a": "The Sexual Chocolate backup singers in 1988", "b": "The backup singers back on stage with Randy Watson in 2021"}, {"k": "barbershop", "r": "2/1", "o": "50% 35%", "a": "The My-T-Sharp Barbershop regulars over checkers in 1988", "b": "The My-T-Sharp Barbershop regulars in 2021"}];
-  var ws=root.querySelector('#zmws');
-  if(ws){
-    var now=ws.querySelector('img.now'),thn=ws.querySelector('.thn img'),rg=ws.querySelector('input'),wb=$$('.wt');
-    var IMG={wedding:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-wedding-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-wedding-2021.webp?v=1'],duo:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-duo-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-duo-2021.webp?v=1'],semmi:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-semmi-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-semmi-2021.webp?v=1'],jaffe:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-jaffe-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-jaffe-2021.webp?v=1'],randy:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-randy-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-randy-2021.webp?v=1'],cleo:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-cleo-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-cleo-2021.webp?v=1'],singers:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-singers-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-singers-2021.webp?v=1'],barbershop:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-barbershop-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-barbershop-2021.webp?v=1']};
-    var setP=function(v){ws.style.setProperty('--p',v+'%')};
-    var wShow=function(i){var d=WD[i],u=IMG[d.k];thn.src=u[0];now.src=u[1];thn.setAttribute('aria-label',d.a);now.setAttribute('aria-label',d.b);thn.style.objectPosition=now.style.objectPosition=d.o;ws.style.aspectRatio=d.r;var rr=d.r.split('/');ws.parentNode.style.maxWidth='calc(72vh * '+(rr[0]/rr[1]).toFixed(3)+' + 3em)';rg.value=50;setP(50);wb.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')})};
-    wb.forEach(function(b){b.addEventListener('click',function(){wShow(+b.getAttribute('data-i'))})});
-    rg.addEventListener('input',function(){setP(rg.value)});
-    var pre=function(){Object.keys(IMG).forEach(function(k){IMG[k].forEach(function(u){var im=new Image();im.src=u})})};
-    if('IntersectionObserver' in W){var po=new IntersectionObserver(function(es){if(es[0].isIntersecting){pre();po.disconnect()}},{rootMargin:'600px'});po.observe(ws)}else pre();
-    wShow(0);
   }
 
   /* feed rail */
