@@ -46,7 +46,7 @@ Every page file follows the same rules so loaders and the Netlify build can trea
 | Landing | `.pg` (Commercials, Content) and `:host` (Experiential) | `commercials-vertical`, `content-vertical`, `experiential-vertical`, `about` | Black ground, Marcellus display, Source Serif body, Jost labels, gold `#F5D98A` accent. `--u:clamp(11px,1.1111vw,28px)`, gutter 5.5u (1.75rem at 1000px and below). Three-tab nav at x 88, y 72 at 1440, identical on all three landings. Content starts 2.5u (1.75rem at 1000px and below) below the nav on all three, measured at 1920, 1440, 1000 and 390. |
 | Campaign editorial (RR) | `.rr` | `pepsi-dig-in`, `restaurant-royalty`, `brunch-with-the-best`, `brunch-with-the-best-menu`, `shea-us-what-you-got-v2` and `-v2-site-fonts` | Container-query scale `--u:clamp(11px,1.1111cqw,28px)`, breakpoints 1000px (`2.1cqw`) and 700px (`3.15cqw`). Retro Haus extruded Unbounded 900 headlines, cream `#FBF1E3`, paper `#FFF8EE`, ink `#1F1209`, blue `#0B22E4`, orange `#F26A2E`, gold `#F7A81B`, Archivo body, Anton accents. HD blue doodle backgrounds `rr-doodle.webp` and `rr-doodle-mir.webp`. |
 | Menu variant | `.rr` | `brunch-with-the-best-menu` | Cream menu card with double border over the blue doodle, Playfair Display italic, courses and a receipt. |
-| Immersive project pages | `.pg` or bare | Air Max Day, Seize The Summer, Walmart x Beautycon (three variants), Dear Dad, Streamathon, Nike Come Thru, TH Monogram, Sponsored By Suave, Big New Yorker, OK V-Day, Butterfinger, Silk Press, Shea (v1) | One-off aesthetics per campaign, built from the immersive case study recipe (tickers, sticker art, sideways scroll). |
+| Immersive project pages | `.pg` or bare | Air Max Day, Seize The Summer, Walmart x Beautycon (three variants), Dear Dad, Streamathon, Nike Come Thru, TH Monogram, Sponsored By Suave, Big New Yorker, OK V-Day, Butterfinger, Butterfinger 100 (`.bh`, Lilita One, Fredoka, Newsreader, wrapper yellow with crimped section edges), Silk Press, Shea (v1) | One-off aesthetics per campaign, built from the immersive case study recipe (tickers, sticker art, sideways scroll). |
 | Large embeds | none | `the-footprint`, `the-footprint-ebay`, `creative-dna-magazine`, `creative-dna-emboss` | Assets inlined in the file (the two Footprint files are about 4 MB each). |
 
 Shared RR section vocabulary: `.nav` (sticky pill tabs plus Back), `.hero` (h1.x, `.pan` photo pair, `.hl` headline), `.mq` marquee, `.sc` sections with `.sh` header (`.lb` numbered label, `h2.x.m`), `.gr` 12-column grid, `.rv` reveal, `.ft` footer card.
@@ -85,6 +85,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/silkpressconference` | `silk-press-conference.html` | built |
 | `/air-max-day` | `air-max-day.html` | not in PAGES, not in SQUARESPACE_ONLY (gap) |
 | Restaurant Royalty | `pepsi-dig-in.html` and `restaurant-royalty.html` | not mapped, no Squarespace slug assigned yet |
+| not assigned | `butterfinger-100.html` | not mapped. Butterfinger 100th birthday: The Simpsons wrappers, Pick a Pack, Time Capsule rail, Tear Open instant win tiles. Tracker row "Butterfinger: 100 Years" (Content, Editing). Back goes to `/content`, second button to `/never-ever`. |
 | `/walmart-beautycon` | `walmart-beautycon-treatment.html` (source), mirrored into `walmart-beautycon-pink.html` so the pink loader serves it; `walmart-beautycon.html` and `-pop` are history | not mapped, tracker status Editing (Unpublished) |
 
 ### Experiential projects
@@ -113,7 +114,7 @@ Navigation: landing tabs link Commercials, Content, Experiential. Project pages 
 
 ## 7. Assets
 
-Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart, `dd` Dear Dad, `suave`, `silk`. Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
+Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `bf100` Butterfinger 100, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart, `dd` Dear Dad, `suave`, `silk`. Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
 
 Rules: WebP for stills, real animated GIF kept as GIF (optimized with ffmpeg palettegen and gifsicle lossy), no deck-only or non-live assets, cache bust with `?v=N` after replacing a file. Assets can not be uploaded to Notion from the shell, so Nina adds new assets to the Notion Assets property by hand.
 
@@ -132,7 +133,7 @@ Notion tracker: "Portfolio Pages: Edits and Assets" under her hub "Portfolio Web
 
 ## 9. Known Gaps and Open Items
 
-- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu` and `restaurant-royalty`. Streamathon loader unconfirmed.
+- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty` and `butterfinger-100` (needs a Squarespace page and slug first). Streamathon loader unconfirmed.
 - Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best` and `ok-v-day` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
 - Content landing has no Restaurant Royalty card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
 - Experiential landing accordion "+" icon sits on its own line under each title (pre-existing). Landing copy still uses the phrase "case study" in the section heading and link text.
