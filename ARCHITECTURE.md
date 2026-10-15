@@ -67,7 +67,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | --- | --- | --- | --- |
 | `/` | `home-gallery/index.html` | built | 3D Portfolio Gallery. Squarespace Home is still the old page (Notion row "Home (OLD)"). |
 | `/commercials` | `commercials-vertical.html` | built | Landing, 8 cards. |
-| `/content` | `content-vertical.html` | built | Landing, 9 cards plus Coming Soon. No Restaurant Royalty or Butterfinger 100 card yet. |
+| `/content` | `content-vertical.html` | built | Landing, project cards plus Coming Soon. No Restaurant Royalty card yet. Butterfinger 100 card is last before Coming Soon (GIF `bf100-card.gif`). |
 | `/experiential` | `experiential-vertical.html` | built | Landing, Walmart x Beautycon featured plus 5-row accordion (OK V-Day, HBCU Tour, Brunch With The Best, The '85 Shop, Father's Day Streamathon). Nav matches the other two landings as of 686f2a5. `experiential-carousel.html` is the earlier carousel version. |
 | `/about-me` | `about.html` | built | Hides Squarespace header via `data-global` style. Footer removed by project-pages.js. |
 | `/creative-dna` | `creative-dna-emboss.html` | built | Shown in nav as "Methodology". `creative-dna-magazine.html` is the earlier version. |
@@ -91,7 +91,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | `/air-max-day` | `air-max-day.html` | not in PAGES, not in SQUARESPACE_ONLY (gap) |
 | Restaurant Royalty | `pepsi-dig-in.html` and `restaurant-royalty.html` | not mapped, no Squarespace slug assigned yet |
 | `/walmart-beautycon` | `walmart-beautycon.html`, `-pop`, `-pink` | not mapped, tracker status Editing (Unpublished) |
-| Butterfinger 100 (no slug yet) | `butterfinger-100.html` | not mapped. 100th birthday with The Simpsons wrappers and the Birthday Sweepstakes. Tracker row "Butterfinger: 100 Years" (Content, Editing (Unpublished)). Back goes to `/content`, second button to `/never-ever`. Assets `bf100-*`. |
+| `/butterfinger-100th` | `butterfinger-100.html` | built (PAGES). 100th birthday with The Simpsons wrappers and the Birthday Sweepstakes. Tracker row "Butterfinger: 100 Years" (Content, Editing (Unpublished)). Back goes to `/content`, second button to `/never-ever`. Assets `bf100-*`. |
 
 ### Experiential projects
 
@@ -138,11 +138,11 @@ Notion tracker: "Portfolio Pages: Edits and Assets" under her hub "Portfolio Web
 
 ## 9. Known Gaps and Open Items
 
-- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty`, `selected-works` and `butterfinger-100` (needs a Squarespace page and slug first). Streamathon loader unconfirmed.
+- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty`, `selected-works` and `butterfinger-100` (Squarespace slug `/butterfinger-100th`). Streamathon loader unconfirmed.
 - Butterfinger 100: Nina's role line not on the page yet (to add once she confirms). The $15,000 sweepstakes square was left out because the videos and banner say $10K.
 - Selected Works: needs a Squarespace slug; six Substack article cards need their per-article URLs; covers came from screenshots and uploads, so higher-resolution originals would sharpen them.
-- Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best`, `ok-v-day`, `selected-works` and `butterfinger-100` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
-- Content landing has no Restaurant Royalty or Butterfinger 100 card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
+- Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best`, `ok-v-day`, and `selected-works` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
+- Content landing has no Restaurant Royalty card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
 - Experiential landing accordion "+" icon sits on its own line under each title (pre-existing). Landing copy still uses the phrase "case study" in the section heading and link text.
 - Brunch: confirm header overlap fix on the live Squarespace header, Super Bowl Weekend year ('23 or '24), "Battalion" spelling on the menu page, Nomad tags, MGM activation content, Vimeo link `https://vimeo.com/1234630272` placement, restaurant detail accuracy on the review rail (eat. may have closed, Blondie's location least certain).
 - Main Brunch page has no Hybrid Rollout section yet (only the menu page does).

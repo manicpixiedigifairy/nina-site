@@ -174,8 +174,15 @@ html,body{margin:0}
 .bh .out{--bgc:var(--nv);background:var(--nv);color:#fff;text-align:center;padding-bottom:calc(var(--sp)*1.2);overflow:hidden;overflow:clip}
 .bh .out .big{margin:0 auto;font:400 calc(var(--u)*7.4)/.98 var(--disp);max-width:12em}
 .bh .out .big span{display:block}
-.bh .out .snp{width:min(100%,calc(var(--u)*44));margin:calc(var(--u)*3.5) auto 0;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*1.4) rgba(0,0,0,.45));animation:fl 4s ease-in-out infinite}
-@keyframes fl{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(calc(var(--u)*-1)) rotate(1deg)}}
+.bh .osnap{position:relative;width:min(100%,calc(var(--u)*46));margin:calc(var(--u)*3.5) auto 0;filter:drop-shadow(0 calc(var(--u)*1.4) calc(var(--u)*1.4) rgba(0,0,0,.45))}
+.bh .osnap img{width:100%;will-change:transform}
+.bh .osnap .ol{clip-path:polygon(0 15%,42.2% 15%,42.2% 87%,0 87%);transform:translateX(3.6%) rotate(3deg);transform-origin:42% 55%}
+.bh .osnap .or{position:absolute;inset:0;clip-path:polygon(41.6% 15%,100% 15%,100% 87%,41.6% 87%);transform:translateX(-3.4%) rotate(-3deg);transform-origin:42% 55%}
+.bh .osnap.go .ol{animation:snl 4.6s cubic-bezier(.3,1.4,.5,1) infinite}
+.bh .osnap.go .or{animation:snr 4.6s cubic-bezier(.3,1.4,.5,1) infinite}
+@keyframes snl{0%,22%{transform:translateX(3.6%) rotate(3deg)}30%{transform:translateX(3.6%) rotate(5deg) scale(1.01)}34%{transform:translateX(3.6%) rotate(1deg) scale(1.01)}40%,84%{transform:translateX(-1%) translateY(1.5%) rotate(-4deg)}100%{transform:translateX(3.6%) rotate(3deg)}}
+@keyframes snr{0%,22%{transform:translateX(-3.4%) rotate(-3deg)}30%{transform:translateX(-3.4%) rotate(-5deg) scale(1.01)}34%{transform:translateX(-3.4%) rotate(-1deg) scale(1.01)}40%,84%{transform:translateX(1.2%) translateY(1.5%) rotate(4deg)}100%{transform:translateX(-3.4%) rotate(-3deg)}}
+.bh .out .crumb{top:auto}
 .bh .ft{background:var(--y);padding:calc(var(--u)*4.5) var(--g);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*1.5);flex-wrap:wrap}
 .bh .bk{display:inline-flex;align-items:center;gap:.6em;padding:.8em 1.7em .85em;border-radius:99px;background:var(--b);color:#fff;border:calc(var(--u)*.25) solid var(--nv);box-shadow:0 .28em 0 var(--nv);font:600 1rem/1 var(--lab);text-decoration:none;transition:transform .15s,box-shadow .15s,color .2s}
 .bh .bk.alt{background:#fff;color:var(--nv)}
@@ -219,7 +226,8 @@ html,body{margin:0}
 .bh .pq p{font-size:calc(var(--u)*3.6)}
 }
 @media (prefers-reduced-motion:reduce){
-.bh .tt .ch,.bh .out .snp{animation:none}
+.bh .tt .ch{animation:none}
+.bh .osnap .ol,.bh .osnap .or{transform:none!important;animation:none!important}
 .bh .shield{animation:sh 1s .9s both}
 .bh .bl,.bh .bl img{animation:none}
 }
@@ -376,7 +384,7 @@ html,body{margin:0}
 
 <section class="sc out" style="--z:4" aria-label="Outro">
   <p class="big exy rv"><span>Crispety.</span><span>Crunchety.</span><span>One Hundred.</span></p>
-  <img class="snp" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-snap.webp?v=1" alt="" role="img" aria-label="A Butterfinger bar snapped in half, crumbs flying">
+  <div class="osnap" role="img" aria-label="A Butterfinger bar snapping in half, crumbs flying"><img class="ol" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-snap.webp?v=1" alt=""><img class="or" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/bf100-snap.webp?v=1" alt=""></div>
 </section>
 
 <footer class="ft">
@@ -511,6 +519,25 @@ var mk=function(tag){return window.document.createElement(tag)};
     tiles.forEach(function(t,i){setTimeout(function(){set(t,!all)},RM?0:i*90)});
     setTimeout(upd,RM?0:tiles.length*90+20);
   });
+})();
+
+/* outro: bar snaps on a loop with a crumb burst each time */
+(function(){
+  var o=q('.osnap'),l=q('.osnap .ol');if(!o||RM)return;
+  var cols=['#C77A2A','#8A4A16','#E9B35A','#5A2A0E','#F2C46B'];
+  function burst(){
+    var w=o.clientWidth,h=o.clientHeight,cx=w*.42,cy=h*.5;
+    for(var i=0;i<22;i++){
+      var c=mk('span');c.className='crumb';var sz=3+Math.random()*8;
+      c.style.setProperty('--s',sz+'px');c.style.setProperty('--c',cols[i%cols.length]);c.style.left=cx+'px';c.style.top=cy+'px';o.appendChild(c);
+      var ang=(-Math.PI/2)+(Math.random()-.5)*2.8,v=60+Math.random()*170,dx=Math.cos(ang)*v,dy=Math.sin(ang)*v;
+      var an=c.animate([{transform:'translate(-50%,-50%)',opacity:1},{transform:'translate('+(dx*.6)+'px,'+(dy*.7)+'px) rotate(200deg)',opacity:1,offset:.45},{transform:'translate('+dx+'px,'+(dy*.2+220)+'px) rotate(420deg)',opacity:0}],{duration:1000+Math.random()*500,easing:'cubic-bezier(.2,.6,.4,1)'});
+      an.onfinish=(function(el){return function(){el.remove()}})(c);
+    }
+  }
+  var t=null;function sched(){clearTimeout(t);t=setTimeout(burst,4600*.36)}
+  l.addEventListener('animationstart',sched);l.addEventListener('animationiteration',sched);
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){o.classList.toggle('go',e.isIntersecting);if(!e.isIntersecting)clearTimeout(t)})},{threshold:.3}).observe(o)}else o.classList.add('go');
 })();
 })();
 </script>

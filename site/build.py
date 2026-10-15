@@ -19,6 +19,7 @@ PAGES = {
     'monogram': 'pages/th-monogram.html',
     'seize-the-summer': 'pages/seize-the-summer-v2.html',
     'never-ever': 'pages/butterfinger-never-ever.html',
+    'butterfinger-100th': 'pages/butterfinger-100.html',
     'fathers-day-streamathon': 'pages/dear-dad-streamathon.html',
     'sponsored-by-suave': 'pages/sponsored-by-suave.html',
     'big-new-yorker': 'pages/pizza-hut-big-new-yorker.html',
