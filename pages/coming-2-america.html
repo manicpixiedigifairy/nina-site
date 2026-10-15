@@ -191,6 +191,28 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 
 /* decree IV procession */
 .zm .d4{padding-bottom:0}
+.zm .dw .hd{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:end}
+.zm .dw .hd>div:first-child{grid-column:1/8}
+.zm .dw .hd .bdy{grid-column:8/13}
+.zm .wv{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:center;margin-top:calc(var(--u)*4.4)}
+.zm .wl{grid-column:1/5}
+.zm .wts{display:flex;flex-direction:column;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.4)}
+.zm .wt{text-align:left;padding:.95em 1.2em .85em!important;font:800 calc(var(--u)*.84)/1.2 var(--hd)!important;letter-spacing:.14em;text-transform:uppercase;color:var(--vl2)!important;border:1.5px solid rgba(122,84,24,.45)!important;background:#FFFBF0!important;transition:background .2s,transform .25s}
+.zm .wt:hover{transform:translateX(4px);background:#FFF0C8!important}
+.zm .wt[aria-pressed=true]{background:var(--vl2)!important;color:var(--g3)!important;border-color:var(--vl2)!important}
+.zm .wh{margin-top:calc(var(--u)*1.2);font-style:italic;font-size:calc(var(--u)*1);color:var(--g1)}
+.zm .ws{grid-column:5/13;width:100%;justify-self:center}
+.zm .ws .in{position:relative;aspect-ratio:2/1;user-select:none;touch-action:pan-y}
+.zm .ws .in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.zm .ws .thn{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.zm .ws .yr{position:absolute;top:calc(var(--u)*1);z-index:3;padding:.55em .9em .45em;font:800 calc(var(--u)*.8)/1 var(--hd);letter-spacing:.2em;color:var(--vl);background:var(--frame);box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.zm .ws .y1{left:calc(var(--u)*1)}.zm .ws .y2{right:calc(var(--u)*1)}
+.zm .ws .hdl{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;margin-left:-1.5px;background:var(--g3);z-index:3;box-shadow:0 0 10px rgba(0,0,0,.4);pointer-events:none}
+.zm .ws .hdl b{position:absolute;top:50%;left:50%;width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);min-width:36px;min-height:36px;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;background:var(--frame);color:var(--vl);font-size:calc(var(--u)*1.3);box-shadow:0 6px 14px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,244,204,.8)}
+.zm .ws input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
+.zm .sks{margin-top:calc(var(--u)*6)}
+.zm .sk{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:calc(var(--u)*3);margin-top:calc(var(--u)*2);align-items:center}
+.zm .sk .in{background:#fff}
 .zm .d4 .hd,.zm .d6x{display:grid;grid-template-columns:repeat(12,1fr);gap:calc(var(--u)*3.2);align-items:end}
 .zm .d4 .hd>div:first-child{grid-column:1/8}
 .zm .d4 .hd .bdy{grid-column:8/13;color:rgba(251,245,232,.88)}
@@ -201,8 +223,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 .zm .card .gf{flex:none}
 .zm .card .in{aspect-ratio:16/10}
 .zm .card.sq .in{aspect-ratio:1/1}
-.zm .card .in.tw{aspect-ratio:auto;height:calc(var(--u)*34);background:#fff;overflow:hidden}
-.zm .card .in.tw iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+.zm .card .in.tw{aspect-ratio:auto;height:calc(var(--u)*27);background:#fff;overflow:hidden}
+.zm .card .in.tw iframe{display:block;width:100%;height:calc(var(--u)*40);border:0;background:#fff}
 .zm .card.tp .in img{object-position:50% 12%}
 .zm .tv{position:absolute;right:calc(var(--u)*.9);bottom:calc(var(--u)*.9);width:34%;aspect-ratio:147/120;border-radius:12%/14%;overflow:hidden;box-shadow:0 0 0 3px #2A1A0A,0 0 0 6px var(--g2),0 8px 16px rgba(0,0,0,.5);z-index:2}
 .zm .tv img{width:100%;height:100%;object-fit:cover}
@@ -332,6 +354,12 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm .d6 .tx{position:static;margin-bottom:calc(var(--u)*4)}
  .zm .d8 .hd .gf{margin-top:calc(var(--u)*3);margin-bottom:0}
  .zm .stats{grid-template-columns:1fr 1fr}
+ .zm .dw .hd,.zm .wv{display:block}
+ .zm .dw .hd .bdy{margin-top:calc(var(--u)*3)}
+ .zm .wts{flex-direction:row;flex-wrap:wrap}
+ .zm .wt{flex:1 1 auto}
+ .zm .ws{margin-top:calc(var(--u)*3)}
+ .zm .sk{grid-template-columns:1fr;gap:calc(var(--u)*5)}
  .zm .d6 .hd{display:block}
  .zm .d6 .hd .bdy{margin-top:calc(var(--u)*3)}
  .zm .posts{grid-template-columns:1fr 1fr}
@@ -345,7 +373,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  .zm h2{font-size:min(54px,8.6vw)}
  .zm .signs{grid-template-columns:repeat(4,1fr)}
  .zm .card{width:min(76vw,calc(var(--u)*34))}
- .zm .card .in.tw{height:420px}
+ .zm .card .in.tw{height:330px}
+ .zm .card .in.tw iframe{height:600px}
  .zm .card h3{font-size:22px}.zm .card p{font-size:15px}
 }
 @media (max-width:640px){
@@ -546,11 +575,25 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 </section>
 <div class="trim" aria-hidden="true"></div>
 
+<section class="sec lt dw" id="wardrobe">
+ <div class="w">
+  <div class="hd">
+   <div class="rv"><p class="lb">Decree IV: The Royal Wardrobe</p><h2>Costume <em>Breakdowns</em> And Character Evolution</h2></div>
+   <div class="bdy rv"><p>We built on the legendary, award winning costume design buzz by highlighting character style moments within the world and recreations of fan favorites.</p><p>Ruth E. Carter designed the costumes of both Black Panther and Coming 2 America.</p></div>
+  </div>
+  <div class="wv rv">
+   <div class="wl"><p class="lb">Then And Now</p><div class="wts" role="group" aria-label="Choose a character"><button type="button" class="wt" data-i="0" aria-pressed="true">King Akeem And Queen Lisa</button><button type="button" class="wt" data-i="1" aria-pressed="false">Akeem And Semmi</button><button type="button" class="wt" data-i="2" aria-pressed="false">Semmi</button><button type="button" class="wt" data-i="3" aria-pressed="false">King Jaffe Joffer</button><button type="button" class="wt" data-i="4" aria-pressed="false">Randy Watson</button><button type="button" class="wt" data-i="5" aria-pressed="false">Cleo McDowell</button><button type="button" class="wt" data-i="6" aria-pressed="false">The Backup Singers</button><button type="button" class="wt" data-i="7" aria-pressed="false">My-T-Sharp Barbershop</button></div><p class="wh">Drag the slider to compare 1988 and 2021.</p></div>
+   <figure class="gf ws"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in" id="zmws"><img class="now" alt="" role="img"><div class="thn"><img alt="" role="img"></div><span class="yr y1">1988</span><span class="yr y2">2021</span><div class="hdl" aria-hidden="true"><b>&#x2194;&#xFE0E;</b></div><input type="range" min="0" max="100" value="50" aria-label="Compare 1988 and 2021"></div></figure>
+  </div>
+  <p class="lb sks rv">From Sketch To Screen</p>
+  <div class="sk"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in" style="aspect-ratio:2000/1333"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-sketch-akeem.webp?v=1" alt="" role="img" aria-label="Ruth E. Carter costume sketch beside King Akeem on screen" loading="lazy"></div><figcaption class="pl">King Akeem</figcaption></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in" style="aspect-ratio:2000/1607"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-sketch-mirembe.webp?v=1" alt="" role="img" aria-label="Ruth E. Carter costume sketch beside Mirembe on screen" loading="lazy"></div><figcaption class="pl">Mirembe</figcaption></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in" style="aspect-ratio:2000/1218"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-sketch-lavelle.webp?v=1" alt="" role="img" aria-label="Ruth E. Carter costume sketch beside Lavelle on screen" loading="lazy"></div><figcaption class="pl">Lavelle</figcaption></figure></div>
+ </div>
+</section>
 <section class="sec dk d4" id="procession">
  <div class="w">
   <div class="hd">
    <div class="rv">
-    <p class="lb">Decree IV: The Royal Procession</p>
+    <p class="lb">Decree V: The Royal Procession</p>
     <h2>Tentpoles And A <em>Daily</em> Drumbeat</h2>
    </div>
    <div class="bdy rv"><p>Between the everyday rituals, a viral dance challenge, partnerships with cultural icons and nostalgic giveaways gave the kingdom its big moments, each one built to be passed around, not just watched.</p></div>
@@ -579,7 +622,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 <section class="sec lt d5" id="fleet">
  <div class="w">
   <div class="hd">
-   <div class="rv"><p class="lb">Decree V: The Royal Fleet</p><h2>The Royal Family <em>Has Arrived</em></h2></div>
+   <div class="rv"><p class="lb">Decree VI: The Royal Fleet</p><h2>The Royal Family <em>Has Arrived</em></h2></div>
    <div class="bdy rv"><p>Wrapped Amazon delivery planes, trucks and vans traveled through key markets to announce the royal family's arrival, turning the everyday Amazon fleet into a royal procession on real runways, highways and front steps.</p></div>
   </div>
   <figure class="gf sl flag"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-flag.webp?v=1" alt="" role="img" aria-label="A giant Zamundan flag with a golden lion and a portrait of King Akeem hanging from a suspension bridge over a canyon" width="1800" height="1012" loading="lazy"></div><figcaption class="pl">The Zamundan Flag, Unfurled</figcaption></figure>
@@ -595,7 +638,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 <section class="sec dk d6" id="engagement">
  <div class="w">
   <div class="hd">
-   <div class="rv"><p class="lb">Decree VI: Royal Engagement</p><h2>No Citizen <em>Left</em> On Read</h2></div>
+   <div class="rv"><p class="lb">Decree VII: Royal Engagement</p><h2>No Citizen <em>Left</em> On Read</h2></div>
    <div class="bdy rv"><p>Round the clock community management kept the world of the royal family intact. Reactive and proactive, the palace prioritized high profile moments with celebrities and key influencers and answered its citizens in character.</p><p>Talent and influencers shared creative on their own channels and amplified owned messages. Scripted self shoot prompts let talent create assets from the safety of home, and social toolkits guided content creation across the court.</p></div>
   </div>
   <div class="posts"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-jessiewoo.webp?v=1" alt="" role="img" aria-label="Influencer post in a Zamunda inspired print gown in front of the Coming 2 America title screen" width="1000" height="1722" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-martin.webp?v=1" alt="" role="img" aria-label="Martin Lawrence post of the black and gold Coming 2 America gift boxes" width="1000" height="1511" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-brittanysky.webp?v=1" alt="" role="img" aria-label="Influencer post of a custom bomber jacket in a Coming 2 America box, tagged @ZamundaRoyals" width="1000" height="1594" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-influencer-danelle.webp?v=1" alt="" role="img" aria-label="Two influencers in crowns holding Coming 2 America boxes and premiere tickets" width="1000" height="1238" loading="lazy"></div></figure></div>
@@ -607,7 +650,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
  <div class="w g12">
   <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-watchparty-post.webp?v=1" alt="" role="img" aria-label="@ZamundaRoyals Instagram post announcing the Royal Watch Party on March 5, 2021, hosted by Dionne Warwick, framed in gold above scattered rose petals" width="1290" height="1457" loading="lazy"></div></figure>
   <div class="tx rv">
-   <p class="lb">Decree VII: The Coronation Night</p>
+   <p class="lb">Decree VIII: The Coronation Night</p>
    <h2 data-fit style="white-space:nowrap">#RoyalWatchParty</h2>
    <div class="bdy">
     <p>On premiere day, a virtual watch party made up for the feeling of a communal night at the theater and gave the premiere its own trending moment.</p>
@@ -623,7 +666,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 <section class="sec dk d8" id="proof">
  <div class="w">
   <div class="hd">
-   <div class="rv"><p class="lb">Decree VIII: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">Coming 2 America was the number one streamed movie of its opening weekend and posted the biggest opening weekend of any streaming movie in the previous 12 months, per Screen Engine/ASI. It was also Nielsen's number one streamed movie during premiere week.</p></div>
+   <div class="rv"><p class="lb">Decree IX: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">Coming 2 America was the number one streamed movie of its opening weekend and posted the biggest opening weekend of any streaming movie in the previous 12 months, per Screen Engine/ASI. It was also Nielsen's number one streamed movie during premiere week.</p></div>
    <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-number-one.webp?v=1" alt="" role="img" aria-label="Prime Video banner reading Number One Movie In America, Coming 2 America" width="960" height="450" loading="lazy"></div></figure>
   </div>
   <div class="press"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-thewrap.webp?v=1" alt="" role="img" aria-label="TheWrap headline: Coming 2 America draws most viewers for streaming film launch of the past year, ratings firm says" width="937" height="1171" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-variety.webp?v=1" alt="" role="img" aria-label="Variety headline: Coming 2 America hits No. 1 on Nielsen U.S. streaming rankings" width="1000" height="1250" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-deadline.webp?v=1" alt="" role="img" aria-label="Deadline headline: Coming 2 America gives Amazon Prime Video its first No. 1 finish on Nielsen weekly streaming chart" width="673" height="841" loading="lazy"></div></figure></div>
@@ -830,6 +873,30 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
       }
     };
     render();
+  }
+
+  /* X embed: size to the post, then trim the date, likes and reply row */
+  W.addEventListener('message',function(e){
+    if(!/platform\.(twitter|x)\.com/.test(e.origin||''))return;
+    var d=e.data;try{if(typeof d==='string')d=JSON.parse(d)}catch(x){return}
+    var m=d&&d['twttr.embed'];if(!m||m.method!=='twttr.private.resize')return;
+    var h=m.params&&m.params[0]&&m.params[0].height;if(!h)return;
+    [].slice.call(root.querySelectorAll('.in.tw iframe')).forEach(function(f){if(f.contentWindow===e.source){f.style.height=h+'px';f.parentNode.style.height=Math.max(160,h-168)+'px'}});
+  });
+
+  /* then and now */
+  var WD=[{"k": "wedding", "r": "2/1", "o": "50% 40%", "a": "King Akeem and Lisa on their wedding day in 1988", "b": "Queen Lisa and King Akeem at a palace celebration in 2021"}, {"k": "duo", "r": "2/1", "o": "50% 30%", "a": "Semmi and Akeem in winter coats on the streets of Queens in 1988", "b": "Semmi and Akeem in royal brocade in the barbershop in 2021"}, {"k": "semmi", "r": "4/5", "o": "50% 20%", "a": "Semmi in a patterned overcoat and gold chain in 1988", "b": "Semmi in a navy brocade cape and hat in 2021"}, {"k": "jaffe", "r": "16/10", "o": "58% 30%", "a": "King Jaffe Joffer in a jeweled crown in 1988", "b": "King Jaffe Joffer in his jeweled crown in 2021"}, {"k": "randy", "r": "5/6", "o": "50% 15%", "a": "Randy Watson singing in 1988", "b": "Randy Watson singing with a gold microphone in 2021"}, {"k": "cleo", "r": "16/10", "o": "50% 25%", "a": "Cleo McDowell behind the counter at McDowell's in 1988", "b": "Cleo McDowell in a kente sash at McDowell's in 2021"}, {"k": "singers", "r": "2/1", "o": "50% 35%", "a": "The Sexual Chocolate backup singers in 1988", "b": "The backup singers back on stage with Randy Watson in 2021"}, {"k": "barbershop", "r": "2/1", "o": "50% 35%", "a": "The My-T-Sharp Barbershop regulars over checkers in 1988", "b": "The My-T-Sharp Barbershop regulars in 2021"}];
+  var ws=root.querySelector('#zmws');
+  if(ws){
+    var now=ws.querySelector('img.now'),thn=ws.querySelector('.thn img'),rg=ws.querySelector('input'),wb=$$('.wt');
+    var IMG={wedding:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-wedding-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-wedding-2021.webp?v=1'],duo:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-duo-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-duo-2021.webp?v=1'],semmi:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-semmi-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-semmi-2021.webp?v=1'],jaffe:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-jaffe-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-jaffe-2021.webp?v=1'],randy:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-randy-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-randy-2021.webp?v=1'],cleo:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-cleo-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-cleo-2021.webp?v=1'],singers:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-singers-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-singers-2021.webp?v=1'],barbershop:['https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-barbershop-1988.webp?v=1','https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-ww-barbershop-2021.webp?v=1']};
+    var setP=function(v){ws.style.setProperty('--p',v+'%')};
+    var wShow=function(i){var d=WD[i],u=IMG[d.k];thn.src=u[0];now.src=u[1];thn.setAttribute('aria-label',d.a);now.setAttribute('aria-label',d.b);thn.style.objectPosition=now.style.objectPosition=d.o;ws.style.aspectRatio=d.r;var rr=d.r.split('/');ws.parentNode.style.maxWidth='calc(72vh * '+(rr[0]/rr[1]).toFixed(3)+' + 3em)';rg.value=50;setP(50);wb.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')})};
+    wb.forEach(function(b){b.addEventListener('click',function(){wShow(+b.getAttribute('data-i'))})});
+    rg.addEventListener('input',function(){setP(rg.value)});
+    var pre=function(){Object.keys(IMG).forEach(function(k){IMG[k].forEach(function(u){var im=new Image();im.src=u})})};
+    if('IntersectionObserver' in W){var po=new IntersectionObserver(function(es){if(es[0].isIntersecting){pre();po.disconnect()}},{rootMargin:'600px'});po.observe(ws)}else pre();
+    wShow(0);
   }
 
   /* feed rail */
