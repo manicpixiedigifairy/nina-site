@@ -81,7 +81,8 @@ html,body{margin:0;background:#050E1C}
 
 
 /* overview sign */
-.ob .pic{padding-top:calc(var(--u)*7)}
+.ob .sc.pic{padding-top:0}
+.ob #overview.sc{padding-bottom:calc(var(--u)*3.5)}
 .ob .sg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3.4fr);gap:calc(var(--u)*4);align-items:end}
 .ob .sg .ph{position:relative;border:calc(var(--u)*.24) solid var(--nv);box-shadow:calc(var(--u)*.8) calc(var(--u)*.8) 0 #0B6BD3;background:#000}
 .ob .sg figcaption{font:400 calc(var(--u)*2.3)/1.12 var(--sf);font-style:italic;color:var(--nv);padding-bottom:calc(var(--u)*.8)}
@@ -275,14 +276,21 @@ html,body{margin:0;background:#050E1C}
   if(host&&host.style&&host.ownerDocument){
     var od=host.ownerDocument,de=od.documentElement,tm=0;
     var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var ok=function(){var r=host.getBoundingClientRect();return Math.abs(r.left+(window.pageXOffset||0))<=.5&&Math.abs(r.width-de.clientWidth)<=.5};
     var fit=function(){
+      if(ok())return;
       set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
       var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
       if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      var r2=host.getBoundingClientRect(),e=r2.left+(window.pageXOffset||0);
+      if(Math.abs(e)>.5){set('margin-left',(-l-e)+'px')}
       set('background','none');
     };
+    var later=function(){clearTimeout(tm);tm=setTimeout(fit,120)};
     fit();
-    window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});
+    window.addEventListener('resize',later);
+    if(window.ResizeObserver){var ro=new ResizeObserver(later);ro.observe(de);if(host.parentElement)ro.observe(host.parentElement)}
+    var n=0,iv=setInterval(function(){fit();if(++n>16)clearInterval(iv)},500);
     window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
     window.addEventListener('load',fit);
     setTimeout(fit,700);
