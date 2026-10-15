@@ -42,9 +42,11 @@ html,body{margin:0}
 .bh .tt .n100{color:var(--rd);text-shadow:0 .03em 0 #fff,0 .06em 0 #fff,0 .09em 0 var(--ch),0 .12em 0 var(--ch),0 .2em .12em rgba(74,34,12,.3)}
 .bh .dek{margin:calc(var(--u)*4.4) 0 0;max-width:25em;font:500 calc(var(--u)*1.7)/1.42 var(--lab)}
 .bh .stage{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(var(--u)*30)}
-.bh .shield{position:absolute;top:calc(var(--u)*-.5);left:calc(var(--u)*1);width:calc(var(--u)*9.5);aspect-ratio:.84;background:var(--b);color:#fff;clip-path:polygon(0 0,100% 0,100% 74%,50% 100%,0 74%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:calc(var(--u)*1.2);font:400 calc(var(--u)*1)/1 var(--disp);letter-spacing:.06em;rotate:-9deg;filter:drop-shadow(0 calc(var(--u)*.5) 0 var(--nv));animation:sh 1s .9s cubic-bezier(.3,1.6,.5,1) both;z-index:3}
+.bh .shield{position:relative;align-self:center;margin-bottom:calc(var(--u)*2.2);width:calc(var(--u)*9.5);aspect-ratio:.84;background:var(--b);color:#fff;clip-path:polygon(0 0,100% 0,100% 74%,50% 100%,0 74%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:calc(var(--u)*1.2);font:400 calc(var(--u)*1)/1 var(--disp);letter-spacing:.06em;rotate:-4deg;filter:drop-shadow(0 calc(var(--u)*.5) 0 var(--nv));animation:sh 1s .9s cubic-bezier(.3,1.6,.5,1) both,hv 3.2s 1.9s ease-in-out infinite;z-index:3}
 .bh .shield b{display:block;font:400 calc(var(--u)*4)/.95 var(--disp);letter-spacing:0;margin:.08em 0 .02em}
 .bh .shield s{text-decoration:none;font-size:calc(var(--u)*.9);letter-spacing:.3em;color:var(--y)}
+@keyframes hv{0%,100%{translate:0 0}50%{translate:0 calc(var(--u)*-1.1)}}
+.bh .shield::after{content:none}
 @keyframes sh{0%{transform:scale(0) rotate(-40deg)}100%{transform:none}}
 .bh .snap{position:relative;display:block;width:100%;max-width:calc(var(--u)*50);touch-action:manipulation}
 .bh .hang{position:relative;display:block;will-change:transform;transform-origin:50% -60%}
@@ -185,7 +187,6 @@ html,body{margin:0}
 .bh .pz .wb .tap{font-size:calc(var(--u)*.75)}
 .bh .pz.gp .pr .big{font-size:calc(var(--u)*3.2)}
 .bh .snap{max-width:calc(var(--u)*38)}
-.bh .shield{top:calc(var(--u)*-2.5);left:calc(50% - var(--u)*21)}
 .bh .fd .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .bh .fdc{grid-column:1/-1;grid-row:1}
 }
@@ -193,8 +194,8 @@ html,body{margin:0}
 .bh{--u:3.15vw;--g:1.25rem}
 .bh .tt{font-size:min(15.5vw,calc(var(--u)*9))}
 .bh .h2{font-size:min(11.5vw,calc(var(--u)*6.4))}
-.bh .shield{width:calc(var(--u)*7.5);top:calc(var(--u)*-5);left:0}
-.bh .stage{margin-top:calc(var(--u)*7)}
+.bh .shield{width:calc(var(--u)*7.5)}
+.bh .stage{margin-top:calc(var(--u)*4)}
 .bh .snap{max-width:88%}
 .bh .pz .pr b{font-size:calc(var(--u)*1.2)}
 .bh .pz .wb .tap{font-size:calc(var(--u)*1)}
@@ -209,6 +210,7 @@ html,body{margin:0}
 }
 @media (prefers-reduced-motion:reduce){
 .bh .tt .ch,.bh .out .snp{animation:none}
+.bh .shield{animation:sh 1s .9s both}
 }
 </style>
 </head>
