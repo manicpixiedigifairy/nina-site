@@ -666,14 +666,14 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 <section class="sec dk d8" id="proof">
  <div class="w">
   <div class="hd">
-   <div class="rv"><p class="lb">Decree IX: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">Coming 2 America was the number one streamed movie of its opening weekend and posted the biggest opening weekend of any streaming movie in the previous 12 months, per Screen Engine/ASI. It was also Nielsen's number one streamed movie during premiere week.</p></div>
+   <div class="rv"><p class="lb">Decree IX: The Proof</p><h2>Crowned <em>Number One</em> In America</h2><p class="lede" style="color:rgba(251,245,232,.9)">Coming 2 America was the number one streamed movie of its opening weekend and posted the biggest opening weekend of any streaming movie in the previous 12 months, per Screen Engine/ASI. The social buzz translated into 1.413 billion viewing minutes during the week of March 1 to 7, marking the first time a Prime Video title captured the No. 1 spot on Nielsen's U.S. SVOD rankings.</p></div>
    <figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-number-one.webp?v=1" alt="" role="img" aria-label="Prime Video banner reading Number One Movie In America, Coming 2 America" width="960" height="450" loading="lazy"></div></figure>
   </div>
   <div class="press"><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-thewrap.webp?v=1" alt="" role="img" aria-label="TheWrap headline: Coming 2 America draws most viewers for streaming film launch of the past year, ratings firm says" width="937" height="1171" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-variety.webp?v=1" alt="" role="img" aria-label="Variety headline: Coming 2 America hits No. 1 on Nielsen U.S. streaming rankings" width="1000" height="1250" loading="lazy"></div></figure><figure class="gf sl"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><div class="in"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/c2a-press-deadline.webp?v=1" alt="" role="img" aria-label="Deadline headline: Coming 2 America gives Amazon Prime Video its first No. 1 finish on Nielsen weekly streaming chart" width="673" height="841" loading="lazy"></div></figure></div>
   <div class="stats">
-   <div class="st rv"><b>#1</b><span>Opening weekend of any streaming movie in the past 12 months, per Screen Engine/ASI</span></div>
-   <div class="st rv"><b data-count="1.4" data-suf="B">1.4B</b><span>Minutes viewed in premiere week, per Nielsen</span></div>
-   <div class="st rv"><b>#1</b><span>First number one finish for Prime Video on Nielsen's weekly streaming chart</span></div>
+   <div class="st rv"><b>#1</b><span>Opening weekend of any streaming movie of the pandemic era, beating that year's competing blockbusters, per Amazon</span></div>
+   <div class="st rv"><b data-count="1.413" data-dec="3" data-suf="B">1.413B</b><span>Viewing minutes during the week of March 1 to 7, per Nielsen</span></div>
+   <div class="st rv"><b>#1</b><span>First time a Prime Video title captured the No. 1 spot on Nielsen's U.S. SVOD rankings</span></div>
    <div class="st rv"><b data-count="5.6" data-suf="B">5.6B</b><span>Global TikTok views for the I'm A King dance challenge</span></div>
    <div class="st rv"><b>#1</b><span>Most talked about movie of 2021 on Twitter, per ListenFirst Media</span></div>
    <div class="st rv"><b>#1</b><span>Entertainment app on the App Store for Prime Video over debut weekend, and #2 across all free apps</span></div>
@@ -930,9 +930,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--iv);
 
   /* count up */
   $$('[data-count]').forEach(function(el){
-    var to=parseFloat(el.getAttribute('data-count')),suf=el.getAttribute('data-suf')||'',isInt=el.hasAttribute('data-int'),done=false;
+    var to=parseFloat(el.getAttribute('data-count')),suf=el.getAttribute('data-suf')||'',isInt=el.hasAttribute('data-int'),dec=+(el.getAttribute('data-dec')||1),done=false;
     if(RM||!('IntersectionObserver' in W))return;
-    var go=function(){if(done)return;done=true;var t0=0;var f=function(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-p,3);el.textContent=(isInt?Math.round(to*e).toLocaleString('en-US'):(to*e).toFixed(1))+suf;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+    var go=function(){if(done)return;done=true;var t0=0;var f=function(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-p,3);el.textContent=(isInt?Math.round(to*e).toLocaleString('en-US'):(to*e).toFixed(dec))+suf;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
     var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){go();o.disconnect()}},{threshold:.4});o.observe(el);
   });
 })();
