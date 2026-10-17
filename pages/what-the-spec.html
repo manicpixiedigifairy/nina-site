@@ -178,7 +178,6 @@ html,body{margin:0;background:#000}
   <section class="gal" id="wts-gallery">
     <div class="gh">
       <h2 class="dsp">Select<br>Spec Work</h2>
-      <p class="mono" id="wts-count"></p>
     </div>
     <div class="grid" id="wts-grid"></div>
   </section>
@@ -228,7 +227,6 @@ var pieces=[
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
-root.getElementById('wts-count').textContent=pieces.length+' features · click to explore each project';
 root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
   var open=p.url?'<button type="button" class="pc" data-screen="'+i+'" aria-label="Screen '+esc(p.title)+'">':'<div class="pc na">';
   var close=p.url?'</button>':'</div>';
