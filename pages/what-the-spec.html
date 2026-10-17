@@ -57,6 +57,9 @@ html,body{margin:0;background:#000}
 .wts .po{position:relative;aspect-ratio:2/3;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(to bottom,var(--t),var(--card));transition:transform .5s,border-color .5s}
 .wts .pc:hover .po,.wts .pc:focus-visible .po{transform:translateY(-8px);border-color:var(--pri)}
 .wts .po .vig{position:absolute;inset:0}
+.wts .po .art{position:absolute;left:0;right:0;top:0;width:100%;height:78%;object-fit:cover;object-position:50% 45%;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wts .pc:hover .po .art{transform:scale(1.04)}
+.wts .po.hasimg{background:#000}.wts .po .shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,transparent 16%,transparent 50%,rgba(0,0,0,.9) 72%,#000 80%)}
 .wts .pi{position:relative;display:flex;height:100%;flex-direction:column;justify-content:space-between;padding:24px}
 .wts .pt{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;color:var(--mfg)}
 .wts .pb{margin:0;font-size:11px;letter-spacing:.2em;color:var(--pri)}
@@ -162,8 +165,7 @@ html,body{margin:0;background:#000}
   </div>
 
   <header class="hd mono">
-    <span>WTS / Spec House</span><span class="dv" aria-hidden="true"></span>
-    <a href="#wts-gallery" data-jump="wts-gallery">Enter ↓</a>
+    <span>WTS / Spec House</span>
   </header>
 
   <section class="hero">
@@ -171,7 +173,7 @@ html,body{margin:0;background:#000}
     <p class="kick mono pr">A Spec House Production</p>
     <h1 class="dsp">What<br>The <span class="pr">Spec?!</span></h1>
     <p class="tag"><b>Unsolicited. Unhinged. Unapologetic.</b><span>A gallery of “almosts”, “what ifs”, and “why nots”.</span></p>
-    <div class="cred mono"><span>Directed by Nina Austin · Written by Nina Austin · Designed by Nina Austin</span></div>
+    <div class="cred mono"><span>Written by Nina Austin · Designed by Nina Austin</span></div>
     <div class="rate"><div><span class="s1 mono">Rated</span><span class="s2 dsp">S</span><span class="s3 mono">For Speculative</span></div></div>
   </section>
 
@@ -214,23 +216,27 @@ var W=root.getElementById('wts');
 
 /* ============ EDIT YOUR SPEC WORK HERE ============
    One object per poster. url opens the live microsite (leave '' for FPO pieces).
+   img is optional poster art (image or GIF URL); without it the poster uses the gradient.
+   hidden:true keeps a poster off the page; delete it to show the poster again.
    tone is the poster's top color; credit is the small line under the title. */
 var pieces=[
-  {no:'01',title:'Super Fan Frenzy',brand:'Star Wars',genre:'Launch microsite',year:'2026',tone:'rgba(245,217,138,.34)',credit:'A spec microsite',url:'https://super-fan-frenzy.lovable.app'},
-  {no:'02',title:'The Long Pour',brand:'Brand FPO',genre:'Product story',year:'2026',tone:'rgba(255,255,255,.12)',credit:'A spec microsite · FPO image',url:''},
-  {no:'03',title:'Static Bloom',brand:'Brand FPO',genre:'Campaign hub',year:'2025',tone:'#1b1b1b',credit:'A spec microsite · FPO image',url:''},
-  {no:'04',title:'Gold Hour',brand:'Brand FPO',genre:'Interactive lookbook',year:'2025',tone:'rgba(245,217,138,.22)',credit:'A spec microsite · FPO image',url:''},
-  {no:'05',title:'Second Take',brand:'Brand FPO',genre:'Rebrand teaser',year:'2025',tone:'rgba(255,255,255,.09)',credit:'A spec microsite · FPO image',url:''},
-  {no:'06',title:'Dead Air',brand:'Brand FPO',genre:'Event microsite',year:'2024',tone:'#141414',credit:'A spec microsite · FPO image',url:''}
+  {no:'01',title:'Super Fan Frenzy',brand:'Star Wars',genre:'Awareness campaign',year:'2026',tone:'rgba(245,217,138,.34)',credit:'A spec film launch campaign',url:'https://super-fan-frenzy.lovable.app',img:'https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wts-super-fan-frenzy.gif?v=1'},
+  {hidden:true,no:'02',title:'The Long Pour',brand:'Brand FPO',genre:'Product story',year:'2026',tone:'rgba(255,255,255,.12)',credit:'A spec microsite · FPO image',url:''},
+  {hidden:true,no:'03',title:'Static Bloom',brand:'Brand FPO',genre:'Campaign hub',year:'2025',tone:'#1b1b1b',credit:'A spec microsite · FPO image',url:''},
+  {hidden:true,no:'04',title:'Gold Hour',brand:'Brand FPO',genre:'Interactive lookbook',year:'2025',tone:'rgba(245,217,138,.22)',credit:'A spec microsite · FPO image',url:''},
+  {hidden:true,no:'05',title:'Second Take',brand:'Brand FPO',genre:'Rebrand teaser',year:'2025',tone:'rgba(255,255,255,.09)',credit:'A spec microsite · FPO image',url:''},
+  {hidden:true,no:'06',title:'Dead Air',brand:'Brand FPO',genre:'Event microsite',year:'2024',tone:'#141414',credit:'A spec microsite · FPO image',url:''}
 ];
 /* ================================================== */
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
 root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
+  if(p.hidden)return '';
   var open=p.url?'<button type="button" class="pc" data-screen="'+i+'" aria-label="Screen '+esc(p.title)+'">':'<div class="pc na">';
   var close=p.url?'</button>':'</div>';
-  return open+'<div class="po" style="--t:'+p.tone+'"><div class="vig"></div><div class="pi">'+
+  var art=p.img?'<img class="art" src="'+esc(p.img)+'" alt="" role="img" aria-label="'+esc(p.title)+' key art" loading="lazy"><div class="shade"></div>':'<div class="vig"></div>';
+  return open+'<div class="po'+(p.img?' hasimg':'')+'" style="--t:'+p.tone+'">'+art+'<div class="pi">'+
     '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+
     '<div><p class="pb mono">'+esc(p.brand)+' presents</p><h3 class="dsp">'+esc(p.title)+'</h3><p class="pl mono">'+esc(p.credit)+'</p></div>'+
     '</div></div><div class="pf mono"><span class="mf">'+esc(p.genre)+'</span><span class="sc">'+(p.url?'Screen →':'Coming soon')+'</span></div>'+close;
