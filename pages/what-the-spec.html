@@ -53,7 +53,7 @@ html,body{margin:0;background:#000}
 .wts h2{margin:0;font-size:60px;line-height:1}
 .wts .gh p{margin:0;max-width:22rem;font-size:max(12px,calc(var(--u)*.78));line-height:1.6;letter-spacing:.14em;color:var(--mfg)}
 .wts .grid{display:grid;gap:calc(var(--u)*2.6);grid-template-columns:1fr}
-.wts .pc{display:block}
+.wts .pc{display:block;width:100%;text-align:left}
 .wts .po{position:relative;aspect-ratio:2/3;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(to bottom,var(--t),var(--card));transition:transform .5s,border-color .5s}
 .wts .pc:hover .po,.wts .pc:focus-visible .po{transform:translateY(-8px);border-color:var(--pri)}
 .wts .po .vig{position:absolute;inset:0}
@@ -101,6 +101,33 @@ html,body{margin:0;background:#000}
 .wts .skip:hover{color:var(--pri)}
 .wts .flash{position:absolute;inset:0;background:var(--fg);pointer-events:none;animation:wtsFlash .34s ease-out forwards}
 @keyframes wtsFlash{0%{opacity:.9}100%{opacity:0}}
+
+
+/* screening room: a lightbox player with mini player (PiP) and full screen; the project address stays hidden */
+.wts .scr{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s,background .35s}
+.wts .scr.on{opacity:1;visibility:visible}
+.wts .win{position:relative;display:flex;flex-direction:column;width:min(1280px,94vw);height:min(84vh,820px);background:#000;border:1px solid rgba(245,217,138,.35);border-radius:10px;overflow:hidden;box-shadow:0 40px 120px -30px rgba(0,0,0,.95),0 0 80px -30px rgba(245,217,138,.25);transform:scale(.97);transition:transform .45s cubic-bezier(.2,.7,.2,1),width .45s cubic-bezier(.2,.7,.2,1),height .45s cubic-bezier(.2,.7,.2,1),border-radius .3s}
+.wts .scr.on .win{transform:none}
+.wts .sbar{flex:none;display:flex;align-items:center;gap:8px;min-height:52px;padding:0 10px 0 18px;border-bottom:1px solid var(--bd);background:#000;font-size:.75rem;letter-spacing:.14em}
+.wts .sbar .st{flex:1;min-width:0;color:var(--mfg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wts .sbar .st b{font-weight:500;color:var(--pri)}
+.wts .sbar button{display:inline-flex;align-items:center;gap:.6em;height:34px;padding:0 12px;border:1px solid var(--bd);border-radius:99px;color:var(--fg);white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
+.wts .sbar button:hover{color:#0A0A0A;background:var(--pri);border-color:var(--pri)}
+.wts .sbar svg{width:14px;height:14px;flex:none}
+.wts .sview{position:relative;flex:1;min-height:0;background:#0b0b0b}
+.wts .sview .ld{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.8125rem;letter-spacing:.14em;color:var(--mfg)}
+.wts .sview iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;opacity:0;transition:opacity .5s}
+.wts .sview iframe.ok{opacity:1}
+/* mini player: floats in the corner while the gallery stays usable */
+.wts .scr.pip{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none;align-items:flex-end;justify-content:flex-end;padding:20px}
+.wts .scr.pip .win{pointer-events:auto;width:min(440px,calc(100vw - 32px));height:min(300px,46vh)}
+.wts .scr.pip .sbar{min-height:44px;padding-left:12px}
+.wts .scr.pip .sbar .lbl{display:none}
+/* full screen, plus a fallback for browsers without the Fullscreen API */
+.wts .win:fullscreen{width:100%;height:100%;border:0;border-radius:0}
+.wts .scr.max{padding:0}
+.wts .scr.max .win{width:100vw;height:100vh;height:100dvh;border:0;border-radius:0}
+@media(max-width:700px){.wts .sbar .lbl{display:none}.wts .win{width:100%;height:min(80vh,720px)}.wts .scr{padding:8px}}
 
 @media(min-width:640px){.wts .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px){
@@ -168,6 +195,17 @@ html,body{margin:0;background:#000}
       <p>By accessing or viewing this page, you agree to be bound by these Terms of Viewing. Any unauthorized use of the Work may result in legal action. Licensing and permissions: <a href="mailto:ninaaustincreative@gmail.com">ninaaustincreative@gmail.com</a>.</p>
     </div>
   </footer>
+  <div class="scr" id="wts-scr" aria-hidden="true">
+    <div class="win" id="wts-win" role="dialog" aria-modal="true" aria-labelledby="wts-st">
+      <div class="sbar mono">
+        <div class="st" id="wts-st"></div>
+        <button type="button" id="wts-pip" aria-label="Mini player"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><rect x="12" y="12" width="8" height="6" rx="1" fill="currentColor"/></svg><span class="lbl">Mini player</span></button>
+        <button type="button" id="wts-fs" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg><span class="lbl">Full screen</span></button>
+        <button type="button" id="wts-x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="lbl">Close</span></button>
+      </div>
+      <div class="sview"><div class="ld mono">Rolling the reel</div><iframe id="wts-frame" title="Spec project" allow="fullscreen; autoplay" allowfullscreen></iframe></div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -191,9 +229,9 @@ var pieces=[
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
 root.getElementById('wts-count').textContent=pieces.length+' features · click to explore each project';
-root.getElementById('wts-grid').innerHTML=pieces.map(function(p){
-  var open=p.url?'<a class="pc" href="'+esc(p.url)+'" target="_blank" rel="noopener">':'<div class="pc na">';
-  var close=p.url?'</a>':'</div>';
+root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
+  var open=p.url?'<button type="button" class="pc" data-screen="'+i+'" aria-label="Screen '+esc(p.title)+'">':'<div class="pc na">';
+  var close=p.url?'</button>':'</div>';
   return open+'<div class="po" style="--t:'+p.tone+'"><div class="vig"></div><div class="pi">'+
     '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+
     '<div><p class="pb mono">'+esc(p.brand)+' presents</p><h3 class="dsp">'+esc(p.title)+'</h3><p class="pl mono">'+esc(p.credit)+'</p></div>'+
@@ -202,6 +240,51 @@ root.getElementById('wts-grid').innerHTML=pieces.map(function(p){
 
 /* smooth jump inside the loader */
 W.addEventListener('click',function(e){var j=e.target.closest('[data-jump]');if(!j)return;e.preventDefault();var t=root.getElementById(j.getAttribute('data-jump'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})});
+
+
+/* screening room: lightbox player with mini player and full screen; the visitor never leaves this page */
+(function(){
+  var scr=root.getElementById('wts-scr'),win=root.getElementById('wts-win'),fr=root.getElementById('wts-frame'),st=root.getElementById('wts-st');
+  var bPip=root.getElementById('wts-pip'),bFs=root.getElementById('wts-fs'),bX=root.getElementById('wts-x');
+  var last=null,cur=-1;
+  var ICON_PIP=bPip.querySelector('svg').outerHTML,ICON_EXP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+  var ICON_FS=bFs.querySelector('svg').outerHTML,ICON_EXIT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h5V3M21 8h-5V3M3 16h5v5M21 16h-5v5"/></svg>';
+  function label(b,icon,txt){b.innerHTML=icon+'<span class="lbl">'+txt+'</span>';b.setAttribute('aria-label',txt)}
+  function lock(on){try{D.body.style.overflow=on?'hidden':''}catch(e){}}
+  function isFs(){var f=false;try{f=win.matches(':fullscreen')}catch(e){try{f=win.matches(':-webkit-full-screen')}catch(e2){}}return f||scr.classList.contains('max')}
+  function sync(){var pip=scr.classList.contains('pip');
+    label(bPip,pip?ICON_EXP:ICON_PIP,pip?'Expand':'Mini player');
+    label(bFs,isFs()?ICON_EXIT:ICON_FS,isFs()?'Exit full screen':'Full screen');
+    scr.setAttribute('aria-modal',pip?'false':'true');lock(!pip&&cur>=0)}
+  function exitFs(){scr.classList.remove('max');try{if(D.fullscreenElement)D.exitFullscreen();else if(D.webkitFullscreenElement)D.webkitExitFullscreen()}catch(e){}}
+  function show(i,push){var p=pieces[i];if(!p||!p.url)return;cur=i;
+    st.innerHTML='<b>No. '+esc(p.no)+'</b> · '+esc(p.title);
+    if(fr.getAttribute('src')!==p.url){fr.classList.remove('ok');fr.setAttribute('title',p.title);fr.src=p.url}
+    scr.classList.remove('pip');scr.classList.add('on');scr.setAttribute('aria-hidden','false');sync();
+    if(push){try{history.pushState({wts:i},'','#screen-'+p.no)}catch(e){}}
+    setTimeout(function(){bX.focus()},60)}
+  function hide(fromPop){if(cur<0)return;cur=-1;exitFs();
+    scr.classList.remove('on','pip','max');scr.setAttribute('aria-hidden','true');lock(false);
+    setTimeout(function(){if(cur<0)fr.removeAttribute('src')},400);
+    if(!fromPop){try{if(history.state&&history.state.wts!==undefined)history.back();else history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
+    if(last)last.focus()}
+  fr.addEventListener('load',function(){if(fr.getAttribute('src'))fr.classList.add('ok')});
+  W.addEventListener('click',function(e){var b=e.target.closest('[data-screen]');if(!b)return;last=b;show(+b.getAttribute('data-screen'),true)});
+  bX.addEventListener('click',function(){hide(false)});
+  bPip.addEventListener('click',function(){if(isFs())exitFs();scr.classList.toggle('pip');sync()});
+  bFs.addEventListener('click',function(){
+    if(isFs()){exitFs();setTimeout(sync,50);return}
+    scr.classList.remove('pip');
+    var req=win.requestFullscreen||win.webkitRequestFullscreen;
+    if(req){try{var r=req.call(win);if(r&&r.catch)r.catch(function(){scr.classList.add('max');sync()})}catch(e){scr.classList.add('max')}}
+    else scr.classList.add('max');
+    setTimeout(sync,80)});
+  D.addEventListener('fullscreenchange',sync);D.addEventListener('webkitfullscreenchange',sync);
+  scr.addEventListener('click',function(e){if(e.target===scr&&!scr.classList.contains('pip'))hide(false)});
+  window.addEventListener('keydown',function(e){if(e.key!=='Escape'||cur<0)return;if(scr.classList.contains('max')){scr.classList.remove('max');sync();return}if(!D.fullscreenElement)hide(false)});
+  window.addEventListener('popstate',function(){var m=location.hash.match(/^#screen-(\d+)/);var i=m?pieces.findIndex(function(p){return p.no===m[1]}):-1;if(i>=0&&pieces[i].url)show(i,false);else hide(true)});
+  var m=location.hash.match(/^#screen-(\d+)/);if(m){var i=pieces.findIndex(function(p){return p.no===m[1]});if(i>=0)setTimeout(function(){show(i,false)},50)}
+})();
 
 /* fill the reel */
 (function(){
