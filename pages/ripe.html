@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ripe · Brand Positioning</title>
+<meta name="description" content="ripe, a DTC gourmand fragrance house. Exotic, untamed, dangerously edible. Brand positioning, campaign system, packaging and world-building.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Serif+Display:ital@0;1&family=Yellowtail&display=swap">
+<style>
+html,body{margin:0;background:#1a0a04}
+.rp{--mango:#FFC247;--guava:#F76C8C;--papaya:#E84628;--amber:#E89A0C;--palm:#667730;--cream:#F6EDDF;--ink:#2A1206;--deep:#1a0a04;
+  --serif:"DM Serif Display",Georgia,serif;--script:"Yellowtail","Brush Script MT",cursive;--sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --g:clamp(16px,5vw,88px);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.1 -.42'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position:relative;width:100%;overflow:hidden;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.rp *{box-sizing:border-box}
+.rp a{color:inherit;text-decoration:none}
+.rp button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.rp img{display:block;max-width:100%}
+.rp :focus-visible{outline:2px solid var(--guava);outline-offset:3px}
+.rp .px{padding-left:var(--g);padding-right:var(--g)}
+.rp .lb{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase}
+.rp .grain{position:absolute;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:var(--noise);background-size:200px}
+.rp .cur{font-family:var(--script);font-weight:400;text-transform:none;letter-spacing:0}
+/* grainy glow cursive */
+.rp .glow{font-family:var(--script);font-weight:400;color:transparent;background-image:var(--noise),linear-gradient(100deg,#FFF4A8,var(--mango) 45%,#FF9A3C 80%,var(--guava));background-size:120px,100% 100%;-webkit-background-clip:text;background-clip:text;text-shadow:0 0 .05em rgba(255,214,80,.85),0 0 .3em rgba(255,140,40,.55),0 0 .8em rgba(247,108,140,.45);line-height:1;padding:0 .12em .12em}
+.rp .glow.pk{background-image:var(--noise),linear-gradient(100deg,#FFD1DC,var(--guava) 50%,#FF8A5C)}
+
+/* top bar */
+.rp .top{position:absolute;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:26px;padding-right:calc(4vw + 150px);color:var(--cream)}
+.rp .top .wm{font-family:var(--serif);font-size:30px;line-height:1;letter-spacing:-.02em;margin-right:6px}
+.rp .top a.lb{opacity:.8;border-bottom:1px solid transparent;padding-bottom:4px;transition:opacity .2s,border-color .2s}
+.rp .top a.lb:hover{opacity:1;border-color:var(--mango)}
+
+/* hero: the name, sun-printed into fruit */
+.rp .hero{position:relative;height:100vh;height:100svh;min-height:620px;overflow:hidden;contain:paint;isolation:isolate;color:var(--cream);background:#7a3a05}
+.rp .hero .sk{position:absolute;inset:-4%;background-image:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-hero-passionfruit.webp?v=1");background-size:cover;background-position:50% 40%;animation:rpDrift 24s ease-in-out infinite alternate}
+@keyframes rpDrift{to{transform:scale(1.08) translate(-1%,1%)}}
+.rp .hero .sk:after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 45%,rgba(120,34,0,.35),rgba(60,14,0,.82));mix-blend-mode:multiply;opacity:0;transition:opacity 2.6s cubic-bezier(.3,.6,.2,1)}
+.rp.tanned .hero .sk:after{opacity:1}
+.rp .hero .mk,.rp .hero .mk3{position:absolute;inset:-4%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:clamp(150px,34vw,560px);line-height:.8;letter-spacing:-.045em;padding-bottom:.08em;pointer-events:none;animation:rpDrift 24s ease-in-out infinite alternate}
+.rp .hero .mk{color:rgba(255,226,196,.62);opacity:0;transition:opacity 2.6s cubic-bezier(.3,.6,.2,1)}
+.rp .hero .mk3{color:rgba(255,246,232,.22);opacity:0;transition:opacity 2.6s;-webkit-mask:linear-gradient(170deg,#000 20%,transparent 60%);mask:linear-gradient(170deg,#000 20%,transparent 60%)}
+.rp.tanned .hero .mk{opacity:1}.rp.tanned .hero .mk3{opacity:1}
+.rp .hero .mk span{position:relative}
+.rp .hero .mk2{position:absolute;inset:-4%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:clamp(150px,34vw,560px);line-height:.8;letter-spacing:-.045em;color:transparent;padding-bottom:.08em;pointer-events:none;text-shadow:0 0 1px rgba(255,236,214,.0);transition:text-shadow 2.6s;animation:rpDrift 24s ease-in-out infinite alternate}
+.rp.tanned .hero .mk2{text-shadow:0 0 3px rgba(60,14,0,.55)}
+.rp .hero .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,10,4,.55),transparent 22%,transparent 60%,rgba(26,10,4,.8));pointer-events:none}
+.rp .hero .kick{position:absolute;left:var(--g);top:96px;z-index:3;max-width:30ch}
+.rp .hero .kick p{margin:0}
+.rp .hero .kick .lb{color:var(--mango)}
+.rp .hero .de .glow{display:inline-block;background:none;color:#FFD9A8;-webkit-text-fill-color:#FFD9A8;text-shadow:0 0 .05em #FFC247,0 0 .25em rgba(255,140,40,.9),0 0 .7em rgba(247,108,140,.75),0 0 1.4em rgba(247,108,140,.4)}
+.rp .hero .de{position:absolute;z-index:3;left:50%;top:62%;line-height:1;transform:translate(-30%,0) rotate(-6deg);font-size:clamp(46px,8.5vw,140px);white-space:nowrap;pointer-events:none}
+.rp .hero .base{position:absolute;z-index:3;left:var(--g);right:var(--g);bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.rp .hero .base p{margin:0;max-width:34ch;font-size:15px;line-height:1.5;color:rgba(246,237,223,.92)}
+.rp .hero .hint{display:flex;align-items:center;gap:10px}
+.rp .hero .hint i{display:block;width:1px;height:34px;background:currentColor;animation:rpHint 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes rpHint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+/* price sticker */
+.rp .hero .sf{position:absolute;z-index:3;left:8%;top:44%;width:clamp(70px,8vw,120px);transform:rotate(-18deg);filter:drop-shadow(0 10px 14px rgba(40,10,0,.45));animation:rpBob 6s ease-in-out infinite}
+@keyframes rpBob{50%{transform:rotate(-8deg) translateY(-10px)}}
+.rp .tag58{position:absolute;z-index:4;right:var(--g);top:24%;width:clamp(120px,14vw,190px);aspect-ratio:1;display:grid;place-items:center;text-align:center;color:var(--ink);transform:rotate(10deg);transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.rp .tag58:before{content:"";position:absolute;inset:0;background:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-star.webp?v=1") center/contain no-repeat;animation:rpSpin 40s linear infinite}
+@keyframes rpSpin{to{transform:rotate(360deg)}}
+.rp .tag58>span{position:relative;display:grid;place-items:center;width:62%;aspect-ratio:1;border-radius:50%;background:var(--cream);box-shadow:0 6px 14px rgba(60,15,0,.35)}
+.rp .tag58 b{position:relative;display:block;font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.4vw,50px);line-height:.9}
+.rp .tag58 small{position:relative;display:block;font-family:var(--script);font-size:clamp(14px,1.5vw,20px);color:var(--papaya);line-height:1}
+.rp .tag58:hover{transform:rotate(-4deg) scale(1.06)}
+.rp .tag58 em{position:relative;display:block;font-style:normal;font-size:9px;letter-spacing:.2em;font-weight:800}
+
+/* tickers */
+.rp .tick{position:relative;overflow:hidden;white-space:nowrap;background:var(--papaya);color:var(--cream);border-top:1px solid rgba(0,0,0,.1)}
+.rp .tick .tr{display:inline-flex;animation:rpTick 32s linear infinite}
+.rp .tick span{font-family:var(--sans);font-weight:900;font-size:clamp(16px,2vw,26px);letter-spacing:.06em;text-transform:uppercase;padding:14px 18px}
+.rp .tick span.c{font-family:var(--script);font-weight:400;text-transform:none;letter-spacing:0;color:var(--mango);font-size:clamp(22px,2.6vw,34px);padding-top:8px}
+.rp .tick.alt{background:var(--palm)}
+.rp .tick.alt span.c{color:var(--guava)}
+@keyframes rpTick{to{transform:translateX(-50%)}}
+
+/* part openers */
+.rp .part{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;contain:paint;color:var(--cream);background:#7a3a05}
+.rp .part .bg{position:absolute;inset:0;background-size:cover;background-position:50% 50%;transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.rp .part.in .bg{transform:none}
+.rp .part:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,10,4,.05),rgba(26,10,4,.7))}
+.rp .part .in2{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:auto 1fr;align-items:end;gap:18px 40px;padding-bottom:clamp(36px,6vw,80px)}
+.rp .part .no{font-family:var(--serif);font-size:clamp(90px,15vw,240px);line-height:.78;color:rgba(246,237,223,.86)}
+.rp .part h2{margin:0;font-family:var(--sans);font-weight:900;font-size:clamp(44px,8vw,128px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase;text-align:right}
+.rp .part h2 .glow{display:block;font-size:.5em;text-transform:none;letter-spacing:0;margin-bottom:.06em}
+
+/* generic sections */
+.rp .sec{position:relative;padding-top:clamp(64px,9vw,140px);padding-bottom:clamp(64px,9vw,140px)}
+.rp .sec.cr{background:var(--cream)}
+.rp .sec.mg{background:var(--mango)}
+.rp .sec.pp{background:var(--papaya);color:var(--cream)}
+.rp .sec.pl{background:var(--palm);color:var(--cream)}
+.rp .sec.dk{background:var(--deep);color:var(--cream)}
+.rp .eyb{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.rp .eyb:before{content:"";width:34px;height:2px;background:currentColor}
+.rp h3{margin:0;font-family:var(--sans);font-weight:900;font-size:clamp(40px,6.2vw,104px);line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
+.rp h3 .r{color:var(--papaya)}
+.rp .sec.pp h3 .r,.rp .sec.pl h3 .r{color:var(--mango)}
+.rp .sec.mg h3 .r{color:var(--papaya)}
+.rp .lede{margin:22px 0 0;max-width:40ch;font-family:var(--serif);font-size:clamp(22px,2.3vw,34px);line-height:1.22}
+.rp .body{margin:16px 0 0;max-width:52ch;font-size:16px;line-height:1.6}
+.rp .two{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,96px);align-items:start}
+
+/* masstige slider */
+.rp .ms{margin-top:clamp(36px,5vw,64px);background:var(--cream);color:var(--ink);border-radius:22px;padding:clamp(22px,3.4vw,44px);box-shadow:0 30px 60px -36px rgba(80,30,0,.5)}
+.rp .ms .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.rp .ms .pr{font-family:var(--serif);font-size:clamp(56px,7vw,110px);line-height:.85}
+.rp .ms .vd{max-width:28ch;font-size:15px;line-height:1.5;text-align:right}
+.rp .ms .vd b{display:block;font-family:var(--script);font-weight:400;font-size:30px;line-height:1;color:var(--papaya)}
+.rp .trk{position:relative;margin-top:30px;height:64px}
+.rp .trk .z{position:absolute;top:24px;height:16px;border-radius:99px}
+.rp .trk .z.m{left:0;width:16%;background:#e2d7c4}
+.rp .trk .z.r{left:15.2%;width:28%;background:linear-gradient(90deg,var(--mango),var(--papaya))}
+.rp .trk .z.n{left:43%;right:0;background:repeating-linear-gradient(90deg,#2A1206 0 6px,#3a1d0e 6px 12px)}
+.rp .trk .zl{position:absolute;top:50px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;white-space:nowrap}
+.rp .trk input{position:absolute;inset:0;width:100%;height:64px;margin:0;opacity:0;cursor:grab;touch-action:pan-y}
+.rp .trk .kn{position:absolute;top:8px;width:48px;height:48px;margin-left:-24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE9A8,var(--mango) 45%,var(--papaya));box-shadow:0 10px 20px -6px rgba(120,40,0,.6),inset 0 -6px 10px rgba(150,40,0,.35);pointer-events:none;transition:transform .2s}
+.rp .trk .kn:after{content:"";position:absolute;left:50%;top:-8px;width:3px;height:12px;background:var(--palm);border-radius:2px;transform:translateX(-50%) rotate(14deg)}
+.rp .trk:active .kn{transform:scale(1.12)}
+.rp .pills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:clamp(40px,5vw,60px)}
+.rp .pills div{border-top:2px solid var(--ink);padding-top:14px;font-size:14px;line-height:1.45}
+.rp .pills b{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:13px;margin-bottom:6px}
+
+/* voice */
+.rp .voice{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);margin-top:clamp(36px,5vw,60px)}
+.rp .voice .vc{position:relative;border-radius:18px;padding:26px 24px 28px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.rp .voice .vc:nth-child(1){background:var(--guava);color:var(--ink)}
+.rp .voice .vc:nth-child(2){background:var(--palm);color:var(--cream)}
+.rp .voice .vc:nth-child(3){background:var(--deep);color:var(--cream)}
+.rp .voice .vc p{margin:0;font-size:15px;line-height:1.5}
+.rp .voice .vc .cur{font-size:clamp(38px,4vw,56px);line-height:1}
+.rp .lines{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.rp .lines button{border:1.5px solid currentColor;border-radius:99px;padding:10px 18px;font-family:var(--script);font-size:24px;line-height:1;transition:background .2s,color .2s,transform .2s}
+.rp .lines button:hover{background:var(--ink);color:var(--mango);transform:rotate(-2deg)}
+.rp .said{margin-top:18px;min-height:1.4em;font-family:var(--serif);font-size:clamp(28px,3.6vw,52px);line-height:1.05}
+
+/* visual codes */
+.rp .lab{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,3vw,36px);margin-top:clamp(36px,5vw,60px)}
+.rp .fruit{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:16/11;display:grid;place-items:center;background:radial-gradient(130% 110% at 30% 25%,var(--s1,#FFD36B),var(--s2,#E84628) 70%,var(--s3,#9a2a0c));transition:background .4s}
+.rp .fruit:before{content:"";position:absolute;inset:0;background-image:var(--noise);background-size:160px;opacity:.5;mix-blend-mode:soft-light}
+.rp .fruit:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 22% 70%,rgba(70,25,0,.0) 0 2px,transparent 3px) 0 0/38px 34px,radial-gradient(circle at 70% 30%,rgba(70,25,0,.0) 0 3px,transparent 4px) 0 0/52px 46px;opacity:var(--spk,0);transition:opacity .4s}
+.rp .fruit .gl{position:absolute;left:18%;top:12%;width:28%;height:20%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),transparent);filter:blur(6px)}
+.rp .word{position:relative;z-index:2;font-family:var(--serif);font-size:clamp(110px,15vw,240px);line-height:.8;letter-spacing:-.045em;padding-bottom:.1em;color:var(--tanl,#FFE3C6);text-shadow:0 0 1px rgba(80,20,0,var(--edge,.5));transition:color .4s,text-shadow .4s,transform .4s}
+.rp .fruit.dim{--dimv:1}
+.rp .fruit .tanov{position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 50%,rgba(110,35,0,var(--tan,.35)),rgba(60,15,0,calc(var(--tan,.35) + .2)));mix-blend-mode:multiply;transition:background .4s}
+.rp .fruit[data-b="bitten"] .word{-webkit-mask:radial-gradient(circle at 96% 8%,transparent 0 17%,#000 17.4%),radial-gradient(circle at 86% -2%,transparent 0 12%,#000 12.4%),radial-gradient(circle at 104% 24%,transparent 0 11%,#000 11.4%);-webkit-mask-composite:source-in;mask:radial-gradient(circle at 96% 8%,transparent 0 17%,#000 17.4%),radial-gradient(circle at 86% -2%,transparent 0 12%,#000 12.4%),radial-gradient(circle at 104% 24%,transparent 0 11%,#000 11.4%);mask-composite:intersect}
+.rp .fruit .drips{position:absolute;z-index:2;left:50%;top:58%;width:clamp(260px,34vw,520px);height:40%;transform:translateX(-50%);pointer-events:none;opacity:0;transition:opacity .3s}
+.rp .fruit[data-b="dripping"] .drips{opacity:1}
+.rp .fruit .drips i{position:absolute;top:0;width:var(--w,14px);height:0;background:var(--tanl,#FFE3C6);border-radius:0 0 99px 99px;box-shadow:inset -3px 0 4px rgba(150,60,0,.25);transition:height 1.6s cubic-bezier(.4,0,.2,1)}
+.rp .fruit[data-b="dripping"] .drips i{height:var(--h,60px)}
+.rp .fruit[data-b="dripping"] .drips i:after{content:"";position:absolute;bottom:-12px;left:50%;width:calc(var(--w,14px)*.9);height:calc(var(--w,14px)*1.1);margin-left:calc(var(--w,14px)*-.45);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:inherit;animation:rpDrop 2.8s ease-in infinite;animation-delay:var(--d,0s)}
+@keyframes rpDrop{0%,60%{transform:translateY(0);opacity:1}100%{transform:translateY(140px);opacity:0}}
+.rp .fruit[data-b="stickered"] .word{color:var(--papaya);text-shadow:0 0 0 #fff,3px 0 0 #fff,-3px 0 0 #fff,0 3px 0 #fff,0 -3px 0 #fff,3px 3px 0 #fff,-3px -3px 0 #fff,3px -3px 0 #fff,-3px 3px 0 #fff,6px 8px 0 rgba(60,15,0,.35);transform:rotate(-7deg) scale(.86)}
+.rp .ctl{display:flex;flex-direction:column;gap:22px}
+.rp .ctl .box{border:1.5px solid var(--ink);border-radius:18px;padding:20px}
+.rp .ctl .rl{display:flex;justify-content:space-between;margin-top:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+.rp .ctl input[type=range]{width:100%;margin-top:14px;accent-color:var(--papaya)}
+.rp .ctl .st{font-family:var(--script);font-size:34px;line-height:1;color:var(--papaya);margin-top:8px}
+.rp .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.rp .chips button{border:1.5px solid var(--ink);border-radius:99px;padding:9px 14px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s}
+.rp .chips button[aria-pressed=true]{background:var(--ink);color:var(--mango)}
+.rp .types{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);margin-top:clamp(28px,4vw,48px)}
+.rp .types .ty{border-radius:18px;padding:24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;background:#fff8ee;border:1px solid rgba(42,18,6,.12)}
+.rp .types .ty:nth-child(2){background:#2b0f04;color:var(--cream)}
+.rp .types .ty .sm{font-size:13px;line-height:1.45;opacity:.8;margin:12px 0 0}
+.rp .types .s1{font-family:var(--serif);font-size:84px;line-height:.85;letter-spacing:-.04em}
+.rp .types .s2{font-size:72px}
+.rp .types .s3{font-weight:900;font-size:46px;line-height:.9;text-transform:uppercase;letter-spacing:-.01em}
+/* palette */
+.rp .pal{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:clamp(28px,4vw,48px)}
+.rp .pal button{position:relative;height:clamp(180px,22vw,300px);border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left;transition:transform .35s cubic-bezier(.3,1.5,.5,1),flex .3s;overflow:hidden}
+.rp .pal button:hover{transform:translateY(-8px) rotate(-1.5deg)}
+.rp .pal button b{font-family:var(--serif);font-weight:400;font-size:clamp(20px,1.9vw,28px);line-height:1}
+.rp .pal button span{margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.1em}
+.rp .pal button em{position:absolute;top:14px;left:16px;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;opacity:0;transition:opacity .2s}
+.rp .pal button.ok em{opacity:1}
+.rp .pal button:after{content:"";position:absolute;right:-30%;top:-30%;width:80%;height:60%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.4),transparent);opacity:.7}
+/* rules + refs */
+.rp .rules{list-style:none;margin:28px 0 0;padding:0;counter-reset:r}
+.rp .rules li{counter-increment:r;display:flex;gap:16px;align-items:baseline;border-top:1px solid rgba(42,18,6,.25);padding:14px 0;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+.rp .rules li:before{content:"0" counter(r);font-size:11px;letter-spacing:.2em;color:var(--papaya)}
+.rp .refs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;margin-top:6px;scrollbar-width:thin}
+.rp .refs figure{flex:0 0 clamp(170px,19vw,250px);margin:0;scroll-snap-align:start}
+.rp .refs img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;box-shadow:0 18px 30px -20px rgba(42,18,6,.6)}
+.rp .refs figcaption{margin-top:10px;font-size:10px;letter-spacing:.18em;font-weight:800;text-transform:uppercase;opacity:.7}
+
+/* mood board */
+.rp .board{position:relative;height:clamp(640px,92vh,980px);margin-top:clamp(28px,4vw,48px);border-radius:28px;background:#2f6bd6;overflow:hidden;touch-action:pan-y}
+.rp .board:before{content:"";position:absolute;inset:0;background-image:var(--noise);background-size:200px;opacity:.35;mix-blend-mode:overlay;pointer-events:none}
+.rp .board .bt{position:absolute;left:clamp(18px,3vw,40px);top:clamp(18px,3vw,36px);z-index:1;color:var(--mango);pointer-events:none}
+.rp .board .bt h4{margin:0;font-family:var(--sans);font-weight:800;font-size:clamp(34px,4.6vw,72px);line-height:.92;letter-spacing:-.02em}
+.rp .board .bt h4 span{color:var(--guava)}
+.rp .board .bt p{margin:12px 0 0;max-width:32ch;font-size:14px;line-height:1.5;color:#e8eeff}
+.rp .pol{position:absolute;width:var(--w,clamp(150px,17vw,250px));background:#fffaf0;padding:10px 10px 34px;border-radius:3px;box-shadow:0 20px 40px -18px rgba(0,0,30,.65);cursor:grab;touch-action:none;user-select:none;transform:rotate(var(--r,0deg));transition:box-shadow .2s}
+.rp .pol:active{cursor:grabbing;box-shadow:0 34px 60px -20px rgba(0,0,30,.8)}
+.rp .pol img{width:100%;aspect-ratio:var(--ar,4/5);object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.rp .pol figcaption{position:absolute;left:12px;right:12px;bottom:10px;font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#4a3a2c}
+.rp .board .bh{position:absolute;right:20px;bottom:18px;z-index:1;color:#e8eeff;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;pointer-events:none}
+.rp .stk{position:absolute;z-index:2;width:clamp(90px,10vw,140px);pointer-events:none;transform:rotate(-12deg)}
+
+/* campaign */
+.rp .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(28px,4vw,44px)}
+.rp .tabs button{border:1.5px solid var(--cream);border-radius:99px;padding:12px 18px;font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:background .2s,color .2s}
+.rp .tabs button[aria-selected=true]{background:var(--cream);color:var(--papaya)}
+.rp .panes{margin-top:24px}
+.rp .pane{display:none;grid-template-columns:1.2fr .8fr;gap:clamp(22px,4vw,56px);align-items:center;animation:rpIn .5s ease}
+.rp .pane.on{display:grid}
+@keyframes rpIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rp .pane h5{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,60px);line-height:.95}
+.rp .pane p{margin:14px 0 0;font-size:16px;line-height:1.6;max-width:44ch}
+.rp .pane ul{margin:18px 0 0;padding:0;list-style:none}
+.rp .pane li{border-top:1px solid rgba(246,237,223,.35);padding:10px 0;font-size:14px;font-weight:700}
+/* billboard */
+.rp .bb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.rp .bb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s,transform 6s linear}
+.rp .bb .bbt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:4%;color:var(--cream);background:linear-gradient(90deg,rgba(26,10,4,.55),transparent 60%)}
+.rp .bb .bbt b{font-family:var(--serif);font-weight:400;font-size:clamp(54px,8vw,120px);line-height:.8;letter-spacing:-.04em}
+.rp .bb .bbt .glow{font-size:clamp(28px,3.6vw,56px)}
+.rp .bb .bbt small{font-size:10px;letter-spacing:.24em;font-weight:800;text-transform:uppercase}
+.rp .bbs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:10px}
+.rp .bbs button{aspect-ratio:3/4;border-radius:6px;background:linear-gradient(160deg,var(--a),var(--b));font-family:var(--script);font-size:clamp(14px,1.4vw,20px);color:var(--ink);display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;transition:transform .2s;outline-offset:2px}
+.rp .bbs button[aria-pressed=true]{outline:2px solid var(--cream)}
+.rp .bbs button:hover{transform:translateY(-4px)}
+/* phone */
+.rp .phone{position:relative;width:min(300px,78vw);aspect-ratio:9/18;margin:0 auto;border-radius:38px;background:#111;padding:12px;box-shadow:0 30px 60px -24px rgba(0,0,0,.7)}
+.rp .phone .scr{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:#000}
+.rp .phone .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s}
+.rp .phone .scr img.on{opacity:1}
+.rp .phone .ui{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:16px;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 25%,transparent 60%,rgba(0,0,0,.6));font-size:12px}
+.rp .phone .ui .bar{display:flex;gap:4px}
+.rp .phone .ui .bar i{flex:1;height:2px;background:rgba(255,255,255,.35);border-radius:2px;overflow:hidden}
+.rp .phone .ui .bar i b{display:block;height:100%;width:0;background:#fff}
+.rp .phone .ui .shop{display:flex;align-items:center;justify-content:space-between;gap:8px;background:rgba(255,250,240,.95);color:var(--ink);border-radius:14px;padding:10px 12px}
+.rp .phone .ui .shop b{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1}
+.rp .phone .ui .shop span{background:var(--papaya);color:#fff;border-radius:99px;padding:7px 12px;font-weight:800;font-size:11px;letter-spacing:.06em}
+.rp .phone .ui .cap .glow{font-size:34px}
+/* storyboard */
+.rp .sb{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.rp .sb figure{position:relative;margin:0;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#000}
+.rp .sb img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.rp .sb figure:hover img{transform:scale(1.06)}
+.rp .sb figcaption{position:absolute;left:10px;right:10px;bottom:8px;color:#fff;font-size:12px;font-weight:700;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.rp .sb figcaption small{display:block;font-size:9px;letter-spacing:.22em;opacity:.85}
+.rp .mkt{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/5;max-height:640px;margin:0 auto}
+.rp .mkt img{width:100%;height:100%;object-fit:cover}
+.rp .mkt .sign{position:absolute;left:0;right:0;top:0;background:var(--guava);color:var(--mango);font-weight:900;font-size:clamp(22px,2.6vw,36px);letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:8px 0}
+.rp .mkt .sign span{display:inline-block;animation:rpTick 18s linear infinite;padding-left:12px}
+
+/* tactile: the squeeze bottle */
+.rp .tac{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center;margin-top:clamp(28px,4vw,48px)}
+.rp .stage{position:relative;aspect-ratio:1;max-width:560px;width:100%;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:radial-gradient(closest-side,rgba(255,255,255,.55),transparent 70%);user-select:none;-webkit-user-select:none;touch-action:none}
+.rp .stx{position:absolute;inset:6%;border-radius:50%;background-size:cover;background-position:center;opacity:.9;box-shadow:inset 0 0 60px rgba(90,30,0,.35),0 30px 60px -30px rgba(90,30,0,.5);transition:background-image .5s}
+.rp .btl{position:relative;z-index:2;width:48%;aspect-ratio:.8;cursor:pointer;transition:transform .35s cubic-bezier(.3,1.7,.4,1);transform-origin:50% 100%}
+.rp .btl .body{position:absolute;left:0;right:0;bottom:0;height:86%;border-radius:46% 46% 40% 40%/34% 34% 52% 52%;background:radial-gradient(90% 70% at 32% 28%,var(--b1,#FFD36B),var(--b2,#E84628) 75%,var(--b3,#9a2a0c));box-shadow:inset -18px -26px 40px rgba(110,25,0,.35),inset 14px 10px 26px rgba(255,255,255,.25),0 40px 50px -26px rgba(90,30,0,.6);transition:background .5s,border-radius .3s}
+.rp .btl .body:before{content:"";position:absolute;inset:0;border-radius:inherit;background-image:var(--noise);background-size:120px;opacity:.55;mix-blend-mode:soft-light}
+.rp .btl .body:after{content:"";position:absolute;left:14%;top:12%;width:24%;height:30%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),transparent);filter:blur(4px)}
+.rp .btl .dim{position:absolute;right:6%;top:46%;width:24%;height:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(90,20,0,.28),transparent);transition:transform .3s,opacity .3s}
+.rp .btl .lbl{position:absolute;left:0;right:0;top:52%;text-align:center;color:rgba(255,246,230,.95);text-shadow:0 1px 1px rgba(90,20,0,.35)}
+.rp .btl .lbl b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(44px,5.4vw,80px);line-height:.8;letter-spacing:-.04em}
+.rp .btl .lbl span{display:block;font-family:var(--script);font-size:clamp(18px,1.9vw,28px);margin-top:4px}
+.rp .btl .lbl small{display:block;margin-top:8px;font-size:8px;letter-spacing:.24em;font-weight:800;text-transform:uppercase;opacity:.85}
+.rp .btl .noz{position:absolute;left:50%;top:0;width:16%;height:18%;transform:translateX(-50%);border-radius:30% 30% 12% 12%/24% 24% 10% 10%;background:linear-gradient(90deg,#8a5a12,#f6dc8c 30%,#fff3c4 42%,#c8902a 60%,#7a4c0e);box-shadow:0 4px 6px rgba(0,0,0,.25)}
+.rp .btl .noz:before{content:"";position:absolute;right:-26%;top:22%;width:30%;height:18%;border-radius:0 40% 40% 0;background:linear-gradient(180deg,#f6dc8c,#9a6a18)}
+.rp .btl.sq{transform:scale(1.07,.9)}
+.rp .btl.sq .body{border-radius:50% 50% 44% 44%/30% 30% 54% 54%}
+.rp .btl.sq .dim{transform:scale(1.5);opacity:1}
+.rp .mist{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:visible}
+.rp .mist i{position:absolute;width:var(--s,10px);height:var(--s,10px);border-radius:50%;background:radial-gradient(closest-side,var(--mc,#FFC247),transparent);opacity:.9;animation:rpMist 1.4s ease-out forwards}
+@keyframes rpMist{to{transform:translate(var(--dx),var(--dy)) scale(3.4);opacity:0}}
+.rp .sqh{position:absolute;z-index:3;left:50%;bottom:-2%;transform:translateX(-50%);white-space:nowrap;font-size:10px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.rp .sct{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+.rp .sct button{border-radius:14px;padding:12px 12px 12px 42px;text-align:left;position:relative;background:#fff8ee;border:1.5px solid transparent;transition:border-color .2s,transform .2s}
+.rp .sct button:before{content:"";position:absolute;left:12px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--a),var(--b))}
+.rp .sct button b{display:block;font-family:var(--script);font-weight:400;font-size:22px;line-height:1}
+.rp .sct button small{display:block;margin-top:4px;font-size:9px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;opacity:.65}
+.rp .sct button[aria-pressed=true]{border-color:var(--ink);transform:translateY(-2px)}
+.rp .card{margin-top:22px;border-top:2px solid var(--ink);padding-top:18px}
+.rp .card .nm{font-family:var(--script);font-size:clamp(48px,5.4vw,80px);line-height:1;color:var(--papaya)}
+.rp .card .ln{margin:4px 0 0;font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);line-height:1.15}
+.rp .card .who{margin:10px 0 0;font-size:15px;line-height:1.55;max-width:44ch}
+.rp .card .nt{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.rp .card .nt span{border:1.5px solid var(--ink);border-radius:99px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.rp .card .px2{display:flex;align-items:baseline;gap:12px;margin-top:16px;font-weight:800;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.rp .card .px2 b{font-family:var(--serif);font-weight:400;font-size:40px;letter-spacing:0}
+/* packaging */
+.rp .pkg{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);margin-top:clamp(28px,4vw,48px)}
+.rp .pk{position:relative;border-radius:20px;min-height:380px;padding:22px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;background:#fff8ee;border:1px solid rgba(42,18,6,.12)}
+.rp .pk h6{margin:0;font-weight:900;font-size:18px;letter-spacing:.02em;text-transform:uppercase}
+.rp .pk p{margin:8px 0 0;font-size:14px;line-height:1.5}
+.rp .pk .ob{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:46%;aspect-ratio:.8}
+.rp .pk .ob .body{position:absolute;inset:14% 0 0;border-radius:46% 46% 40% 40%/34% 34% 52% 52%;background:radial-gradient(90% 70% at 32% 28%,#FFD36B,#E84628 75%,#9a2a0c)}
+.rp .pk .ob .noz{position:absolute;left:42%;top:0;width:16%;height:18%;border-radius:30% 30% 12% 12%;background:linear-gradient(90deg,#8a5a12,#f6dc8c 35%,#c8902a 60%,#7a4c0e)}
+.rp .pk.mesh .ob:after{content:"";position:absolute;inset:-10% -14% -6%;border-radius:40% 40% 34% 34%;background:repeating-linear-gradient(45deg,transparent 0 9px,rgba(232,70,40,.9) 9px 11px),repeating-linear-gradient(-45deg,transparent 0 9px,rgba(232,70,40,.9) 9px 11px);-webkit-mask:linear-gradient(#000,#000);opacity:.9}
+.rp .pk.mesh .ob:before{content:"";position:absolute;left:50%;top:-16%;width:24%;height:10%;transform:translateX(-50%);background:var(--papaya);border-radius:4px;z-index:2}
+.rp .pk.wax{background:var(--guava)}
+.rp .pk.wax .ob .body{background:radial-gradient(90% 70% at 32% 28%,#FFD1DC,#F76C8C 75%,#b2385a)}
+.rp .pk.wax .wrap{position:absolute;left:50%;top:44%;width:66%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(-8deg);background:repeating-linear-gradient(135deg,rgba(255,250,240,.0) 0 10px,rgba(255,250,240,.12) 10px 12px),#f8efe1;clip-path:polygon(4% 10%,22% 2%,46% 8%,68% 0,94% 8%,100% 32%,92% 56%,100% 82%,86% 98%,58% 92%,34% 100%,8% 92%,0 66%,6% 40%);display:grid;place-items:center;box-shadow:0 10px 20px rgba(0,0,0,.2)}
+.rp .pk.wax .wrap span{font-family:var(--serif);font-size:clamp(46px,5vw,72px);color:var(--guava);letter-spacing:-.04em;transform:rotate(8deg);line-height:1}
+.rp .pk.wax .wrap:before{content:"ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe ripe";position:absolute;inset:6%;font-family:var(--script);font-size:18px;line-height:1.5;color:rgba(232,70,40,.35);word-spacing:8px;overflow:hidden}
+.rp .pk.tag{background:var(--palm);color:var(--cream)}
+.rp .pk.tag .ptag{position:absolute;left:50%;top:40%;width:58%;transform:translate(-50%,-50%) rotate(6deg);background:#f8efe1;color:var(--ink);border-radius:8px 8px 8px 8px;padding:34px 16px 18px;text-align:center;box-shadow:0 14px 24px rgba(0,0,0,.3);transform-origin:50% 0;animation:rpSwing 4s ease-in-out infinite}
+@keyframes rpSwing{0%,100%{transform:translate(-50%,-50%) rotate(6deg)}50%{transform:translate(-50%,-50%) rotate(-4deg)}}
+.rp .pk.tag .ptag:before{content:"";position:absolute;left:50%;top:12px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--palm)}
+.rp .pk.tag .ptag:after{content:"";position:absolute;left:50%;top:-60px;width:2px;height:74px;background:#d8c49a;transform:rotate(-6deg)}
+.rp .pk.tag .ptag b{display:block;font-weight:900;font-size:22px;letter-spacing:.04em}
+.rp .pk.tag .ptag span{display:block;font-family:var(--script);font-size:28px;color:var(--papaya);line-height:1.1}
+.rp .pk.tag .ptag small{display:block;margin-top:8px;font-size:9px;font-weight:800;letter-spacing:.22em}
+/* stickers you can peel */
+.rp .sheet{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:28px}
+.rp .sheet .lb{margin-right:6px}
+.rp .peel{position:relative;z-index:6;display:inline-grid;place-items:center;text-align:center;border-radius:50%;width:92px;height:92px;font-weight:900;font-size:11px;letter-spacing:.06em;line-height:1.1;text-transform:uppercase;cursor:grab;touch-action:none;user-select:none;box-shadow:0 0 0 4px #fff,0 8px 14px rgba(0,0,0,.25);transform:rotate(var(--r,-8deg))}
+.rp .peel:active{cursor:grabbing}
+.rp .peel.a{background:var(--mango);color:var(--ink)}
+.rp .peel.b{background:var(--guava);color:var(--ink);border-radius:20px;width:120px;height:62px}
+.rp .peel.c{background:var(--papaya);color:var(--cream)}
+.rp .peel.d{background:var(--palm);color:var(--cream);border-radius:16px;width:110px;height:70px}
+.rp .peel em{display:block;font-style:normal;font-family:var(--script);text-transform:none;font-weight:400;font-size:20px;letter-spacing:0}
+
+/* world */
+.rp .rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:clamp(28px,4vw,48px);padding-bottom:18px;cursor:grab;scrollbar-width:thin}
+.rp .rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rp .wc{flex:0 0 clamp(260px,30vw,400px);scroll-snap-align:start;border-radius:22px;overflow:hidden;background:#fff8ee;color:var(--ink);display:flex;flex-direction:column}
+.rp .wc .im{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--mango)}
+.rp .wc .im img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform .8s}
+.rp .wc:hover .im img{transform:scale(1.05)}
+.rp .wc .im .n{position:absolute;left:14px;top:12px;font-family:var(--serif);font-size:44px;line-height:1;color:var(--cream);text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.rp .wc .tx{padding:18px 20px 24px}
+.rp .wc .tx .cur{font-size:30px;line-height:1;color:var(--papaya)}
+.rp .wc .tx h6{margin:6px 0 0;font-weight:900;font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+.rp .wc .tx p{margin:8px 0 0;font-size:14px;line-height:1.5}
+.rp .wc .typo{display:grid;place-items:center;height:100%;padding:18px;text-align:center;background:var(--guava)}
+.rp .wc .typo .glow{font-size:clamp(46px,5vw,70px)}
+/* social grid */
+.rp .grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:560px;margin-left:auto}
+.rp .grid9 > *{position:relative;aspect-ratio:1;border-radius:4px;overflow:hidden;display:grid;place-items:center;text-align:center}
+.rp .grid9 img{width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .6s;filter:saturate(1.1)}
+.rp .grid9 > *:hover img{transform:scale(1.08);filter:saturate(1.35) contrast(1.05)}
+.rp .grid9 .t1{background:var(--deep)}
+.rp .grid9 .t2{background:var(--mango);color:var(--ink);font-family:var(--serif);font-size:clamp(40px,5vw,64px);letter-spacing:-.04em}
+.rp .grid9 .t3{background:var(--palm)}
+.rp .grid9 .glow{font-size:clamp(26px,3vw,42px)}
+/* quiz */
+.rp .quiz{margin-top:clamp(40px,5vw,64px);border-radius:28px;background:var(--deep);color:var(--cream);padding:clamp(24px,4vw,56px);position:relative;overflow:hidden}
+.rp .quiz:before{content:"";position:absolute;right:-12%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(247,108,140,.35),transparent)}
+.rp .quiz h4{position:relative;margin:0;font-family:var(--sans);font-weight:900;font-size:clamp(30px,4vw,60px);line-height:.92;text-transform:uppercase;letter-spacing:-.02em}
+.rp .quiz h4 .glow{display:block;font-size:.9em;text-transform:none;letter-spacing:0}
+.rp .qz{position:relative;margin-top:26px}
+.rp .qz .q{font-family:var(--serif);font-size:clamp(24px,2.6vw,38px);line-height:1.1}
+.rp .qz .ops{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.rp .qz .ops button{border:1.5px solid var(--cream);border-radius:99px;padding:13px 20px;font-weight:700;font-size:15px;transition:background .2s,color .2s,transform .2s}
+.rp .qz .ops button:hover{background:var(--mango);color:var(--ink);border-color:var(--mango);transform:translateY(-2px)}
+.rp .qz .prog{display:flex;gap:6px;margin-bottom:18px}
+.rp .qz .prog i{width:34px;height:4px;border-radius:2px;background:rgba(246,237,223,.25)}
+.rp .qz .prog i.on{background:var(--mango)}
+.rp .qz .res{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);align-items:center}
+.rp .qz .res .orb{width:clamp(120px,14vw,190px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--a),var(--b) 70%);box-shadow:0 0 60px -6px var(--b)}
+.rp .qz .res .glow{font-size:clamp(50px,6vw,90px)}
+.rp .qz .res p{margin:8px 0 0;font-size:16px;line-height:1.55;max-width:46ch}
+.rp .qz .res .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.rp .qz .res .acts button{border-radius:99px;padding:12px 20px;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--mango);color:var(--ink)}
+.rp .qz .res .acts button.gh{background:transparent;color:var(--cream);border:1.5px solid var(--cream)}
+
+/* close */
+.rp .end{position:relative;contain:paint;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:var(--cream);background:#b8320f}
+.rp .end .bg{position:absolute;inset:-4%;background:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-lineup.webp?v=1") center/cover;filter:saturate(1.15)}
+.rp .end:after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 50%,rgba(232,70,40,.25),rgba(120,20,0,.6))}
+.rp .end > *:not(.bg){position:relative;z-index:2}
+.rp .end .k{font-size:11px}
+.rp .end h2{margin:14px 0 0;font-size:clamp(84px,14vw,230px);line-height:.85}
+.rp .end h2 span{display:block;width:max-content;margin:0 auto}
+.rp .end h2{font-weight:400}
+.rp .end .sm{margin-top:18px;font-weight:900;letter-spacing:.3em;font-size:12px;text-transform:uppercase}
+.rp .end .wm{margin-top:clamp(40px,6vw,80px);font-family:var(--serif);font-size:clamp(70px,9vw,140px);line-height:.8;letter-spacing:-.045em}
+.rp .end .wm small{display:block;font-family:var(--script);font-size:.32em;letter-spacing:0;color:var(--mango);margin-top:6px}
+.rp .end .up{margin-top:40px;border:1.5px solid var(--cream);border-radius:99px;padding:12px 22px;font-weight:800;font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:background .2s,color .2s}
+.rp .end .up:hover{background:var(--cream);color:var(--papaya)}
+.rp .foot{background:var(--deep);color:rgba(246,237,223,.62);padding-top:22px;padding-bottom:26px;font-size:11px;line-height:1.6;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* reveal */
+.rp .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rp .rv.in{opacity:1;transform:none}
+.rp .toast{position:fixed;left:50%;bottom:24px;z-index:2147483000;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--mango);border-radius:99px;padding:12px 20px;font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:opacity .25s,transform .25s;pointer-events:none}
+.rp .toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* texture wall */
+.rp .tex{position:relative;background:var(--deep);color:var(--cream);padding:clamp(64px,9vw,130px) 0}
+.rp .tex .tx-h{display:grid;grid-template-columns:1fr 1fr;gap:20px 60px;align-items:end;margin-bottom:clamp(30px,4vw,56px)}
+.rp .tex .tx-h .eyb{grid-column:1/-1;margin-bottom:0}
+.rp .tex h3 .r{color:var(--guava)}
+.rp .tx-row{overflow:hidden;padding:7px 0}
+.rp .tx-tr{display:flex;gap:14px;width:max-content;animation:rpTx 60s linear infinite}
+.rp .tx-row[data-dir=r] .tx-tr{animation-direction:reverse;animation-duration:70s}
+.rp .tx-row:hover .tx-tr{animation-play-state:paused}
+@keyframes rpTx{to{transform:translateX(-50%)}}
+.rp .tx-tr figure{position:relative;margin:0;flex:0 0 auto;width:clamp(180px,20vw,300px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#2b120a}
+.rp .tx-row[data-dir=r] figure{aspect-ratio:4/3;width:clamp(240px,26vw,380px)}
+.rp .tx-tr img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s;filter:saturate(1.08)}
+.rp .tx-tr figure:hover img{transform:scale(1.35);filter:saturate(1.35) contrast(1.06)}
+.rp .tx-tr figcaption{position:absolute;left:12px;bottom:10px;font-family:var(--script);font-size:24px;line-height:1;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.55);opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.rp .tx-tr figure:hover figcaption{opacity:1;transform:none}
+/* Edition 03 collab */
+.rp .ed{position:relative;margin-top:clamp(40px,5vw,72px);border-radius:28px;overflow:hidden;background:#fffdf8;color:var(--ink);display:grid;grid-template-columns:.9fr 1.1fr;min-height:560px}
+.rp .ed .bk{position:relative;display:grid;place-items:center;padding:clamp(28px,4vw,56px);background:radial-gradient(90% 80% at 50% 45%,#fff7d6,#f3ead6 70%);perspective:1200px}
+.rp .ed .book{position:relative;width:min(72%,340px);aspect-ratio:.74;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(4deg);transition:transform 1s cubic-bezier(.2,.7,.2,1);cursor:pointer}
+.rp .ed .book:hover,.rp .ed .book.op{transform:rotateY(-8deg) rotateX(2deg)}
+.rp .ed .cv{position:absolute;inset:0;border-radius:3px 8px 8px 3px;overflow:hidden;background:#fff;box-shadow:24px 30px 50px -20px rgba(60,40,0,.45),inset 6px 0 10px rgba(0,0,0,.08);transform-origin:0 50%;transition:transform 1.1s cubic-bezier(.3,.7,.2,1);backface-visibility:hidden;z-index:2}
+.rp .ed .book.op .cv{transform:rotateY(-150deg)}
+.rp .ed .cv img{width:100%;height:100%;object-fit:cover}
+.rp .ed .cv .vol{position:absolute;left:8%;top:6%;font-family:var(--serif);font-size:clamp(22px,2.4vw,34px);line-height:1;color:var(--ink)}
+.rp .ed .cv .vol small{display:block;font-family:var(--sans);font-weight:800;font-size:9px;letter-spacing:.24em;margin-top:6px}
+.rp .ed .cv .rp-x{position:absolute;right:7%;bottom:6%;font-family:var(--serif);font-size:clamp(30px,3.4vw,48px);line-height:.8;letter-spacing:-.04em;color:#F6C22B;text-shadow:0 0 1px rgba(120,80,0,.6)}
+.rp .ed .pg{position:absolute;inset:2% 2% 2% 0;border-radius:2px 6px 6px 2px;background:#fffdf8;box-shadow:inset 8px 0 14px rgba(0,0,0,.08);padding:14% 12%;display:flex;flex-direction:column;justify-content:space-between}
+.rp .ed .pg .cur{font-size:clamp(26px,2.6vw,38px);color:var(--papaya);line-height:1}
+.rp .ed .pg p{margin:0;font-family:var(--serif);font-size:clamp(14px,1.3vw,18px);line-height:1.35}
+.rp .ed .pg .mini{width:44%;aspect-ratio:.8;align-self:flex-end;position:relative}
+.rp .ed .pg .mini .body{position:absolute;inset:14% 0 0;border-radius:46% 46% 40% 40%/34% 34% 52% 52%;background:radial-gradient(90% 70% at 32% 28%,#FFF6A8,#F2D03A 70%,#a88a10)}
+.rp .ed .pg .mini .noz{position:absolute;left:42%;top:0;width:16%;height:18%;border-radius:30% 30% 12% 12%;background:linear-gradient(90deg,#8a5a12,#f6dc8c 35%,#c8902a 60%,#7a4c0e)}
+.rp .ed .bk .hint{position:absolute;bottom:18px;left:0;right:0;text-align:center}
+.rp .ed .tx2{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
+.rp .ed .tx2 h4{margin:10px 0 0;font-family:var(--sans);font-weight:900;font-size:clamp(34px,4.4vw,68px);line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.rp .ed .tx2 h4 span{color:#D9A400}
+.rp .ed .tx2 .lede{font-size:clamp(20px,1.9vw,28px)}
+.rp .ed .eds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.rp .ed .eds div{border-top:2px solid var(--ink);padding-top:10px;font-size:13px;line-height:1.4}
+.rp .ed .eds div b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1}
+.rp .ed .eds div.now b{color:#D9A400}
+.rp .ed ul{margin:20px 0 0;padding:0;list-style:none}
+.rp .ed li{display:flex;gap:12px;border-top:1px solid rgba(42,18,6,.18);padding:11px 0;font-size:14px;line-height:1.45}
+.rp .ed li b{flex:0 0 108px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding-top:3px}
+.rp .ed .spr{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.rp .ed .spr img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.rp .ed .cap{margin-top:8px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;font-weight:700}
+@media(max-width:1000px){.rp .ed{grid-template-columns:1fr}.rp .tex .tx-h{grid-template-columns:1fr}}
+@media(max-width:767px){.rp .ed .eds{grid-template-columns:1fr}.rp .ed li{flex-direction:column;gap:4px}.rp .ed li b{flex:none}}
+
+@media(max-width:1000px){
+.rp .two,.rp .lab,.rp .tac,.rp .pane{grid-template-columns:1fr}
+.rp .pane.on{display:grid}
+.rp .pills{grid-template-columns:repeat(2,1fr)}
+.rp .voice,.rp .types,.rp .pkg{grid-template-columns:1fr}
+.rp .pal{grid-template-columns:repeat(3,1fr)}
+.rp .grid9{margin:28px auto 0}
+.rp .top{padding-right:var(--g)}
+}
+@media(max-width:767px){
+.rp .top{padding-top:16px;gap:14px}
+.rp .top a.lb:not(.bk){display:none}
+.rp .hero .kick{top:74px}
+.rp .hero .de{left:var(--g);transform:rotate(-6deg);top:60%}
+.rp .tag58{top:150px;right:var(--g);width:112px}
+.rp .hero .sf{top:auto;bottom:190px;right:auto;left:62%}
+.rp .board .stk{display:none}
+.rp .part .in2{grid-template-columns:1fr}
+.rp .part h2{text-align:left}
+.rp .sct{grid-template-columns:repeat(2,1fr)}
+.rp .ms .vd{text-align:left}
+.rp .trk .zl.n2{right:0}
+.rp .qz .res{grid-template-columns:1fr}
+.rp .pol{--w:clamp(120px,38vw,170px)}
+.rp .board{height:clamp(760px,170vw,980px)}
+.rp .bbs{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:380px){.rp .pal{grid-template-columns:repeat(2,1fr)}.rp .pills{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.rp .hero .sk,.rp .hero .mk,.rp .hero .mk2,.rp .tick .tr,.rp .tx-tr,.rp .hero .sf,.rp .tag58:before,.rp .mkt .sign span,.rp .pk.tag .ptag{animation:none}.rp .rv{opacity:1;transform:none}}
+</style></head>
+<body>
+<div class="rp" id="rp">
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="top px" aria-label="Page">
+    <span class="wm">ripe</span>
+    <a class="lb bk" href="https://www.byninaaustin.com/what-the-spec">← Back</a>
+    <a class="lb" href="#rp-found" data-jump="rp-found">Foundation</a>
+    <a class="lb" href="#rp-camp" data-jump="rp-camp">Campaign</a>
+    <a class="lb" href="#rp-tact" data-jump="rp-tact">Tactile</a>
+    <a class="lb" href="#rp-world" data-jump="rp-world">World</a>
+  </nav>
+
+  <header class="hero" id="rp-top">
+    <div class="sk" aria-hidden="true"></div>
+    <div class="mk2" aria-hidden="true"><span>ripe</span></div>
+    <div class="mk" aria-hidden="true"><span>ripe</span></div>
+    <div class="mk3" aria-hidden="true"><span>ripe</span></div>
+    <div class="fade" aria-hidden="true"></div>
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">ripe. DTC fragrance brand positioning.</h1>
+    <div class="kick">
+      <p class="lb">DTC fragrance · Brand positioning</p>
+      <p class="lb" style="margin-top:10px;color:var(--cream)">Exotic / Untamed / Dangerously edible</p>
+    </div>
+    <div class="de" aria-hidden="true"><span class="glow pk">dangerously edible</span></div>
+    <button type="button" class="tag58" id="rp-58" aria-label="Eau de parfum, 50 ml, 58 dollars. Good enough to bite."><span><em>EDP / 50ML</em><b>$58</b><small>good enough to bite</small></span></button>
+    <img class="sf" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-starfish.webp?v=1" alt="" aria-hidden="true">
+    <div class="base">
+      <p>Fruit at its most ripe. The decadent moment right before it's too much, at a price you can actually reach.</p>
+      <div class="hint lb"><i></i>Scroll</div>
+    </div>
+  </header>
+
+  <div class="tick" aria-hidden="true"><div class="tr" data-tick="Exotic|Untamed|dangerously edible|Niche fantasy|Mass reach|smell like trouble"></div></div>
+
+  <!-- PART 01 -->
+  <section class="part rv" id="rp-found" aria-labelledby="rp-p1">
+    <div class="bg" style="background-image:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-peach-skin.webp?v=1')"></div>
+    <div class="in2 px"><div class="no">01</div><h2 id="rp-p1"><span class="glow">peak ripeness</span>The Foundation</h2></div>
+  </section>
+
+  <section class="sec mg px">
+    <div class="two">
+      <div class="rv">
+        <p class="eyb lb">The big ripe idea</p>
+        <h3>Niche fantasy.<br><span class="r">No velvet rope.</span></h3>
+        <p class="lede">A fragrance house built on that exact second when fruit is sweetest. Soft, fragrant, almost indecent.</p>
+      </div>
+      <div class="rv">
+        <p class="body" style="margin-top:0">We borrow luxury's world-building, concentration and desire, then leave the velvet rope at home. A $45 to $75 sweet spot turns aspiration into an invitation: elevated enough to trade up, reachable enough to say yes.</p>
+        <p class="body"><b>The masstige move.</b> Exotic, untamed luxury for people ready to trade up, not be priced out. Status without the snobbery.</p>
+      </div>
+    </div>
+
+    <div class="ms rv" id="rp-ms">
+      <div class="hd">
+        <div><p class="lb" style="margin:0 0 6px">Drag the fruit. Find the sweet spot.</p><div class="pr" id="rp-price">$58</div></div>
+        <p class="vd" id="rp-verdict"><b>ripe lives here</b>The stretch, not the barrier.</p>
+      </div>
+      <div class="trk">
+        <span class="z m"></span><span class="z r"></span><span class="z n"></span>
+        <span class="zl" style="left:0">Mass · $10 to $30</span>
+        <span class="zl" style="left:20%">ripe · $45 to $75</span>
+        <span class="zl n2" style="right:0">Niche · $200+</span>
+        <span class="kn" id="rp-kn" aria-hidden="true"></span>
+        <input type="range" id="rp-range" min="10" max="250" value="58" step="1" aria-label="Price per 50 ml bottle">
+      </div>
+    </div>
+
+    <div class="pills rv">
+      <div><b>Price the gap</b>$45 to $75 EDP. Above body sprays, below $200 niche. A stretch, not a barrier.</div>
+      <div><b>Sell the feeling</b>Lead with the forbidden-fruit character you become, told with luxury's storytelling and design codes.</div>
+      <div><b>Democratize prestige</b>Niche-level fantasy and concentrated natural formulas, reachable through pop-ups, TikTok Shop and the right collab.</div>
+      <div><b>Earn the premium</b>Packaging, unboxing and DTC experience noticeably richer than mass. The tangible upgrade is the proof.</div>
+    </div>
+  </section>
+
+  <section class="sec cr px">
+    <div class="rv">
+      <p class="eyb lb">Personality / voice</p>
+      <h3>Fruit is sex, status<br><span class="r">and parody at once.</span></h3>
+    </div>
+    <div class="voice rv">
+      <div class="vc"><span class="cur">edgy-elegant</span><p>Prestige that knows how to have fun. Polished enough to gift, loose enough to wink.</p></div>
+      <div class="vc"><span class="cur">sensual</span><p>Moisture-obsessed, skin-first, always one bite from too much. Appetite is the whole point.</p></div>
+      <div class="vc"><span class="cur">playful-maximalist</span><p>Surreal endless summer. One loud gesture at a time, and every gesture is a little bit of a joke.</p></div>
+    </div>
+    <div class="rv" style="margin-top:clamp(36px,5vw,56px)">
+      <p class="lb" style="margin:0">Say it like ripe. Tap a line.</p>
+      <div class="lines" id="rp-lines">
+        <button type="button">good enough to bite</button><button type="button">smell like trouble</button><button type="button">pick your poison</button><button type="button">sold by ripeness</button><button type="button">status without snobbery</button><button type="button">you, but less behaved</button>
+      </div>
+      <div class="said" id="rp-said" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="sec cr px" style="padding-top:0">
+    <div class="rv">
+      <p class="eyb lb">The visual codes</p>
+      <h3>Tanned into<br><span class="r">the fruit.</span></h3>
+      <p class="body">The logo isn't printed on fruit, it's sun-printed into it. The peel around the letters darkens in the sun while the name stays a crisp, paler blush. Ripen it, then try the four logo behaviors.</p>
+    </div>
+    <div class="lab rv">
+      <div class="fruit" id="rp-fruit" data-b="tanned">
+        <div class="gl"></div>
+        <div class="tanov"></div>
+        <div class="word">ripe</div>
+        <div class="drips" aria-hidden="true"><i style="left:8%;--w:16px;--h:70px;--d:.2s"></i><i style="left:31%;--w:12px;--h:110px;--d:1.1s"></i><i style="left:56%;--w:18px;--h:60px;--d:.6s"></i><i style="left:83%;--w:13px;--h:96px;--d:1.7s"></i></div>
+      </div>
+      <div class="ctl">
+        <div class="box">
+          <p class="lb" style="margin:0">Ripeness</p>
+          <div class="st" id="rp-rst">ripe</div>
+          <input type="range" id="rp-ripe" min="0" max="100" value="62" aria-label="Ripeness">
+          <div class="rl"><span>Unripe</span><span>Ripe</span><span>Too ripe</span></div>
+        </div>
+        <div class="box">
+          <p class="lb" style="margin:0">Logo behavior</p>
+          <div class="chips" id="rp-beh">
+            <button type="button" aria-pressed="true" data-b="tanned">Tanned</button><button type="button" aria-pressed="false" data-b="bitten">Bitten</button><button type="button" aria-pressed="false" data-b="dripping">Dripping</button><button type="button" aria-pressed="false" data-b="stickered">Stickered</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="types rv">
+      <div class="ty"><div><p class="lb" style="margin:0">01 · Primary signature</p><div class="s1" style="margin-top:18px">ripe</div></div><p class="sm">Tan-line serif. The wordmark, always sun-printed, bitten, dripping or stamped. Never just typed.</p></div>
+      <div class="ty"><div><p class="lb" style="margin:0">02 · Graphic layer</p><div class="s2 glow" style="margin-top:14px">mango fever</div></div><p class="sm">Grainy-glow cursive. Thick, hazy, neon-bloomed and film-grained, pulled from Brazilian lo-fi album and flyer art.</p></div>
+      <div class="ty"><div><p class="lb" style="margin:0">03 · Information</p><div class="s3" style="margin-top:18px">Dangerously<br>edible.</div></div><p class="sm">Punchy bold sans. Prices, notes, sizes and calls to action. Loud, short, no decoration.</p></div>
+    </div>
+
+    <div class="rv" style="margin-top:clamp(48px,6vw,80px)">
+      <p class="eyb lb">Palette · tap a swatch to copy</p>
+      <div class="pal" id="rp-pal">
+        <button type="button" style="background:#FFC247;color:#2A1206" data-hex="#FFC247"><em>Copied</em><b>Mango Sunrise</b><span>#FFC247</span></button>
+        <button type="button" style="background:#F76C8C;color:#2A1206" data-hex="#F76C8C"><em>Copied</em><b>Guava Pink</b><span>#F76C8C</span></button>
+        <button type="button" style="background:#E84628;color:#F6EDDF" data-hex="#E84628"><em>Copied</em><b>Papaya Red</b><span>#E84628</span></button>
+        <button type="button" style="background:#E89A0C;color:#2A1206" data-hex="#E89A0C"><em>Copied</em><b>Passionfruit Amber</b><span>#E89A0C</span></button>
+        <button type="button" style="background:#667730;color:#F6EDDF" data-hex="#667730"><em>Copied</em><b>Palm Leaf</b><span>#667730</span></button>
+        <button type="button" style="background:#F6EDDF;color:#2A1206;box-shadow:inset 0 0 0 1px rgba(42,18,6,.15)" data-hex="#F6EDDF"><em>Copied</em><b>Coconut Cream</b><span>#F6EDDF</span></button>
+      </div>
+    </div>
+
+    <div class="two rv" style="margin-top:clamp(56px,7vw,100px)">
+      <div>
+        <p class="eyb lb">Reference, not replication</p>
+        <h3 style="font-size:clamp(36px,4.6vw,76px)">Raw marks.<br><span class="r">Polished instinct.</span></h3>
+        <ol class="rules"><li>Preserve embedded typography</li><li>Never cover a face</li><li>Crop for energy, not damage</li><li>One loud gesture at a time</li></ol>
+      </div>
+      <div class="refs" tabindex="0" aria-label="Type and mark references, scroll sideways">
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-lineup.webp?v=1" alt="" role="img" aria-label="Grainy glowing cursive flyer reference" loading="lazy"><figcaption>Grainy-glow cursive</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-original-brasil.webp?v=1" alt="" role="img" aria-label="Brazilian album art reference" loading="lazy"><figcaption>Brazilian lo-fi album art</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-jacquemus.webp?v=1" alt="" role="img" aria-label="Hand-drawn crayon frame reference" loading="lazy"><figcaption>Crayon marks on prestige</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-boa-viagem.webp?v=1" alt="" role="img" aria-label="Sun-faded beach poster reference" loading="lazy"><figcaption>Sun-faded poster type</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-market.webp?v=1" alt="" role="img" aria-label="Fruit stand with drawn stickers reference" loading="lazy"><figcaption>Market stickers</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tags.webp?v=1" alt="" role="img" aria-label="Woven hang tag reference" loading="lazy"><figcaption>Produce-tag labels</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cr px" style="padding-top:0">
+    <div class="board rv" id="rp-board">
+      <div class="bt"><p class="lb" style="margin:0 0 10px;color:#e8eeff">Mood / photography / texture</p><h4>Endless summer<br><span>after dark.</span></h4><p>Wet-gloss fruit. Sun-soaked skin. Jacquemus-scale gestures. Prestige that knows how to have fun.</p></div>
+      <img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-star.webp?v=1" alt="" style="left:46%;top:4%" aria-hidden="true">
+      <span class="bh">Drag the prints around</span>
+    </div>
+  </section>
+
+
+  <section class="tex" aria-labelledby="rp-tx">
+    <div class="px tx-h rv"><p class="eyb lb">Texture / excess</p><h3 id="rp-tx">Moisture-<br><span class="r">obsessed.</span></h3><p class="body">Extreme macro. Glistening seeds, slick pulp, velvet fuzz, condensation and drip. Shot like a luxury beauty product, cropped for energy. Hover to get closer.</p></div>
+    <div class="tx-row" data-dir="l"><div class="tx-tr" data-tx="tx-papaya:Papaya seed|tx-strawberry:Strawberry skin|tx-kiwi:Kiwi light|tx-fig:Fig flesh|tx-dragonfruit:Dragon fruit|tx-mango:Mango slick"></div></div>
+    <div class="tx-row" data-dir="r"><div class="tx-tr" data-tx="tx-white-peach:White peach|tx-orange-drip:Orange drip|tx-melon-seeds:Melon seed|tx-citrus:Citrus pulp|tx-sea-passion:Sea and passionfruit|passionfruit:Passionfruit gloss"></div></div>
+  </section>
+
+  <!-- PART 02 -->
+  <section class="part rv" id="rp-camp" aria-labelledby="rp-p2">
+    <div class="bg" style="background-image:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-boa-viagem.webp?v=1');background-position:50% 30%"></div>
+    <div class="in2 px"><div class="no">02</div><h2 id="rp-p2"><span class="glow">make a scene</span>Campaign Strategy</h2></div>
+  </section>
+
+  <section class="sec pp px">
+    <div class="rv">
+      <p class="eyb lb">Hero platform</p>
+      <h3>Forbidden fruit.<br><span class="r">Within reach.</span></h3>
+      <p class="lede">A surreal endless summer where every scent is a character you can afford to become.</p>
+    </div>
+    <div class="tabs rv" role="tablist" id="rp-tabs">
+      <button type="button" role="tab" aria-selected="true" data-p="ooh">01 · OOH</button>
+      <button type="button" role="tab" aria-selected="false" data-p="soc">02 · Paid social</button>
+      <button type="button" role="tab" aria-selected="false" data-p="pop">03 · Fruit-market pop-up</button>
+      <button type="button" role="tab" aria-selected="false" data-p="film">04 · Hero film</button>
+    </div>
+    <div class="panes rv">
+      <div class="pane on" data-p="ooh" role="tabpanel">
+        <div>
+          <div class="bb" id="rp-bb">
+            <img id="rp-bbimg" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tx-mango.webp?v=1" alt="" role="img" aria-label="Billboard mockup with macro fruit">
+            <div class="bbt"><small id="rp-bbk">01 / Mango · Hyperreal macro OOH</small><div><b>ripe</b><div class="glow" id="rp-bbl">mango fever</div></div></div>
+          </div>
+          <div class="bbs" id="rp-bbs"></div>
+        </div>
+        <div><h5>Six stories of dripping fruit.</h5><p>Hyperreal macro food at building scale. One fruit per placement, shot like a luxury beauty product, each one a character with its own line. Wet, too close, impossible to walk past.</p><ul><li>Wild postings and transit domination in launch cities</li><li>One loud gesture per board, never two</li><li>Price on the poster. The invitation is the point</li></ul></div>
+      </div>
+      <div class="pane" data-p="soc" role="tabpanel">
+        <div class="phone"><div class="scr" id="rp-feed">
+          <img class="on" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-curlers.webp?v=1" alt="" role="img" aria-label="Fruit still life story">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-coconut-hip.webp?v=1" alt="" role="img" aria-label="Coconut on skin story">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-arms.webp?v=1" alt="" role="img" aria-label="Arms full of fruit story">
+          <div class="ui"><div class="bar"><i><b></b></i><i><b></b></i><i><b></b></i></div><div><div class="cap"><span class="glow">pick your poison</span></div><div class="shop" style="margin-top:10px"><div><b>ripe</b><div style="font-size:11px;margin-top:2px">mango fever · 50ml · $58</div></div><span>Shop</span></div></div></div>
+        </div></div>
+        <div><h5>Product staged as produce.</h5><p>Saturated still-lifes where the bottle sits in the fruit bowl and nobody can tell which one to bite. Built for the thumb-stop, closed in one tap on TikTok Shop.</p><ul><li>Fruit still-lifes, skin close-ups, ASMR squeezes</li><li>Creator kits that arrive like a market haul</li><li>"Which forbidden fruit are you?" as the hook</li></ul></div>
+      </div>
+      <div class="pane" data-p="pop" role="tabpanel">
+        <div class="mkt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-market.webp?v=1" alt="" role="img" aria-label="Fruit market pop-up reference" loading="lazy"><div class="sign"><span>The ripe fruit market · The ripe fruit market · The ripe fruit market · The ripe fruit market ·</span></div></div>
+        <div><h5>Free to enter. Hard to leave.</h5><p>A walk-in fruit market where fragrance is sold like exotic produce. Crates, scales, hand-lettered price cards and mesh bags. Prestige with the door wide open.</p><ul><li>Scents weighed out, bagged and stickered by ripeness</li><li>Sample-by-the-slice tasting bar, no purchase needed</li><li>Ibiza / Miami / London</li></ul></div>
+      </div>
+      <div class="pane" data-p="film" role="tabpanel">
+        <div class="sb">
+          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-summer-rio.webp?v=1" alt="" role="img" aria-label="Storyboard frame, sand and coconut" loading="lazy"><figcaption><small>Frame 01</small>The name, written in the sand.</figcaption></figure>
+          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-mango-bite.webp?v=1" alt="" role="img" aria-label="Storyboard frame, the bite" loading="lazy"><figcaption><small>Frame 02</small>The first bite. Juice down the wrist.</figcaption></figure>
+          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-whip.webp?v=1" alt="" role="img" aria-label="Storyboard frame, whipped texture" loading="lazy"><figcaption><small>Frame 03</small>Texture takes over. Everything melts.</figcaption></figure>
+          <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-peach.webp?v=1" alt="" role="img" aria-label="Storyboard frame, peach skin" loading="lazy"><figcaption><small>Frame 04</small>Squeeze. Spray. Smell like trouble.</figcaption></figure>
+        </div>
+        <div><h5>You, but less behaved.</h5><p>A Jacquemus-scale endless-summer hero film. Surreal, sun-blown and a little absurd: oversized fruit, sticky skin, a market that turns into a party. Cut down for every placement.</p><ul><li>60 second hero, 15 and 6 second cutdowns</li><li>Lo-fi BTS shot on film for creators</li><li>Score built from market sounds and squeezes</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tick alt" aria-hidden="true"><div class="tr" data-tick="Looks edible|Feels expensive|pick your poison|Squeeze to spray|sold by ripeness"></div></div>
+
+  <!-- PART 03 -->
+  <section class="part rv" id="rp-tact" aria-labelledby="rp-p3">
+    <div class="bg" style="background-image:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-whip.webp?v=1')"></div>
+    <div class="in2 px"><div class="no">03</div><h2 id="rp-p3"><span class="glow">pick your poison</span>The Tactile Experience</h2></div>
+  </section>
+
+  <section class="sec mg px">
+    <div class="rv">
+      <p class="eyb lb">Signature product design</p>
+      <h3>Squeeze it.<br><span class="r">It's alive.</span></h3>
+      <p class="body">Not glass. A soft, flexible silicone shell you squeeze to spray. Plump and fruit-sized, matte with a velvety peach-fuzz finish, a shallow finger dimple at the squeeze point and one polished gold atomizer as the only rigid part.</p>
+    </div>
+    <div class="tac">
+      <div class="stage rv" id="rp-stage"><div class="stx" id="rp-stx" aria-hidden="true"></div>
+        <div class="btl" id="rp-btl" role="button" tabindex="0" aria-label="Squeeze the bottle to spray">
+          <div class="noz"></div>
+          <div class="body"></div>
+          <div class="dim"></div>
+          <div class="lbl"><b>ripe</b><span id="rp-bn">mango fever</span><small>Eau de parfum · 50ml</small></div>
+        </div>
+        <div class="mist" id="rp-mist"></div>
+        <span class="sqh" id="rp-sqh">Press and hold to squeeze</span>
+      </div>
+      <div class="rv">
+        <p class="lb" style="margin:0">Core collection · six forbidden fruits</p>
+        <div class="sct" id="rp-sct"></div>
+        <div class="card" id="rp-card" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cr px">
+    <div class="rv">
+      <p class="eyb lb">Novelty / unboxing</p>
+      <h3>Looks edible.<br><span class="r">Feels expensive.</span></h3>
+      <p class="body">Market-fruit novelty packaging finished to prestige standard. The unboxing does the trading-up. Peel a sticker and put it anywhere.</p>
+    </div>
+    <div class="pkg rv" id="rp-pkg">
+      <div class="pk mesh"><div class="ob"><div class="noz"></div><div class="body"></div></div><h6>The mesh bag</h6><p>Sold like a bag of limes. Papaya-red netting, a gold clip and a hand-tied tag.</p></div>
+      <div class="pk wax"><div class="wrap"><span>ripe</span></div><h6>The wax wrap</h6><p>Printed tissue twisted around each bottle like market fruit. Rip it open, keep the paper.</p></div>
+      <div class="pk tag"><div class="ptag"><b>RIPEN NOW</b><span>hot mango</span><small>BATCH 01 · SOLD BY RIPENESS</small></div><h6>The produce tag</h6><p>Every bottle hangs a ripeness tag with batch, notes and the day it was picked.</p></div>
+    </div>
+    <div class="sheet rv" id="rp-sheet">
+      <span class="lb">Sticker sheet ·</span>
+      <span class="peel a" style="--r:-10deg">Sold by<em>ripeness</em></span>
+      <span class="peel b" style="--r:6deg"><em>ripen now</em></span>
+      <span class="peel c" style="--r:-4deg">Too<em>ripe</em></span>
+      <span class="peel d" style="--r:8deg">Batch 01<em>handle softly</em></span>
+    </div>
+  </section>
+
+  <!-- PART 04 -->
+  <section class="part rv" id="rp-world" aria-labelledby="rp-p4">
+    <div class="bg" style="background-image:url('https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-macro.webp?v=1')"></div>
+    <div class="in2 px"><div class="no">04</div><h2 id="rp-p4"><span class="glow">one tap away</span>World-Building</h2></div>
+  </section>
+
+  <section class="sec pl px">
+    <div class="two">
+      <div class="rv">
+        <p class="eyb lb">The ripe ecosystem</p>
+        <h3>A whole world.<br><span class="r">No velvet rope.</span></h3>
+        <p class="body">Democratized prestige, physical to digital. Every touchpoint is a way in, and none of them asks you to prove you belong.</p>
+      </div>
+      <div class="grid9 rv" aria-label="Social grid preview">
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-macro.webp?v=1" alt="" role="img" aria-label="Papaya macro" loading="lazy"></div>
+        <div class="t1"><span class="glow">too ripe</span></div>
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-curlers.webp?v=1" alt="" role="img" aria-label="Mango curlers" loading="lazy"></div>
+        <div class="t2">ripe</div>
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-coconut-crack.webp?v=1" alt="" role="img" aria-label="Cracked coconut" loading="lazy"></div>
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-banana-peel.webp?v=1" alt="" role="img" aria-label="Banana peel macro" loading="lazy"></div>
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-coconut-hip.webp?v=1" alt="" role="img" aria-label="Coconut on skin" loading="lazy"></div>
+        <div class="t3"><span class="glow pk">smell like trouble</span></div>
+        <div><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-peach.webp?v=1" alt="" role="img" aria-label="Peach skin" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="rail rv" id="rp-rail" tabindex="0" aria-label="Ecosystem, scroll or drag sideways">
+      <article class="wc"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-market.webp?v=1" alt="" role="img" aria-label="Fruit market" loading="lazy"><span class="n">01</span></div><div class="tx"><span class="cur">fruit-market pop-up</span><h6>Free to enter, hard to leave</h6><p>Fragrance sold like exotic produce, weighed, bagged and stickered by ripeness.</p></div></article>
+      <article class="wc"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-arms.webp?v=1" alt="" role="img" aria-label="Arms full of fruit" loading="lazy"><span class="n">02</span></div><div class="tx"><span class="cur">shop it live</span><h6>The TikTok fruit stand</h6><p>Live drops and scent-as-flavor ASMR turn prestige into a one-tap impulse.</p></div></article>
+      <article class="wc"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-mango-bite.webp?v=1" alt="" role="img" aria-label="Biting a mango" loading="lazy"><span class="n">03</span></div><div class="tx"><span class="cur">bite the content</span><h6>Lo-fi sensual creators</h6><p>ASMR squeezes, market-haul unboxings and creator rituals shot on film.</p></div></article>
+      <article class="wc"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tags.webp?v=1" alt="" role="img" aria-label="Hang tags" loading="lazy"><span class="n">04</span></div><div class="tx"><span class="cur">objects to keep</span><h6>Fruit-market merch</h6><p>Mesh totes, terry sets, umbrellas and ripeness stickers people actually wear.</p></div></article>
+      <article class="wc"><div class="im"><div class="typo"><span class="glow">status, no snobbery</span></div><span class="n">05</span></div><div class="tx"><span class="cur">the right collab</span><h6>Edition 03 with The Gourmand</h6><p>A cult art book meets a mass-reachable scent. Status without snobbery, bound in hardcover.</p></div></article>
+      <article class="wc"><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-coconut-crack.webp?v=1" alt="" role="img" aria-label="Cracked coconut" loading="lazy"><span class="n">06</span></div><div class="tx"><span class="cur">mock editorial</span><h6>PR that reads like a summer story</h6><p>Seeded editorial and a gourmand "ripeness report" that frames ripe as the season's state of mind.</p></div></article>
+    </div>
+
+
+    <div class="ed rv" id="rp-ed">
+      <div class="bk">
+        <div class="book" id="rp-book" role="button" tabindex="0" aria-label="Open the Edition 03 book">
+          <div class="pg"><span class="cur">smell the page</span><p>Every copy ships with a limited limoncillo squeeze bottle and scented endpapers. Recipe on the left, the scent of it on the right.</p><div class="mini"><div class="noz"></div><div class="body"></div></div></div>
+          <div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-gourmand-cover.webp?v=1" alt="" role="img" aria-label="Lemon still life cover reference"><div class="vol">Vol. 03<small>THE FORBIDDEN FRUIT</small></div><div class="rp-x">ripe</div></div>
+        </div>
+        <span class="hint lb">Tap the book to open it</span>
+      </div>
+      <div class="tx2">
+        <p class="lb" style="margin:0;color:var(--papaya)">The right collab · Edition 03</p>
+        <h4>ripe × The Gourmand.<br><span>Vol. 03.</span></h4>
+        <p class="lede">The egg, then the lemon. The third volume belongs to the fruit everyone is told not to touch.</p>
+        <p class="body" style="max-width:56ch">The Gourmand and TASCHEN turn a single ingredient into a hardcover world of stories, art history and recipes. ripe proposes the next one: a volume on forbidden fruit, from mango to limoncillo, sold as a fragrance edition. The cult art-book audience meets a mass-reachable scent, and prestige lands in a gift you can actually afford.</p>
+        <div class="eds"><div><b>Vol. 01</b>The egg</div><div><b>Vol. 02</b>The lemon</div><div class="now"><b>Vol. 03</b>Forbidden fruit, with ripe</div></div>
+        <ul>
+          <li><b>The object</b>Hardcover volume in a fruit-skin slipcase, with a limited limoncillo squeeze bottle bound inside.</li>
+          <li><b>The bridge</b>Limoncillo picks up where the lemon left off. Citrus first, then something sweeter and less behaved.</li>
+          <li><b>The pairings</b>Recipe-to-scent spreads: each chapter's dish matched to one of the six forbidden fruits.</li>
+          <li><b>The launch</b>A reading and tasting at the ripe fruit market, with the book weighed out and bagged like produce.</li>
+        </ul>
+        <div class="spr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-gourmand-squeezer.webp?v=1" alt="" role="img" aria-label="Lemon squeezer spread reference" loading="lazy"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-gourmand-cut.webp?v=1" alt="" role="img" aria-label="Cut lemon spread reference" loading="lazy"></div>
+        <p class="cap">Reference: The Gourmand's Lemon, The Gourmand × TASCHEN. Edition 03 is a spec proposal.</p>
+      </div>
+    </div>
+
+    <div class="quiz rv" id="rp-quiz">
+      <h4><span class="glow">bite the content</span>Which forbidden fruit are you?</h4>
+      <div class="qz" id="rp-qz" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="end" aria-labelledby="rp-end">
+    <div class="bg" aria-hidden="true"></div>
+    <p class="lb k">The world is ready to ripen</p>
+    <h2 id="rp-end"><span class="glow">good enough</span><span class="glow">to bite.</span></h2>
+    <p class="sm">Exotic. Untamed. Accessible.</p>
+    <div class="wm">ripe<small>smell like trouble</small></div>
+    <button type="button" class="up" data-jump="rp-top">Back to the top ↑</button>
+  </section>
+  <div class="foot px"><span>ripe is a spec brand concept. Mood and reference imagery is used for direction only.</span><span>Exotic / Untamed / Dangerously edible</span></div>
+  <div class="toast" id="rp-toast" role="status"></div>
+</div>
+
+<script>
+(function(){
+var root=document;var D=window.document;var R=root.getElementById('rp');
+var A='https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/';
+var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function $(id){return root.getElementById(id)}
+function toast(t){var el=$('rp-toast');el.textContent=t;el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('on')},1600)}
+
+/* the six forbidden fruits */
+var SC=[
+ {id:'mango',name:'mango fever',fruit:'Mango',line:'sun-warmed skin, after dark',notes:['mango nectar','pink pepper','salted skin'],a:'#FFE08A',b:'#E84628',c:'#9a2a0c',mist:'#FFB547',img:'ripe-tx-mango',tx:'ripe-tx-mango',who:'Stays out past sunset and makes it everyone’s problem.'},
+ {id:'peach',name:'peach fuzz',fruit:'Peach',line:'soft to the touch, hard to forget',notes:['white peach','apricot skin','cashmere musk'],a:'#FFE1C2',b:'#F28A5B',c:'#b4471f',mist:'#FFB08A',img:'ripe-tx-white-peach',tx:'ripe-tx-white-peach',who:'Sweet on first impression. Velvet with a bruise.'},
+ {id:'guava',name:'pink guava',fruit:'Guava',line:'sweet talk, sharp edges',notes:['pink guava','lychee','green fig leaf'],a:'#FFD1DC',b:'#F76C8C',c:'#b2385a',mist:'#F76C8C',img:'ripe-tx-dragonfruit',tx:'ripe-tx-dragonfruit',who:'Flirts in two languages and means it in one.'},
+ {id:'limoncillo',name:'limoncillo',fruit:'Limoncillo',line:'sour first, sweet after',notes:['limoncillo pulp','lime zest','salted vetiver'],a:'#E9F08C',b:'#9DAA3C',c:'#667730',mist:'#C7D65A',img:'ripe-tx-kiwi',tx:'ripe-tx-kiwi',who:'Bought by the bag on the roadside, gone by the end of the drive.'},
+ {id:'passion',name:'dirty passion',fruit:'Passionfruit',line:'the seeds are the point',notes:['passionfruit pulp','black seed','smoked vanilla'],a:'#FFE27A',b:'#E89A0C',c:'#8a5200',mist:'#F2B21E',img:'ripe-tx-sea-passion',tx:'ripe-tx-sea-passion',who:'Messy on purpose. Leaves a little evidence.'},
+ {id:'coconut',name:'coconut skin',fruit:'Coconut',line:'milk-white, sun-cooked',notes:['cracked coconut','warm salt','vanilla smoke'],a:'#FFFBF2',b:'#EAD9BD',c:'#a88660',mist:'#F6EDDF',img:'ripe-coconut-crack',tx:'ripe-coconut-crack',who:'Cool hands, warm shoulders, never in a hurry.'}
+];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+/* hero: the tan develops */
+setTimeout(function(){R.classList.add('tanned')},still?0:500);
+$('rp-58').addEventListener('click',function(){toast('EDP / 50ml / $58. Good enough to bite.')});
+
+/* tickers */
+root.querySelectorAll('[data-tick]').forEach(function(t){var w=t.getAttribute('data-tick').split('|'),h='';
+  for(var k=0;k<4;k++)w.forEach(function(x,i){h+='<span class="'+(x===x.toLowerCase()?'c':'')+'">'+esc(x)+'</span><span>·</span>'});t.innerHTML=h});
+
+/* smooth jumps */
+R.addEventListener('click',function(e){var j=e.target.closest('[data-jump]');if(!j)return;e.preventDefault();var t=$(j.getAttribute('data-jump'));if(t)t.scrollIntoView({behavior:still?'auto':'smooth',block:'start'})});
+
+/* masstige slider */
+(function(){var r=$('rp-range'),kn=$('rp-kn'),pr=$('rp-price'),vd=$('rp-verdict');
+  function up(){var v=+r.value,p=(v-10)/(250-10);kn.style.left=(p*100)+'%';
+    pr.textContent='$'+v+(v>=250?'+':'');
+    var t;if(v<=30)t=['body spray','Smells like a dupe. Nobody trades up to this.'];else if(v<45)t=['almost','Closer. Still reads like the drugstore aisle.'];else if(v<=75)t=['ripe lives here','The stretch, not the barrier. Elevated enough to trade up, reachable enough to say yes.'];else if(v<200)t=['getting greedy','The fantasy starts asking for a second job.'];else t=['velvet rope','Luxury house. Status, with the snobbery.'];
+    vd.innerHTML='<b>'+t[0]+'</b>'+t[1];pr.style.color=(v>=45&&v<=75)?'var(--papaya)':'var(--ink)'}
+  r.addEventListener('input',up);up()})();
+
+/* voice lines */
+(function(){var s=$('rp-said');$('rp-lines').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;s.textContent='“'+b.textContent+'.”'})})();
+
+/* ripeness + logo behaviors */
+(function(){var f=$('rp-fruit'),r=$('rp-ripe'),st=$('rp-rst');
+  function mix(a,b,t){var x=parseInt(a.slice(1),16),y=parseInt(b.slice(1),16);function c(s){return Math.round(((x>>s)&255)*(1-t)+((y>>s)&255)*t)}return 'rgb('+c(16)+','+c(8)+','+c(0)+')'}
+  var K=[[0,'#C9D86A','#7E9A32','#4d6320'],[50,'#FFD36B','#E84628','#9a2a0c'],[100,'#B4561E','#6b2208','#2e0c02']];
+  function up(){var v=+r.value,i=v<50?0:1,t=(v-K[i][0])/50;
+    f.style.setProperty('--s1',mix(K[i][1],K[i+1][1],t));f.style.setProperty('--s2',mix(K[i][2],K[i+1][2],t));f.style.setProperty('--s3',mix(K[i][3],K[i+1][3],t));
+    f.style.setProperty('--tan',(0.08+v/100*0.5).toFixed(2));f.style.setProperty('--edge',(0.2+v/100*0.6).toFixed(2));f.style.setProperty('--spk',v>78?((v-78)/22).toFixed(2):'0');
+    f.style.setProperty('--tanl',v<30?'#F2F6C8':v>85?'#F2C9A0':'#FFE3C6');
+    st.textContent=v<30?'unripe':v<45?'almost':v<=78?'ripe':v<92?'very ripe':'too ripe';}
+  r.addEventListener('input',up);up();
+  var bx=$('rp-beh');bx.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;bx.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});f.setAttribute('data-b',b.getAttribute('data-b'))});
+})();
+
+/* palette copy */
+$('rp-pal').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var h=b.getAttribute('data-hex');
+  try{navigator.clipboard.writeText(h).catch(function(){})}catch(x){}
+  b.classList.add('ok');setTimeout(function(){b.classList.remove('ok')},1200);toast(h+' copied')});
+
+/* drag helper */
+function draggable(el,box,onDown){var sx,sy,ox,oy,id=null;
+  el.addEventListener('pointerdown',function(e){if(e.button&&e.button!==0)return;id=e.pointerId;el.setPointerCapture(id);sx=e.clientX;sy=e.clientY;ox=el.offsetLeft;oy=el.offsetTop;if(onDown)onDown(el);e.preventDefault()});
+  el.addEventListener('pointermove',function(e){if(e.pointerId!==id)return;var bw=box.clientWidth,bh=box.clientHeight;
+    var x=Math.max(-el.offsetWidth*.3,Math.min(bw-el.offsetWidth*.7,ox+e.clientX-sx)),y=Math.max(-el.offsetHeight*.2,Math.min(bh-el.offsetHeight*.6,oy+e.clientY-sy));
+    el.style.left=x+'px';el.style.top=y+'px'});
+  function up(e){if(e.pointerId===id)id=null}el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up)}
+var Z=10;function front(el){el.style.zIndex=++Z}
+
+/* mood board */
+(function(){var b=$('rp-board');
+  var P=[['curlers','Character / provocation',60,6,-5,'4/5'],['mango-bite','Skin / appetite',78,28,6,'4/5'],['papaya-macro','Texture / excess',36,44,-8,'4/5'],['coconut-crack','Texture / excess',4,50,4,'3/4'],['peach','Skin / appetite',54,58,-3,'2/3'],['whip','Texture / excess',20,68,9,'1/1'],['coconut-hip','Skin / appetite',80,62,-6,'3/4'],['banana-peel','Too ripe',42,30,11,'3/4'],['summer-rio','Endless summer',14,36,-10,'4/5'],['passionfruit','Wet gloss',66,74,5,'3/4'],['tx-fig','Skin / appetite',2,78,-7,'2/3']];
+  var sm=window.innerWidth<768;
+  P.forEach(function(p){var f=D.createElement('figure');f.className='pol';f.style.left=(sm?p[2]*.62:p[2])+'%';f.style.top=(sm?26+p[3]*.7:p[3])+'%';f.style.setProperty('--r',p[4]+'deg');f.style.setProperty('--ar',p[5]);
+    f.innerHTML='<img src="'+A+'ripe-'+p[0]+'.webp?v=1" alt="" role="img" aria-label="'+esc(p[1])+' reference" loading="lazy"><figcaption>'+esc(p[1])+'</figcaption>';
+    b.appendChild(f);draggable(f,b,front)});
+})();
+
+/* campaign tabs */
+(function(){var t=$('rp-tabs');t.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var k=b.getAttribute('data-p');
+  t.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
+  root.querySelectorAll('.pane').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-p')===k)})})})();
+
+/* OOH board switcher */
+(function(){var w=$('rp-bbs'),img=$('rp-bbimg'),l=$('rp-bbl'),k=$('rp-bbk');
+  w.innerHTML=SC.map(function(s,i){return '<button type="button" aria-pressed="'+(i?'false':'true')+'" data-i="'+i+'" style="--a:'+s.a+';--b:'+s.b+'">'+esc(s.fruit.toLowerCase())+'</button>'}).join('');
+  w.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var s=SC[+b.getAttribute('data-i')];
+    w.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    img.style.opacity=0;setTimeout(function(){img.src=A+s.img+'.webp?v=1';img.style.opacity=1},250);
+    l.textContent=s.name;k.textContent=('0'+(SC.indexOf(s)+1))+' / '+s.fruit+' · Hyperreal macro OOH'})})();
+
+/* social story feed */
+(function(){var imgs=$('rp-feed').querySelectorAll('img'),bars=$('rp-feed').querySelectorAll('.bar b'),i=0,t0=null,DUR=3200;
+  function frame(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/DUR);bars.forEach(function(b,k){b.style.width=(k<i?100:k===i?p*100:0)+'%'});
+    if(p>=1){i=(i+1)%imgs.length;imgs.forEach(function(m,k){m.classList.toggle('on',k===i)});t0=ts}requestAnimationFrame(frame)}
+  if(!still)requestAnimationFrame(frame)})();
+
+/* the squeeze bottle */
+var cur=0;
+function setScent(i){cur=i;var s=SC[i],btl=$('rp-btl');
+  btl.style.setProperty('--b1',s.a);btl.style.setProperty('--b2',s.b);btl.style.setProperty('--b3',s.c);
+  $('rp-bn').textContent=s.name;$('rp-stx').style.backgroundImage='url('+A+s.tx+'.webp?v=1)';
+  $('rp-sct').querySelectorAll('button').forEach(function(x,k){x.setAttribute('aria-pressed',k===i?'true':'false')});
+  $('rp-card').innerHTML='<p class="lb" style="margin:0">0'+(i+1)+' / '+esc(s.fruit)+'</p><div class="nm">'+esc(s.name)+'</div><p class="ln">'+esc(s.line)+'</p><p class="who">'+esc(s.who)+'</p><div class="nt">'+s.notes.map(function(n){return '<span>'+esc(n)+'</span>'}).join('')+'</div><div class="px2"><b>$58</b>Eau de parfum · 50ml</div>';
+  var lbl=root.querySelector('.btl .lbl');lbl.style.color=i===5?'rgba(120,80,40,.85)':'';}
+(function(){var w=$('rp-sct');
+  w.innerHTML=SC.map(function(s,i){return '<button type="button" data-i="'+i+'" style="--a:'+s.a+';--b:'+s.b+'"><b>'+esc(s.name)+'</b><small>'+esc(s.fruit)+'</small></button>'}).join('');
+  w.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setScent(+b.getAttribute('data-i'))});
+  setScent(0);
+  var btl=$('rp-btl'),mist=$('rp-mist'),hint=$('rp-sqh'),stage=$('rp-stage'),timer=null,n=0;
+  function puff(){var s=SC[cur],sr=stage.getBoundingClientRect(),nz=btl.querySelector('.noz').getBoundingClientRect();
+    var x0=nz.right-sr.left+4,y0=nz.top-sr.top+nz.height*.3;
+    for(var k=0;k<7;k++){var p=D.createElement('i');var sz=6+Math.random()*16;p.style.setProperty('--s',sz+'px');p.style.left=(x0-sz/2)+'px';p.style.top=(y0-sz/2)+'px';
+      p.style.setProperty('--dx',(60+Math.random()*170)+'px');p.style.setProperty('--dy',(-40-Math.random()*120)+'px');p.style.setProperty('--mc',s.mist);
+      mist.appendChild(p);(function(q){setTimeout(function(){q.remove()},1500)})(p)}}
+  function press(e){if(e)e.preventDefault();if(timer)return;btl.classList.add('sq');n++;puff();timer=setInterval(puff,140);
+    hint.textContent=n===1?'Squeeze to spray':n<4?n+' sprays':n<7?n+' sprays. That’s plenty.':'You smell like trouble now.'}
+  function release(){btl.classList.remove('sq');clearInterval(timer);timer=null}
+  btl.addEventListener('pointerdown',press);['pointerup','pointerleave','pointercancel'].forEach(function(t){btl.addEventListener(t,release)});
+  btl.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat)press(e)});
+  btl.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter')release()});
+})();
+
+/* peelable stickers */
+(function(){var sheet=$('rp-sheet'),sec=sheet.parentElement;sec.style.position='relative';
+  sheet.querySelectorAll('.peel').forEach(function(p){
+    p.addEventListener('pointerdown',function(e){if(p.parentElement!==sec){var r=p.getBoundingClientRect(),sr=sec.getBoundingClientRect();
+      p.style.position='absolute';p.style.left=(r.left-sr.left)+'px';p.style.top=(r.top-sr.top)+'px';p.style.margin='0';sec.appendChild(p)}},true);
+    draggable(p,sec,function(el){front(el);el.style.setProperty('--r',(Math.random()*24-12).toFixed(1)+'deg')})})})();
+
+/* drag-to-scroll rail */
+(function(){var r=$('rp-rail'),down=false,sx=0,sl=0,moved=0;
+  r.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=0;sx=e.clientX;sl=r.scrollLeft;r.classList.add('drag')});
+  window.addEventListener('pointermove',function(e){if(!down)return;moved=Math.abs(e.clientX-sx);r.scrollLeft=sl-(e.clientX-sx)});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;r.classList.remove('drag')});})();
+
+/* quiz */
+(function(){var Q=[
+  ['Where does summer find you?',[['A roadside fruit stand',['limoncillo','guava']],['Salt-crusted, on the sand',['coconut','mango']],['Somewhere it’s 2am',['passion','peach']]]],
+  ['Pick your sin.',[['Sweet talk',['guava','peach']],['Staying out too late',['mango','passion']],['Doing nothing, gorgeously',['coconut','limoncillo']]]],
+  ['How do you eat a mango?',[['Sliced, on a plate',['peach','coconut']],['Over the sink, no regrets',['mango','passion']],['Green, with salt and lime',['limoncillo','guava']]]]];
+  var box=$('rp-qz'),step=0,score={};
+  function prog(){var h='<div class="prog">';for(var i=0;i<Q.length;i++)h+='<i class="'+(i<=step?'on':'')+'"></i>';return h+'</div>'}
+  function ask(){var q=Q[step];box.innerHTML=prog()+'<div class="q">'+esc(q[0])+'</div><div class="ops">'+q[1].map(function(o,i){return '<button type="button" data-i="'+i+'">'+esc(o[0])+'</button>'}).join('')+'</div>'}
+  function result(){var best=SC[0],bs=-1;SC.forEach(function(s){var v=score[s.id]||0;if(v>bs){bs=v;best=s}});var i=SC.indexOf(best);
+    box.innerHTML='<div class="res"><div class="orb" style="--a:'+best.a+';--b:'+best.b+'"></div><div><p class="lb" style="margin:0;color:var(--mango)">You are</p><div class="glow">'+esc(best.name)+'</div><p>'+esc(best.who)+' '+esc(best.notes.join(', '))+'.</p><div class="acts"><button type="button" data-go="'+i+'">Squeeze it</button><button type="button" class="gh" data-again="1">Take it again</button></div></div></div>'}
+  box.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    if(b.hasAttribute('data-again')){step=0;score={};ask();return}
+    if(b.hasAttribute('data-go')){setScent(+b.getAttribute('data-go'));$('rp-tact').nextElementSibling.scrollIntoView({behavior:still?'auto':'smooth',block:'start'});return}
+    Q[step][1][+b.getAttribute('data-i')][1].forEach(function(id,k){score[id]=(score[id]||0)+(k?1:2)});step++;if(step<Q.length)ask();else result()});
+  ask()})();
+
+
+/* texture wall */
+root.querySelectorAll('[data-tx]').forEach(function(tr){var items=tr.getAttribute('data-tx').split('|'),h='';
+  for(var k=0;k<2;k++)items.forEach(function(it){var p=it.split(':');h+='<figure><img src="'+A+'ripe-'+p[0]+'.webp?v=1" alt="" role="img" aria-label="'+esc(p[1])+' texture" loading="lazy"><figcaption>'+esc(p[1].toLowerCase())+'</figcaption></figure>'});tr.innerHTML=h});
+
+/* Edition 03 book */
+(function(){var b=$('rp-book');function tg(){b.classList.toggle('op')}b.addEventListener('click',tg);b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tg()}})})();
+
+/* reveals */
+(function(){var els=root.querySelectorAll('.rv');function all(){els.forEach(function(e){e.classList.add('in')})}
+  if(still||!('IntersectionObserver' in window)){all();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});setTimeout(all,2500)})();
+})();
+</script>
+</body></html>
