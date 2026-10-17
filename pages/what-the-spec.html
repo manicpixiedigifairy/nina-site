@@ -119,7 +119,7 @@ html,body{margin:0;background:#000}
 .wts .scr.on .bar{transform:none}
 .wts .scr .in{position:relative;z-index:3;width:min(1180px,calc(100% - 32px));max-height:80vh;overflow:auto;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center;padding:calc(var(--u)*1) 0;transform:scale(.96);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .wts .scr.on .in{transform:none}
-.wts .scr .pst{max-width:calc(var(--u)*30);width:100%;margin:0 auto}
+.wts .scr .pst{max-width:calc(var(--u)*30);width:min(100%,46vh);margin:0 auto}
 .wts .scr .x{position:absolute;z-index:4;top:calc(9vh + 12px);right:16px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:#000;transition:background .2s,color .2s}
 .wts .scr .x:hover{background:var(--gold);color:var(--ink)}
 .wts .scr .x svg{width:16px;height:16px}
@@ -129,6 +129,7 @@ html,body{margin:0;background:#000}
 .wts .scr dt{color:var(--dim)}
 .wts .scr dd{margin:0;font-size:calc(var(--u)*1.1)}
 .wts .scr .go{display:inline-flex;align-items:center;gap:.7em;margin-top:calc(var(--u)*2.2);background:var(--gold);color:var(--ink);border-radius:99px;padding:calc(var(--u)*.6) calc(var(--u)*1.8);transition:background .2s,transform .2s}
+.wts .scr .go{white-space:nowrap}.wts .scr .go svg{width:1em;height:1em;flex:none}
 .wts .scr .go:hover{background:#fff;transform:translateX(3px)}
 .wts .scr .soon{display:inline-block;margin-top:calc(var(--u)*2.2);color:var(--gold);border:1px solid var(--gold);border-radius:99px;padding:calc(var(--u)*.55) calc(var(--u)*1.6)}
 .wts .scr .nv{display:flex;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2)}
@@ -151,35 +152,6 @@ html,body{margin:0;background:#000}
 .wts .rv.in{opacity:1;transform:none}
 
 
-/* entry: screening log */
-.wts.gated>:not(.hero):not(.grain):not(.gate){display:none}
-.wts .gate{position:absolute;left:0;right:0;top:0;min-height:100%;z-index:25;display:none;align-items:center;justify-content:center;padding:calc(var(--u)*4) 16px;background:radial-gradient(80% 60% at 50% 0%,rgba(245,217,138,.10),transparent 70%),rgba(0,0,0,.94);backdrop-filter:blur(6px)}
-.wts.gated .gate{display:flex}
-.wts .tix{position:relative;width:min(100%,calc(var(--u)*44));background:#0d0c0a;border:1px solid rgba(245,217,138,.45);border-radius:calc(var(--u)*.6);padding:calc(var(--u)*2.6) calc(var(--u)*2.8);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
-.wts .tix:before,.wts .tix:after{content:"";position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:#000;border:1px solid rgba(245,217,138,.45)}
-.wts .tix:before{left:-14px;clip-path:inset(0 0 0 50%)}.wts .tix:after{right:-14px;clip-path:inset(0 50% 0 0)}
-.wts .tix .lb.g{color:var(--gold)}
-.wts .tix h2{font-size:calc(var(--u)*4.8);margin-top:calc(var(--u)*.6)}
-.wts .tix p{margin:calc(var(--u)*.9) 0 0;font-size:calc(var(--u)*1.1);line-height:1.5;color:rgba(255,255,255,.82)}
-.wts .tix form{display:grid;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.8)}
-.wts .tix label.f{display:grid;gap:.45em}
-.wts .tix label.f span{color:var(--dim)}
-.wts .tix input[type=text],.wts .tix input[type=email]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.3);color:#fff;font:400 16px/1.3 'Source Serif 4',Georgia,serif;padding:.5em 0;border-radius:0;outline:0;transition:border-color .2s}
-.wts .tix input:focus{border-bottom-color:var(--gold)}
-.wts .tix .ck{display:flex;gap:.8em;align-items:flex-start;font-size:calc(var(--u)*.95);line-height:1.45;color:rgba(255,255,255,.85);margin-top:calc(var(--u)*.4);cursor:pointer}
-.wts .tix .ck input{margin:.2em 0 0;width:18px;height:18px;flex:none;accent-color:#F5D98A}
-.wts .tix details{font-size:calc(var(--u)*.86);color:var(--dim)}
-.wts .tix summary{cursor:pointer;color:var(--gold);list-style:none}
-.wts .tix summary::-webkit-details-marker{display:none}
-.wts .tix details div{max-height:180px;overflow:auto;margin-top:.8em;padding-right:.6em;line-height:1.55}
-.wts .tix details p{font-size:inherit;color:inherit;margin:0 0 .8em}
-.wts .tix .err{min-height:1.2em;color:#F2A38A;font-size:calc(var(--u)*.9)}
-.wts .tix .ent{justify-self:start;background:var(--gold);color:var(--ink);border-radius:99px;padding:calc(var(--u)*.65) calc(var(--u)*1.9);transition:background .2s,transform .2s}
-.wts .tix .ent:hover{background:#fff;transform:translateY(-2px)}
-.wts .tix .note{font-size:calc(var(--u)*.8);color:var(--dim)}
-.wts .tix.torn{animation:tear .7s cubic-bezier(.5,0,.75,0) forwards}
-@keyframes tear{to{transform:translateY(-40px) rotate(-4deg);opacity:0}}
-.wts .adm{color:var(--gold)}
 /* legal */
 .wts .legal{margin:calc(var(--u)*5) auto 0;max-width:calc(var(--u)*62);text-align:left;font-family:Jost,sans-serif;font-weight:400;font-size:11px;line-height:1.65;color:rgba(255,255,255,.42);border-top:1px solid var(--line);padding-top:calc(var(--u)*1.6)}
 .wts .legal p{margin:0 0 .9em;font-size:inherit;max-width:none;color:inherit;line-height:inherit}
@@ -214,26 +186,8 @@ html,body{margin:0;background:#000}
 @media(prefers-reduced-motion:reduce){.wts .grain,.wts .beam,.wts .dust i,.wts .mq .tr,.wts .flick{animation:none}.wts .rv{opacity:1;transform:none}}
 </style></head>
 <body>
-<div class="wts gated" id="wts">
+<div class="wts" id="wts">
   <div class="grain" aria-hidden="true"></div>
-  <div class="gate" id="wts-gate">
-    <div class="tix" id="wts-tix">
-      <span class="lb g">Box office · Admit one</span>
-      <h2>Sign the Screening Log</h2>
-      <p>This room holds unreleased, self-initiated work. Sign in to take your seat.</p>
-      <form id="wts-form" novalidate>
-        <label class="f"><span class="lb">Full name</span><input type="text" name="name" autocomplete="name" required></label>
-        <label class="f"><span class="lb">Company</span><input type="text" name="company" autocomplete="organization" required></label>
-        <label class="f"><span class="lb">Email</span><input type="email" name="email" autocomplete="email" required></label>
-        <label class="ck"><input type="checkbox" name="agreed" required><span>I have read and agree to the Terms of Viewing, and I understand this visit is recorded.</span></label>
-        <details><summary class="lb">Read the Terms of Viewing</summary><div id="wts-gterms"></div></details>
-        <div class="err" id="wts-err" role="alert"></div>
-        <button class="ent lb" type="submit">Enter the screening room</button>
-        <span class="note">Visits are logged with the date and time.</span>
-      </form>
-    </div>
-  </div>
-
   <section class="hero px" id="wts-top">
     <div class="beam" aria-hidden="true"></div>
     <div class="dust" id="wts-dust" aria-hidden="true"></div>
@@ -246,8 +200,7 @@ html,body{margin:0;background:#000}
       <a href="https://www.byninaaustin.com/">Back</a>
       <a href="#wts-program" data-jump="wts-program">Program</a>
       <a href="#wts-wall" data-jump="wts-wall">Gallery</a>
-      <span class="sp adm" id="wts-adm"></span>
-      <a href="mailto:ninaaustincreative@gmail.com">Contact</a>
+      <a class="sp" href="mailto:ninaaustincreative@gmail.com">Contact</a>
     </nav>
 
     <p class="tag lb" style="margin-top:calc(var(--u)*5)">Now showing · Self-initiated work</p>
@@ -286,7 +239,7 @@ html,body{margin:0;background:#000}
       <p>&copy; 2026 Nina Austin. All rights reserved. All concepts, ideas, copy, creative direction, designs, artwork, and other materials presented on this page (collectively, the "Work") are original, self-initiated speculative work created by Nina Austin and are protected by the copyright, trademark, and other intellectual property laws of the United States and other jurisdictions.</p>
       <p>The Work was not commissioned by, produced for, endorsed by, or affiliated with any brand, company, or rights holder named or depicted. All third-party names, trademarks, and logos remain the property of their respective owners and appear solely for identification and illustrative purposes.</p>
       <p>Access to this page is granted solely for personal, non-commercial review of Nina Austin's work. No part of the Work, including any underlying idea, concept, campaign, strategy, or execution, may be copied, reproduced, distributed, adapted, presented, pitched, produced, or otherwise used, in whole or in part, without the prior written consent of Nina Austin. Viewing the Work does not grant any license, assignment, or other right in or to the Work.</p>
-      <p>By signing the screening log and entering this page, you agree to be bound by these Terms of Viewing. Your name, company, email address, and the date and time of each visit are recorded to document access to the Work and are not sold or shared. Any unauthorized use of the Work may result in legal action. Licensing and permissions: <a href="mailto:ninaaustincreative@gmail.com">ninaaustincreative@gmail.com</a>.</p>
+      <p>By accessing or viewing this page, you agree to be bound by these Terms of Viewing. Any unauthorized use of the Work may result in legal action. Licensing and permissions: <a href="mailto:ninaaustincreative@gmail.com">ninaaustincreative@gmail.com</a>.</p>
     </div>
   </footer>
 
@@ -320,8 +273,8 @@ var W=root.getElementById('wts');
    c1 / c2 (poster glow colors for the generated art)
 */
 var WORK=[
-  {title:'Title to Come',brand:'Brand to Come',medium:'Film',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#B8432E',c2:'#3A1C5C'},
-  {title:'Title to Come',brand:'Brand to Come',medium:'Social',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#2E6FB8',c2:'#0E3B2E'},
+  {title:'Super Fan Frenzy',brand:'Star Wars',medium:'Film Launch',look:'Three-phase awareness campaign',logline:'A launch campaign for the next Star Wars release that activates the longest-standing, most obsessed fans with immersive experiences. May the fans be with you.',url:'https://manicpixiedigifairy.github.io/starwarsspec/',img:'',c1:'#2E6FB8',c2:'#5C1C2A'},
+  {title:'Title to Come',brand:'Brand to Come',medium:'Social',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#B8432E',c2:'#0E3B2E'},
   {title:'Title to Come',brand:'Brand to Come',medium:'Experiential',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#C9A85A',c2:'#5C1C2A'},
   {title:'Title to Come',brand:'Brand to Come',medium:'OOH',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#8E3FA8',c2:'#14325C'},
   {title:'Title to Come',brand:'Brand to Come',medium:'Brand World',look:'Look to come',logline:'Logline to come.',url:'',img:'',c1:'#2EA67A',c2:'#5C3A14'},
@@ -412,28 +365,6 @@ root.querySelectorAll('[data-split]').forEach(function(el,k){var t=el.textConten
   var t0=null;function tick(t){if(!t0)t0=t;var s=(t-t0)/1000;if(s>=3){end();return}N.textContent=3-Math.floor(s);R.style.setProperty('--a',((s%1)*360)+'deg');raf=requestAnimationFrame(tick)}
   raf=requestAnimationFrame(tick);setTimeout(end,4000)})();
 
-
-/* screening log: entry sign-in, every visit is recorded */
-(function(){
-  var LOG='https://hook.us2.make.com/655f6na4ry7m1282e9atjp7fzmi607ij';
-  var KEY='wts-log';
-  var gate=root.getElementById('wts-gate'),form=root.getElementById('wts-form'),err=root.getElementById('wts-err'),tix=root.getElementById('wts-tix');
-  root.getElementById('wts-gterms').innerHTML=root.getElementById('wts-terms').innerHTML;
-  function tz(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){return ''}}
-  function send(v){var p={name:v.name,company:v.company,email:v.email,agreed:'true',visited:new Date().toISOString(),referrer:D.referrer||'direct',page:location.href,device:navigator.userAgent,time_zone:tz()};
-    try{fetch(LOG,{method:'POST',mode:'no-cors',body:new URLSearchParams(p),keepalive:true}).catch(function(){})}catch(e){}}
-  function admit(v,anim){root.getElementById('wts-adm').textContent='Admit one · '+v.name;
-    function go(){W.classList.remove('gated');gate.setAttribute('aria-hidden','true');window.dispatchEvent(new Event('scroll'))}
-    if(anim&&!still){tix.classList.add('torn');setTimeout(go,650)}else go()}
-  var saved=null;try{saved=JSON.parse(window.localStorage.getItem(KEY)||'null')}catch(e){}
-  if(saved&&saved.name&&saved.email){send(saved);admit(saved,false);return}
-  form.addEventListener('submit',function(e){e.preventDefault();
-    var v={name:form.elements['name'].value.trim(),company:form.elements['company'].value.trim(),email:form.elements['email'].value.trim()};
-    if(!v.name||!v.company||!v.email){err.textContent='Please fill in your name, company and email.';return}
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)){err.textContent='Please enter a valid email.';return}
-    if(!form.elements['agreed'].checked){err.textContent='Please agree to the Terms of Viewing to enter.';return}
-    err.textContent='';send(v);try{window.localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}admit(v,true)});
-})();
 
 /* reveals */
 (function(){var els=root.querySelectorAll('.rv');function all(){els.forEach(function(e){e.classList.add('in')})}
