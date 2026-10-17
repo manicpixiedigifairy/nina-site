@@ -132,6 +132,51 @@ html,body{margin:0;background:#000}
 .wts .scr.max .win{width:100vw;height:100vh;height:100dvh;border:0;border-radius:0}
 @media(max-width:700px){.wts .sbar .lbl{display:none}.wts .win{width:100%;height:min(80vh,720px)}.wts .scr{padding:8px}}
 
+/* rental counter: free membership card before the first rental */
+.wts .hd .mem{display:none;color:var(--pri);border-bottom:1px solid transparent;padding-bottom:.35em;transition:border-color .2s}
+.wts .hd .mem.on{display:inline-block}.wts .hd .mem:hover{border-bottom-color:var(--pri)}
+.wts .tagfree{position:absolute;top:44px;right:14px;z-index:2;transform:rotate(6deg);background:var(--pri);color:#0A0A0A;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px 6px 14px;clip-path:polygon(9px 0,100% 0,100% 100%,9px 100%,0 50%)}
+.wts .reg{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;overflow-y:auto}
+.wts .reg.on{opacity:1;visibility:visible}
+.wts .desk{position:relative;width:min(560px,100%);max-height:calc(100vh - 32px);overflow-y:auto;background:#0b0b0b;border:1px solid rgba(245,217,138,.4);border-radius:10px;padding:clamp(22px,4vw,36px);box-shadow:0 40px 120px -30px rgba(0,0,0,.95);transform:translateY(12px);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.wts .reg.on .desk{transform:none}
+.wts .desk .rx{position:absolute;top:14px;right:14px;width:36px;height:36px;border:1px solid var(--bd);border-radius:50%;display:grid;place-items:center;color:var(--fg);transition:background .2s,color .2s}
+.wts .desk .rx:hover{background:var(--pri);color:#0A0A0A}
+.wts .desk .rx svg{width:14px;height:14px}
+.wts .desk .k{margin:0;font-size:11px;letter-spacing:.2em;color:var(--pri)}
+.wts .desk h4{margin:10px 0 0;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(40px,7vw,60px);line-height:.9}
+.wts .desk .sub{margin:14px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)}
+.wts .desk form{display:grid;gap:14px;margin-top:22px}
+.wts .desk label.f{display:grid;gap:6px}
+.wts .desk label.f span{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mfg)}
+.wts .desk input[type=text],.wts .desk input[type=email]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.3);border-radius:0;color:#fff;font:400 16px/1.3 var(--sans);padding:8px 0;outline:0;transition:border-color .2s}
+.wts .desk input:focus{border-bottom-color:var(--pri)}
+.wts .desk .ck{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:rgba(255,255,255,.85);cursor:pointer;margin-top:4px}
+.wts .desk .ck input{margin:2px 0 0;width:18px;height:18px;flex:none;accent-color:#F5D98A}
+.wts .desk .note{margin:0;font-size:12px;line-height:1.5;color:var(--mfg)}
+.wts .desk .err{min-height:1.2em;margin:0;font-size:13px;color:#F2A38A}
+.wts .desk .go{justify-self:start;display:inline-flex;align-items:center;gap:10px;border-radius:99px;background:var(--pri);color:#0A0A0A;padding:13px 26px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:background .2s,transform .2s}
+.wts .desk .go:hover{background:#fff;transform:translateY(-2px)}
+.wts .desk .go.ghost{background:transparent;color:var(--fg);border:1px solid var(--bd)}
+.wts .desk .go.ghost:hover{border-color:#fff;background:transparent}
+.wts .desk .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+/* the membership card */
+.wts .mcard{position:relative;margin-top:20px;aspect-ratio:1.586;width:100%;border-radius:14px;overflow:hidden;background:radial-gradient(120% 90% at 0% 0%,rgba(245,217,138,.28),transparent 55%),linear-gradient(135deg,#17140c,#050505 60%);border:1px solid rgba(245,217,138,.55);box-shadow:0 30px 60px -25px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08);padding:clamp(16px,3.5vw,24px);display:flex;flex-direction:column;justify-content:space-between;color:#fff;transform:perspective(900px) rotateX(10deg) translateY(10px);opacity:0;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .6s}
+.wts .mcard.in{transform:none;opacity:1}
+.wts .mcard:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.14) 48%,transparent 60%);transform:translateX(-100%);animation:wtsSheen 2.4s .6s ease-out forwards;pointer-events:none}
+@keyframes wtsSheen{to{transform:translateX(100%)}}
+.wts .mcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.wts .mcard .brand{font-family:var(--display);text-transform:uppercase;font-size:clamp(20px,4.4vw,30px);line-height:.9;color:var(--pri)}
+.wts .mcard .brand small{display:block;margin-top:6px;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.24em;color:#fff}
+.wts .mcard .chip{font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(245,217,138,.6);color:var(--pri);border-radius:99px;padding:5px 9px;white-space:nowrap}
+.wts .mcard .who{font-family:var(--display);text-transform:uppercase;font-size:clamp(22px,5vw,34px);line-height:.95;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wts .mcard .co{margin-top:4px;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mfg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wts .mcard .bot{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.wts .mcard .no{font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);line-height:1.6}
+.wts .mcard .no b{display:block;font-size:13px;letter-spacing:.2em;color:#fff}
+.wts .mcard svg{width:clamp(96px,30%,150px);height:auto;flex:none}
+@media(max-width:420px){.wts .tagfree{top:40px;font-size:10px}}
+
 @media(min-width:640px){.wts .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px){
   .wts h1{font-size:15vw}
@@ -166,6 +211,7 @@ html,body{margin:0;background:#000}
 
   <header class="hd mono">
     <span>WTS / Spec House</span>
+    <button type="button" class="mem" id="wts-mem" aria-label="View your membership card"></button>
   </header>
 
   <section class="hero">
@@ -193,9 +239,34 @@ html,body{margin:0;background:#000}
       <p>&copy; 2026 Nina Austin. All rights reserved. All concepts, ideas, copy, creative direction, designs, artwork, and other materials presented on this page (collectively, the "Work") are original, self-initiated speculative work created by Nina Austin and are protected by the copyright, trademark, and other intellectual property laws of the United States and other jurisdictions.</p>
       <p>The Work was not commissioned by, produced for, endorsed by, or affiliated with any brand, company, or rights holder named or depicted. All third-party names, trademarks, and logos remain the property of their respective owners and appear solely for identification and illustrative purposes.</p>
       <p>Access to this page is granted solely for personal, non-commercial review of Nina Austin's work. No part of the Work, including any underlying idea, concept, campaign, strategy, or execution, may be copied, reproduced, distributed, adapted, presented, pitched, produced, or otherwise used, in whole or in part, without the prior written consent of Nina Austin. Viewing the Work does not grant any license, assignment, or other right in or to the Work.</p>
-      <p>By accessing or viewing this page, you agree to be bound by these Terms of Viewing. Any unauthorized use of the Work may result in legal action. Licensing and permissions: <a href="mailto:ninaaustincreative@gmail.com">ninaaustincreative@gmail.com</a>.</p>
+      <p>By registering for a membership, or by otherwise accessing or viewing this page, you agree to be bound by these Terms of Viewing. Membership details you submit (name, company, email address, and the date you register) are recorded to document access to the Work and are not sold or shared. Any unauthorized use of the Work may result in legal action. Licensing and permissions: <a href="mailto:ninaaustincreative@gmail.com">ninaaustincreative@gmail.com</a>.</p>
     </div>
   </footer>
+  <div class="reg" id="wts-reg" aria-hidden="true">
+    <div class="desk" role="dialog" aria-modal="true" aria-labelledby="wts-rt">
+      <button type="button" class="rx" id="wts-rx" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div id="wts-apply">
+        <p class="k mono">Spec House Video · Rental counter</p>
+        <h4 id="wts-rt">Membership Application</h4>
+        <p class="sub">Rentals are free. Membership is free. Late fees are a myth. Fill out the card and take home your first title.</p>
+        <form id="wts-form" novalidate>
+          <label class="f"><span>Full name</span><input type="text" name="name" autocomplete="name" required></label>
+          <label class="f"><span>Company</span><input type="text" name="company" autocomplete="organization"></label>
+          <label class="f"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label class="ck"><input type="checkbox" name="agreed" required><span>I agree to the Terms of Viewing at the bottom of this page. I will be kind and rewind.</span></label>
+          <p class="note">Your name, company, email and join date are kept on file so Nina knows who is renting. Never sold or shared.</p>
+          <p class="err" id="wts-err" role="alert"></p>
+          <button type="submit" class="go">Issue my card →</button>
+        </form>
+      </div>
+      <div id="wts-issued" hidden>
+        <p class="k mono">Spec House Video · Card issued</p>
+        <h4>Welcome to the Club</h4>
+        <div class="mcard" id="wts-card"></div>
+        <div class="acts"><button type="button" class="go" id="wts-rent">Start rental →</button><button type="button" class="go ghost" id="wts-shelf">Browse the shelf</button></div>
+      </div>
+    </div>
+  </div>
   <div class="scr" id="wts-scr" aria-hidden="true">
     <div class="win" id="wts-win" role="dialog" aria-modal="true" aria-labelledby="wts-st">
       <div class="sbar mono">
@@ -233,18 +304,66 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp
 
 root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
   if(p.hidden)return '';
-  var open=p.url?'<button type="button" class="pc" data-screen="'+i+'" aria-label="Screen '+esc(p.title)+'">':'<div class="pc na">';
+  var open=p.url?'<button type="button" class="pc" data-screen="'+i+'" aria-label="Rent '+esc(p.title)+' free">':'<div class="pc na">';
   var close=p.url?'</button>':'</div>';
   var art=p.img?'<img class="art" src="'+esc(p.img)+'" alt="" role="img" aria-label="'+esc(p.title)+' key art" loading="lazy"><div class="shade"></div>':'<div class="vig"></div>';
   return open+'<div class="po'+(p.img?' hasimg':'')+'" style="--t:'+p.tone+'">'+art+'<div class="pi">'+
-    '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+
+    '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+(p.url?'<span class="tagfree">Free rental</span>':'')+
     '<div><p class="pb mono">'+esc(p.brand)+' presents</p><h3 class="dsp">'+esc(p.title)+'</h3><p class="pl mono">'+esc(p.credit)+'</p></div>'+
-    '</div></div><div class="pf mono"><span class="mf">'+esc(p.genre)+'</span><span class="sc">'+(p.url?'Screen →':'Coming soon')+'</span></div>'+close;
+    '</div></div><div class="pf mono"><span class="mf">'+esc(p.genre)+'</span><span class="sc">'+(p.url?'Rent free →':'Coming soon')+'</span></div>'+close;
 }).join('');
 
 /* smooth jump inside the loader */
 W.addEventListener('click',function(e){var j=e.target.closest('[data-jump]');if(!j)return;e.preventDefault();var t=root.getElementById(j.getAttribute('data-jump'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})});
 
+
+/* rental counter: free membership registration, logged to Nina's visit log */
+(function(){
+  var LOG='https://hook.us2.make.com/655f6na4ry7m1282e9atjp7fzmi607ij',KEY='wts-member';
+  var reg=root.getElementById('wts-reg'),form=root.getElementById('wts-form'),err=root.getElementById('wts-err');
+  var apply=root.getElementById('wts-apply'),issued=root.getElementById('wts-issued'),card=root.getElementById('wts-card'),chip=root.getElementById('wts-mem');
+  var pending=-1,mem=null;
+  try{mem=JSON.parse(window.localStorage.getItem(KEY)||'null')}catch(e){}
+  function bars(seed){var s=0,x=0,h='';for(var i=0;i<seed.length;i++)s=(s*31+seed.charCodeAt(i))>>>0;
+    for(var k=0;k<34;k++){s=(s*1103515245+12345)>>>0;var w=1+(s>>>16)%3;if(k%2===0)h+='<rect x="'+x+'" y="0" width="'+w+'" height="40" fill="#fff"/>';x+=w+1}
+    return '<svg viewBox="0 0 '+x+' 52" preserveAspectRatio="none" aria-hidden="true">'+h+'<text x="'+(x/2)+'" y="51" text-anchor="middle" fill="#fff" font-size="8" font-family="Jost,sans-serif" letter-spacing="1.5">'+esc(seed)+'</text></svg>'}
+  function since(d){try{return new Date(d).toLocaleDateString('en-US',{month:'short',year:'numeric'})}catch(e){return ''}}
+  function paint(){if(!mem)return;
+    card.innerHTML='<div class="top"><div class="brand">Spec House<br>Video<small>Member</small></div><span class="chip">Free rentals</span></div>'+
+      '<div><div class="who">'+esc(mem.name)+'</div><div class="co">'+esc(mem.company||'Independent')+'</div></div>'+
+      '<div class="bot"><div class="no">Member no.<b>'+esc(mem.no)+'</b>Since '+esc(since(mem.joined))+' · No late fees</div>'+bars(mem.no)+'</div>';
+    chip.textContent='Member · '+mem.no;chip.classList.add('on')}
+  function lock(on){try{D.body.style.overflow=on?'hidden':''}catch(e){}}
+  function open(i){pending=(typeof i==='number')?i:-1;
+    if(mem){apply.hidden=true;issued.hidden=false;paint();card.classList.add('in')}else{apply.hidden=false;issued.hidden=true}
+    root.getElementById('wts-rent').hidden=pending<0;
+    reg.classList.add('on');reg.setAttribute('aria-hidden','false');lock(true);
+    setTimeout(function(){var f=mem?root.getElementById(pending<0?'wts-shelf':'wts-rent'):form.elements['name'];if(f)f.focus()},80)}
+  function close(){reg.classList.remove('on');reg.setAttribute('aria-hidden','true');lock(false)}
+  function tz(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){return ''}}
+  form.addEventListener('submit',function(e){e.preventDefault();
+    var v={name:form.elements['name'].value.trim(),company:form.elements['company'].value.trim(),email:form.elements['email'].value.trim()};
+    if(!v.name||!v.email){err.textContent='Please add your name and email.';return}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)){err.textContent='Please enter a valid email.';return}
+    if(!form.elements['agreed'].checked){err.textContent='Please agree to the Terms of Viewing to get your card.';return}
+    err.textContent='';
+    v.no='SH-'+String(Math.floor(100000+Math.random()*900000));v.joined=new Date().toISOString();mem=v;
+    try{window.localStorage.setItem(KEY,JSON.stringify(v))}catch(x){}
+    var title=pending>=0&&pieces[pending]?pieces[pending].title:'';
+    var body={name:v.name,company:v.company,email:v.email,agreed:'true',visited:v.joined,referrer:D.referrer||'direct',page:location.href+(title?' (renting: '+title+')':''),device:navigator.userAgent,time_zone:tz(),member_no:v.no};
+    try{fetch(LOG,{method:'POST',mode:'no-cors',body:new URLSearchParams(body),keepalive:true}).catch(function(){})}catch(x){}
+    apply.hidden=true;issued.hidden=false;root.getElementById('wts-rent').hidden=pending<0;card.classList.remove('in');paint();
+    requestAnimationFrame(function(){requestAnimationFrame(function(){card.classList.add('in')})});
+    setTimeout(function(){root.getElementById(pending<0?'wts-shelf':'wts-rent').focus()},120)});
+  root.getElementById('wts-rent').addEventListener('click',function(){var i=pending;close();if(i>=0&&window.__wtsShow)setTimeout(function(){window.__wtsShow(i)},150)});
+  root.getElementById('wts-shelf').addEventListener('click',function(){close();var g=root.getElementById('wts-gallery');if(g)g.scrollIntoView({behavior:'smooth',block:'start'})});
+  root.getElementById('wts-rx').addEventListener('click',close);
+  reg.addEventListener('click',function(e){if(e.target===reg)close()});
+  window.addEventListener('keydown',function(e){if(e.key==='Escape'&&reg.classList.contains('on'))close()});
+  chip.addEventListener('click',function(){open(-1)});
+  if(mem)paint();
+  window.__wtsCounter={member:function(){return !!mem},open:open};
+})();
 
 /* screening room: lightbox player with mini player and full screen; the visitor never leaves this page */
 (function(){
@@ -273,7 +392,8 @@ W.addEventListener('click',function(e){var j=e.target.closest('[data-jump]');if(
     if(!fromPop){try{if(history.state&&history.state.wts!==undefined)history.back();else history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
     if(last)last.focus()}
   fr.addEventListener('load',function(){if(fr.getAttribute('src'))fr.classList.add('ok')});
-  W.addEventListener('click',function(e){var b=e.target.closest('[data-screen]');if(!b)return;last=b;show(+b.getAttribute('data-screen'),true)});
+  W.addEventListener('click',function(e){var b=e.target.closest('[data-screen]');if(!b)return;last=b;var i=+b.getAttribute('data-screen');if(window.__wtsCounter&&!window.__wtsCounter.member()){window.__wtsCounter.open(i);return}show(i,true)});
+  window.__wtsShow=function(i){show(i,true)};
   bX.addEventListener('click',function(){hide(false)});
   bPip.addEventListener('click',function(){if(isFs())exitFs();scr.classList.toggle('pip');sync()});
   bFs.addEventListener('click',function(){
