@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notebook Ticker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap">
+<style>
+html,body{margin:0;height:100%;background:transparent;overflow:hidden}
+.wrap{height:100%;display:flex;align-items:center}
+.tape{width:110%;margin-left:-5%;background:#ff5fa8;border-top:3px solid #141414;border-bottom:3px solid #141414;transform:rotate(-1.4deg);overflow:hidden;padding:10px 0}
+.track{display:flex;width:max-content;animation:run 36s linear infinite}
+.track span{font-family:'Bagel Fat One',system-ui,sans-serif;font-size:28px;color:#141414;white-space:nowrap;padding-right:40px}
+@keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</head>
+<body>
+<div class="wrap" aria-hidden="true">
+<div class="tape"><div class="track">
+<span>Selected Work ★ Case Studies ★ What I Make ★ Gold Stars ★ Say Hello ★ Selected Work ★ Case Studies ★ What I Make ★ Gold Stars ★ Say Hello ★</span>
+<span>Selected Work ★ Case Studies ★ What I Make ★ Gold Stars ★ Say Hello ★ Selected Work ★ Case Studies ★ What I Make ★ Gold Stars ★ Say Hello ★</span>
+</div></div>
+</div>
+</body>
+</html>
