@@ -19,7 +19,7 @@ html,body{margin:0;background:#000}
 .wts .mf{color:var(--mfg)}.wts .pr{color:var(--pri)}
 
 /* grain and vignette */
-.wts .grain{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:60}
+.wts .grain{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:60;-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 220px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 220px),transparent)}
 .wts .grain:after{content:"";position:absolute;inset:-50%;opacity:.08;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");animation:wtsGrain .8s steps(4) infinite}
 @keyframes wtsGrain{0%{transform:translate(0,0)}25%{transform:translate(-5%,3%)}50%{transform:translate(4%,-4%)}75%{transform:translate(-3%,-2%)}100%{transform:translate(0,0)}}
 .wts .vig{background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.75) 100%)}
