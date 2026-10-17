@@ -135,7 +135,6 @@ html,body{margin:0;background:#000}
 /* rental counter: free membership card before the first rental */
 .wts .hd .mem{display:none;color:var(--pri);border-bottom:1px solid transparent;padding-bottom:.35em;transition:border-color .2s}
 .wts .hd .mem.on{display:inline-block}.wts .hd .mem:hover{border-bottom-color:var(--pri)}
-.wts .tagfree{position:absolute;top:44px;right:14px;z-index:2;transform:rotate(6deg);background:var(--pri);color:#0A0A0A;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px 6px 14px;clip-path:polygon(9px 0,100% 0,100% 100%,9px 100%,0 50%)}
 .wts .reg{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;overflow-y:auto}
 .wts .reg.on{opacity:1;visibility:visible}
 .wts .desk{position:relative;width:min(560px,100%);max-height:calc(100vh - 32px);overflow-y:auto;background:#0b0b0b;border:1px solid rgba(245,217,138,.4);border-radius:10px;padding:clamp(22px,4vw,36px);box-shadow:0 40px 120px -30px rgba(0,0,0,.95);transform:translateY(12px);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
@@ -175,7 +174,6 @@ html,body{margin:0;background:#000}
 .wts .mcard .no{font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);line-height:1.6}
 .wts .mcard .no b{display:block;font-size:13px;letter-spacing:.2em;color:#fff}
 .wts .mcard svg{width:clamp(96px,30%,150px);height:auto;flex:none}
-@media(max-width:420px){.wts .tagfree{top:40px;font-size:10px}}
 
 @media(min-width:640px){.wts .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px){
@@ -308,7 +306,7 @@ root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
   var close=p.url?'</button>':'</div>';
   var art=p.img?'<img class="art" src="'+esc(p.img)+'" alt="" role="img" aria-label="'+esc(p.title)+' key art" loading="lazy"><div class="shade"></div>':'<div class="vig"></div>';
   return open+'<div class="po'+(p.img?' hasimg':'')+'" style="--t:'+p.tone+'">'+art+'<div class="pi">'+
-    '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+(p.url?'<span class="tagfree">Free rental</span>':'')+
+    '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+
     '<div><p class="pb mono">'+esc(p.brand)+' presents</p><h3 class="dsp">'+esc(p.title)+'</h3><p class="pl mono">'+esc(p.credit)+'</p></div>'+
     '</div></div><div class="pf mono"><span class="mf">'+esc(p.genre)+'</span><span class="sc">'+(p.url?'Rent free →':'Coming soon')+'</span></div>'+close;
 }).join('');
