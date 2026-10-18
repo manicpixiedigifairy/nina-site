@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ripe · Brand Positioning</title>
-<meta name="description" content="ripe, a DTC gourmand fragrance house. Life at its sweetest. Brand positioning, campaign world, the object and world-building.">
+<meta name="description" content="ripe, a DTC gourmand fragrance house. In temptation we trust. Savoring life at its sweetest. Brand positioning, campaign world, the object and world-building.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@400;500;600&family=Yellowtail&display=swap">
@@ -598,7 +598,7 @@ html,body{margin:0;background:#F6EEDF}
   <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
   <div class="kick"><p class="lb">Brand Positioning</p></div>
   <img class="mark wmk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-wordmark-cream.webp?v=3" alt="" role="img" aria-label="ripe">
-  <div class="one"><p>life at its sweetest</p></div>
+  <div class="one"><p>in temptation we trust</p></div>
 </header>
 
 <div class="tick" aria-hidden="true"><div class="tr" id="rp-tick"></div></div>
@@ -606,10 +606,12 @@ html,body{margin:0;background:#F6EEDF}
 <section class="sec px" id="concept">
   <div class="story">
     <div class="rv">
-      <p class="lb eyb">The concept</p>
-      <h2 class="h2">life at<span class="cur">its sweetest</span></h2>
-      <p class="body">Every fruit has one perfect hour. The skin gives a little under the thumb. The sweetness arrives all at once. The air around it turns heavy and gold. ripe is a fragrance house built on that hour: life at its sweetest.</p>
+      <p class="lb eyb">Ethos and philosophy</p>
+      <h2 class="h2">savoring life at<span class="cur">its sweetest</span></h2>
+      <p class="body">Every fruit has one perfect hour. The skin gives a little under the thumb. The sweetness arrives all at once. The air around it turns heavy and gold. ripe is a fragrance house built on that hour: savoring life at its sweetest.</p>
       <p class="body" style="margin-top:14px">Not the orchard. The market stall at dusk, where everything is ripe and nobody is leaving.</p>
+      <p class="body" style="margin-top:14px"><b>Philosophy.</b> Sweetness is never saved for later and never apologized for. Temptation is the best part of being alive, so the creed is simple: in temptation we trust.</p>
+      <p class="body" style="margin-top:14px"><b>The aura.</b> Confident, indulgent, intoxicating, spontaneous, ephemeral, vibrant, alluring. Elegance with a raw edge. The sticky finger freedom of biting into ripe fruit without worrying about the mess. Vacation energy every day, the dress code everywhere you go. In your prime, with no peak in sight. Youthfulness and mature sophistication in perfect harmony.</p>
       <div class="trio">
         <div><b>The peak</b><span>skin giving way, juice just under it</span></div>
         <div><b>The pull</b><span>impossible to put down</span></div>
@@ -956,7 +958,7 @@ html,body{margin:0;background:#F6EEDF}
 
 <section class="end" id="rp-end"><div class="sun" aria-hidden="true"></div>
   <img class="mark wmk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-wordmark-cream.webp?v=3" alt="" role="img" aria-label="ripe">
-  <p class="cur">life at its sweetest</p>
+  <p class="cur">in temptation we trust</p>
   <div class="mini" id="rp-mini"></div>
   <a class="up lb" href="#rp-top">Back to the top</a>
 </section>
@@ -996,7 +998,7 @@ function gr(f){return 'linear-gradient(165deg,'+f.g1+','+f.g2+')'}
 R.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);var t=$(id);if(t){e.preventDefault();go(t)}})});
 
 /* ticker */
-(function(){var w=['Peak ripeness','Decadent','Exotic','Untamed','Dangerously edible','Life at its sweetest'],h='';
+(function(){var w=['Peak ripeness','Decadent','Exotic','Untamed','Dangerously edible','In temptation we trust'],h='';
   for(var k=0;k<2;k++)w.forEach(function(x){h+='<span>'+x+'</span><span class="c">ripe</span>'});
   var t=$('rp-tick');t.innerHTML=h+h})();
 
@@ -1011,7 +1013,7 @@ R.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click
   R.querySelector('.modes').addEventListener('click',function(e){var b=e.target.closest('button');if(b)set(+b.getAttribute('data-m'))});set(0)})();
 
 /* voice */
-(function(){var Q=[['Product name','greediest guava'],['Billboard','ripe. life at its sweetest.'],['Caption','peel it slowly. smell it first.'],['Sold out','someone else got there first.'],['Shipping','on its way, still warm from the sun.'],['Cart','you have handled it. now keep it.']];
+(function(){var Q=[['Product name','greediest guava'],['Billboard','ripe. in temptation we trust.'],['Caption','peel it slowly. smell it first.'],['Sold out','someone else got there first.'],['Shipping','on its way, still warm from the sun.'],['Cart','you have handled it. now keep it.']];
   var box=$('rp-lines'),out=$('rp-said');
   chips(box,Q.map(function(q){return q[0]}),function(i){out.textContent=Q[i][1]},1);out.textContent=Q[1][1]})();
 
@@ -1083,7 +1085,7 @@ function setCast(i){cc=i;var f=FR[i],cs=$('rp-cs');
   g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var x=e.target.closest('.hg');if(x){e.preventDefault();set(+x.getAttribute('data-i'))}}});set(0)})();
 
 /* hero film */
-(function(){var F=[['00:00','sunrise on skin','it starts ripe','el-peach-top'],['00:06','the market opens','a door in the sun','el-door'],['00:12','the fruit swells','impossible to look away','el-mango-wash'],['00:19','one bite past polite','a little closer','el-lips-mango'],['00:25','the bruise blooms','beautiful, then not','el-bananas'],['00:30','life at its sweetest','ripe',null]];
+(function(){var F=[['00:00','sunrise on skin','it starts ripe','el-peach-top'],['00:06','the market opens','a door in the sun','el-door'],['00:12','the fruit swells','impossible to look away','el-mango-wash'],['00:19','one bite past polite','a little closer','el-lips-mango'],['00:25','the bruise blooms','beautiful, then not','el-bananas'],['00:30','in temptation we trust','ripe',null]];
   var film=$('rp-film'),sc=$('rp-fscr'),k=0,timer=null;
   F.forEach(function(f,i){var d=D.createElement('div');d.className='fr'+(i?'':' on');
     d.innerHTML=f[3]?'<img src="'+u(f[3])+'" alt="" role="img" aria-label="Film frame: '+esc(f[1])+'" loading="lazy">':'<div style="position:absolute;inset:0;background:linear-gradient(165deg,#FFC247,#F26C8E 60%,#E8471F)"></div><img src="'+bu(FR[1])+'" alt="" role="img" aria-label="Messiest Mango end frame" style="position:absolute;right:12%;bottom:0;width:auto;height:84%;object-fit:contain">';
