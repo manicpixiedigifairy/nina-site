@@ -548,6 +548,30 @@ html,body{margin:0;background:#F6EEDF}
 @media(max-width:380px){.rp .merch{grid-template-columns:1fr}}
 @media(max-width:767px){.rp .hero .kick{padding-top:132px}}
 
+/* new reference elements */
+.rp .mood .cgi.ph{background:#DCCDBE;overflow:hidden}
+.rp .mood .cgi.ph img{left:0;bottom:0;height:100%;width:100%;object-fit:cover;transform:none}
+.rp .mood .cgi.ph:hover img{transform:scale(1.05)}
+.rp .wallrail{display:flex;gap:clamp(10px,1.4vw,18px);margin-top:clamp(30px,4vw,56px);overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:18px;margin-left:calc(var(--g)*-1);margin-right:calc(var(--g)*-1);padding-left:var(--g);padding-right:var(--g);scrollbar-width:thin;scrollbar-color:rgba(246,238,223,.4) transparent}
+.rp .wallrail figure{margin:0;flex:0 0 auto;width:clamp(220px,24vw,360px);scroll-snap-align:start;position:relative}
+.rp .wallrail figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px;transition:transform .8s}
+.rp .wallrail figure:hover img{transform:scale(1.02)}
+.rp .wallrail figcaption{margin-top:12px;font-size:15px;line-height:1.4;opacity:.9}
+.rp .wallrail figcaption b{display:block;font-family:var(--cond);font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mango);margin-bottom:4px}
+.rp .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px);margin-top:clamp(40px,5vw,72px)}
+.rp .duo figure{margin:0;position:relative;overflow:hidden;min-height:clamp(380px,46vw,640px)}
+.rp .duo figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s}
+.rp .duo figure:hover img{transform:scale(1.06)}
+.rp .duo figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(28,11,5,.82))}
+.rp .duo figcaption{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;color:var(--cream);font-size:15px;line-height:1.5;max-width:36ch}
+.rp .duo figcaption b{display:block;font-family:var(--cond);font-weight:500;font-size:24px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+@media(max-width:767px){.rp .duo{grid-template-columns:1fr}.rp .wallrail figure{width:68vw}}
+
+.rp .duo{grid-template-columns:repeat(3,1fr)}
+.rp .creators{row-gap:clamp(30px,4vw,60px)}
+@media(max-width:1100px){.rp .duo{grid-template-columns:1fr 1fr}.rp .duo figure:last-child:nth-child(odd){grid-column:1/3}}
+@media(max-width:767px){.rp .duo{grid-template-columns:1fr}.rp .duo figure:last-child:nth-child(odd){grid-column:auto}}
+
 </style></head><body>
 <div class="rp" id="rp"><div class="grain" aria-hidden="true"></div>
 <nav class="top px" aria-label="Page">
@@ -593,7 +617,7 @@ html,body{margin:0;background:#F6EEDF}
 </section>
 
 <!-- PART 1 -->
-<section class="part" id="p1"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tx-orange-drip.webp?v=1)"></div>
+<section class="part" id="p1"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-blood-orange.webp?v=1)"></div>
   <div class="in2 px"><div class="no">01</div><h2><span class="cur">before the first drop</span>The Foundation</h2><p class="sub">Story, mood, voice, cast, logo, type, color and texture. Everything the rest of the world borrows from.</p></div></section>
 
 <section class="sec dk px on-dk" id="mood">
@@ -607,10 +631,10 @@ html,body{margin:0;background:#F6EEDF}
   <div class="mood rv">
     <div class="stage">
       <div class="pane mac on" id="rp-pm">
-        <a class="mc c1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-macro.webp?v=1" alt="" role="img" aria-label="Macro of a split papaya with black seeds" loading="lazy"></a>
-        <a class="mc c2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tx-orange-drip.webp?v=1" alt="" role="img" aria-label="Macro of orange peel with a bead of juice" loading="lazy"></a>
-        <a class="mc c3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tx-white-peach.webp?v=1" alt="" role="img" aria-label="Macro of a split white peach" loading="lazy"></a>
-        <a class="mc c4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-passionfruit.webp?v=1" alt="" role="img" aria-label="Macro of passionfruit pulp" loading="lazy"></a>
+        <a class="mc c1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-lips-mango.webp?v=1" alt="" role="img" aria-label="Macro of mango strands pulled through lips" loading="lazy"></a>
+        <a class="mc c2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-blood-orange.webp?v=1" alt="" role="img" aria-label="Macro of blood orange pulp lit from inside" loading="lazy"></a>
+        <a class="mc c3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-fig-eat.webp?v=1" alt="" role="img" aria-label="A wet-haired face biting into a ripe fig" loading="lazy"></a>
+        <a class="mc c4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-wash.webp?v=1" alt="" role="img" aria-label="Hands with gold bangles washing mangoes" loading="lazy"></a>
       </div>
       <div class="pane cg" id="rp-pc"></div>
     </div>
@@ -619,6 +643,13 @@ html,body{margin:0;background:#F6EEDF}
       <div class="chips"><span>wet gloss</span><span>peach fuzz</span><span>sun-faded film</span><span>warm lo-fi grain</span></div>
     </div>
   </div>
+</section>
+
+<section class="sec dk px on-dk" id="wall" style="padding-top:0">
+  <p class="lb eyb rv">01.1b Reference wall</p>
+  <h2 class="h2 rv" style="font-size:clamp(34px,4.4vw,72px)">sun, skin<span class="cur gl">and too much fruit</span></h2>
+  <p class="body rv">Thirty-one frames that set the world: gold on skin, color-blocked walls, fruit pulled and peeled, wet gloss at the peak. Drag or scroll sideways. Mood references only.</p>
+  <div class="wallrail rv" id="rp-wall" tabindex="0" aria-label="Reference wall, scroll sideways"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-bangles.webp?v=1" alt="" role="img" aria-label="Mood reference: Gold worn like jewelry" loading="lazy"><figcaption><b>Jewelry</b>Gold worn like jewelry</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-door.webp?v=1" alt="" role="img" aria-label="Mood reference: Color blocked and sun-struck" loading="lazy"><figcaption><b>Color</b>Color blocked and sun-struck</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-wet.webp?v=1" alt="" role="img" aria-label="Mood reference: Wet gloss, one bead at a time" loading="lazy"><figcaption><b>Hyperreal</b>Wet gloss, one bead at a time</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-lips-mango.webp?v=1" alt="" role="img" aria-label="Mood reference: Pulled, not bitten" loading="lazy"><figcaption><b>Appetite</b>Pulled, not bitten</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-eat.webp?v=1" alt="" role="img" aria-label="Mood reference: Eyes closed" loading="lazy"><figcaption><b>Appetite</b>Eyes closed</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-fig-eat.webp?v=1" alt="" role="img" aria-label="Mood reference: The seeds are the point" loading="lazy"><figcaption><b>Appetite</b>The seeds are the point</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-orange.webp?v=1" alt="" role="img" aria-label="Mood reference: Pith and pressure" loading="lazy"><figcaption><b>Macro</b>Pith and pressure</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-wash.webp?v=1" alt="" role="img" aria-label="Mood reference: Market morning" loading="lazy"><figcaption><b>Market</b>Market morning</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-hand.webp?v=1" alt="" role="img" aria-label="Mood reference: Peeled with the thumb" loading="lazy"><figcaption><b>Skin</b>Peeled with the thumb</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-peel.webp?v=1" alt="" role="img" aria-label="Mood reference: A bowl of the bruised" loading="lazy"><figcaption><b>Market</b>A bowl of the bruised</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-bananas.webp?v=1" alt="" role="img" aria-label="Mood reference: Too many, on purpose" loading="lazy"><figcaption><b>Excess</b>Too many, on purpose</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-plums.webp?v=1" alt="" role="img" aria-label="Mood reference: Dark, glossy, nearly black" loading="lazy"><figcaption><b>Plum</b>Dark, glossy, nearly black</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-top.webp?v=1" alt="" role="img" aria-label="Mood reference: Fuzz, fold and dew" loading="lazy"><figcaption><b>Hyperreal</b>Fuzz, fold and dew</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-cubed.webp?v=1" alt="" role="img" aria-label="Mood reference: Cut for the sea" loading="lazy"><figcaption><b>Appetite</b>Cut for the sea</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-drip.webp?v=1" alt="" role="img" aria-label="Mood reference: One slow drop" loading="lazy"><figcaption><b>Hyperreal</b>One slow drop</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-papaya-rings.webp?v=1" alt="" role="img" aria-label="Mood reference: Rings on, juice down" loading="lazy"><figcaption><b>Jewelry</b>Rings on, juice down</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-lips-gloss.webp?v=1" alt="" role="img" aria-label="Mood reference: Gloss meets flesh" loading="lazy"><figcaption><b>Macro</b>Gloss meets flesh</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-grapefruit-half.webp?v=1" alt="" role="img" aria-label="Mood reference: Split down the middle" loading="lazy"><figcaption><b>Macro</b>Split down the middle</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-gradient.webp?v=1" alt="" role="img" aria-label="Mood reference: Blush to cream" loading="lazy"><figcaption><b>Texture</b>Blush to cream</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-puree-orange.webp?v=1" alt="" role="img" aria-label="Mood reference: The swirl" loading="lazy"><figcaption><b>Texture</b>The swirl</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-puree-yellow.webp?v=1" alt="" role="img" aria-label="Mood reference: Butter soft" loading="lazy"><figcaption><b>Texture</b>Butter soft</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-blood-orange.webp?v=1" alt="" role="img" aria-label="Mood reference: Pulp, lit from inside" loading="lazy"><figcaption><b>Macro</b>Pulp, lit from inside</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-still-flamingo.webp?v=1" alt="" role="img" aria-label="Mood reference: A still life with one prop too many" loading="lazy"><figcaption><b>Still life</b>A still life with one prop too many</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-melon-green.webp?v=1" alt="" role="img" aria-label="Mood reference: Seeds on a green ground" loading="lazy"><figcaption><b>Texture</b>Seeds on a green ground</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-plums-wet.webp?v=1" alt="" role="img" aria-label="Mood reference: Dew on the dark ones" loading="lazy"><figcaption><b>Hyperreal</b>Dew on the dark ones</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-melon-gel.webp?v=1" alt="" role="img" aria-label="Mood reference: Seeds in honey" loading="lazy"><figcaption><b>Macro</b>Seeds in honey</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-fig-drip.webp?v=1" alt="" role="img" aria-label="Mood reference: The drip is the ad" loading="lazy"><figcaption><b>Appetite</b>The drip is the ad</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-shoulder-mango.webp?v=1" alt="" role="img" aria-label="Mood reference: Sun, sheen, a mango just out of frame" loading="lazy"><figcaption><b>Skin</b>Sun, sheen, a mango just out of frame</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-limoncillo-skin.webp?v=1" alt="" role="img" aria-label="Mood reference: Pore and pebble" loading="lazy"><figcaption><b>Macro</b>Pore and pebble</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-puree-smear.webp?v=1" alt="" role="img" aria-label="Mood reference: One long swipe" loading="lazy"><figcaption><b>Texture</b>One long swipe</figcaption></figure><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-flesh.webp?v=1" alt="" role="img" aria-label="Mood reference: Ribbons of ripe" loading="lazy"><figcaption><b>Macro</b>Ribbons of ripe</figcaption></figure></div>
 </section>
 
 <section class="sec px" id="voice">
@@ -720,15 +751,15 @@ html,body{margin:0;background:#F6EEDF}
   <h2 class="h2 rv">wet gloss<span class="cur gl">and peach fuzz</span></h2>
   <p class="body rv">Two surfaces, one light. Glossy flesh up close, velvet matte skin on the object. Both pass through warm, sun-faded lo-fi grain.</p>
   <div class="texs rv">
-    <div class="tx3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-papaya-macro.webp?v=1" alt="" role="img" aria-label="Wet gloss papaya macro" loading="lazy"><div><h5>Wet gloss</h5><p>Flesh, seeds, juice. Hard highlights, deep shadow.</p></div></div>
-    <div class="tx3 fz"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-peach-skin.webp?v=1" alt="" role="img" aria-label="Peach fuzz skin" loading="lazy"><div><h5>Peach fuzz</h5><p>Velvet matte. Light sinks in instead of bouncing.</p></div></div>
-    <div class="tx3 gn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-tx-mango.webp?v=1" alt="" role="img" aria-label="Mango flesh under film grain" loading="lazy"><div><h5>Sun-faded grain</h5><p>Warm lo-fi film over everything, always.</p></div></div>
+    <div class="tx3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-drip.webp?v=1" alt="" role="img" aria-label="Wet gloss peach half with a slow drop" loading="lazy"><div><h5>Wet gloss</h5><p>Flesh, seeds, juice. Hard highlights, deep shadow.</p></div></div>
+    <div class="tx3 fz"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-top.webp?v=1" alt="" role="img" aria-label="Peach fuzz with dew" loading="lazy"><div><h5>Peach fuzz</h5><p>Velvet matte. Light sinks in instead of bouncing.</p></div></div>
+    <div class="tx3 gn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-puree-orange.webp?v=1" alt="" role="img" aria-label="Orange puree swirl under film grain" loading="lazy"><div><h5>Sun-faded grain</h5><p>Warm lo-fi film over everything, always.</p></div></div>
   </div>
   <div class="txr rv"><div class="tt" id="rp-txr1"></div></div>
 </section>
 
 <!-- PART 2 -->
-<section class="part" id="p2"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-coconut-hip.webp?v=1)"></div>
+<section class="part" id="p2"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-door.webp?v=1)"></div>
   <div class="in2 px"><div class="no">02</div><h2><span class="cur">hot enough to remember</span>Campaign World</h2><p class="sub">Four ways ripe shows up outside the bottle: huge, saturated, walkable and moving.</p></div></section>
 
 <section class="sec pl px on-dk" id="platforms">
@@ -761,6 +792,9 @@ html,body{margin:0;background:#F6EEDF}
       <div class="stills" id="rp-stills" style="margin-top:34px"></div></div>
     <div class="rv"><div class="phone"><div class="scr" id="rp-feed"><div class="bars" id="rp-bars"></div><div class="ui"><span class="cur glowt" id="rp-fc">peel</span><p class="lb" id="rp-fl2">slowly</p><span class="shop">Shop the harvest</span></div></div></div></div>
   </div>
+  <div class="duo rv" style="margin-top:clamp(40px,5vw,72px)"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-still-flamingo.webp?v=1" alt="" role="img" aria-label="Mood reference: a cut blood orange with a flamingo pick on color-blocked planes" loading="lazy"><figcaption><b>Flat planes, hard sun</b>Color blocks and one prop too many. The still-life rule.</figcaption></figure>
+  <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-peach-top.webp?v=1" alt="" role="img" aria-label="Mood reference: a peach crown with beads of water against pale grey" loading="lazy"><figcaption><b>Quiet ground, loud fruit</b>Pale, clean grounds so the skin does the shouting.</figcaption></figure>
+  <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-plums.webp?v=1" alt="" role="img" aria-label="Mood reference: a pile of plums, some halved" loading="lazy"><figcaption><b>Repetition is excess</b>Pile it up until the fruit becomes pattern.</figcaption></figure></div>
 </section>
 
 <section class="sec px" id="popup">
@@ -773,7 +807,7 @@ html,body{margin:0;background:#F6EEDF}
       <g fill="none" stroke="#2A1206" stroke-opacity=".35"><rect x="30" y="30" width="250" height="60"/><rect x="320" y="30" width="250" height="60"/><circle cx="150" cy="190" r="48"/><rect x="380" y="140" width="170" height="70"/><rect x="30" y="260" width="180" height="60"/><rect x="390" y="260" width="180" height="60"/></g>
       <g id="rp-hots"></g></svg>
       <div class="legend" id="rp-leg" aria-live="polite"></div></div>
-    <div class="mkt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-market.webp?v=1" alt="" role="img" aria-label="Mood reference: a fruit market stall with painted produce" loading="lazy"><div><span class="cur">come hungry</span><p class="lb">Mood reference for the market scene</p></div></div>
+    <div class="mkt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-wash.webp?v=1" alt="" role="img" aria-label="Mood reference: hands with gold bangles washing mangoes" loading="lazy"><div><span class="cur">come hungry</span><p class="lb">Mood reference for the market scene</p></div></div>
   </div>
 </section>
 
@@ -785,7 +819,7 @@ html,body{margin:0;background:#F6EEDF}
 </section>
 
 <!-- PART 3 -->
-<section class="part" id="p3"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-peach-skin.webp?v=1)"></div>
+<section class="part" id="p3"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-bangles.webp?v=1)"></div>
   <div class="in2 px"><div class="no">03</div><h2><span class="cur">soft to the touch</span>The Object</h2><p class="sub">A bottle made like a fruit: soft, dimpled, matte, and a little bit too tempting.</p></div></section>
 
 <section class="sec px" id="object">
@@ -805,6 +839,9 @@ html,body{margin:0;background:#F6EEDF}
       <div class="spec" id="rp-spec"></div>
     </div>
   </div>
+  <div class="duo rv"><figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-bangles.webp?v=1" alt="" role="img" aria-label="Mood reference: stacked gold bangles on a hand against a yellow wall" loading="lazy"><figcaption><b>The nozzle is jewelry</b>One gold piece, worn on the fruit like a bangle on a wrist.</figcaption></figure>
+  <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-papaya-rings.webp?v=1" alt="" role="img" aria-label="Mood reference: a face biting papaya, wearing chunky gold rings" loading="lazy"><figcaption><b>Rings and rinds</b>Gold on wet fingers, fruit at the mouth. That is the mood.</figcaption></figure>
+  <figure><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-hand.webp?v=1" alt="" role="img" aria-label="Mood reference: a hand holding a peeled mango, wearing stacked cuffs" loading="lazy"><figcaption><b>The skin is the pack</b>Peeled by hand, soft in the palm. The bottle should feel like this.</figcaption></figure></div>
 </section>
 
 <section class="sec pl px on-dk" id="bulb">
@@ -843,7 +880,7 @@ html,body{margin:0;background:#F6EEDF}
 </section>
 
 <!-- PART 4 -->
-<section class="part" id="p4"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-market.webp?v=1)"></div>
+<section class="part" id="p4"><div class="bg" style="background-image:url(https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-hand.webp?v=1)"></div>
   <div class="in2 px"><div class="no">04</div><h2><span class="cur">the whole market</span>World-Building</h2><p class="sub">A grainy, glowing, slightly feral world that keeps going after the bottle is empty.</p></div></section>
 
 <section class="sec dk px on-dk" id="eco">
@@ -931,14 +968,14 @@ function chips(box,items,cb,start){box.innerHTML=items.map(function(t,i){return 
 
 /* the cast */
 var FR=[
-{id:'peach',name:'Plumpest Peach',fruit:'Peach',g1:'#FFC9A8',g2:'#EE8F6E',tx:'peach-skin',line:'soft to the touch, hard to forget',who:'Powdery, warm, a little shy until she is not. The soft one everyone reaches for first.',notes:['white peach','apricot skin','cashmere musk'],dim:[12,36],h:15},
-{id:'mango',name:'Messiest Mango',fruit:'Mango',g1:'#FFC247',g2:'#E8471F',tx:'tx-mango',line:'sun-warmed skin, after dark',who:'The messy one. Juice to the elbow, no apology, a sun that refuses to set.',notes:['mango nectar','pink pepper','salted skin'],dim:[12,36],h:15},
+{id:'peach',name:'Plumpest Peach',fruit:'Peach',g1:'#FFC9A8',g2:'#EE8F6E',tx:'el-peach-gradient',line:'soft to the touch, hard to forget',who:'Powdery, warm, a little shy until she is not. The soft one everyone reaches for first.',notes:['white peach','apricot skin','cashmere musk'],dim:[12,36],h:15},
+{id:'mango',name:'Messiest Mango',fruit:'Mango',g1:'#FFC247',g2:'#E8471F',tx:'el-mango-flesh',line:'sun-warmed skin, after dark',who:'The messy one. Juice to the elbow, no apology, a sun that refuses to set.',notes:['mango nectar','pink pepper','salted skin'],dim:[12,36],h:15},
 {id:'guava',name:'Greediest Guava',fruit:'Guava',g1:'#C9D58A',g2:'#F26C8E',tx:'tx-white-peach',line:'sweet talk, sharp edges',who:'Sweet on the surface, sharp underneath. She tells you what you want to hear, then adds a warning.',notes:['pink guava','lychee','green fig leaf'],dim:[12,37],h:13.4},
-{id:'limoncillo',name:'Lushest Limoncillo',fruit:'Limoncillo',g1:'#C9D95A',g2:'#667730',tx:'tx-kiwi',line:'sour first, sweet after',who:'Green, tart, tropical. It puckers you, then lingers sweet and a little wild.',notes:['limoncillo pulp','lime zest','salted vetiver'],dim:[86,60],h:11.4},
-{id:'banana',name:'Bruised Banana',fruit:'Banana',g1:'#FFC247',g2:'#5B2C0E',tx:'banana-peel',line:'sweet where it got handled',who:'Spotted, caramel, handled. The one that has been loved a lot and wears it well.',notes:['caramelized banana','brown sugar','tonka bean'],dim:[72,27],h:16},
-{id:'pear',name:'Poshest Pear',fruit:'Pear',g1:'#C5D675',g2:'#E9A03A',tx:'tx-citrus',line:'quiet money, loud appetite',who:'Hushed, golden, expensive. It never raises its voice and always gets what it wants.',notes:['green pear','honey','amber wood'],dim:[85,69],h:17},
-{id:'grapefruit',name:'Gushing Grapefruit',fruit:'Grapefruit',g1:'#FFC247',g2:'#C3162C',tx:'tx-orange-drip',line:'bright, bitter, overflowing',who:'The spray of a peel the second it breaks. Bright, bitter, and far too much juice.',notes:['pink grapefruit','blood orange','sea salt'],dim:[12,33],h:13.8},
-{id:'plum',name:'Plushest Plum',fruit:'Plum',g1:'#C45872',g2:'#2A1030',tx:'tx-fig',line:'dark, juicy, a little indecent',who:'Dark, glossy, nearly black. The one you hide at the back of the party and still cannot stop watching.',notes:['black plum','rose absolute','smoked cacao'],dim:[9,47],h:13.2}
+{id:'limoncillo',name:'Lushest Limoncillo',fruit:'Limoncillo',g1:'#C9D95A',g2:'#667730',tx:'el-limoncillo-skin',line:'sour first, sweet after',who:'Green, tart, tropical. It puckers you, then lingers sweet and a little wild.',notes:['limoncillo pulp','lime zest','salted vetiver'],dim:[86,60],h:11.4},
+{id:'banana',name:'Bruised Banana',fruit:'Banana',g1:'#FFC247',g2:'#5B2C0E',tx:'el-bananas',line:'sweet where it got handled',who:'Spotted, caramel, handled. The one that has been loved a lot and wears it well.',notes:['caramelized banana','brown sugar','tonka bean'],dim:[72,27],h:16},
+{id:'pear',name:'Poshest Pear',fruit:'Pear',g1:'#C5D675',g2:'#E9A03A',tx:'el-melon-gel',line:'quiet money, loud appetite',who:'Hushed, golden, expensive. It never raises its voice and always gets what it wants.',notes:['green pear','honey','amber wood'],dim:[85,69],h:17},
+{id:'grapefruit',name:'Gushing Grapefruit',fruit:'Grapefruit',g1:'#FFC247',g2:'#C3162C',tx:'el-blood-orange',line:'bright, bitter, overflowing',who:'The spray of a peel the second it breaks. Bright, bitter, and far too much juice.',notes:['pink grapefruit','blood orange','sea salt'],dim:[12,33],h:13.8},
+{id:'plum',name:'Plushest Plum',fruit:'Plum',g1:'#C45872',g2:'#2A1030',tx:'el-plums-wet',line:'dark, juicy, a little indecent',who:'Dark, glossy, nearly black. The one you hide at the back of the party and still cannot stop watching.',notes:['black plum','rose absolute','smoked cacao'],dim:[9,47],h:13.2}
 ];
 function ix(id){for(var i=0;i<FR.length;i++)if(FR[i].id===id)return i;return 0}
 function gr(f){return 'linear-gradient(165deg,'+f.g1+','+f.g2+')'}
@@ -961,7 +998,7 @@ R.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click
 
 /* mood */
 (function(){var pm=$('rp-pm'),pc=$('rp-pc'),ul=$('rp-moodl');
-  pc.innerHTML=['mango','plum','grapefruit','pear'].map(function(id){var f=FR[ix(id)];return '<div class="cgi" style="background:'+gr(f)+'"><img src="'+bu(f)+'" alt="" role="img" aria-label="'+esc(f.name)+' render" loading="lazy"></div>'}).join('');
+  pc.innerHTML='<div class="cgi ph"><img src="'+u('el-peach-wet')+'" alt="" role="img" aria-label="Hyperreal wet peach reference" loading="lazy"></div>'+['mango','plum','pear'].map(function(id){var f=FR[ix(id)];return '<div class="cgi" style="background:'+gr(f)+'"><img src="'+bu(f)+'" alt="" role="img" aria-label="'+esc(f.name)+' render" loading="lazy"></div>'}).join('');
   var L=[[['Light','Low sun, warm, a little overexposed. Highlights bloom.'],['Surface','Wet gloss on flesh. Matte fuzz on skin.'],['Frame','Macro, so close the fruit stops looking like fruit.'],['Grade','Sun-faded film, lifted blacks, warm grain.']],
          [['Light','Soft studio sun, impossible and even.'],['Surface','Silicone skin, perfect pores, one bead of juice.'],['Camera','A slow orbit. Shallow, calm, unbothered.'],['Reference','Hyperreal Cinema 4D worlds in the laurel.xyz tradition.']]];
   function set(m){pm.classList.toggle('on',m===0);pc.classList.toggle('on',m===1);
@@ -992,7 +1029,7 @@ function setCast(i){cc=i;var f=FR[i],cs=$('rp-cs');
 
 /* logo lab */
 (function(){var lab=$('rp-lab'),ph=$('rp-ph'),lt=$('rp-lt'),rip=$('rp-rip');
-  var P=[['Peach','peach-skin'],['Mango','tx-mango'],['Papaya','papaya-macro']];
+  var P=[['Peach','peach-skin'],['Skin','el-shoulder-mango'],['Mango','tx-mango'],['Papaya','papaya-macro']];
   function photo(i){var s='url('+u(P[i][1])+')';ph.style.backgroundImage=s;lt.style.backgroundImage=s}
   function tan(){var v=+rip.value;lab.style.setProperty('--bri',(1.12-v*.0072).toFixed(3));lab.style.setProperty('--sat',(.8+v*.006).toFixed(3));lab.style.setProperty('--sep',(v*.0045).toFixed(3))}
   chips($('rp-lph'),P.map(function(p){return p[0]}),photo,0);photo(0);tan();rip.addEventListener('input',tan);
@@ -1009,7 +1046,7 @@ function setCast(i){cc=i;var f=FR[i],cs=$('rp-cs');
   R.querySelectorAll('[data-hex]').forEach(function(b){b.addEventListener('click',function(){var h=b.getAttribute('data-hex');try{navigator.clipboard.writeText(h).catch(function(){})}catch(x){}b.classList.add('ok');setTimeout(function(){b.classList.remove('ok')},1200);toast(h+' copied')})})})();
 
 /* texture rail */
-(function(){var T=['tx-citrus','tx-dragonfruit','tx-fig','tx-kiwi','tx-mango','tx-melon-seeds','tx-orange-drip','tx-papaya','tx-strawberry','tx-white-peach'];
+(function(){var T=['tx-citrus','el-bananas','el-melon-green','el-puree-yellow','el-mango-flesh','tx-dragonfruit','el-grapefruit-half','el-orange','tx-fig','tx-kiwi','el-mango-peel','tx-mango','tx-melon-seeds','el-peach-wet','el-peach-gradient','tx-orange-drip','el-blood-orange','el-plums','el-puree-orange','tx-papaya','el-lips-mango','tx-strawberry','tx-white-peach','el-fig-eat'];
   var h=T.map(function(t){return '<figure><img src="'+u(t)+'" alt="" role="img" aria-label="Fruit texture" loading="lazy"></figure>'}).join('');$('rp-txr1').innerHTML=h+h})();
 
 /* OOH */
@@ -1022,7 +1059,7 @@ function setCast(i){cc=i;var f=FR[i],cs=$('rp-cs');
 
 /* stills + feed */
 (function(){$('rp-stills').innerHTML=FR.map(function(f){return '<div class="st" style="--g1:'+f.g1+';--g2:'+f.g2+'"><div class="tx" style="background-image:url('+u(f.tx)+')"></div><div class="plinth"></div><img src="'+bu(f)+'" alt="" role="img" aria-label="'+esc(f.name)+' still life" loading="lazy"><span>'+esc(f.fruit)+'</span></div>'}).join('');
-  var S=[['peach-skin','peel','slowly'],['tx-white-peach','press','harder'],['papaya-macro','smell','it twice'],['passionfruit','keep','the seeds']];
+  var S=[['el-peach-top','peel','slowly'],['el-blood-orange','press','harder'],['el-lips-gloss','smell','it twice'],['el-papaya-rings','keep','the seeds']];
   var feed=$('rp-feed'),bars=$('rp-bars');
   S.forEach(function(s,i){var d=D.createElement('div');d.className='sl'+(i?'':' on');d.innerHTML='<img src="'+u(s[0])+'" alt="" role="img" aria-label="Story frame" loading="lazy">';feed.insertBefore(d,bars)});
   bars.innerHTML=S.map(function(){return '<i><b></b></i>'}).join('');
@@ -1042,7 +1079,7 @@ function setCast(i){cc=i;var f=FR[i],cs=$('rp-cs');
   g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var x=e.target.closest('.hg');if(x){e.preventDefault();set(+x.getAttribute('data-i'))}}});set(0)})();
 
 /* hero film */
-(function(){var F=[['00:00','sunrise on skin','it starts ripe','peach-skin'],['00:06','the market opens','everything glows','market'],['00:12','the fruit swells','too sweet to look away','papaya-macro'],['00:19','one bite past polite','a little closer','mango-bite'],['00:25','the bruise blooms','beautiful, then not','banana-peel'],['00:30','the second before too much','ripe',null]];
+(function(){var F=[['00:00','sunrise on skin','it starts ripe','el-peach-top'],['00:06','the market opens','a door in the sun','el-door'],['00:12','the fruit swells','too sweet to look away','el-mango-wash'],['00:19','one bite past polite','a little closer','el-lips-mango'],['00:25','the bruise blooms','beautiful, then not','el-bananas'],['00:30','the second before too much','ripe',null]];
   var film=$('rp-film'),sc=$('rp-fscr'),k=0,timer=null;
   F.forEach(function(f,i){var d=D.createElement('div');d.className='fr'+(i?'':' on');
     d.innerHTML=f[3]?'<img src="'+u(f[3])+'" alt="" role="img" aria-label="Film frame: '+esc(f[1])+'" loading="lazy">':'<div style="position:absolute;inset:0;background:linear-gradient(165deg,#FFC247,#F26C8E 60%,#E8471F)"></div><img src="'+bu(FR[1])+'" alt="" role="img" aria-label="Messiest Mango end frame" style="position:absolute;right:12%;bottom:0;width:auto;height:84%;object-fit:contain">';
@@ -1104,7 +1141,7 @@ function draggable(el,box,onDown){var sx,sy,ox,oy,id=null;
     draggable(p,sec,function(el){front(el);el.style.setProperty('--r',(Math.random()*24-12).toFixed(1)+'deg')})})})();
 
 /* grid */
-(function(){var G=[['ph','papaya-macro','juicy'],['bt','plum'],['tg','handle','with care','#E8471F'],['ph','tx-white-peach','ripe'],['wm'],['ph','peach-skin','soft'],['bt','grapefruit'],['ph','tx-orange-drip','too much'],['tg','no. 04','limoncillo','#667730'],['bt','pear'],['ph','tx-fig','bruised'],['bt','banana']];
+(function(){var G=[['ph','el-lips-mango','juicy'],['bt','plum'],['ph','el-mango-eat','sticky'],['ph','el-orange','ripe'],['wm'],['ph','el-peach-wet','soft'],['bt','grapefruit'],['ph','el-bangles','gold'],['tg','handle','with care','#E8471F'],['ph','el-door','color'],['ph','el-fig-eat','bruised'],['bt','pear'],['ph','el-still-flamingo','sweet'],['ph','el-shoulder-mango','sun-wet'],['ph','el-plums','dark'],['ph','el-mango-cubed','sliced'],['ph','el-limoncillo-skin','tart'],['ph','el-papaya-rings','rings on'],['bt','banana'],['ph','el-fig-drip','drip'],['ph','el-mango-hand','fresh'],['ph','el-bananas','too much'],['ph','el-plums-wet','deep'],['tg','no. 04','limoncillo','#667730']];
   $('rp-g9').innerHTML=G.map(function(g){
     if(g[0]==='ph')return '<div class="g9"><img class="ph" src="'+u(g[1])+'" alt="" role="img" aria-label="Grid tile: '+esc(g[2])+'" loading="lazy"><span class="gl">'+esc(g[2])+'</span></div>';
     if(g[0]==='bt'){var f=FR[ix(g[1])];return '<div class="g9 bt" style="--g1:'+f.g1+';--g2:'+f.g2+'"><img class="b" src="'+bu(f)+'" alt="" role="img" aria-label="'+esc(f.name)+' tile" loading="lazy"></div>'}
@@ -1112,7 +1149,7 @@ function draggable(el,box,onDown){var sx,sy,ox,oy,id=null;
     return '<div class="g9 tg" style="background:'+g[3]+'"><div><b>'+esc(g[1])+'</b><span class="cur">'+esc(g[2])+'</span></div></div>'}).join('')})();
 
 /* creators */
-(function(){var C=[['curlers','kitchen floor, 4 pm','Mood reference'],['papaya-arms','market run, too hot','Mood reference'],['mango-bite','the first bite','Mood reference']];
+(function(){var C=[['el-mango-eat','beach, too hot','Mood reference'],['el-fig-eat','bathroom mirror, 2 am','Mood reference'],['el-mango-hand','garden, mid-peel','Mood reference'],['el-mango-cubed','by the water, sliced','Mood reference'],['el-papaya-rings','rings on, juice down','Mood reference'],['el-lips-gloss','gloss and mango','Mood reference'],['el-shoulder-mango','poolside, sun-wet','Mood reference'],['el-fig-drip','fig, very close','Mood reference'],['el-lips-mango','pulled, not bitten','Mood reference']];
   $('rp-cr').innerHTML=C.map(function(c){return '<div><div class="phone"><div class="scr"><img class="ph" src="'+u(c[0])+'" alt="" role="img" aria-label="Creator frame: '+esc(c[1])+'" loading="lazy"><span class="rec"><i></i>REC</span><div class="fx"><span class="cur">'+esc(c[1])+'</span><small>ripe</small></div></div></div><div class="cp2"><b>'+esc(c[1])+'</b><span>'+c[2]+', shot lo-fi</span></div></div>'}).join('')})();
 
 /* merch */
