@@ -511,7 +511,7 @@ html,body{margin:0;background:#F6EEDF}
 
 /* overrides */
 .rp .hero{justify-content:flex-start}
-.rp .hero .mark{width:min(44vw,600px)}
+.rp .hero .mark{width:min(44vw,600px,64vh)}
 .rp .lineup{margin-top:auto;padding-top:clamp(10px,3vh,34px)}
 .rp .trio.four{grid-template-columns:repeat(4,1fr)}
 .rp .mood .pane.mac{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:1.2fr 1fr;gap:6px}
@@ -577,12 +577,17 @@ html,body{margin:0;background:#F6EEDF}
 @media(max-width:1100px){.rp .duo.d4{grid-template-columns:1fr 1fr}.rp .duo.d4 figure:last-child:nth-child(odd){grid-column:auto}}
 @media(max-width:767px){.rp .duo.d4{grid-template-columns:1fr}}
 
+.rp .lineup .hb img{height:min(calc(var(--h)*1vw),28vh)}
+@media(max-width:1100px){.rp .lineup .hb img{height:min(calc(var(--h)*1vw),30vh)}}
+@media(max-width:767px){.rp .lineup .hb img{height:min(54vw,28vh)}}
+
+.rp .hero{justify-content:flex-start}
+
 </style></head><body>
 <div class="rp" id="rp"><div class="grain" aria-hidden="true"></div>
 <nav class="top px" aria-label="Page">
   <a href="#rp-top" aria-label="ripe"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-wordmark-cream.webp?v=3" alt="" role="img" aria-label="ripe"></a>
   <a class="lb" href="#p1">Foundation</a><a class="lb" href="#p2">Campaign</a><a class="lb" href="#p3">Object</a><a class="lb" href="#p4">World</a>
-  <a class="lb" href="/what-the-spec">Back to What the Spec</a>
 </nav>
 
 <header class="hero" id="rp-top">
@@ -590,7 +595,6 @@ html,body{margin:0;background:#F6EEDF}
   <div class="kick"><p class="lb">Brand Positioning</p></div>
   <img class="mark wmk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-wordmark-cream.webp?v=3" alt="" role="img" aria-label="ripe">
   <div class="one"><p>fruit at its most ripe</p></div>
-  <div class="lineup" id="rp-lineup" aria-label="The eight ripe fragrances"></div>
 </header>
 
 <div class="tick" aria-hidden="true"><div class="tr" id="rp-tick"></div></div>
@@ -609,7 +613,7 @@ html,body{margin:0;background:#F6EEDF}
       </div>
     </div>
     <div class="rv" style="position:relative">
-      <div class="arch"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-mango-bite.webp?v=1" alt="" role="img" aria-label="Mood reference: a mouth against a green and red mango" loading="lazy"></div>
+      <div class="arch"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-el-mango-slice.webp?v=1" alt="" role="img" aria-label="Mood reference: glossy mango flesh up close" loading="lazy"></div>
       <img class="fl" id="rp-fl" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/ripe-bottle-mango.webp?v=1" alt="" role="img" aria-label="Messiest Mango bottle">
     </div>
   </div>
@@ -987,14 +991,6 @@ function gr(f){return 'linear-gradient(165deg,'+f.g1+','+f.g2+')'}
 
 /* anchors inside the shadow root */
 R.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);var t=$(id);if(t){e.preventDefault();go(t)}})});
-
-/* hero lineup */
-(function(){var L=$('rp-lineup');
-  L.innerHTML=FR.map(function(f,i){return '<button type="button" class="hb" data-i="'+i+'" style="--h:'+f.h+'" aria-label="'+esc(f.name)+'"><img src="'+bu(f)+'" alt="" role="img" aria-label="'+esc(f.name)+' bottle"><span>'+esc(f.name)+'</span></button>'}).join('');
-  L.addEventListener('click',function(e){var b=e.target.closest('.hb');if(!b)return;setCast(+b.getAttribute('data-i'));go($('cast'))});
-  var hero=$('rp-top'),imgs=L.querySelectorAll('img'),raf=0,mx=0;
-  if(!still)hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;if(raf)return;raf=requestAnimationFrame(function(){raf=0;imgs.forEach(function(im,k){im.style.transform='translate3d('+(mx*(k%2?-1:1)*(10+k*2))+'px,0,0)'})})});
-})();
 
 /* ticker */
 (function(){var w=['Peak ripeness','Decadent','Exotic','Untamed','Dangerously edible','Fruit at its most ripe'],h='';
