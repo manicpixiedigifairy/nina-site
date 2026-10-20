@@ -581,6 +581,8 @@ function upd(){var n=0;bs.forEach(function(b){var on=b.getAttribute('aria-checke
 bs.forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-checked',b.getAttribute('aria-checked')==='true'?'false':'true');upd()})});
 function run(){bs.forEach(function(b,i){setTimeout(function(){b.setAttribute('aria-checked','true');upd()},500+i*550)})}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();run()}},{threshold:.45});io.observe(cl)}else run();upd()})();
+/* sitewide MENU button reads black on this light page */
+(function(){var W=window.document,n=0;function fix(){var b=W.getElementById('nlb');if(b){b.style.setProperty('color','#151515','important');b.addEventListener('mouseenter',function(){b.style.setProperty('color','#E8702A','important')});b.addEventListener('mouseleave',function(){b.style.setProperty('color','#151515','important')});return}if(++n<40)setTimeout(fix,250)}fix()})();
 /* hero shuffle */
 (function(){var fan=q('.a-fan');if(!fan)return;var cards=qa('.a-fan .fc');var pos=cards.map(function(c){return [c.style.getPropertyValue('--x'),c.style.getPropertyValue('--y'),c.style.getPropertyValue('--t')]});
 var order=cards.map(function(_,i){return i});
