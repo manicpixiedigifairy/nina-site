@@ -76,6 +76,24 @@ html,body{margin:0}
 .am .a-open .co,.am .a-open[aria-expanded=true] .ex{display:none}
 .am .a-open[aria-expanded=true] .co{display:block}
 .am .a-open[aria-expanded=true]{position:sticky;float:right;margin:calc(var(--u)*-6) calc(var(--u)*1.6) 0 0;top:calc(var(--u)*2)}
+/* CHECKLIST */
+.am .a-cl{max-width:calc(var(--u)*78);background:#fff;border-radius:calc(var(--u)*.6);padding:calc(var(--u)*1.6) calc(var(--u)*3.4) calc(var(--u)*2.4);box-shadow:0 calc(var(--u)*1) calc(var(--u)*2.6) rgba(21,21,21,.1);background-image:repeating-linear-gradient(#fff 0 calc(var(--u)*3.2 - 1px),#E9E1D2 calc(var(--u)*3.2 - 1px) calc(var(--u)*3.2));position:relative}
+.am .a-cl::before{content:"";position:absolute;left:50%;top:calc(var(--u)*-1.1);width:calc(var(--u)*9);height:calc(var(--u)*2.2);margin-left:calc(var(--u)*-4.5);background:rgba(232,112,42,.55);rotate:-2deg}
+.am .a-clh{display:flex;justify-content:space-between;align-items:baseline;padding:calc(var(--u)*1) 0 calc(var(--u)*1.2);border-bottom:2px solid var(--ink);font:700 calc(var(--u)*1.05)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase}
+.am .a-clc{font:700 calc(var(--u)*2.2)/1 var(--hand);letter-spacing:0;color:var(--or)}
+.am .a-cl ul{list-style:none;margin:0;padding:0}
+.am .a-ck{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:calc(var(--u)*2);align-items:start;padding:calc(var(--u)*2.2) 0;border-bottom:1.5px dashed #d8cfbf}
+.am .a-ck:last-child{border-bottom:0}
+.am .a-ck .bx{display:grid;place-items:center;width:calc(var(--u)*3.2);height:calc(var(--u)*3.2);min-width:32px;min-height:32px;margin-top:.3em;border-radius:calc(var(--u)*.5);box-shadow:inset 0 0 0 2px var(--ink);background:#fff;color:#fff;transition:background .2s}
+.am .a-ck .bx svg{width:72%;height:72%;stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset .45s ease .05s}
+.am .a-ck .bx[aria-checked=true]{background:var(--or);box-shadow:inset 0 0 0 2px var(--or)}
+.am .a-ck .bx[aria-checked=true] svg{stroke-dashoffset:0}
+.am .a-ck small{display:block;font:700 calc(var(--u)*.95)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:#6b6b6b}
+.am .a-ck h3{margin:.2em 0 0;font:400 italic calc(var(--u)*4)/1 var(--ser);position:relative;display:inline-block}
+.am .a-ck h3::after{content:"";position:absolute;left:-.05em;right:-.05em;top:96%;height:.06em;border-radius:99px;background:var(--or);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s ease}
+.am .a-ck.done h3::after{transform:scaleX(1)}
+.am .a-ck p{margin:calc(var(--u)*.8) 0 0;font:500 calc(var(--u)*1.35)/1.45 var(--disp);max-width:34em}
+.am .a-ck .a-note{color:var(--or);rotate:-3deg;margin-top:.6em;white-space:nowrap}
 /* AUDIENCE */
 .am .a-au{background:#fff}
 .am .a-st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
@@ -238,7 +256,10 @@ html,body{margin:0}
 .am .a-gz{grid-template-columns:1fr}
 .am .a-kg{grid-template-columns:1fr}
 .am .a-kc b{font-size:calc(var(--u)*7.4)}
-.am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4)}
+.am .a-ck{grid-template-columns:auto minmax(0,1fr)}
+.am .a-ck .a-note{grid-column:2;margin-top:0}
+.am .a-cl{padding:calc(var(--u)*1.4) calc(var(--u)*2) calc(var(--u)*2)}
+.am .a-ck h3{font-size:calc(var(--u)*5)}
 .am .a-vc .pins{max-width:none}
 .am .a-fx .ob{grid-template-columns:1fr}
 .am .a-out p{font-size:min(15vw,calc(var(--u)*11))}
@@ -383,11 +404,7 @@ html,body{margin:0}
     </div>
     <p class="a-sub a-rv" style="--d:.14s">Every post ladders to a pillar, so business as usual, seasonal campaigns and sales events all speak the same language.</p>
   </div>
-  <div class="a-pl">
-    <div class="a-pc a-rv" style="--t:-1.5deg"><small>Brand + Product Awareness</small><h3>Inspire</h3><p>Aspirational but relatable spaces, people and feelings that help the audience picture their ideal life.</p><span class="a-note">setting the scene</span></div>
-    <div class="a-pc a-rv" style="--t:1deg;--d:.08s"><small>Product Benefit</small><h3>Educate</h3><p>The latest trends, hacks and use cases, so followers can shine within their own communities.</p><span class="a-note">curated collections</span></div>
-    <div class="a-pc a-rv" style="--t:-1deg;--d:.16s"><small>Product Function</small><h3>Promote</h3><p>Deep dives on how products work, backed by reviews and the internet&rsquo;s favorite finds.</p><span class="a-note">viral + trending finds</span></div>
-  </div>
+  <div class="a-cl a-rv"><div class="a-clh"><span>Before Every Post</span><span class="a-clc" aria-live="polite">0/3</span></div><ul><li class="a-ck a-rv" style="--d:0.00s"><button type="button" class="bx" role="checkbox" aria-checked="false" aria-label="Inspire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg></button><div class="tx"><small>Brand + Product Awareness</small><h3>Inspire</h3><p>Aspirational but relatable spaces, people and feelings that help the audience picture their ideal life.</p></div><span class="a-note">setting the scene</span></li><li class="a-ck a-rv" style="--d:0.08s"><button type="button" class="bx" role="checkbox" aria-checked="false" aria-label="Educate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg></button><div class="tx"><small>Product Benefit</small><h3>Educate</h3><p>The latest trends, hacks and use cases, so followers can shine within their own communities.</p></div><span class="a-note">curated collections</span></li><li class="a-ck a-rv" style="--d:0.16s"><button type="button" class="bx" role="checkbox" aria-checked="false" aria-label="Promote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg></button><div class="tx"><small>Product Function</small><h3>Promote</h3><p>Deep dives on how products work, backed by reviews and the internet&rsquo;s favorite finds.</p></div><span class="a-note">viral + trending finds</span></li></ul></div>
 </section>
 
 <section class="a-sc a-re" aria-labelledby="h-re">
@@ -562,6 +579,12 @@ qa('.a-fl').forEach(function(b){b.addEventListener('click',function(){b.setAttri
 (function(){var g=q('.a-gate'),o=q('.a-open'),h=q('.a-gate .hit'),d=q('.a-dev');if(!g||!o)return;
 function set(op){g.classList.toggle('op',op);o.setAttribute('aria-expanded',op?'true':'false');o.setAttribute('aria-label',op?'Collapse the board':'Expand the full board');if(!op)d.scrollIntoView({behavior:'smooth',block:'start'})}
 o.addEventListener('click',function(){set(!g.classList.contains('op'))});h.addEventListener('click',function(){set(true)})})();
+/* checklist */
+(function(){var cl=q('.a-cl');if(!cl)return;var bs=qa('.a-ck .bx'),c=q('.a-clc');
+function upd(){var n=0;bs.forEach(function(b){var on=b.getAttribute('aria-checked')==='true';b.closest('.a-ck').classList.toggle('done',on);if(on)n++});c.textContent=n+'/'+bs.length}
+bs.forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-checked',b.getAttribute('aria-checked')==='true'?'false':'true');upd()})});
+function run(){bs.forEach(function(b,i){setTimeout(function(){b.setAttribute('aria-checked','true');upd()},500+i*550)})}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();run()}},{threshold:.45});io.observe(cl)}else run();upd()})();
 /* hero shuffle */
 (function(){var fan=q('.a-fan');if(!fan)return;var cards=qa('.a-fan .fc');var pos=cards.map(function(c){return [c.style.getPropertyValue('--x'),c.style.getPropertyValue('--y'),c.style.getPropertyValue('--t')]});
 var order=cards.map(function(_,i){return i});
