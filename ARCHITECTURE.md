@@ -1,6 +1,6 @@
 # byninaaustin.com Page Architecture
 
-Snapshot taken 2026-10-10 at commit 686f2a5 (main). Updated 2026-10-13 at commit 6d86543 (Selected Works page added). Updated 2026-10-15 at commit df158c5 (Butterfinger 100 page added). Repo: github.com/manicpixiedigifairy/nina-site (public). Owner: Nina Austin, creative director and copywriter, Brooklyn.
+Snapshot taken 2026-10-10 at commit 686f2a5 (main). Updated 2026-10-13 at commit 6d86543 (Selected Works page added). Updated 2026-10-15 at commit df158c5 (Butterfinger 100 page added). Updated 2026-10-20 at commit 6316c1a (People Not Profit page added). Repo: github.com/manicpixiedigifairy/nina-site (public). Owner: Nina Austin, creative director and copywriter, Brooklyn.
 
 ## 1. System Overview
 
@@ -49,6 +49,7 @@ Every page file follows the same rules so loaders and the Netlify build can trea
 | Menu variant | `.rr` | `brunch-with-the-best-menu` | Cream menu card with double border over the blue doodle, Playfair Display italic, courses and a receipt. |
 | Writing portfolio | `.sw` | `selected-works` | Black `#000` ground, system sans, Instrument Serif italic accents, orange `#F08A45` accent. Sticky top nav (Selected Works, Contact, My Thing Is), bio lead, Music and More filter toggles, article rows with cover thumbnail cards, right profile column above 1180px. CSS-timed loading block. Articles are static HTML; Contact switches by `data-view` (loader) or `:target` (bare file). |
 | Immersive project pages | `.pg` or bare | Air Max Day, Seize The Summer, Walmart x Beautycon (three variants), Dear Dad, Streamathon, Nike Come Thru, TH Monogram, Sponsored By Suave, Big New Yorker, OK V-Day, Butterfinger, Butterfinger 100, Silk Press, Shea (v1), HBCU Tour | One-off aesthetics per campaign, built from the immersive case study recipe (tickers, sticker art, sideways scroll). Butterfinger 100 uses root `.bh`: Lilita One display, Fredoka labels, Newsreader body, wrapper yellow `#FFE500`, logo blue `#1F4FB8`, sky `#2EA6EC`, navy `#0B2466`, red `#E5322D`, crimped wrapper edges between sections. |
+| People Not Profit | `.pnp` | `people-not-profit` | Campaign aesthetic: black `#0A0A0A` ground, black and white stills, campaign green `#629783` highlight bars, Barlow Condensed 800 uppercase display and labels, Archivo body. Green scribble X-eyes mark drawn on with stroke-dashoffset (inline SVG paths plus an feTurbulence rough filter; `<use>` references do not style inside the shadow root). Sticky top bar with section anchors and a Fight Back button, hero with clip-path reveal, green ticker, flavor loophole strike-through, click to play Vimeo (`.vl`, data-src), Dear Big Tobacco letter with staggered lines, sideways OOH strip (`#run` sticky stage, translateX on scroll, progress bar) that becomes a scroll-snap rail at 1000px and below, count up results. Root uses `overflow:clip`, not `hidden`, so sticky works. |
 | Large embeds | none | `the-footprint`, `the-footprint-ebay`, `creative-dna-magazine`, `creative-dna-emboss` | Assets inlined in the file (the two Footprint files are about 4 MB each). |
 
 Shared RR section vocabulary: `.nav` (sticky pill tabs plus Back), `.hero` (h1.x, `.pan` photo pair, `.hl` headline), `.mq` marquee, `.sc` sections with `.sh` header (`.lb` numbered label, `h2.x.m`), `.gr` 12-column grid, `.rv` reveal, `.ft` footer card.
@@ -109,7 +110,8 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | Live slug | Repo file | Netlify |
 | --- | --- | --- |
 | `/never-ever` | `butterfinger-never-ever.html` | built |
-| `/plan-for-the-best`, `/for-your-lifes-work`, `/curls-just-wanna-have-fun`, `/never-through`, `/tiny-wins`, `/people-not-profit`, `/how-you-moto`, `/wtyw` | none (Squarespace native) | redirect to Squarespace |
+| `/people-not-profit` | `people-not-profit.html` | not in PAGES yet. Tracker row "CTCP — People Not Profit" (Commercials, Editing (Unpublished)). Loader Block not pasted yet. Assets `pnp-*` (13 files). Four Vimeo spots: Fallen Hero 434524608, Kito 434537001, Yazmin 434536829, Cram 434536950. |
+| `/plan-for-the-best`, `/for-your-lifes-work`, `/curls-just-wanna-have-fun`, `/never-through`, `/tiny-wins`, `/how-you-moto`, `/wtyw` | none (Squarespace native) | redirect to Squarespace |
 
 Navigation: landing tabs link Commercials, Content, Experiential. Project pages link back to their landing (`/content`, `/experiential` or `/commercials`). Sitewide MENU links: Home, Commercials, Content, Experiential, Methodology, About Me, Contact (mailto).
 
@@ -140,10 +142,11 @@ Notion tracker: "Portfolio Pages: Edits and Assets" under her hub "Portfolio Web
 
 ## 9. Known Gaps and Open Items
 
-- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty`, `selected-works` and `butterfinger-100` (Squarespace slug `/butterfinger-100th`). Streamathon loader unconfirmed.
+- Pasting required: Loader Blocks for `brunch-with-the-best`, `brunch-with-the-best-menu`, `restaurant-royalty`, `selected-works`, `butterfinger-100` and `people-not-profit` (Squarespace slug `/butterfinger-100th`). Streamathon loader unconfirmed.
 - Butterfinger 100: Nina's role line not on the page yet (to add once she confirms). The $15,000 sweepstakes square was left out because the videos and banner say $10K.
 - Selected Works: needs a Squarespace slug; six Substack article cards need their per-article URLs; covers came from screenshots and uploads, so higher-resolution originals would sharpen them.
-- Netlify mapping gaps: `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best`, `ok-v-day`, and `selected-works` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
+- People Not Profit: the CTCP impact line carries the source phrasing "$150,000 person-years of treatment averted", which may need checking. The three booth pieces (Kito, Yazmin, Cram) are labeled only by name since the sources give no further description.
+- Netlify mapping gaps: `people-not-profit`, `air-max-day`, `walmart-beautycon`, Restaurant Royalty, `brunch-with-the-best`, `ok-v-day`, and `selected-works` repo pages are not served by `site/build.py`. Rebuilding every `SQUARESPACE_ONLY` page is required before the domain switch.
 - Content landing has no Restaurant Royalty card. Experiential landing Brunch row copy still says Super Bowl weekend and 13M organic views while the page itself now says 4.7 Billion earned media impressions.
 - Experiential landing accordion "+" icon sits on its own line under each title (pre-existing). Landing copy still uses the phrase "case study" in the section heading and link text.
 - Brunch: confirm header overlap fix on the live Squarespace header, Super Bowl Weekend year ('23 or '24), "Battalion" spelling on the menu page, Nomad tags, MGM activation content, Vimeo link `https://vimeo.com/1234630272` placement, restaurant detail accuracy on the review rail (eat. may have closed, Blondie's location least certain).
