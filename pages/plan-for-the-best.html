@@ -141,11 +141,13 @@ html,body{margin:0;background:#F6F0E1}
 
 /* 06 specs */
 .ob .s6{background:var(--pp)}
-.ob .lead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:calc(var(--u)*3);align-items:end;background:var(--ink);color:var(--pw);padding:calc(var(--u)*3.6) calc(var(--u)*3.6) calc(var(--u)*3.2);border:calc(var(--u)*.24) solid var(--ink);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl)}
+.ob .lead{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:calc(var(--u)*3);row-gap:0;align-items:end;background:var(--ink);color:var(--pw);padding:calc(var(--u)*3.6) calc(var(--u)*3.6) calc(var(--u)*3.2);border:calc(var(--u)*.24) solid var(--ink);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--bl)}
 .ob .lead small{display:block;font:500 calc(var(--u)*.84)/1 var(--mn);letter-spacing:.22em;text-transform:uppercase;color:var(--yl);margin-bottom:calc(var(--u)*1.4)}
-.ob .lead .big{font:900 calc(var(--u)*13)/.82 var(--hd);font-stretch:68%;color:var(--yl);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.ob .lead .lt{margin-top:calc(var(--u)*1.6);font:700 calc(var(--u)*1.8)/1.25 var(--ui)}
-.ob .lead .up{align-self:start;background:var(--yl);color:var(--ink);padding:calc(var(--u)*1.2) calc(var(--u)*1.6) calc(var(--u)*1);text-align:center;transform:rotate(3deg)}
+.ob .lead>div:first-child{display:contents}
+.ob .lead small,.ob .lead .big{grid-column:1/-1}
+.ob .lead .big{white-space:nowrap;font:900 calc(var(--u)*13)/.82 var(--hd);font-stretch:68%;color:var(--yl);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.ob .lead .lt{align-self:start;margin-top:calc(var(--u)*1.6);font:700 calc(var(--u)*1.8)/1.25 var(--ui)}
+.ob .lead .up{grid-column:2;grid-row:3;align-self:end;margin-top:calc(var(--u)*1.4);background:var(--yl);color:var(--ink);padding:calc(var(--u)*1.2) calc(var(--u)*1.6) calc(var(--u)*1);text-align:center;transform:rotate(3deg)}
 .ob .lead .up b{display:block;font:900 calc(var(--u)*6.2)/.84 var(--hd);font-stretch:70%}
 .ob .lead .up span{display:block;margin-top:.5em;font:500 calc(var(--u)*.78)/1.2 var(--mn);letter-spacing:.18em;text-transform:uppercase}
 .ob .notes{margin-top:calc(var(--u)*2.6);font-size:calc(var(--u)*1.55);line-height:1.45;font-weight:600;max-width:calc(var(--u)*58)}
@@ -231,7 +233,8 @@ html,body{margin:0;background:#F6F0E1}
 .ob .ld,.ob .s1 .ld{font-size:calc(var(--u)*2)}
 .ob .fq summary h3{font-size:calc(var(--u)*3.2)}
 .ob .lead{grid-template-columns:1fr}
-.ob .lead .up{justify-self:start}
+.ob .lead .big{font-size:calc(var(--u)*10.5)}
+.ob .lead .up{grid-column:1;grid-row:auto;justify-self:start;margin-top:calc(var(--u)*2.2)}
 }
 @media (max-width:700px){
 .ob .hero{padding:calc(var(--u)*4) 0 calc(var(--u)*5)}
@@ -355,16 +358,16 @@ html,body{margin:0;background:#F6F0E1}
 <div class="sh rv"><span class="lb"><b>06</b>Key KPIs</span><h2>Results, By The Numbers</h2><p class="ld">The campaign contributed to a record 21.3 million ACA enrollments in 2024. Early engagement metrics showed strong audience resonance, and full impressions and conversion data were tracked for HHS reporting.</p></div>
 
 <div class="lead rv">
-<div><small>2024 Open Enrollment Period, National</small><div class="big" data-count="21310538">21,310,538</div><p class="lt">Total Marketplace plan selections</p></div>
+<div><small>2024 Open Enrollment Period, National</small><div class="big" data-count="21310538">21,310,538</div><p class="lt">Total Marketplace Plan Selections</p></div>
 <div class="up"><b data-count="31" data-pre="+" data-suf="%">+31%</b><span>Over 2023</span></div>
 </div>
 
 <div class="pn rv"><h3>National And Platform Breakdown</h3><p class="cap">Where And Who</p>
 <div class="two">
 <div><div class="sb" aria-hidden="true"><i class="a" style="--w:76.8%"></i><i class="b" style="--w:23.2%"></i></div>
-<div class="lg"><div class="it a"><small>HealthCare.gov, 32 States</small><b data-count="16363133">16,363,133</b><em>77%</em></div><div class="it b"><small>State-Based Marketplaces, 18 States Plus D.C.</small><b data-count="4947405">4,947,405</b><em>23%</em></div></div></div>
+<div class="lg"><div class="it a"><small>HealthCare.gov, 32 States</small><b data-count="16363133">16,363,133</b></div><div class="it b"><small>State-Based Marketplaces, 18 States Plus D.C.</small><b data-count="4947405">4,947,405</b></div></div></div>
 <div><div class="sb" aria-hidden="true"><i class="b" style="--w:23.7%"></i><i class="a" style="--w:76.3%"></i></div>
-<div class="lg"><div class="it b"><small>New Consumers</small><b data-count="5045290">5,045,290</b><em>24%</em></div><div class="it a"><small>Returning Or Renewing Consumers</small><b data-count="16265248">16,265,248</b><em>76%</em></div></div></div>
+<div class="lg"><div class="it b"><small>New Consumers</small><b data-count="5045290">5,045,290</b></div><div class="it a"><small>Returning Or Renewing Consumers</small><b data-count="16265248">16,265,248</b></div></div></div>
 </div></div>
 
 <p class="src">Source: 2024 OEP CMS Final National Snapshot</p>
