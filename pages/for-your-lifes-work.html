@@ -79,7 +79,7 @@ html,body{margin:0;background:#fff}
 .nw .s1 .sh h2{font-size:calc(var(--u)*5)}
 .nw .cv.bn img{object-position:22% 50%}
 .nw .s1 .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:center}
-.nw .co{display:flex;gap:calc(var(--u)*1.4);align-items:flex-start;margin-top:calc(var(--u)*3);padding:calc(var(--u)*1.6) calc(var(--u)*1.8);background:#F1F0EE;border-radius:4px;font-size:calc(var(--u)*1.2);line-height:1.5;color:var(--ink);max-width:calc(var(--u)*44)}
+.nw .co{display:flex;gap:calc(var(--u)*1.4);align-items:flex-start;margin-top:calc(var(--u)*3);padding:calc(var(--u)*1.6) calc(var(--u)*1.8);background:#DBEDDB;border-radius:4px;font-size:calc(var(--u)*1.2);line-height:1.5;color:var(--ink);max-width:calc(var(--u)*44)}
 .nw .co svg{stroke-width:7;flex:none;width:calc(var(--u)*2.6);height:calc(var(--u)*2.6)}
 .nw .pn{background:var(--g2);border-radius:calc(var(--u)*.8);padding:calc(var(--u)*3);box-shadow:0 0 0 1px var(--ln)}
 .nw .pn svg{width:100%;height:auto}
@@ -104,6 +104,19 @@ html,body{margin:0;background:#fff}
 .nw .tx .ld{margin-top:calc(var(--u)*1.4);font-size:calc(var(--u)*1.5)}
 .nw .tx .pr{margin-top:calc(var(--u)*2);font-size:calc(var(--u)*1)}
 .nw .tx .pr>div{grid-template-columns:calc(var(--u)*7.4) minmax(0,1fr)}
+.nw .vd{position:relative;aspect-ratio:16/9;background:#1f1e1c}
+.nw .vd img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+.nw .vd iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.nw .pb{position:absolute;inset:0;width:100%;display:flex;align-items:flex-end;justify-content:flex-start;padding:calc(var(--u)*1.6);background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.42));cursor:pointer;color:#fff;border:0}
+.nw .pb .pc{position:absolute;left:50%;top:50%;width:calc(var(--u)*6.4);height:calc(var(--u)*6.4);margin:calc(var(--u)*-3.2) 0 0 calc(var(--u)*-3.2);border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 calc(var(--u)*.6) calc(var(--u)*2) rgba(0,0,0,.3);transition:transform .25s,background .25s}
+.nw .pb .pc svg{width:46%;height:46%;fill:var(--ink);margin-left:6%}
+.nw .pb .pt{font-size:calc(var(--u)*1.05);font-weight:700;letter-spacing:-.01em}
+.nw .pb:hover .pc,.nw .pb:focus-visible .pc{transform:scale(1.08);background:#F5E0E9}
+.nw .pb:focus-visible{outline:3px solid var(--ac);outline-offset:-3px}
+.nw .vd.go .pb{display:none}
+.nw .wv{display:inline-block;align-self:flex-start;margin-top:calc(var(--u)*-1.5);font-size:calc(var(--u)*1);font-weight:600;color:var(--sf);text-decoration:underline;text-underline-offset:.2em}
+.nw .wv:hover{color:var(--ink)}
+.nw .uih{display:none;font-size:calc(var(--u)*1);color:var(--mt);margin:calc(var(--u)*.6) 0 0}
 .nw .lc{display:flex;flex-direction:column;gap:calc(var(--u)*2.4)}
 .nw .ws{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*.8)}
 .nw .ws small{font-size:calc(var(--u)*.9);font-weight:600;color:var(--mt)}
@@ -207,9 +220,12 @@ html,body{margin:0;background:#fff}
 .nw .sub p{font-size:calc(var(--u)*1.35);line-height:1.45;color:var(--sf);max-width:calc(var(--u)*44)}
 .nw .sub.first{margin-top:calc(var(--u)*5)}
 .nw .gl.g3{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:calc(var(--u)*4)}
-.nw .gc.x4{grid-column:1/-1}
-.nw .gc.x4 .cv{height:auto}
-.nw .gc.x4 .cv img{height:auto;aspect-ratio:2000/476}
+.nw .uib{margin:calc(var(--u)*6) 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nw .uib img{display:block;width:100%;height:auto}
+.nw .uib:focus-visible{outline:2px solid var(--ac);outline-offset:4px}
+.nw .gc.x4w{grid-column:1/-1}
+.nw .gc.x4w .cv{height:auto}
+.nw .gc.x4w .cv img{height:auto;aspect-ratio:1500/666}
 .nw .cv.top img{object-position:50% 0}
 .nw .cv.ph3 img{object-position:50% 30%}
 .nw .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.6)}
@@ -291,6 +307,8 @@ html,body{margin:0;background:#fff}
 .nw .ft h2{font-size:calc(var(--u)*9)}
 }
 @media (max-width:700px){
+.nw .uib img{width:auto;min-width:760px}
+.nw .uih{display:block}
 .nw .s1 .sh h2,.nw .s4 .sh h2{font-size:calc(var(--u)*4)}
 .nw .two{grid-template-columns:minmax(0,1fr)}
 .nw .hm{grid-template-columns:minmax(0,1fr)}
@@ -381,7 +399,10 @@ html,body{margin:0;background:#fff}
 <div>
 <div class="co rv" style="margin-top:0;max-width:none"><svg class="il" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M100 30 C 66 30, 46 56, 46 84 C 46 106, 60 118, 70 134 L 70 148 L 130 148 L 130 134 C 140 118, 154 106, 154 84 C 154 56, 134 30, 100 30 Z" fill="#FFE2DD"/><path d="M76 162 H124"/><path d="M86 176 H114"/><path d="M86 122 L94 98 L104 112 L114 94"/><path d="M28 40 L40 50"/><path d="M172 40 L160 50"/><path d="M12 92 H28"/><path d="M188 92 H172"/><path d="M100 8 V18"/></svg><p>Work and life no longer have a clear line between them. People wanted authentic, value driven ways to organize everything they care about, from the job to the family business.</p></div>
 </div>
-</div></div>
+</div>
+<figure class="uib rv" tabindex="0" aria-label="UI breakdown of the For Life’s Next Chapter layout"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ui-breakdown.webp?v=1" alt="" role="img" aria-label="A layout reading For Life’s Next Chapter with callouts for the headline, branding, life UI, imagery, work UI and workspace picker" width="2000" height="476" loading="lazy"></figure>
+<p class="uih">Swipe To See The Full Layout</p>
+</div>
 </section>
 
 
@@ -405,7 +426,7 @@ html,body{margin:0;background:#fff}
 </div>
 
 <div class="tp in" role="tabpanel" id="p1" aria-labelledby="t1">
-<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-family.webp?v=1" alt="" role="img" aria-label="Film still: two generations work together in a bakery kitchen beside a Family Recipes page" width="1100" height="557" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-kimura.webp?v=1" alt="" role="img" aria-label="The Kimura Bakery workspace in Notion" width="1300" height="801" loading="lazy"></figure></div></div>
+<div class="lc"><figure class="fr vd" data-v="761511040" data-h="986665f2fc" data-t="Family Business"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-family.webp?v=1" alt="" role="img" aria-label="Film still: two generations work together in a bakery kitchen beside a Family Recipes page" width="1100" height="557" loading="lazy"><button class="pb" type="button" aria-label="Play The Family Business Film"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></figure><a class="wv" href="https://vimeo.com/761511040/986665f2fc" target="_blank" rel="noopener">Open On Vimeo</a><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-kimura.webp?v=1" alt="" role="img" aria-label="The Kimura Bakery workspace in Notion" width="1300" height="801" loading="lazy"></figure></div></div>
 <div class="tx"><svg class="il ico" viewBox="0 0 200 160" aria-hidden="true" focusable="false"><path d="M22 112 C 16 80, 50 46, 100 44 C 150 46, 184 80, 178 112 C 170 106, 160 106, 152 112 C 138 90, 62 90, 48 112 C 40 106, 30 106, 22 112 Z" fill="#F5C7C0"/><path d="M62 104 C 64 80, 78 62, 94 54"/><path d="M138 104 C 136 80, 122 62, 106 54"/><path d="M100 94 V 54"/><path d="M74 30 q 7 -9 0 -18"/><path d="M100 26 q 7 -9 0 -18"/><path d="M126 30 q 7 -9 0 -18"/></svg><h3>Family Business</h3>
 <p class="ld">A grandson helps his grandparents run their bakery, from family recipes to inventory to shift schedules.</p>
 <dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
@@ -413,7 +434,7 @@ html,body{margin:0;background:#fff}
 </div></div>
 
 <div class="tp" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-search2.webp?v=1" alt="" role="img" aria-label="Film still: a woman at a laptop types a message asking a recruiting lead for a Head of Engineering" width="1400" height="788" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-applicants.webp?v=1" alt="" role="img" aria-label="The Applicant Tracker workspace in Notion" width="1300" height="744" loading="lazy"></figure></div></div>
+<div class="lc"><figure class="fr vd" data-v="761510679" data-h="9bb5436939" data-t="The Search"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-search2.webp?v=1" alt="" role="img" aria-label="Film still: a woman at a laptop types a message asking a recruiting lead for a Head of Engineering" width="1400" height="788" loading="lazy"><button class="pb" type="button" aria-label="Play The The Search Film"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></figure><a class="wv" href="https://vimeo.com/761510679/9bb5436939" target="_blank" rel="noopener">Open On Vimeo</a><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-applicants.webp?v=1" alt="" role="img" aria-label="The Applicant Tracker workspace in Notion" width="1300" height="744" loading="lazy"></figure></div></div>
 <div class="tx"><svg class="il ico" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="86" cy="86" r="54" fill="#DBEDDB"/><path d="M126 126 L172 172" stroke-width="9"/><path d="M62 70 h46"/><path d="M62 88 h32"/><path d="M62 106 h40"/><path d="M142 36 l8 -8"/><path d="M156 52 l12 -4"/></svg><h3>The Search</h3>
 <p class="ld">A startup co-founder needs a Head of Engineering fast, and an applicant tracker keeps every candidate in one place.</p>
 <dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
@@ -421,7 +442,7 @@ html,body{margin:0;background:#fff}
 </div></div>
 
 <div class="tp" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-next.webp?v=1" alt="" role="img" aria-label="Film still: a man works on a laptop beside a Career Change Ideas page" width="1034" height="534" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-bootcamp.webp?v=1" alt="" role="img" aria-label="The Design Bootcamp workspace in Notion" width="1300" height="768" loading="lazy"></figure></div></div>
+<div class="lc"><figure class="fr vd" data-v="761510948" data-h="137788c60a" data-t="Next Chapter"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-next.webp?v=1" alt="" role="img" aria-label="Film still: a man works on a laptop beside a Career Change Ideas page" width="1034" height="534" loading="lazy"><button class="pb" type="button" aria-label="Play The Next Chapter Film"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></figure><a class="wv" href="https://vimeo.com/761510948/137788c60a" target="_blank" rel="noopener">Open On Vimeo</a><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-bootcamp.webp?v=1" alt="" role="img" aria-label="The Design Bootcamp workspace in Notion" width="1300" height="768" loading="lazy"></figure></div></div>
 <div class="tx"><svg class="il ico" viewBox="0 0 220 170" aria-hidden="true" focusable="false"><path d="M110 48 C 90 32, 50 32, 18 42 L 18 128 C 50 118, 90 118, 110 134 Z" fill="#fff"/><path d="M110 48 C 130 32, 170 32, 202 42 L 202 128 C 170 118, 130 118, 110 134 Z" fill="#DBEDDB"/><path d="M36 62 C 56 58, 80 60, 94 66"/><path d="M36 80 C 56 76, 80 78, 94 84"/><path d="M36 98 C 52 95, 70 96, 86 100"/><path d="M130 62 C 144 58, 164 58, 184 62"/><path d="M130 80 C 144 76, 164 76, 184 80"/><path d="M152 30 V 66 L 160 58 L 168 66 V 30" fill="#FFE2DD"/></svg><h3>Next Chapter</h3>
 <p class="ld">Career change ideas, a design bootcamp and a week by week plan for starting something new.</p>
 <dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
@@ -445,9 +466,7 @@ html,body{margin:0;background:#fff}
 <article class="gc rv" style="--d:.06s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-subway.webp?v=1" alt="" role="img" aria-label="A poster inside a subway car reading For Your Life’s Work" width="1100" height="742" loading="lazy"></div><h3>Subway Car Panel</h3><div class="pls"><span class="pl c-blue">Transit</span></div></article>
 <article class="gc rv" style="--d:.12s"><div class="cv bn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-banner.webp?v=1" alt="" role="img" aria-label="A cream banner hung from a building reading For Your Life’s Work" width="1100" height="618" loading="lazy"></div><h3>Hanging Wall Banner</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
 <article class="gc rv" style="--d:.18s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-wall.webp?v=1" alt="" role="img" aria-label="A tall white mural wall in a covered arcade reading For Your Life’s Work" width="1000" height="666" loading="lazy"></div><h3>Mural Wallscape</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
-<article class="gc x2 rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-shelters.webp?v=1" alt="" role="img" aria-label="Two bus shelters carrying For Your Life’s Work posters" width="1500" height="666" loading="lazy"></div><h3>Bus Shelters</h3><div class="pls"><span class="pl c-blue">Transit</span></div></article>
-<article class="gc x2 tx2 rv" style="--d:.08s"><div class="cv"><p>For Your Life’s Work.</p><p>For Work In Between Workouts.</p><p>Pour L’oeuvre De Votre Vie.</p></div><h3>Headlines, Localized</h3><div class="pls"><span class="pl c-yellow">Copy</span></div></article>
-<article class="gc x4 rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-nextchapter.webp?v=1" alt="" role="img" aria-label="A wide layout reading For Life’s Next Chapter with floating Notion blocks around a photo" width="2000" height="476" loading="lazy"></div><h3>For Life’s Next Chapter</h3><div class="pls"><span class="pl c-yellow">Layout</span></div></article>
+<article class="gc x4w rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-shelters.webp?v=1" alt="" role="img" aria-label="Two bus shelters carrying For Your Life’s Work posters" width="1500" height="666" loading="lazy"></div><h3>Bus Shelters</h3><div class="pls"><span class="pl c-blue">Transit</span></div></article>
 </div>
 </div></section>
 
@@ -602,6 +621,20 @@ html,body{margin:0;background:#fff}
   }
   setTimeout(function(){rv.forEach(function(e){e.classList.add('on')});tick();nums.forEach(function(el,i){finish(el,i)})},6500);
 
+  /* film players */
+  var vds=[].slice.call(root.querySelectorAll('.vd'));
+  function resetVideos(){vds.forEach(function(f){var i=f.querySelector('iframe');if(i)i.remove();f.classList.remove('go')})}
+  vds.forEach(function(f){
+    var b=f.querySelector('.pb');if(!b)return;
+    b.addEventListener('click',function(){
+      resetVideos();
+      var i=odoc.createElement('iframe');
+      i.src='https://player.vimeo.com/video/'+f.getAttribute('data-v')+'?h='+f.getAttribute('data-h')+'&autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+      i.setAttribute('allow','autoplay; fullscreen; picture-in-picture');i.setAttribute('allowfullscreen','');
+      i.setAttribute('title',f.getAttribute('data-t')+' film');
+      f.appendChild(i);f.classList.add('go');
+    });
+  });
   /* film tabs */
   var tabs=[].slice.call(root.querySelectorAll('.tb'));
   var pick=function(t,focus){
@@ -611,6 +644,7 @@ html,body{margin:0;background:#fff}
       var p=root.querySelector('#'+b.getAttribute('aria-controls'));
       if(on){p.hidden=false;p.classList.remove('in');void p.offsetWidth;p.classList.add('in')}else{p.hidden=true;p.classList.remove('in')}
     });
+    resetVideos();
     if(focus)t.focus();
   };
   tabs.forEach(function(b,i){
