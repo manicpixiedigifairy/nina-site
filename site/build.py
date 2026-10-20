@@ -20,6 +20,7 @@ PAGES = {
     'seize-the-summer': 'pages/seize-the-summer-v2.html',
     'never-ever': 'pages/butterfinger-never-ever.html',
     'butterfinger-100th': 'pages/butterfinger-100.html',
+    'amazon-organic': 'pages/amazon.html',
     'fathers-day-streamathon': 'pages/dear-dad-streamathon.html',
     'sponsored-by-suave': 'pages/sponsored-by-suave.html',
     'big-new-yorker': 'pages/pizza-hut-big-new-yorker.html',
