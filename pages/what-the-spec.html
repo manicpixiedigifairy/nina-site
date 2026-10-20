@@ -35,17 +35,16 @@ html,body{margin:0;background:#000}
 .wts .hero .vig{position:absolute;inset:0;pointer-events:none}
 .wts .hero>*:not(.vig){position:relative}
 .wts .kick{margin:0;font-size:max(12px,calc(var(--u)*.8));letter-spacing:.32em}
-.wts h1{margin:24px 0 0;font-size:22vw;line-height:.82;letter-spacing:-.025em;animation:wtsFlicker 4s infinite}
+.wts h1{margin:0;font-size:22vw;line-height:.82;letter-spacing:-.025em;animation:wtsFlicker 4s infinite}
 @keyframes wtsFlicker{0%,100%{opacity:1}48%{opacity:1}50%{opacity:.82}52%{opacity:1}}
 .wts .tag{margin:32px 0 0;max-width:36rem}
 .wts .tag b{display:block;font-size:max(18px,calc(var(--u)*1.35));line-height:1.4;font-weight:700}
-.wts .tag span{display:block;margin-top:8px;font-size:max(14px,calc(var(--u)*1.05));line-height:1.4;color:var(--mfg)}
-.wts .cred{margin-top:40px;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:14px 0;font-size:max(11px,calc(var(--u)*.72));line-height:1.7;letter-spacing:.2em;color:var(--mfg)}
-.wts .rate{margin-top:48px;border:2px solid rgba(255,255,255,.25);padding:4px}
-.wts .rate div{display:flex;flex-direction:column;align-items:center;border:1px solid rgba(255,255,255,.2);padding:16px 40px}
-.wts .rate .s1{font-size:11px;letter-spacing:.3em;color:var(--mfg)}
+.wts .tag span{display:block;margin-top:0;font-size:max(14px,calc(var(--u)*1.05));line-height:1.4;color:var(--mfg)}
+.wts .rate{margin-top:24px;border:2px solid rgba(255,255,255,.25);padding:4px}
+.wts .rate div{display:flex;flex-direction:column;align-items:center;border:1px solid rgba(255,255,255,.2);padding:14px 18px}
+.wts .rate .s1{font-size:11px;letter-spacing:.24em;color:var(--mfg)}
 .wts .rate .s2{margin-top:4px;font-size:60px;line-height:.85}
-.wts .rate .s3{margin-top:4px;font-size:11px;letter-spacing:.2em;color:var(--pri)}
+.wts .rate .s3{margin-top:4px;font-size:10px;letter-spacing:.14em;color:var(--pri)}
 
 /* gallery */
 .wts .gal{padding:calc(var(--u)*7) var(--gut)}
@@ -186,7 +185,7 @@ html,body{margin:0;background:#000}
 @media(min-width:1024px){.wts .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:1000px){.wts{--gut:1.75rem}}
 @media(max-width:767px){.wts .hd{min-height:56px;padding-right:var(--gut)}}
-@media(max-width:380px){.wts h3{font-size:52px}.wts .cred{letter-spacing:.2em}}
+@media(max-width:380px){.wts h3{font-size:52px}}
 @media(prefers-reduced-motion:reduce){.wts .grain:after,.wts h1{animation:none}}
 </style></head>
 <body>
@@ -216,10 +215,8 @@ html,body{margin:0;background:#000}
 
   <section class="hero">
     <div class="vig"></div>
-    <p class="kick mono pr">A Spec House Production</p>
     <h1 class="dsp">What<br>The <span class="pr">Spec?!</span></h1>
-    <p class="tag"><b>Unsolicited. Unhinged. Unapologetic.</b><span>A gallery of “almosts”, “what ifs”, and “why nots”.</span></p>
-    <div class="cred mono"><span>Written by Nina Austin · Designed by Nina Austin</span></div>
+    <p class="tag"><span>A Gallery of “Almosts”, “What Ifs”, and “Why Nots”.</span></p>
     <div class="rate"><div><span class="s1 mono">Rated</span><span class="s2 dsp">S</span><span class="s3 mono">For Speculative</span></div></div>
   </section>
 
@@ -251,12 +248,11 @@ html,body{margin:0;background:#000}
         <p class="sub">Rentals are free. Membership is free. Late fees are a myth. Fill out the card and take home your first title.</p>
         <form id="wts-form" novalidate>
           <label class="f"><span>Full name</span><input type="text" name="name" autocomplete="name" required></label>
-          <label class="f"><span>Company</span><input type="text" name="company" autocomplete="organization"></label>
+          <label class="f"><span>Company (optional)</span><input type="text" name="company" autocomplete="organization"></label>
           <label class="f"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
           <label class="ck"><input type="checkbox" name="agreed" required><span>I agree to the Terms of Viewing at the bottom of this page. I will be kind and rewind.</span></label>
-          <p class="note">Your name, company, email and join date are kept on file so Nina knows who is renting. Never sold or shared.</p>
           <p class="err" id="wts-err" role="alert"></p>
-          <button type="submit" class="go">Issue my card →</button>
+          <button type="submit" class="go">Get The Spec</button>
         </form>
       </div>
       <div id="wts-issued" hidden>
@@ -311,7 +307,7 @@ root.getElementById('wts-grid').innerHTML=pieces.map(function(p,i){
   return open+'<div class="po'+(p.img?' hasimg':'')+'" style="--t:'+p.tone+'">'+art+'<div class="pi">'+
     '<div class="pt mono"><span>No. '+esc(p.no)+'</span><span>'+esc(p.year)+'</span></div>'+
     '<div><p class="pb mono">'+esc(p.brand)+' presents</p><h3 class="dsp">'+esc(p.title)+'</h3><p class="pl mono">'+esc(p.credit)+'</p></div>'+
-    '</div></div><div class="pf mono"><span class="mf">'+esc(p.genre||'')+'</span><span class="sc">'+(p.url?'Rent free →':'Coming soon')+'</span></div>'+close;
+    '</div></div>'+(p.genre?'<div class="pf mono"><span class="mf">'+esc(p.genre)+'</span></div>':'')+close;
 }).join('');
 
 /* smooth jump inside the loader */
