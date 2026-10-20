@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="People Not Profit: the California Tobacco Control Program campaign that called out the menthol loophole, from the Fallen Hero film and the Dear Big Tobacco letter to bus shelters, social and WeAreNotProfit.org.">
+<title>Nina Austin | People Not Profit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#0A0A0A}
+.pnp{--u:clamp(11px,1.1111vw,28px);--bk:#0A0A0A;--bk2:#141414;--wh:#F2F2EE;--gn:#629783;--gn2:#3F6F5C;--gy:#8A8A86;--ln:rgba(242,242,238,.14);--hd:'Barlow Condensed','Arial Narrow',Impact,sans-serif;--bd:Archivo,system-ui,sans-serif;display:block;position:relative;overflow:hidden;width:100%;overflow:clip;background:var(--bk);color:var(--wh);font-family:var(--bd);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.pnp *,.pnp *::before,.pnp *::after{box-sizing:border-box}
+.pnp a{color:inherit;text-decoration:none}
+.pnp h1,.pnp h2,.pnp h3,.pnp h4{font-family:var(--hd);font-weight:800;text-transform:uppercase;margin:0;color:inherit!important;line-height:.9;letter-spacing:-.005em}
+.pnp p,.pnp ul,.pnp ol,.pnp li,.pnp figure,.pnp blockquote{margin:0;padding:0;list-style:none}
+.pnp img{display:block;max-width:100%;height:auto}
+.pnp button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.pnp .w{width:100%;padding:0 calc(var(--u)*4)}
+.pnp .lb{display:inline-flex;align-items:center;gap:.8em;font:600 calc(var(--u)*1.05)/1 var(--hd);letter-spacing:.22em;text-transform:uppercase;color:var(--wh)}
+.pnp .lb i{display:inline-block;width:calc(var(--u)*1.4);height:calc(var(--u)*.42);background:var(--gn);font-style:normal}
+.pnp .hl{display:inline;background:var(--gn);color:var(--bk);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pnp .hg{display:inline;background:var(--bk);color:var(--gn);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pnp .bd{font-size:calc(var(--u)*1.55);line-height:1.5;color:var(--wh);max-width:calc(var(--u)*46)}
+.pnp .bd+.bd{margin-top:1em}
+.pnp .dim{color:var(--gy)}
+.pnp .sc{position:relative;padding:calc(var(--u)*8) 0;border-top:1px solid var(--ln)}
+.pnp .sh{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.8);margin-bottom:calc(var(--u)*4)}
+.pnp .sh h2{font-size:calc(var(--u)*7.6);max-width:calc(var(--u)*70);text-wrap:balance}
+.pnp .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:start}
+
+/* reveal */
+.pnp .rv{opacity:0;transform:translate3d(0,calc(var(--u)*1.6),0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.pnp .rv.on{opacity:1;transform:none}
+.pnp .rv.d1{transition-delay:.1s}.pnp .rv.d2{transition-delay:.2s}.pnp .rv.d3{transition-delay:.3s}.pnp .rv.d4{transition-delay:.4s}
+
+/* scribble mark */
+.pnp .mk{display:block;width:100%;height:auto;overflow:visible}
+.pnp .mk path{fill:none;stroke:var(--gn);stroke-width:11;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .55s cubic-bezier(.3,.6,.2,1)}
+.pnp .mk.on path:nth-child(1){transition-delay:.05s}.pnp .mk.on path:nth-child(2){transition-delay:.25s}.pnp .mk.on path:nth-child(3){transition-delay:.5s}.pnp .mk.on path:nth-child(4){transition-delay:.7s}.pnp .mk.on path:nth-child(5){transition-delay:1s;transition-duration:.9s}
+.pnp .mk.on path{stroke-dashoffset:0}
+.pnp .mk.th path{stroke-width:9}
+
+/* top bar */
+.pnp .tb{position:sticky;top:0;z-index:30;display:flex;align-items:stretch;justify-content:space-between;background:var(--bk);border-bottom:1px solid var(--ln);height:calc(var(--u)*4.2)}
+.pnp .tb .wm{display:flex;align-items:center;padding:0 calc(var(--u)*4);font:700 calc(var(--u)*1.25)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase}
+.pnp .tb nav{display:flex;align-items:center;gap:calc(var(--u)*2.2);font:600 calc(var(--u)*.95)/1 var(--hd);letter-spacing:.16em;text-transform:uppercase;color:var(--gy)}
+.pnp .tb nav a{transition:color .2s}
+.pnp .tb nav a:hover{color:var(--wh)}
+.pnp .tb .fb{display:flex;align-items:center;padding:0 calc(var(--u)*2.4);background:var(--gn);color:var(--bk);font:700 calc(var(--u)*1.15)/1 var(--hd);letter-spacing:.18em;text-transform:uppercase;transition:background .2s}
+.pnp .tb .fb:hover{background:var(--wh)}
+
+/* hero */
+.pnp .hero{position:relative;min-height:calc(100vh - var(--u)*4.2);min-height:calc(100svh - var(--u)*4.2);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--bk)}
+.pnp .hero .bg{position:absolute;inset:0;z-index:0}
+.pnp .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:20% 40%;filter:grayscale(1) contrast(1.08);opacity:0;transform:scale(1.06);transition:opacity 1.4s ease,transform 6s ease-out}
+.pnp .hero.in .bg img{opacity:.9;transform:scale(1)}
+.pnp .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,.05) 30%,rgba(10,10,10,.35) 58%,rgba(10,10,10,.94) 100%)}
+.pnp .hero .w{position:relative;z-index:2;padding-top:calc(var(--u)*5);padding-bottom:calc(var(--u)*4.5)}
+.pnp .hero .tabs{display:flex;flex-wrap:wrap;align-items:flex-start;gap:calc(var(--u)*.8);margin-bottom:calc(var(--u)*3)}
+.pnp .tab{display:inline-block;background:var(--wh);color:var(--bk);padding:.55em .9em .45em;font:700 calc(var(--u)*.95)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase}
+.pnp .tab.g{background:var(--gn)}
+.pnp .hero h1{font-size:calc(var(--u)*9.6);line-height:.86;letter-spacing:-.01em}
+.pnp .hero h1 span{display:block}
+.pnp .hero h1 .l1{opacity:0;transform:translate3d(0,.3em,0);transition:opacity .6s ease .2s,transform .6s cubic-bezier(.2,.7,.2,1) .2s}
+.pnp .hero h1 .l2{margin-top:.06em;width:max-content;max-width:100%;clip-path:inset(0 100% 0 0);transition:clip-path .7s cubic-bezier(.6,0,.2,1) .7s}
+.pnp .hero.in h1 .l1{opacity:1;transform:none}
+.pnp .hero.in h1 .l2{clip-path:inset(0 0 0 0)}
+.pnp .hero .gx{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:end;margin-top:calc(var(--u)*3.2)}
+.pnp .hero .dk{font-size:calc(var(--u)*1.9);line-height:1.38;font-weight:500;max-width:calc(var(--u)*44);text-wrap:balance}
+.pnp .hero .fa{justify-self:end;text-align:right;font:600 calc(var(--u)*1.2)/1.3 var(--hd);letter-spacing:.12em;text-transform:uppercase}
+.pnp .hero .fa b{display:block;color:var(--gn);font-weight:800;font-size:calc(var(--u)*2.1);letter-spacing:.02em;text-transform:none}
+.pnp .hero .mkw{margin-left:auto;width:calc(var(--u)*8.5);align-self:flex-end;filter:drop-shadow(0 0 calc(var(--u)*1) rgba(0,0,0,.6))}
+.pnp .hero .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);margin-top:calc(var(--u)*4);padding-top:calc(var(--u)*2);border-top:1px solid rgba(242,242,238,.3)}
+.pnp .hero .meta div{font-size:calc(var(--u)*1.2);line-height:1.4;color:var(--wh)}
+.pnp .hero .meta b{display:block;font:600 calc(var(--u)*.9)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--gn);margin-bottom:.6em}
+
+/* ticker */
+.pnp .tk{overflow:hidden;background:var(--gn);color:var(--bk);padding:calc(var(--u)*1.1) 0;border-top:1px solid var(--bk);border-bottom:1px solid var(--bk)}
+.pnp .tk .tp{display:flex;width:max-content;animation:pnptk 70s linear infinite}
+.pnp .tk .gp{display:flex;align-items:center;flex:none}
+.pnp .tk span{display:inline-flex;align-items:center;gap:1.1em;padding-right:1.1em;font:700 calc(var(--u)*1.7)/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.pnp .tk span::after{content:"";width:.55em;height:.55em;background:var(--bk);transform:rotate(45deg);flex:none}
+@keyframes pnptk{to{transform:translate3d(-50%,0,0)}}
+
+/* 01 loophole */
+.pnp .fl{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.2);align-items:center}
+.pnp .fv{position:relative;display:inline-block;padding:.5em .85em .4em;border:2px solid var(--wh);font:700 calc(var(--u)*2.4)/1 var(--hd);letter-spacing:.04em;text-transform:uppercase;transition:color .4s,border-color .4s}
+.pnp .fv svg{position:absolute;inset:-18% -8%;width:116%;height:136%;overflow:visible;pointer-events:none}
+.pnp .fv svg path{fill:none;stroke:var(--gn);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .5s cubic-bezier(.3,.6,.2,1)}
+.pnp .fl.on .fv.x{color:var(--gy);border-color:rgba(242,242,238,.3)}
+.pnp .fl.on .fv.x svg path{stroke-dashoffset:0}
+.pnp .fv.m{border-color:var(--gn);color:var(--wh);transition:background .5s,color .5s}
+.pnp .fl.on .fv.m{background:var(--gn);color:var(--bk);transition-delay:1.9s}
+.pnp .fv.m small{position:absolute;left:0;top:calc(100% + .5em);font:600 calc(var(--u)*.9)/1 var(--hd);letter-spacing:.2em;color:var(--gn);white-space:nowrap;opacity:0;transition:opacity .4s 2.2s}
+.pnp .fl.on .fv.m small{opacity:1}
+.pnp .flw{padding-bottom:calc(var(--u)*2.6)}
+.pnp .stat{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*2);align-items:end;margin-top:calc(var(--u)*4);padding-top:calc(var(--u)*2.4);border-top:1px solid var(--ln)}
+.pnp .stat b{font:800 calc(var(--u)*9)/.8 var(--hd);color:var(--gn);letter-spacing:-.02em}
+.pnp .stat p{font-size:calc(var(--u)*1.45);line-height:1.4;max-width:calc(var(--u)*30);padding-bottom:.3em}
+
+/* 02 scam */
+.pnp .s2 .q{font:800 calc(var(--u)*5.2)/.98 var(--hd);text-transform:uppercase;letter-spacing:-.005em;max-width:calc(var(--u)*60);text-wrap:balance}
+.pnp .s2 .q .hl{padding:0 .12em}
+.pnp .s2 .gx{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;margin-top:calc(var(--u)*4)}
+.pnp .fr{border:1px solid var(--ln);background:var(--bk2)}
+.pnp .fr img{width:100%}
+.pnp .cap{display:flex;gap:1em;align-items:flex-start;margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.05);line-height:1.45;color:var(--gy)}
+.pnp .cap b{flex:none;font:600 calc(var(--u)*.9)/1.5 var(--hd);letter-spacing:.18em;text-transform:uppercase;color:var(--gn)}
+
+/* 03 plan */
+.pnp .ph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2);margin-top:calc(var(--u)*4)}
+.pnp .pc{position:relative;padding:calc(var(--u)*2.6);border:1px solid var(--ln);background:var(--bk2);min-height:calc(var(--u)*26);display:flex;flex-direction:column}
+.pnp .pc .n{font:800 calc(var(--u)*7)/.8 var(--hd);color:var(--gn);letter-spacing:-.02em}
+.pnp .pc h3{font-size:calc(var(--u)*3.4);margin-top:calc(var(--u)*1.6)}
+.pnp .pc p{font-size:calc(var(--u)*1.4);line-height:1.5;margin-top:calc(var(--u)*1.2);color:var(--wh)}
+.pnp .tg{display:flex;flex-wrap:wrap;gap:.6em;margin-top:auto;padding-top:calc(var(--u)*2.2)}
+.pnp .tg span{display:inline-block;padding:.5em .8em .4em;background:var(--wh);color:var(--bk);font:700 calc(var(--u)*1.05)/1 var(--hd);letter-spacing:.14em;text-transform:uppercase}
+.pnp .tg span.g{background:var(--gn)}
+.pnp .pc.two{background:var(--gn);color:var(--bk);border-color:var(--gn)}
+.pnp .pc.two .n{color:var(--bk)}
+.pnp .pc.two p{color:var(--bk)}
+.pnp .pc.two .tg span{background:var(--bk);color:var(--wh)}
+
+/* 04 films */
+.pnp .vl{position:relative;aspect-ratio:16/9;background:var(--bk2);overflow:hidden;border:1px solid var(--ln);isolation:isolate}
+.pnp .vl .ps{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .8s ease,filter .8s ease}
+.pnp .vl:hover .ps{transform:scale(1.03);filter:grayscale(.2) contrast(1.05)}
+.pnp .vl .lk{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:calc(var(--u)*2.2);background:linear-gradient(180deg,rgba(10,10,10,0) 45%,rgba(10,10,10,.85) 100%);text-align:left;transition:opacity .4s}
+.pnp .vl .lk .pl{display:inline-flex;align-items:center;gap:.7em;background:var(--gn);color:var(--bk);padding:.7em 1.1em .6em;font:700 calc(var(--u)*1.2)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;transition:background .2s,color .2s}
+.pnp .vl .lk .pl::before{content:"";width:0;height:0;border-style:solid;border-width:.42em 0 .42em .7em;border-color:transparent transparent transparent currentColor}
+.pnp .vl:hover .lk .pl{background:var(--wh)}
+.pnp .vl .lk .tt{margin-top:calc(var(--u)*1.2);font:800 calc(var(--u)*3.2)/.9 var(--hd);text-transform:uppercase;color:var(--wh)}
+.pnp .vl .lk .tt small{display:block;margin-top:.35em;font:600 calc(var(--u)*.95)/1 var(--hd);letter-spacing:.2em;color:var(--gn)}
+.pnp .vl.open .lk,.pnp .vl.open .ps{opacity:0;pointer-events:none}
+.pnp .vl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:pnpfi .8s ease}
+@keyframes pnpfi{from{opacity:0}to{opacity:1}}
+.pnp .vl.big .lk .tt{font-size:calc(var(--u)*6.4)}
+.pnp .ef{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2);margin-top:calc(var(--u)*2)}
+.pnp .ef figure{border:1px solid var(--ln);overflow:hidden;background:var(--bk2)}
+.pnp .ef img{width:100%;transition:transform .8s ease}
+.pnp .ef figure:hover img{transform:scale(1.02)}
+.pnp .sub{display:flex;align-items:baseline;justify-content:space-between;gap:1em;margin:calc(var(--u)*5) 0 calc(var(--u)*2);padding-top:calc(var(--u)*2);border-top:1px solid var(--ln)}
+.pnp .sub h3{font-size:calc(var(--u)*3.4)}
+.pnp .sub p{font-size:calc(var(--u)*1.2);color:var(--gy);max-width:calc(var(--u)*34);text-align:right}
+.pnp .vg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}
+.pnp .vg .vl .lk{padding:calc(var(--u)*1.6)}
+.pnp .vg .vl .lk .tt{font-size:calc(var(--u)*2.6)}
+.pnp .vg .vl .lk .pl{font-size:calc(var(--u)*1)}
+
+/* 05 letter */
+.pnp .s5{background:var(--bk2)}
+.pnp .s5 .gx{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}
+.pnp .pst{border:1px solid var(--ln);position:sticky;top:calc(var(--u)*6)}
+.pnp .pst img{width:100%}
+.pnp .lt{padding-top:calc(var(--u)*.6)}
+.pnp .lt .ln{display:block;font-size:calc(var(--u)*1.75);line-height:1.42;max-width:calc(var(--u)*42);margin-bottom:1em;opacity:0;transform:translate3d(0,.5em,0);transition:opacity .6s ease,transform .6s ease}
+.pnp .lt.on .ln{opacity:1;transform:none}
+.pnp .lt .ln.sm{font:600 calc(var(--u)*1.1)/1.4 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--gy);margin-bottom:1.6em}
+.pnp .lt .ln.b{font-weight:700}
+.pnp .lt .ln.sg{font:800 calc(var(--u)*2.8)/1 var(--hd);text-transform:uppercase;color:var(--gn);margin-top:calc(var(--u)*1.5)}
+.pnp .lt .ln.sg small{display:block;font:600 calc(var(--u)*1.1)/1.6 var(--hd);letter-spacing:.2em;color:var(--gy);margin-bottom:.4em}
+.pnp .lt .ln.fa2{font:600 calc(var(--u)*1)/1.6 var(--hd);letter-spacing:.18em;text-transform:uppercase;color:var(--gy);margin-top:calc(var(--u)*2)}
+.pnp .lt .ln.fa2 b{color:var(--gn);font-size:calc(var(--u)*1.5);letter-spacing:.02em;text-transform:none}
+
+/* 06 streets: sideways strip */
+.pnp .s6{padding-bottom:0}
+.pnp .s6 .sh{margin-bottom:calc(var(--u)*1)}
+.pnp .run{position:relative}
+.pnp .stg{position:sticky;top:calc(var(--u)*4.2);height:calc(100vh - var(--u)*4.2);height:calc(100svh - var(--u)*4.2);overflow:hidden;display:flex;flex-direction:column}
+.pnp .strip{display:flex;align-items:stretch;gap:calc(var(--u)*2);height:100%;padding:calc(var(--u)*2) calc(var(--u)*4) calc(var(--u)*3.4);will-change:transform}
+.pnp .pn{flex:none;position:relative;height:100%;border:1px solid var(--ln);background:var(--bk2);overflow:hidden}
+.pnp .pn img{height:100%;width:auto;max-width:none}
+.pnp .pn .c{position:absolute;left:0;bottom:0;display:flex;gap:1em;padding:calc(var(--u)*1.2) calc(var(--u)*1.4);background:rgba(10,10,10,.85);font:600 calc(var(--u)*.95)/1.4 var(--hd);letter-spacing:.18em;text-transform:uppercase;color:var(--wh)}
+.pnp .pn .c b{color:var(--gn);font-weight:700}
+.pnp .pn.tx{display:flex;align-items:center;justify-content:center;background:var(--gn);color:var(--bk);padding:calc(var(--u)*3);width:calc(var(--u)*34)}
+.pnp .pn.tx h3{font-size:calc(var(--u)*5.6);line-height:.88}
+.pnp .pn.tx .mk{width:calc(var(--u)*10);margin-bottom:calc(var(--u)*2)}
+.pnp .pn.tx .mk path{stroke:var(--bk)}
+.pnp .pn.dk{background:var(--bk);border-color:var(--ln);width:calc(var(--u)*30);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--u)*3)}
+.pnp .pn.dk p{font-size:calc(var(--u)*1.5);line-height:1.5}
+.pnp .pn.dk .mk{width:calc(var(--u)*9);margin-bottom:calc(var(--u)*2.4)}
+.pnp .pb{position:absolute;left:calc(var(--u)*4);right:calc(var(--u)*4);bottom:calc(var(--u)*1.4);height:3px;background:rgba(242,242,238,.18)}
+.pnp .pb i{display:block;height:100%;width:0;background:var(--gn)}
+.pnp .run.go .hint{opacity:0}
+.pnp .hint{transition:opacity .4s;position:absolute;right:calc(var(--u)*4);bottom:calc(var(--u)*2.2);font:600 calc(var(--u)*.9)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--gy)}
+
+/* 07 results */
+.pnp .rs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}
+.pnp .r{padding:calc(var(--u)*2.6);border:1px solid var(--ln);background:var(--bk2)}
+.pnp .r b{display:block;font:800 calc(var(--u)*9.5)/.8 var(--hd);letter-spacing:-.03em;color:var(--gn);font-variant-numeric:tabular-nums}
+.pnp .r h3{font-size:calc(var(--u)*2.6);margin-top:calc(var(--u)*1.6)}
+.pnp .r p{font-size:calc(var(--u)*1.3);line-height:1.5;margin-top:calc(var(--u)*1);color:var(--gy)}
+.pnp .imp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*4);margin-top:calc(var(--u)*4);padding-top:calc(var(--u)*3);border-top:1px solid var(--ln)}
+.pnp .imp h3{font-size:calc(var(--u)*4);max-width:calc(var(--u)*34)}
+.pnp .imp .bd{max-width:none}
+
+/* 08 role */
+.pnp .s8 .gx{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.pnp .s8 .bd{font-size:calc(var(--u)*2);line-height:1.45;max-width:calc(var(--u)*52)}
+
+/* footer */
+.pnp .ft{position:relative;padding:calc(var(--u)*9) 0 calc(var(--u)*5);border-top:1px solid var(--ln);overflow:hidden}
+.pnp .ft h2{font-size:calc(var(--u)*11);line-height:.86}
+.pnp .ft h2 span{display:block}
+.pnp .ft h2 .hl{display:inline-block;margin-top:.06em}
+.pnp .ft .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*2);margin-top:calc(var(--u)*4)}
+.pnp .ft .fa{font:600 calc(var(--u)*1.1)/1.4 var(--hd);letter-spacing:.14em;text-transform:uppercase;color:var(--gy)}
+.pnp .ft .fa b{display:block;color:var(--gn);font-weight:800;font-size:calc(var(--u)*2.2);letter-spacing:.02em;text-transform:none}
+.pnp .bk{display:inline-flex;align-items:center;gap:.7em;padding:.9em 1.3em .8em;border:2px solid var(--wh);font:700 calc(var(--u)*1.15)/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;transition:background .2s,color .2s}
+.pnp .bk:hover{background:var(--wh);color:var(--bk)}
+
+@media (prefers-reduced-motion:reduce){.pnp .rv{opacity:1;transform:none;transition:none}.pnp .hero .bg img,.pnp .hero h1 .l1,.pnp .hero h1 .l2{transition:none;opacity:1;transform:none;clip-path:none}.pnp .hero .bg img{opacity:.9}.pnp .mk path,.pnp .fv svg path{transition:none}.pnp .lt .ln{transition:none}}
+
+@media (max-width:1000px){
+.pnp .w{padding:0 calc(var(--u)*2.6)}
+.pnp .tb .wm{padding:0 calc(var(--u)*2.6)}
+.pnp .tb nav{display:none}
+.pnp .sc{padding:calc(var(--u)*6) 0}
+.pnp .sh h2{font-size:calc(var(--u)*6.4)}
+.pnp .gx,.pnp .hero .gx,.pnp .s2 .gx,.pnp .s5 .gx,.pnp .s8 .gx,.pnp .imp{grid-template-columns:1fr;gap:calc(var(--u)*3)}
+.pnp .hero .fa{justify-self:start;text-align:left}
+.pnp .hero .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pnp .hero .mkw{width:calc(var(--u)*7.5)}
+.pnp .hero h1{font-size:calc(var(--u)*12)}
+.pnp .rs{grid-template-columns:1fr}
+.pnp .vg{grid-template-columns:1fr}
+.pnp .pst{position:static}
+.pnp .ft h2{font-size:calc(var(--u)*10)}
+/* sideways strip becomes a scroll rail */
+.pnp .s6{padding-bottom:calc(var(--u)*6)}
+.pnp .run{height:auto!important}
+.pnp .stg{position:static;height:auto;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none}
+.pnp .stg::-webkit-scrollbar{display:none}
+.pnp .strip{height:calc(var(--u)*46);padding:calc(var(--u)*1) calc(var(--u)*2.6) calc(var(--u)*1.5);transform:none!important}
+.pnp .pn{scroll-snap-align:start}
+.pnp .pn.tx,.pnp .pn.dk{width:calc(var(--u)*30);padding:calc(var(--u)*2)}
+.pnp .pn.tx h3{font-size:calc(var(--u)*3.8)}
+.pnp .pb,.pnp .hint{display:none}
+}
+@media (max-width:700px){
+.pnp .w{padding:0 calc(var(--u)*1.6)}
+.pnp .tb .wm{padding:0 calc(var(--u)*1.6);font-size:calc(var(--u)*1.1)}
+.pnp .tb .fb{padding:0 calc(var(--u)*1.6)}
+.pnp .hero{min-height:0}
+.pnp .hero .w{padding-top:calc(var(--u)*14)}
+.pnp .hero h1{font-size:min(calc(var(--u)*9.2),16vw)}
+.pnp .hero .dk{font-size:calc(var(--u)*1.7)}
+.pnp .hero .meta{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}
+.pnp .hero .mkw{width:calc(var(--u)*6.5)}
+.pnp .sh h2{font-size:calc(var(--u)*5.2)}
+.pnp .bd{font-size:calc(var(--u)*1.5)}
+.pnp .fv{font-size:calc(var(--u)*2)}
+.pnp .stat{grid-template-columns:1fr;gap:calc(var(--u)*1)}
+.pnp .stat b{font-size:calc(var(--u)*7.5)}
+.pnp .s2 .q{font-size:calc(var(--u)*4)}
+.pnp .ph{grid-template-columns:1fr}
+.pnp .pc{min-height:0}
+.pnp .pc h3{font-size:calc(var(--u)*3)}
+.pnp .vl.big .lk .tt{font-size:calc(var(--u)*3.6)}
+.pnp .vl .lk{padding:calc(var(--u)*1.4)}
+.pnp .ef{grid-template-columns:1fr}
+.pnp .sub{flex-direction:column;align-items:flex-start}
+.pnp .sub p{text-align:left}
+.pnp .lt .ln{font-size:calc(var(--u)*1.55)}
+.pnp .strip{height:calc(var(--u)*38)}
+.pnp .pn.tx,.pnp .pn.dk{width:calc(var(--u)*26)}
+.pnp .pn.tx h3{font-size:calc(var(--u)*3)}
+.pnp .pn.tx .mk{width:calc(var(--u)*6);margin-bottom:calc(var(--u)*1.2)}
+.pnp .r b{font-size:calc(var(--u)*8)}
+.pnp .imp h3{font-size:calc(var(--u)*3.2)}
+.pnp .s8 .bd{font-size:calc(var(--u)*1.7)}
+.pnp .ft h2{font-size:min(calc(var(--u)*8.6),15vw)}
+.pnp .tk span{font-size:calc(var(--u)*1.5)}
+}
+</style></head><body>
+<div class="pnp" id="pnp">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<filter id="pnp-rough" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+
+<div class="tb">
+<a class="wm" href="#top">People Not Profit</a>
+<nav aria-label="Sections"><a href="#loophole">Loophole</a><a href="#scam">Scam</a><a href="#plan">Plan</a><a href="#films">Films</a><a href="#letter">Letter</a><a href="#streets">Streets</a><a href="#results">Results</a></nav>
+<a class="fb" href="#results">Fight Back</a>
+</div>
+
+<header class="hero" id="top">
+<div class="bg"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-hero.webp?v=1" alt="" role="img" aria-label="A young girl stands in the middle of a neighborhood street and looks straight ahead, a frame from the Fallen Hero film" width="2000" height="752"></div>
+<div class="w">
+<div class="tabs"><span class="tab">California Tobacco Control Program</span><span class="tab g">2020</span><span class="mkw"><svg class="mk" viewBox="0 0 220 150" aria-hidden="true"><g filter="url(#pnp-rough)"><path pathLength="1" d="M28 18 C44 36 56 50 72 66"/><path pathLength="1" d="M74 20 C58 38 46 52 30 68"/><path pathLength="1" d="M146 16 C162 34 174 48 190 64"/><path pathLength="1" d="M192 18 C176 36 164 50 148 66"/><path pathLength="1" d="M46 112 L80 96 L52 118 L96 98 L66 124 L112 100 L84 128 L130 102 L104 130 L150 104 L124 134 L166 108 L142 136 L178 114"/></g></svg></span></div>
+<h1><span class="l1">Big Tobacco Is</span><span class="l2 hl">Making A Killing.</span></h1>
+<div class="gx">
+<p class="dk">A statewide campaign that called out the menthol loophole, named the deception behind it, and asked the Black community to fight back. Because we are people, not profit.</p>
+<p class="fa">Fight back at<b>WeAreNotProfit.org</b></p>
+</div>
+<div class="meta">
+<div><b>Client</b>California Tobacco Control Program (CTCP), targeting tobacco industry tactics to protect public health and reduce disparities in affected communities.</div>
+<div><b>Campaign</b>People Not Profit. The true consequences of the tobacco industry's predatory practices, and how it profits from real people's losses.</div>
+<div><b>Channels</b>TVC led, supplemented with targeted paid media across social and digital.</div>
+<div><b>Why It Mattered</b>Countered profit-over-health marketing in menthol-targeted communities, raising awareness of the disparities and encouraging quitting.</div>
+</div>
+</div>
+</header>
+
+<div class="tk" aria-hidden="true"><div class="tp">
+<div class="gp"><span>80% Of Menthol Smokers Are African American</span><span>Tobacco Kills More African Americans Than AIDS, Car Crashes, And Murders Combined</span><span>In California, 70% Of Black Smokers Use Menthol</span><span>We Are People, Not Profit</span></div>
+<div class="gp"><span>80% Of Menthol Smokers Are African American</span><span>Tobacco Kills More African Americans Than AIDS, Car Crashes, And Murders Combined</span><span>In California, 70% Of Black Smokers Use Menthol</span><span>We Are People, Not Profit</span></div>
+</div></div>
+
+<section class="sc s1" id="loophole"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 01: The Loophole</span><h2>The One Flavor That Kept Slipping Through.</h2></div>
+<div class="gx">
+<div class="rv d1">
+<p class="bd">Flavor bans kept rolling out, and menthol kept getting loopholed out of them. The bans went after vape flavors and left out the original flavor.</p>
+<p class="bd">Eighty percent of menthol smokers are African American. We had to get the Black community as outraged as we were.</p>
+</div>
+<div class="flw rv d2">
+<div class="fl" id="fl">
+<span class="fv x">Mango<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv x">Mint<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv x">Bubblegum<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv x">Cotton Candy<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv x">Vanilla<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv x">Cucumber<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6 8 L94 54"/><path pathLength="1" d="M94 6 L6 54"/></svg></span>
+<span class="fv m">Menthol<small>The Original Flavor. Still Legal.</small></span>
+</div>
+<div class="stat"><b data-count="80" data-suf="%">0%</b><p>Of menthol smokers are African American.</p></div>
+</div>
+</div>
+</div></section>
+
+<section class="sc s2" id="scam"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 02: The Scam</span><h2>Manipulation By Menthol.</h2></div>
+<blockquote class="q rv d1">There is no bigger scam than the tobacco industry's <span class="hl">manipulation</span> of the African American community via menthol.</blockquote>
+<div class="gx">
+<figure class="rv d2"><div class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-site.webp?v=1" alt="" role="img" aria-label="The WeAreNotProfit.org homepage with the headline Manipulation And Deceit in white on green bars over black" width="1600" height="921"></div>
+<figcaption class="cap"><b>Site</b>WeAreNotProfit.org laid out the playbook: Reynolds American Inc., maker of Newport, the best-selling menthol in the US, giving money to Black organizations and using them to spread misinformation about local flavor bans.</figcaption></figure>
+<div class="rv d3">
+<p class="bd">The insight was simple. Our audience needed to understand that this was a scam, and that the scam was aimed at them.</p>
+<p class="bd">Decades of cheap prices and slick advertising pushed menthols into Black neighborhoods. Then the same companies worked to keep menthol out of every flavor ban. Naming that deception became the job of the campaign.</p>
+</div>
+</div>
+</div></section>
+
+<section class="sc s3" id="plan"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 03: The Plan</span><h2>Lead With The People Who Don't Smoke.</h2></div>
+<p class="bd rv d1">Rather than focus on getting smokers to quit, we targeted an influential group of non-smokers who could lead the way for the rest of the community. A two phase plan.</p>
+<div class="ph">
+<div class="pc rv d1"><span class="n">01</span><h3>Target The Changemakers</h3><p>African American non-smokers with influence over the people around them.</p><div class="tg"><span class="g">Family And Friends Of Smokers</span><span>Politicians</span><span>Church Members</span></div></div>
+<div class="pc two rv d2"><span class="n">02</span><h3>Expand The Reach</h3><p>Take the campaign to a larger audience through mass reach media.</p><div class="tg"><span>TVC</span><span>Paid Social</span><span>Digital</span><span>Out Of Home</span></div></div>
+</div>
+</div></section>
+
+<section class="sc s4" id="films"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 04: The Films</span><h2>Our Loss Is Their Profit.</h2></div>
+<p class="bd rv d1">The campaign was TVC led. Fallen Hero is the sixty second film. Family Tree and Fifty Years are the endframes that gave every piece of the campaign its face: a loved one, marked out in green.</p>
+<div class="vl big rv d2" data-src="https://player.vimeo.com/video/434524608?h=acc58fa064&amp;app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="People Not Profit, Fallen Hero" style="margin-top:calc(var(--u)*3)">
+<img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-fallen-hero.webp?v=1" alt="" role="img" aria-label="A young girl in a rainbow t-shirt stands in a residential street, a frame from Fallen Hero" width="1600" height="601">
+<button class="lk" type="button"><span class="pl">Play Film</span><span class="tt">Fallen Hero<small>Sixty Seconds</small></span></button>
+</div>
+<div class="ef">
+<figure class="rv d1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-film-family-tree.webp?v=1" alt="" role="img" aria-label="Family Tree endframe: three generations on a couch with a newborn, the father's eyes and mouth scribbled out in green, with the line Big Tobacco Is Making A Killing" width="1600" height="900"><figcaption class="cap"><b>Endframe</b>Family Tree</figcaption></figure>
+<figure class="rv d2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-film-50-years.webp?v=1" alt="" role="img" aria-label="Fifty Years endframe: a couple waves from their porch, the woman's eyes and mouth scribbled out in green, with the line Big Tobacco Is Making A Killing" width="1600" height="900"><figcaption class="cap"><b>Endframe</b>Fifty Years</figcaption></figure>
+</div>
+<div class="sub rv"><h3>More Voices</h3><p>Three more pieces from the campaign, recorded in the booth.</p></div>
+<div class="vg">
+<div class="vl rv d1" data-src="https://player.vimeo.com/video/434537001?app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="People Not Profit, Kito"><img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-kito.webp?v=1" alt="" role="img" aria-label="A man in headphones reads at a studio microphone" width="1600" height="900"><button class="lk" type="button"><span class="pl">Play</span><span class="tt">Kito</span></button></div>
+<div class="vl rv d2" data-src="https://player.vimeo.com/video/434536829?app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="People Not Profit, Yazmin"><img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-yazmin.webp?v=1" alt="" role="img" aria-label="A woman with curly hair speaks into a studio microphone" width="1600" height="900"><button class="lk" type="button"><span class="pl">Play</span><span class="tt">Yazmin</span></button></div>
+<div class="vl rv d3" data-src="https://player.vimeo.com/video/434536950?app_id=122963&amp;autoplay=1&amp;playsinline=1&amp;dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" data-t="People Not Profit, Cram"><img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-cram.webp?v=1" alt="" role="img" aria-label="A man in headphones reads from a music stand behind a studio microphone" width="1600" height="900"><button class="lk" type="button"><span class="pl">Play</span><span class="tt">Cram</span></button></div>
+</div>
+</div></section>
+
+<section class="sc s5" id="letter"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 05: The Letter</span><h2>Dear Big Tobacco, <span class="hl">We Are Dying.</span></h2></div>
+<div class="gx">
+<figure class="pst rv d1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-poster-letter.webp?v=1" alt="" role="img" aria-label="Print poster: an older man and a young woman embrace in front of a picket fence, his eyes and mouth scribbled out in green, beside the open letter Dear Big Tobacco, We Are Dying" width="738" height="1194"></figure>
+<div class="lt" id="lt">
+<span class="ln sm">Print. An Open Letter.</span>
+<span class="ln">But you already know that.</span>
+<span class="ln">Smoking kills more African Americans than AIDS, drug and alcohol abuse, car crashes, and murder combined. And in California, 70% of us who smoke use menthol cigarettes.</span>
+<span class="ln">That's no coincidence.</span>
+<span class="ln">You've spent decades pushing menthols into Black communities with cheap prices and slick advertising.</span>
+<span class="ln">And the worst part is, you think you can keep getting away with it.</span>
+<span class="ln">You come after our brothers, sisters, parents, and friends.</span>
+<span class="ln">Now, we're coming after you.</span>
+<span class="ln">We want menthol cigarettes banned from Black neighborhoods, because our lives are worth more than your paycheck.</span>
+<span class="ln b">We are people, not profit.</span>
+<span class="ln sg"><small>Signed,</small>The Communities You're Trying To Erase</span>
+<span class="ln fa2">Fight back at<b>WeAreNotProfit.org</b></span>
+</div>
+</div>
+</div></section>
+
+<section class="sc s6" id="streets">
+<div class="w"><div class="sh rv"><span class="lb"><i></i>Part 06: In The Streets</span><h2>Uncover The Deception.</h2></div></div>
+<div class="run" id="run">
+<div class="stg" id="stg">
+<div class="strip" id="strip">
+<div class="pn tx"><div><svg class="mk th" viewBox="0 0 220 150" aria-hidden="true"><g filter="url(#pnp-rough)"><path pathLength="1" d="M28 18 C44 36 56 50 72 66"/><path pathLength="1" d="M74 20 C58 38 46 52 30 68"/><path pathLength="1" d="M146 16 C162 34 174 48 190 64"/><path pathLength="1" d="M192 18 C176 36 164 50 148 66"/><path pathLength="1" d="M46 112 L80 96 L52 118 L96 98 L66 124 L112 100 L84 128 L130 102 L104 130 L150 104 L124 134 L166 108 L142 136 L178 114"/></g></svg><h3>Big Tobacco Is Targeting Black Communities With Menthol Cigarettes.</h3></div></div>
+<div class="pn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-shelter-loss.webp?v=1" alt="" role="img" aria-label="Bus shelter poster: Our Loss Is Their Profit, a smiling woman in a headwrap held by a man whose eyes and mouth are scribbled out in green" width="1200" height="1568"><span class="c"><b>Bus Shelter</b>Our Loss Is Their Profit.</span></div>
+<div class="pn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-shelter-killing.webp?v=1" alt="" role="img" aria-label="Bus shelter poster: Big Tobacco Is Making A Killing, a laughing woman beside a man whose eyes and mouth are scribbled out in green" width="1200" height="1568"><span class="c"><b>Bus Shelter</b>Pain Equals Profit.</span></div>
+<div class="pn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-ooh-collage.webp?v=1" alt="" role="img" aria-label="Out of home system: a grid of black and white family photographs, green copy tiles and standalone green scribble marks around the line Big Tobacco Is Making A Killing" width="2048" height="986"><span class="c"><b>Out Of Home</b>The System</span></div>
+<div class="pn dk"><svg class="mk th" viewBox="0 0 220 150" aria-hidden="true"><g filter="url(#pnp-rough)"><path pathLength="1" d="M28 18 C44 36 56 50 72 66"/><path pathLength="1" d="M74 20 C58 38 46 52 30 68"/><path pathLength="1" d="M146 16 C162 34 174 48 190 64"/><path pathLength="1" d="M192 18 C176 36 164 50 148 66"/><path pathLength="1" d="M46 112 L80 96 L52 118 L96 98 L66 124 L112 100 L84 128 L130 102 L104 130 L150 104 L124 134 L166 108 L142 136 L178 114"/></g></svg><p>They use deceptive tactics to infiltrate Black communities. We pay with our lives.</p></div>
+<div class="pn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-social.webp?v=1" alt="" role="img" aria-label="Square social tile: Big Tobacco Is Making A Killing. Tobacco kills more African Americans than AIDS, car crashes, and murders combined. Fight Back" width="500" height="500"><span class="c"><b>Social</b>Fight Back</span></div>
+<div class="pn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/pnp-site.webp?v=1" alt="" role="img" aria-label="The campaign website homepage, Manipulation And Deceit" width="1600" height="921"><span class="c"><b>Site</b>WeAreNotProfit.org</span></div>
+</div>
+<div class="pb" aria-hidden="true"><i id="pbi"></i></div>
+<span class="hint" aria-hidden="true">Keep Scrolling</span>
+</div>
+</div>
+</section>
+
+<section class="sc s7" id="results"><div class="w">
+<div class="sh rv"><span class="lb"><i></i>Part 07: The Results</span><h2>The Community Got Outraged.</h2></div>
+<div class="rs">
+<div class="r rv d1"><b data-count="61" data-suf="%">0%</b><h3>Campaign Recall</h3><p>Of the audience exposed to the campaign remembered it.</p></div>
+<div class="r rv d2"><b data-count="78" data-suf="%">0%</b><h3>Compelled To Act</h3><p>Were compelled to take action opposing the sale of menthol tobacco.</p></div>
+<div class="r rv d3"><b data-count="75" data-suf="%">0%</b><h3>Concerned</h3><p>Were concerned about themselves and their loved ones after being exposed to the creative.</p></div>
+</div>
+<div class="imp">
+<h3 class="rv">Part Of A Program That Saves Lives By The Hundreds Of Thousands.</h3>
+<p class="bd rv d1">The work contributed to CTCP's overall impact: over 700,000 person-years of life saved and $150,000 person-years of treatment averted per program studies, with the program reducing smoking rates and healthcare costs by billions.</p>
+</div>
+</div></section>
+
+<section class="sc s8" id="role"><div class="w">
+<div class="gx">
+<div class="sh rv" style="margin-bottom:0"><span class="lb"><i></i>Part 08: The Role</span><h2>What I Did.</h2></div>
+<p class="bd rv d1">As one of two Senior Copywriters on the project, I took a lead role in the creative and production process, particularly crafting the cadence of the story during post-production and executing the digital amplification content.</p>
+</div>
+</div></section>
+
+<footer class="ft"><div class="w">
+<h2 class="rv"><span>We Are People,</span><span class="hl">Not Profit.</span></h2>
+<div class="row rv d1">
+<p class="fa">Fight back at<b>WeAreNotProfit.org</b></p>
+<a class="bk" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a>
+</div>
+</div></footer>
+
+</div>
+<script>
+(function(){
+  var root=document.querySelector('.pnp');if(!root)return;
+  var q=function(s,c){return (c||root).querySelector(s)},qa=function(s,c){return [].slice.call((c||root).querySelectorAll(s))};
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var od=host.ownerDocument,de=od.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var ok=function(){var r=host.getBoundingClientRect();return Math.abs(r.left+(window.pageXOffset||0))<=.5&&Math.abs(r.width-de.clientWidth)<=.5};
+    var fit=function(){
+      if(ok())return;
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      var r2=host.getBoundingClientRect(),e=r2.left+(window.pageXOffset||0);
+      if(Math.abs(e)>.5){set('margin-left',(-l-e)+'px')}
+      set('background','none');
+    };
+    var later=function(){clearTimeout(tm);tm=setTimeout(fit,120)};
+    fit();
+    window.addEventListener('resize',later);
+    if(window.ResizeObserver){var ro=new ResizeObserver(later);ro.observe(de);if(host.parentElement)ro.observe(host.parentElement)}
+    var n=0,iv=setInterval(function(){fit();if(++n>16)clearInterval(iv)},500);
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+    window.addEventListener('load',fit);
+    setTimeout(fit,700);
+  }
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* hero in */
+  var hero=q('.hero');
+  var heroIn=function(){hero.classList.add('in');var m=q('.hero .mk');if(m)setTimeout(function(){m.classList.add('on')},900)};
+  var hi=q('.hero .bg img');
+  if(hi&&hi.complete)heroIn();else if(hi){hi.addEventListener('load',heroIn);hi.addEventListener('error',heroIn);setTimeout(heroIn,1800)}else heroIn();
+
+  /* in-page anchors inside the shadow root */
+  qa('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+    var id=a.getAttribute('href').slice(1),t=root.querySelector('#'+id);
+    if(!t)return;e.preventDefault();
+    var y=t.getBoundingClientRect().top+(window.pageYOffset||0)-(q('.tb').offsetHeight||0);
+    window.scrollTo({top:y,behavior:rm?'auto':'smooth'});
+  })});
+
+  /* count up */
+  var nums=qa('[data-count]');
+  var fmt=function(el,v){var suf=el.getAttribute('data-suf')||'';el.textContent=Math.round(v)+suf};
+  var finals=nums.map(function(el){return +el.getAttribute('data-count')});
+  var finish=function(el,i){el._done=1;fmt(el,finals[i])};
+  var run=function(el,i){
+    if(el._done||el._run)return;el._run=1;
+    if(rm||!window.requestAnimationFrame){finish(el,i);return}
+    var t0=null,dur=1400,to=finals[i];
+    var step=function(t){if(t0===null)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);fmt(el,to*e);if(p<1)requestAnimationFrame(step);else finish(el,i)};
+    requestAnimationFrame(step);
+  };
+
+  /* reveal */
+  var rv=qa('.rv,.mk,#fl,#lt');
+  var show=function(e){
+    e.classList.add('on');
+    qa('[data-count]',e).forEach(function(el){run(el,nums.indexOf(el))});
+    if(e.hasAttribute&&e.hasAttribute('data-count'))run(e,nums.indexOf(e));
+  };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.12});
+    rv.forEach(function(e){io.observe(e)});
+  }else{rv.forEach(show)}
+  setTimeout(function(){rv.forEach(function(e){e.classList.add('on')});nums.forEach(function(el,i){finish(el,i)})},2500);
+
+  /* letter lines stagger */
+  qa('#lt .ln').forEach(function(l,i){l.style.transitionDelay=(i*.14)+'s'});
+  /* flavor strikes stagger */
+  qa('#fl .fv.x').forEach(function(f,i){qa('path',f).forEach(function(p,j){p.style.transitionDelay=(.25+i*.22+j*.12)+'s'})});
+
+  /* click to play */
+  qa('.vl').forEach(function(box){
+    var btn=q('.lk',box);if(!btn)return;
+    btn.addEventListener('click',function(){
+      if(box.classList.contains('open'))return;
+      box.insertAdjacentHTML('beforeend','<iframe src="'+box.getAttribute('data-src')+'" title="'+box.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>');
+      box.classList.add('open');btn.setAttribute('aria-disabled','true');
+    });
+  });
+
+  /* sideways strip */
+  var runEl=q('#run'),stg=q('#stg'),strip=q('#strip'),pbi=q('#pbi');
+  if(runEl&&stg&&strip){
+    var travel=0,raf=0,wide=function(){return window.innerWidth>1000};
+    var size=function(){
+      if(!wide()){runEl.style.height='';strip.style.transform='';return}
+      var vw=de?de.clientWidth:window.innerWidth;
+      var sw=strip.scrollWidth,vh=stg.offsetHeight;
+      travel=Math.max(0,sw-vw);
+      runEl.style.height=(travel+vh)+'px';
+      update();
+    };
+    var update=function(){
+      raf=0;if(!wide())return;
+      var top=runEl.getBoundingClientRect().top-(q('.tb').offsetHeight||0);
+      var x=Math.min(travel,Math.max(0,-top));
+      strip.style.transform='translate3d('+(-x)+'px,0,0)';
+      if(pbi)pbi.style.width=(travel?(x/travel*100):100)+'%';
+      runEl.classList.toggle('go',x>travel*.04);
+    };
+    var onScroll=function(){if(!raf)raf=requestAnimationFrame(update)};
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',size);
+    size();
+    qa('img',strip).forEach(function(im){if(!im.complete)im.addEventListener('load',size)});
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
+    window.addEventListener('load',size);
+    var k=0,ivs=setInterval(function(){size();if(++k>8)clearInterval(ivs)},600);
+  }
+})();
+</script>
+</body></html>
