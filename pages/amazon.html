@@ -39,7 +39,7 @@ html,body{margin:0}
 .am .a-fan .fc img{width:100%}
 .am .a-fan .n1{position:absolute;right:0;top:calc(var(--u)*1);rotate:6deg;text-align:right;z-index:30}
 .am .a-fan .n2{position:absolute;left:50%;bottom:calc(var(--u)*-3);translate:-50% 0;rotate:-3deg;z-index:30;text-align:center}
-.am .a-fan .n2 svg{display:block;width:calc(var(--u)*5);margin:.2em auto 0}
+.am .a-fan .n2 svg{display:block;width:calc(var(--u)*3.2);margin:0 auto .15em}
 
 /* TICKER */
 .am .a-tk{position:relative;z-index:5;background:var(--ink);color:var(--pp);overflow:hidden;white-space:nowrap;padding:calc(var(--u)*1.1) 0;font:700 calc(var(--u)*1.5)/1 var(--disp);letter-spacing:.02em;rotate:-1.2deg;margin:0 calc(var(--u)*-1)}
@@ -49,6 +49,25 @@ html,body{margin:0}
 .am .a-tk i{font-style:normal;color:var(--or)}
 @keyframes tk{to{transform:translateX(-50%)}}
 
+.am .a-fl{display:block;text-align:left;perspective:1400px;rotate:var(--t);min-height:calc(var(--u)*28)}
+.am .a-fl .in{position:relative;display:block;height:100%;min-height:inherit;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.2,.4,1)}
+.am .a-fl[aria-pressed=true] .in{transform:rotateY(180deg)}
+.am .a-fl .a-sx{position:absolute;inset:0;rotate:0deg;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column}
+.am .a-fl .bk{transform:rotateY(180deg);background:var(--ink);color:var(--pp)}
+.am .a-fl .bk .hdl svg rect,.am .a-fl .bk .hdl svg circle:not(:last-child){stroke:var(--pp)}
+.am .a-fl .bk .hdl svg circle:last-child{fill:var(--pp)}
+.am .a-fl .bk .hdl svg>circle:first-child{fill:var(--pp)}
+.am .a-fl .ap{display:block;margin-top:calc(var(--u)*1.6);font:400 italic calc(var(--u)*2.4)/1 var(--ser);color:var(--bu)}
+.am .a-fl .bt{display:block;margin-top:calc(var(--u)*1);font:500 calc(var(--u)*1.2)/1.45 var(--disp)}
+.am .a-fl .flp{margin-top:auto;padding-top:calc(var(--u)*1);font:600 calc(var(--u)*1.6)/1 var(--hand)}
+.am .a-fl:hover .in{transform:rotateY(8deg)}.am .a-fl[aria-pressed=true]:hover .in{transform:rotateY(172deg)}
+/* BOARD GATE */
+.am .a-gate{position:relative;max-height:calc(var(--u)*62);overflow:hidden;transition:max-height .9s ease}
+.am .a-gate.op{max-height:none}
+.am .a-gate .sh{position:absolute;left:0;right:0;bottom:0;height:70%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:calc(var(--u)*5);background:linear-gradient(rgba(255,255,255,0),#fff 72%);z-index:15}
+.am .a-gate.op .sh{display:none}
+.am .a-open{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.8em 1.05em;border-radius:99px;background:#E60023;color:#fff;font:700 calc(var(--u)*1.3)/1 var(--disp);box-shadow:0 8px 24px rgba(230,0,35,.3);transition:transform .15s}
+.am .a-open:hover{transform:translateY(-2px)}
 /* AUDIENCE */
 .am .a-au{background:#fff}
 .am .a-st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
@@ -84,7 +103,10 @@ html,body{margin:0}
 .am .a-pc h3{margin:.3em 0 0;font:400 italic calc(var(--u)*4.4)/1 var(--ser)}
 .am .a-pc p{margin:calc(var(--u)*1.2) 0 0;font:500 calc(var(--u)*1.35)/1.45 var(--disp)}
 .am .a-pc .a-note{display:block;margin-top:calc(var(--u)*1.4);color:var(--or)}
-.am .a-tc{margin-top:calc(var(--u)*6);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:calc(var(--u)*4);align-items:start}
+.am .a-re{background:var(--bu)}
+.am .a-tc{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:calc(var(--u)*4);align-items:start}
+.am .a-tc .a-tt{flex-direction:column;align-items:flex-start;margin-top:0}
+.am .a-tc .a-tt button{font-size:calc(var(--u)*1.6);padding:.8em 1.4em .85em}
 .am .a-tc h3{margin:0;font:800 calc(var(--u)*3.4)/1 var(--disp);letter-spacing:-.03em}
 .am .a-tc h3 em{font:400 italic 1.1em/1 var(--ser)}
 .am .a-tc .a-sub{margin-top:calc(var(--u)*1.4)}
@@ -162,7 +184,9 @@ html,body{margin:0}
 .am .a-fan{height:calc(var(--u)*56)}
 .am .a-fan .fc{width:calc(var(--u)*26);margin:calc(var(--u)*-19) 0 0 calc(var(--u)*-13)}
 .am .a-st{grid-template-columns:repeat(2,minmax(0,1fr))}
+.am .a-fl{min-height:calc(var(--u)*30)}
 .am .a-tc{grid-template-columns:1fr}
+.am .a-tc .a-tt{flex-direction:row;flex-wrap:wrap}
 .am .a-vg{grid-template-columns:1fr}
 .am .a-vc .pins{grid-template-columns:repeat(3,minmax(0,1fr));max-width:70%}
 .am .a-fg{grid-template-columns:1fr}
@@ -175,6 +199,9 @@ html,body{margin:0}
 .am .a-fan .fc{width:calc(var(--u)*16);margin:calc(var(--u)*-12) 0 0 calc(var(--u)*-8)}
 .am .a-big{font-size:calc(var(--u)*3.4)}
 .am .a-st{grid-template-columns:1fr;gap:calc(var(--u)*3)}
+.am .a-fl{min-height:calc(var(--u)*36)}
+.am .a-fl .bt{font-size:calc(var(--u)*1.45)}
+.am .a-gate{max-height:calc(var(--u)*120)}
 .am .a-sx b{font-size:calc(var(--u)*8)}
 .am .a-gz{grid-template-columns:1fr}
 .am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4)}
@@ -277,31 +304,15 @@ html,body{margin:0}
     <div class="fc" style="--x:-22%;--y:-2%;--t:-4deg;--i:2;z-index:3"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-beachy-home-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Beachy Home Upgrades"></div>
     <div class="fc" style="--x:20%;--y:8%;--t:4deg;--i:3;z-index:4"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-euro-summer-outfits.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Euro-Summer Outfits"></div>
     <div class="fc" style="--x:0%;--y:0%;--t:-1deg;--i:4;z-index:5"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cool-girl-gift-guide.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Cool Girl Gift Guide"></div>
-    <span class="a-note n2" aria-hidden="true">tap to shuffle<svg viewBox="0 0 60 30" fill="none" stroke="#151515" stroke-width="2.4" stroke-linecap="round"><path d="M4 6c14 18 30 20 48 10M44 9l8 7-10 4"/></svg></span>
+    <span class="a-note n2" aria-hidden="true"><svg viewBox="0 0 44 40" fill="none" stroke="#151515" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 37C9 25 14 13 30 7"/><path d="M21 4l9 3-4 9"/></svg>tap to shuffle</span>
   </div>
 </header>
 
 
-<section class="a-sc a-au" aria-labelledby="h-au">
-  <div class="a-hd">
-    <div>
-      <p class="a-lb a-rv">01: The Audience</p>
-      <h2 class="a-h2 a-rv" id="h-au" style="--d:.08s">Millions Of Shoppers, <em>One Scroll.</em></h2>
-    </div>
-    <p class="a-sub a-rv" style="--d:.14s">Three Instagram accounts and the @amazon Pinterest profile, each with its own audience, rhythm and reason to tap.</p>
-  </div>
-  <div class="a-st">
-    <div class="a-sx a-rv" style="--c:var(--bu);--t:-1.5deg"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazon</span><b>6.9M</b><span class="lbl">Followers</span><span class="sec">4,307 posts &middot; Amazon Flagship</span></div>
-    <div class="a-sx a-rv" style="--c:var(--mi);--t:1deg;--d:.08s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonhome</span><b>5.8M</b><span class="lbl">Followers</span><span class="sec">6,346 posts &middot; Amazon Home</span></div>
-    <div class="a-sx a-rv" style="--c:var(--bl);--t:-1deg;--d:.16s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonfashion</span><b>4.4M</b><span class="lbl">Followers</span><span class="sec">7,291 posts &middot; Amazon Fashion</span></div>
-    <div class="a-sx a-rv" style="--c:var(--sk);--t:1.5deg;--d:.24s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#151515"/><path fill="#fff" d="M12.4 5c-4 0-6 2.8-6 5.2 0 1.4.6 2.7 1.7 3.2.2.1.4 0 .4-.2l.2-.7c0-.2 0-.3-.1-.5-.3-.4-.6-1-.6-1.8 0-2.3 1.7-4.3 4.5-4.3 2.4 0 3.8 1.5 3.8 3.5 0 2.6-1.2 4.8-2.9 4.8-.9 0-1.6-.8-1.4-1.7.3-1.1.8-2.4.8-3.2 0-.7-.4-1.3-1.2-1.3-1 0-1.7 1-1.7 2.3 0 .8.3 1.4.3 1.4l-1.1 4.7c-.3 1.4 0 3.1 0 3.3 0 .1.2.1.2 0 .1-.1 1.3-1.6 1.7-3.1l.6-2.4c.3.6 1.2 1.1 2.2 1.1 2.9 0 4.8-2.6 4.8-6.1C18 7.4 15.7 5 12.4 5z"/></svg>@amazon</span><b>2.3M</b><span class="lbl">Followers</span><span class="sec">10M+ monthly views &middot; Pinterest</span></div>
-  </div>
-</section>
-
 <section class="a-sc a-br" aria-labelledby="h-br">
   <div class="a-hd">
     <div>
-      <p class="a-lb a-rv">02: The Brief</p>
+      <p class="a-lb a-rv">01: The Brief</p>
       <h2 class="a-h2 a-rv" id="h-br" style="--d:.08s">Meet Them <em>In Their World.</em></h2>
     </div>
   </div>
@@ -311,8 +322,23 @@ html,body{margin:0}
     <div class="a-rv" style="--d:.08s"><b>62%</b><span>say brands that align with their interests and fandoms feel like &ldquo;true allies.&rdquo;</span></div>
     <div class="a-rv" style="--d:.16s"><b>83%</b><span>say they can easily spot when brands are trying too hard to go viral.</span></div>
   </div>
-  <p class="a-src">Source: The State of Community, Archrival and Tumblr.</p>
   <div class="a-gl a-rv"><p>From retail giant to cultural authority.</p><span class="a-note">inspiring, relevant + shoppable,<br>at the speed of culture</span></div>
+</section>
+
+<section class="a-sc a-au" aria-labelledby="h-au">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">02: Audience Social Strategy</p>
+      <h2 class="a-h2 a-rv" id="h-au" style="--d:.08s">One Brand, <em>Three Audiences.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Three Instagram accounts and the @amazon Pinterest profile, each with its own audience.</p>
+  </div>
+  <div class="a-st">
+    <button class="a-fl a-rv" type="button" aria-pressed="false" style="--c:var(--bu);--t:-1.5deg;--d:0"><span class="in"><span class="a-sx fr"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazon</span><b>6.9M</b><span class="lbl">Followers</span><span class="sec">Amazon Flagship</span><span class="flp">tap to flip</span></span><span class="a-sx bk"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazon</span><span class="ap">Channel Approach</span><span class="bt">Flagship curates the whole internet into fun, approachable stories. It joins mainstream, high-impact moments at their peak, leading with gifting, viral finds and everyday genius.</span></span></span></button>
+    <button class="a-fl a-rv" type="button" aria-pressed="false" style="--c:var(--mi);--t:1deg;--d:.08s"><span class="in"><span class="a-sx fr"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonhome</span><b>5.8M</b><span class="lbl">Followers</span><span class="sec">Amazon Home</span><span class="flp">tap to flip</span></span><span class="a-sx bk"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonhome</span><span class="ap">Channel Approach</span><span class="bt">Home is selective about which moments matter. Trends pass through a lens of longevity and utility, styled lived in and never staged, from renter-friendly upgrades to seasonal resets.</span></span></span></button>
+    <button class="a-fl a-rv" type="button" aria-pressed="false" style="--c:var(--bl);--t:-1deg;--d:.16s"><span class="in"><span class="a-sx fr"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonfashion</span><b>4.4M</b><span class="lbl">Followers</span><span class="sec">Amazon Fashion</span><span class="flp">tap to flip</span></span><span class="a-sx bk"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonfashion</span><span class="ap">Channel Approach</span><span class="bt">Fashion simplifies trends into wearable looks, turning cultural moments into outfit boards and quick style decodes, while beauty plays early with color, texture and tropes.</span></span></span></button>
+    <button class="a-fl a-rv" type="button" aria-pressed="false" style="--c:var(--sk);--t:1.5deg;--d:.24s"><span class="in"><span class="a-sx fr"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#151515"/><path fill="#fff" d="M12.4 5c-4 0-6 2.8-6 5.2 0 1.4.6 2.7 1.7 3.2.2.1.4 0 .4-.2l.2-.7c0-.2 0-.3-.1-.5-.3-.4-.6-1-.6-1.8 0-2.3 1.7-4.3 4.5-4.3 2.4 0 3.8 1.5 3.8 3.5 0 2.6-1.2 4.8-2.9 4.8-.9 0-1.6-.8-1.4-1.7.3-1.1.8-2.4.8-3.2 0-.7-.4-1.3-1.2-1.3-1 0-1.7 1-1.7 2.3 0 .8.3 1.4.3 1.4l-1.1 4.7c-.3 1.4 0 3.1 0 3.3 0 .1.2.1.2 0 .1-.1 1.3-1.6 1.7-3.1l.6-2.4c.3.6 1.2 1.1 2.2 1.1 2.9 0 4.8-2.6 4.8-6.1C18 7.4 15.7 5 12.4 5z"/></svg>@amazon</span><b>2.3M</b><span class="lbl">Followers</span><span class="sec">Pinterest &middot; 10M+ monthly views</span><span class="flp">tap to flip</span></span><span class="a-sx bk"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#151515"/><path fill="#fff" d="M12.4 5c-4 0-6 2.8-6 5.2 0 1.4.6 2.7 1.7 3.2.2.1.4 0 .4-.2l.2-.7c0-.2 0-.3-.1-.5-.3-.4-.6-1-.6-1.8 0-2.3 1.7-4.3 4.5-4.3 2.4 0 3.8 1.5 3.8 3.5 0 2.6-1.2 4.8-2.9 4.8-.9 0-1.6-.8-1.4-1.7.3-1.1.8-2.4.8-3.2 0-.7-.4-1.3-1.2-1.3-1 0-1.7 1-1.7 2.3 0 .8.3 1.4.3 1.4l-1.1 4.7c-.3 1.4 0 3.1 0 3.3 0 .1.2.1.2 0 .1-.1 1.3-1.6 1.7-3.1l.6-2.4c.3.6 1.2 1.1 2.2 1.1 2.9 0 4.8-2.6 4.8-6.1C18 7.4 15.7 5 12.4 5z"/></svg>@amazon</span><span class="ap">Channel Approach</span><span class="bt">Pinterest is discovery first and planned ahead. Trends get reframed inside a bigger lifestyle theme, like summer sun care instead of SPF, and content starts early so it has time to build and convert.</span></span></span></button>
+  </div>
 </section>
 
 <section class="a-sc a-sy" aria-labelledby="h-sy">
@@ -328,16 +354,22 @@ html,body{margin:0}
     <div class="a-pc a-rv" style="--t:1deg;--d:.08s"><small>Product Benefit</small><h3>Educate</h3><p>The latest trends, hacks and use cases, so followers can shine within their own communities.</p><span class="a-note">curated collections</span></div>
     <div class="a-pc a-rv" style="--t:-1deg;--d:.16s"><small>Product Function</small><h3>Promote</h3><p>Deep dives on how products work, backed by reviews and the internet&rsquo;s favorite finds.</p><span class="a-note">viral + trending finds</span></div>
   </div>
+</section>
+
+<section class="a-sc a-re" aria-labelledby="h-re">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">04: Reactive</p>
+      <h2 class="a-h2 a-rv" id="h-re" style="--d:.08s">Reacting At The <em>Speed Of Culture.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">A reactive playbook sorted every trend by lifespan, then set how fast to move, what to make and which channel should lead.</p>
+  </div>
   <div class="a-tc">
-    <div class="a-rv">
-      <h3>Reacting At The <em>Speed Of Culture.</em></h3>
-      <p class="a-sub">A reactive playbook sorted every trend by lifespan, then set how fast to move, what to make and which channel should lead.</p>
-      <div class="a-tt" role="tablist" aria-label="Trend types">
+    <div class="a-rv"><div class="a-tt" role="tablist" aria-label="Trend types">
         <button type="button" role="tab" aria-selected="true" data-k="0">Flash In The Pan</button>
         <button type="button" role="tab" aria-selected="false" data-k="1">Short Tail</button>
         <button type="button" role="tab" aria-selected="false" data-k="2">Long Tail</button>
-      </div>
-    </div>
+      </div></div>
     <div class="a-tp a-rv" role="tabpanel" aria-live="polite" style="--d:.1s">
       <div class="a-bar"><i></i></div>
       <div class="a-ax"><span>24 hours</span><span>Weeks</span><span>Months</span><span>Years</span></div>
@@ -352,7 +384,7 @@ html,body{margin:0}
 <section class="a-sc a-vo" aria-labelledby="h-vo">
   <div class="a-hd">
     <div>
-      <p class="a-lb a-rv">04: The Voices</p>
+      <p class="a-lb a-rv">05: The Voices</p>
       <h2 class="a-h2 a-rv" id="h-vo" style="--d:.08s">One Brand, <em>Three Personalities.</em></h2>
     </div>
     <p class="a-sub a-rv" style="--d:.14s">Each channel filters the same culture through its own character, so a trend lands differently on Flagship, Home and Fashion &amp; Beauty.</p>
@@ -382,7 +414,7 @@ html,body{margin:0}
       <button class="ar n" type="button" aria-label="Next slide">&rsaquo;</button>
     </div>
     <div class="a-fx">
-      <p class="a-lb a-rv">05: In The Feed</p>
+      <p class="a-lb a-rv">06: In The Feed</p>
       <h3 class="a-rv" style="--d:.08s">Gift Guides Built <em>For The Swipe.</em></h3>
       <p class="a-rv" style="--d:.14s">Carousels turned a hundred gift ideas into personalities: the extra special, the next-level upgrades, the passionate foodies. Sticker cutouts, handwritten notes and soft florals carry the same toolkit as the pins.</p>
       <div class="ob">
@@ -396,18 +428,17 @@ html,body{margin:0}
 <section class="a-sc a-bw" aria-labelledby="h-bw">
   <div class="a-hd">
     <div>
-      <p class="a-lb a-rv">06: The Board</p>
+      <p class="a-lb a-rv">07: The Board</p>
       <h2 class="a-h2 a-rv" id="h-bw" style="--d:.08s">Every Pin, <em>One Board.</em></h2>
     </div>
-    <p class="a-sub a-rv" style="--d:.14s">Trend reports, gift guides and shoppable edits for Pinterest. Filter by channel or tap a pin to open it.</p>
+    <p class="a-sub a-rv" style="--d:.14s">Trend reports, gift guides and shoppable edits for Pinterest. Open the board, then filter by channel or tap a pin.</p>
   </div>
 </section>
-
+<div class="a-gate">
 <div class="pb">
 <header class="prof">
 <img class="av" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" role="img" aria-label="Amazon profile picture">
 <h1>Amazon<svg class="vf" viewBox="0 0 24 24" aria-label="Verified"><circle cx="12" cy="12" r="12" fill="#E60023"/><path d="M7 12.4l3.2 3.1L17 8.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></h1>
-<span class="hd">amazon</span>
 <p class="st"><b>2.3m followers</b> &middot; <span>10m+ monthly views</span></p>
 </header>
 <nav class="tabs" aria-label="Filter pins by channel">
@@ -458,7 +489,7 @@ html,body{margin:0}
 </div>
 <div class="lb" role="dialog" aria-modal="true" aria-label="Pin"><div class="lbc"><img class="lbi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt=""><div class="lbt"><small class="lbk"></small><strong class="lbh"></strong><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true"><span class="lbn"></span></span></div><button class="x" type="button" aria-label="Close">&times;</button><button class="nv p" type="button" aria-label="Previous pin">&lsaquo;</button><button class="nv n" type="button" aria-label="Next pin">&rsaquo;</button></div></div>
 </div>
-
+<div class="sh"><button class="a-open" type="button" aria-expanded="false">Open The Full Board <span aria-hidden="true">&darr;</span></button></div></div>
 
 <section class="a-out" aria-label="Outro">
   <p class="a-rv">Everything You Love, <em>Curated.</em></p>
@@ -473,6 +504,10 @@ var root=q('.am');if(!root)return;root.classList.add('js');
 (function(){var els=qa('.a-rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
 els.forEach(function(e){io.observe(e)});setTimeout(function(){qa('.a-rv:not(.in)').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in')})},2500)})();
+/* flip cards */
+qa('.a-fl').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')})});
+/* board gate */
+(function(){var g=q('.a-gate'),o=q('.a-open');if(!g||!o)return;o.addEventListener('click',function(){g.classList.add('op');o.setAttribute('aria-expanded','true')})})();
 /* hero shuffle */
 (function(){var fan=q('.a-fan');if(!fan)return;var cards=qa('.a-fan .fc');var pos=cards.map(function(c){return [c.style.getPropertyValue('--x'),c.style.getPropertyValue('--y'),c.style.getPropertyValue('--t')]});
 var order=cards.map(function(_,i){return i});
