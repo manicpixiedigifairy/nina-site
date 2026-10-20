@@ -100,7 +100,8 @@ html,body{margin:0}
 .am .a-pc{position:relative;padding:calc(var(--u)*2.8) calc(var(--u)*2.4) calc(var(--u)*2.6);background:#fff;border-radius:calc(var(--u)*.4);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(21,21,21,.1);rotate:var(--t)}
 .am .a-pc::before{content:"";position:absolute;left:50%;top:calc(var(--u)*-1.1);width:calc(var(--u)*7);height:calc(var(--u)*2.2);margin-left:calc(var(--u)*-3.5);background:rgba(232,112,42,.55);rotate:-3deg}
 .am .a-pc small{display:block;font:700 calc(var(--u)*1)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:#6b6b6b}
-.am .a-pc h3{margin:.3em 0 0;font:400 italic calc(var(--u)*4.4)/1 var(--ser)}
+.am .a-pc{container-type:inline-size}
+.am .a-pc h3{margin:.3em 0 0;font:400 italic min(calc(var(--u)*4.4),24cqi)/1 var(--ser)}
 .am .a-pc p{margin:calc(var(--u)*1.2) 0 0;font:500 calc(var(--u)*1.35)/1.45 var(--disp)}
 .am .a-pc .a-note{display:block;margin-top:calc(var(--u)*1.4);color:var(--or)}
 .am .a-re{background:var(--bu)}
@@ -188,6 +189,7 @@ html,body{margin:0}
 .am .a-tc{grid-template-columns:1fr}
 .am .a-tc .a-tt{flex-direction:row;flex-wrap:wrap}
 .am .a-vg{grid-template-columns:1fr}
+.am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4);max-width:34rem}
 .am .a-vc .pins{grid-template-columns:repeat(3,minmax(0,1fr));max-width:70%}
 .am .a-fg{grid-template-columns:1fr}
 }
@@ -344,8 +346,8 @@ html,body{margin:0}
 <section class="a-sc a-sy" aria-labelledby="h-sy">
   <div class="a-hd">
     <div>
-      <p class="a-lb a-rv">03: The System</p>
-      <h2 class="a-h2 a-rv" id="h-sy" style="--d:.08s">Three Pillars, <em>Every Post.</em></h2>
+      <p class="a-lb a-rv">03: Content Pillars</p>
+      <h2 class="a-h2 a-rv" id="h-sy" style="--d:.08s">Our Consistency <em>Compass.</em></h2>
     </div>
     <p class="a-sub a-rv" style="--d:.14s">Every post ladders to a pillar, so business as usual, seasonal campaigns and sales events all speak the same language.</p>
   </div>
@@ -384,8 +386,8 @@ html,body{margin:0}
 <section class="a-sc a-vo" aria-labelledby="h-vo">
   <div class="a-hd">
     <div>
-      <p class="a-lb a-rv">05: The Voices</p>
-      <h2 class="a-h2 a-rv" id="h-vo" style="--d:.08s">One Brand, <em>Three Personalities.</em></h2>
+      <p class="a-lb a-rv">05: Tone Of Voice</p>
+      <h2 class="a-h2 a-rv" id="h-vo" style="--d:.08s">Bringing (3) Brand <em>Personas To Life.</em></h2>
     </div>
     <p class="a-sub a-rv" style="--d:.14s">Each channel filters the same culture through its own character, so a trend lands differently on Flagship, Home and Fashion &amp; Beauty.</p>
   </div>
