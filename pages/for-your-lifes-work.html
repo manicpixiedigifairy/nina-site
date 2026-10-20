@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="For Your Life's Work: Notion's first international brand campaign, from three films inspired by real user stories to a scalable design system and conceptual out of home in cities around the world.">
+<title>Nina Austin | For Your Life's Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#fff}
+.nw{--u:clamp(11px,1.1111vw,28px);--ink:#37352F;--mt:#787774;--sf:#55534E;--ln:rgba(55,53,47,.16);--w:#fff;--g2:#F7F6F3;--cr:#F1ECDC;--bl:#2F6FB5;--yl:#F1BD3B;--nv:#101A2C;--ac:#2383E2;--ui:Inter,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;display:block;position:relative;overflow:hidden;width:100%;background:var(--w);color:var(--ink);font-family:var(--ui);font-weight:500;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.nw *,.nw *::before,.nw *::after{box-sizing:border-box}
+.nw a{color:inherit;text-decoration:none}
+.nw h1,.nw h2,.nw h3,.nw h4{font-family:var(--ui);font-weight:800;margin:0;color:inherit!important;letter-spacing:-.045em;line-height:1}
+.nw p,.nw ul,.nw ol,.nw li,.nw dl,.nw dd,.nw dt,.nw figure{margin:0;padding:0;list-style:none}
+.nw img{display:block;max-width:100%;height:auto}
+.nw svg{display:block}
+.nw button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.nw .w{width:100%;max-width:calc(var(--u)*86);margin:0 auto;padding:0 calc(var(--u)*3)}
+.nw .il{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+
+/* notion bits */
+.nw .pl{display:inline-block;padding:.12em .6em .16em;border-radius:3px;font-size:.92em;font-weight:500;line-height:1.35;background:#E3E2E0;color:#32302C;white-space:nowrap}
+.nw .c-brown{background:#EEE0DA;color:#442A1E}.nw .c-orange{background:#FADEC9;color:#49290E}.nw .c-yellow{background:#FDECC8;color:#402C1B}.nw .c-green{background:#DBEDDB;color:#1C3829}.nw .c-blue{background:#D3E5EF;color:#183347}.nw .c-purple{background:#E8DEEE;color:#412454}.nw .c-pink{background:#F5E0E9;color:#4C2337}.nw .c-red{background:#FFE2DD;color:#5D1715}
+.nw .pls{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.4)}
+.nw .cbx{flex:none;display:inline-grid;place-items:center;width:1.15em;height:1.15em;border:.12em solid var(--ink);border-radius:.2em;background:#fff;transition:background .25s,border-color .25s}
+.nw .cbx svg{width:72%;height:72%;fill:none;stroke:#fff;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .3s .1s}
+.nw .cbx.ckd,.nw .ck .cbx{background:var(--ac);border-color:var(--ac)}
+.nw .cbx.ckd svg,.nw .ck .cbx svg{stroke-dashoffset:0}
+
+/* section frame */
+.nw .sc{position:relative;padding:calc(var(--u)*9) 0}
+.nw .sc.g{background:var(--g2)}
+.nw .sh{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.6);margin-bottom:calc(var(--u)*4.4)}
+.nw .lb{display:inline-flex;align-items:center;gap:.7em;font-size:calc(var(--u)*1);font-weight:600;color:var(--mt);letter-spacing:-.005em}
+.nw .lb b{display:inline-block;background:#E3E2E0;color:#32302C;border-radius:3px;padding:.12em .55em .16em;font-weight:600;font-size:.9em}
+.nw .sh h2{font-size:calc(var(--u)*5.6);line-height:1;text-wrap:balance}
+.nw .ld{font-size:calc(var(--u)*1.85);line-height:1.42;font-weight:500;color:var(--sf);max-width:calc(var(--u)*44);text-wrap:pretty}
+
+/* hero */
+.nw .hero{position:relative;background:var(--cr);padding:calc(var(--u)*6) 0 calc(var(--u)*8)}
+.nw .hero .gx{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:calc(var(--u)*5);align-items:center}
+.nw .pic{display:grid;place-items:center;width:calc(var(--u)*6.4);height:calc(var(--u)*6.4);background:#fff;border-radius:calc(var(--u)*.9);box-shadow:0 0 0 1px var(--ln),0 calc(var(--u)*.3) calc(var(--u)*.9) rgba(55,53,47,.08)}
+.nw .pic svg{width:70%;height:70%;stroke-width:6}
+.nw .hero h1{font-size:calc(var(--u)*8.4);line-height:.92;margin-top:calc(var(--u)*2.2);letter-spacing:-.055em}
+.nw .hero h1 span{display:block}
+.nw .hero .dk{margin-top:calc(var(--u)*2.2);font-size:calc(var(--u)*1.7);line-height:1.45;color:var(--sf);max-width:calc(var(--u)*40);text-wrap:pretty}
+.nw .pr{margin-top:calc(var(--u)*3);max-width:calc(var(--u)*40);border-top:1px solid var(--ln);font-size:calc(var(--u)*1.05)}
+.nw .pr>div{display:grid;grid-template-columns:calc(var(--u)*8.2) minmax(0,1fr);gap:calc(var(--u)*1);align-items:center;padding:calc(var(--u)*.75) 0;border-bottom:1px solid var(--ln)}
+.nw .pr dt{color:var(--mt);font-weight:500}
+.nw .pr dd{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.4) calc(var(--u)*.5);align-items:center;font-weight:600}
+
+/* poster */
+.nw .pw{position:relative;width:100%;max-width:calc(var(--u)*33);margin:0 auto}
+.nw .pst{position:relative;container-type:inline-size;background:var(--g,#EFE8D2);border-radius:calc(var(--u)*.5);aspect-ratio:4/5;box-shadow:0 0 0 1px rgba(55,53,47,.1),0 calc(var(--u)*1.2) calc(var(--u)*3) rgba(55,53,47,.18);transition:background .35s}
+.nw .pw .pst{transform:rotate(2.2deg)}
+.nw .pst .pi{position:absolute;inset:0;padding:8cqi;display:flex;flex-direction:column}
+.nw .pst h4{text-wrap:balance;font-size:calc(var(--u)*3);font-size:10.6cqi;line-height:.98;letter-spacing:-.05em;outline:0;border-radius:4px;min-height:2em}
+.nw .pst h4[contenteditable]{cursor:text;transition:box-shadow .2s}
+.nw .pst h4[contenteditable]:hover{box-shadow:0 0 0 2px rgba(35,131,226,.35)}
+.nw .pst h4[contenteditable]:focus{box-shadow:0 0 0 2px var(--ac)}
+.nw .pst .ph{position:relative;flex:1;min-height:0;margin-top:5cqi;border-radius:2cqi;overflow:hidden;background:#ddd}
+.nw .pst .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.nw .pst .wm{margin-top:5cqi;font-size:5.4cqi;font-weight:800;letter-spacing:-.04em;display:flex;align-items:center;gap:2cqi}
+
+.nw .cd{position:absolute;background:#fff;border-radius:1.6cqi;box-shadow:0 0 0 1px rgba(55,53,47,.08),0 1.5cqi 4cqi rgba(55,53,47,.22);font-size:3cqi;line-height:1.3;padding:2.2cqi 2.6cqi;width:36cqi;animation:fl 5.5s ease-in-out infinite}
+.nw .cd.c1{right:3cqi;top:4cqi}
+.nw .cd.c2{left:3cqi;bottom:5cqi;animation-delay:-2.6s}
+.nw .cd b{display:flex;align-items:center;gap:1.6cqi;font-weight:700;font-size:1.05em;margin-bottom:1.4cqi;letter-spacing:-.01em}
+.nw .cd b i{width:3.6cqi;height:3.6cqi;border-radius:.8cqi;display:inline-block}
+.nw .cd p{display:flex;align-items:center;gap:1.6cqi;padding:.9cqi 0;border-top:1px solid rgba(55,53,47,.1);font-weight:500;color:#4b4944}
+.nw .cd p em{margin-left:auto;font-style:normal;font-size:.86em;background:#D3E5EF;color:#183347;border-radius:3px;padding:0 1.2cqi}
+.nw .cd .cbx{font-size:2.9cqi}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6cqi)}}
+.nw .dd{position:absolute;pointer-events:none;z-index:2}
+.nw .dd.d1{width:calc(var(--u)*4.2);right:calc(var(--u)*-1.8);top:calc(var(--u)*-1.6)}
+.nw .dd.d2{width:calc(var(--u)*8);left:calc(var(--u)*-5);bottom:calc(var(--u)*5)}
+.nw .dd.d3{width:calc(var(--u)*2.6);right:calc(var(--u)*-1.6);bottom:calc(var(--u)*7)}
+
+/* 01 challenge */
+.nw .s1 .sh h2{font-size:calc(var(--u)*5)}
+.nw .cv.bn img{object-position:22% 50%}
+.nw .s1 .gx{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:calc(var(--u)*5);align-items:center}
+.nw .co{display:flex;gap:calc(var(--u)*1.4);align-items:flex-start;margin-top:calc(var(--u)*3);padding:calc(var(--u)*1.6) calc(var(--u)*1.8);background:#FBF3DB;border-radius:4px;font-size:calc(var(--u)*1.2);line-height:1.5;color:var(--ink);max-width:calc(var(--u)*44)}
+.nw .co svg{stroke-width:7;flex:none;width:calc(var(--u)*2.6);height:calc(var(--u)*2.6)}
+.nw .pn{background:var(--g2);border-radius:calc(var(--u)*.8);padding:calc(var(--u)*3);box-shadow:0 0 0 1px var(--ln)}
+.nw .pn svg{width:100%;height:auto}
+
+/* 02 films */
+.nw .tabs{display:flex;gap:calc(var(--u)*.4);border-bottom:1px solid var(--ln);margin-bottom:calc(var(--u)*3);overflow-x:auto;scrollbar-width:none}
+.nw .tabs::-webkit-scrollbar{display:none}
+.nw .tb{display:inline-flex;align-items:center;gap:.6em;padding:calc(var(--u)*.9) calc(var(--u)*1.3);font-size:calc(var(--u)*1.15);font-weight:600;color:var(--mt);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;border-radius:4px 4px 0 0;transition:color .2s,background .2s}
+.nw .tb svg{width:1.7em;height:1.7em;stroke-width:9}
+.nw .tb:hover{background:rgba(55,53,47,.06)}
+.nw .tb[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink)}
+.nw .tb:focus-visible{outline:2px solid var(--ac);outline-offset:-2px}
+.nw .tp{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:start}
+.nw .tp[hidden]{display:none}
+.nw .tp.in .fr,.nw .tp.in .tx{animation:up .55s cubic-bezier(.2,.8,.2,1) both}
+.nw .tp.in .tx{animation-delay:.08s}
+@keyframes up{from{opacity:0;transform:translateY(calc(var(--u)*1.2))}to{opacity:1;transform:none}}
+.nw .fr{border-radius:calc(var(--u)*.7);overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--ln),0 calc(var(--u)*1) calc(var(--u)*2.6) rgba(55,53,47,.12)}
+.nw .fr img{width:100%;aspect-ratio:2/1;object-fit:cover}
+.nw .tx .ico{stroke-width:3.4;width:calc(var(--u)*5.6);height:calc(var(--u)*5.6);margin-bottom:calc(var(--u)*1.2)}
+.nw .tx h3{font-size:calc(var(--u)*3.6);line-height:1}
+.nw .tx .ld{margin-top:calc(var(--u)*1.4);font-size:calc(var(--u)*1.5)}
+.nw .tx .pr{margin-top:calc(var(--u)*2);font-size:calc(var(--u)*1)}
+.nw .tx .pr>div{grid-template-columns:calc(var(--u)*7.4) minmax(0,1fr)}
+.nw .lc{display:flex;flex-direction:column;gap:calc(var(--u)*2.4)}
+.nw .ws{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*.8)}
+.nw .ws small{font-size:calc(var(--u)*.9);font-weight:600;color:var(--mt)}
+.nw .ws .fr img{aspect-ratio:16/8;object-position:50% 0}
+
+/* 03 ooh */
+.nw .gl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4) calc(var(--u)*1.6)}
+.nw .gc{display:flex;flex-direction:column;gap:calc(var(--u)*.9)}
+.nw .gc.x2{grid-column:span 2}
+.nw .cv{position:relative;height:calc(var(--u)*25);border-radius:calc(var(--u)*.6);overflow:hidden;background:#E9E8E4;box-shadow:0 0 0 1px var(--ln);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.nw .cv img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.nw .gc:hover .cv{transform:translateY(calc(var(--u)*-.3));box-shadow:0 0 0 1px var(--ln),0 calc(var(--u)*.9) calc(var(--u)*2) rgba(55,53,47,.16)}
+.nw .gc:hover .cv img{transform:scale(1.04)}
+.nw .gc h3{font-size:calc(var(--u)*1.15);font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.nw .gc .pls{font-size:calc(var(--u)*.95)}
+.nw .gc.tx2 .cv{background:#FBF3DB;box-shadow:0 0 0 1px rgba(55,53,47,.1);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*1.3);padding:calc(var(--u)*3)}
+.nw .gc.tx2 .cv p{font-size:calc(var(--u)*2.9);font-weight:800;letter-spacing:-.05em;line-height:1}
+.nw .gc.tx2 .cv p+p{padding-top:calc(var(--u)*1.3);border-top:1px solid rgba(55,53,47,.18)}
+.nw .gc.tx2:hover .cv{transform:none}
+.nw .mk{margin-top:calc(var(--u)*3)}
+.nw .mk .pls{font-size:calc(var(--u)*1.05)}
+
+/* 04 system */
+.nw .s4 .gx{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:calc(var(--u)*5);align-items:center;margin-bottom:calc(var(--u)*6)}
+.nw .s4 .sh h2{font-size:calc(var(--u)*5)}
+.nw .s4 .gx svg{width:100%;max-width:calc(var(--u)*24);height:auto}
+.nw .tg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nw .tc{display:flex;flex-direction:column;background:#fff;border-radius:calc(var(--u)*.6);overflow:hidden;box-shadow:0 0 0 1px var(--ln);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.nw .tc:hover{transform:translateY(calc(var(--u)*-.3));box-shadow:0 0 0 1px var(--ln),0 calc(var(--u)*.8) calc(var(--u)*1.8) rgba(55,53,47,.14)}
+.nw .tc .cv{height:calc(var(--u)*12.5);border-radius:0;box-shadow:none;border-bottom:1px solid var(--ln)}
+.nw .tc .cv img{object-position:50% 0}
+.nw .tc:hover .cv{transform:none;box-shadow:none}
+.nw .tc div.bd{display:flex;flex-direction:column;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.1) calc(var(--u)*1.2) calc(var(--u)*1.3);font-size:calc(var(--u)*.95)}
+.nw .tc h3{font-size:calc(var(--u)*1.2);font-weight:700;letter-spacing:-.015em;line-height:1.2}
+
+/* 05 role */
+.nw .s5 .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.34fr);gap:calc(var(--u)*4);align-items:end}
+.nw .s5 .gx svg{width:100%;max-width:calc(var(--u)*13);margin-left:auto}
+.nw .dbt{border-top:1px solid var(--ln);font-size:calc(var(--u)*1.15)}
+.nw .dbr{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr) minmax(0,1.6fr);gap:calc(var(--u)*1.6);align-items:center;padding:calc(var(--u)*1) calc(var(--u)*.8);border-bottom:1px solid var(--ln);transition:background .2s}
+.nw .dbr:not(.hd):hover{background:var(--g2)}
+.nw .dbr.hd{font-size:.86em;color:var(--mt);font-weight:500;padding-top:calc(var(--u)*.7);padding-bottom:calc(var(--u)*.7)}
+.nw .dbr .nm{display:flex;align-items:center;gap:calc(var(--u)*.9);font-weight:600}
+.nw .dbr .nm .cbx{font-size:calc(var(--u)*1.2)}
+.nw .dbr .nm .cbx{background:var(--ac);border-color:var(--ac)}
+.nw .dbr .nm .cbx svg{stroke-dashoffset:0}
+.nw .dbr .sp{color:var(--sf);font-weight:500}
+
+/* 06 results */
+.nw .s6 .gx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:stretch}
+.nw .aw{display:flex;gap:calc(var(--u)*2.4);align-items:center;background:#FBF3DB;border-radius:calc(var(--u)*.8);padding:calc(var(--u)*3)}
+.nw .aw svg{flex:none;width:calc(var(--u)*9.5);height:auto}
+.nw .aw small{display:block;font-size:calc(var(--u)*1.05);font-weight:600;color:#6b5a2c;margin-bottom:calc(var(--u)*.7)}
+.nw .aw h3{font-size:calc(var(--u)*3.8);line-height:.98}
+.nw .aw p{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.25);line-height:1.45;color:#5b4a1f;font-weight:500}
+.nw .td{background:#fff;border-radius:calc(var(--u)*.8);box-shadow:0 0 0 1px var(--ln);padding:calc(var(--u)*1.2) calc(var(--u)*2.2);display:flex;flex-direction:column;justify-content:center}
+.nw .ti{display:flex;gap:calc(var(--u)*1.1);align-items:flex-start;padding:calc(var(--u)*1.05) 0;font-size:calc(var(--u)*1.25);line-height:1.45;font-weight:500;border-bottom:1px solid var(--ln);transition:color .3s}
+.nw .ti:last-child{border-bottom:0}
+.nw .ti .cbx{font-size:calc(var(--u)*1.35);margin-top:.12em}
+.nw .ti.ck{color:var(--sf)}
+
+.nw .my{margin-top:calc(var(--u)*7);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:calc(var(--u)*5);align-items:center}
+.nw .my h3{font-size:calc(var(--u)*4.6);line-height:1}
+.nw .my .ld{margin-top:calc(var(--u)*1.6)}
+.nw .opt{margin-top:calc(var(--u)*2.6);max-width:calc(var(--u)*40);border-top:1px solid var(--ln);font-size:calc(var(--u)*1.05)}
+.nw .opt>div{display:grid;grid-template-columns:calc(var(--u)*7) minmax(0,1fr);gap:calc(var(--u)*1);align-items:center;padding:calc(var(--u)*.8) 0;border-bottom:1px solid var(--ln)}
+.nw .opt dt{color:var(--mt)}
+.nw .opt dd{display:flex;gap:calc(var(--u)*.7);align-items:center;font-weight:600}
+.nw .sw{width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(55,53,47,.22);transition:transform .2s,box-shadow .2s}
+.nw .sw:hover{transform:scale(1.1)}
+.nw .sw[aria-pressed=true]{box-shadow:inset 0 0 0 1px rgba(55,53,47,.22),0 0 0 2px #fff,0 0 0 4px var(--ac)}
+.nw .th{width:calc(var(--u)*4.4);height:calc(var(--u)*3);border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px var(--ln);transition:transform .2s,box-shadow .2s;padding:0}
+.nw .th img{width:100%;height:100%;object-fit:cover}
+.nw .th:hover{transform:scale(1.06)}
+.nw .th[aria-pressed=true]{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ac)}
+.nw .sw:focus-visible,.nw .th:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.nw .hint{margin-top:calc(var(--u)*1.6);font-size:calc(var(--u)*.95);color:var(--mt);font-weight:500}
+
+
+/* sub headings and extras */
+.nw .sub{display:flex;flex-direction:column;gap:calc(var(--u)*.9);margin:calc(var(--u)*6) 0 calc(var(--u)*2.6)}
+.nw .sub h3{font-size:calc(var(--u)*3);line-height:1}
+.nw .sub p{font-size:calc(var(--u)*1.35);line-height:1.45;color:var(--sf);max-width:calc(var(--u)*44)}
+.nw .sub.first{margin-top:calc(var(--u)*5)}
+.nw .gl.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.nw .gc.x4{grid-column:1/-1}
+.nw .gc.x4 .cv{height:auto}
+.nw .gc.x4 .cv img{height:auto;aspect-ratio:2000/476}
+.nw .cv.top img{object-position:50% 0}
+.nw .cv.ph3 img{object-position:50% 30%}
+.nw .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nw .two .fr img{aspect-ratio:16/9}
+.nw .hm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nw .hm .tc .cv{height:auto;background:#F7F6F3}
+.nw .hm .tc .cv img{height:auto;aspect-ratio:800/415}
+.nw .ad{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:calc(var(--u)*5);align-items:center}
+.nw .ad .fr{max-width:calc(var(--u)*30)}
+.nw .ad .stk .fr{max-width:none}
+.nw .ad .fr img{aspect-ratio:auto;height:auto}
+.nw .fr.wide img{aspect-ratio:auto;height:auto}
+.nw .stk{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*1.6)}
+.nw .st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*1.6)}
+.nw .sn{background:#fff;border-radius:calc(var(--u)*.8);box-shadow:0 0 0 1px var(--ln);padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.2)}
+.nw .sn b{display:block;font-size:calc(var(--u)*4.6);font-weight:800;letter-spacing:-.055em;line-height:1;white-space:nowrap}
+.nw .sn span{display:block;margin-top:calc(var(--u)*.9);font-size:calc(var(--u)*1.1);font-weight:600;color:var(--sf);line-height:1.3}
+.nw .srcl{margin-top:calc(var(--u)*1.4);font-size:calc(var(--u)*.95);color:var(--mt);font-weight:500}
+.nw .srcl a{text-decoration:underline;text-underline-offset:.18em}
+.nw .dk a{color:inherit;text-decoration:underline;text-decoration-color:rgba(55,53,47,.4);text-underline-offset:.16em;transition:text-decoration-color .2s}
+.nw .dk a:hover{text-decoration-color:var(--ink)}
+.nw .fr.s2{margin-top:calc(var(--u)*1.6)}
+.nw .stl{display:grid;grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*1.6)}
+
+/* footer */
+.nw .ft{position:relative;background:var(--bl);color:#fff;padding:calc(var(--u)*8) 0 calc(var(--u)*9)}
+.nw .ft h2{font-size:calc(var(--u)*11);line-height:.94;letter-spacing:-.058em}
+.nw .ft h2 .l2{display:block;color:var(--yl)}
+.nw .bkr{display:flex;justify-content:flex-start;margin-top:calc(var(--u)*7)}
+.nw .bk{display:inline-flex;align-items:center;gap:.7em;padding:calc(var(--u)*1.1) calc(var(--u)*1.9);background:var(--yl);color:var(--nv);font-size:calc(var(--u)*1.25);font-weight:700;letter-spacing:-.01em;border-radius:6px;box-shadow:0 calc(var(--u)*.25) 0 rgba(16,26,44,.35);transition:background .2s,transform .2s,box-shadow .2s}
+.nw .bk span{font-size:1.2em;line-height:1;transition:transform .2s}
+.nw .bk:hover,.nw .bk:focus-visible{background:#fff;transform:translateY(calc(var(--u)*.12));box-shadow:0 calc(var(--u)*.12) 0 rgba(16,26,44,.35);outline:0}
+.nw .bk:hover span{transform:translateX(-.3em)}
+
+/* reveal */
+.nw .rv{opacity:0;transform:translateY(calc(var(--u)*1.6));transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.nw .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.nw .rv{opacity:1;transform:none;transition:none}.nw .cd{animation:none}.nw .tp.in .fr,.nw .tp.in .tx{animation:none}}
+
+@media (max-width:1000px){
+.nw .ad{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*3)}
+.nw .ad .fr{max-width:none}
+.nw .hm,.nw .gl.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nw .st{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nw .gl.g3 .gc:last-child{grid-column:1/-1}
+.nw .hero .gx,.nw .s1 .gx,.nw .tp,.nw .s4 .gx,.nw .s6 .gx,.nw .my{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*4)}
+.nw .hero h1{font-size:calc(var(--u)*8.6)}
+.nw .pw{max-width:calc(var(--u)*34)}
+.nw .sh h2{font-size:calc(var(--u)*5)}
+.nw .gl{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nw .tg{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nw .s4 .gx svg{max-width:calc(var(--u)*18)}
+.nw .s5 .gx{grid-template-columns:minmax(0,1fr)}
+.nw .s5 .gx svg{display:none}
+.nw .ft h2{font-size:calc(var(--u)*9)}
+}
+@media (max-width:700px){
+.nw .s1 .sh h2,.nw .s4 .sh h2{font-size:calc(var(--u)*4)}
+.nw .two{grid-template-columns:minmax(0,1fr)}
+.nw .hm{grid-template-columns:minmax(0,1fr)}
+.nw .sub h3{font-size:calc(var(--u)*2.6)}
+.nw .sub p{font-size:calc(var(--u)*1.4)}
+.nw .sn b{font-size:calc(var(--u)*3.6)}
+.nw .sn{padding:calc(var(--u)*1.6)}
+.nw .st{gap:calc(var(--u)*1)}
+.nw .w{padding:0 calc(var(--u)*1.9)}
+.nw .sc{padding:calc(var(--u)*6) 0}
+.nw .sh{margin-bottom:calc(var(--u)*3)}
+.nw .hero{padding:calc(var(--u)*4) 0 calc(var(--u)*6)}
+.nw .hero h1{font-size:calc(var(--u)*7)}
+.nw .pic{width:calc(var(--u)*5);height:calc(var(--u)*5)}
+.nw .sh h2{font-size:calc(var(--u)*4)}
+.nw .ld,.nw .hero .dk{font-size:calc(var(--u)*1.5)}
+.nw .pr,.nw .opt{font-size:calc(var(--u)*1.1)}
+.nw .pr>div,.nw .opt>div{grid-template-columns:calc(var(--u)*6.6) minmax(0,1fr)}
+.nw .co{font-size:calc(var(--u)*1.25)}
+.nw .pn{padding:calc(var(--u)*1.6)}
+.nw .tx h3{font-size:calc(var(--u)*3.2)}
+.nw .gl{gap:calc(var(--u)*1.8) calc(var(--u)*1)}
+.nw .cv{height:calc(var(--u)*17)}
+.nw .gc h3{font-size:calc(var(--u)*1.2)}
+.nw .gc.tx2 .cv{padding:calc(var(--u)*1.8)}
+.nw .gc.tx2 .cv p{font-size:calc(var(--u)*2.1)}
+.nw .tg{gap:calc(var(--u)*1)}
+.nw .tc .cv{height:calc(var(--u)*8.5)}
+.nw .tc h3{font-size:calc(var(--u)*1.2)}
+.nw .dbt{font-size:calc(var(--u)*1.2)}
+.nw .dbr.hd{display:none}
+.nw .dbr{grid-template-columns:minmax(0,1fr);gap:calc(var(--u)*.6);padding:calc(var(--u)*1.2) 0}
+.nw .aw{flex-direction:column;align-items:flex-start;padding:calc(var(--u)*2)}
+.nw .aw svg{width:calc(var(--u)*7)}
+.nw .aw h3{font-size:calc(var(--u)*3.4)}
+.nw .aw p{font-size:calc(var(--u)*1.4)}
+.nw .td{padding:calc(var(--u)*.8) calc(var(--u)*1.5)}
+.nw .ti{font-size:calc(var(--u)*1.4)}
+.nw .my h3{font-size:calc(var(--u)*3.6)}
+.nw .ft{padding:calc(var(--u)*6) 0 calc(var(--u)*7)}
+.nw .ft h2{font-size:calc(var(--u)*6.8)}
+.nw .bk{font-size:calc(var(--u)*1.5)}
+.nw .dd.d2{left:calc(var(--u)*-1)}
+.nw .dd.d1{right:calc(var(--u)*-.4)}
+.nw .dd.d3{right:calc(var(--u)*-.6)}
+}
+@media (max-width:340px){
+.nw .sh h2,.nw .s1 .sh h2,.nw .s4 .sh h2{font-size:calc(var(--u)*3.3)}
+.nw .hero h1{font-size:calc(var(--u)*5.8)}
+.nw .ft h2{font-size:calc(var(--u)*5.6)}
+.nw .aw h3{font-size:calc(var(--u)*2.8)}
+.nw .sn b{font-size:calc(var(--u)*3)}
+}
+</style></head><body>
+<div class="nw">
+
+<header class="hero"><div class="w"><div class="gx">
+<div class="rv">
+<div class="pic"><svg class="il" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M52 148 L142 58 L164 80 L74 170 Z" fill="#FDECC8"/><path d="M52 148 L44 178 L74 170" fill="#F5E0E9"/><path d="M44 178 L50 164 L58 172" fill="#37352F" stroke="none"/><path d="M142 58 L154 46 Q160 42 166 48 L174 56 Q178 62 172 68 L164 80" fill="#FFE2DD"/><path d="M62 138 L84 160" /><path d="M16 192 C 40 184, 70 198, 100 190 S 150 184, 184 192" stroke-width="3"/></svg></div>
+<h1><span>For Your</span><span>Life’s Work.</span></h1>
+<p class="dk"><a href="https://www.linkedin.com/company/notionhq/" target="_blank" rel="noopener">Notion</a>’s first international brand campaign: “For Your Life’s Work.” Our aim was to move beyond traditional testimonials and connect with the human side of what drives people, both at work and in life. The campaign’s real-life stories resonated so much that they inspired user-made spinoffs.</p>
+<dl class="pr">
+<div><dt>Client</dt><dd><span class="pl">Notion</span></dd></div>
+<div><dt>My Role</dt><dd>Associate Creative Director</dd></div>
+<div><dt>Channels</dt><dd><span class="pl c-blue">Out Of Home</span><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div>
+<div><dt>Award</dt><dd><span class="pl c-yellow">Best OOH Campaign</span><span>The Drum Awards For Out Of Home 2022</span></dd></div>
+</dl>
+</div>
+<div class="pw rv" style="--d:.15s">
+<svg class="il dd d1" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><path d="M30 4 C 32 22, 38 28, 56 30 C 38 32, 32 38, 30 56 C 28 38, 22 32, 4 30 C 22 28, 28 22, 30 4 Z" fill="#F1BD3B"/></svg><svg class="il dd d2" viewBox="0 0 140 90" aria-hidden="true" focusable="false"><path d="M6 74 C 30 16, 90 6, 124 40"/><path d="M124 40 L 106 38"/><path d="M124 40 L 120 22"/></svg><svg class="il dd d3" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 4 V 36"/><path d="M4 20 H 36"/><path d="M9 9 L 31 31"/><path d="M31 9 L 9 31"/></svg>
+<div class="pst" style="--g:#EFE8D2">
+<div class="pi">
+<h4>For Your<br>Life’s Work.</h4>
+<div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-p-baker.webp?v=1" alt="" role="img" aria-label="A baker in an apron works at a laptop in the back of a bakery" width="1000" height="562" loading="lazy">
+<div class="cd c1"><b><i style="background:#F2C14E"></i>Recipes</b><p>Melonpan<em>Updated</em></p><p>Yuzu Croissant</p></div>
+<div class="cd c2"><b><i style="background:#E8593F"></i>Workouts</b><p><span class="cbx ckd"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Squats</p><p><span class="cbx ckd"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Lunges</p><p><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Boxing</p></div>
+</div>
+<div class="wm">Notion</div>
+</div>
+</div>
+</div>
+</div></div></header>
+
+<section class="sc s1" id="challenge"><div class="w"><div class="gx">
+<div>
+<div class="sh rv"><span class="lb"><b>01</b>The Challenge</span><h2>Standing Out In A Crowded Tech Landscape</h2><p class="ld">Productivity tools all promise the same thing. Notion needed to feel less like software and more like a tactile, down-to-earth tool that helps people prioritize what is important.</p></div>
+<div class="co rv"><svg class="il" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M100 30 C 66 30, 46 56, 46 84 C 46 106, 60 118, 70 134 L 70 148 L 130 148 L 130 134 C 140 118, 154 106, 154 84 C 154 56, 134 30, 100 30 Z" fill="#FDECC8"/><path d="M76 162 H124"/><path d="M86 176 H114"/><path d="M86 122 L94 98 L104 112 L114 94"/><path d="M28 40 L40 50"/><path d="M172 40 L160 50"/><path d="M12 92 H28"/><path d="M188 92 H172"/><path d="M100 8 V18"/></svg><p>Work and life no longer have a clear line between them. People wanted authentic, value driven ways to organize everything they care about, from the job to the family business. Notion wanted to support something bigger than saving time or doing more.</p></div>
+<dl class="pr rv"><div><dt>Objective</dt><dd>Raise Global Brand Awareness In Key Markets</dd></div><div><dt>Approach</dt><dd><span class="pl c-purple">B2C2B</span><span>Win Business Decision Makers Through Everyday Users</span></dd></div><div><dt>Audience</dt><dd>Self-Motivated Young Professionals</dd></div></dl>
+</div>
+<div class="pn rv" style="--d:.1s"><svg class="il" viewBox="0 0 360 216" aria-hidden="true" focusable="false"><rect x="8" y="8" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M24 33h24M24 44h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="80" y="8" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M96 33h24M96 44h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="152" y="8" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M168 33h24M168 44h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="224" y="8" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M240 33h24M240 44h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="296" y="8" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M312 33h24M312 44h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="8" y="80" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M24 105h24M24 116h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="80" y="80" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M96 105h24M96 116h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="224" y="80" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M240 105h24M240 116h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="296" y="80" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M312 105h24M312 116h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="8" y="152" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M24 177h24M24 188h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="80" y="152" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M96 177h24M96 188h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="152" y="152" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M168 177h24M168 188h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="224" y="152" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M240 177h24M240 188h14" stroke="#CFCDC8" stroke-width="3.5"/><rect x="296" y="152" width="56" height="56" rx="13" fill="#EFEEEC" stroke="#CFCDC8" stroke-width="3"/><path d="M312 177h24M312 188h14" stroke="#CFCDC8" stroke-width="3.5"/><g transform="rotate(-8 180 108)"><rect x="146" y="68" width="68" height="68" rx="15" fill="#FDECC8"/><path d="M180 124 C 158 110, 158 90, 171 90 C 177 90, 180 94, 180 98 C 180 94, 183 90, 189 90 C 202 90, 202 110, 180 124 Z" fill="#F5C7C0"/></g><path d="M150 52 l-8 -12"/><path d="M180 46 V 30"/><path d="M210 52 l8 -12"/></svg></div>
+</div></div></section>
+
+<section class="sc g s2" id="films"><div class="w">
+<div class="sh rv"><span class="lb"><b>02</b>The Films</span><h2>Three Films, Three Real Stories</h2><p class="ld">Instead of traditional testimonials, three emotionally resonant films told stories inspired by real members of the Notion community, asking how people make time and space for what matters most. They ran as online video and paid social.</p></div>
+
+<div class="rv">
+<div class="tabs" role="tablist" aria-label="Films">
+<button class="tb" role="tab" id="t1" aria-selected="true" aria-controls="p1"><svg class="il" viewBox="0 0 200 160" aria-hidden="true" focusable="false"><path d="M22 112 C 16 80, 50 46, 100 44 C 150 46, 184 80, 178 112 C 170 106, 160 106, 152 112 C 138 90, 62 90, 48 112 C 40 106, 30 106, 22 112 Z" fill="#F6D49B"/><path d="M62 104 C 64 80, 78 62, 94 54"/><path d="M138 104 C 136 80, 122 62, 106 54"/><path d="M100 94 V 54"/><path d="M74 30 q 7 -9 0 -18"/><path d="M100 26 q 7 -9 0 -18"/><path d="M126 30 q 7 -9 0 -18"/></svg>Family Business</button>
+<button class="tb" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1"><svg class="il" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="86" cy="86" r="54" fill="#D3E5EF"/><path d="M126 126 L172 172" stroke-width="9"/><path d="M62 70 h46"/><path d="M62 88 h32"/><path d="M62 106 h40"/><path d="M142 36 l8 -8"/><path d="M156 52 l12 -4"/></svg>The Search</button>
+<button class="tb" role="tab" id="t3" aria-selected="false" aria-controls="p3" tabindex="-1"><svg class="il" viewBox="0 0 220 170" aria-hidden="true" focusable="false"><path d="M110 48 C 90 32, 50 32, 18 42 L 18 128 C 50 118, 90 118, 110 134 Z" fill="#fff"/><path d="M110 48 C 130 32, 170 32, 202 42 L 202 128 C 170 118, 130 118, 110 134 Z" fill="#DBEDDB"/><path d="M36 62 C 56 58, 80 60, 94 66"/><path d="M36 80 C 56 76, 80 78, 94 84"/><path d="M36 98 C 52 95, 70 96, 86 100"/><path d="M130 62 C 144 58, 164 58, 184 62"/><path d="M130 80 C 144 76, 164 76, 184 80"/><path d="M152 30 V 66 L 160 58 L 168 66 V 30" fill="#FFE2DD"/></svg>Next Chapter</button>
+</div>
+
+<div class="tp in" role="tabpanel" id="p1" aria-labelledby="t1">
+<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-family.webp?v=1" alt="" role="img" aria-label="Film still: two generations work together in a bakery kitchen beside a Family Recipes page" width="1100" height="557" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-kimura.webp?v=1" alt="" role="img" aria-label="The Kimura Bakery workspace in Notion" width="1300" height="801" loading="lazy"></figure></div></div>
+<div class="tx"><svg class="il ico" viewBox="0 0 200 160" aria-hidden="true" focusable="false"><path d="M22 112 C 16 80, 50 46, 100 44 C 150 46, 184 80, 178 112 C 170 106, 160 106, 152 112 C 138 90, 62 90, 48 112 C 40 106, 30 106, 22 112 Z" fill="#F6D49B"/><path d="M62 104 C 64 80, 78 62, 94 54"/><path d="M138 104 C 136 80, 122 62, 106 54"/><path d="M100 94 V 54"/><path d="M74 30 q 7 -9 0 -18"/><path d="M100 26 q 7 -9 0 -18"/><path d="M126 30 q 7 -9 0 -18"/></svg><h3>Family Business</h3>
+<p class="ld">A grandson helps his grandparents run their bakery, from family recipes to inventory to shift schedules.</p>
+<dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
+
+</div></div>
+
+<div class="tp" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-search2.webp?v=1" alt="" role="img" aria-label="Film still: a woman at a laptop types a message asking a recruiting lead for a Head of Engineering" width="1400" height="788" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-applicants.webp?v=1" alt="" role="img" aria-label="The Applicant Tracker workspace in Notion" width="1300" height="744" loading="lazy"></figure></div></div>
+<div class="tx"><svg class="il ico" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="86" cy="86" r="54" fill="#D3E5EF"/><path d="M126 126 L172 172" stroke-width="9"/><path d="M62 70 h46"/><path d="M62 88 h32"/><path d="M62 106 h40"/><path d="M142 36 l8 -8"/><path d="M156 52 l12 -4"/></svg><h3>The Search</h3>
+<p class="ld">A startup co-founder needs a Head of Engineering fast, and an applicant tracker keeps every candidate in one place.</p>
+<dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
+
+</div></div>
+
+<div class="tp" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+<div class="lc"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-story-next.webp?v=1" alt="" role="img" aria-label="Film still: a man works on a laptop beside a Career Change Ideas page" width="1034" height="534" loading="lazy"></figure><div class="ws"><small>The Workspace</small><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ws-bootcamp.webp?v=1" alt="" role="img" aria-label="The Design Bootcamp workspace in Notion" width="1300" height="768" loading="lazy"></figure></div></div>
+<div class="tx"><svg class="il ico" viewBox="0 0 220 170" aria-hidden="true" focusable="false"><path d="M110 48 C 90 32, 50 32, 18 42 L 18 128 C 50 118, 90 118, 110 134 Z" fill="#fff"/><path d="M110 48 C 130 32, 170 32, 202 42 L 202 128 C 170 118, 130 118, 110 134 Z" fill="#DBEDDB"/><path d="M36 62 C 56 58, 80 60, 94 66"/><path d="M36 80 C 56 76, 80 78, 94 84"/><path d="M36 98 C 52 95, 70 96, 86 100"/><path d="M130 62 C 144 58, 164 58, 184 62"/><path d="M130 80 C 144 76, 164 76, 184 80"/><path d="M152 30 V 66 L 160 58 L 168 66 V 30" fill="#FFE2DD"/></svg><h3>Next Chapter</h3>
+<p class="ld">Career change ideas, a design bootcamp and a week by week plan for starting something new.</p>
+<dl class="pr"><div><dt>Format</dt><dd><span class="pl c-green">Film</span></dd></div><div><dt>Distribution</dt><dd><span class="pl c-green">Online Video</span><span class="pl c-orange">Paid Social</span></dd></div><div><dt>Inspired By</dt><dd>A Real User Story</dd></div></dl>
+
+</div></div>
+</div>
+<div class="sub rv"><h3>Cut For Social</h3><p>Each story was reframed for vertical paid social, with the Notion interface floating between two moments of the film.</p></div>
+<div class="two rv"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-social-a.webp?v=1" alt="" role="img" aria-label="A vertical social cut: a woman at a laptop on the left, a Notion home picker in the center and a close up of her working on the right" width="1500" height="844" loading="lazy"></figure><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-social-b.webp?v=1" alt="" role="img" aria-label="A vertical social cut: a woman on a couch with a laptop on the left, a Notion home picker in the center and a notebook close up on the right" width="1500" height="844" loading="lazy"></figure></div>
+</div></section>
+
+<section class="sc s3" id="ooh"><div class="w">
+<div class="sh rv"><span class="lb"><b>03</b>Out Of Home</span><h2>The Idea, Out In The World</h2><p class="ld">Conceptual out of home took over eight cities, backed by experiential pop-ups in New York, San Francisco, London and Tokyo.</p>
+<div class="pls mk"><span class="pl c-blue">San Francisco</span><span class="pl c-green">New York</span><span class="pl c-pink">Toronto</span><span class="pl c-orange">London</span><span class="pl c-purple">Dublin</span><span class="pl c-yellow">Paris</span><span class="pl c-red">Tokyo</span><span class="pl c-brown">Seoul</span></div>
+<div class="pls mk" style="margin-top:calc(var(--u)*.6)"><span class="pl">Subway Station Takeovers</span><span class="pl">Hand Painted Murals</span><span class="pl">Wild Postings</span><span class="pl">Metro Takeovers</span><span class="pl">LED Screens</span><span class="pl">Highway Bulletins</span></div></div>
+
+<div class="gl">
+<article class="gc x2 rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-corner.webp?v=1" alt="" role="img" aria-label="A curved corner building wrapped in For Your Life’s Work posters at dusk" width="1200" height="799" loading="lazy"></div><h3>Corner Building Wrap</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
+<article class="gc rv" style="--d:.06s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-tower.webp?v=1" alt="" role="img" aria-label="A lit street panel reading For Work In Between Workouts under an iron stairway" width="750" height="936" loading="lazy"></div><h3>Illuminated Street Panel</h3><div class="pls"><span class="pl c-green">Street</span></div></article>
+<article class="gc rv" style="--d:.12s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-paris.webp?v=1" alt="" role="img" aria-label="A French language street panel reading Pour l’oeuvre de votre vie" width="750" height="1111" loading="lazy"></div><h3>Paris Street Panel</h3><div class="pls"><span class="pl c-green">Street</span></div></article>
+<article class="gc rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-billboard.webp?v=1" alt="" role="img" aria-label="A pink billboard reading For Your Life’s Work above a city street" width="750" height="936" loading="lazy"></div><h3>Rooftop Billboard</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
+<article class="gc rv" style="--d:.06s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-subway.webp?v=1" alt="" role="img" aria-label="A poster inside a subway car reading For Your Life’s Work" width="1100" height="742" loading="lazy"></div><h3>Subway Car Panel</h3><div class="pls"><span class="pl c-blue">Transit</span></div></article>
+<article class="gc rv" style="--d:.12s"><div class="cv bn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-banner.webp?v=1" alt="" role="img" aria-label="A cream banner hung from a building reading For Your Life’s Work" width="1100" height="618" loading="lazy"></div><h3>Hanging Wall Banner</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
+<article class="gc rv" style="--d:.18s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-wall.webp?v=1" alt="" role="img" aria-label="A tall white mural wall in a covered arcade reading For Your Life’s Work" width="1000" height="666" loading="lazy"></div><h3>Mural Wallscape</h3><div class="pls"><span class="pl c-orange">Large Format</span></div></article>
+<article class="gc x2 rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-shelters.webp?v=1" alt="" role="img" aria-label="Two bus shelters carrying For Your Life’s Work posters" width="1500" height="666" loading="lazy"></div><h3>Bus Shelters</h3><div class="pls"><span class="pl c-blue">Transit</span></div></article>
+<article class="gc x2 tx2 rv" style="--d:.08s"><div class="cv"><p>For Your Life’s Work.</p><p>For Work In Between Workouts.</p><p>Pour L’oeuvre De Votre Vie.</p></div><h3>Headlines, Localized</h3><div class="pls"><span class="pl c-yellow">Copy</span></div></article>
+<article class="gc x4 rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ooh-nextchapter.webp?v=1" alt="" role="img" aria-label="A wide layout reading For Life’s Next Chapter with floating Notion blocks around a photo" width="2000" height="476" loading="lazy"></div><h3>For Life’s Next Chapter</h3><div class="pls"><span class="pl c-yellow">Layout</span></div></article>
+</div>
+</div></section>
+
+<section class="sc g s4" id="system"><div class="w">
+<div class="gx">
+<div class="sh rv" style="margin-bottom:0"><span class="lb"><b>04</b>The Design System</span><h2>One System, Endless Stories</h2><p class="ld">Every execution pairs a human moment with the Notion pages behind it: a photo, a headline and floating blocks pulled from real user templates. A scalable design system and a library of templates let the idea travel to any city and any story.</p></div>
+<div class="rv" style="--d:.1s"><svg class="il" viewBox="0 0 260 220" aria-hidden="true" focusable="false"><g transform="rotate(-6 100 50)"><rect x="24" y="14" width="150" height="74" rx="12" fill="#fff"/><rect x="42" y="32" width="18" height="18" rx="4" fill="#2383E2" stroke="#2383E2"/><path d="M46 41 l5 5 l8 -10" stroke="#fff" stroke-width="3"/><path d="M74 41 h72"/><rect x="42" y="60" width="18" height="18" rx="4"/><path d="M74 69 h52"/></g><g transform="rotate(5 150 110)"><rect x="76" y="76" width="160" height="76" rx="12" fill="#D3E5EF"/><path d="M98 100 h86"/><path d="M98 120 h110"/><path d="M98 138 h60" stroke-width="3"/></g><g transform="rotate(-3 90 180)"><rect x="30" y="140" width="140" height="62" rx="12" fill="#FDECC8"/><circle cx="54" cy="171" r="9" fill="#fff"/><path d="M76 171 h70"/></g><path d="M222 24 l8 -8 M236 40 l12 -3" stroke-width="3.5"/></svg></div>
+</div>
+<div class="sub first rv"><h3>Three Stories, Three Homes</h3><p>Every story opens with a person’s home and the team workspace they run, moving between personal plans and team plans.</p></div>
+<div class="hm">
+<article class="tc rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-home-camilla.gif?v=1" alt="" role="img" aria-label="The Notion home picker showing Camilla’s Home and Startup OS" width="800" height="415" loading="lazy"></div><div class="bd"><h3>Camilla’s Home And Startup OS</h3><div class="pls"><span class="pl c-blue">Personal Plan</span><span class="pl c-green">Team Plan</span></div></div></article>
+<article class="tc rv" style="--d:.06s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-home-erik.gif?v=1" alt="" role="img" aria-label="The Notion home picker showing Family Hub and Erik’s Home" width="800" height="415" loading="lazy"></div><div class="bd"><h3>Erik’s Home And Family Hub</h3><div class="pls"><span class="pl c-blue">Personal Plan</span><span class="pl c-green">Team Plan</span></div></div></article>
+<article class="tc rv" style="--d:.12s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-home-botan.gif?v=1" alt="" role="img" aria-label="The Notion home picker showing Botan’s Home and Kimura Bakery" width="800" height="415" loading="lazy"></div><div class="bd"><h3>Botan’s Home And Kimura Bakery</h3><div class="pls"><span class="pl c-blue">Personal Plan</span><span class="pl c-green">Team Plan</span></div></div></article>
+</div>
+<div class="sub rv"><h3>Art Direction</h3><p>Photography references set the look of every story: real homes, natural light and people caught in a quiet moment of work.</p></div>
+<div class="ad rv"><figure class="fr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-art-moodboard.webp?v=1" alt="" role="img" aria-label="An art direction board of photography references and sketches" width="1024" height="1436" loading="lazy"></figure>
+<div class="stk"><figure class="fr wide"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-prod-stills.webp?v=1" alt="" role="img" aria-label="Three film stills: a woman at a desk, a man in a study and a father on the floor with his toddler" width="1500" height="931" loading="lazy"></figure></div></div>
+<div class="sub rv"><h3>User Templates</h3><p>Real workspaces, built by real people, became the interface blocks that float across every execution.</p></div>
+<div class="tg">
+<article class="tc rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-familyhub.webp?v=1" alt="" role="img" aria-label="The Family Hub template" width="1100" height="656" loading="lazy"></div><div class="bd"><h3>Family Hub</h3><div class="pls"><span class="pl c-pink">Home</span></div></div></article>
+<article class="tc rv" style="--d:.05s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-startup.webp?v=1" alt="" role="img" aria-label="The Startup OS template" width="1100" height="661" loading="lazy"></div><div class="bd"><h3>Startup OS</h3><div class="pls"><span class="pl c-blue">Work</span></div></div></article>
+<article class="tc rv" style="--d:.1s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-records.webp?v=1" alt="" role="img" aria-label="The Record Store Tracker template" width="1100" height="646" loading="lazy"></div><div class="bd"><h3>Record Store Tracker</h3><div class="pls"><span class="pl c-purple">Hobby</span></div></div></article>
+<article class="tc rv" style="--d:.15s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-bakery.webp?v=1" alt="" role="img" aria-label="The Bakery Inventory template" width="1100" height="687" loading="lazy"></div><div class="bd"><h3>Bakery Inventory</h3><div class="pls"><span class="pl c-orange">Family Business</span></div></div></article>
+<article class="tc rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-mealprep.webp?v=1" alt="" role="img" aria-label="The Meal Prep template" width="1100" height="671" loading="lazy"></div><div class="bd"><h3>Meal Prep</h3><div class="pls"><span class="pl c-green">Home</span></div></div></article>
+<article class="tc rv" style="--d:.05s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-courses.webp?v=1" alt="" role="img" aria-label="The Courses And Study Groups template" width="1100" height="726" loading="lazy"></div><div class="bd"><h3>Courses And Study Groups</h3><div class="pls"><span class="pl c-yellow">School</span></div></div></article>
+<article class="tc rv" style="--d:.1s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-university.webp?v=1" alt="" role="img" aria-label="The University template" width="1100" height="668" loading="lazy"></div><div class="bd"><h3>University</h3><div class="pls"><span class="pl c-yellow">School</span></div></div></article>
+<article class="tc rv" style="--d:.15s"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-t-personal.webp?v=1" alt="" role="img" aria-label="The Personal workspace template" width="1100" height="748" loading="lazy"></div><div class="bd"><h3>Personal</h3><div class="pls"><span class="pl c-gray">Life</span></div></div></article>
+</div>
+</div></section>
+
+<section class="sc s5" id="role"><div class="w">
+<div class="gx"><div class="sh rv" style="margin-bottom:0"><span class="lb"><b>05</b>What I Did</span><h2>From Tagline To Production</h2><p class="ld">As Associate Creative Director, I originated the campaign tagline and conceptual idea, then carried the project through to production.</p></div>
+<div class="rv" style="--d:.1s"><svg class="il big" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M52 148 L142 58 L164 80 L74 170 Z" fill="#FDECC8"/><path d="M52 148 L44 178 L74 170" fill="#F5E0E9"/><path d="M44 178 L50 164 L58 172" fill="#37352F" stroke="none"/><path d="M142 58 L154 46 Q160 42 166 48 L174 56 Q178 62 172 68 L164 80" fill="#FFE2DD"/><path d="M62 138 L84 160" /><path d="M16 192 C 40 184, 70 198, 100 190 S 150 184, 184 192" stroke-width="3"/></svg></div></div>
+<div class="dbt rv" style="margin-top:calc(var(--u)*4.4)">
+<div class="dbr hd"><span>Task</span><span>Status</span><span>Scope</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>The Campaign Tagline</span><span><span class="pl c-yellow">Originated</span></span><span class="sp">For Your Life’s Work</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>The Conceptual Idea</span><span><span class="pl c-yellow">Originated</span></span><span class="sp">The Full Campaign</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>User Archetype Framework</span><span><span class="pl c-blue">Developed</span></span><span class="sp">Video And OOH Assets</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Hero Story Scripts</span><span><span class="pl c-green">Written</span></span><span class="sp">Each Of The Three Films</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Out Of Home Copy</span><span><span class="pl c-green">Written</span></span><span class="sp">OOH</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Social Copy</span><span><span class="pl c-green">Written</span></span><span class="sp">Social</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Long Form Digital Copy</span><span><span class="pl c-green">Written</span></span><span class="sp">Digital</span></div>
+<div class="dbr"><span class="nm"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Production</span><span><span class="pl c-purple">Carried Through</span></span><span class="sp">Films And OOH</span></div>
+</div>
+<div class="sub rv"><h3>Taken Through Production</h3><p>From the first script to the final frame, the three stories were carried onto set and into the edit.</p></div>
+<div class="gl g3">
+<article class="gc rv"><div class="cv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-prod-set.webp?v=1" alt="" role="img" aria-label="A crew films a scene on a sunny patio with a boom microphone and cameras" width="900" height="1067" loading="lazy"></div><h3>On Set</h3><div class="pls"><span class="pl c-purple">Production</span></div></article>
+<article class="gc rv" style="--d:.06s"><div class="cv ph3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-prod-portrait.webp?v=1" alt="" role="img" aria-label="A woman in a mask and overalls sits knitting in a living room" width="900" height="1501" loading="lazy"></div><h3>Behind The Scenes</h3><div class="pls"><span class="pl c-purple">Production</span></div></article>
+<article class="gc rv" style="--d:.12s"><div class="cv top"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-prod-monitors.webp?v=1" alt="" role="img" aria-label="Two monitors on set showing the scene being filmed" width="900" height="1065" loading="lazy"></div><h3>On The Monitors</h3><div class="pls"><span class="pl c-purple">Production</span></div></article>
+</div>
+</div></section>
+
+<section class="sc g s6" id="results"><div class="w">
+<div class="sh rv"><span class="lb"><b>06</b>The Results</span><h2>A Global Creative Breakthrough</h2></div>
+<div class="gx">
+<div class="aw rv"><svg class="il" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M62 32 H138 V86 C 138 112, 120 128, 100 128 C 80 128, 62 112, 62 86 Z" fill="#FDECC8"/><path d="M62 46 H42 C 42 78, 52 88, 66 90"/><path d="M138 46 H158 C 158 78, 148 88, 134 90"/><path d="M100 128 V 152"/><path d="M74 152 H126 V 174 H74 Z" fill="#E3E2E0"/><path d="M100 54 l6 12 l13 2 l-10 9 l3 13 l-12 -7 l-12 7 l3 -13 l-10 -9 l13 -2 Z" fill="#F1BD3B"/><path d="M26 22 l6 6"/><path d="M176 22 l-6 6"/><path d="M100 8 V 18"/></svg><div><small>The Drum Awards For Out Of Home 2022</small><h3>Best OOH Campaign</h3><p>Cementing the campaign as a global creative breakthrough.</p></div></div>
+<div class="td rv" id="td" style="--d:.1s">
+<div class="ti"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span>Sparked a wave of user generated content, with fans around the world creating their own versions and spinoff tributes.</span></div>
+<div class="ti"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span>Turned the campaign into a participatory movement.</span></div>
+<div class="ti"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span>Differentiated Notion from category competitors and helped it transcend its productivity app positioning to become a cultural staple.</span></div>
+<div class="ti"><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span>Paired viral UGC with striking visuals and cross platform resonance, contributing to mass mainstream adoption and long term brand equity.</span></div>
+</div>
+</div>
+
+<div class="st rv">
+<div class="sn"><b data-count="1.5" data-dec="1" data-suf="B+">1.5B+</b><span>Global Impressions</span></div>
+<div class="sn"><b data-count="8">8</b><span>City Billboard Takeovers</span></div>
+<div class="sn"><b data-count="4">4</b><span>Experiential Pop-Ups</span></div>
+<div class="sn"><b data-count="3">3</b><span>Hero Films From Real Stories</span></div>
+</div>
+<p class="srcl rv">Source: <a href="https://www.thedrum.com/awards-case-study/how-notion-won-big-its-first-international-brand-campaign" target="_blank" rel="noopener">The Drum Awards For Out Of Home 2022</a></p>
+
+<div class="sub rv"><h3>User-Made Spinoffs</h3><p>Fans around the world made their own versions of the campaign, and shared them back.</p></div>
+<figure class="fr wide rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-ugc-spinoffs.webp?v=1" alt="" role="img" aria-label="A yellow board of social posts from fans sharing their own versions and spinoffs of For Your Life’s Work" width="1700" height="898" loading="lazy"></figure>
+
+<div class="my" id="mk">
+<div class="rv"><span class="lb"><b>Try It</b>Fans Made Their Own</span>
+<h3 style="margin-top:calc(var(--u)*1.6)">Make Your Own</h3>
+<p class="ld">Fans around the world made their own versions of the campaign. Edit the headline, change the ground and swap the photo to make yours.</p>
+<dl class="opt">
+<div><dt>Headline</dt><dd>Click The Poster To Type</dd></div>
+<div><dt>Ground</dt><dd><button class="sw" data-g="#EFE8D2" style="--c:#EFE8D2" aria-pressed="true" aria-label="Cream"></button><button class="sw" data-g="#EBD3D3" style="--c:#EBD3D3" aria-pressed="false" aria-label="Pink"></button><button class="sw" data-g="#D5E4E8" style="--c:#D5E4E8" aria-pressed="false" aria-label="Sky"></button><button class="sw" data-g="#FFFFFF" style="--c:#FFFFFF" aria-pressed="false" aria-label="White"></button></dd></div>
+<div><dt>Photo</dt><dd><button class="th" data-i="nw-p-baker" aria-pressed="true" aria-label="Bakery photo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-p-baker.webp?v=1" alt="" aria-hidden="true" width="1000" height="562" loading="lazy"></button><button class="th" data-i="nw-p-student" aria-pressed="false" aria-label="Study photo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-p-student.webp?v=1" alt="" aria-hidden="true" width="1000" height="562" loading="lazy"></button><button class="th" data-i="nw-p-father" aria-pressed="false" aria-label="Home photo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-p-father.webp?v=1" alt="" aria-hidden="true" width="1000" height="562" loading="lazy"></button></dd></div>
+</dl>
+</div>
+<div class="pw rv" style="--d:.12s">
+<div class="pst" id="mkp" style="--g:#EFE8D2">
+<div class="pi">
+<h4 id="mkh" contenteditable="true" spellcheck="false" role="textbox" aria-label="Poster headline">For Your<br>Life’s Work.</h4>
+<div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nw-p-baker.webp?v=1" alt="" role="img" aria-label="A baker in an apron works at a laptop in the back of a bakery" width="1000" height="562" loading="lazy">
+<div class="cd c1"><b><i style="background:#F2C14E"></i>Recipes</b><p>Melonpan<em>Updated</em></p><p>Yuzu Croissant</p></div>
+<div class="cd c2"><b><i style="background:#E8593F"></i>Workouts</b><p><span class="cbx ckd"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Squats</p><p><span class="cbx ckd"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Lunges</p><p><span class="cbx"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Boxing</p></div>
+</div>
+<div class="wm">Notion</div>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<footer class="ft"><div class="w"><h2 class="rv">For Your<span class="l2">Life’s Work.</span></h2>
+<div class="bkr"><a class="bk" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a></div></div></footer>
+
+</div>
+<script>
+(function(){
+  var root=document.querySelector('.nw');if(!root)return;
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var od=host.ownerDocument,de=od.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var ok=function(){var r=host.getBoundingClientRect();return Math.abs(r.left+(window.pageXOffset||0))<=.5&&Math.abs(r.width-de.clientWidth)<=.5};
+    var fit=function(){
+      if(ok())return;
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      var r2=host.getBoundingClientRect(),e=r2.left+(window.pageXOffset||0);
+      if(Math.abs(e)>.5){set('margin-left',(-l-e)+'px')}
+      set('background','none');
+    };
+    var later=function(){clearTimeout(tm);tm=setTimeout(fit,120)};
+    fit();
+    window.addEventListener('resize',later);
+    if(window.ResizeObserver){var ro=new ResizeObserver(later);ro.observe(de);if(host.parentElement)ro.observe(host.parentElement)}
+    var n=0,iv=setInterval(function(){fit();if(++n>16)clearInterval(iv)},500);
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+    window.addEventListener('load',fit);
+    setTimeout(fit,700);
+  }
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var odoc=root.ownerDocument;
+
+
+  /* count up numbers */
+  var nums=[].slice.call(root.querySelectorAll('[data-count]'));
+  var fmt=function(el,v){
+    var d=+el.getAttribute('data-dec')||0,pre=el.getAttribute('data-pre')||'',suf=el.getAttribute('data-suf')||'';
+    el.textContent=pre+v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})+suf;
+  };
+  var finals=nums.map(function(el){return +el.getAttribute('data-count')});
+  var finish=function(el,i){el._done=1;fmt(el,finals[i])};
+  var run=function(el,i){
+    if(el._done||el._run)return;el._run=1;
+    if(rm||!window.requestAnimationFrame){finish(el,i);return}
+    var t0=null,dur=1400,to=finals[i];
+    var step=function(t){
+      if(t0===null)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);
+      fmt(el,to*e);
+      if(p<1)requestAnimationFrame(step);else finish(el,i);
+    };
+    requestAnimationFrame(step);
+  };
+  if(!rm&&'IntersectionObserver' in window){nums.forEach(function(el){fmt(el,0)})}
+
+  /* to do list ticks itself */
+  var td=root.querySelector('#td'),items=td?[].slice.call(td.querySelectorAll('.ti')):[],ticked=0;
+  var tick=function(){
+    if(ticked)return;ticked=1;
+    items.forEach(function(it,i){
+      if(rm){it.classList.add('ck');return}
+      setTimeout(function(){it.classList.add('ck')},500+i*650);
+    });
+  };
+
+  /* reveal */
+  var rv=[].slice.call(root.querySelectorAll('.rv'));
+  var show=function(e){e.classList.add('on');if(e===td)tick();[].slice.call(e.querySelectorAll('[data-count]')).forEach(function(el){run(el,nums.indexOf(el))})};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.15});
+    rv.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){rv.forEach(function(e){e.classList.add('on')});tick();nums.forEach(function(el,i){finish(el,i)})},6500);
+
+  /* film tabs */
+  var tabs=[].slice.call(root.querySelectorAll('.tb'));
+  var pick=function(t,focus){
+    tabs.forEach(function(b){
+      var on=b===t;
+      b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;
+      var p=root.querySelector('#'+b.getAttribute('aria-controls'));
+      if(on){p.hidden=false;p.classList.remove('in');void p.offsetWidth;p.classList.add('in')}else{p.hidden=true;p.classList.remove('in')}
+    });
+    if(focus)t.focus();
+  };
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){pick(b)});
+    b.addEventListener('keydown',function(e){
+      var k=e.key,j=-1;
+      if(k==='ArrowRight')j=(i+1)%tabs.length;else if(k==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;else if(k==='Home')j=0;else if(k==='End')j=tabs.length-1;
+      if(j>-1){e.preventDefault();pick(tabs[j],true)}
+    });
+  });
+
+  /* make your own poster */
+  var mk=root.querySelector('#mkp'),mh=root.querySelector('#mkh');
+  if(mk&&mh){
+    var DEF="For Your Life’s Work.";
+    var img=mk.querySelector('.ph img');
+    var base=img.getAttribute('src').replace(/[^\/]+$/,'');
+    var q=img.getAttribute('src').split('?')[1];
+    var sw=[].slice.call(root.querySelectorAll('#mk .sw')),th=[].slice.call(root.querySelectorAll('#mk .th'));
+    sw.forEach(function(b){b.addEventListener('click',function(){
+      mk.style.setProperty('--g',b.getAttribute('data-g'));
+      sw.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});
+    })});
+    var labels={'nw-p-baker':'A baker in an apron works at a laptop in the back of a bakery','nw-p-student':'A student rests her head on a table beside books and a laptop','nw-p-father':'A man with glasses rests his head on his hand beside a laptop'};
+    th.forEach(function(b){b.addEventListener('click',function(){
+      var n=b.getAttribute('data-i');
+      img.src=base+n+'.webp'+(q?'?'+q:'');img.setAttribute('aria-label',labels[n]||'');
+      th.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});
+    })});
+    mh.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();mh.blur()}});
+    mh.addEventListener('paste',function(e){
+      e.preventDefault();
+      var t=(e.clipboardData||window.clipboardData).getData('text').replace(/\s+/g,' ');
+      if(odoc.execCommand)odoc.execCommand('insertText',false,t);
+    });
+    mh.addEventListener('input',function(){
+      var t=mh.textContent;
+      if(t.length>44){mh.textContent=t.slice(0,44);var s=window.getSelection&&window.getSelection();
+        try{var r=odoc.createRange();r.selectNodeContents(mh);r.collapse(false);s.removeAllRanges();s.addRange(r)}catch(x){}}
+    });
+    mh.addEventListener('blur',function(){if(!mh.textContent.trim())mh.innerHTML='For Your<br>Life’s Work.'});
+  }
+})();
+</script>
+</body></html>
