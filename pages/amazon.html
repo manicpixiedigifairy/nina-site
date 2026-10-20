@@ -62,9 +62,10 @@ html,body{margin:0}
 .am .a-fl .flp{margin-top:auto;padding-top:calc(var(--u)*1);font:600 calc(var(--u)*1.6)/1 var(--hand)}
 .am .a-fl:hover .in{transform:rotateY(8deg)}.am .a-fl[aria-pressed=true]:hover .in{transform:rotateY(172deg)}
 /* BOARD DEVICE */
-.am .a-dev{position:relative;margin:0 var(--g) var(--sp);padding:calc(var(--u)*1.6);border-radius:calc(var(--u)*3.4);background:#151515;box-shadow:0 calc(var(--u)*2) calc(var(--u)*5) rgba(21,21,21,.22),inset 0 0 0 2px #2c2c2c}
+.am .a-dvw{background:#fff;padding:calc(var(--u)*3.5) var(--g) var(--sp)}
+.am .a-dev{position:relative;margin:0 auto;max-width:min(100%,calc(var(--u)*68));padding:calc(var(--u)*1.6);border-radius:calc(var(--u)*3.4);background:#151515;box-shadow:0 calc(var(--u)*2) calc(var(--u)*5) rgba(21,21,21,.22),inset 0 0 0 2px #2c2c2c}
 .am .a-dev .cam{position:absolute;top:calc(var(--u)*.55);left:50%;width:calc(var(--u)*.55);height:calc(var(--u)*.55);margin-left:calc(var(--u)*-.27);border-radius:50%;background:#3a3a3a}
-.am .a-gate{position:relative;max-height:calc(var(--u)*56);overflow:hidden;border-radius:calc(var(--u)*2);background:#fff;transition:max-height .9s ease}
+.am .a-gate{position:relative;max-height:calc(var(--u)*44);overflow:hidden;border-radius:calc(var(--u)*2);background:#fff;transition:max-height .9s ease}
 .am .a-gate.op{max-height:none}
 .am .a-gate .sh{position:absolute;left:0;right:0;bottom:0;height:35%;background:linear-gradient(rgba(255,255,255,0),#fff);z-index:15;pointer-events:none}
 .am .a-gate .hit{position:absolute;inset:0;z-index:16;cursor:zoom-in}
@@ -178,6 +179,24 @@ html,body{margin:0}
 .am .a-bw .a-hd{margin-bottom:0}
 .am .pb{min-height:0}
 
+.am .a-dev .pb .grid{column-count:4;column-gap:12px;padding:0 18px 28px}
+.am .a-dev .pb .prof{padding-top:22px}
+.am .a-dev .pb .av{width:clamp(72px,8vw,110px)}
+.am .a-dev .pb h1{font-size:clamp(24px,2.6vw,36px);margin-top:12px}
+.am .a-dev .pb .st{font-size:clamp(13px,1.1vw,16px);margin-top:8px}
+.am .a-dev .pb .tabs{padding:16px 18px 14px}
+.am .a-dev .pb .tab{height:34px;padding:0 13px;font-size:13px}
+.am .a-dev .pb figcaption b{font-size:12.5px}
+.am .a-dev .pb .mt{font-size:11px}
+/* KEY METRICS */
+.am .a-km{background:var(--ink);color:var(--pp)}
+.am .a-km .a-sub{color:#cfc8bb}
+.am .a-kg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}
+.am .a-kc{padding:calc(var(--u)*2.4) calc(var(--u)*2.2);border-radius:calc(var(--u)*1.4);background:#222;box-shadow:inset 0 0 0 1px #333}
+.am .a-kc b{display:block;font:900 calc(var(--u)*5.6)/.95 var(--disp);letter-spacing:-.04em;color:var(--bu);padding-bottom:.08em}
+.am .a-kc span{display:block;margin-top:calc(var(--u)*1);font:500 calc(var(--u)*1.3)/1.4 var(--disp);max-width:20em}
+.am .a-kc.big{background:var(--or);box-shadow:none;color:var(--ink)}
+.am .a-kc.big b{color:var(--ink)}
 /* OUTRO */
 .am .a-out{background:var(--or);color:var(--ink);text-align:center;padding:calc(var(--sp)*1.1) var(--g)}
 .am .a-out p{margin:0 auto;max-width:14em;font:900 calc(var(--u)*7.6)/.9 var(--disp);letter-spacing:-.05em}
@@ -196,6 +215,8 @@ html,body{margin:0}
 .am .a-tc{grid-template-columns:1fr}
 .am .a-tc .a-tt{flex-direction:row;flex-wrap:wrap}
 .am .a-vg{grid-template-columns:1fr}
+.am .a-kg{grid-template-columns:repeat(2,minmax(0,1fr))}
+.am .a-dev .pb .grid{column-count:3}
 .am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4);max-width:34rem}
 .am .a-vc .pins{grid-template-columns:repeat(3,minmax(0,1fr));max-width:70%}
 .am .a-fg{grid-template-columns:1fr}
@@ -210,10 +231,13 @@ html,body{margin:0}
 .am .a-st{grid-template-columns:1fr;gap:calc(var(--u)*3)}
 .am .a-fl{min-height:calc(var(--u)*36)}
 .am .a-fl .bt{font-size:calc(var(--u)*1.45)}
-.am .a-gate{max-height:calc(var(--u)*110)}
+.am .a-gate{max-height:calc(var(--u)*100)}
+.am .a-dev .pb .grid{column-count:2;column-gap:8px;padding:0 10px 20px}
 .am .a-dev{padding:calc(var(--u)*1.8);border-radius:calc(var(--u)*5)}
 .am .a-sx b{font-size:calc(var(--u)*8)}
 .am .a-gz{grid-template-columns:1fr}
+.am .a-kg{grid-template-columns:1fr}
+.am .a-kc b{font-size:calc(var(--u)*7.4)}
 .am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4)}
 .am .a-vc .pins{max-width:none}
 .am .a-fx .ob{grid-template-columns:1fr}
@@ -444,7 +468,7 @@ html,body{margin:0}
     <p class="a-sub a-rv" style="--d:.14s">Trend reports, gift guides and shoppable edits for Pinterest. Tap the screen to expand the board, then filter by channel or open a pin.</p>
   </div>
 </section>
-<div class="a-dev a-rv"><div class="cam" aria-hidden="true"></div><div class="a-gate">
+<div class="a-dvw"><div class="a-dev a-rv"><div class="cam" aria-hidden="true"></div><div class="a-gate">
 <div class="pb">
 <header class="prof">
 <img class="av" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" role="img" aria-label="Amazon profile picture">
@@ -499,7 +523,25 @@ html,body{margin:0}
 </div>
 <div class="lb" role="dialog" aria-modal="true" aria-label="Pin"><div class="lbc"><img class="lbi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt=""><div class="lbt"><small class="lbk"></small><strong class="lbh"></strong><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true"><span class="lbn"></span></span></div><button class="x" type="button" aria-label="Close">&times;</button><button class="nv p" type="button" aria-label="Previous pin">&lsaquo;</button><button class="nv n" type="button" aria-label="Next pin">&rsaquo;</button></div></div>
 </div>
-<div class="sh" aria-hidden="true"></div><div class="hit" aria-hidden="true"></div></div><button class="a-open" type="button" aria-expanded="false" aria-label="Expand the full board"><svg class="ex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg class="co" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10h-6V4M14 10l7-7M4 14h6v6M10 14l-7 7"/></svg></button></div>
+<div class="sh" aria-hidden="true"></div><div class="hit" aria-hidden="true"></div></div><button class="a-open" type="button" aria-expanded="false" aria-label="Expand the full board"><svg class="ex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg class="co" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10h-6V4M14 10l7-7M4 14h6v6M10 14l-7 7"/></svg></button></div></div>
+
+<section class="a-sc a-km" aria-labelledby="h-km">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">08: Key Metrics</p>
+      <h2 class="a-h2 a-rv" id="h-km" style="--d:.08s">Growth Across <em>The Feed.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Amazon social over twelve months, measured across Instagram, TikTok, Facebook, YouTube and X.</p>
+  </div>
+  <div class="a-kg">
+    <div class="a-kc a-rv big"><b>+1.1M</b><span>New followers in a year, up 2.58%</span></div>
+    <div class="a-kc a-rv" style="--d:.06s"><b>43.6M</b><span>Followers across five platforms</span></div>
+    <div class="a-kc a-rv" style="--d:.12s"><b>4.4x</b><span>Walmart&rsquo;s follower growth rate, with a similar audience size</span></div>
+    <div class="a-kc a-rv" style="--d:.18s"><b>1.77K</b><span>Posts in a year, led by Instagram and TikTok</span></div>
+    <div class="a-kc a-rv" style="--d:.24s"><b>9.4</b><span>Instagram posts a week, against a 5.56 retail median</span></div>
+    <div class="a-kc a-rv" style="--d:.3s"><b>1.98%</b><span>Engagement on a reposted creator TikTok, against a 1.28% retail median</span></div>
+  </div>
+</section>
 
 <section class="a-out" aria-label="Outro">
   <p class="a-rv">Everything You Love, <em>Curated.</em></p>
