@@ -134,7 +134,7 @@ html,body{margin:0}
 /* VOICES */
 .am .a-vo{background:#fff}
 .am .a-vg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.4)}
-.am .a-vc{position:relative;padding:calc(var(--u)*2.4) calc(var(--u)*2.2) calc(var(--u)*2.6);border-radius:calc(var(--u)*1.6);background:var(--c)}
+.am .a-vc{position:relative;display:flex;flex-direction:column;padding:calc(var(--u)*2.4) calc(var(--u)*2.2) calc(var(--u)*2.2);border-radius:calc(var(--u)*1.6);background:var(--c)}
 .am .a-vc .top{display:flex;align-items:center;gap:calc(var(--u)*1)}
 .am .a-vc .av{width:calc(var(--u)*4.6);height:calc(var(--u)*4.6);border-radius:50%;display:grid;place-items:center;background:var(--b);color:var(--f);font:800 calc(var(--u)*1.05)/1 var(--disp);letter-spacing:-.02em;box-shadow:0 0 0 2px #fff,0 0 0 4px #E1306C;flex:none}
 .am .a-vc .who b{display:block;font:800 calc(var(--u)*1.5)/1.1 var(--disp)}
@@ -144,7 +144,7 @@ html,body{margin:0}
 .am .a-vc .nums{display:flex;gap:calc(var(--u)*2);margin-top:calc(var(--u)*1.6)}
 .am .a-vc .nums b{display:block;font:900 calc(var(--u)*2.6)/1 var(--disp);letter-spacing:-.03em}
 .am .a-vc .nums span{display:block;font:600 calc(var(--u)*.9)/1.2 var(--disp);text-transform:uppercase;letter-spacing:.1em}
-.am .a-vc .pins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2)}
+.am .a-vc .pins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.8);margin-top:auto;padding-top:calc(var(--u)*2)}
 .am .a-vc .pins img{border-radius:calc(var(--u)*.6);box-shadow:0 0 0 calc(var(--u)*.3) #fff;transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
 .am .a-vc .pins img:hover{transform:translateY(-6%) rotate(-3deg)}
 .am .a-vc .a-note{position:absolute;right:calc(var(--u)*1.6);top:calc(var(--u)*-1.6);rotate:5deg;background:#fff;padding:.15em .5em .25em;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
@@ -372,7 +372,7 @@ html,body{margin:0}
       <p class="a-lb a-rv">04: Reactive</p>
       <h2 class="a-h2 a-rv" id="h-re" style="--d:.08s">Reacting At The <em>Speed Of Culture.</em></h2>
     </div>
-    <p class="a-sub a-rv" style="--d:.14s">A reactive playbook sorted every trend by lifespan, then set how fast to move, what to make and which channel should lead.</p>
+    <p class="a-sub a-rv" style="--d:.14s">A reactive playbook sorted every trend by lifespan, then set how fast to move, what to make, and which channel should lead.</p>
   </div>
   <div class="a-tc">
     <div class="a-rv"><div class="a-tt" role="tablist" aria-label="Trend types">
@@ -386,7 +386,7 @@ html,body{margin:0}
       <h4 class="tn">Flash In The Pan</h4>
       <span class="life tl">24 hours to 1 week</span>
       <p class="td">A moment that spikes fast and fades fast. Speed, humor and a sharp point of view win, so the response is real time.</p>
-      <div class="a-ex te"><span>Opening Day boots</span><span>Morning routines</span><span>Bootcut pants</span></div>
+      <div class="a-ex te"><span>Opening Day Boots</span><span>Morning Routines</span><span>Bootcut Pants</span></div>
     </div>
   </div>
 </section>
@@ -528,7 +528,7 @@ function sh(){cards.forEach(function(c){c.style.animation='none'});order.unshift
 fan.addEventListener('click',sh);fan.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();sh()}})})();
 /* trend tabs */
 (function(){var T=[
-{n:'Flash In The Pan',l:'24 hours to 1 week',w:'12%',d:'A moment that spikes fast and fades fast. Speed, humor and a sharp point of view win, so the response is real time.',e:['Opening Day boots','Morning routines','Bootcut pants']},
+{n:'Flash In The Pan',l:'24 hours to 1 week',w:'12%',d:'A moment that spikes fast and fades fast. Speed, humor and a sharp point of view win, so the response is real time.',e:['Opening Day Boots','Morning Routines','Bootcut Pants']},
 {n:'Short Tail',l:'2 weeks to 3 months',w:'45%',d:'A trend that sticks around long enough to build momentum. It still needs fast creative reflexes, with room to polish and template.',e:['Moo Deng','Demure','Brat Summer','Roman Empire']},
 {n:'Long Tail',l:'4 months to years',w:'92%',d:'A broader cultural shift with staying power. It earns layered storytelling, testing and evolution across business as usual.',e:['Clean Girl Aesthetic','Coastal Grandma','Tomato Girl','Girl Dinner']}];
 var bs=qa('.a-tt button'),bar=q('.a-bar i'),n=q('.tn'),l=q('.tl'),d=q('.td'),ex=q('.te');
