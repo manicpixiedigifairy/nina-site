@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Amazon organic social: strategy and platform growth across Amazon Flagship, Amazon Home and Amazon Fashion and Beauty.">
+<title>Amazon: Shop The Feed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0}
+.am{display:block;position:relative;overflow:hidden;overflow:clip;background:#F5F0E6;color:#151515;--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*5);--sp:calc(var(--u)*8);--pp:#F5F0E6;--ink:#151515;--or:#E8702A;--bl:#F7D6E4;--mi:#D3EEDC;--sk:#D6E4F5;--bu:#FBEFB8;--disp:"Inter Tight","Arial Black",Arial,sans-serif;--ser:"Instrument Serif",Georgia,serif;--hand:Caveat,"Comic Sans MS",cursive;font-family:"Inter Tight",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.am *{box-sizing:border-box}
+.am img{display:block;max-width:100%;height:auto}
+.am button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+.am :focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.am .a-sc{position:relative;padding:var(--sp) var(--g)}
+.am .a-lb{display:flex;align-items:center;gap:.7em;margin:0;font:700 calc(var(--u)*1.05)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase}
+.am .a-lb::before{content:"";width:.8em;height:.8em;border-radius:50%;background:var(--or)}
+.am .a-h2{margin:.35em 0 0;font:800 calc(var(--u)*5.6)/.95 var(--disp);letter-spacing:-.035em}
+.am .a-h2 em{font:400 italic 1.08em/1 var(--ser);letter-spacing:-.01em}
+.am .a-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*3);flex-wrap:wrap;margin-bottom:calc(var(--u)*4)}
+.am .a-sub{margin:0;max-width:30em;font:500 calc(var(--u)*1.45)/1.45 var(--disp);color:#3b3b3b}
+.am .a-note{font:600 calc(var(--u)*1.9)/1.05 var(--hand);color:var(--ink)}
+.am.js .a-rv{opacity:0;translate:0 calc(var(--u)*2.5);rotate:var(--rr,0deg);transition:opacity .5s ease,translate .8s cubic-bezier(.3,1.4,.5,1),rotate .8s cubic-bezier(.3,1.4,.5,1);transition-delay:var(--d,0s)}
+.am.js .a-rv.in{opacity:1;translate:0 0;rotate:var(--r2,0deg)}
+.am .stk{border-radius:calc(var(--u)*.6);box-shadow:0 0 0 calc(var(--u)*.45) #fff,0 calc(var(--u)*1) calc(var(--u)*2.2) rgba(21,21,21,.18)}
+
+/* HERO */
+.am .a-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center;padding:calc(var(--u)*6) var(--g) calc(var(--u)*7);min-height:min(100vh,calc(var(--u)*66))}
+.am .a-ch{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.7);margin:0}
+.am .a-ch span{padding:.55em 1.05em .6em;border-radius:99px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--ink);font:600 calc(var(--u)*1.05)/1 var(--disp)}
+.am .a-ch span:nth-child(1){background:var(--bu)}.am .a-ch span:nth-child(2){background:var(--mi)}.am .a-ch span:nth-child(3){background:var(--bl)}
+.am .a-h1{margin:calc(var(--u)*2.4) 0 0;font:900 calc(var(--u)*11)/.84 var(--disp);letter-spacing:-.05em}
+.am .a-h1 em{display:block;font:400 italic 1.05em/.9 var(--ser);letter-spacing:-.02em;color:var(--or)}
+.am .a-role{display:inline-block;margin:calc(var(--u)*2.6) 0 0;padding:.5em .9em .55em;background:var(--ink);color:var(--pp);font:700 calc(var(--u)*1.1)/1.2 var(--disp);letter-spacing:.08em;text-transform:uppercase;rotate:-1.5deg}
+.am .a-dek{margin:calc(var(--u)*2.2) 0 0;max-width:30em;font:500 calc(var(--u)*1.6)/1.45 var(--disp);color:#2e2e2e}
+.am .a-fan{position:relative;height:calc(var(--u)*50);touch-action:manipulation}
+.am .a-fan .fc{position:absolute;left:50%;top:50%;width:calc(var(--u)*24);margin:calc(var(--u)*-18) 0 0 calc(var(--u)*-12);transform:translate(var(--x),var(--y)) rotate(var(--t));transition:transform .7s cubic-bezier(.3,1.4,.5,1),z-index 0s .25s}
+.am.js .a-fan .fc{animation:fd .9s cubic-bezier(.3,1.35,.5,1) both;animation-delay:calc(var(--i)*.12s + .2s)}
+@keyframes fd{0%{transform:translate(var(--x),calc(var(--y) - 110vh)) rotate(calc(var(--t) - 25deg))}100%{transform:translate(var(--x),var(--y)) rotate(var(--t))}}
+.am .a-fan .fc img{width:100%}
+.am .a-fan .n1{position:absolute;right:0;top:calc(var(--u)*1);rotate:6deg;text-align:right;z-index:30}
+.am .a-fan .n2{position:absolute;left:0;bottom:calc(var(--u)*-3);rotate:-5deg;z-index:30}
+.am .a-fan .n2 svg{display:block;width:calc(var(--u)*5);margin:.2em 0 0 2em}
+
+/* TICKER */
+.am .a-tk{position:relative;z-index:5;background:var(--ink);color:var(--pp);overflow:hidden;white-space:nowrap;padding:calc(var(--u)*1.1) 0;font:700 calc(var(--u)*1.5)/1 var(--disp);letter-spacing:.02em;rotate:-1.2deg;margin:0 calc(var(--u)*-1)}
+.am .a-tk .tr{display:inline-flex;animation:tk 60s linear infinite}
+.am .a-tk .gp{display:inline-flex;flex:none}
+.am .a-tk span{padding:0 .6em}
+.am .a-tk i{font-style:normal;color:var(--or)}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* AUDIENCE */
+.am .a-au{background:#fff}
+.am .a-st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2)}
+.am .a-sx{position:relative;padding:calc(var(--u)*2.2) calc(var(--u)*2) calc(var(--u)*2.4);border-radius:calc(var(--u)*1.4);background:var(--c);rotate:var(--t)}
+.am .a-sx .hdl{display:flex;align-items:center;gap:.5em;font:700 calc(var(--u)*1.15)/1 var(--disp)}
+.am .a-sx .hdl svg{width:1.2em;height:1.2em;flex:none}
+.am .a-sx b{display:block;margin-top:calc(var(--u)*1.6);font:900 calc(var(--u)*5.4)/.9 var(--disp);letter-spacing:-.04em}
+.am .a-sx .lbl{display:block;margin-top:.35em;font:600 calc(var(--u)*1.1)/1.2 var(--disp);text-transform:uppercase;letter-spacing:.1em}
+.am .a-sx .sec{display:block;margin-top:calc(var(--u)*1.6);padding-top:calc(var(--u)*1.1);border-top:1.5px solid rgba(21,21,21,.25);font:600 calc(var(--u)*1.2)/1.3 var(--disp)}
+.am .a-asof{margin:calc(var(--u)*2.4) 0 0;font:500 calc(var(--u)*1)/1.4 var(--disp);color:#6b6b6b}
+
+/* BRIEF */
+.am .a-br{background:var(--ink);color:var(--pp)}
+.am .a-br .a-lb::before{background:var(--or)}
+.am .a-br .a-sub{color:#cfc8bb}
+.am .a-big{margin:0;max-width:16em;font:400 calc(var(--u)*4.6)/1.05 var(--ser)}
+.am .a-big em{color:var(--or)}
+.am .a-gz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2);margin-top:calc(var(--u)*4.5)}
+.am .a-gz div{border-top:2px solid var(--pp);padding-top:calc(var(--u)*1.4)}
+.am .a-gz b{display:block;font:900 calc(var(--u)*6.4)/.9 var(--disp);letter-spacing:-.05em;color:var(--bu)}
+.am .a-gz span{display:block;margin-top:.6em;font:500 calc(var(--u)*1.35)/1.4 var(--disp);max-width:20em}
+.am .a-src{margin:calc(var(--u)*2.4) 0 0;font:500 calc(var(--u)*1)/1.4 var(--disp);color:#9d978c}
+.am .a-gl{margin:calc(var(--u)*5) 0 0;display:flex;align-items:center;gap:calc(var(--u)*2);flex-wrap:wrap}
+.am .a-gl p{margin:0;font:400 italic calc(var(--u)*3.4)/1.1 var(--ser)}
+.am .a-gl .a-note{color:var(--bu);rotate:-4deg}
+
+/* SYSTEM */
+.am .a-sy{background:var(--pp)}
+.am .a-pl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}
+.am .a-pc{position:relative;padding:calc(var(--u)*2.8) calc(var(--u)*2.4) calc(var(--u)*2.6);background:#fff;border-radius:calc(var(--u)*.4);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(21,21,21,.1);rotate:var(--t)}
+.am .a-pc::before{content:"";position:absolute;left:50%;top:calc(var(--u)*-1.1);width:calc(var(--u)*7);height:calc(var(--u)*2.2);margin-left:calc(var(--u)*-3.5);background:rgba(232,112,42,.55);rotate:-3deg}
+.am .a-pc small{display:block;font:700 calc(var(--u)*1)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:#6b6b6b}
+.am .a-pc h3{margin:.3em 0 0;font:400 italic calc(var(--u)*4.4)/1 var(--ser)}
+.am .a-pc p{margin:calc(var(--u)*1.2) 0 0;font:500 calc(var(--u)*1.35)/1.45 var(--disp)}
+.am .a-pc .a-note{display:block;margin-top:calc(var(--u)*1.4);color:var(--or)}
+.am .a-tc{margin-top:calc(var(--u)*6);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:calc(var(--u)*4);align-items:start}
+.am .a-tc h3{margin:0;font:800 calc(var(--u)*3.4)/1 var(--disp);letter-spacing:-.03em}
+.am .a-tc h3 em{font:400 italic 1.1em/1 var(--ser)}
+.am .a-tc .a-sub{margin-top:calc(var(--u)*1.4)}
+.am .a-tt{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.4)}
+.am .a-tt button{padding:.7em 1.2em .75em;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--ink);font:700 calc(var(--u)*1.15)/1 var(--disp);transition:background .2s,color .2s}
+.am .a-tt button[aria-selected=true]{background:var(--ink);color:var(--pp)}
+.am .a-tp{background:#fff;border-radius:calc(var(--u)*1.4);padding:calc(var(--u)*2.6);box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2) rgba(21,21,21,.08)}
+.am .a-bar{position:relative;height:calc(var(--u)*1.2);border-radius:99px;background:#EEE7DA;overflow:hidden}
+.am .a-bar i{position:absolute;inset:0 auto 0 0;width:var(--w,12%);background:var(--or);border-radius:99px;transition:width .7s cubic-bezier(.3,1.2,.5,1)}
+.am .a-ax{display:flex;justify-content:space-between;margin-top:.6em;font:600 calc(var(--u)*.95)/1 var(--disp);color:#6b6b6b;text-transform:uppercase;letter-spacing:.08em}
+.am .a-tp h4{margin:calc(var(--u)*2) 0 0;font:900 calc(var(--u)*3.2)/1 var(--disp);letter-spacing:-.03em}
+.am .a-tp .life{display:inline-block;margin-top:.5em;padding:.35em .7em .4em;background:var(--bu);font:700 calc(var(--u)*1.1)/1 var(--disp)}
+.am .a-tp p{margin:calc(var(--u)*1.2) 0 0;font:500 calc(var(--u)*1.35)/1.45 var(--disp)}
+.am .a-ex{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.6)}
+.am .a-ex span{padding:.45em .8em .5em;border-radius:99px;background:var(--pp);font:600 calc(var(--u)*1.05)/1 var(--disp)}
+
+/* VOICES */
+.am .a-vo{background:#fff}
+.am .a-vg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2.4)}
+.am .a-vc{position:relative;padding:calc(var(--u)*2.4) calc(var(--u)*2.2) calc(var(--u)*2.6);border-radius:calc(var(--u)*1.6);background:var(--c)}
+.am .a-vc .top{display:flex;align-items:center;gap:calc(var(--u)*1)}
+.am .a-vc .av{width:calc(var(--u)*4.6);height:calc(var(--u)*4.6);border-radius:50%;display:grid;place-items:center;background:var(--b);color:var(--f);font:800 calc(var(--u)*1.05)/1 var(--disp);letter-spacing:-.02em;box-shadow:0 0 0 2px #fff,0 0 0 4px #E1306C;flex:none}
+.am .a-vc .who b{display:block;font:800 calc(var(--u)*1.5)/1.1 var(--disp)}
+.am .a-vc .who span{display:block;margin-top:.25em;font:500 calc(var(--u)*1.05)/1.2 var(--disp);color:#4a4a4a}
+.am .a-vc h3{margin:calc(var(--u)*2) 0 0;font:400 italic calc(var(--u)*3)/1.05 var(--ser)}
+.am .a-vc p{margin:calc(var(--u)*1) 0 0;font:500 calc(var(--u)*1.3)/1.45 var(--disp)}
+.am .a-vc .nums{display:flex;gap:calc(var(--u)*2);margin-top:calc(var(--u)*1.6)}
+.am .a-vc .nums b{display:block;font:900 calc(var(--u)*2.6)/1 var(--disp);letter-spacing:-.03em}
+.am .a-vc .nums span{display:block;font:600 calc(var(--u)*.9)/1.2 var(--disp);text-transform:uppercase;letter-spacing:.1em}
+.am .a-vc .pins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2)}
+.am .a-vc .pins img{border-radius:calc(var(--u)*.6);box-shadow:0 0 0 calc(var(--u)*.3) #fff;transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.am .a-vc .pins img:hover{transform:translateY(-6%) rotate(-3deg)}
+.am .a-vc .a-note{position:absolute;right:calc(var(--u)*1.6);top:calc(var(--u)*-1.6);rotate:5deg;background:#fff;padding:.15em .5em .25em;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+/* FEED */
+.am .a-fd{background:var(--bl)}
+.am .a-fg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:center}
+.am .a-car{position:relative;max-width:calc(var(--u)*40);margin:0 auto;width:100%}
+.am .a-ph{background:#fff;border-radius:calc(var(--u)*2.4);padding:calc(var(--u)*1.2) calc(var(--u)*1.2) calc(var(--u)*1.6);box-shadow:0 calc(var(--u)*1.4) calc(var(--u)*3) rgba(21,21,21,.18)}
+.am .a-ph .ig{display:flex;align-items:center;gap:.6em;padding:0 calc(var(--u)*.4) calc(var(--u)*1);font:700 calc(var(--u)*1.1)/1 Inter,var(--disp)}
+.am .a-ph .ig img{width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border-radius:50%}
+.am .a-ph .ig svg{width:1.1em;height:1.1em}
+.am .a-vp{overflow:hidden;border-radius:calc(var(--u)*.6);aspect-ratio:4/5;touch-action:pan-y}
+.am .a-rl{display:flex;height:100%;transition:transform .5s cubic-bezier(.3,1,.4,1)}
+.am .a-rl img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
+.am .a-dots{display:flex;justify-content:center;gap:6px;margin-top:calc(var(--u)*1.1)}
+.am .a-dots button{width:7px;height:7px;border-radius:50%;background:#cfcfcf}
+.am .a-dots button[aria-current=true]{background:#0095F6}
+.am .a-car .ar{position:absolute;top:50%;display:grid;place-items:center;width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18);font:700 calc(var(--u)*1.6)/1 var(--disp)}
+.am .a-car .ar.p{left:calc(var(--u)*-1.6)}.am .a-car .ar.n{right:calc(var(--u)*-1.6)}
+.am .a-ct{display:inline-block;margin-top:calc(var(--u)*.6);padding:.3em .7em;border-radius:99px;background:rgba(21,21,21,.7);color:#fff;font:600 calc(var(--u)*.95)/1 var(--disp);position:absolute;right:calc(var(--u)*2.2);top:calc(var(--u)*5.2)}
+.am .a-fx h3{margin:calc(var(--u)*1.2) 0 0;font:800 calc(var(--u)*3.6)/1 var(--disp);letter-spacing:-.03em}
+.am .a-fx h3 em{font:400 italic 1.1em/1 var(--ser)}
+.am .a-fx p{margin:calc(var(--u)*1.2) 0 0;font:500 calc(var(--u)*1.4)/1.45 var(--disp);max-width:28em}
+.am .a-fx .ob{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:calc(var(--u)*2.4);align-items:center;margin-top:calc(var(--u)*4)}
+.am .a-fx .ob img{rotate:-3deg}
+.am .a-fx .ob .a-note{rotate:-3deg}
+
+/* BOARD WRAP */
+.am .a-bw{background:#fff;padding-bottom:0}
+.am .a-bw .a-hd{margin-bottom:0}
+.am .pb{min-height:0}
+
+/* OUTRO */
+.am .a-out{background:var(--or);color:var(--ink);text-align:center;padding:calc(var(--sp)*1.1) var(--g)}
+.am .a-out p{margin:0 auto;max-width:14em;font:900 calc(var(--u)*7.6)/.9 var(--disp);letter-spacing:-.05em}
+.am .a-out p em{display:block;font:400 italic 1.05em/1 var(--ser);color:#fff}
+.am .a-ft{background:var(--ink);padding:calc(var(--u)*4) var(--g);display:flex;justify-content:flex-start}
+.am .a-bk{display:inline-flex;align-items:center;gap:.6em;padding:.85em 1.6em .9em;border-radius:99px;background:var(--pp);color:var(--ink);font:700 1rem/1 var(--disp);text-decoration:none;transition:transform .15s}
+.am .a-bk:hover{transform:translateY(-2px)}
+
+@media (max-width:1000px){
+.am{--u:2.1vw;--g:1.75rem;--sp:calc(var(--u)*10)}
+.am .a-hero{grid-template-columns:1fr;min-height:0}
+.am .a-fan{height:calc(var(--u)*56)}
+.am .a-fan .fc{width:calc(var(--u)*26);margin:calc(var(--u)*-19) 0 0 calc(var(--u)*-13)}
+.am .a-st{grid-template-columns:repeat(2,minmax(0,1fr))}
+.am .a-tc{grid-template-columns:1fr}
+.am .a-vg{grid-template-columns:1fr}
+.am .a-vc .pins{grid-template-columns:repeat(3,minmax(0,1fr));max-width:70%}
+.am .a-fg{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+.am{--u:3.15vw;--g:1.25rem}
+.am .a-h1{font-size:min(23vw,calc(var(--u)*14))}
+.am .a-h2{font-size:min(12.5vw,calc(var(--u)*7.4))}
+.am .a-fan{height:calc(var(--u)*50);margin-top:calc(var(--u)*6)}
+.am .a-fan .fc{width:calc(var(--u)*16);margin:calc(var(--u)*-12) 0 0 calc(var(--u)*-8)}
+.am .a-big{font-size:calc(var(--u)*3.4)}
+.am .a-st{grid-template-columns:1fr;gap:calc(var(--u)*3)}
+.am .a-sx b{font-size:calc(var(--u)*8)}
+.am .a-gz{grid-template-columns:1fr}
+.am .a-pl{grid-template-columns:1fr;gap:calc(var(--u)*4)}
+.am .a-vc .pins{max-width:none}
+.am .a-fx .ob{grid-template-columns:1fr}
+.am .a-out p{font-size:min(15vw,calc(var(--u)*11))}
+.am .a-car .ar{display:none}
+}
+
+
+.pb{display:block;background:#fff;color:#111;font-family:Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;--g:clamp(16px,2.4vw,40px);--red:#E60023;--chip:#EFEFEF}
+.pb *{box-sizing:border-box}
+.pb button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+.pb :focus-visible{outline:3px solid #0074E8;outline-offset:2px}
+.pb .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px var(--g);background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
+.pb .bk{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;text-decoration:none;color:#111;font-size:22px;flex:none}
+.pb .bk:hover{background:var(--chip)}
+.pb .srch{flex:1;display:flex;align-items:center;gap:10px;height:48px;padding:0 18px;border-radius:24px;background:var(--chip);color:#767676;font-size:16px;min-width:0;white-space:nowrap;overflow:hidden}
+.pb .srch svg{flex:none}
+.pb .prof{padding:32px var(--g) 0;max-width:1100px;margin:0 auto;text-align:center}
+.pb .pr{display:flex;align-items:center;gap:clamp(18px,3vw,40px)}
+.pb .av{display:block;margin:0 auto;width:clamp(96px,12vw,160px);height:auto;aspect-ratio:1;border-radius:50%;flex:none}
+.pb h1{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0 0;font-size:clamp(30px,4vw,52px);font-weight:700;letter-spacing:-.02em}
+.pb .vf{width:.7em;height:.7em;flex:none}
+.pb .hd{display:block;margin-top:4px;color:#5f5f5f;font-size:clamp(15px,1.4vw,20px)}
+.pb .st{margin:16px 0 0;font-size:clamp(15px,1.3vw,19px)}
+.pb .st span{color:#5f5f5f}
+.pb .bio{margin:14px 0 0;font-size:clamp(15px,1.3vw,19px)}
+.pb .ws{display:flex;align-items:center;gap:8px;margin:18px 0 0;font-weight:700;font-size:clamp(15px,1.3vw,19px)}
+.pb .acts{display:flex;gap:10px;margin:22px 0 0}
+.pb .acts span{display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:16px;background:var(--chip);font-weight:600;font-size:17px}
+.pb .acts span.r{background:var(--red);color:#fff}
+.pb .ct{display:flex;justify-content:center;gap:44px;margin:34px 0 0;font-weight:600;font-size:17px}
+.pb .ct span{padding-bottom:8px}
+.pb .ct span.on{box-shadow:inset 0 -3px 0 #111}
+.pb .bt{margin:30px 0 0;text-align:center;font-size:clamp(22px,2.2vw,28px);font-weight:700;letter-spacing:-.01em}
+.pb .bt i{display:block;font-style:normal;font-size:14px;font-weight:500;color:#5f5f5f;margin-top:4px}
+.pb .tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:26px var(--g) 18px}
+.pb .tab{height:40px;padding:0 16px;border-radius:20px;background:var(--chip);font-weight:600;font-size:15px;transition:background .15s,color .15s}
+.pb .tab:hover{background:#e2e2e2}
+.pb .tab[aria-pressed=true]{background:#111;color:#fff}
+.pb .tab i{font-style:normal;opacity:.6;margin-left:6px;font-weight:500}
+.pb .grid{column-count:5;column-gap:16px;padding:0 var(--g) 40px}
+.pb .pin{break-inside:avoid;margin:0 0 20px;display:block}
+.pb .pin[hidden]{display:none}
+.pb .ph{position:relative;display:block;width:100%;border-radius:16px;overflow:hidden;cursor:zoom-in;background:#f1f1f1}
+.pb .ph img{display:block;width:100%;height:auto}
+.pb .ph::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28);opacity:0;transition:opacity .15s}
+.pb .sv{position:absolute;top:12px;right:12px;z-index:2;height:44px;padding:0 16px;display:inline-flex;align-items:center;border-radius:22px;background:var(--red);color:#fff;font-weight:700;font-size:15px;opacity:0;transition:opacity .15s}
+.pb .ph:hover::after,.pb .ph:focus-visible::after,.pb .ph:hover .sv,.pb .ph:focus-visible .sv{opacity:1}
+.pb figcaption{padding:8px 6px 0}
+.pb figcaption b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.pb .mt{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:#5f5f5f}
+.pb .mt img{width:22px;height:22px;border-radius:50%;box-shadow:0 0 0 1px #e5e5e5}
+.pb .lb{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.72)}
+.pb .lb.on{display:flex}
+.pb .lbc{position:relative;display:flex;gap:28px;align-items:stretch;max-width:min(980px,100%);max-height:calc(100vh - 48px);background:#fff;border-radius:32px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.pb .lbc img{display:block;max-height:calc(100vh - 88px);max-width:52vw;width:auto;height:auto;border-radius:18px}
+.pb .lbt{display:flex;flex-direction:column;justify-content:center;gap:10px;min-width:220px;max-width:320px;padding:10px 12px 10px 0}
+.pb .lbt small{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#767676}
+.pb .lbt strong{font-size:28px;line-height:1.1;letter-spacing:-.02em}
+.pb .lbt .mt{font-size:14px;margin-top:4px;justify-content:flex-start;align-self:flex-start}
+.pb .lbt .mt img{width:32px;height:32px}
+.pb .x,.pb .nv{position:absolute;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:22px}
+.pb .x{top:-14px;right:-14px}
+.pb .nv.p{left:-24px;top:50%;translate:0 -50%}
+.pb .nv.n{right:-24px;top:50%;translate:0 -50%}
+@media (max-width:1280px){.pb .grid{column-count:4}}
+@media (max-width:1000px){.pb .grid{column-count:3}}
+@media (max-width:700px){
+.pb .grid{column-count:2;column-gap:10px}
+.pb .pin{margin-bottom:14px}
+.pb .ph{border-radius:14px}
+.pb .sv{display:none}
+.pb .av{width:96px;height:96px}
+.pb .acts span{height:42px;padding:0 16px;font-size:15px}
+.pb .lbc{flex-direction:column;gap:12px;padding:12px;border-radius:24px;max-height:calc(100vh - 32px)}
+.pb .lbc img{max-width:100%;max-height:calc(100vh - 210px);margin:0 auto}
+.pb .lbt{min-width:0;max-width:none;padding:0 6px 6px}
+.pb .lbt strong{font-size:22px}
+.pb .x{top:-10px;right:-6px}
+.pb .nv.p{left:-6px}.pb .nv.n{right:-6px}
+}
+
+</style>
+</head>
+<body>
+<div class="am">
+
+<header class="a-hero">
+  <div>
+    <p class="a-ch a-rv"><span>Amazon Flagship</span><span>Amazon Home</span><span>Amazon Fashion &amp; Beauty</span></p>
+    <h1 class="a-h1 a-rv" style="--d:.08s">Shop The<em>Feed.</em></h1>
+    <span class="a-role a-rv" style="--d:.16s">ACD, Organic Social Strategy &amp; Platform Growth</span>
+    <p class="a-dek a-rv" style="--d:.22s">Organic social strategy and platform growth across three of Amazon&rsquo;s biggest accounts, built on one shared system for pillars, trends and shoppable storytelling.</p>
+  </div>
+  <div class="a-fan" role="button" tabindex="0" aria-label="Shuffle the pin stack">
+    <div class="fc" style="--x:-44%;--y:6%;--t:-11deg;--i:0;z-index:1"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-summer-beauty-essentials.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Summer Beauty Essentials"></div>
+    <div class="fc" style="--x:36%;--y:-4%;--t:9deg;--i:1;z-index:2"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-viral-gifts-for-her.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Viral Gifts for Her"></div>
+    <div class="fc" style="--x:-22%;--y:-2%;--t:-4deg;--i:2;z-index:3"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-beachy-home-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Beachy Home Upgrades"></div>
+    <div class="fc" style="--x:20%;--y:8%;--t:4deg;--i:3;z-index:4"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-euro-summer-outfits.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Euro-Summer Outfits"></div>
+    <div class="fc" style="--x:0%;--y:0%;--t:-1deg;--i:4;z-index:5"><img class="stk" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cool-girl-gift-guide.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Cool Girl Gift Guide"></div>
+    <span class="a-note n1" aria-hidden="true">38 pins, 3 channels,<br>1 voice system</span>
+    <span class="a-note n2" aria-hidden="true">tap to shuffle<svg viewBox="0 0 60 30" fill="none" stroke="#151515" stroke-width="2.4" stroke-linecap="round"><path d="M4 6c14 18 30 20 48 10M44 9l8 7-10 4"/></svg></span>
+  </div>
+</header>
+
+<div class="a-tk" aria-hidden="true"><div class="tr"><div class="gp"><span>Summer Beauty Essentials</span><i>&#10022;</i><span>Apartment Upgrades</span><i>&#10022;</i><span>What&#x27;s in Your Work Bag</span><i>&#10022;</i><span>Beachy Home Upgrades</span><i>&#10022;</i><span>Nymph Summer Glam</span><i>&#10022;</i><span>Euro-Summer Outfits</span><i>&#10022;</i><span>Your DIY Romantasy Library</span><i>&#10022;</i><span>Guava Girl Summer</span><i>&#10022;</i><span>Viral Gifts for Her</span><i>&#10022;</i><span>Vanity Revamp</span><i>&#10022;</i><span>What&#x27;s in My Bag</span><i>&#10022;</i><span>Goal Getter</span><i>&#10022;</i><span>Bouncy Blowouts</span><i>&#10022;</i><span>Cozy Scent Stories</span><i>&#10022;</i><span>For the Host Who Does the Most</span><i>&#10022;</i><span>Moto Boho Aesthetic</span><i>&#10022;</i><span>Corporate Fits</span><i>&#10022;</i><span>Tiny Touch-Ups</span><i>&#10022;</i><span>New England Summer</span><i>&#10022;</i><span>For the Best Dressed Guest</span><i>&#10022;</i></div><div class="gp"><span>Summer Beauty Essentials</span><i>&#10022;</i><span>Apartment Upgrades</span><i>&#10022;</i><span>What&#x27;s in Your Work Bag</span><i>&#10022;</i><span>Beachy Home Upgrades</span><i>&#10022;</i><span>Nymph Summer Glam</span><i>&#10022;</i><span>Euro-Summer Outfits</span><i>&#10022;</i><span>Your DIY Romantasy Library</span><i>&#10022;</i><span>Guava Girl Summer</span><i>&#10022;</i><span>Viral Gifts for Her</span><i>&#10022;</i><span>Vanity Revamp</span><i>&#10022;</i><span>What&#x27;s in My Bag</span><i>&#10022;</i><span>Goal Getter</span><i>&#10022;</i><span>Bouncy Blowouts</span><i>&#10022;</i><span>Cozy Scent Stories</span><i>&#10022;</i><span>For the Host Who Does the Most</span><i>&#10022;</i><span>Moto Boho Aesthetic</span><i>&#10022;</i><span>Corporate Fits</span><i>&#10022;</i><span>Tiny Touch-Ups</span><i>&#10022;</i><span>New England Summer</span><i>&#10022;</i><span>For the Best Dressed Guest</span><i>&#10022;</i></div></div></div>
+
+<section class="a-sc a-au" aria-labelledby="h-au">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">01: The Audience</p>
+      <h2 class="a-h2 a-rv" id="h-au" style="--d:.08s">Millions Of Shoppers, <em>One Scroll.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Three Instagram accounts and the @amazon Pinterest profile, each with its own audience, rhythm and reason to tap.</p>
+  </div>
+  <div class="a-st">
+    <div class="a-sx a-rv" style="--c:var(--bu);--t:-1.5deg"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazon</span><b>6.9M</b><span class="lbl">Followers</span><span class="sec">4,307 posts &middot; Amazon Flagship</span></div>
+    <div class="a-sx a-rv" style="--c:var(--mi);--t:1deg;--d:.08s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonhome</span><b>5.8M</b><span class="lbl">Followers</span><span class="sec">6,346 posts &middot; Amazon Home</span></div>
+    <div class="a-sx a-rv" style="--c:var(--bl);--t:-1deg;--d:.16s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#151515" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#151515" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#151515"/></svg>@amazonfashion</span><b>4.4M</b><span class="lbl">Followers</span><span class="sec">7,291 posts &middot; Amazon Fashion</span></div>
+    <div class="a-sx a-rv" style="--c:var(--sk);--t:1.5deg;--d:.24s"><span class="hdl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#151515"/><path fill="#fff" d="M12.4 5c-4 0-6 2.8-6 5.2 0 1.4.6 2.7 1.7 3.2.2.1.4 0 .4-.2l.2-.7c0-.2 0-.3-.1-.5-.3-.4-.6-1-.6-1.8 0-2.3 1.7-4.3 4.5-4.3 2.4 0 3.8 1.5 3.8 3.5 0 2.6-1.2 4.8-2.9 4.8-.9 0-1.6-.8-1.4-1.7.3-1.1.8-2.4.8-3.2 0-.7-.4-1.3-1.2-1.3-1 0-1.7 1-1.7 2.3 0 .8.3 1.4.3 1.4l-1.1 4.7c-.3 1.4 0 3.1 0 3.3 0 .1.2.1.2 0 .1-.1 1.3-1.6 1.7-3.1l.6-2.4c.3.6 1.2 1.1 2.2 1.1 2.9 0 4.8-2.6 4.8-6.1C18 7.4 15.7 5 12.4 5z"/></svg>@amazon</span><b>2.3M</b><span class="lbl">Followers</span><span class="sec">10M+ monthly views &middot; Pinterest</span></div>
+  </div>
+  <p class="a-asof">Follower and post counts as shown on each profile, October 19, 2026.</p>
+</section>
+
+<section class="a-sc a-br" aria-labelledby="h-br">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">02: The Brief</p>
+      <h2 class="a-h2 a-rv" id="h-br" style="--d:.08s">Meet Them <em>In Their World.</em></h2>
+    </div>
+  </div>
+  <p class="a-big a-rv">Gen Z wants brands to operate in their world, on their terms. The job was to show up in the trends, moments and fandoms that matter <em>with cultural fluency,</em> and know when to stay out.</p>
+  <div class="a-gz">
+    <div class="a-rv"><b>85%</b><span>of Gen Z say it&rsquo;s important for brands to create a sense of community.</span></div>
+    <div class="a-rv" style="--d:.08s"><b>62%</b><span>say brands that align with their interests and fandoms feel like &ldquo;true allies.&rdquo;</span></div>
+    <div class="a-rv" style="--d:.16s"><b>83%</b><span>say they can easily spot when brands are trying too hard to go viral.</span></div>
+  </div>
+  <p class="a-src">Source: The State of Community, Archrival and Tumblr.</p>
+  <div class="a-gl a-rv"><p>From retail giant to cultural authority.</p><span class="a-note">inspiring, relevant + shoppable,<br>at the speed of culture</span></div>
+</section>
+
+<section class="a-sc a-sy" aria-labelledby="h-sy">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">03: The System</p>
+      <h2 class="a-h2 a-rv" id="h-sy" style="--d:.08s">Three Pillars, <em>Every Post.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Every post ladders to a pillar, so business as usual, seasonal campaigns and sales events all speak the same language.</p>
+  </div>
+  <div class="a-pl">
+    <div class="a-pc a-rv" style="--t:-1.5deg"><small>Brand + Product Awareness</small><h3>Inspire</h3><p>Aspirational but relatable spaces, people and feelings that help the audience picture their ideal life.</p><span class="a-note">setting the scene</span></div>
+    <div class="a-pc a-rv" style="--t:1deg;--d:.08s"><small>Product Benefit</small><h3>Educate</h3><p>The latest trends, hacks and use cases, so followers can shine within their own communities.</p><span class="a-note">curated collections</span></div>
+    <div class="a-pc a-rv" style="--t:-1deg;--d:.16s"><small>Product Function</small><h3>Promote</h3><p>Deep dives on how products work, backed by reviews and the internet&rsquo;s favorite finds.</p><span class="a-note">viral + trending finds</span></div>
+  </div>
+  <div class="a-tc">
+    <div class="a-rv">
+      <h3>Reacting At The <em>Speed Of Culture.</em></h3>
+      <p class="a-sub">A reactive playbook sorted every trend by lifespan, then set how fast to move, what to make and which channel should lead.</p>
+      <div class="a-tt" role="tablist" aria-label="Trend types">
+        <button type="button" role="tab" aria-selected="true" data-k="0">Flash In The Pan</button>
+        <button type="button" role="tab" aria-selected="false" data-k="1">Short Tail</button>
+        <button type="button" role="tab" aria-selected="false" data-k="2">Long Tail</button>
+      </div>
+    </div>
+    <div class="a-tp a-rv" role="tabpanel" aria-live="polite" style="--d:.1s">
+      <div class="a-bar"><i></i></div>
+      <div class="a-ax"><span>24 hours</span><span>Weeks</span><span>Months</span><span>Years</span></div>
+      <h4 class="tn">Flash In The Pan</h4>
+      <span class="life tl">24 hours to 1 week</span>
+      <p class="td">A moment that spikes fast and fades fast. Speed, humor and a sharp point of view win, so the response is real time.</p>
+      <div class="a-ex te"><span>Opening Day boots</span><span>Morning routines</span><span>Bootcut pants</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="a-sc a-vo" aria-labelledby="h-vo">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">04: The Voices</p>
+      <h2 class="a-h2 a-rv" id="h-vo" style="--d:.08s">One Brand, <em>Three Personalities.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Each channel filters the same culture through its own character, so a trend lands differently on Flagship, Home and Fashion &amp; Beauty.</p>
+  </div>
+  <div class="a-vg">
+    <article class="a-vc a-rv" style="--c:var(--bu);--b:#E8702A;--f:#fff;--d:0.00s"><span class="a-note">gifting + everyday genius</span><div class="top"><span class="av" aria-hidden="true">amazon</span><div class="who"><b>Amazon Flagship</b><span>@amazon</span></div></div><h3>The Friend Who Knows First</h3><p>Mainstream, high-impact moments, delivered with a little everyday magic. Joins a trend at its peak, fast and fresh enough to stay current.</p><div class="nums"><div><b>6.9M</b><span>Followers</span></div><div><b>4,307</b><span>Posts</span></div></div><div class="pins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-viral-gifts-for-her.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Viral Gifts for Her"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cool-girl-gift-guide.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Cool Girl Gift Guide"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-goal-getter.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Goal Getter"></div></article>
+    <article class="a-vc a-rv" style="--c:var(--mi);--b:#1B2129;--f:#fff;--d:0.08s"><span class="a-note">built to outlive the trend</span><div class="top"><span class="av" aria-hidden="true">home</span><div class="who"><b>Amazon Home</b><span>@amazonhome</span></div></div><h3>The Discerning Eye</h3><p>Selective by design. Trends pass through a lens of longevity and utility, so every upgrade feels lived in, never staged.</p><div class="nums"><div><b>5.8M</b><span>Followers</span></div><div><b>6,346</b><span>Posts</span></div></div><div class="pins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-beachy-home-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Beachy Home Upgrades"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-apartment-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Apartment Upgrades"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-outdoor-oasis-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Outdoor Oasis Upgrades"></div></article>
+    <article class="a-vc a-rv" style="--c:var(--bl);--b:#fff;--f:#151515;--d:0.16s"><span class="a-note">quick to style, early to spot</span><div class="top"><span class="av" aria-hidden="true">fashion</span><div class="who"><b>Amazon Fashion &amp; Beauty</b><span>@amazonfashion</span></div></div><h3>The Guide And The BFF</h3><p>Fashion simplifies trends into wearable looks. Beauty plays with color, texture and tropes, early and on its own terms.</p><div class="nums"><div><b>4.4M</b><span>Followers</span></div><div><b>7,291</b><span>Posts</span></div></div><div class="pins"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-euro-summer-outfits.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Euro-Summer Outfits"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-nymph-summer-glam.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Nymph Summer Glam"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-matcha-run-outfit.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin: Matcha Run Outfit"></div></article>
+  </div>
+</section>
+
+<section class="a-sc a-fd" aria-labelledby="h-fd">
+  <div class="a-fg">
+    <div class="a-car a-rv">
+      <div class="a-ph">
+        <div class="ig"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">amazon<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0095F6" d="M12 1.5l2.6 1.9 3.2-.2 1 3.1 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3.1-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3.1-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3.1 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.3l3 3 6-6.3"/></svg></div>
+        <div class="a-vp"><div class="a-rl">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amz-md-cover.webp?v=1" alt="" role="img" aria-label="Carousel cover: Top 100 Mother's Day Gifts">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amz-md-special.webp?v=1" alt="" role="img" aria-label="Slide: for moms who appreciate the extra special">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amz-md-upgrades.webp?v=1" alt="" role="img" aria-label="Slide: for moms who love next-level upgrades">
+          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amz-md-foodies.webp?v=1" alt="" role="img" aria-label="Slide: for moms who identify as passionate foodies">
+        </div></div>
+        <div class="a-dots" role="tablist" aria-label="Carousel slides"></div>
+      </div>
+      <span class="a-ct" aria-hidden="true">1/4</span>
+      <button class="ar p" type="button" aria-label="Previous slide">&lsaquo;</button>
+      <button class="ar n" type="button" aria-label="Next slide">&rsaquo;</button>
+    </div>
+    <div class="a-fx">
+      <p class="a-lb a-rv">05: In The Feed</p>
+      <h3 class="a-rv" style="--d:.08s">Gift Guides Built <em>For The Swipe.</em></h3>
+      <p class="a-rv" style="--d:.14s">Carousels turned a hundred gift ideas into personalities: the extra special, the next-level upgrades, the passionate foodies. Sticker cutouts, handwritten notes and soft florals carry the same toolkit as the pins.</p>
+      <div class="ob">
+        <img class="stk a-rv" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amz-sardines.webp?v=1" alt="" role="img" aria-label="Outfit board: sardine print dress, fish earrings and necklace, tinned fish packaging, red sunglasses and mesh flats" style="--d:.2s">
+        <span class="a-note a-rv" style="--d:.3s">outfit boards turn a trend<br>into a full look, ready to shop</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="a-sc a-bw" aria-labelledby="h-bw">
+  <div class="a-hd">
+    <div>
+      <p class="a-lb a-rv">06: The Board</p>
+      <h2 class="a-h2 a-rv" id="h-bw" style="--d:.08s">Every Pin, <em>One Board.</em></h2>
+    </div>
+    <p class="a-sub a-rv" style="--d:.14s">Trend reports, gift guides and shoppable edits for Pinterest. Filter by channel or tap a pin to open it.</p>
+  </div>
+</section>
+
+<div class="pb">
+<header class="prof">
+<img class="av" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" role="img" aria-label="Amazon profile picture">
+<h1>Amazon<svg class="vf" viewBox="0 0 24 24" aria-label="Verified"><circle cx="12" cy="12" r="12" fill="#E60023"/><path d="M7 12.4l3.2 3.1L17 8.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></h1>
+<span class="hd">amazon</span>
+<p class="st"><b>2.3m followers</b> &middot; <span>10m+ monthly views</span></p>
+</header>
+<nav class="tabs" aria-label="Filter pins by channel">
+<button class="tab" type="button" aria-pressed="true" data-f="all">All<i>38</i></button>
+<button class="tab" type="button" aria-pressed="false" data-f="f">Fashion &amp; Beauty<i>21</i></button>
+<button class="tab" type="button" aria-pressed="false" data-f="h">Home<i>12</i></button>
+<button class="tab" type="button" aria-pressed="false" data-f="x">Flagship<i>5</i></button>
+</nav>
+<div class="grid">
+<figure class="pin" data-c="f" data-i="0"><button class="ph" type="button" aria-label="Open pin: Summer Beauty Essentials"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-summer-beauty-essentials.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Top-Rated Fan Faves: Summer Beauty Essentials" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Summer Beauty Essentials</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="1"><button class="ph" type="button" aria-label="Open pin: Apartment Upgrades"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-apartment-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Organize Small Spaces: Apartment Upgrades" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Apartment Upgrades</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="2"><button class="ph" type="button" aria-label="Open pin: What&#x27;s in Your Work Bag"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-what-s-in-your-work-bag.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Cubicle Chic: What&#x27;s in Your Work Bag" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>What&#x27;s in Your Work Bag</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="3"><button class="ph" type="button" aria-label="Open pin: Beachy Home Upgrades"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-beachy-home-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Coastal Casual: Beachy Home Upgrades" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Beachy Home Upgrades</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="4"><button class="ph" type="button" aria-label="Open pin: Nymph Summer Glam"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-nymph-summer-glam.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Sea Witchery: Nymph Summer Glam" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Nymph Summer Glam</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="5"><button class="ph" type="button" aria-label="Open pin: Euro-Summer Outfits"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-euro-summer-outfits.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Now Boarding: Euro-Summer Outfits" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Euro-Summer Outfits</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="6"><button class="ph" type="button" aria-label="Open pin: Your DIY Romantasy Library"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-your-diy-romantasy-library.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, BookTok IRL: Your DIY Romantasy Library" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Your DIY Romantasy Library</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="7"><button class="ph" type="button" aria-label="Open pin: Guava Girl Summer"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-guava-girl-summer.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Think Pink: Guava Girl Summer" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Guava Girl Summer</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="x" data-i="8"><button class="ph" type="button" aria-label="Open pin: Viral Gifts for Her"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-viral-gifts-for-her.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Underneath the Tree: Viral Gifts for Her" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Viral Gifts for Her</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Flagship</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="9"><button class="ph" type="button" aria-label="Open pin: Vanity Revamp"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-vanity-revamp.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Clean Slate: Vanity Revamp" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Vanity Revamp</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="10"><button class="ph" type="button" aria-label="Open pin: What&#x27;s in My Bag"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-what-s-in-my-bag.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Spring Errand Essentials: What&#x27;s in My Bag" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>What&#x27;s in My Bag</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="x" data-i="11"><button class="ph" type="button" aria-label="Open pin: Goal Getter"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-goal-getter.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, New Year Mood: Goal Getter" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Goal Getter</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Flagship</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="12"><button class="ph" type="button" aria-label="Open pin: Bouncy Blowouts"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-bouncy-blowouts.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Trend Report: Bouncy Blowouts" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Bouncy Blowouts</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="13"><button class="ph" type="button" aria-label="Open pin: Cozy Scent Stories"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cozy-scent-stories.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Sweet &amp; Soft: Cozy Scent Stories" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Cozy Scent Stories</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="14"><button class="ph" type="button" aria-label="Open pin: For the Host Who Does the Most"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-for-the-host-who-does-the-most.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Dopamine Decor: For the Host Who Does the Most" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>For the Host Who Does the Most</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="15"><button class="ph" type="button" aria-label="Open pin: Moto Boho Aesthetic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-moto-boho-aesthetic.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Edgy Outfits: Moto Boho Aesthetic" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Moto Boho Aesthetic</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="16"><button class="ph" type="button" aria-label="Open pin: Corporate Fits"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-corporate-fits.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Office Ready: Corporate Fits" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Corporate Fits</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="17"><button class="ph" type="button" aria-label="Open pin: Tiny Touch-Ups"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-tiny-touch-ups.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Backpack Beauty: Tiny Touch-Ups" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Tiny Touch-Ups</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="18"><button class="ph" type="button" aria-label="Open pin: New England Summer"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-new-england-summer.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Now Trending: New England Summer" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>New England Summer</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="19"><button class="ph" type="button" aria-label="Open pin: For the Best Dressed Guest"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-for-the-best-dressed-guest.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Summer Wedding: For the Best Dressed Guest" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>For the Best Dressed Guest</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="20"><button class="ph" type="button" aria-label="Open pin: Elevated Cooking Essentials"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-elevated-cooking-essentials.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Enter Your Chef Era: Elevated Cooking Essentials" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Elevated Cooking Essentials</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="21"><button class="ph" type="button" aria-label="Open pin: Outdoor Movie Night"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-outdoor-movie-night.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Summer Hosting Ideas: Outdoor Movie Night" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Outdoor Movie Night</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="22"><button class="ph" type="button" aria-label="Open pin: Get Outside &amp; Picnic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-get-outside-picnic.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Summer Entertaining: Get Outside &amp; Picnic" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Get Outside &amp; Picnic</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="23"><button class="ph" type="button" aria-label="Open pin: Glamping Must-Haves"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-glamping-must-haves.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Summer Adventure Inspo: Glamping Must-Haves" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Glamping Must-Haves</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="24"><button class="ph" type="button" aria-label="Open pin: Offline Hobbies"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-offline-hobbies.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Screen Break: Offline Hobbies" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Offline Hobbies</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="x" data-i="25"><button class="ph" type="button" aria-label="Open pin: Junk Journaling Era"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-junk-journaling-era.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Make Mems Stick: Junk Journaling Era" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Junk Journaling Era</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Flagship</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="26"><button class="ph" type="button" aria-label="Open pin: Warm Weather Getaway"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-warm-weather-getaway.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Manifesting Sun: Warm Weather Getaway" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Warm Weather Getaway</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="27"><button class="ph" type="button" aria-label="Open pin: Cowgirl by the Coast"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cowgirl-by-the-coast.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Ride the Wave: Cowgirl by the Coast" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Cowgirl by the Coast</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="x" data-i="28"><button class="ph" type="button" aria-label="Open pin: Retro Revival Energy"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-retro-revival-energy.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Old School Cool: Retro Revival Energy" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Retro Revival Energy</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Flagship</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="29"><button class="ph" type="button" aria-label="Open pin: Preppy Fashion"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-preppy-fashion.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, It&#x27;s a Classic: Preppy Fashion" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Preppy Fashion</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="30"><button class="ph" type="button" aria-label="Open pin: Matcha Run Outfit"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-matcha-run-outfit.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Sip in Style: Matcha Run Outfit" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Matcha Run Outfit</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="x" data-i="31"><button class="ph" type="button" aria-label="Open pin: Cool Girl Gift Guide"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-cool-girl-gift-guide.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Trend Report: Cool Girl Gift Guide" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Cool Girl Gift Guide</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Flagship</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="32"><button class="ph" type="button" aria-label="Open pin: Spring Scent Layering"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-spring-scent-layering.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Fresh Starts: Spring Scent Layering" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Spring Scent Layering</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="33"><button class="ph" type="button" aria-label="Open pin: Outdoor Oasis Upgrades"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-outdoor-oasis-upgrades.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Patio Party: Outdoor Oasis Upgrades" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Outdoor Oasis Upgrades</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="h" data-i="34"><button class="ph" type="button" aria-label="Open pin: Dry January"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-dry-january.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Trend Report: Dry January" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Dry January</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Home</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="35"><button class="ph" type="button" aria-label="Open pin: Farmers Market Style"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-farmers-market-style.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Picked Fresh: Farmers Market Style" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Farmers Market Style</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="36"><button class="ph" type="button" aria-label="Open pin: This Trend&#x27;s a Keeper"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-this-trend-s-a-keeper.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Fisherman Core: This Trend&#x27;s a Keeper" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>This Trend&#x27;s a Keeper</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+<figure class="pin" data-c="f" data-i="37"><button class="ph" type="button" aria-label="Open pin: Berry Glam for Fall"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-berry-glam-for-fall.webp?v=1" alt="" role="img" aria-label="Shop Amazon pin, Cozy Up: Berry Glam for Fall" width="640" height="960" loading="lazy"><span class="sv" aria-hidden="true">Save</span></button><figcaption><b>Berry Glam for Fall</b><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true">Amazon Fashion & Beauty</span></figcaption></figure>
+</div>
+<div class="lb" role="dialog" aria-modal="true" aria-label="Pin"><div class="lbc"><img class="lbi" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt=""><div class="lbt"><small class="lbk"></small><strong class="lbh"></strong><span class="mt"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/amzpin-avatar.webp?v=2" alt="" aria-hidden="true"><span class="lbn"></span></span></div><button class="x" type="button" aria-label="Close">&times;</button><button class="nv p" type="button" aria-label="Previous pin">&lsaquo;</button><button class="nv n" type="button" aria-label="Next pin">&rsaquo;</button></div></div>
+</div>
+
+
+<section class="a-out" aria-label="Outro">
+  <p class="a-rv">Everything You Love, <em>Curated.</em></p>
+</section>
+<footer class="a-ft"><a class="a-bk" href="https://www.byninaaustin.com/content"><span aria-hidden="true">&larr;</span> Back to Content</a></footer>
+
+</div>
+<script>
+(function(){
+var D=document;function q(s){return D.querySelector(s)}function qa(s){return Array.prototype.slice.call(D.querySelectorAll(s))}
+var root=q('.am');if(!root)return;root.classList.add('js');
+(function(){var els=qa('.a-rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});setTimeout(function(){qa('.a-rv:not(.in)').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in')})},2500)})();
+/* hero shuffle */
+(function(){var fan=q('.a-fan');if(!fan)return;var cards=qa('.a-fan .fc');var pos=cards.map(function(c){return [c.style.getPropertyValue('--x'),c.style.getPropertyValue('--y'),c.style.getPropertyValue('--t')]});
+var order=cards.map(function(_,i){return i});
+function lay(){order.forEach(function(ci,slot){var c=cards[ci],p=pos[slot];c.style.setProperty('--x',p[0]);c.style.setProperty('--y',p[1]);c.style.setProperty('--t',p[2]);c.style.zIndex=slot+1})}
+function sh(){cards.forEach(function(c){c.style.animation='none'});order.unshift(order.pop());lay()}
+fan.addEventListener('click',sh);fan.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();sh()}})})();
+/* trend tabs */
+(function(){var T=[
+{n:'Flash In The Pan',l:'24 hours to 1 week',w:'12%',d:'A moment that spikes fast and fades fast. Speed, humor and a sharp point of view win, so the response is real time.',e:['Opening Day boots','Morning routines','Bootcut pants']},
+{n:'Short Tail',l:'2 weeks to 3 months',w:'45%',d:'A trend that sticks around long enough to build momentum. It still needs fast creative reflexes, with room to polish and template.',e:['Moo Deng','Demure','Brat Summer','Roman Empire']},
+{n:'Long Tail',l:'4 months to years',w:'92%',d:'A broader cultural shift with staying power. It earns layered storytelling, testing and evolution across business as usual.',e:['Clean Girl Aesthetic','Coastal Grandma','Tomato Girl','Girl Dinner']}];
+var bs=qa('.a-tt button'),bar=q('.a-bar i'),n=q('.tn'),l=q('.tl'),d=q('.td'),ex=q('.te');
+function set(k){bs.forEach(function(b){b.setAttribute('aria-selected',+b.getAttribute('data-k')===k?'true':'false')});var t=T[k];bar.style.setProperty('--w',t.w);n.textContent=t.n;l.textContent=t.l;d.textContent=t.d;ex.innerHTML='';t.e.forEach(function(x){var s=window.document.createElement('span');s.textContent=x;ex.appendChild(s)})}
+bs.forEach(function(b){b.addEventListener('click',function(){set(+b.getAttribute('data-k'))})});set(0)})();
+/* carousel */
+(function(){var rl=q('.a-rl'),vp=q('.a-vp'),dots=q('.a-dots'),ct=q('.a-ct');if(!rl)return;var n=rl.children.length,i=0;
+for(var k=0;k<n;k++){(function(k){var b=window.document.createElement('button');b.type='button';b.setAttribute('aria-label','Slide '+(k+1));b.addEventListener('click',function(){go(k)});dots.appendChild(b)})(k)}
+function go(k){i=(k+n)%n;rl.style.transform='translateX('+(-100*i)+'%)';qa('.a-dots button').forEach(function(b,j){b.setAttribute('aria-current',j===i?'true':'false')});ct.textContent=(i+1)+'/'+n}
+q('.a-car .ar.p').addEventListener('click',function(){go(i-1)});q('.a-car .ar.n').addEventListener('click',function(){go(i+1)});
+var sx=null;vp.addEventListener('pointerdown',function(e){sx=e.clientX});vp.addEventListener('pointerup',function(e){if(sx===null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>30)go(i+(dx<0?1:-1))});
+go(0)})();
+})();
+</script>
+<script>
+(function(){
+var D=document;function q(s){return D.querySelector(s)}function qa(s){return Array.prototype.slice.call(D.querySelectorAll(s))}
+var P=[{"s": "amzpin-summer-beauty-essentials", "k": "Top-Rated Fan Faves", "t": "Summer Beauty Essentials", "c": "f"}, {"s": "amzpin-apartment-upgrades", "k": "Organize Small Spaces", "t": "Apartment Upgrades", "c": "h"}, {"s": "amzpin-what-s-in-your-work-bag", "k": "Cubicle Chic", "t": "What's in Your Work Bag", "c": "f"}, {"s": "amzpin-beachy-home-upgrades", "k": "Coastal Casual", "t": "Beachy Home Upgrades", "c": "h"}, {"s": "amzpin-nymph-summer-glam", "k": "Sea Witchery", "t": "Nymph Summer Glam", "c": "f"}, {"s": "amzpin-euro-summer-outfits", "k": "Now Boarding", "t": "Euro-Summer Outfits", "c": "f"}, {"s": "amzpin-your-diy-romantasy-library", "k": "BookTok IRL", "t": "Your DIY Romantasy Library", "c": "h"}, {"s": "amzpin-guava-girl-summer", "k": "Think Pink", "t": "Guava Girl Summer", "c": "f"}, {"s": "amzpin-viral-gifts-for-her", "k": "Underneath the Tree", "t": "Viral Gifts for Her", "c": "x"}, {"s": "amzpin-vanity-revamp", "k": "Clean Slate", "t": "Vanity Revamp", "c": "h"}, {"s": "amzpin-what-s-in-my-bag", "k": "Spring Errand Essentials", "t": "What's in My Bag", "c": "f"}, {"s": "amzpin-goal-getter", "k": "New Year Mood", "t": "Goal Getter", "c": "x"}, {"s": "amzpin-bouncy-blowouts", "k": "Trend Report", "t": "Bouncy Blowouts", "c": "f"}, {"s": "amzpin-cozy-scent-stories", "k": "Sweet & Soft", "t": "Cozy Scent Stories", "c": "f"}, {"s": "amzpin-for-the-host-who-does-the-most", "k": "Dopamine Decor", "t": "For the Host Who Does the Most", "c": "h"}, {"s": "amzpin-moto-boho-aesthetic", "k": "Edgy Outfits", "t": "Moto Boho Aesthetic", "c": "f"}, {"s": "amzpin-corporate-fits", "k": "Office Ready", "t": "Corporate Fits", "c": "f"}, {"s": "amzpin-tiny-touch-ups", "k": "Backpack Beauty", "t": "Tiny Touch-Ups", "c": "f"}, {"s": "amzpin-new-england-summer", "k": "Now Trending", "t": "New England Summer", "c": "f"}, {"s": "amzpin-for-the-best-dressed-guest", "k": "Summer Wedding", "t": "For the Best Dressed Guest", "c": "f"}, {"s": "amzpin-elevated-cooking-essentials", "k": "Enter Your Chef Era", "t": "Elevated Cooking Essentials", "c": "h"}, {"s": "amzpin-outdoor-movie-night", "k": "Summer Hosting Ideas", "t": "Outdoor Movie Night", "c": "h"}, {"s": "amzpin-get-outside-picnic", "k": "Summer Entertaining", "t": "Get Outside & Picnic", "c": "h"}, {"s": "amzpin-glamping-must-haves", "k": "Summer Adventure Inspo", "t": "Glamping Must-Haves", "c": "h"}, {"s": "amzpin-offline-hobbies", "k": "Screen Break", "t": "Offline Hobbies", "c": "h"}, {"s": "amzpin-junk-journaling-era", "k": "Make Mems Stick", "t": "Junk Journaling Era", "c": "x"}, {"s": "amzpin-warm-weather-getaway", "k": "Manifesting Sun", "t": "Warm Weather Getaway", "c": "f"}, {"s": "amzpin-cowgirl-by-the-coast", "k": "Ride the Wave", "t": "Cowgirl by the Coast", "c": "f"}, {"s": "amzpin-retro-revival-energy", "k": "Old School Cool", "t": "Retro Revival Energy", "c": "x"}, {"s": "amzpin-preppy-fashion", "k": "It's a Classic", "t": "Preppy Fashion", "c": "f"}, {"s": "amzpin-matcha-run-outfit", "k": "Sip in Style", "t": "Matcha Run Outfit", "c": "f"}, {"s": "amzpin-cool-girl-gift-guide", "k": "Trend Report", "t": "Cool Girl Gift Guide", "c": "x"}, {"s": "amzpin-spring-scent-layering", "k": "Fresh Starts", "t": "Spring Scent Layering", "c": "f"}, {"s": "amzpin-outdoor-oasis-upgrades", "k": "Patio Party", "t": "Outdoor Oasis Upgrades", "c": "h"}, {"s": "amzpin-dry-january", "k": "Trend Report", "t": "Dry January", "c": "h"}, {"s": "amzpin-farmers-market-style", "k": "Picked Fresh", "t": "Farmers Market Style", "c": "f"}, {"s": "amzpin-this-trend-s-a-keeper", "k": "Fisherman Core", "t": "This Trend's a Keeper", "c": "f"}, {"s": "amzpin-berry-glam-for-fall", "k": "Cozy Up", "t": "Berry Glam for Fall", "c": "f"}],A="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/",CH={"f": "Fashion & Beauty", "h": "Home", "x": "Flagship"};
+var tabs=qa('.tab'),pins=qa('.pin'),cur='all';
+tabs.forEach(function(b){b.addEventListener('click',function(){cur=b.getAttribute('data-f');tabs.forEach(function(t){t.setAttribute('aria-pressed',t===b?'true':'false')});pins.forEach(function(p){p.hidden=!(cur==='all'||p.getAttribute('data-c')===cur)})})});
+var lb=q('.lb'),img=q('.lbi'),k=q('.lbk'),h=q('.lbh'),nm=q('.lbn'),idx=0,last=null;
+function vis(){return pins.filter(function(p){return !p.hidden}).map(function(p){return +p.getAttribute('data-i')})}
+function show(i){idx=i;var p=P[i];img.src=A+p.s+'.webp?v=1';img.setAttribute('aria-label','Shop Amazon pin, '+p.k+': '+p.t);k.textContent=p.k;h.textContent=p.t;nm.textContent='Amazon '+CH[p.c]}
+function open(i){last=D.activeElement;show(i);lb.classList.add('on');q('.x').focus()}
+function close(){lb.classList.remove('on');if(last&&last.focus)last.focus()}
+function step(d){var v=vis(),j=v.indexOf(idx);show(v[(j+d+v.length)%v.length])}
+pins.forEach(function(p){p.querySelector('.ph').addEventListener('click',function(){open(+p.getAttribute('data-i'))})});
+q('.x').addEventListener('click',close);q('.nv.p').addEventListener('click',function(){step(-1)});q('.nv.n').addEventListener('click',function(){step(1)});
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+window.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+})();
+</script>
+</body></html>
