@@ -137,6 +137,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .zn .chk button span{flex:1}
 .zn .chk button small{font-size:.72em;opacity:.65}
 .zn .lock{margin-top:calc(var(--u)*1.6);min-height:calc(var(--u)*3.2)}
+.zn .spot{width:78%;margin-top:calc(var(--u)*1.2)}
+.zn .spot img{aspect-ratio:16/9}
 .zn .d1 .clip{position:absolute;left:calc(var(--u)*-1.2);bottom:calc(var(--u)*-.6);width:31%;z-index:4}
 .zn .d1 .hwr{position:absolute;right:0;bottom:calc(var(--u)*1.6);width:52%;text-align:right}
 .zn .d1 .clip img{aspect-ratio:1}
@@ -158,7 +160,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .zn .looknotes .arrow{width:calc(var(--u)*2.6);height:calc(var(--u)*1.2)}
 .zn .d2 .pr{background:var(--pink2)}
 .zn .d2 .mirror{margin-top:calc(var(--u)*2.6);width:72%;margin-left:auto}
-.zn .d2 .mirror img{aspect-ratio:16/10;object-position:50% 45%}
+.zn .d2 .mirror img{aspect-ratio:16/9}
 
 /* DAY 03 */
 .zn .d3 .pl{background:var(--yel)}
@@ -166,7 +168,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .zn .d3 .pile .a{position:absolute;left:0;top:calc(var(--u)*1);width:60%;z-index:2}
 .zn .d3 .pile .a img{aspect-ratio:4/5}
 .zn .d3 .pile .b{position:absolute;right:0;top:42%;width:62%;z-index:3}
-.zn .d3 .pile .b img{aspect-ratio:16/11}
+.zn .d3 .pile .b img{aspect-ratio:16/9}
 .zn .d3 .pile .c3{position:absolute;left:10%;bottom:0;width:50%;z-index:4}
 .zn .d3 .pile .hw{position:absolute;right:0;bottom:12%;width:36%;text-align:right;transform:rotate(-3deg)}
 .zn .d3 .pile .c3 img{aspect-ratio:4/5}
@@ -187,8 +189,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .zn .stickers button.open{background:var(--pink);color:#fff}
 .zn .stickers button .in{display:none;font-size:.95em;font-weight:400}
 .zn .stickers button.open .in{display:block}.zn .stickers button.open .out,.zn .stickers button.open b{display:none}
-.zn .d4 .car{width:60%;margin:calc(var(--u)*2.6) 0 0 auto}
-.zn .d4 .car img{aspect-ratio:16/9;object-position:50% 40%}
+.zn .d4 .row4{display:grid;grid-template-columns:1.6fr 1fr;gap:calc(var(--u)*2);align-items:end;margin-top:calc(var(--u)*2.8)}
+.zn .d4 .car img{aspect-ratio:16/10;object-position:50% 45%}
+.zn .d4 .row4 .plate img{aspect-ratio:4/5}
 .zn .d4 .pr .hw{color:var(--yel)}
 
 /* DAY 05 */
@@ -260,7 +263,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  .zn .d3 .pl{order:2}
  .zn .d5 .tsq{min-height:0;aspect-ratio:1/1.35}
  .zn .d2 .mirror{width:88%}
- .zn .d4 .car{width:80%}
+ .zn .d4 .row4{grid-template-columns:1.6fr 1fr;gap:1rem}
  .zn .receipt{max-width:none}
  .zn .backcover{grid-template-columns:1fr}
  .zn .backcover .big{font-size:min(56px,13vw)}
@@ -372,6 +375,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <button type="button"><i></i><span>05 Curl Forming Glaze</span><small>Define it</small></button>
   </div>
   <div class="lock"><span class="stamp t" id="znlock" style="opacity:0;transition:opacity .3s">Moisture Locked &middot; 5 Days</span></div>
+  <div class="ph spot rot-l drop"><span class="tape tr p"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day1.gif?v=1" alt="" role="img" aria-label="Day one of the Switch Up spot: our lead live from her room asking if her curls will survive five styles in five days with no rewash" width="520" height="292" loading="lazy"><span class="c">day 1, in her room. from the spot.</span></div>
  </div>
  <div class="pg pr dark" data-p="05">
   <div class="lineup">
@@ -404,7 +408,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
   <div class="film rot-s drop">
    <div class="fr" data-vimeo="1042381182"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-poster-switchup.webp?v=1" alt="" role="img" aria-label="A woman in a cream sweater smiling at the camera with her curls defined, from the Switch Up spot" width="1600" height="900" loading="lazy"><button class="play" type="button" aria-label="Play The Switch Up"><b></b><small>Play The Switch Up &middot; :30</small></button></div>
   </div>
-  <div class="mirror rot-r drop"><div class="plate xerox torn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-tube-hand.webp?v=1" alt="" role="img" aria-label="A hand with pink nails holding the Kalahari Melon and Aloe Vera curl forming glaze" width="1080" height="1350" loading="lazy"></div><p class="hw" style="margin-top:.6em;text-align:right;transform:rotate(-2deg)">glaze it, then go. photocopied from the shoot.</p></div>
+  <div class="ph mirror rot-r drop"><span class="tape tl t"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day2.gif?v=1" alt="" role="img" aria-label="Day two of the Switch Up spot: our lead in her car in pink sunglasses spraying the weightless oil" width="520" height="292" loading="lazy"><span class="c">day 2, in her car. from the spot.</span></div>
  </div>
 </section>
 
@@ -413,7 +417,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  <div class="pg pl" data-p="08">
   <div class="pile">
    <div class="ph a rot-l drop"><span class="tape tc"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-bathroom.webp?v=1" alt="" role="img" aria-label="A woman in a pink top squeezing Kalahari Melon and Aloe Vera leave in conditioner into her palm" width="1080" height="1350" loading="lazy"><span class="c">the put on</span></div>
-   <div class="ph b rot-r drop"><span class="tape tr t"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-mirror.webp?v=1" alt="" role="img" aria-label="A woman in a pink top taking a mirror selfie with her curls defined" width="1920" height="1080" loading="lazy"><span class="c">mirror check, day three</span></div>
+   <div class="ph b rot-r drop"><span class="tape tr t"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day3.gif?v=1" alt="" role="img" aria-label="Day three of the Switch Up spot: our lead in a headwrap filming herself in the park as the likes roll in" width="520" height="292" loading="lazy"><span class="c">day 3, in the park. from the spot.</span></div>
    <div class="ph c3 rot-s drop"><span class="tape br p"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-holdup.webp?v=1" alt="" role="img" aria-label="A woman smiling and holding up the Kalahari Melon and Aloe Vera tube" width="540" height="675" loading="lazy"><span class="c">too good to gatekeep</span></div>
    <p class="hw rv">one hallway, one put on, zero gatekeeping</p>
   </div>
@@ -457,7 +461,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <div class="plate torn rot-s drop" style="border-color:var(--yel)"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-ooh.gif?v=1" alt="" role="img" aria-label="Bus shelter poster reading Up To 5 Days Of Turning Heads with a woman in yellow glancing back at a man in purple" width="720" height="720" loading="lazy"></div>
    <div class="stk burst slam" style="right:calc(var(--u)*-1.2);top:calc(var(--u)*-1.4)"><span>Out Of<br>Home</span></div>
   </div>
-  <div class="ph car rot-l drop"><span class="tape tr"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-switchup.gif?v=1" alt="" role="img" aria-label="A creator filming her five day challenge from the car with the Kalahari Melon and Aloe Vera leave in" width="560" height="314" loading="lazy"><span class="c">creator challenge, filmed from the car</span></div>
+  <div class="row4"><div class="ph car rot-l drop"><span class="tape tr"></span><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-mirror.webp?v=1" alt="" role="img" aria-label="A woman in a pink top taking a mirror selfie with her curls defined" width="1920" height="1080" loading="lazy"><span class="c">mirror check before heading out</span></div><div class="plate xerox torn rot-r drop"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-tube-hand.webp?v=1" alt="" role="img" aria-label="A hand with pink nails holding the Kalahari Melon and Aloe Vera curl forming glaze" width="1080" height="1350" loading="lazy"></div></div>
   <p class="hw rv" style="margin-top:calc(var(--u)*1.6);transform:rotate(-2deg)">up to 5 days of turning heads</p>
  </div>
 </section>
