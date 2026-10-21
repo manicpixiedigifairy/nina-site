@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Curls Just Wanna Have Fun: a social-first national launch for Mielle's Kalahari Melon and Aloe Vera collection, built around five days of moisture and 4c hair as the hero.">
+<title>Mielle | Curls Just Wanna Have Fun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#FFFDF5}
+.km{--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*5.5);--sp:calc(var(--u)*8);
+--teal:#0E6F7A;--teal2:#0A5660;--teal3:#13919E;--yel:#FFE500;--yel2:#FFF27A;--pink:#FF2E92;--pink2:#FFB3D9;--mel:#FFD1B3;--cream:#FFFDF5;--ink:#0B1F22;--line:#0B1F22;
+--hd:'Archivo',Helvetica,Arial,sans-serif;--mo:'Space Mono',Menlo,monospace;--sf:'Instrument Serif',Georgia,serif;
+display:block;position:relative;overflow-x:clip;width:100%;background:var(--cream);color:var(--ink);font-family:var(--hd);font-size:calc(var(--u)*1.18);line-height:1.5;-webkit-font-smoothing:antialiased}
+.km *,.km *::before,.km *::after{box-sizing:border-box}
+.km a{color:inherit;text-decoration:none}
+.km h1,.km h2,.km h3,.km h4{margin:0;font-family:var(--hd);font-weight:800;line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.km p,.km ul,.km ol,.km li,.km figure{margin:0;padding:0;list-style:none}
+.km img{display:block;max-width:100%;height:auto}
+.km button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+.km .w{width:100%;padding:0 var(--g);position:relative}
+.km .sec{position:relative;padding:var(--sp) 0}
+.km .lb{display:inline-block;font:700 calc(var(--u)*.72)/1.4 var(--mo);letter-spacing:.14em;text-transform:uppercase}
+.km .pill{display:inline-flex;align-items:center;gap:.6em;padding:.55em 1em .5em;border:1.5px solid var(--line);border-radius:999px;background:var(--cream);font:700 calc(var(--u)*.72)/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.km .pill.y{background:var(--yel)}.km .pill.p{background:var(--pink);color:#fff;border-color:var(--pink)}.km .pill.t{background:var(--teal);color:#fff;border-color:var(--teal)}
+.km .h2{font-size:calc(var(--u)*4.6);max-width:calc(var(--u)*62)}
+.km .h2 .o{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.km .lede{font-size:calc(var(--u)*1.5);line-height:1.35;font-weight:600;max-width:calc(var(--u)*44)}
+.km .bdy p+p{margin-top:1em}
+.km .card{border:1.5px solid var(--line);border-radius:calc(var(--u)*1.4);background:var(--cream);box-shadow:calc(var(--u)*.45) calc(var(--u)*.45) 0 var(--ink)}
+.km .frame{position:relative;overflow:hidden;border:1.5px solid var(--line);border-radius:calc(var(--u)*1.4);background:#000}
+.km .frame img{width:100%;height:100%;object-fit:cover}
+.km .cap{position:absolute;left:calc(var(--u)*1);bottom:calc(var(--u)*1);z-index:3}
+.km .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.km .rv.on{opacity:1;transform:none}
+.km .pop{opacity:0;transform:scale(.92) rotate(-2deg);transition:opacity .5s ease,transform .6s cubic-bezier(.3,1.5,.5,1)}
+.km .pop.on{opacity:1;transform:none}
+
+/* HERO */
+.km .hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;min-height:calc(var(--u)*52)}
+.km .hl{position:relative;background:var(--mel);overflow:hidden}
+.km .hl img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.km .hr{position:relative;background:radial-gradient(90% 70% at 100% 0,var(--yel2),transparent 60%),var(--yel);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--u)*6) var(--g) calc(var(--u)*5)}
+.km .hr::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Ccircle cx='24' cy='40' r='3' fill='%230E6F7A' opacity='.35'/%3E%3Ccircle cx='110' cy='18' r='2' fill='%230E6F7A' opacity='.3'/%3E%3Ccircle cx='150' cy='120' r='3.5' fill='%23FF2E92' opacity='.3'/%3E%3Ccircle cx='60' cy='140' r='2' fill='%230E6F7A' opacity='.3'/%3E%3C/svg%3E") 0 0/180px 180px;pointer-events:none}
+.km .hr>*{position:relative}
+.km .kick{display:flex;gap:.6em;flex-wrap:wrap}
+.km h1{font-size:calc(var(--u)*6.4);line-height:.9;margin-top:calc(var(--u)*1.4);color:var(--teal2)}
+.km h1 em{font-style:normal;color:var(--pink);display:inline-block;transform:rotate(-3deg)}
+.km .hsub{margin-top:calc(var(--u)*1.6);font:400 calc(var(--u)*.86)/1.6 var(--mo);text-transform:uppercase;letter-spacing:.06em;max-width:calc(var(--u)*34);color:var(--ink)}
+.km .meta{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*2.2);max-width:calc(var(--u)*34)}
+.km .meta b{display:block;font:700 calc(var(--u)*.62)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-bottom:.5em}
+.km .meta span{font-weight:700;font-size:calc(var(--u)*1)}
+.km .cta{display:inline-flex;align-items:center;justify-content:center;gap:.8em;margin-top:calc(var(--u)*2.4);padding:1.1em 1.8em;border:1.5px solid var(--line);border-radius:999px;background:var(--pink);color:#fff;font:700 calc(var(--u)*.82)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);transition:transform .25s}
+.km .cta:hover{transform:translate(-2px,-2px)}
+/* floating note cards on the hero image */
+.km .note{position:absolute;z-index:4;max-width:calc(var(--u)*18);padding:calc(var(--u)*1) calc(var(--u)*1.1);font:400 calc(var(--u)*.74)/1.45 var(--mo);text-transform:uppercase;letter-spacing:.02em}
+.km .note b{font-weight:700;display:block;margin-bottom:.3em}
+.km .n1{left:calc(var(--u)*2);top:calc(var(--u)*3)}
+.km .n2{right:calc(var(--u)*2);bottom:calc(var(--u)*3)}
+.km .bob{animation:kmBob 5s ease-in-out infinite}
+.km .bob2{animation:kmBob 6s ease-in-out -2s infinite}
+@keyframes kmBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+/* drop badge */
+.km .drop{position:absolute;right:calc(var(--u)*2.2);top:calc(var(--u)*2.2);z-index:5;width:calc(var(--u)*9);height:calc(var(--u)*9);border-radius:50%;background:var(--teal);color:var(--yel);display:grid;place-items:center;text-align:center;border:1.5px solid var(--line);box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);animation:kmSpin 18s linear infinite}
+.km .drop svg{width:100%;height:100%}
+@keyframes kmSpin{to{transform:rotate(360deg)}}
+
+/* ticker */
+.km .tk{position:relative;z-index:2;background:var(--teal);color:var(--yel);border-top:1.5px solid var(--line);border-bottom:1.5px solid var(--line);overflow:hidden;padding:calc(var(--u)*.9) 0}
+.km .tk .tp{display:flex;width:max-content;animation:kmTape 40s linear infinite}
+.km .tk .gp{display:flex;align-items:center;flex:none}
+.km .tk span{font:700 calc(var(--u)*1.4)/1 var(--hd);text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap;padding:0 calc(var(--u)*1.2)}
+.km .tk i{width:calc(var(--u)*.9);height:calc(var(--u)*.9);border-radius:50%;background:var(--pink);flex:none}
+@keyframes kmTape{to{transform:translateX(-50%)}}
+
+/* 01 the brief */
+.km .brief{background:var(--cream)}
+.km .g2{display:grid;grid-template-columns:1.1fr .9fr;gap:calc(var(--u)*4);align-items:center}
+.km .big{font-size:calc(var(--u)*3.3);line-height:1.02;font-weight:800;text-transform:uppercase;letter-spacing:-.02em}
+.km .big .em{display:inline-flex;align-items:center;gap:.25em;background:var(--yel);padding:0 .25em;border-radius:.3em;transform:rotate(-1.5deg)}
+.km .big .em.p{background:var(--pink2)}
+.km .big .em.t{background:var(--teal);color:var(--yel)}
+.km .blob{position:relative;aspect-ratio:1/1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:var(--pink);overflow:hidden;border:1.5px solid var(--line)}
+.km .blob img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.km .stk{position:absolute;right:calc(var(--u)*-.6);bottom:calc(var(--u)*1.4);z-index:3;padding:calc(var(--u)*1.1) calc(var(--u)*1.3);max-width:calc(var(--u)*18);font:400 calc(var(--u)*.72)/1.45 var(--mo);text-transform:uppercase}
+.km .stk b{display:block;font-weight:700;margin-bottom:.4em;font-size:1.05em}
+
+/* 02 how it works */
+.km .steps{background:radial-gradient(70% 60% at 50% 100%,var(--yel2),transparent 60%),var(--cream);text-align:center}
+.km .steps .h2{margin:0 auto;color:var(--teal)}
+.km .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*3);margin-top:calc(var(--u)*4.4);align-items:start}
+.km .st{text-align:left}
+.km .st .ic{width:calc(var(--u)*10);height:calc(var(--u)*10);margin:0 auto;display:grid;place-items:center;filter:drop-shadow(0 0 calc(var(--u)*1.4) rgba(14,111,122,.45))}
+.km .st .ic svg{width:100%;height:100%}
+.km .st .n{display:block;margin-top:calc(var(--u)*1.4);font:800 calc(var(--u)*3.4)/1 var(--hd);color:var(--pink);letter-spacing:-.03em}
+.km .st h3{font-size:calc(var(--u)*1.05);margin-top:.5em;color:var(--teal);letter-spacing:.02em;line-height:1.25}
+.km .st p{margin-top:.6em;font:400 calc(var(--u)*.8)/1.5 var(--mo);text-transform:uppercase}
+
+/* 03 films */
+.km .films{background:var(--cream)}
+.km .fh{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*4);align-items:end}
+.km .fg{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*3);margin-top:calc(var(--u)*4)}
+.km .film{display:flex;flex-direction:column}
+.km .film .frame{aspect-ratio:16/9}
+.km .film .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.km .film .frame img{position:absolute;inset:0}
+.km .play{position:absolute;inset:0;display:grid;place-items:center;z-index:2;cursor:pointer}
+.km .play b{width:calc(var(--u)*6);height:calc(var(--u)*6);border-radius:50%;background:var(--yel);border:1.5px solid var(--line);display:grid;place-items:center;box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.km .play:hover b{transform:scale(1.08)}
+.km .play b::after{content:"";margin-left:.3em;border-style:solid;border-width:calc(var(--u)*.9) 0 calc(var(--u)*.9) calc(var(--u)*1.5);border-color:transparent transparent transparent var(--ink)}
+.km .film h3{font-size:calc(var(--u)*2.2);margin-top:calc(var(--u)*1.4)}
+.km .film h3 small{display:block;font:700 calc(var(--u)*.68)/1 var(--mo);letter-spacing:.14em;color:var(--pink);margin-bottom:.5em;text-transform:uppercase}
+.km .film p{margin-top:.7em;font-size:calc(var(--u)*1.05);line-height:1.5;max-width:calc(var(--u)*38)}
+
+/* 04 find your fit style: wash day calc */
+.km .fit{background:var(--cream);border-top:1.5px solid var(--line);border-bottom:1.5px solid var(--line)}
+.km .fit .g2{align-items:stretch;gap:0;grid-template-columns:1fr 1fr}
+.km .fit .l{padding:var(--sp) var(--g);border-right:1.5px solid var(--line)}
+.km .fit .r{padding:var(--sp) var(--g);background:var(--pink2);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*1.2)}
+.km .fit .sf{font:italic 400 calc(var(--u)*1.6)/1.2 var(--sf);color:var(--teal2)}
+.km .fit .h2{font-size:calc(var(--u)*4);margin-top:calc(var(--u)*1.2)}
+.km .yn{display:flex;gap:calc(var(--u)*1);margin-top:calc(var(--u)*2.2);flex-wrap:wrap}
+.km .yn .pill{cursor:pointer;transition:transform .25s,background .2s}
+.km .yn .pill:hover{transform:translateY(-2px)}
+.km .yn .pill[aria-pressed=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.km .fit .r .ql{font:800 calc(var(--u)*2.4)/1.05 var(--hd);text-transform:uppercase;letter-spacing:-.02em;color:var(--teal2);min-height:3.2em}
+.km .fit .r .qs{font:400 calc(var(--u)*.8)/1.5 var(--mo);text-transform:uppercase}
+.km .fit .r .ql .hi{background:var(--yel);padding:0 .2em;border-radius:.2em}
+.km .fit .r .dl{display:flex;gap:.6em;margin-top:calc(var(--u)*.6)}
+.km .fit .r .dl i{width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:700 calc(var(--u)*.8)/1 var(--mo);background:var(--cream);transition:background .3s,transform .3s}
+.km .fit .r .dl i.on{background:var(--yel);transform:scale(1.1)}
+
+/* 05 the challenge box */
+.km .box{background:var(--teal);color:#fff}
+.km .box .lb{color:var(--yel)}
+.km .box .h2{color:#fff}
+.km .box .h2 .o{-webkit-text-stroke:2px var(--yel)}
+.km .box .g2{grid-template-columns:1fr 1.1fr;align-items:start}
+.km .box .bdy{font-size:calc(var(--u)*1.1);color:rgba(255,255,255,.92)}
+.km .days{display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.4)}
+.km .day{aspect-ratio:1/1.15;border:1.5px solid var(--line);border-radius:calc(var(--u)*.9);background:var(--yel);color:var(--ink);display:grid;place-items:center;text-align:center;font:700 calc(var(--u)*.7)/1.2 var(--mo);padding:.5em;cursor:pointer;transition:transform .3s cubic-bezier(.3,1.6,.5,1),background .25s;position:relative;overflow:hidden}
+.km .day b{display:block;font:800 calc(var(--u)*2)/1 var(--hd);margin-bottom:.3em}
+.km .day:hover{transform:translateY(-4px) rotate(-2deg)}
+.km .day.open{background:var(--pink);color:#fff}
+.km .day .in{display:none;font-size:.95em}
+.km .day.open .in{display:block}.km .day.open .out{display:none}
+.km .boxart{position:relative}
+.km .boxart .frame{aspect-ratio:16/10;border-color:var(--yel)}
+.km .boxart .tag{position:absolute;left:calc(var(--u)*-1);top:calc(var(--u)*-1.2);z-index:3;transform:rotate(-6deg)}
+.km .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*2);margin-top:calc(var(--u)*4)}
+.km .feed .frame{aspect-ratio:702/878;border-color:var(--yel)}
+.km .feed .frame:nth-child(2){transform:translateY(calc(var(--u)*2))}
+
+/* 06 times square */
+.km .ts{background:var(--cream);overflow:hidden}
+.km .ts .g2{grid-template-columns:.9fr 1.1fr;align-items:center}
+.km .ts .phones{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*2);align-items:center}
+.km .ts .ph{position:relative;border:calc(var(--u)*.55) solid var(--ink);border-radius:calc(var(--u)*2.4);overflow:hidden;aspect-ratio:9/16;background:#000;box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--pink)}
+.km .ts .ph::before{content:"";position:absolute;left:50%;top:calc(var(--u)*.6);width:30%;height:calc(var(--u)*1);transform:translateX(-50%);border-radius:999px;background:var(--ink);z-index:2}
+.km .ts .ph img{width:100%;height:100%;object-fit:cover}
+.km .ts .ph:nth-child(2){transform:translateY(calc(var(--u)*3)) rotate(3deg)}
+.km .ts .ph:nth-child(1){transform:rotate(-3deg)}
+.km .ql2{margin-top:calc(var(--u)*2);padding-left:calc(var(--u)*1.4);border-left:calc(var(--u)*.4) solid var(--pink);font:italic 400 calc(var(--u)*1.7)/1.25 var(--sf);color:var(--teal2)}
+
+/* 07 impact */
+.km .imp{background:radial-gradient(60% 60% at 0 100%,var(--pink2),transparent 60%),radial-gradient(60% 60% at 100% 0,var(--yel2),transparent 60%),var(--cream)}
+.km .imp .h2{color:var(--teal)}
+.km .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*2);margin-top:calc(var(--u)*4)}
+.km .stat{padding:calc(var(--u)*2) calc(var(--u)*1.6);display:flex;flex-direction:column;gap:.6em;min-height:calc(var(--u)*14)}
+.km .stat b{font:800 calc(var(--u)*2.8)/1 var(--hd);letter-spacing:-.03em;text-transform:uppercase;color:var(--teal)}
+.km .stat b.p{color:var(--pink)}
+.km .stat span{font:400 calc(var(--u)*.78)/1.5 var(--mo);text-transform:uppercase}
+.km .role{margin-top:calc(var(--u)*4);display:grid;grid-template-columns:1fr 1.4fr;gap:calc(var(--u)*3);align-items:start}
+.km .role .lb{color:var(--pink)}
+.km .role p{font-size:calc(var(--u)*1.15);line-height:1.5}
+
+/* footer */
+.km .ft{background:var(--yel);border-top:1.5px solid var(--line);padding:var(--sp) 0 calc(var(--u)*3)}
+.km .ft .g2{align-items:center;grid-template-columns:1fr 1fr}
+.km .ft .shop{font:800 calc(var(--u)*6)/1 var(--hd);text-transform:uppercase;letter-spacing:-.03em;color:var(--teal2)}
+.km .ft .shop em{font-style:normal;color:var(--pink)}
+.km .ft .frame{aspect-ratio:1/1;border-radius:calc(var(--u)*1.4)}
+.km .ft .bkr{margin-top:calc(var(--u)*4);display:flex;justify-content:flex-start}
+.km .bk{display:inline-flex;align-items:center;gap:.8em;padding:1.1em 1.6em;border:1.5px solid var(--line);border-radius:999px;background:var(--teal);color:#fff;font:700 calc(var(--u)*.8)/1 var(--mo);letter-spacing:.14em;text-transform:uppercase;box-shadow:calc(var(--u)*.3) calc(var(--u)*.3) 0 var(--ink);transition:transform .25s}
+.km .bk:hover{transform:translate(-2px,-2px)}
+
+@media (max-width:1000px){
+ .km{--g:1.75rem;--sp:calc(var(--u)*7);font-size:16px}
+ .km .hero{grid-template-columns:1fr;min-height:0}
+ .km .hl{aspect-ratio:4/3}
+ .km .hr{padding:calc(var(--u)*5) var(--g)}
+ .km h1{font-size:min(64px,11vw)}
+ .km .h2{font-size:min(50px,8.5vw)}
+ .km .g2,.km .fh,.km .fg,.km .box .g2,.km .ts .g2,.km .ft .g2,.km .role{grid-template-columns:1fr}
+ .km .fit .g2{grid-template-columns:1fr}
+ .km .fit .l{border-right:0;border-bottom:1.5px solid var(--line)}
+ .km .sg{grid-template-columns:1fr;gap:calc(var(--u)*4)}
+ .km .stats{grid-template-columns:1fr 1fr}
+ .km .big{font-size:min(34px,6.5vw)}
+ .km .blob{max-width:420px;margin:0 auto}
+ .km .lede{font-size:18px}
+ .km .note{max-width:200px;font-size:11px}
+ .km .boxart{margin-top:calc(var(--u)*3)}
+}
+@media (max-width:640px){
+ .km .days{grid-template-columns:repeat(5,1fr);gap:6px}
+ .km .day b{font-size:18px}.km .day{font-size:9px}
+ .km .feed{grid-template-columns:1fr;gap:calc(var(--u)*3)}
+ .km .feed .frame:nth-child(2){transform:none}
+ .km .stats{grid-template-columns:1fr}
+ .km .ts .phones{gap:12px}
+ .km .ft .shop{font-size:min(56px,15vw)}
+ .km .n2{display:none}
+ .km .drop{width:76px;height:76px;right:14px;top:14px}
+ .km .tk span{font-size:18px}
+ .km .fit .r .ql{font-size:24px}
+ .km .fit .h2{font-size:min(36px,9.5vw)}
+ .km .fit .l,.km .fit .r{padding-left:16px;padding-right:16px}
+ .km .meta{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+ .km .rv,.km .pop{opacity:1;transform:none;transition:none}
+ .km .bob,.km .bob2,.km .drop{animation:none}
+}
+</style></head><body>
+<div class="km" id="km">
+
+<header class="hero">
+ <div class="hl">
+  <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-group-products.webp?v=1" alt="" role="img" aria-label="Three friends laughing together beside the Kalahari Melon and Aloe Vera collection" width="1800" height="1349">
+  <div class="note card n1 bob"><b>5 Day Moisture</b> is what happens when a deep hydration system actually sticks around. Wash day on Monday, still bouncing by Friday.</div>
+  <div class="note card n2 bob2"><b>The Result:</b> Curls that let you switch it up, every single day.</div>
+  <div class="drop" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="kmc" d="M50 50 m-36 0 a36 36 0 1 1 72 0 a36 36 0 1 1 -72 0"/></defs><text font-family="Space Mono,monospace" font-weight="700" font-size="10.5" letter-spacing="1.6" fill="#FFE500"><textPath href="#kmc">MIELLE &#183; KALAHARI MELON &#183; ALOE VERA &#183; </textPath></text><path d="M50 32c-7 9-12 15-12 21a12 12 0 0 0 24 0c0-6-5-12-12-21z" fill="#FFE500"/></svg></div>
+ </div>
+ <div class="hr">
+  <div class="kick"><span class="pill">Mielle Organics</span><span class="pill p">Kalahari Melon &amp; Aloe Vera</span></div>
+  <h1>Curls Just Wanna <em>Have Fun</em></h1>
+  <p class="hsub">Say hello to five days of moisture. A social first national launch that put 4c hair at the center of the frame and turned a haircare routine into a reason to play.</p>
+  <div class="meta">
+   <div><b>Client</b><span>Mielle Organics, a P&amp;G brand</span></div>
+   <div><b>Channels</b><span>National TV, Social, OOH</span></div>
+   <div><b>Role</b><span>Associate Creative Director, Copy</span></div>
+   <div><b>Collection</b><span>Kalahari Melon &amp; Aloe Vera Deep Hydration</span></div>
+  </div>
+  <a class="cta" href="#films">Watch The Spots</a>
+ </div>
+</header>
+
+<div class="tk" aria-hidden="true"><div class="tp">
+ <div class="gp"><span>Imagine What You Could Do In 5 Days</span><i></i><span>Curls Just Wanna Have Fun</span><i></i><span>Up To 5 Days Of Moisture</span><i></i><span>Kalahari Melon &amp; Aloe Vera</span><i></i></div>
+ <div class="gp"><span>Imagine What You Could Do In 5 Days</span><i></i><span>Curls Just Wanna Have Fun</span><i></i><span>Up To 5 Days Of Moisture</span><i></i><span>Kalahari Melon &amp; Aloe Vera</span><i></i></div>
+</div></div>
+
+<section class="sec brief" id="brief">
+ <div class="w g2">
+  <div class="rv">
+   <p class="lb">01 The Brief</p>
+   <p class="big" style="margin-top:.6em">The Kalahari Melon &amp; Aloe Vera launch was Mielle's first major launch under the <span class="em t">P&amp;G</span> umbrella. With everyone watching, we did something that had never been done before. We made women with <span class="em">4c hair</span> the aspirational hero of the whole campaign, and reframed natural hair around <span class="em p">joy, play and ease.</span></p>
+  </div>
+  <div class="pop" style="position:relative">
+   <div class="blob"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-poster-bathroom.webp?v=1" alt="" role="img" aria-label="A woman in a pink top squeezing Kalahari Melon and Aloe Vera leave in conditioner into her palm" width="1080" height="1350" loading="lazy"></div>
+   <div class="stk card"><b>Why It Matters</b>Healthy, moisturized hair unlocks creativity and confidence. The campaign treated moisture as freedom, not maintenance.</div>
+  </div>
+ </div>
+</section>
+
+<section class="sec steps" id="how">
+ <div class="w">
+  <div class="rv"><p class="lb" style="color:var(--pink)">02 The Big Idea</p><h2 class="h2" style="margin-top:.5em;max-width:calc(var(--u)*58)">Imagine What You Could Do <span class="o" style="white-space:nowrap">In 5 Days</span></h2><p class="lede" style="margin:calc(var(--u)*1.4) auto 0;text-align:center">One wash day. Five days of moisture. Five chances to switch it up. The product truth became the whole creative engine.</p></div>
+  <div class="sg">
+   <div class="st rv"><div class="ic"><svg viewBox="0 0 120 120"><defs><radialGradient id="kg1" cx="40%" cy="35%" r="65%"><stop offset="0" stop-color="#5CE0D8"/><stop offset="1" stop-color="#0E6F7A"/></radialGradient></defs><rect x="44" y="18" width="32" height="14" rx="4" fill="#0E6F7A"/><rect x="36" y="32" width="48" height="76" rx="14" fill="url(#kg1)"/><rect x="46" y="48" width="28" height="30" rx="4" fill="#FFE500" opacity=".9"/></svg></div><span class="n">01</span><h3>Wash Day, Starting Five</h3><p>Shampoo, two minute deep conditioner, leave in, weightless oil and curl glaze. Used as a system, moisture locks in for up to five days.</p></div>
+   <div class="st rv"><div class="ic"><svg viewBox="0 0 120 120"><defs><radialGradient id="kg2" cx="40%" cy="35%" r="65%"><stop offset="0" stop-color="#FFB3D9"/><stop offset="1" stop-color="#FF2E92"/></radialGradient></defs><circle cx="60" cy="62" r="40" fill="url(#kg2)"/><circle cx="46" cy="40" r="12" fill="#FF2E92"/><circle cx="74" cy="36" r="13" fill="#FF2E92"/><circle cx="60" cy="28" r="11" fill="#FF2E92"/><circle cx="34" cy="56" r="10" fill="#FF2E92"/><circle cx="86" cy="56" r="10" fill="#FF2E92"/><ellipse cx="60" cy="70" rx="18" ry="20" fill="#FFD1B3"/></svg></div><span class="n">02</span><h3>Switch It Up Daily</h3><p>Wash and go on Monday. Bantu knots by Wednesday. Carefree curls for the weekend. Every day is a new look, not a new wash.</p></div>
+   <div class="st rv"><div class="ic"><svg viewBox="0 0 120 120"><g fill="#FFE500" stroke="#0B1F22" stroke-width="2"><path d="M60 14l9 26 26 9-26 9-9 26-9-26-26-9 26-9z"/><path d="M92 68l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/><path d="M26 76l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g></svg></div><span class="n">03</span><h3>Share The Glow</h3><p>Friends, followers and neighbors all get the put on. The joy is contagious, and so is the content.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec films" id="films">
+ <div class="w">
+  <div class="fh">
+   <div class="rv"><p class="lb" style="color:var(--pink)">03 The Spots</p><h2 class="h2" style="margin-top:.5em">Mielle's First National TV Spot <span class="o">After P&amp;G</span></h2></div>
+   <div class="bdy rv"><p>Two 30 second films with one truth at the center. Moisture that lasts gives you room to live. The dialogue was written insider first, so an inter generational audience would hear itself and laugh.</p></div>
+  </div>
+  <div class="fg">
+   <article class="film rv">
+    <div class="frame" data-vimeo="1042381182"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-switchup.gif?v=1" alt="" role="img" aria-label="A naturalista switching up her curls across five days in the Switch Up spot" width="560" height="314" loading="lazy"><button class="play" type="button" aria-label="Play The Switch Up"><b></b></button></div>
+    <h3><small>Spot One</small>The Switch Up</h3>
+    <p>A naturalista's five day hair journey. Sleek wash and go, playful bantu knots, carefree curls, each look matched to the day's adventure and cheered on by her followers. A light hearted demo of the KMA Effect: every day is a chance to switch it up.</p>
+   </article>
+   <article class="film rv">
+    <div class="frame" data-vimeo="1125773424"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-feed2.gif?v=1" alt="" role="img" aria-label="A woman holding out the Kalahari Melon and Aloe Vera leave in conditioner with the line Are Too Good To Gatekeep" width="420" height="525" loading="lazy"><button class="play" type="button" aria-label="Play The Put On"><b></b></button></div>
+    <h3><small>Spot Two</small>The Put On</h3>
+    <p>Two neighbors on opposite ends of the haircare spectrum. One struggles with dry, frizzy hair. The other exudes confidence with hydrated, bouncy curls. One hallway encounter and a life saving put on later, the hero discovers the joy of long lasting moisture across shower moments, yoga class and nights out.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="fit" id="fit">
+ <div class="g2">
+  <div class="l rv">
+   <p class="lb" style="color:var(--pink)">04 Find Your Switch Up</p>
+   <p class="sf" style="margin-top:.8em">Interactive</p>
+   <h2 class="h2">What Would You Do With Five Days Of Moisture?</h2>
+   <p style="margin-top:calc(var(--u)*1.6);font:400 calc(var(--u)*.8)/1.5 var(--mo);text-transform:uppercase">Pick a mood. The KMA Effect does the rest.</p>
+   <div class="yn" id="kmyn">
+    <button type="button" class="pill" data-i="0" aria-pressed="true">Wash And Go</button>
+    <button type="button" class="pill" data-i="1" aria-pressed="false">Bantu Knots</button>
+    <button type="button" class="pill" data-i="2" aria-pressed="false">Twist Out</button>
+    <button type="button" class="pill" data-i="3" aria-pressed="false">Big Night Out</button>
+    <button type="button" class="pill" data-i="4" aria-pressed="false">Gym To Brunch</button>
+   </div>
+  </div>
+  <div class="r">
+   <p class="qs">Your Five Day Plan</p>
+   <p class="ql" id="kmql" aria-live="polite"></p>
+   <p class="qs" id="kmqs"></p>
+   <div class="dl" id="kmdl"><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec box" id="challenge">
+ <div class="w">
+  <div class="g2">
+   <div class="rv">
+    <p class="lb">05 The 5 Day Challenge</p>
+    <h2 class="h2" style="margin-top:.5em">An Advent Box <span class="o">For Your Hair</span></h2>
+    <div class="bdy" style="margin-top:calc(var(--u)*1.6)">
+     <p>To get influencers excited for launch, we built a hands on challenge so they could feel the Kalahari Melon and Aloe Vera difference first hand. The custom PR box was a five day interactive experience: each day opened a new styling challenge and a premium surprise gift.</p>
+     <p>Creators immersed themselves in the line and invited their followers to join in with their own five day vlog style content. Tap a day to open it.</p>
+    </div>
+    <div class="days" id="kmdays">
+     <button type="button" class="day"><b>1</b><span class="out">Wash Day</span><span class="in">Shampoo, deep condition, leave in. The reset.</span></button>
+     <button type="button" class="day"><b>2</b><span class="out">Wash And Go</span><span class="in">Define it, let it breathe, film the bounce.</span></button>
+     <button type="button" class="day"><b>3</b><span class="out">Knots</span><span class="in">Bantu knots in, surprise gift out.</span></button>
+     <button type="button" class="day"><b>4</b><span class="out">Twist Out</span><span class="in">Take the knots down. Volume for days.</span></button>
+     <button type="button" class="day"><b>5</b><span class="out">The Reveal</span><span class="in">Still moisturized. Post the proof.</span></button>
+    </div>
+   </div>
+   <div class="boxart pop">
+    <span class="pill y tag">Influencer PR Box</span>
+    <div class="frame"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-poster-switchup.webp?v=1" alt="" role="img" aria-label="A woman in a cream sweater smiling at the camera with her curls defined" width="1600" height="900" loading="lazy"></div>
+   </div>
+  </div>
+  <div class="feed">
+   <div class="frame pop"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-challenge.gif?v=1" alt="" role="img" aria-label="A creator filming her five day challenge from the car with the Kalahari Melon and Aloe Vera leave in" width="360" height="641" loading="lazy"></div>
+   <div class="frame pop"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-washday.gif?v=1" alt="" role="img" aria-label="Animated social post reading Meet Your Wash Day Starting 5" width="480" height="480" loading="lazy"></div>
+   <div class="frame pop"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-feed3.gif?v=1" alt="" role="img" aria-label="Social post reading Some Secrets with a woman flipping her curls" width="420" height="525" loading="lazy"></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec ts" id="times-square">
+ <div class="w g2">
+  <div class="phones pop">
+   <div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-poster-timessq.webp?v=1" alt="" role="img" aria-label="Kaylene in Times Square filming the moment she sees the billboard, captioned I'm about" width="1080" height="1920" loading="lazy"></div>
+   <div class="ph"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-poster-timessq2.webp?v=1" alt="" role="img" aria-label="Kaylene smiling with her hands to her face under the Times Square screens" width="1080" height="1920" loading="lazy"></div>
+  </div>
+  <div class="rv">
+   <p class="lb" style="color:var(--pink)">06 Times Square</p>
+   <h2 class="h2" style="margin-top:.5em">She Saw Herself <span class="o">Up There</span></h2>
+   <p class="lede" style="margin-top:calc(var(--u)*1.4)">Our lead, Kaylene, captured the moment she first saw herself on our Times Square billboard, and the campaign launch became a creator led content moment of its own.</p>
+   <p class="ql2">A proud and heartwarming moment for everyone involved in the inception and production of this campaign.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sec imp" id="impact">
+ <div class="w">
+  <div class="rv"><p class="lb" style="color:var(--pink)">07 How It Did</p><h2 class="h2" style="margin-top:.5em">Moisture That <span class="o">Showed Up</span></h2></div>
+  <div class="stats">
+   <div class="stat card rv"><b>First</b><span>National TV commercial for Mielle after the P&amp;G acquisition</span></div>
+   <div class="stat card rv"><b class="p">4c</b><span>Hair as the aspirational hero of a national campaign, for the first time</span></div>
+   <div class="stat card rv"><b>Thousands</b><span>Of views on owned channels from organic launch posts</span></div>
+   <div class="stat card rv"><b class="p">TV + Social + OOH</b><span>One idea across a national spot, Instagram, Facebook, TikTok and Times Square</span></div>
+  </div>
+  <div class="role">
+   <div class="rv"><p class="lb">My Role</p><p class="sf" style="font:italic 400 calc(var(--u)*2.2)/1.15 var(--sf);color:var(--teal2);margin-top:.4em">Associate Creative Director, Copy</p></div>
+   <div class="rv"><p>I developed the concept alongside my AD partner and crafted the scripts, messaging and copy. With a focus on insider level authenticity for an inter generational audience, I intentionally wrote the comedic dialogue to make sure it landed with cultural resonance.</p></div>
+  </div>
+ </div>
+</section>
+
+<footer class="ft">
+ <div class="w g2">
+  <div class="rv">
+   <p class="shop">Five Days. <em>Zero Dry.</em></p>
+   <p class="hsub" style="margin-top:calc(var(--u)*1.4);max-width:calc(var(--u)*30)">Curls Just Wanna Have Fun inspired women to enjoy their hair like never before, turning everyday routines into moments of freedom, fun and self expression.</p>
+   <div class="bkr"><a class="bk" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a></div>
+  </div>
+  <div class="frame pop"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-5days.webp?v=1" alt="" role="img" aria-label="Mielle ad reading Enjoy Up To 5 Days Of Moisture with the shampoo, deep conditioner and leave in" width="350" height="350" loading="lazy" style="image-rendering:auto"></div>
+ </div>
+</footer>
+</div>
+<script>
+(function(){
+  var root=document.querySelector('.km');if(!root)return;
+  var W=window,D=W.document;
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var de=host.ownerDocument.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var fit=function(){
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(W.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      set('background','none');
+    };
+    fit();W.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});W.addEventListener('load',fit);setTimeout(fit,700);
+  }
+  var $$=function(s){return [].slice.call(root.querySelectorAll(s))};
+  var rv=$$('.rv,.pop'),show=function(e){e.classList.add('on')};
+  if('IntersectionObserver' in W){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){rv.forEach(show)},2500);
+  /* smooth anchors inside the shadow root */
+  $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=root.querySelector(a.getAttribute('href'));if(!t)return;ev.preventDefault();var y=t.getBoundingClientRect().top+(W.pageYOffset||0)-40;try{W.scrollTo({top:y,behavior:'smooth'})}catch(e){W.scrollTo(0,y)}})});
+  /* vimeo play on click */
+  $$('.frame[data-vimeo]').forEach(function(f){var b=f.querySelector('.play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-vimeo');var ifr=D.createElement('iframe');ifr.src='https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0&dnt=1';ifr.allow='autoplay; fullscreen; picture-in-picture';ifr.setAttribute('allowfullscreen','');ifr.title=b.getAttribute('aria-label')||'Video';f.innerHTML='';f.appendChild(ifr)})});
+  /* five day planner */
+  var PL=[
+   ['Wash And Go Monday, <span class="hi">Still Bouncing</span> Friday.','Define it once. Refresh with the weightless oil. Zero re-wash required.'],
+   ['Knots Tonight. <span class="hi">Volume</span> For The Rest Of The Week.','Bantu knots on day two, take them down on day three. The curl glaze holds the pattern through Friday.'],
+   ['One Twist Out. <span class="hi">Five</span> Different Outfits.','Set it with the leave in and let the moisture carry the definition all week.'],
+   ['Wash Day Was Monday. <span class="hi">The Party Is Friday.</span>','The whole point of five day moisture: your best hair day lands exactly when you need it.'],
+   ['Sweat It Out. <span class="hi">Still Soft</span> By Brunch.','A quick refresh with the leave in and the curls come right back. No reset needed.']
+  ];
+  var ql=root.querySelector('#kmql'),qs=root.querySelector('#kmqs'),yn=$$('#kmyn .pill'),dl=$$('#kmdl i');
+  var pick=function(i){ql.innerHTML=PL[i][0];qs.textContent=PL[i][1];yn.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});dl.forEach(function(d){d.classList.remove('on')});var k=0;var step=function(){if(k<dl.length){dl[k].classList.add('on');k++;setTimeout(step,140)}};step()};
+  yn.forEach(function(b){b.addEventListener('click',function(){pick(+b.getAttribute('data-i'))})});
+  if(ql)pick(0);
+  /* advent days */
+  $$('#kmdays .day').forEach(function(d){d.addEventListener('click',function(){d.classList.toggle('open')})});
+})();
+</script>
+</body></html>
