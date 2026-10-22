@@ -156,6 +156,7 @@
   linear-gradient(rgba(246,241,232,.14) 1px,transparent 1px) 0 0/100% 64px,
   linear-gradient(90deg,rgba(246,241,232,.14) 1px,transparent 1px) 0 0/64px 100%,
   linear-gradient(180deg,#0A2A75,#001E60);transform:perspective(900px) rotateX(58deg);transform-origin:top;pointer-events:none}
+.wy .prog{z-index:3}
 .wy .strip{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;gap:clamp(28px,3vw,56px);padding:clamp(70px,11vh,120px) max(var(--gut),var(--gx)) clamp(60px,9vh,100px) max(var(--gut),var(--gxr));will-change:transform}
 .wy .bay:last-child{margin-right:clamp(16px,4vw,80px)}
 .wy .bay{position:relative;flex:none;display:grid;gap:0;align-items:end}
@@ -166,8 +167,10 @@
 .wy .prod:hover{transform:rotate(0deg) translateY(-6px)}
 .wy .prod .pic{position:relative;aspect-ratio:739/415;border-radius:10px;overflow:hidden;background:#000}
 .wy .prod .pic img{width:100%;height:100%;object-fit:cover}
-.wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:6px;background:rgba(246,241,232,.28);border-radius:999px;overflow:hidden}
-.wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
+.wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:12px;background:rgba(246,241,232,.22);border-radius:999px;cursor:pointer;touch-action:none;user-select:none}
+.wy .prog i{position:absolute;top:0;bottom:0;left:0;width:20%;min-width:44px;background:var(--coral);border-radius:999px;cursor:grab;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.wy .prog.drag i,.wy .prog i:active{cursor:grabbing}
+.wy .prog:focus-visible{outline:3px solid var(--coral);outline-offset:4px}
 .wy .hint{position:absolute;left:max(var(--gut),var(--gx));bottom:clamp(40px,6vh,64px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:.7em}
 .wy .hint::after{content:"";width:1.6em;height:2px;background:var(--mint);animation:wy-nudge 1.4s infinite}
 @keyframes wy-nudge{50%{transform:translateX(.5em)}}
@@ -178,7 +181,7 @@
   .wy .run{height:auto!important}
   .wy .stage{position:relative;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-top:clamp(150px,22vw,190px)}
   .wy .stage .tube,.wy .ground{display:none}
-  .wy .prog{position:static;margin:0 max(var(--gut),var(--gx)) 20px}
+  .wy .prog{position:relative;margin:0 max(var(--gut),var(--gx)) 20px}
   .wy .hint{position:static;padding:0 max(var(--gut),var(--gx)) 24px}
   .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-top:0;padding-bottom:clamp(28px,6vw,48px)}
   .wy .bay{scroll-snap-align:center}
@@ -382,8 +385,8 @@
           </div>
 
         </div>
-        <div class="hint"><span class="hd">Keep scrolling to walk the aisle</span><span class="hm">Swipe to walk the aisle</span></div>
-        <div class="prog"><i id="prog"></i></div>
+        <div class="hint"><span class="hd">Scroll, or drag the bar, to walk the aisle</span><span class="hm">Swipe, or drag the bar, to walk the aisle</span></div>
+        <div class="prog" id="progbar" role="scrollbar" aria-controls="strip" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" aria-label="Aisle position"><i id="prog"></i></div>
       </div>
     </div>
   </section>
@@ -509,7 +512,7 @@
     if(reduce){ gate.hidden=true; }
     else {
       gate.addEventListener('click',function(){gate.classList.add('skip')});
-      setTimeout(function(){gate.hidden=true},4200);
+      setTimeout(function(){gate.hidden=true},3400);
     }
   }
 
@@ -539,21 +542,54 @@
   var travel=0, isRail=false;
   function layout(){
     isRail=window.innerWidth<=1000;
-    if(isRail){ run.style.height=''; strip.style.transform=''; if(prog){var m=stage.scrollWidth-stage.clientWidth; prog.style.width=(m>0?stage.scrollLeft/m*100:0)+'%'} return; }
+    if(isRail){ run.style.height=''; strip.style.transform=''; var m=stage.scrollWidth-stage.clientWidth; setThumb(m>0?stage.scrollLeft/m:0, stage.clientWidth/Math.max(1,stage.scrollWidth)); return; }
     var sw=strip.scrollWidth, vw=stage.clientWidth, vh=stage.clientHeight||window.innerHeight;
     travel=Math.max(0,sw-vw);
     run.style.height=(travel+vh)+'px';
     onScroll();
+  }
+  var bar=q('#progbar');
+  function setThumb(frac,visible){
+    if(!prog||!bar) return;
+    var bw=bar.clientWidth, tw=Math.max(44,Math.min(bw,bw*visible)), left=(bw-tw)*Math.max(0,Math.min(1,frac));
+    prog.style.width=tw+'px'; prog.style.left=left+'px';
+    bar.setAttribute('aria-valuenow',Math.round(frac*100));
   }
   function onScroll(){
     if(isRail) return;
     var top=run.getBoundingClientRect().top;
     var x=Math.max(0,Math.min(travel,-top));
     strip.style.transform='translate3d('+(-x)+'px,0,0)';
-    if(prog) prog.style.width=(travel?(x/travel*100):0)+'%';
+    setThumb(travel?x/travel:0, stage.clientWidth/Math.max(1,strip.scrollWidth));
+  }
+  function goTo(frac){
+    frac=Math.max(0,Math.min(1,frac));
+    if(isRail){ stage.scrollLeft=frac*(stage.scrollWidth-stage.clientWidth); return; }
+    var runTop=run.getBoundingClientRect().top+window.scrollY;
+    window.scrollTo(0, runTop+frac*travel);
+  }
+  if(bar){
+    var dragging=false, grabOff=0;
+    function fracFromEvent(e){
+      var r=bar.getBoundingClientRect(), tw=prog.offsetWidth, usable=Math.max(1,r.width-tw);
+      return (e.clientX-r.left-grabOff)/usable;
+    }
+    bar.addEventListener('pointerdown',function(e){
+      var pr=prog.getBoundingClientRect();
+      if(e.clientX>=pr.left&&e.clientX<=pr.right){ grabOff=e.clientX-pr.left; } else { grabOff=pr.width/2; goTo(fracFromEvent(e)); }
+      dragging=true; bar.classList.add('drag'); bar.setPointerCapture(e.pointerId); e.preventDefault();
+    });
+    bar.addEventListener('pointermove',function(e){ if(dragging) goTo(fracFromEvent(e)); });
+    function endDrag(e){ dragging=false; bar.classList.remove('drag'); }
+    bar.addEventListener('pointerup',endDrag); bar.addEventListener('pointercancel',endDrag);
+    bar.addEventListener('keydown',function(e){
+      var now=(+bar.getAttribute('aria-valuenow')||0)/100, step=0.08;
+      if(e.key==='ArrowRight'){goTo(now+step);e.preventDefault()} else if(e.key==='ArrowLeft'){goTo(now-step);e.preventDefault()}
+      else if(e.key==='Home'){goTo(0);e.preventDefault()} else if(e.key==='End'){goTo(1);e.preventDefault()}
+    });
   }
   window.addEventListener('scroll',onScroll,{passive:true});
-  stage.addEventListener('scroll',function(){ if(!isRail||!prog) return; var m=stage.scrollWidth-stage.clientWidth; prog.style.width=(m>0?stage.scrollLeft/m*100:0)+'%'; },{passive:true});
+  stage.addEventListener('scroll',function(){ if(!isRail) return; var m=stage.scrollWidth-stage.clientWidth; setThumb(m>0?stage.scrollLeft/m:0, stage.clientWidth/Math.max(1,stage.scrollWidth)); },{passive:true});
   window.addEventListener('resize',layout);
   window.addEventListener('load',layout);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(layout);
