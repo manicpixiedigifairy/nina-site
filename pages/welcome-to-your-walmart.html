@@ -36,7 +36,6 @@
 .wy a:focus-visible,.wy button:focus-visible,.wy input:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
 .wy h1,.wy h2,.wy h3{margin:0;font-family:var(--disp);font-weight:800;line-height:.92;letter-spacing:-.025em;text-wrap:balance;font-variation-settings:"wdth" 92,"opsz" 96}
 .wy h2{font-size:var(--h2)}
-.wy h2 .fy{background-size:100% .22em;padding-bottom:.04em}
 .wy p{margin:0}
 .wy .lb{font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:.7em}
 .wy .lb::before{content:"";width:.9em;height:.9em;border-radius:50%;background:var(--coral);flex:none}
@@ -70,7 +69,11 @@
 .wy .hero h1 em{font-style:normal;color:var(--coral)}
 .wy .hero .tagline{font-size:clamp(17px,1.4vw,25px);max-width:34ch;text-wrap:balance;color:rgba(243,246,252,.85);line-height:1.45}
 .wy .hero .tagline b{font-weight:600;color:var(--paper)}
-.wy .fy{font-style:normal;color:var(--coral);text-decoration:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 30 3, 62 12, 96 7 S 150 2, 197 8' fill='none' stroke='%23001E60' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M8 12 C 50 8, 90 13, 140 9 S 175 6, 192 11' fill='none' stroke='%23001E60' stroke-width='1.6' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E") no-repeat 0 100%/100% .32em;padding-bottom:.12em}
+.wy .fy{font-style:normal;color:var(--coral);text-decoration:none;position:relative;display:inline-block;padding-bottom:.02em}
+.wy .fy::after{content:"";position:absolute;left:-3%;right:-3%;bottom:-.3em;height:.42em;background:var(--ink);-webkit-mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-underline.png?v=1") no-repeat center/100% 100%;mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-underline.png?v=1") no-repeat center/100% 100%;clip-path:inset(0 100% -60% 0);pointer-events:none}
+.wy .rv.in .fy::after{animation:wy-spray 1s cubic-bezier(.2,.7,.2,1) .35s forwards}
+@keyframes wy-spray{to{clip-path:inset(0 0% -60% 0)}}
+@media (prefers-reduced-motion:reduce){.wy .fy::after{clip-path:none;animation:none}}
 .wy .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .wy .btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;padding:1em 1.5em;border-radius:999px;border:2px solid var(--paper);color:var(--paper);background:transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s}
 .wy .btn:hover{transform:translateY(-2px)}
