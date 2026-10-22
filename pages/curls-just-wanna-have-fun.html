@@ -72,6 +72,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .meta div{border-top:1px solid rgba(38,38,38,.3);padding-top:.7em}
 .kx .meta b{display:block;font-family:var(--mo);font-weight:500;font-size:calc(var(--u)*.66);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.4em}
 .kx .meta span{font-weight:600;font-size:calc(var(--u)*.98);line-height:1.35}
+.kx .bh{font-family:var(--ds);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100;font-size:calc(var(--u)*5.6);line-height:.9;letter-spacing:-.025em;color:var(--plum);margin-bottom:calc(var(--u)*1.6)}
+.kx .bh em{font-style:italic;font-weight:400;color:var(--pink)}
 .kx .state{font-family:var(--ds);font-weight:600;font-variation-settings:"opsz" 144;font-size:calc(var(--u)*2.9);line-height:1.1;letter-spacing:-.015em;color:var(--teal)}
 .kx .state em{font-style:italic;font-weight:400;color:var(--plum)}
 .kx .bdy{margin-top:calc(var(--u)*2.2);columns:2;column-gap:calc(var(--u)*2.6);font-size:calc(var(--u)*1);line-height:1.6}
@@ -80,7 +82,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 
 /* LOOKS (tabs) */
 .kx .looks{background:var(--ink);color:var(--white);padding:calc(var(--u)*6) var(--pad)}
-.kx .looks .line{color:var(--yel);padding-left:0;padding-right:0;padding-top:0}
+.kx .looks .line{color:var(--yel);padding-left:0;padding-right:0;padding-top:0;padding-bottom:calc(var(--u)*.6)}
+.kx .looks .sub{text-align:center;color:var(--lpink)}
 .kx .tabs{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,.25);margin-top:calc(var(--u)*2)}
 .kx .tabs button{flex:1;padding:calc(var(--u)*1.1) 0;font-family:var(--mo);font-size:calc(var(--u)*.74);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);position:relative;transition:color .3s}
 .kx .tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yel);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--spring)}
@@ -220,7 +223,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  .kx .og .o.s3{grid-column:1/-1}
  .kx .og .o.s3 img{max-height:none;aspect-ratio:16/10;object-position:50% 30%}
  .kx .res{grid-template-columns:1fr 1fr}
- .kx .brief .wmk{font-size:min(120px,22vw)}
+ .kx .bh{font-size:min(56px,12vw)}
  .kx .tabs button{font-size:10px;letter-spacing:.08em}
 }
 @media (max-width:640px){
@@ -254,9 +257,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 </header>
 
 <section class="brief" id="brief">
- <span class="wmk" aria-hidden="true">freedom of style</span>
  <div class="g">
   <div class="rv">
+   <h2 class="bh">Freedom of <em>style</em></h2>
    <p class="state">Inspire naturals to reclaim their relationship with their hair. Position Kalahari Melon &amp; Aloe Vera as the key to <em>the freedom of time</em> and the power of <em>uncompromising style.</em></p>
    <div class="bdy">
     <p>This was Mielle's first major launch under the P&amp;G umbrella, and everyone was watching. The brief was to make KMA the go to solution for type 4 hair and connect it to a bigger story about personal agency and self expression.</p>
@@ -269,33 +272,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 
 <section class="looks" id="films">
  <p class="line mo">Hero spot</p>
- <div class="tabs" role="tablist">
-  <button type="button" role="tab" aria-selected="true" data-t="0">01 The Switch Up</button>
-  <button type="button" role="tab" aria-selected="false" data-t="1">02 The Put On</button>
-  <button type="button" role="tab" aria-selected="false" data-t="2">03 The Color Story</button>
- </div>
+ <p class="mo sub">Spot 01 &middot; :30</p>
  <div class="panel on" role="tabpanel">
-  <div class="film" data-vimeo="1042381182"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-day1-still.webp?v=1" alt="" role="img" aria-label="Our lead live from her room asking if her curls will survive five styles in five days, from the Switch Up spot" width="1600" height="900" loading="lazy"><button class="play" type="button" aria-label="Play The Switch Up"><b></b><small>Spot 01 &middot; :30</small></button></div>
-  <div class="pt"><p class="mo">Spot one</p><h3>The <em>Switch</em> Up</h3><p>A naturalista's five day hair journey, told look by look. Sleek wash and go, playful bantu knots, carefree curls, each matched to the day's adventure and cheered on by her followers. A light hearted demo of the KMA Effect: every day is a chance to switch it up.</p></div>
- </div>
- <div class="panel" role="tabpanel">
-  <div class="film" data-vimeo="1125773424"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-mirror.webp?v=1" alt="" role="img" aria-label="A woman in a pink top taking a mirror selfie with her curls defined, from the Put On spot" width="1920" height="1080" loading="lazy"><button class="play" type="button" aria-label="Play The Put On"><b></b><small>Spot 02 &middot; :30</small></button></div>
-  <div class="pt"><p class="mo">Spot two</p><h3>The <em>Put</em> On</h3><p>Two neighbors on opposite ends of the haircare spectrum. One struggles with dry, frizzy hair. The other exudes confidence with hydrated, bouncy curls. One hallway encounter and a life saving put on later, the hero discovers the joy of long lasting moisture across shower moments, yoga class and nights out.</p></div>
- </div>
- <div class="panel" role="tabpanel">
-  <div class="cs"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-colorstory.gif?v=1" alt="" role="img" aria-label="The campaign color story: set stills from the Put On with the Mielle palette swatches named over them" width="900" height="760" loading="lazy"></div>
-  <div class="pt"><p class="mo">Art department</p><h3>The <em>Color</em> Story</h3><p>Every set, wardrobe and prop choice pulled from one palette, so the world felt sun lit, saturated and free of the tired tropes that usually dress natural hair. Tap a swatch.</p>
-   <div class="sw" id="kxsw">
-    <button type="button" style="background:#027B8C;color:#fff" data-c="#027B8C">Kalahari Melon Teal</button>
-    <button type="button" style="background:#E81C75;color:#fff" data-c="#E81C75">Mielle Pink</button>
-    <button type="button" style="background:#FAE200;color:#262626" data-c="#FAE200">Kalahari Melon Yellow</button>
-    <button type="button" style="background:#F7AAD6;color:#262626" data-c="#F7AAD6">Mielle Light Pink</button>
-    <button type="button" style="background:#6B2059;color:#fff" data-c="#6B2059">Sweet Plum</button>
-    <button type="button" style="background:#BBD21D;color:#262626" data-c="#BBD21D">Lemon Lime</button>
-    <button type="button" style="background:#FCE5CD;color:#262626" data-c="#FCE5CD">Warm Grey</button>
-    <button type="button" style="background:#783F04;color:#fff" data-c="#783F04">Rich Chocolate</button>
-   </div>
-  </div>
+  <div class="film" data-vimeo="1042381182"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-day1-still.webp?v=1" alt="" role="img" aria-label="Our lead live from her room asking if her curls will survive five styles in five days, from the Switch Up spot" width="1600" height="900" loading="lazy"><button class="play" type="button" aria-label="Play The Switch Up"><b></b></button></div>
+  <div class="pt"><h3>The <em>Switch</em> Up</h3><p>A naturalista's five day hair journey, told look by look. Sleek wash and go, playful bantu knots, carefree curls, each matched to the day's adventure and cheered on by her followers. A light hearted demo of the KMA Effect: every day is a chance to switch it up.</p></div>
  </div>
 </section>
 
