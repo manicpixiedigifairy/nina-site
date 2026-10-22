@@ -162,10 +162,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 /* OOH */
 .kx .ooh{background:var(--teal);color:var(--white);padding:calc(var(--u)*6) var(--pad)}
 .kx .ooh .line{color:var(--yel);padding-left:0;padding-right:0;padding-top:0}
-.kx .og{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*3);align-items:end}
+.kx .og{display:grid;grid-template-columns:1fr;max-width:calc(var(--u)*34);margin:calc(var(--u)*3) auto 0}
 .kx .og .o{border-radius:calc(var(--u)*1);overflow:hidden;background:var(--teal2);position:relative}
 .kx .og .o img{width:100%;height:100%;object-fit:cover}
-.kx .og .o.s1 img{aspect-ratio:1}.kx .og .o.s2 img{aspect-ratio:1}.kx .og .o.s3 img{aspect-ratio:360/641;max-height:calc(var(--u)*34)}
+.kx .og .o.s1 img{aspect-ratio:1}.kx .og .o.s2 img{aspect-ratio:1}.kx .og .o.s3 img{aspect-ratio:360/641}
 .kx .og .o .c{position:absolute;left:calc(var(--u)*1);bottom:calc(var(--u)*1);font-family:var(--mo);font-size:calc(var(--u)*.64);letter-spacing:.12em;text-transform:uppercase;background:var(--yel);color:var(--ink);padding:.6em .9em;border-radius:999px}
 .kx .ooh .q{margin-top:calc(var(--u)*3.2);display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*3);align-items:center}
 .kx .ooh .q p.big{font-family:var(--ds);font-weight:600;font-variation-settings:"opsz" 144;font-size:calc(var(--u)*2.4);line-height:1.1;color:var(--yel)}
@@ -218,9 +218,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  .kx .stories{grid-template-columns:1fr 1fr}
  .kx .st:nth-child(even){transform:none}
  .kx .cm{grid-template-columns:1fr}
- .kx .og{grid-template-columns:1fr 1fr}
- .kx .og .o.s3{grid-column:1/-1}
- .kx .og .o.s3 img{max-height:none;aspect-ratio:16/10;object-position:50% 30%}
  .kx .res{grid-template-columns:1fr 1fr}
  .kx .bh{font-size:min(56px,12vw)}
  .kx .tabs button{font-size:10px;letter-spacing:.08em}
@@ -296,7 +293,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  <p class="line mo">The social layer</p>
  <div class="hd">
   <h2 class="rv">Kept the <em>conversation</em> going</h2>
-  <p class="rv">Stills from the shoot were cut, flipped and re captioned into a social first run that lived past launch week. Story ads counted the days, paid units sold the one wash promise, and the comments did the rest.</p>
+  <p class="rv">Footage from the shoot was cut, flipped and re captioned into a social first run that lived past launch week. Story ads counted the days, paid units sold the one wash promise, and the comments did the rest.</p>
  </div>
  <div class="stories">
   <div class="st rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-story-1.gif?v=1" alt="" role="img" aria-label="Story ad reading 5 Days Of Max Moisture over a woman flipping her curls" width="320" height="572" loading="lazy"><p class="c"><span>Story 01</span><span>Max moisture</span></p></div>
@@ -308,42 +305,16 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
   <div class="bx rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-paid-social.webp?v=1" alt="" role="img" aria-label="Two paid social units reading Up To 5 Days Of Camera Ready Curls" width="1400" height="1472" loading="lazy"><p class="c"><span>Paid social</span><span>Camera ready curls</span></p></div>
   <div class="bx rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-twophones.gif?v=1" alt="" role="img" aria-label="Two phone mockups reading 1 Wash Up To 5 Days Of Moisture" width="1000" height="1051" loading="lazy"><p class="c"><span>Feed units</span><span>One wash, five days</span></p></div>
  </div>
- <div class="cm">
-  <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-story-a.webp?v=1" alt="" role="img" aria-label="Social frame with a comment reading Wearing your hair out on day 5 is a flex" width="500" height="279" loading="lazy"><figcaption>"Wearing your hair out on day 5 is a flex!"</figcaption></figure>
-  <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-story-b.webp?v=1" alt="" role="img" aria-label="Social frame with a comment reading Okay, you convinced me" width="500" height="279" loading="lazy"><figcaption>"Okay, you convinced me!"</figcaption></figure>
-  <figure class="rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-story-c.webp?v=1" alt="" role="img" aria-label="Friends in a living room watching the spot on a phone" width="500" height="279" loading="lazy"><figcaption>Friends watching the put on</figcaption></figure>
- </div>
 </section>
 
 <section class="ooh" id="ooh">
  <p class="line mo">Out of home</p>
  <div class="og">
-  <div class="o rv s1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-ooh.gif?v=1" alt="" role="img" aria-label="Bus shelter poster reading Up To 5 Days Of Turning Heads" width="720" height="720" loading="lazy"><span class="c">Bus shelter</span></div>
-  <div class="o rv s2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-screen.webp?v=1" alt="" role="img" aria-label="Indoor digital screen in a mall showing the Kalahari Melon and Aloe Vera ad" width="1400" height="1382" loading="lazy"><span class="c">Indoor screen</span></div>
   <div class="o rv s3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-billboard.gif?v=1" alt="" role="img" aria-label="The Curls Just Wanna Have Fun billboard lighting up over Times Square at night" width="360" height="641" loading="lazy"><span class="c">Times Square</span></div>
  </div>
  <div class="q">
   <p class="big rv">Our lead captured the moment she first saw herself on the Times Square billboard, and the launch became <em>a creator led moment of its own.</em></p>
-  <p class="sm rv">A proud and heartwarming moment for everyone involved in the inception and production of this campaign. The billboard, the bus shelters and the indoor screens all ran one line: imagine what you could do in 5 days?</p>
- </div>
-</section>
-
-<section class="about" id="results">
- <div class="g">
-  <div class="ph bn"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-bathroom.webp?v=1" alt="" role="img" aria-label="A woman in a pink top squeezing Kalahari Melon and Aloe Vera leave in conditioner into her palm" width="1080" height="1350" loading="lazy"></div>
-  <div>
-   <h2 class="rv">Moisture that <em>showed up</em></h2>
-   <div class="res">
-    <div class="rv"><b>First</b><span>National TV spot for Mielle after the P&amp;G acquisition</span></div>
-    <div class="rv"><b class="p">4c</b><span>Hair as the aspirational hero of a national campaign</span></div>
-    <div class="rv"><b>Thousands</b><span>Of views on owned channels from organic launch posts</span></div>
-    <div class="rv"><b class="p">TV + Social + OOH</b><span>One idea across the spot, Instagram, Facebook, TikTok and Times Square</span></div>
-   </div>
-   <div class="role rv">
-    <p class="mo">Role &middot; Associate Creative Director, Copy</p>
-    <p>Developed the concept alongside an AD partner and crafted the scripts, messaging and copy. With a focus on insider level authenticity for an inter generational audience, the comedic dialogue was written on purpose so it landed with cultural resonance.</p>
-   </div>
-  </div>
+  <p class="sm rv">A proud and heartwarming moment for everyone involved in the inception and production of this campaign. Times Square ran the same line as everything else: imagine what you could do in 5 days?</p>
  </div>
 </section>
 
