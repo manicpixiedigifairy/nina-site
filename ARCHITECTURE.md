@@ -110,6 +110,7 @@ Section is the Notion tracker section. Repo file is the file in `pages/`. Netlif
 | Live slug | Repo file | Netlify |
 | --- | --- | --- |
 | `/never-ever` | `butterfinger-never-ever.html` | built |
+| `/wtyw` (new page) | `welcome-to-your-walmart.html` | not in PAGES yet. Surreal supermarket walk-through of the Walmart app launch campaign, root `.wy`: Bricolage Grotesque display, Instrument Sans body, Space Mono labels, True Blue `#001E60` ground and ink, Bentonville Blue `#0053E2`, Spark Yellow `#FFC220`, sky `#8ED8FA` fluorescent tubes. Sections: entrance (split hero, film in a framed storefront window with automatic doors that slide open once), Aisle One slider shelf (cans turn from Everything into named items, self-nudges on first view), Aisle Two sideways-scroll aisle (`#run` sticky stage, scroll-snap rail at 1000px and below) with store directory, Checkout price-check scanner and loyalty stamps, Customer Copy receipt that prints line by line, exit doors. No marquee. Hero spot links out to Vimeo 1230558835. Assets `wtyw-*.gif` (4, re-encoded from the Squarespace page's GIFs). Loader generated; Squarespace Code Block on `/wtyw` still holds the native page until the loader is pasted. |
 | `/people-not-profit` | `people-not-profit.html` | not in PAGES yet. Tracker row "CTCP — People Not Profit" (Commercials, Editing (Unpublished)). Loader Block not pasted yet. Assets `pnp-*` (13 files). Four Vimeo spots: Fallen Hero 434524608, Kito 434537001, Yazmin 434536829, Cram 434536950. |
 | `/plan-for-the-best`, `/for-your-lifes-work`, `/curls-just-wanna-have-fun`, `/never-through`, `/tiny-wins`, `/how-you-moto`, `/wtyw` | none (Squarespace native) | redirect to Squarespace |
 
@@ -123,7 +124,7 @@ Navigation: landing tabs link Commercials, Content, Experiential. Project pages 
 
 ## 7. Assets
 
-Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `bf100` Butterfinger 100, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart, `dd` Dear Dad, `suave`, `silk`, `sw` Selected Works (8 article covers plus `sw-headshot.webp`), `ripe` ripe spec microsite, `wts` What the Spec. Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
+Flat folder. Prefix is the campaign: `bwb` Brunch, `bc` Beautycon, `am` Air Max Day, `bfn` Butterfinger, `bf100` Butterfinger 100, `th` Tommy Hilfiger Monogram, `sts` Seize The Summer, `nk` Nike Come Thru, `okv` OK V-Day, `rr` Restaurant Royalty, `shea` Shea Us What You Got (heaviest at about 69 MB), `ds` Streamathon, `ph` Pizza Hut, `amdww` Walmart Beautycon, `wtyw` Welcome To Your Walmart, `dd` Dear Dad, `suave`, `silk`, `sw` Selected Works (8 article covers plus `sw-headshot.webp`), `ripe` ripe spec microsite, `wts` What the Spec. Landing cards use a `-poster.webp` plus `.gif` pair per project in `home-gallery/assets/`.
 
 Rules: WebP for stills, real animated GIF kept as GIF (optimized with ffmpeg palettegen and gifsicle lossy), no deck-only or non-live assets, cache bust with `?v=N` after replacing a file. Assets can not be uploaded to Notion from the shell, so Nina adds new assets to the Notion Assets property by hand.
 
