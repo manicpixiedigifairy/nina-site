@@ -120,7 +120,9 @@
 
 /* ---------- aisle one: the shift (slider shelf) ---------- */
 .wy .shift{background:var(--paper)}
-.wy .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-top:clamp(56px,8vw,120px)}
+.wy .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-bottom:clamp(40px,5vw,72px)}
+.wy .brief{display:grid;gap:.9em}
+.wy .shift{padding-bottom:0}
 @media (max-width:1000px){.wy .duo{grid-template-columns:1fr}}
 .wy .duo .lead{max-width:none}
 .wy .duo .lb{margin-bottom:.9em}
@@ -145,14 +147,14 @@
   linear-gradient(rgba(246,241,232,.14) 1px,transparent 1px) 0 0/100% 64px,
   linear-gradient(90deg,rgba(246,241,232,.14) 1px,transparent 1px) 0 0/64px 100%,
   linear-gradient(180deg,#0A2A75,#001E60);transform:perspective(900px) rotateX(58deg);transform-origin:top;pointer-events:none}
-.wy .strip{position:absolute;left:0;top:0;height:100%;display:flex;align-items:flex-end;gap:clamp(28px,3vw,56px);padding:0 max(var(--gut),var(--gx)) clamp(60px,10vh,120px) max(var(--gut),var(--gxr));will-change:transform}
+.wy .strip{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;gap:clamp(28px,3vw,56px);padding:clamp(70px,11vh,120px) max(var(--gut),var(--gx)) clamp(60px,9vh,100px) max(var(--gut),var(--gxr));will-change:transform}
 .wy .bay:last-child{margin-right:clamp(16px,4vw,80px)}
 .wy .bay{position:relative;flex:none;display:grid;gap:0;align-items:end}
-.wy .bay .asign{position:absolute;left:50%;transform:translateX(-50%) rotate(-1deg);top:clamp(-170px,-17vh,-120px);background:var(--paper);color:var(--ink);border-radius:6px;padding:.9em 1.3em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:0 14px 0 -6px var(--coral),0 22px 40px rgba(0,0,0,.4);text-align:center}
-.wy .bay .asign::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:clamp(40px,6vh,80px);background:rgba(246,241,232,.35)}
+.wy .bay .asign{position:absolute;left:50%;transform:translateX(-50%) rotate(-1deg);top:clamp(-140px,-14vh,-104px);background:var(--paper);color:var(--ink);border-radius:6px;padding:.9em 1.3em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:0 14px 0 -6px var(--coral),0 22px 40px rgba(0,0,0,.4);text-align:center}
+.wy .bay .asign::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:clamp(28px,4vh,48px);background:rgba(246,241,232,.35)}
 .wy .bay .asign b{display:block;font-family:var(--disp);font-weight:800;font-size:2em;letter-spacing:-.01em;text-transform:none;line-height:1;margin-top:.15em;font-variation-settings:"wdth" 88}
 .wy .bay .asign i{font-style:normal;color:var(--coral2)}
-.wy .prod{position:relative;width:min(72vw,720px);background:var(--paper);border-radius:18px;padding:clamp(10px,1vw,16px);box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(var(--r,0deg));transition:transform .4s}
+.wy .prod{position:relative;width:min(70vw,800px);background:var(--paper);border-radius:18px;padding:clamp(10px,1vw,16px);box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(var(--r,0deg));transition:transform .4s}
 .wy .prod:hover{transform:rotate(0deg) translateY(-6px)}
 .wy .prod .pic{aspect-ratio:739/415;border-radius:10px;overflow:hidden;background:#000}
 .wy .prod .pic img{width:100%;height:100%;object-fit:cover}
@@ -163,8 +165,8 @@
 .wy .price b{display:block;font-family:var(--disp);font-size:1.9em;letter-spacing:-.02em;line-height:1}
 .wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:4px;background:rgba(246,241,232,.18);border-radius:999px;overflow:hidden}
 .wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
-.wy .hint{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:.7em}
-.wy .hint::after{content:"";width:1.6em;height:2px;background:var(--coral2);animation:wy-nudge 1.4s infinite}
+.wy .hint{position:absolute;left:max(var(--gut),var(--gx));bottom:clamp(40px,6vh,64px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:.7em}
+.wy .hint::after{content:"";width:1.6em;height:2px;background:var(--mint);animation:wy-nudge 1.4s infinite}
 @keyframes wy-nudge{50%{transform:translateX(.5em)}}
 .wy .hint .hm{display:none}
 @media (max-width:1000px){.wy .hint .hd{display:none}.wy .hint .hm{display:inline}}
@@ -173,7 +175,8 @@
   .wy .run{height:auto!important}
   .wy .stage{position:relative;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-top:clamp(150px,22vw,190px)}
   .wy .stage .tube,.wy .ground,.wy .prog{display:none}
-  .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-bottom:clamp(40px,8vw,72px)}
+  .wy .hint{position:static;padding:0 max(var(--gut),var(--gx)) 24px}
+  .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-top:0;padding-bottom:clamp(28px,6vw,48px)}
   .wy .bay{scroll-snap-align:center}
   .wy .bay .asign{top:-130px}
   .wy .prod{width:min(84vw,560px)}
@@ -322,9 +325,12 @@
       <div class="lb">Aisle One: The Shift</div>
       <div class="row">
         <h2>From Everything To Everything <em class="fy">For You</em></h2>
-        <p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p>
+        <div class="brief"><div class="lb">The Challenge</div><p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p></div>
       </div>
-      <div class="hint"><span class="hd">Keep scrolling to walk the aisle</span><span class="hm">Swipe to walk the aisle</span></div>
+    </div>
+    <div class="duo rvwrap">
+      <div class="rv"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
+      <div class="rv"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
     </div>
     <div class="run" id="run">
       <div class="stage" id="stage">
@@ -357,12 +363,9 @@
           </div>
 
         </div>
+        <div class="hint"><span class="hd">Keep scrolling to walk the aisle</span><span class="hm">Swipe to walk the aisle</span></div>
         <div class="prog"><i id="prog"></i></div>
       </div>
-    </div>
-    <div class="duo">
-      <div class="rv"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
-      <div class="rv"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
     </div>
   </section>
 
