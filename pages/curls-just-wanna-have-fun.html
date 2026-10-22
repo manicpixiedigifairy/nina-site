@@ -67,7 +67,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 /* BRIEF */
 .kx .brief{position:relative;background:var(--grey);padding:calc(var(--u)*7) var(--pad);overflow:hidden}
 .kx .brief .wmk{position:absolute;left:calc(var(--u)*-1);bottom:calc(var(--u)*-1.5);font-family:var(--ds);font-style:italic;font-weight:400;font-size:calc(var(--u)*13);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(232,28,117,.3);white-space:nowrap;pointer-events:none;transform:rotate(-4deg)}
-.kx .brief .g{position:relative;display:grid;grid-template-columns:1fr;max-width:calc(var(--u)*72);margin:0 auto}
+.kx .brief .g{position:relative;display:grid;grid-template-columns:1fr;max-width:calc(var(--u)*84);margin:0 auto}
 .kx .meta{display:flex;flex-direction:column;gap:calc(var(--u)*1.4)}
 .kx .meta div{border-top:1px solid rgba(38,38,38,.3);padding-top:.7em}
 .kx .meta b{display:block;font-family:var(--mo);font-weight:500;font-size:calc(var(--u)*.66);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.4em}
@@ -76,9 +76,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .bh em{font-style:italic;font-weight:400;color:var(--pink)}
 .kx .state{font-family:var(--ds);font-weight:600;font-variation-settings:"opsz" 144;font-size:calc(var(--u)*2.9);line-height:1.1;letter-spacing:-.015em;color:var(--teal)}
 .kx .state em{font-style:italic;font-weight:400;color:var(--plum)}
-.kx .bdy{margin-top:calc(var(--u)*2.2);columns:2;column-gap:calc(var(--u)*2.6);font-size:calc(var(--u)*1);line-height:1.6}
-.kx .bdy p+p{margin-top:1em}
-.kx .bdy p{break-inside:avoid}
+.kx .bdy{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*3);font-size:calc(var(--u)*1.08);line-height:1.6}
+.kx .bdy .lab{color:var(--pink);font-weight:500;margin-bottom:.9em;padding-bottom:.6em;border-bottom:1px solid rgba(107,32,89,.3)}
 
 /* LOOKS (tabs) */
 .kx .looks{background:var(--ink);color:var(--white);padding:calc(var(--u)*6) var(--pad)}
@@ -212,7 +211,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  .kx .tile{aspect-ratio:4/3}
  .kx .brief .g,.kx .panel,.kx .dg,.kx .social .hd,.kx .row2,.kx .about .g,.kx .ooh .q{grid-template-columns:1fr}
  .kx .panel.on{display:flex;flex-direction:column}
- .kx .bdy{columns:1}
+ .kx .bdy{grid-template-columns:1fr;gap:1.6rem}
  .kx .state{font-size:min(30px,6.5vw)}
  .kx .stick{position:static}
  .kx .stick .big{font-size:min(140px,30vw)}
@@ -256,12 +255,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 <section class="brief" id="brief">
  <div class="g">
   <div class="rv">
-   <h2 class="bh">Freedom of <em>style</em></h2>
-   <p class="state">Inspire naturals to reclaim their relationship with their hair. Position Kalahari Melon &amp; Aloe Vera as the key to <em>the freedom of time</em> and the power of <em>uncompromising style.</em></p>
    <div class="bdy">
-    <p>This was Mielle's first major launch under the P&amp;G umbrella, and everyone was watching. The brief was to make KMA the go to solution for type 4 hair and connect it to a bigger story about personal agency and self expression.</p>
-    <p>So we did something the category had never done. We made women with 4c hair the aspirational hero of a national campaign, rejected the outdated and demeaning tropes that follow natural hair around, and cast fresh archetypes who reflected a wider spectrum of natural beauty.</p>
-    <p>The product truth did the rest. Used as a system, the collection locks in moisture for up to five days. One wash day becomes five days of switching it up, and the campaign became playful, vibrant proof that healthy, moisturized hair gives you room to play.</p>
+    <div class="bk3"><p class="mo lab">The Ask</p><p>This was Mielle's first major launch under the P&amp;G umbrella, and everyone was watching. The brief was to make KMA the go to solution for type 4 hair and connect it to a bigger story about personal agency and self expression.</p></div>
+    <div class="bk3"><p class="mo lab">The Way In</p><p>So we did something the category had never done. We made women with 4c hair the aspirational hero of a national campaign, positioning Kalahari Melon &amp; Aloe Vera as the key to the freedom of time and the power of uncompromising style.</p></div>
+    <div class="bk3"><p class="mo lab">The Insight</p><p>The product truth did the rest. Used as a system, the collection locks in moisture for up to five days. One wash day becomes five days of healthy, moisturized hair.</p></div>
    </div>
   </div>
  </div>
