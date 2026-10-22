@@ -89,7 +89,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yel);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--spring)}
 .kx .tabs button[aria-selected=true]{color:var(--yel)}
 .kx .tabs button[aria-selected=true]::after{transform:scaleX(1)}
-.kx .panel{display:none;margin-top:calc(var(--u)*3);grid-template-columns:1.5fr 1fr;gap:calc(var(--u)*3);align-items:center}
+.kx .panel{display:none;margin-top:calc(var(--u)*1);grid-template-columns:1.5fr 1fr;gap:calc(var(--u)*3);align-items:center}
 .kx .panel.on{display:grid;animation:kxIn .7s var(--spring)}
 @keyframes kxIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .kx .film{position:relative;aspect-ratio:16/9;background:#000;border-radius:calc(var(--u)*1);overflow:hidden}
@@ -100,9 +100,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .play b::after{content:"";margin-left:.35em;border-style:solid;border-width:calc(var(--u)*.95) 0 calc(var(--u)*.95) calc(var(--u)*1.6);border-color:transparent transparent transparent var(--ink)}
 .kx .play:hover b{transform:scale(1.12) rotate(-8deg)}
 .kx .play small{position:absolute;bottom:calc(var(--u)*1);left:calc(var(--u)*1);font-family:var(--mo);font-size:calc(var(--u)*.68);letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:rgba(38,38,38,.75);padding:.6em .9em;border-radius:999px}
-.kx .pt h3{font-family:var(--ds);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100;font-size:calc(var(--u)*3.4);line-height:.95;letter-spacing:-.02em;color:var(--yel)}
-.kx .pt h3 em{font-style:italic;font-weight:400;color:var(--lpink)}
-.kx .pt p{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1);line-height:1.6;color:rgba(255,255,255,.85)}
+.kx .pt h3{font-family:var(--ds);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100;font-size:calc(var(--u)*3.4);line-height:.95;letter-spacing:-.02em;color:var(--teal)}
+.kx .pt h3 em{font-style:italic;font-weight:400;color:var(--pink)}
+.kx .pt p{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1);line-height:1.6;color:var(--ink)}
 .kx .pt .mo{color:var(--lpink);margin-bottom:.8em}
 .kx .sw{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.6)}
 .kx .sw button{aspect-ratio:1;border-radius:calc(var(--u)*.6);display:flex;align-items:flex-end;padding:.6em;font-family:var(--mo);font-size:calc(var(--u)*.58);letter-spacing:.08em;text-transform:uppercase;line-height:1.3;text-align:left;transition:transform .5s var(--spring)}
@@ -128,10 +128,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .stick .dots i.on{background:var(--pink);border-color:var(--pink);color:#fff;transform:scale(1.15)}
 .kx .stack{display:flex;flex-direction:column;gap:calc(var(--u)*3)}
 .kx .day{position:relative;padding:calc(var(--u)*1.2);border-radius:calc(var(--u)*1.4)}
-.kx .day:nth-child(1){background:var(--lpink)}.kx .day:nth-child(2){background:var(--yel)}.kx .day:nth-child(3){background:var(--teal)}.kx .day:nth-child(4){background:var(--grey)}.kx .day:nth-child(5){background:var(--pink)}
+.kx .day:nth-child(1){background:var(--lpink)}.kx .day:nth-child(2){background:var(--yel)}.kx .day:nth-child(3){background:var(--teal)}.kx .day:nth-child(4){background:var(--pink)}
 .kx .day img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:calc(var(--u)*.7)}
 .kx .day .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*1) calc(var(--u)*.3) 0;font-family:var(--mo);font-size:calc(var(--u)*.68);letter-spacing:.12em;text-transform:uppercase}
-.kx .day:nth-child(3) .cap,.kx .day:nth-child(5) .cap{color:var(--white)}
 .kx .day .cap em{font-style:normal;opacity:.7}
 .kx .day .bub{position:absolute;right:calc(var(--u)*-1.2);top:calc(var(--u)*-1.2);background:var(--white);color:var(--ink);border-radius:999px;padding:.7em 1.1em;font-family:var(--ds);font-style:italic;font-size:calc(var(--u)*1.1);box-shadow:0 calc(var(--u)*.5) calc(var(--u)*1.2) rgba(38,38,38,.2);transform:rotate(4deg)}
 
@@ -270,17 +269,13 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  </div>
 </section>
 
-<section class="looks" id="films">
+<section class="days" id="days">
  <p class="line mo">Hero spot</p>
- <p class="mo sub">Spot 01 &middot; :30</p>
  <div class="panel on" role="tabpanel">
   <div class="film" data-vimeo="1042381182"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-day1-still.webp?v=1" alt="" role="img" aria-label="Our lead live from her room asking if her curls will survive five styles in five days, from the Switch Up spot" width="1600" height="900" loading="lazy"><button class="play" type="button" aria-label="Play The Switch Up"><b></b></button></div>
   <div class="pt"><h3>The <em>Switch</em> Up</h3><p>A naturalista's five day hair journey, told look by look. Sleek wash and go, playful bantu knots, carefree curls, each matched to the day's adventure and cheered on by her followers. A light hearted demo of the KMA Effect: every day is a chance to switch it up.</p></div>
  </div>
-</section>
-
-<section class="days" id="days">
- <p class="line mo">Living between wash days</p>
+ <p class="line mo" style="padding-top:calc(var(--u)*4)">Living between wash days</p>
  <div class="dg">
   <div class="stick">
    <p class="big"><span class="d" id="kxnum">01</span><small id="kxday">Monday</small></p>
@@ -289,11 +284,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
    <div class="dots" id="kxdots"><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i></div>
   </div>
   <div class="stack" id="kxstack">
-   <div class="day bn" data-i="0"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day1.gif?v=1" alt="" role="img" aria-label="Day one of the Switch Up spot: our lead live from her room asking if her curls will survive five styles in five days with no rewash" width="520" height="292" loading="lazy"><p class="cap"><span>Day 01 &middot; In her room</span><em>Wash and go</em></p><span class="bub">will my curls survive?!</span></div>
-   <div class="day bn" data-i="1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day2.gif?v=1" alt="" role="img" aria-label="Day two of the Switch Up spot: our lead in her car in pink sunglasses spraying the weightless oil" width="520" height="292" loading="lazy"><p class="cap"><span>Day 02 &middot; In her car</span><em>Refresh on the go</em></p><span class="bub">still bouncing</span></div>
-   <div class="day bn" data-i="2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day3.gif?v=1" alt="" role="img" aria-label="Day three of the Switch Up spot: our lead in a headwrap filming herself in the park as the likes roll in" width="520" height="292" loading="lazy"><p class="cap"><span>Day 03 &middot; In the park</span><em>Headwrap and bantu knots</em></p><span class="bub">got mine!</span></div>
-   <div class="day bn" data-i="3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-mirror.webp?v=1" alt="" role="img" aria-label="A woman in a pink top taking a mirror selfie with her curls defined" width="1920" height="1080" loading="lazy"><p class="cap"><span>Day 04 &middot; Mirror check</span><em>Twist out, knots down</em></p><span class="bub">turning heads</span></div>
-   <div class="day bn" data-i="4"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day5.gif?v=1" alt="" role="img" aria-label="Day five of the Switch Up spot: our lead on a video call as her friends raid her cabinet for the Kalahari Melon line" width="520" height="292" loading="lazy"><p class="cap"><span>Day 05 &middot; Friends raid the cabinet</span><em>Carefree curls</em></p><span class="bub">day 5 is a flex</span></div>
+   <div class="day bn" data-i="0"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day1.gif?v=1" alt="" role="img" aria-label="Day one of the Switch Up spot: our lead live from her room asking if her curls will survive five styles in five days with no rewash" width="520" height="292" loading="lazy"></div>
+   <div class="day bn" data-i="1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day2.gif?v=1" alt="" role="img" aria-label="Day two of the Switch Up spot: our lead in her car in pink sunglasses spraying the weightless oil" width="520" height="292" loading="lazy"></div>
+   <div class="day bn" data-i="2"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day3.gif?v=1" alt="" role="img" aria-label="Day three of the Switch Up spot: our lead in a headwrap filming herself in the park as the likes roll in" width="520" height="292" loading="lazy"></div>
+   <div class="day bn" data-i="3"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kma-gif-day5.gif?v=1" alt="" role="img" aria-label="Day five of the Switch Up spot: our lead on a video call as her friends raid her cabinet for the Kalahari Melon line" width="520" height="292" loading="lazy"></div>
   </div>
  </div>
 </section>
@@ -392,11 +386,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
    ['01','Monday','Wash day. <em>The reset.</em>','Shampoo, two minute deep conditioner, leave in, weightless oil, curl forming glaze. Five products, one routine, moisture for the next five days.'],
    ['02','Tuesday','Wash and go. <em>Still bouncing.</em>','Define it once, refresh with the weightless oil on the way out. Zero re wash required.'],
    ['03','Wednesday','Knots in. <em>Volume for days.</em>','Bantu knots tonight, headwrap in the park, the likes roll in. The curl glaze holds the pattern.'],
-   ['04','Thursday','Twist out. <em>Turning heads.</em>','Knots down, mirror check, out the door. Moisture that lasts gives you room to live.'],
-   ['05','Friday','The reveal. <em>Day five is a flex.</em>','Friends raid the cabinet. Still moisturized, still carefree. Post the proof.']
+   ['05','Thursday to Friday','Twist out, then the reveal. <em>Day five is a flex.</em>','Knots down, out the door, friends raid the cabinet. Still moisturized, still carefree. Post the proof.']
   ];
   var num=root.querySelector('#kxnum'),dayl=root.querySelector('#kxday'),lk=root.querySelector('#kxlk'),ds=root.querySelector('#kxds'),dots=$$('#kxdots i'),cur=-1;
-  var setDay=function(i){if(i===cur)return;cur=i;num.textContent=DAYS[i][0];dayl.textContent=DAYS[i][1];lk.innerHTML=DAYS[i][2];ds.textContent=DAYS[i][3];dots.forEach(function(d,j){d.classList.toggle('on',j<=i)});num.classList.remove('pop');void num.offsetWidth;num.classList.add('pop')};
+  var setDay=function(i){if(i===cur)return;cur=i;num.textContent=DAYS[i][0];dayl.textContent=DAYS[i][1];lk.innerHTML=DAYS[i][2];ds.textContent=DAYS[i][3];dots.forEach(function(d,j){d.classList.toggle('on',j<=(i===3?4:i))});num.classList.remove('pop');void num.offsetWidth;num.classList.add('pop')};
   setDay(0);
   var ds_=$$('#kxstack .day');
   if('IntersectionObserver' in W){var io2=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)setDay(+x.target.getAttribute('data-i'))})},{rootMargin:'-40% 0px -45% 0px',threshold:0});ds_.forEach(function(d){io2.observe(d)})}
