@@ -120,32 +120,7 @@
 
 /* ---------- aisle one: the shift (slider shelf) ---------- */
 .wy .shift{background:var(--paper)}
-.wy .shelfwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:center}
-@media (max-width:1000px){.wy .shelfwrap{grid-template-columns:1fr}}
-.wy .shelf{position:relative;padding:clamp(28px,3vw,48px) clamp(14px,1.6vw,28px) 0;background:linear-gradient(180deg,var(--lino) 0,var(--lino2) 100%);border-radius:14px 14px 4px 4px;overflow:visible;box-shadow:inset 0 1px 0 #fff}
-.wy .shelf .tube{top:10px;width:70%}
-.wy .cans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.2vw,18px);padding-top:clamp(28px,3vw,44px)}
-.wy .can{position:relative;aspect-ratio:3/4.2;border-radius:14px 14px 10px 10px;background:linear-gradient(90deg,#CFC7BA,#F3EEE5 40%,#DCD4C7 70%,#B9B0A2);box-shadow:inset 0 -14px 0 rgba(0,0,0,.08),0 10px 18px rgba(0,0,0,.12);transition:opacity .5s,transform .5s cubic-bezier(.3,1.6,.4,1);opacity:.6;display:grid;align-content:center;justify-items:center;overflow:hidden}
-.wy .can::before{content:"";position:absolute;inset:0 0 auto;height:14%;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,0));border-radius:14px 14px 0 0}
-.wy .can .face{position:absolute;inset:26% 0 18%;background:var(--paper);display:grid;place-items:center;text-align:center;padding:6%;font-family:var(--mono);font-size:clamp(9px,.72vw,12px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);transition:background .4s,color .4s}
-.wy .can .face span{display:block}
-.wy .can .face .yes{display:none;font-family:var(--disp);font-weight:800;font-size:clamp(14px,1.25vw,22px);letter-spacing:-.01em;text-transform:none;line-height:1;color:inherit;font-variation-settings:"wdth" 85}
-.wy .can.you{opacity:1;transform:translateY(-6px) rotate(var(--r,0deg))}
-.wy .can.you .face{background:var(--c,var(--coral));color:var(--fc,var(--paper))}
-.wy .can.you .face .no{display:none}
-.wy .can.you .face .yes{display:block}
-.wy .plank{height:clamp(14px,1.4vw,22px);margin-top:clamp(-4px,-.4vw,-2px);background:linear-gradient(180deg,var(--paper2),var(--lino2));border-radius:3px;box-shadow:0 10px 0 var(--dark),0 28px 40px rgba(0,0,0,.25);margin-inline:calc(clamp(14px,1.6vw,28px) * -1)}
-.wy .shelfcol{display:grid;gap:clamp(22px,2.4vw,36px)}
-.wy .ctl{display:grid;gap:clamp(12px,1.2vw,18px)}
-.wy .readcol{display:grid;gap:clamp(18px,2vw,30px);align-self:center}
-.wy .ctl .ends{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
-.wy .ctl .ends b{color:var(--ink);font-weight:700}
-.wy input[type=range].slide{-webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:999px;background:linear-gradient(90deg,var(--ink3),var(--pink) 55%,var(--coral));outline-offset:6px;cursor:ew-resize}
-.wy input[type=range].slide::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:var(--paper2);border:4px solid var(--ink);box-shadow:0 6px 16px rgba(0,0,0,.25);cursor:ew-resize}
-.wy input[type=range].slide::-moz-range-thumb{width:34px;height:34px;border-radius:50%;background:var(--paper2);border:4px solid var(--ink);box-shadow:0 6px 16px rgba(0,0,0,.25);cursor:ew-resize}
-.wy .readcol .read{font-family:var(--disp);font-weight:800;font-size:clamp(26px,3vw,48px);line-height:1;letter-spacing:-.02em;min-height:1.1em}
-.wy .readcol .read em{font-style:normal;color:var(--coral2)}
-.wy .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-top:clamp(56px,8vw,140px)}
+.wy .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-top:clamp(56px,8vw,120px)}
 @media (max-width:1000px){.wy .duo{grid-template-columns:1fr}}
 .wy .duo .lead{max-width:none}
 .wy .duo .lb{margin-bottom:.9em}
@@ -161,7 +136,7 @@
 .wy .dir .dr{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,.7fr);gap:1em;padding:.95em 1.2em;border-top:1px solid rgba(246,241,232,.12);align-items:center}
 .wy .dir .dr span:nth-child(2){color:var(--mint)}
 .wy .dir .dr span:last-child{text-align:right;color:var(--coral)}
-.wy .run{position:relative;margin-top:clamp(-20px,-2vw,-10px)}
+.wy .run{position:relative;margin-inline:calc(-1 * max(var(--gut),var(--gx))) calc(-1 * max(var(--gut),var(--gxr)))}
 .wy .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--dark)}
 .wy .stage .tube{top:clamp(16px,2.4vw,40px);width:min(44%,640px);opacity:.9}
 .wy .stage .tube.t2{left:12%;transform:none;width:22%}
@@ -185,24 +160,20 @@
 .wy .prod .pl .f{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-top:.5em}
 .wy .price{flex:none;background:var(--coral);color:var(--ink);border-radius:6px;padding:.5em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;text-align:center;transform:rotate(3deg);box-shadow:3px 3px 0 var(--ink)}
 .wy .price b{display:block;font-family:var(--disp);font-size:1.9em;letter-spacing:-.02em;line-height:1}
-.wy .box{flex:none;position:relative;width:clamp(150px,16vw,240px);aspect-ratio:3/4;border-radius:10px;background:var(--c,var(--pink));color:var(--paper);padding:clamp(12px,1.2vw,18px);display:grid;align-content:space-between;box-shadow:inset -18px 0 0 rgba(0,0,0,.14),0 24px 40px rgba(0,0,0,.4);transform:rotate(var(--r,0deg)) translateY(var(--y,0));font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;text-transform:uppercase}
-.wy .box .bn{font-family:var(--disp);font-weight:800;font-size:clamp(20px,2.1vw,36px);letter-spacing:-.02em;text-transform:none;line-height:.95;font-variation-settings:"wdth" 85}
-.wy .box .bc{display:flex;justify-content:space-between;align-items:end;opacity:.9}
-.wy .box .bar{height:clamp(22px,2.2vw,34px);background:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 4px,currentColor 4px 5px,transparent 5px 8px,currentColor 8px 11px,transparent 11px 13px);width:48%;opacity:.9}
 .wy .end{flex:none;width:min(60vw,560px);display:grid;gap:clamp(14px,1.4vw,22px);align-content:end;padding-bottom:clamp(20px,3vh,40px)}
 .wy .end h3{font-size:clamp(32px,4.6vw,80px);color:var(--paper)}
 .wy .end h3 em{font-style:normal;color:var(--coral)}
 .wy .end p{color:rgba(246,241,232,.8);font-size:var(--lead);max-width:44ch}
 .wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:4px;background:rgba(246,241,232,.18);border-radius:999px;overflow:hidden}
 .wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
-.wy .hint{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:.7em}
-.wy .hint::after{content:"";width:1.6em;height:2px;background:var(--mint);animation:wy-nudge 1.4s infinite}
+.wy .hint{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:.7em}
+.wy .hint::after{content:"";width:1.6em;height:2px;background:var(--coral2);animation:wy-nudge 1.4s infinite}
 @keyframes wy-nudge{50%{transform:translateX(.5em)}}
 .wy .hint .hm{display:none}
 @media (max-width:1000px){.wy .hint .hd{display:none}.wy .hint .hm{display:inline}}
 /* phone: scroll-snap rail instead of sticky */
 @media (max-width:1000px){
-  .wy .run{height:auto!important;margin-top:0}
+  .wy .run{height:auto!important}
   .wy .stage{position:relative;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-top:clamp(150px,22vw,190px)}
   .wy .stage .tube,.wy .ground,.wy .prog{display:none}
   .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-bottom:clamp(40px,8vw,72px)}
@@ -357,54 +328,6 @@
         <h2>From Everything To Everything <em class="fy">For You</em></h2>
         <p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p>
       </div>
-    </div>
-    <div class="shelfwrap">
-      <div class="shelfcol">
-      <div class="shelf rv" id="shelf">
-        <div class="tube"></div>
-        <div class="cans" id="cans">
-          <div class="can" style="--c:#0053E2;--r:-2deg"><div class="face"><span class="no">Everything</span><span class="yes">First Day Fit</span></div></div>
-          <div class="can" style="--c:#FFC220;--fc:#001E60;--r:1.5deg"><div class="face"><span class="no">Everything</span><span class="yes">Try It On</span></div></div>
-          <div class="can" style="--c:#001E60;--r:-1deg"><div class="face"><span class="no">Everything</span><span class="yes">Ring Light</span></div></div>
-          <div class="can" style="--c:#4DBDF5;--fc:#001E60;--r:2deg"><div class="face"><span class="no">Everything</span><span class="yes">Same Day Delivery</span></div></div>
-          <div class="can" style="--c:#0053E2;--r:1deg"><div class="face"><span class="no">Everything</span><span class="yes">Brunch Board</span></div></div>
-          <div class="can" style="--c:#FFC220;--fc:#001E60;--r:-2deg"><div class="face"><span class="no">Everything</span><span class="yes">Curbside Pickup</span></div></div>
-          <div class="can" style="--c:#001E60;--r:1.5deg"><div class="face"><span class="no">Everything</span><span class="yes">Sunglasses</span></div></div>
-          <div class="can" style="--c:#0053E2;--r:-1.5deg"><div class="face"><span class="no">Everything</span><span class="yes">Walmart+</span></div></div>
-        </div>
-        <div class="plank"></div>
-      </div>
-      <div class="ctl rv">
-        <div class="ends"><span>For <b>everyone</b></span><span>For <b>you</b></span></div>
-        <label for="wy-slide" class="lb" style="display:none">Personalization</label>
-        <input class="slide" type="range" id="wy-slide" min="0" max="100" value="0" aria-label="Slide from a store for everyone to a store for you">
-      </div>
-      </div>
-      <div class="readcol rv">
-        <div class="read" id="read" aria-live="polite">The store that has <em>everything.</em></div>
-        <p class="lead">Slide the shelf. Watch the generic turn specific.</p>
-      </div>
-    </div>
-    <div class="duo">
-      <div class="rv"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
-      <div class="rv"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
-    </div>
-  </section>
-
-  <!-- aisle two: the work -->
-  <section class="sc work" id="work">
-    <div class="sh gut rv">
-      <div class="lb">Aisle Two: The Work</div>
-      <div class="row">
-        <h2>Every Aisle Is Stocked With A Moment From Your Life</h2>
-        <div class="dir" aria-label="Store directory">
-          <div class="dh"><span>Store Directory</span><span>You are here</span></div>
-          <div class="dr"><span>Broadcast Television</span><span>&rarr;</span><span>Aisle You</span></div>
-          <div class="dr"><span>Digital</span><span>&rarr;</span><span>Aisle You</span></div>
-          <div class="dr"><span>Creator Partnerships On Social</span><span>&rarr;</span><span>Aisle You</span></div>
-        </div>
-      </div>
-      <p class="lead">The campaign ran across broadcast television, digital, and creator partnerships on social, with creators functioning not as endorsers but as proof points, showing how Walmart actually solved real, high-intent shopping moments.</p>
       <div class="hint"><span class="hd">Keep scrolling to walk the aisle</span><span class="hm">Swipe to walk the aisle</span></div>
     </div>
     <div class="run" id="run">
@@ -421,9 +344,6 @@
             </div>
           </div>
 
-          <div class="box" style="--c:#FFC220;--r:2deg;--y:0;color:#001E60"><div class="bn">A Whole Saturday</div><div class="bc"><span>Family size</span><i class="bar"></i></div></div>
-          <div class="box" style="--c:#0053E2;--r:-1.5deg;--y:-24px"><div class="bn">Group Chat Approval</div><div class="bc"><span>12 ct</span><i class="bar"></i></div></div>
-
           <div class="bay">
             <div class="asign">Aisle 2 <i>/</i> Ring Light Ready<b>#ImGonnaBeFamous</b></div>
             <div class="prod" style="--r:1deg">
@@ -431,9 +351,6 @@
               <div class="pl"><div><div class="n">I'm Gonna Be Famous</div><div class="f">Feature: The Whole Setup, Delivered</div></div><div class="price">Price<b>Yours</b></div></div>
             </div>
           </div>
-
-          <div class="box" style="--c:#4DBDF5;--r:-2deg;--y:0;color:#001E60"><div class="bn">The Right Shade, First Try</div><div class="bc"><span>1 ct</span><i class="bar"></i></div></div>
-          <div class="box" style="--c:#FFFFFF;--r:1.5deg;--y:-18px;color:#001E60"><div class="bn">Motivation</div><div class="bc"><span>2 pack</span><i class="bar"></i></div></div>
 
           <div class="bay">
             <div class="asign">Aisle 3 <i>/</i> Same Day Delivery<b>#BrunchinWithMySorors</b></div>
@@ -443,7 +360,6 @@
             </div>
           </div>
 
-          <div class="box" style="--c:#FFC220;--r:-1deg;--y:0;color:#001E60"><div class="bn">Something To Wear Tomorrow</div><div class="bc"><span>Arrives today</span><i class="bar"></i></div></div>
 
           <div class="end">
             <h3>Creators Weren't Endorsers. <em>They Were Proof.</em></h3>
@@ -453,6 +369,27 @@
         </div>
         <div class="prog"><i id="prog"></i></div>
       </div>
+    </div>
+    <div class="duo">
+      <div class="rv"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
+      <div class="rv"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
+    </div>
+  </section>
+
+  <!-- aisle two: the work -->
+  <section class="sc work" id="work">
+    <div class="sh gut rv">
+      <div class="lb">Aisle Two: The Channels</div>
+      <div class="row">
+        <h2>Every Aisle Is Stocked With A Moment From Your Life</h2>
+        <div class="dir" aria-label="Store directory">
+          <div class="dh"><span>Store Directory</span><span>You are here</span></div>
+          <div class="dr"><span>Broadcast Television</span><span>&rarr;</span><span>Aisle You</span></div>
+          <div class="dr"><span>Digital</span><span>&rarr;</span><span>Aisle You</span></div>
+          <div class="dr"><span>Creator Partnerships On Social</span><span>&rarr;</span><span>Aisle You</span></div>
+        </div>
+      </div>
+      <p class="lead">The campaign ran across broadcast television, digital, and creator partnerships on social, with creators functioning not as endorsers but as proof points, showing how Walmart actually solved real, high-intent shopping moments.</p>
     </div>
   </section>
 
@@ -598,37 +535,7 @@
   }
   setTimeout(function(){rv.forEach(function(el){el.classList.add('in')})},2500);
 
-  /* aisle one: slider shelf */
-  var slide=q('#wy-slide'), cans=qa('#cans .can'), read=q('#read');
-  var reads=[
-    [0,'The store that has <em>everything.</em>','for everyone'],
-    [13,'The store that has everything <em>and a face.</em>','warming up'],
-    [38,'The store that knows <em>what you came for.</em>','getting personal'],
-    [63,'The store that has <em>your</em> Saturday in stock.','almost yours'],
-    [88,'The store that has everything <em>for you.</em>','for you']
-  ];
-  function setShelf(v){
-    v=+v; var n=cans.length;
-    cans.forEach(function(c,i){var t=(i+.5)/n*100; c.classList.toggle('you',v>t)});
-    var r=reads[0]; reads.forEach(function(x){if(v>=x[0]) r=x});
-    read.innerHTML=r[1];
-  }
-  slide.addEventListener('input',function(){setShelf(slide.value)});
-  setShelf(slide.value);
-  // nudge the slider the first time the shelf comes into view so the mechanic reads at a glance
-  var nudged=false, shelf=q('#shelf');
-  function nudge(){
-    if(nudged||reduce) return; nudged=true;
-    var t0=null, from=0, to=100;
-    function step(ts){ if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/1800); var e=p<.5?2*p*p:-1+(4-2*p)*p; var v=Math.round(from+(to-from)*e); slide.value=v; setShelf(v); if(p<1) requestAnimationFrame(step); }
-    requestAnimationFrame(step);
-  }
-  if('IntersectionObserver' in window){
-    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){nudge();io2.disconnect()}})},{threshold:.6});
-    io2.observe(shelf);
-  } else { nudge(); }
-
-  /* aisle two: sideways scroll */
+  /* aisle one: sideways scroll */
   var run=q('#run'), stage=q('#stage'), strip=q('#strip'), prog=q('#prog');
   var travel=0, isRail=false;
   function layout(){
