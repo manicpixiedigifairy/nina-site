@@ -260,21 +260,10 @@
 .wy .paper .code{height:clamp(44px,4.4vw,70px);margin:1.2em 0 .4em;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 7px,transparent 7px 9px,var(--ink) 9px 10px,transparent 10px 14px,var(--ink) 14px 16px,transparent 16px 19px);opacity:0;transition:opacity .4s}
 .wy .paper .code.in{opacity:1}
 .wy .paper .lastline{position:relative}
-.wy .paper .ln.stamp2{margin-top:1em;justify-content:center}
-.wy .paper .ln.stamp2 span{border:3px solid var(--coral2);color:var(--coral2);border-radius:8px;padding:.3em .8em;font-weight:700;letter-spacing:.18em;transform:rotate(-6deg);text-transform:uppercase;font-size:1.15em}
 @media (prefers-reduced-motion:no-preference){.wy .paper .ln.in,.wy .paper .para.in{transition-duration:.5s}}
 
-/* ---------- exit ---------- */
-.wy .exit{position:relative;background:var(--dark);color:var(--paper);overflow:clip;isolation:isolate}
-.wy .exit .stage2{position:relative;min-height:min(70vh,720px);display:grid;place-items:center;text-align:center;padding-block:var(--pad)}
-.wy .exit .doors{position:absolute;inset:0;z-index:0;display:flex}
-.wy .exit .doors i{flex:1;background:linear-gradient(180deg,rgba(142,216,250,.14),rgba(142,216,250,.04));border-top:14px solid var(--coral);border-bottom:14px solid var(--coral)}
-.wy .exit .doors i:first-child{border-right:4px solid rgba(255,194,32,.55)}
-.wy .exit .inner{position:relative;z-index:1;display:grid;gap:clamp(18px,2vw,30px);justify-items:center;padding-inline:max(var(--gut),var(--gx)) max(var(--gut),var(--gxr))}
-.wy .exit h2{font-size:clamp(40px,7.6vw,132px)}
-.wy .exit h2 em{font-style:normal;color:var(--coral)}
-.wy .exit .lead{color:rgba(246,241,232,.85);text-align:center}
-.wy .exit .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+/* ---------- back ---------- */
+.wy .back{background:var(--dark);padding-block:clamp(56px,7vw,110px) clamp(40px,5vw,80px);display:flex;justify-content:flex-start}
 
 /* reveal */
 .wy .rv{opacity:1;transform:none}
@@ -505,13 +494,13 @@
         <div class="ln"><span>Brunchin With My Sorors<br><small>Same Day Delivery</small></span><span>1</span></div>
         <div class="ln"><span>Broadcast Television</span><span>1</span></div>
         <div class="ln"><span>Digital</span><span>1</span></div>
-        <div class="ln"><span>Creator Partnerships On Social</span><span>1</span></div>
+        <div class="ln"><span>Social</span><span>1</span></div>
         <div class="ln"><span class="ret">Everything For Everyone</span><span>Returned</span></div>
         <div class="ln b"><span>Everything For You</span><span>1</span></div>
         <hr class="rule">
         <div class="ln u"><span>Subtotal</span><span>Exactly what you love</span></div>
         <div class="ln u"><span>Tax</span><span>None, one tap</span></div>
-        <div class="ln big"><span>Total</span><span>Yours</span></div>
+        <div class="ln big"><span>Total</span><span>Everyday, Low Price (Just For You)</span></div>
         <div class="ln u"><span>Paid with</span><span>A push of a button</span></div>
         <div class="ln u"><span>Change</span><span>Your mind, about Walmart</span></div>
         <hr class="rule">
@@ -523,26 +512,13 @@
         <p class="para">My role: ACD, Copy and creative strategist. Beyond writing scripts, my work began upstream, identifying the defining consumer behaviors and real-life use cases that made Walmart's app capabilities feel tangible rather than technical.</p>
         <div class="code"></div>
         <div class="ln c sm">Thank you for shopping at your Walmart</div>
-        <div class="ln c sm">Exit through the app</div>
-        <div class="ln stamp2"><span>Customer copy</span></div>
       </div>
     </div>
   </section>
 
-  <!-- exit -->
-  <section class="exit" id="exit">
-    <div class="stage2">
-      <div class="doors"><i></i><i></i></div>
-      <div class="inner rv">
-        <div class="lb" style="color:var(--mint)">Exit: Thank You For Shopping</div>
-        <h2>Come Back <em>Anytime.</em><br>It's Your Store.</h2>
-        <p class="lead">Watch the hero spot or head back to the rest of the commercials.</p>
-        <div class="cta">
-          <a class="btn fill" href="https://vimeo.com/1230558835/9eac815f85" target="_blank" rel="noopener">Watch The Spot</a>
-          <a class="btn" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
-        </div>
-      </div>
-    </div>
+  <!-- back -->
+  <section class="back gut">
+    <a class="btn" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
   </section>
 
 </div>
