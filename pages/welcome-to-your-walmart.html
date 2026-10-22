@@ -132,11 +132,15 @@
 .wy .minis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.4vw,22px);max-width:560px}
 .wy .mini-gif{margin:0;display:grid;gap:.6em}
 .wy .mini-gif img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#000;box-shadow:0 14px 34px rgba(0,30,96,.18);border:4px solid #fff}
+.wy .mini-gif.solo{grid-column:1/-1;justify-self:center;width:calc(50% - clamp(6px,.7vw,11px))}
+.wy .mini-gif.solo figcaption{text-align:center}
 .wy .mini-gif figcaption{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;color:var(--ink2)}
 .wy .shsplit{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center;margin-bottom:var(--pad)}
 @media (max-width:1000px){.wy .minis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.4vw,22px);max-width:560px}
 .wy .mini-gif{margin:0;display:grid;gap:.6em}
 .wy .mini-gif img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#000;box-shadow:0 14px 34px rgba(0,30,96,.18);border:4px solid #fff}
+.wy .mini-gif.solo{grid-column:1/-1;justify-self:center;width:calc(50% - clamp(6px,.7vw,11px))}
+.wy .mini-gif.solo figcaption{text-align:center}
 .wy .mini-gif figcaption{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;color:var(--ink2)}
 .wy .shsplit{grid-template-columns:1fr}}
 .wy .hcol{display:grid;gap:clamp(18px,2vw,32px);min-width:0;align-content:center}
@@ -348,6 +352,7 @@
         <div class="minis">
           <figure class="mini-gif"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-tryon.gif?v=1" alt="" role="img" aria-label="Three friends in a school hallway take a selfie in new outfits, captioned Guess Where I Got This"><figcaption>#GuessWhereIGotThis</figcaption></figure>
           <figure class="mini-gif"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-famous.gif?v=1" alt="" role="img" aria-label="A creator does her makeup in a ring light mirror, captioned I am Gonna Be Famous"><figcaption>#ImGonnaBeFamous</figcaption></figure>
+          <figure class="mini-gif solo"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"><figcaption>#BrunchinWithMySorors</figcaption></figure>
         </div>
       </div>
         <div class="stack">
@@ -362,43 +367,37 @@
         <div class="ground"></div>
         <div class="strip" id="strip">
 
-          <div class="bay">
-            <div class="asign">Aisle 1<b>#BrunchinWithMySorors</b></div>
-            <div class="prod" style="--r:-.8deg">
-              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"></div>
-            </div>
-          </div>
 
           <div class="bay">
-            <div class="asign">Aisle 2<b>#GonnaCookTonight</b></div>
+            <div class="asign">Aisle 1<b>#GonnaCookTonight</b></div>
             <div class="prod" style="--r:1.1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" alt="" role="img" aria-label="A couple unpack groceries in a bright kitchen, captioned Gonna Cook Tonight, Or Maybe"></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 3<b>#YeahIMakeMyOwnStockNBD</b></div>
+            <div class="asign">Aisle 2<b>#YeahIMakeMyOwnStockNBD</b></div>
             <div class="prod" style="--r:-1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" alt="" role="img" aria-label="Friends around a dinner table, captioned Yeah I Make My Own Stock NBD"></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 4<b>#MyVibeCantBeChecked</b></div>
+            <div class="asign">Aisle 3<b>#MyVibeCantBeChecked</b></div>
             <div class="prod" style="--r:.9deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" alt="" role="img" aria-label="A woman in sunglasses struts outside a house, captioned My Vibe Cant Be Checked"></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 5<b>#NightOfTheDayOnes</b></div>
+            <div class="asign">Aisle 4<b>#NightOfTheDayOnes</b></div>
             <div class="prod" style="--r:-1.1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" alt="" role="img" aria-label="Friends toast on a patio at night, captioned Night Of The Day Ones"></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 6<b>#GetTheGrillReadyForUnc</b></div>
+            <div class="asign">Aisle 5<b>#GetTheGrillReadyForUnc</b></div>
             <div class="prod" style="--r:1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" alt="" role="img" aria-label="A backyard cookout at the grill, captioned Get The Grill Ready For Unc"></div>
             </div>
