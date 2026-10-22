@@ -69,11 +69,6 @@
 .wy .hero h1 em{font-style:normal;color:var(--coral)}
 .wy .hero .tagline{font-size:clamp(17px,1.4vw,25px);max-width:34ch;text-wrap:balance;color:rgba(243,246,252,.85);line-height:1.45}
 .wy .hero .tagline b{font-weight:600;color:var(--paper)}
-.wy .fy{font-style:normal;color:var(--coral);text-decoration:none;position:relative;display:inline-block;padding-bottom:.02em}
-.wy .fy::after{content:"";position:absolute;left:-3%;right:-3%;bottom:-.3em;height:.42em;background:var(--ink);-webkit-mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-underline.png?v=1") no-repeat center/100% 100%;mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-underline.png?v=1") no-repeat center/100% 100%;clip-path:inset(0 100% -60% 0);pointer-events:none}
-.wy .rv.in .fy::after{animation:wy-spray 1s cubic-bezier(.2,.7,.2,1) .35s forwards}
-@keyframes wy-spray{to{clip-path:inset(0 0% -60% 0)}}
-@media (prefers-reduced-motion:reduce){.wy .fy::after{clip-path:none;animation:none}}
 .wy .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .wy .btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;padding:1em 1.5em;border-radius:999px;border:2px solid var(--paper);color:var(--paper);background:transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s}
 .wy .btn:hover{transform:translateY(-2px)}
@@ -130,12 +125,12 @@
 
 /* ---------- aisle one: the shift (slider shelf) ---------- */
 .wy .shift{background:var(--paper)}
-.wy .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-bottom:clamp(40px,5vw,72px)}
+.wy .stack{display:grid;gap:clamp(28px,3vw,48px)}
 .wy .brief{display:grid;gap:.9em}
+.wy .brief .lead{max-width:52ch}
 .wy .shift{padding-bottom:0}
-@media (max-width:1000px){.wy .duo{grid-template-columns:1fr}}
-.wy .duo .lead{max-width:none}
-.wy .duo .lb{margin-bottom:.9em}
+.wy .shift .sh .row{align-items:start}
+.wy .shift h2 em{font-style:normal;color:var(--coral)}
 
 /* ---------- aisle two: the work (sideways scroll) ---------- */
 .wy .work{background:var(--dark);color:var(--paper)}
@@ -160,8 +155,6 @@
 .wy .strip{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;gap:clamp(28px,3vw,56px);padding:clamp(70px,11vh,120px) max(var(--gut),var(--gx)) clamp(60px,9vh,100px) max(var(--gut),var(--gxr));will-change:transform}
 .wy .bay:last-child{margin-right:clamp(16px,4vw,80px)}
 .wy .bay{position:relative;flex:none;display:grid;gap:0;align-items:end}
-.wy .shelfline{position:absolute;left:-2%;right:-2%;top:100%;margin-top:clamp(6px,.8vw,12px);aspect-ratio:1400/108;background:var(--paper);opacity:.8;-webkit-mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-shelfline.png?v=1") no-repeat center/100% 100%;mask:url("https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-shelfline.png?v=1") no-repeat center/100% 100%;pointer-events:none}
-.wy .bay:nth-child(even) .shelfline{transform:scaleX(-1)}
 .wy .bay .asign{position:absolute;left:50%;transform:translateX(-50%) rotate(-1deg);top:clamp(-140px,-14vh,-104px);background:var(--paper);color:var(--ink);border-radius:6px;padding:.9em 1.3em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:0 14px 0 -6px var(--coral),0 22px 40px rgba(0,0,0,.4);text-align:center}
 .wy .bay .asign::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:clamp(28px,4vh,48px);background:rgba(246,241,232,.35)}
 .wy .bay .asign b{display:block;font-family:var(--disp);font-weight:800;font-size:2em;letter-spacing:-.01em;text-transform:none;line-height:1;margin-top:.15em;font-variation-settings:"wdth" 88}
@@ -219,8 +212,10 @@
 .wy .stamp i{position:absolute;inset:6%;border-radius:50%;background:var(--paper);color:var(--pink);display:grid;place-items:center;text-align:center;padding:12%;font-size:clamp(8px,.6vw,11px);letter-spacing:.04em;line-height:1.15;font-style:normal;font-weight:700;transform:scale(0) rotate(-20deg);opacity:0;transition:transform .35s cubic-bezier(.3,1.7,.4,1),opacity .2s}
 .wy .stamp.on i{transform:scale(1) rotate(var(--r,-8deg));opacity:1}
 .wy .stamp.love i{background:var(--coral);color:var(--ink)}
-.wy .loyal .lf{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;line-height:1.7;opacity:.95}
-.wy .loyal .lf b{display:block;color:var(--paper)}
+.wy .lf{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;line-height:1.7;opacity:.95}
+.wy .lf b{display:block;color:var(--paper)}
+.wy .scan .lf{color:var(--mint)}
+.wy .scan .lf b{color:var(--paper)}
 
 /* ---------- customer copy: the receipt ---------- */
 .wy .rcpt{background:var(--dark);color:var(--paper);padding-block:var(--pad) 0}
@@ -311,13 +306,13 @@
     <div class="sh rv">
       <div class="lb">Aisle One: The Shift</div>
       <div class="row">
-        <h2>From Everything To Everything <em class="fy">For You</em></h2>
-        <div class="brief"><div class="lb">The Challenge</div><p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p></div>
+        <h2>From Everything To Everything <em>For You</em></h2>
+        <div class="stack">
+          <div class="brief"><div class="lb">The Challenge</div><p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p></div>
+          <div class="brief"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
+          <div class="brief"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
+        </div>
       </div>
-    </div>
-    <div class="duo rvwrap">
-      <div class="rv"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
-      <div class="rv"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
     </div>
     <div class="run" id="run">
       <div class="stage" id="stage">
@@ -330,7 +325,6 @@
             <div class="prod" style="--r:-1.2deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-tryon.gif?v=1" alt="" role="img" aria-label="Three friends in a school hallway take a selfie in new outfits, captioned Guess Where I Got This with a Try it on button"></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -338,7 +332,6 @@
             <div class="prod" style="--r:1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-famous.gif?v=1" alt="" role="img" aria-label="A creator does her makeup in a ring light mirror while clips of her multiply around the frame, captioned I am Gonna Be Famous"></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -346,7 +339,6 @@
             <div class="prod" style="--r:-.8deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -354,7 +346,6 @@
             <div class="prod" style="--r:1.1deg">
               <div class="pic vl" data-vimeo="823871201" data-h="33f4420fcc" role="button" tabindex="0" aria-label="Play the GonnaCookTonight spot"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" alt="" role="img" aria-label="A couple unpack groceries in a bright kitchen, captioned Gonna Cook Tonight, Or Maybe"><span class="play"><i></i></span></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -362,7 +353,6 @@
             <div class="prod" style="--r:-1deg">
               <div class="pic vl" data-vimeo="823871521" data-h="66147d6118" role="button" tabindex="0" aria-label="Play the YeahIMakeMyOwnStockNBD spot"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" alt="" role="img" aria-label="Friends around a dinner table, captioned Yeah I Make My Own Stock NBD"><span class="play"><i></i></span></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -370,7 +360,6 @@
             <div class="prod" style="--r:.9deg">
               <div class="pic vl" data-vimeo="824338662" data-h="ae22cfb441" role="button" tabindex="0" aria-label="Play the MyVibeCantBeChecked spot"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" alt="" role="img" aria-label="A woman in sunglasses struts outside a house, captioned My Vibe Cant Be Checked"><span class="play"><i></i></span></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -378,7 +367,6 @@
             <div class="prod" style="--r:-1.1deg">
               <div class="pic vl" data-vimeo="824338765" data-h="bd32619265" role="button" tabindex="0" aria-label="Play the NightOfTheDayOnes spot"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" alt="" role="img" aria-label="Friends toast on a patio at night, captioned Night Of The Day Ones"><span class="play"><i></i></span></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
           <div class="bay">
@@ -386,7 +374,6 @@
             <div class="prod" style="--r:1deg">
               <div class="pic vl" data-vimeo="824341081" data-h="0011d1d7c9" role="button" tabindex="0" aria-label="Play the GetTheGrillReadyForUnc spot"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" alt="" role="img" aria-label="A backyard cookout at the grill, captioned Get The Grill Ready For Unc"><span class="play"><i></i></span></div>
             </div>
-            <i class="shelfline"></i>
           </div>
 
         </div>
@@ -431,6 +418,7 @@
           <div class="now">Personalized Partner</div>
           <div class="bc"><div class="bar"></div></div>
         </div>
+        <div class="lf"><b>Core metric</b>Consumer perception, from mega-store to personalized partner.</div>
       </div>
       <div style="display:grid;gap:clamp(24px,3vw,48px)">
         <div class="loyal rv" id="loyal">
