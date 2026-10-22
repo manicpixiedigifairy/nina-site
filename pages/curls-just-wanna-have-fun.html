@@ -170,8 +170,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .track::-webkit-scrollbar{display:none}
 .kx .sl{flex:0 0 80%;scroll-snap-align:center;border-radius:calc(var(--u)*.6);overflow:hidden;background:#000}
 .kx .sl img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.kx .cars2{margin-top:calc(var(--u)*2)}
-.kx .cars2 .sl img{aspect-ratio:1}
+.kx .carsrow{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*2);max-width:calc(var(--u)*78);margin:calc(var(--u)*1.2) auto 0;align-items:start}
+.kx .carsrow .car{max-width:none;margin:0}
+.kx #kxcar2 .sl img{aspect-ratio:1}
 .kx .tw{position:relative}
 .kx .arr{position:absolute;top:50%;z-index:3;transform:translateY(-50%);width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border-radius:50%;background:var(--white);color:var(--ink);font-size:calc(var(--u)*1.6);line-height:1;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:transform .4s var(--spring)}
 .kx .arr.l{left:calc(var(--u)*1.8)}.kx .arr.r{right:calc(var(--u)*1.8)}
@@ -232,7 +233,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  .kx .hero .side{display:none}
  .kx .trio .g{grid-template-columns:1fr}
  .kx .tile{aspect-ratio:4/3}
- .kx .brief .g,.kx .panel,.kx .dg,.kx .social .hd,.kx .row2{grid-template-columns:1fr}
+ .kx .brief .g,.kx .panel,.kx .dg,.kx .social .hd,.kx .carsrow{grid-template-columns:1fr}
  .kx .panel.on{display:flex;flex-direction:column}
  .kx .bdy{grid-template-columns:1fr;gap:1.6rem}
  .kx .state{font-size:min(30px,6.5vw)}
@@ -323,6 +324,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
   <div class="st rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-onewash.gif?v=1" alt="" role="img" aria-label="Story ad alternating between 1 Wash Up To 5 Days Of Moisture with the deep conditioner and a woman in blue satin under the line One Wash, Up To 5 Days Of Moisture" width="360" height="640" loading="lazy"></div>
  </div>
  <p class="line mo" style="padding-top:calc(var(--u)*4)">Feed carousels</p>
+ <div class="carsrow">
  <div class="car rv" id="kxcar">
   <div class="ch"><i></i><div><b>mielleorganics</b><span>Sponsored</span></div><span class="ct" id="kxct">1 / 3</span></div>
   <div class="tw"><button type="button" class="arr l" aria-label="Previous slide" data-d="-1">&lsaquo;</button><button type="button" class="arr r" aria-label="Next slide" data-d="1">&rsaquo;</button>
@@ -333,7 +335,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
   </div></div>
   <div class="cf"><div class="dots3" id="kxcd"><i class="on"></i><i></i><i></i></div></div>
  </div>
- <div class="cars2">
  <div class="car rv" id="kxcar2">
   <div class="ch"><i></i><div><b>mielleorganics</b><span>Sponsored</span></div><span class="ct" id="kxct2">1 / 2</span></div>
   <div class="tw"><button type="button" class="arr l" aria-label="Previous slide" data-d="-1">&lsaquo;</button><button type="button" class="arr r" aria-label="Next slide" data-d="1">&rsaquo;</button>
