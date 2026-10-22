@@ -129,9 +129,17 @@
 .wy .brief{display:grid;gap:.9em}
 .wy .brief .lead{max-width:52ch}
 .wy .shift{padding-bottom:0}
+.wy .minis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.4vw,22px);max-width:560px}
+.wy .mini-gif{margin:0;display:grid;gap:.6em}
+.wy .mini-gif img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#000;box-shadow:0 14px 34px rgba(0,30,96,.18);border:4px solid #fff}
+.wy .mini-gif figcaption{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;color:var(--ink2)}
 .wy .shsplit{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center;margin-bottom:var(--pad)}
-@media (max-width:1000px){.wy .shsplit{grid-template-columns:1fr}}
-.wy .hcol{display:grid;gap:clamp(18px,2vw,32px);min-width:0}
+@media (max-width:1000px){.wy .minis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.4vw,22px);max-width:560px}
+.wy .mini-gif{margin:0;display:grid;gap:.6em}
+.wy .mini-gif img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#000;box-shadow:0 14px 34px rgba(0,30,96,.18);border:4px solid #fff}
+.wy .mini-gif figcaption{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;color:var(--ink2)}
+.wy .shsplit{grid-template-columns:1fr}}
+.wy .hcol{display:grid;gap:clamp(18px,2vw,32px);min-width:0;align-content:center}
 .wy .hcol .lead{max-width:48ch}
 .wy .work .sh .row{align-items:center}
 .wy .shift h2 em{font-style:normal;color:var(--coral)}
@@ -155,17 +163,20 @@
 .wy .spot img{width:clamp(56px,5vw,76px);aspect-ratio:16/9;object-fit:cover;border-radius:5px;background:#000}
 .wy .spot .st{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .wy .spot .sa{color:var(--coral);white-space:nowrap}
-/* mini player */
-.wy .mini{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));width:min(480px,calc(100vw - 32px));z-index:9000;background:var(--dark);border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid rgba(246,241,232,.18);overflow:hidden;color:var(--paper)}
+/* spot lightbox: covers the Aisle Two section, player over the list */
+.wy .work{position:relative}
+.wy .mini{position:absolute;inset:0;z-index:50;background:rgba(0,20,70,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:max(var(--gut),var(--gx))}
 .wy .mini[hidden]{display:none}
-.wy .mh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:.7em .9em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;text-transform:uppercase;background:var(--dark2)}
+.wy .mbox{width:min(900px,100%);background:var(--dark);border-radius:14px;box-shadow:0 40px 100px rgba(0,0,0,.6);border:1px solid rgba(246,241,232,.18);overflow:hidden;color:var(--paper);position:sticky;top:clamp(16px,4vh,48px)}
+.wy .mh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:.8em 1em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.1em;text-transform:uppercase;background:var(--dark2)}
 .wy .mt{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.wy .mx{background:transparent;border:0;color:var(--paper);font-size:22px;line-height:1;cursor:pointer;padding:0 .2em}
+.wy .mx{background:transparent;border:0;color:var(--paper);font-size:26px;line-height:1;cursor:pointer;padding:0 .2em}
 .wy .mf{position:relative;aspect-ratio:16/9;background:#000}
 .wy .mf img,.wy .mf iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
-.wy .mp{position:absolute;left:clamp(12px,1.4vw,18px);bottom:clamp(10px,1.2vw,16px);background:transparent;border:0;padding:0;color:#fff;font-family:var(--disp);font-weight:800;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.01em;cursor:pointer;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.wy .mp{position:absolute;left:clamp(14px,1.8vw,26px);bottom:clamp(12px,1.6vw,22px);background:transparent;border:0;padding:0;color:#fff;font-family:var(--disp);font-weight:800;font-size:clamp(26px,3vw,44px);letter-spacing:-.01em;cursor:pointer;text-shadow:0 2px 16px rgba(0,0,0,.65)}
 .wy .mp:hover{color:var(--coral)}
 .wy .mini.on img,.wy .mini.on .mp{display:none}
+.wy .spot{width:100%;text-align:left;cursor:pointer}
 .wy .run{position:relative;margin-inline:calc(-1 * max(var(--gut),var(--gx))) calc(-1 * max(var(--gut),var(--gxr)))}
 .wy .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--dark)}
 .wy .stage .tube{top:clamp(16px,2.4vw,40px);width:min(44%,640px);opacity:.9}
@@ -334,6 +345,10 @@
       <div class="hcol">
         <div class="lb">Aisle One: The Shift</div>
         <h2>From Everything To Everything <em>For You</em></h2>
+        <div class="minis">
+          <figure class="mini-gif"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-tryon.gif?v=1" alt="" role="img" aria-label="Three friends in a school hallway take a selfie in new outfits, captioned Guess Where I Got This"><figcaption>#GuessWhereIGotThis</figcaption></figure>
+          <figure class="mini-gif"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-famous.gif?v=1" alt="" role="img" aria-label="A creator does her makeup in a ring light mirror, captioned I am Gonna Be Famous"><figcaption>#ImGonnaBeFamous</figcaption></figure>
+        </div>
       </div>
         <div class="stack">
           <div class="brief"><div class="lb">The Challenge</div><p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p></div>
@@ -348,23 +363,44 @@
         <div class="strip" id="strip">
 
           <div class="bay">
-            <div class="asign">Aisle 1<b>#GuessWhereIGotThis</b></div>
-            <div class="prod" style="--r:-1.2deg">
-              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-tryon.gif?v=1" alt="" role="img" aria-label="Three friends in a school hallway take a selfie in new outfits, captioned Guess Where I Got This with a Try it on button"></div>
-            </div>
-          </div>
-
-          <div class="bay">
-            <div class="asign">Aisle 2<b>#ImGonnaBeFamous</b></div>
-            <div class="prod" style="--r:1deg">
-              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-famous.gif?v=1" alt="" role="img" aria-label="A creator does her makeup in a ring light mirror while clips of her multiply around the frame, captioned I am Gonna Be Famous"></div>
-            </div>
-          </div>
-
-          <div class="bay">
-            <div class="asign">Aisle 3<b>#BrunchinWithMySorors</b></div>
+            <div class="asign">Aisle 1<b>#BrunchinWithMySorors</b></div>
             <div class="prod" style="--r:-.8deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"></div>
+            </div>
+          </div>
+
+          <div class="bay">
+            <div class="asign">Aisle 2<b>#GonnaCookTonight</b></div>
+            <div class="prod" style="--r:1.1deg">
+              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" alt="" role="img" aria-label="A couple unpack groceries in a bright kitchen, captioned Gonna Cook Tonight, Or Maybe"></div>
+            </div>
+          </div>
+
+          <div class="bay">
+            <div class="asign">Aisle 3<b>#YeahIMakeMyOwnStockNBD</b></div>
+            <div class="prod" style="--r:-1deg">
+              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" alt="" role="img" aria-label="Friends around a dinner table, captioned Yeah I Make My Own Stock NBD"></div>
+            </div>
+          </div>
+
+          <div class="bay">
+            <div class="asign">Aisle 4<b>#MyVibeCantBeChecked</b></div>
+            <div class="prod" style="--r:.9deg">
+              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" alt="" role="img" aria-label="A woman in sunglasses struts outside a house, captioned My Vibe Cant Be Checked"></div>
+            </div>
+          </div>
+
+          <div class="bay">
+            <div class="asign">Aisle 5<b>#NightOfTheDayOnes</b></div>
+            <div class="prod" style="--r:-1.1deg">
+              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" alt="" role="img" aria-label="Friends toast on a patio at night, captioned Night Of The Day Ones"></div>
+            </div>
+          </div>
+
+          <div class="bay">
+            <div class="asign">Aisle 6<b>#GetTheGrillReadyForUnc</b></div>
+            <div class="prod" style="--r:1deg">
+              <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" alt="" role="img" aria-label="A backyard cookout at the grill, captioned Get The Grill Ready For Unc"></div>
             </div>
           </div>
 
@@ -394,15 +430,22 @@
         <div class="spots">
           <div class="lb">The Spots</div>
           <ul class="spotlist" id="spotlist">
-            <li><a href="https://vimeo.com/823437201/1cf06de2e1" class="spot" data-vimeo="823437201" data-h="1cf06de2e1" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-anthem.gif?v=1" data-title="Welcome To Your Walmart"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-anthem.gif?v=1" alt="" role="img" aria-label="Anthem spot thumbnail"><span class="st">Welcome To Your Walmart</span><span class="sa">Watch &rarr;</span></a></li>
-            <li><a href="https://vimeo.com/823871201/33f4420fcc" class="spot" data-vimeo="823871201" data-h="33f4420fcc" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" data-title="#GonnaCookTonight"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" alt="" role="img" aria-label="Gonna Cook Tonight spot thumbnail"><span class="st">#GonnaCookTonight</span><span class="sa">Watch &rarr;</span></a></li>
-            <li><a href="https://vimeo.com/823871521/66147d6118" class="spot" data-vimeo="823871521" data-h="66147d6118" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" data-title="#YeahIMakeMyOwnStockNBD"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" alt="" role="img" aria-label="Yeah I Make My Own Stock NBD spot thumbnail"><span class="st">#YeahIMakeMyOwnStockNBD</span><span class="sa">Watch &rarr;</span></a></li>
-            <li><a href="https://vimeo.com/824338662/ae22cfb441" class="spot" data-vimeo="824338662" data-h="ae22cfb441" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" data-title="#MyVibeCantBeChecked"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" alt="" role="img" aria-label="My Vibe Cant Be Checked spot thumbnail"><span class="st">#MyVibeCantBeChecked</span><span class="sa">Watch &rarr;</span></a></li>
-            <li><a href="https://vimeo.com/824338765/bd32619265" class="spot" data-vimeo="824338765" data-h="bd32619265" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" data-title="#NightOfTheDayOnes"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" alt="" role="img" aria-label="Night Of The Day Ones spot thumbnail"><span class="st">#NightOfTheDayOnes</span><span class="sa">Watch &rarr;</span></a></li>
-            <li><a href="https://vimeo.com/824341081/0011d1d7c9" class="spot" data-vimeo="824341081" data-h="0011d1d7c9" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" data-title="#GetTheGrillReadyForUnc"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" alt="" role="img" aria-label="Get The Grill Ready For Unc spot thumbnail"><span class="st">#GetTheGrillReadyForUnc</span><span class="sa">Watch &rarr;</span></a></li>
+            <li><button type="button" class="spot" data-vimeo="823871201" data-h="33f4420fcc" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" data-title="#GonnaCookTonight"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-cook.gif?v=1" alt="" role="img" aria-label="Gonna Cook Tonight spot thumbnail"><span class="st">#GonnaCookTonight</span><span class="sa">Watch &rarr;</span></button></li>
+            <li><button type="button" class="spot" data-vimeo="823871521" data-h="66147d6118" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" data-title="#YeahIMakeMyOwnStockNBD"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-stock.gif?v=1" alt="" role="img" aria-label="Yeah I Make My Own Stock NBD spot thumbnail"><span class="st">#YeahIMakeMyOwnStockNBD</span><span class="sa">Watch &rarr;</span></button></li>
+            <li><button type="button" class="spot" data-vimeo="824338662" data-h="ae22cfb441" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" data-title="#MyVibeCantBeChecked"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-vibe.gif?v=1" alt="" role="img" aria-label="My Vibe Cant Be Checked spot thumbnail"><span class="st">#MyVibeCantBeChecked</span><span class="sa">Watch &rarr;</span></button></li>
+            <li><button type="button" class="spot" data-vimeo="824338765" data-h="bd32619265" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" data-title="#NightOfTheDayOnes"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-dayones.gif?v=1" alt="" role="img" aria-label="Night Of The Day Ones spot thumbnail"><span class="st">#NightOfTheDayOnes</span><span class="sa">Watch &rarr;</span></button></li>
+            <li><button type="button" class="spot" data-vimeo="824341081" data-h="0011d1d7c9" data-gif="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" data-title="#GetTheGrillReadyForUnc"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-grill.gif?v=1" alt="" role="img" aria-label="Get The Grill Ready For Unc spot thumbnail"><span class="st">#GetTheGrillReadyForUnc</span><span class="sa">Watch &rarr;</span></button></li>
           </ul>
         </div>
         </div>
+      </div>
+    </div>
+
+    <!-- spot lightbox -->
+    <div class="mini" id="mini" hidden role="dialog" aria-modal="true" aria-label="Spot player">
+      <div class="mbox">
+        <div class="mh"><span class="mt" id="minititle">Spot</span><button type="button" class="mx" id="miniclose" aria-label="Close player">&times;</button></div>
+        <div class="mf" id="miniframe"><img id="minigif" src="" alt="" role="img" aria-label="Spot thumbnail"><button type="button" class="mp" id="miniplay">Play</button></div>
       </div>
     </div>
   </section>
@@ -495,11 +538,6 @@
   </section>
 
 
-  <!-- mini player -->
-  <div class="mini" id="mini" hidden role="dialog" aria-label="Spot player">
-    <div class="mh"><span class="mt" id="minititle">Spot</span><button type="button" class="mx" id="miniclose" aria-label="Close player">&times;</button></div>
-    <div class="mf" id="miniframe"><img id="minigif" src="" alt="" role="img" aria-label="Spot thumbnail"><button type="button" class="mp" id="miniplay">Play</button></div>
-  </div>
 </div>
 
 <script>
@@ -539,9 +577,11 @@
     cur={vid:a.getAttribute('data-vimeo'),h:a.getAttribute('data-h'),gif:a.getAttribute('data-gif'),title:a.getAttribute('data-title')};
     var old=miniF.querySelector('iframe'); if(old) old.remove();
     mini.classList.remove('on'); miniT.textContent=cur.title; miniG.setAttribute('src',cur.gif); mini.hidden=false;
+    var box=q('.mbox'); if(box&&box.scrollIntoView) box.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
   }
   function miniClose(){ var old=miniF.querySelector('iframe'); if(old) old.remove(); mini.classList.remove('on'); mini.hidden=true; cur=null; }
   qa('.spot').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); miniOpen(a); }); });
+  if(mini) mini.addEventListener('click',function(e){ if(e.target===mini) miniClose(); });
   if(miniP) miniP.addEventListener('click',miniLoad);
   if(q('#miniclose')) q('#miniclose').addEventListener('click',miniClose);
   window.addEventListener('keydown',function(e){ if(e.key==='Escape'&&mini&&!mini.hidden) miniClose(); });
