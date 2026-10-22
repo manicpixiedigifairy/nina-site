@@ -159,6 +159,28 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .cm img{width:100%;aspect-ratio:500/279;object-fit:cover;border-radius:calc(var(--u)*.4)}
 .kx .cm figcaption{font-family:var(--mo);font-size:calc(var(--u)*.6);letter-spacing:.1em;text-transform:uppercase;padding:.7em .3em .3em}
 
+/* carousel mock */
+.kx .car{background:var(--white);border-radius:calc(var(--u)*1.2);max-width:calc(var(--u)*52);margin:calc(var(--u)*1.2) auto 0;overflow:hidden;box-shadow:0 calc(var(--u)*.8) calc(var(--u)*1.6) rgba(107,32,89,.18)}
+.kx .ch{display:flex;align-items:center;gap:.8em;padding:calc(var(--u)*1) calc(var(--u)*1.2)}
+.kx .ch i{width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);border-radius:50%;background:conic-gradient(var(--pink),var(--yel),var(--teal),var(--pink));padding:2px;flex:none}
+.kx .ch i::before{content:"";display:block;width:100%;height:100%;border-radius:50%;background:var(--teal);border:2px solid var(--white)}
+.kx .ch b{display:block;font-family:var(--sa);font-weight:700;font-size:calc(var(--u)*.86);line-height:1.2}
+.kx .ch span{font-size:calc(var(--u)*.72);opacity:.65}
+.kx .ch .ct{margin-left:auto;font-family:var(--mo);font-size:calc(var(--u)*.66);letter-spacing:.1em;background:rgba(38,38,38,.08);padding:.4em .7em;border-radius:999px;opacity:1}
+.kx .track{display:flex;gap:calc(var(--u)*.5);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 calc(var(--u)*1.2);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.kx .track::-webkit-scrollbar{display:none}
+.kx .sl{flex:0 0 84%;scroll-snap-align:center;border-radius:calc(var(--u)*.6);overflow:hidden;background:#000}
+.kx .sl img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.kx .tw{position:relative}
+.kx .arr{position:absolute;top:50%;z-index:3;transform:translateY(-50%);width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border-radius:50%;background:var(--white);color:var(--ink);font-size:calc(var(--u)*1.6);line-height:1;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:transform .4s var(--spring)}
+.kx .arr.l{left:calc(var(--u)*1.8)}.kx .arr.r{right:calc(var(--u)*1.8)}
+.kx .arr:hover{transform:translateY(-50%) scale(1.12)}
+.kx .cf{padding:calc(var(--u)*1) calc(var(--u)*1.2) calc(var(--u)*1.3)}
+.kx .dots3{display:flex;justify-content:center;gap:.4em;margin-bottom:.8em}
+.kx .dots3 i{width:6px;height:6px;border-radius:50%;background:rgba(38,38,38,.25);transition:background .3s,transform .4s var(--spring)}
+.kx .dots3 i.on{background:var(--pink);transform:scale(1.3)}
+.kx .cf p{font-size:calc(var(--u)*.86);line-height:1.5}
+.kx .cf p b{font-weight:700}
 /* OOH */
 .kx .ooh{background:var(--teal);color:var(--white);padding:calc(var(--u)*6) var(--pad)}
 .kx .ooh .line{color:var(--yel);padding-left:0;padding-right:0;padding-top:0}
@@ -167,7 +189,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
 .kx .og .o img{width:100%;height:100%;object-fit:cover}
 .kx .og .o.s1 img{aspect-ratio:1}.kx .og .o.s2 img{aspect-ratio:1}.kx .og .o.s3 img{aspect-ratio:360/641}
 .kx .og .o .c{position:absolute;left:calc(var(--u)*1);bottom:calc(var(--u)*1);font-family:var(--mo);font-size:calc(var(--u)*.64);letter-spacing:.12em;text-transform:uppercase;background:var(--yel);color:var(--ink);padding:.6em .9em;border-radius:999px}
-.kx .ooh .q{margin-top:calc(var(--u)*3.2);display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*3);align-items:center}
+.kx .ooh .q{margin-top:calc(var(--u)*3.2);max-width:calc(var(--u)*46);margin-left:auto;margin-right:auto;text-align:center}
 .kx .ooh .q p.big{font-family:var(--ds);font-weight:600;font-variation-settings:"opsz" 144;font-size:calc(var(--u)*2.4);line-height:1.1;color:var(--yel)}
 .kx .ooh .q p.big em{font-style:italic;font-weight:400;color:var(--pink)}
 .kx .ooh .q p.sm{font-size:calc(var(--u)*1);line-height:1.6;color:rgba(255,255,255,.85)}
@@ -209,7 +231,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  .kx .tag.t7{grid-column:1}
  .kx .trio .g{grid-template-columns:1fr}
  .kx .tile{aspect-ratio:4/3}
- .kx .brief .g,.kx .panel,.kx .dg,.kx .social .hd,.kx .row2,.kx .about .g,.kx .ooh .q{grid-template-columns:1fr}
+ .kx .brief .g,.kx .panel,.kx .dg,.kx .social .hd,.kx .row2{grid-template-columns:1fr}
  .kx .panel.on{display:flex;flex-direction:column}
  .kx .bdy{grid-template-columns:1fr;gap:1.6rem}
  .kx .state{font-size:min(30px,6.5vw)}
@@ -299,6 +321,17 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
   <div class="st rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-story-3.gif?v=1" alt="" role="img" aria-label="Story ad reading 5 Days Of Turning Heads over a park scene" width="320" height="572" loading="lazy"></div>
   <div class="st rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-story-4.gif?v=1" alt="" role="img" aria-label="Story ad showing the Kalahari Melon and Aloe Vera lineup with the line Imagine What You Could Do In 5 Days" width="320" height="572" loading="lazy"></div>
  </div>
+ <p class="line mo" style="padding-top:calc(var(--u)*4)">Feed carousel</p>
+ <div class="car rv" id="kxcar">
+  <div class="ch"><i></i><div><b>mielleorganics</b><span>Sponsored</span></div><span class="ct" id="kxct">1 / 3</span></div>
+  <div class="tw"><button type="button" class="arr l" aria-label="Previous slide" data-d="-1">&lsaquo;</button><button type="button" class="arr r" aria-label="Next slide" data-d="1">&rsaquo;</button>
+  <div class="track" id="kxtrack">
+   <div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-car-1.gif?v=1" alt="" role="img" aria-label="Carousel slide one: a woman clapping her hands together under the words Some Secrets" width="480" height="600" loading="lazy"></div>
+   <div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-car-2.gif?v=1" alt="" role="img" aria-label="Carousel slide two: a woman squeezing product into her hand under the words Are Too Good To Gatekeep" width="440" height="550" loading="lazy"></div>
+   <div class="sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-car-3.gif?v=1" alt="" role="img" aria-label="Carousel slide three: the Kalahari Melon and Aloe Vera lineup with the line The Secret To Lasting Moisture" width="480" height="600" loading="lazy"></div>
+  </div></div>
+  <div class="cf"><div class="dots3" id="kxcd"><i class="on"></i><i></i><i></i></div><p><b>mielleorganics</b> Some secrets are too good to gatekeep. Imagine what you could do in 5 days?</p></div>
+ </div>
  <div class="row2">
   <div class="bx rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-paid-social.webp?v=2" alt="" role="img" aria-label="Two paid social units reading Up To 5 Days Of Camera Ready Curls" width="1400" height="1472" loading="lazy"><p class="c"><span>Paid social</span><span>Camera ready curls</span></p></div>
   <div class="bx rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/kmx-gif-twophones.gif?v=1" alt="" role="img" aria-label="Two phone mockups reading 1 Wash Up To 5 Days Of Moisture" width="1000" height="1051" loading="lazy"><p class="c"><span>Feed units</span><span>One wash, five days</span></p></div>
@@ -319,7 +352,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
  </div>
  <div class="q">
   <p class="big rv">Our lead captured the moment she first saw herself on the Times Square billboard, and the launch became <em>a creator led moment of its own.</em></p>
-  <p class="sm rv">A proud and heartwarming moment for everyone involved in the inception and production of this campaign. Times Square ran the same line as everything else: imagine what you could do in 5 days?</p>
  </div>
 </section>
 
@@ -356,6 +388,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--teal
   /* swatches recolor the panel heading */
   var swh=root.querySelector('.panel:nth-of-type(3) h3');
   $$('#kxsw button').forEach(function(b){b.addEventListener('click',function(){var c=b.getAttribute('data-c');var h=$$('.pt h3')[2];if(h){h.style.color=c;h.classList.add('bump');setTimeout(function(){h.classList.remove('bump')},600)}})});
+  /* carousel dots */
+  var tr=root.querySelector('#kxtrack'),sls=$$('#kxtrack .sl'),cds=$$('#kxcd i'),ct=root.querySelector('#kxct');
+  if(tr&&'IntersectionObserver' in W){var io3=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var i=sls.indexOf(x.target);cds.forEach(function(d,j){d.classList.toggle('on',j===i)});if(ct)ct.textContent=(i+1)+' / '+sls.length}})},{root:tr,threshold:.6});sls.forEach(function(e){io3.observe(e)})}
+  $$('#kxcar .arr').forEach(function(b){b.addEventListener('click',function(){if(!tr||!sls.length)return;var w=sls[0].getBoundingClientRect().width+8;try{tr.scrollBy({left:w*(+b.getAttribute('data-d')),behavior:'smooth'})}catch(e){tr.scrollLeft+=w*(+b.getAttribute('data-d'))}})});
   /* days: sticky counter */
   var DAYS=[
    ['01','Monday','Wash day. <em>The reset.</em>','Shampoo, two minute deep conditioner, leave in, weightless oil, curl forming glaze. Five products, one routine, moisture for the next five days.'],
