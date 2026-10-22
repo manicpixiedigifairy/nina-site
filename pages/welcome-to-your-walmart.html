@@ -146,6 +146,7 @@
   linear-gradient(90deg,rgba(246,241,232,.14) 1px,transparent 1px) 0 0/64px 100%,
   linear-gradient(180deg,#0A2A75,#001E60);transform:perspective(900px) rotateX(58deg);transform-origin:top;pointer-events:none}
 .wy .strip{position:absolute;left:0;top:0;height:100%;display:flex;align-items:flex-end;gap:clamp(28px,3vw,56px);padding:0 max(var(--gut),var(--gx)) clamp(60px,10vh,120px) max(var(--gut),var(--gxr));will-change:transform}
+.wy .bay:last-child{margin-right:clamp(16px,4vw,80px)}
 .wy .bay{position:relative;flex:none;display:grid;gap:0;align-items:end}
 .wy .bay .asign{position:absolute;left:50%;transform:translateX(-50%) rotate(-1deg);top:clamp(-170px,-17vh,-120px);background:var(--paper);color:var(--ink);border-radius:6px;padding:.9em 1.3em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:0 14px 0 -6px var(--coral),0 22px 40px rgba(0,0,0,.4);text-align:center}
 .wy .bay .asign::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:clamp(40px,6vh,80px);background:rgba(246,241,232,.35)}
@@ -160,10 +161,6 @@
 .wy .prod .pl .f{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-top:.5em}
 .wy .price{flex:none;background:var(--coral);color:var(--ink);border-radius:6px;padding:.5em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;text-align:center;transform:rotate(3deg);box-shadow:3px 3px 0 var(--ink)}
 .wy .price b{display:block;font-family:var(--disp);font-size:1.9em;letter-spacing:-.02em;line-height:1}
-.wy .end{flex:none;width:min(60vw,560px);display:grid;gap:clamp(14px,1.4vw,22px);align-content:end;padding-bottom:clamp(20px,3vh,40px)}
-.wy .end h3{font-size:clamp(32px,4.6vw,80px);color:var(--paper)}
-.wy .end h3 em{font-style:normal;color:var(--coral)}
-.wy .end p{color:rgba(246,241,232,.8);font-size:var(--lead);max-width:44ch}
 .wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:4px;background:rgba(246,241,232,.18);border-radius:999px;overflow:hidden}
 .wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
 .wy .hint{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:.7em}
@@ -180,7 +177,6 @@
   .wy .bay{scroll-snap-align:center}
   .wy .bay .asign{top:-130px}
   .wy .prod{width:min(84vw,560px)}
-  .wy .end{width:min(84vw,560px);scroll-snap-align:center}
 }
 
 /* ---------- checkout: price check (results) ---------- */
@@ -358,12 +354,6 @@
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"></div>
               <div class="pl"><div><div class="n">Brunchin With My Sorors</div><div class="f">Feature: Same Day Delivery</div></div><div class="price">Price<b>Yours</b></div></div>
             </div>
-          </div>
-
-
-          <div class="end">
-            <h3>Creators Weren't Endorsers. <em>They Were Proof.</em></h3>
-            <p>Real people, real seasonal moments, real high-intent needs, and an app that actually answered them.</p>
           </div>
 
         </div>
