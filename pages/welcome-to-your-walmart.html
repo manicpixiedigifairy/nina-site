@@ -68,13 +68,14 @@
 /* ---------- hero: the entrance ---------- */
 .wy .hero{position:relative;background:var(--dark);color:var(--paper);overflow:clip}
 .wy .hero .tube{top:clamp(14px,2vw,30px)}
-.wy .hero .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,4vw,72px);align-items:center;padding-block:clamp(72px,9vw,150px) clamp(56px,7vw,120px)}
+.wy .hero .stage{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:center;padding-block:clamp(72px,9vw,150px) clamp(56px,7vw,120px)}
 @media (max-width:1000px){.wy .hero .stage{grid-template-columns:1fr;padding-block:clamp(56px,9vw,100px) clamp(44px,7vw,80px)}}
 .wy .hero .copy{display:grid;gap:clamp(18px,2vw,30px);justify-items:start;min-width:0}
-.wy .hero .sign{display:inline-flex;align-items:center;gap:1em;font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.16em;text-transform:uppercase;background:var(--coral);color:var(--ink);padding:.8em 1.4em;border-radius:4px;transform:rotate(-1.5deg)}
-.wy .hero .sign .dot{width:.7em;height:.7em;border-radius:50%;background:var(--ink);animation:wy-blink 1.2s infinite}
-.wy .hero h1{font-size:clamp(44px,6.4vw,118px);color:var(--paper)}
-.wy .hero h1 em{font-style:normal;color:var(--coral);font-variation-settings:"wdth" 80,"opsz" 96}
+.wy .hero h1{font-size:clamp(54px,8.4vw,150px);color:var(--paper);perspective:1200px;display:grid;gap:.08em}
+.wy .hero h1 .w{display:block;transform-style:preserve-3d;transition:transform 1.4s cubic-bezier(.65,0,.25,1) .55s;transform-origin:50% 50%;backface-visibility:visible}
+.wy .hero.open h1 .w{transform:rotateX(-360deg)}
+.wy .hero h1 .l2{display:block;font-size:.43em;text-transform:uppercase;letter-spacing:.04em;line-height:1;white-space:nowrap;font-variation-settings:"wdth" 96,"opsz" 96}
+.wy .hero h1 em{font-style:normal;color:var(--coral)}
 .wy .hero .tagline{font-size:clamp(17px,1.4vw,25px);max-width:34ch;text-wrap:balance;color:rgba(243,246,252,.85);line-height:1.45}
 .wy .hero .tagline b{font-weight:600;color:var(--paper)}
 .wy .hero .tagline .fy{font-style:normal;color:var(--coral);text-decoration:underline;text-decoration-color:var(--paper);text-decoration-thickness:2px;text-underline-offset:.14em}
@@ -89,24 +90,30 @@
 .wy .btn.ink:hover{background:var(--ink);color:var(--paper)}
 .wy .btn.ink.fill{background:var(--ink);color:var(--paper)}
 .wy .btn.ink.fill:hover{background:var(--coral);border-color:var(--coral);color:var(--ink)}
-/* storefront window: the film sits in its own frame, doors slide over the frame only */
-.wy .front{position:relative;min-width:0}
-.wy .front .frame{position:relative;aspect-ratio:739/415;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 clamp(8px,.9vw,14px) var(--dark2),0 40px 90px rgba(0,0,0,.45)}
-.wy .front .frame img{width:100%;height:100%;object-fit:cover}
-.wy .door{position:absolute;top:0;bottom:0;width:50%;z-index:2;background:
-  linear-gradient(115deg,rgba(255,255,255,.22),rgba(255,255,255,0) 35%,rgba(255,255,255,.08) 60%,rgba(255,255,255,0)),
-  linear-gradient(180deg,rgba(142,216,250,.28),rgba(142,216,250,.12));
-  backdrop-filter:blur(3px);border-top:10px solid var(--coral);border-bottom:10px solid var(--coral);
-  transition:transform 1.5s cubic-bezier(.7,0,.2,1) .45s;will-change:transform}
-.wy .door.l{left:0;border-right:5px solid var(--coral)}
-.wy .door.r{right:0;border-left:5px solid var(--coral)}
+/* storefront entrance: aluminum framed glass sliders over the film, blue sign band above, mat below */
+.wy .front{position:relative;min-width:0;--al:#C9CED6;--al2:#8F97A3;--al3:#5E6672}
+.wy .entry{position:relative;width:100%;max-width:640px;margin-inline:auto;filter:drop-shadow(0 40px 70px rgba(0,0,0,.45))}
+.wy .entry .band{height:clamp(44px,4.6vw,72px);background:var(--coral2);border:6px solid var(--al);border-bottom:0;border-radius:6px 6px 0 0;display:grid;place-items:center;position:relative;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.22em;text-transform:uppercase;color:var(--paper)}
+.wy .entry .band .sensor{position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);width:clamp(26px,2.4vw,38px);height:10px;border-radius:3px;background:#1A1D22;box-shadow:0 1px 0 rgba(255,255,255,.2) inset}
+.wy .entry .frame{position:relative;aspect-ratio:5/4;overflow:hidden;background:#000;border:6px solid var(--al);border-top-color:var(--al2)}
+.wy .entry .frame img{width:100%;height:100%;object-fit:cover}
+.wy .entry .mat{height:clamp(14px,1.4vw,22px);background:linear-gradient(180deg,#3B4048,#20242A);border-radius:0 0 8px 8px;margin-inline:clamp(10px,1.2vw,18px)}
+.wy .door{position:absolute;top:0;bottom:0;width:50%;z-index:2;border:7px solid var(--al);box-shadow:inset 0 0 0 1px var(--al3);background:
+  linear-gradient(112deg,rgba(255,255,255,.34) 0%,rgba(255,255,255,.06) 28%,rgba(255,255,255,.02) 55%,rgba(255,255,255,.18) 100%),
+  linear-gradient(180deg,rgba(142,216,250,.16),rgba(142,216,250,.05));
+  backdrop-filter:blur(1.5px);transition:transform 1.5s cubic-bezier(.7,0,.2,1) .55s;will-change:transform}
+.wy .door::before{content:"";position:absolute;left:0;right:0;top:56%;height:7px;background:var(--al);box-shadow:0 1px 0 var(--al3)}
+.wy .door::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9%;background:linear-gradient(180deg,var(--al2),var(--al3))}
+.wy .door.l{left:0;border-right-width:4px}
+.wy .door.r{right:0;border-left-width:4px}
 .wy .hero.open .door.l{transform:translateX(-101%)}
 .wy .hero.open .door.r{transform:translateX(101%)}
-.wy .door .decal{position:absolute;top:50%;transform:translateY(-50%) rotate(-2deg);font-family:var(--mono);font-size:clamp(9px,.75vw,12px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--paper);padding:.8em 1.1em;border-radius:6px;box-shadow:0 2px 0 var(--ink)}
-.wy .door.l .decal{right:clamp(10px,2vw,28px)}
-.wy .door.r .decal{left:clamp(10px,2vw,28px);transform:translateY(-50%) rotate(2deg)}
-.wy .door .decal b{display:block;font-weight:700;color:var(--coral2)}
-.wy .front .cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:clamp(14px,1.6vw,24px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.wy .door .go{position:absolute;top:34%;width:clamp(30px,3vw,44px);height:clamp(30px,3vw,44px);border-radius:50%;background:#0A8F3C;border:2px solid #fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.wy .door.l .go{right:10%}
+.wy .door.r .go{left:10%}
+.wy .door .go svg{width:58%;height:58%}
+.wy .door .glint{position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.22) 45%,transparent 58%);pointer-events:none}
+.wy .front .cap{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:clamp(14px,1.6vw,24px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
 .wy .front .cap b{color:var(--paper);font-weight:700}
 
 /* ---------- aisle one: the shift (slider shelf) ---------- */
@@ -299,6 +306,7 @@
 }
 @media (prefers-reduced-motion:reduce){
   .wy .door{transition:none}
+  .wy .hero h1 .w{transition:none}
   .wy .top .dot,.wy .hero .sign .dot,.wy .dir .dh span:last-child::before,.wy .printer .ph::before,.wy .hint::after{animation:none}
   .wy .paper .ln,.wy .paper .para,.wy .paper .code{opacity:1;transform:none;transition:none}
   .wy .stamp i{transition:none}
@@ -319,8 +327,7 @@
     <div class="tube"></div>
     <div class="stage gut">
       <div class="copy">
-        <div class="sign"><span class="dot"></span>Now Open. Aisle You.</div>
-        <h1>Welcome To<br><em>Your</em> Walmart</h1>
+        <h1><span class="w">Welcome</span><span class="l2">To <em>Your</em> Walmart</span></h1>
         <p class="tagline">Not just the store that has everything. <b>The store that has everything <em class="fy">for you.</em></b></p>
         <div class="cta">
           <a class="btn fill" href="https://vimeo.com/1230558835/9eac815f85" target="_blank" rel="noopener">Watch The Spot</a>
@@ -328,10 +335,14 @@
         <div class="hours"><b>Open 24/7</b><span>In-Store</span><span>Curbside</span><span>Home Delivery</span><span>Walmart+</span></div>
       </div>
       <div class="front">
-        <div class="frame">
-          <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-hero.gif?v=1" alt="" role="img" aria-label="Hero film: a child peers into a delivery box, then the Walmart app icon lands with the words Welcome to your Walmart">
-          <div class="door l"><div class="decal">Automatic door<b>Opens for you</b></div></div>
-          <div class="door r"><div class="decal">Caution<b>Everything inside</b></div></div>
+        <div class="entry">
+          <div class="band"><span>Entrance</span><i class="sensor"></i></div>
+          <div class="frame">
+            <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-hero.gif?v=1" alt="" role="img" aria-label="Hero film: a child peers into a delivery box, then the Walmart app icon lands with the words Welcome to your Walmart">
+            <div class="door l"><span class="glint"></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M6 11l6-6 6 6"/></svg></span></div>
+            <div class="door r"><span class="glint"></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M6 11l6-6 6 6"/></svg></span></div>
+          </div>
+          <div class="mat"></div>
         </div>
         <div class="cap"><span>Broadcast, Digital, Creator Partnerships</span></div>
       </div>
