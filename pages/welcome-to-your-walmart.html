@@ -182,7 +182,7 @@
 .wy .mp:hover{color:var(--coral)}
 .wy .mini.on img,.wy .mini.on .mp{display:none}
 .wy .spot{width:100%;text-align:left;cursor:pointer}
-.wy .run{position:relative;margin-inline:calc(-1 * max(var(--gut),var(--gx))) calc(-1 * max(var(--gut),var(--gxr)))}
+.wy .run{position:relative;max-width:100%}
 .wy .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--dark)}
 .wy .stage .tube{top:clamp(16px,2.4vw,40px);width:min(44%,640px);opacity:.9}
 .wy .stage .tube.t2{left:12%;transform:none;width:22%}
@@ -216,8 +216,11 @@
   .wy .run{height:auto!important}
   .wy .stage{position:relative;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-top:clamp(150px,22vw,190px)}
   .wy .stage .tube,.wy .ground{display:none}
-  .wy .prog{position:relative;margin:0 max(var(--gut),var(--gx)) 20px}
-  .wy .hint{position:static;padding:0 max(var(--gut),var(--gx)) 24px}
+  .wy .prog{position:relative;left:auto;right:auto;bottom:auto;margin:0 max(var(--gut),var(--gx)) 20px}
+  .wy .hint{margin-bottom:14px}
+  .wy .stage{scrollbar-width:none}
+  .wy .stage::-webkit-scrollbar{display:none}
+  .wy .hint{position:static;padding:0 max(var(--gut),var(--gx))}
   .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-top:0;padding-bottom:clamp(28px,6vw,48px)}
   .wy .bay{scroll-snap-align:center}
   .wy .bay .asign{top:-130px}
@@ -345,8 +348,8 @@
   </section>
 
   <!-- aisle one: the shift -->
-  <section class="sc shift gut" id="shift">
-    <div class="sh shsplit rv">
+  <section class="sc shift" id="shift">
+    <div class="sh shsplit gut rv">
       <div class="hcol">
         <div class="lb">Aisle One: The Shift</div>
         <h2>From Everything To Everything <em>For You</em></h2>
@@ -548,6 +551,24 @@
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* entrance doors open once */
+  /* clear the host's header or fixed MENU bar: pad the hero until the headline sits below it */
+  (function(){
+    var hero=q('#enter'), copy=q('#enter .copy'); if(!hero||!copy) return;
+    var hd=window.document;
+    function bar(){
+      var c=hd.querySelectorAll('.nlb, #header, header, .header, [data-nc-group="top"]');
+      for(var i=0;i<c.length;i++){var el=c[i]; if(rootEl.contains(el)) continue; var cs=getComputedStyle(el); if(cs.position!=='fixed'&&cs.position!=='absolute'&&cs.position!=='sticky') continue; var r=el.getBoundingClientRect(); if(r.height>20&&r.width>200&&r.top<=2) return el}
+      return null;
+    }
+    function fit(){
+      hero.style.paddingTop='';
+      var b=bar(); if(!b) return;
+      var need=Math.ceil(b.getBoundingClientRect().bottom-copy.getBoundingClientRect().top+24);
+      if(need>0&&need<400) hero.style.paddingTop=need+'px';
+    }
+    fit(); window.addEventListener('load',fit); window.addEventListener('resize',fit); setTimeout(fit,800); setTimeout(fit,2000);
+  })();
+
   var gate=q('#gate');
   if(gate){
     if(reduce){ gate.hidden=true; }
