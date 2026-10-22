@@ -193,7 +193,7 @@
 .wy .checkgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,80px);align-items:start}
 @media (max-width:1000px){.wy .checkgrid{grid-template-columns:1fr}}
 .wy .scan{position:relative;background:var(--dark);border-radius:18px;padding:clamp(20px,2.4vw,40px);color:var(--paper);box-shadow:0 30px 70px rgba(0,0,0,.25);display:grid;gap:clamp(16px,1.6vw,26px)}
-.wy .scan .lcd{font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--mint2);display:flex;justify-content:space-between;gap:12px}
+/* removed */.wy .scan .lcd{font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--mint2);display:flex;justify-content:space-between;gap:12px}
 .wy .scan .lcd .st{color:var(--coral)}
 .wy .tag{position:relative;background:var(--paper2);color:var(--ink);border-radius:8px;padding:clamp(18px,2vw,30px);display:grid;gap:.8em;overflow:hidden}
 .wy .tag .tl{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
@@ -216,7 +216,7 @@
 .wy .loyal h3{font-size:clamp(28px,3vw,52px);color:var(--paper)}
 .wy .stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1vw,14px)}
 .wy .stamp{aspect-ratio:1;border-radius:50%;border:2px dashed rgba(246,241,232,.6);display:grid;place-items:center;font-family:var(--mono);font-size:clamp(9px,.7vw,12px);letter-spacing:.1em;text-transform:uppercase;position:relative}
-.wy .stamp i{position:absolute;inset:8%;border-radius:50%;background:var(--paper);color:var(--pink);display:grid;place-items:center;font-style:normal;font-weight:700;transform:scale(0) rotate(-20deg);opacity:0;transition:transform .35s cubic-bezier(.3,1.7,.4,1),opacity .2s}
+.wy .stamp i{position:absolute;inset:6%;border-radius:50%;background:var(--paper);color:var(--pink);display:grid;place-items:center;text-align:center;padding:12%;font-size:clamp(8px,.6vw,11px);letter-spacing:.04em;line-height:1.15;font-style:normal;font-weight:700;transform:scale(0) rotate(-20deg);opacity:0;transition:transform .35s cubic-bezier(.3,1.7,.4,1),opacity .2s}
 .wy .stamp.on i{transform:scale(1) rotate(var(--r,-8deg));opacity:1}
 .wy .stamp.love i{background:var(--coral);color:var(--ink)}
 .wy .loyal .lf{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;line-height:1.7;opacity:.95}
@@ -436,43 +436,40 @@
   <!-- checkout: price check -->
   <section class="sc check gut" id="results">
     <div class="sh rv">
-      <div class="lb">Checkout: Price Check</div>
+      <div class="lb">Checkout</div>
       <div class="row">
-        <h2>Scan The Perception. Watch It Reprice.</h2>
-        <p class="lead">The campaign moved consumer perception away from "massive general mega-store" toward a personalized partner that delivers individualized solutions.</p>
+        <h2>We Scanned For Sentiment</h2>
+        <p class="lead">The campaign succeeded in changing consumer perception. Performance was measured not by impressions alone but by how effectively the work drove organic traffic back to the app and Walmart.com, particularly through seasonal and high-intent queries.</p>
       </div>
     </div>
     <div class="checkgrid">
       <div class="scan rv" id="scan">
-        <div class="lcd"><span>Price check station</span><span class="st" id="scanst">Ready</span></div>
         <div class="tag">
           <div class="laser"></div>
           <div class="tl">Item: Walmart, as perceived</div>
-          <div class="was">Massive general mega-store</div>
-          <div class="now">Personalized partner</div>
-          <div class="bc"><div class="bar"></div><div class="sku">Reprice<br>Applied</div></div>
+          <div class="was">Massive General Mega-Store</div>
+          <div class="now">Personalized Partner</div>
+          <div class="bc"><div class="bar"></div></div>
         </div>
-        <button class="btn again" type="button" id="again">Scan Again</button>
       </div>
       <div style="display:grid;gap:clamp(24px,3vw,48px)">
         <div class="loyal rv" id="loyal">
           <div class="lt"><span>Loyalty card</span><span>Member: You</span></div>
-          <h3>Brand Consideration And Long-Term Brand Love</h3>
+          <h3>Consideration &amp; Long-Term Brand Love</h3>
           <div class="stamps" id="stamps">
-            <div class="stamp" style="--r:-9deg"><i>You</i></div>
-            <div class="stamp" style="--r:6deg"><i>You</i></div>
-            <div class="stamp" style="--r:-4deg"><i>You</i></div>
-            <div class="stamp" style="--r:8deg"><i>You</i></div>
-            <div class="stamp" style="--r:-7deg"><i>You</i></div>
-            <div class="stamp" style="--r:5deg"><i>You</i></div>
-            <div class="stamp" style="--r:-6deg"><i>You</i></div>
-            <div class="stamp" style="--r:9deg"><i>You</i></div>
-            <div class="stamp" style="--r:-3deg"><i>You</i></div>
+            <div class="stamp" style="--r:-9deg"><i>Back 2 School</i></div>
+            <div class="stamp" style="--r:6deg"><i>Sunday Brunch</i></div>
+            <div class="stamp" style="--r:-4deg"><i>Summer BBQ</i></div>
+            <div class="stamp" style="--r:8deg"><i>Pool Party Prep</i></div>
+            <div class="stamp" style="--r:-7deg"><i>Road Trip Snacks</i></div>
+            <div class="stamp" style="--r:5deg"><i>Game Day</i></div>
+            <div class="stamp" style="--r:-6deg"><i>Dorm Haul</i></div>
+            <div class="stamp" style="--r:9deg"><i>Taco Tuesday</i></div>
+            <div class="stamp" style="--r:-3deg"><i>Holiday Hosting</i></div>
             <div class="stamp love" style="--r:7deg"><i>Love</i></div>
           </div>
           <div class="lf"><b>Core metric</b>Brand consideration and long-term brand love. The campaign delivered both.</div>
         </div>
-        <p class="lead rv">Performance was measured not by impressions alone but by how effectively the work drove organic traffic back to the app and Walmart.com, particularly through seasonal and high-intent queries.</p>
       </div>
     </div>
   </section>
@@ -614,21 +611,20 @@
   layout(); setTimeout(layout,600); setTimeout(layout,2000);
 
   /* checkout: price check scanner + loyalty stamps */
-  var scan=q('#scan'), scanst=q('#scanst'), again=q('#again'), scanned=false;
+  var scan=q('#scan'), scanned=false;
   function doScan(){
     scan.classList.remove('done','go','rest'); void scan.offsetWidth;
-    if(reduce){ scan.classList.add('rest','done'); scanst.textContent='Repriced'; return; }
-    scan.classList.add('go'); scanst.textContent='Scanning';
-    setTimeout(function(){scan.classList.add('done'); scanst.textContent='Repriced'},900);
+    if(reduce){ scan.classList.add('rest','done'); return; }
+    scan.classList.add('go');
+    setTimeout(function(){scan.classList.add('done')},900);
   }
-  again.addEventListener('click',doScan);
   var stamps=qa('#stamps .stamp');
   function doStamps(){ stamps.forEach(function(s,i){ setTimeout(function(){s.classList.add('on')}, reduce?0:220*i+300) }) }
   if('IntersectionObserver' in window){
     var io3=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ if(!scanned){scanned=true;doScan();doStamps()} io3.disconnect() }})},{threshold:.4});
     io3.observe(scan);
   } else { doScan(); doStamps(); }
-  setTimeout(function(){ if(!scanned){scanned=true; scan.classList.add('rest','done'); scanst.textContent='Repriced'; stamps.forEach(function(s){s.classList.add('on')})} },4500);
+  setTimeout(function(){ if(!scanned){scanned=true; scan.classList.add('rest','done'); stamps.forEach(function(s){s.classList.add('on')})} },4500);
 
   /* receipt prints as you scroll */
   var lines=qa('#paper .ln, #paper .para, #paper .code');
