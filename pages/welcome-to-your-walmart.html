@@ -129,7 +129,10 @@
 .wy .brief{display:grid;gap:.9em}
 .wy .brief .lead{max-width:52ch}
 .wy .shift{padding-bottom:0}
-.wy .shift .sh .row{align-items:start}
+.wy .shift .sh .row{align-items:center}
+.wy .hcol{display:grid;gap:clamp(18px,2vw,32px);min-width:0}
+.wy .hcol .lead{max-width:48ch}
+.wy .work .sh .row{align-items:center}
 .wy .shift h2 em{font-style:normal;color:var(--coral)}
 
 /* ---------- aisle two: the work (sideways scroll) ---------- */
@@ -387,7 +390,10 @@
     <div class="sh gut rv">
       <div class="lb">Aisle Two: The Channels</div>
       <div class="row">
-        <h2>Every Aisle Is Stocked With A Moment From Your Life</h2>
+        <div class="hcol">
+          <h2>Every Aisle Is Stocked With Real Moments</h2>
+          <p class="lead">The campaign ran across broadcast television, digital, and social, highlighting relatable scenarios where the new app would make the things the audience loved most easier to access.</p>
+        </div>
         <div class="dir" aria-label="Store directory">
           <div class="dh"><span>WTYW</span><span>Inventory</span></div>
           <div class="dr"><span>Broadcast Television</span><span>&rarr;</span><span>In Stock</span></div>
@@ -395,7 +401,6 @@
           <div class="dr"><span>Social</span><span>&rarr;</span><span>In Stock</span></div>
         </div>
       </div>
-      <p class="lead">The campaign ran across broadcast television, digital, and social, highlighting relatable scenarios where the new app would make the things the audience loved most easier to access.</p>
     </div>
   </section>
 
