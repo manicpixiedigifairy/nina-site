@@ -227,16 +227,7 @@
 .wy .rcpt .sh{margin-bottom:clamp(28px,3vw,48px)}
 .wy .rcpt .lb{color:var(--mint)}
 .wy .rcpt .lead{color:rgba(246,241,232,.85)}
-.wy .rwrap{position:relative;padding-top:clamp(16px,2vw,36px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:start}
-@media (max-width:1000px){.wy .rwrap{grid-template-columns:1fr}}
-.wy .printer{position:sticky;top:clamp(12px,2vw,28px);display:grid;gap:clamp(16px,1.6vw,26px)}
-@media (max-width:1000px){.wy .printer{position:static}}
-.wy .printer .slot{height:clamp(14px,1.4vw,22px);background:#000;border-radius:999px;box-shadow:inset 0 4px 10px rgba(0,0,0,.9),0 1px 0 rgba(255,255,255,.08);position:relative}
-.wy .printer .slot::after{content:"";position:absolute;left:10%;right:10%;top:45%;height:2px;background:var(--mint);opacity:.6}
-.wy .printer .ph{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;gap:.8em;align-items:center}
-.wy .printer .ph::before{content:"";width:.7em;height:.7em;border-radius:50%;background:var(--mint2);animation:wy-blink 1s infinite}
-.wy .printer .big{font-size:clamp(40px,5.4vw,92px);color:var(--paper)}
-.wy .printer .big em{font-style:normal;color:var(--coral)}
+.wy .rwrap{position:relative;padding-top:clamp(16px,2vw,36px);display:grid;grid-template-columns:minmax(0,1fr);justify-items:center}
 .wy .paper{position:relative;background:var(--paper2);color:var(--ink);font-family:var(--mono);font-size:clamp(12px,.95vw,16px);line-height:1.6;letter-spacing:.02em;padding:clamp(28px,3vw,52px) clamp(20px,2.4vw,44px) clamp(44px,4vw,72px);margin-bottom:-1px;max-width:720px;justify-self:center;width:100%;box-shadow:0 40px 90px rgba(0,0,0,.5)}
 .wy .paper::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px;background:conic-gradient(from -45deg at 50% 100%,var(--paper2) 90deg,transparent 0) 0 0/20px 10px repeat-x}
 .wy .rcpt{position:relative;z-index:2}
@@ -274,7 +265,7 @@
 @media (prefers-reduced-motion:reduce){
   .wy .gate{display:none}
   .wy .door,.wy .hero h1 .w{animation:none}
-  .wy .dir .dh span:last-child::before,.wy .printer .ph::before,.wy .hint::after{animation:none}
+  .wy .dir .dh span:last-child::before,.wy .hint::after{animation:none}
   .wy .paper .ln,.wy .paper .para,.wy .paper .code{opacity:1;transform:none;transition:none}
   .wy .stamp i{transition:none}
 }
@@ -469,24 +460,16 @@
       <div class="lb">Customer Copy: The Receipt</div>
       <div class="row">
         <h2>Keep This For Your Records</h2>
-        <p class="lead">Everything that went into the bag, printed as you scroll.</p>
       </div>
     </div>
     <div class="rwrap">
-      <div class="printer rv">
-        <div class="ph">Printing</div>
-        <div class="slot"></div>
-        <h3 class="big">Your Cashier Today: <em>ACD, Copy And Creative Strategist</em></h3>
-        <p class="lead">Beyond writing scripts, the work began upstream: identifying the defining consumer behaviors and real-life use cases that made Walmart's app capabilities feel tangible rather than technical.</p>
-      </div>
       <div class="paper" id="paper">
         <div class="ln h">Your Walmart</div>
-        <div class="ln c sm">Store #0001 &middot; Aisle You</div>
+        <div class="ln c sm">Store #0001</div>
         <div class="ln c sm">Open 24/7 &middot; In-Store &middot; Curbside &middot; Delivery &middot; Walmart+</div>
         <hr class="rule">
         <div class="ln sm u"><span>Cashier</span><span>ACD, Copy</span></div>
-        <div class="ln sm u"><span>Also</span><span>Creative Strategist</span></div>
-        <div class="ln sm u"><span>Register</span><span>Upstream</span></div>
+        <div class="ln sm u"><span>Register</span><span>Full Funnel</span></div>
         <hr class="rule">
         <div class="ln b u"><span>Item</span><span>Qty</span></div>
         <div class="ln"><span>Guess Where I Got This<br><small>Try It On</small></span><span>1</span></div>
