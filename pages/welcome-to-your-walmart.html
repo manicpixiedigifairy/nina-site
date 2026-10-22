@@ -129,7 +129,8 @@
 .wy .brief{display:grid;gap:.9em}
 .wy .brief .lead{max-width:52ch}
 .wy .shift{padding-bottom:0}
-.wy .shift .sh .row{align-items:center}
+.wy .shsplit{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center;margin-bottom:var(--pad)}
+@media (max-width:1000px){.wy .shsplit{grid-template-columns:1fr}}
 .wy .hcol{display:grid;gap:clamp(18px,2vw,32px);min-width:0}
 .wy .hcol .lead{max-width:48ch}
 .wy .work .sh .row{align-items:center}
@@ -305,16 +306,16 @@
 
   <!-- aisle one: the shift -->
   <section class="sc shift gut" id="shift">
-    <div class="sh rv">
-      <div class="lb">Aisle One: The Shift</div>
-      <div class="row">
+    <div class="sh shsplit rv">
+      <div class="hcol">
+        <div class="lb">Aisle One: The Shift</div>
         <h2>From Everything To Everything <em>For You</em></h2>
+      </div>
         <div class="stack">
           <div class="brief"><div class="lb">The Challenge</div><p class="lead">One of the world's largest retailers had become so ubiquitous it was bordering on invisible. With a new personalized app experience launching, Walmart was ready to evolve.</p></div>
           <div class="brief"><div class="lb">The Insight</div><p class="lead">The campaign was built on a simple but powerful shift. Walmart isn't the store that has everything for everyone. It's the store that has exactly what you love, need, and can't wait to try, all at the push of a button.</p></div>
           <div class="brief"><div class="lb">The Execution</div><p class="lead">The work reintroduced Walmart as a digital-first shopping destination, inviting consumers to see the app as their personalized Walmart: in-store, curbside, home delivery, and Walmart+.</p></div>
         </div>
-      </div>
     </div>
     <div class="run" id="run">
       <div class="stage" id="stage">
