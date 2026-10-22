@@ -153,16 +153,10 @@
 .wy .bay .asign{position:absolute;left:50%;transform:translateX(-50%) rotate(-1deg);top:clamp(-140px,-14vh,-104px);background:var(--paper);color:var(--ink);border-radius:6px;padding:.9em 1.3em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:0 14px 0 -6px var(--coral),0 22px 40px rgba(0,0,0,.4);text-align:center}
 .wy .bay .asign::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:clamp(28px,4vh,48px);background:rgba(246,241,232,.35)}
 .wy .bay .asign b{display:block;font-family:var(--disp);font-weight:800;font-size:2em;letter-spacing:-.01em;text-transform:none;line-height:1;margin-top:.15em;font-variation-settings:"wdth" 88}
-.wy .bay .asign i{font-style:normal;color:var(--coral2)}
 .wy .prod{position:relative;width:min(70vw,800px);background:var(--paper);border-radius:18px;padding:clamp(10px,1vw,16px);box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(var(--r,0deg));transition:transform .4s}
 .wy .prod:hover{transform:rotate(0deg) translateY(-6px)}
 .wy .prod .pic{aspect-ratio:739/415;border-radius:10px;overflow:hidden;background:#000}
 .wy .prod .pic img{width:100%;height:100%;object-fit:cover}
-.wy .prod .pl{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:clamp(12px,1.2vw,18px) clamp(6px,.6vw,10px) clamp(4px,.4vw,6px);color:var(--ink)}
-.wy .prod .pl .n{font-family:var(--disp);font-weight:800;font-size:clamp(20px,2vw,34px);letter-spacing:-.02em;line-height:1}
-.wy .prod .pl .f{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-top:.5em}
-.wy .price{flex:none;background:var(--coral);color:var(--ink);border-radius:6px;padding:.5em .8em;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.12em;text-transform:uppercase;text-align:center;transform:rotate(3deg);box-shadow:3px 3px 0 var(--ink)}
-.wy .price b{display:block;font-family:var(--disp);font-size:1.9em;letter-spacing:-.02em;line-height:1}
 .wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:4px;background:rgba(246,241,232,.18);border-radius:999px;overflow:hidden}
 .wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
 .wy .hint{position:absolute;left:max(var(--gut),var(--gx));bottom:clamp(40px,6vh,64px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:.7em}
@@ -339,26 +333,23 @@
         <div class="strip" id="strip">
 
           <div class="bay">
-            <div class="asign">Aisle 1 <i>/</i> Try It On<b>#GuessWhereIGotThis</b></div>
+            <div class="asign">Aisle 1<b>#GuessWhereIGotThis</b></div>
             <div class="prod" style="--r:-1.2deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-tryon.gif?v=1" alt="" role="img" aria-label="Three friends in a school hallway take a selfie in new outfits, with the caption Guess Where I Got This and a Try it on button"></div>
-              <div class="pl"><div><div class="n">Guess Where I Got This</div><div class="f">Feature: Try It On</div></div><div class="price">Price<b>Yours</b></div></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 2 <i>/</i> Ring Light Ready<b>#ImGonnaBeFamous</b></div>
+            <div class="asign">Aisle 2<b>#ImGonnaBeFamous</b></div>
             <div class="prod" style="--r:1deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-famous.gif?v=1" alt="" role="img" aria-label="A creator does her makeup in a ring light mirror while clips of her multiply around the frame, captioned I'm Gonna Be Famous"></div>
-              <div class="pl"><div><div class="n">I'm Gonna Be Famous</div><div class="f">Feature: The Whole Setup, Delivered</div></div><div class="price">Price<b>Yours</b></div></div>
             </div>
           </div>
 
           <div class="bay">
-            <div class="asign">Aisle 3 <i>/</i> Same Day Delivery<b>#BrunchinWithMySorors</b></div>
+            <div class="asign">Aisle 3<b>#BrunchinWithMySorors</b></div>
             <div class="prod" style="--r:-.8deg">
               <div class="pic"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/wtyw-brunch.gif?v=1" alt="" role="img" aria-label="Friends in pink and orange gather around a brunch spread, captioned Brunchin With My Sorors with a Same day delivery button"></div>
-              <div class="pl"><div><div class="n">Brunchin With My Sorors</div><div class="f">Feature: Same Day Delivery</div></div><div class="price">Price<b>Yours</b></div></div>
             </div>
           </div>
 
