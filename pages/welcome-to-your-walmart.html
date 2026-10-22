@@ -166,7 +166,7 @@
 .wy .prod:hover{transform:rotate(0deg) translateY(-6px)}
 .wy .prod .pic{position:relative;aspect-ratio:739/415;border-radius:10px;overflow:hidden;background:#000}
 .wy .prod .pic img{width:100%;height:100%;object-fit:cover}
-.wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:4px;background:rgba(246,241,232,.18);border-radius:999px;overflow:hidden}
+.wy .prog{position:absolute;left:max(var(--gut),var(--gx));right:max(var(--gut),var(--gxr));bottom:clamp(20px,3vh,36px);height:6px;background:rgba(246,241,232,.28);border-radius:999px;overflow:hidden}
 .wy .prog i{display:block;height:100%;width:0;background:var(--coral);border-radius:999px}
 .wy .hint{position:absolute;left:max(var(--gut),var(--gx));bottom:clamp(40px,6vh,64px);font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:.7em}
 .wy .hint::after{content:"";width:1.6em;height:2px;background:var(--mint);animation:wy-nudge 1.4s infinite}
@@ -177,7 +177,8 @@
 @media (max-width:1000px){
   .wy .run{height:auto!important}
   .wy .stage{position:relative;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-top:clamp(150px,22vw,190px)}
-  .wy .stage .tube,.wy .ground,.wy .prog{display:none}
+  .wy .stage .tube,.wy .ground{display:none}
+  .wy .prog{position:static;margin:0 max(var(--gut),var(--gx)) 20px}
   .wy .hint{position:static;padding:0 max(var(--gut),var(--gx)) 24px}
   .wy .strip{position:relative;height:auto;transform:none!important;align-items:flex-end;padding-top:0;padding-bottom:clamp(28px,6vw,48px)}
   .wy .bay{scroll-snap-align:center}
@@ -187,17 +188,18 @@
 
 /* ---------- checkout: price check (results) ---------- */
 .wy .check{background:var(--paper);overflow:clip}
-.wy .checkgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,80px);align-items:start}
+.wy .checkgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:stretch}
+.wy .checkgrid>div{display:grid}
 @media (max-width:1000px){.wy .checkgrid{grid-template-columns:1fr}}
-.wy .scan{position:relative;background:var(--dark);border-radius:18px;padding:clamp(20px,2.4vw,40px);color:var(--paper);box-shadow:0 30px 70px rgba(0,0,0,.25);display:grid;gap:clamp(16px,1.6vw,26px)}
+.wy .scan{position:relative;background:var(--dark);border-radius:18px;padding:clamp(20px,2.4vw,40px);color:var(--paper);box-shadow:0 30px 70px rgba(0,0,0,.25);display:grid;grid-template-rows:1fr auto;gap:clamp(16px,1.6vw,26px);min-height:100%}
 /* removed */.wy .scan .lcd{font-family:var(--mono);font-size:clamp(11px,.85vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--mint2);display:flex;justify-content:space-between;gap:12px}
 .wy .scan .lcd .st{color:var(--coral)}
-.wy .tag{position:relative;background:var(--paper2);color:var(--ink);border-radius:8px;padding:clamp(18px,2vw,30px);display:grid;gap:.8em;overflow:hidden}
+.wy .tag{position:relative;background:var(--paper2);color:var(--ink);border-radius:8px;padding:clamp(18px,2vw,30px);display:grid;gap:.8em;align-content:center;overflow:hidden}
 .wy .tag .tl{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
-.wy .tag .was{font-family:var(--disp);font-weight:800;font-size:clamp(22px,2.6vw,44px);line-height:1;letter-spacing:-.02em;color:var(--ink3);position:relative;display:inline-block;width:fit-content;font-variation-settings:"wdth" 88}
+.wy .tag .was{font-family:var(--disp);font-weight:800;font-size:clamp(20px,2.1vw,36px);line-height:1;letter-spacing:-.02em;color:var(--ink3);position:relative;display:inline-block;width:fit-content;font-variation-settings:"wdth" 88}
 .wy .tag .was::after{content:"";position:absolute;left:-2%;right:-2%;top:52%;height:.14em;background:var(--coral2);transform:scaleX(0);transform-origin:left;transition:transform .5s ease .9s}
 .wy .scan.done .tag .was::after{transform:scaleX(1)}
-.wy .tag .now{font-family:var(--disp);font-weight:800;font-size:clamp(30px,3.6vw,64px);line-height:.95;letter-spacing:-.025em;color:var(--coral2);opacity:0;transform:translateY(10px);transition:opacity .5s ease 1.3s,transform .5s ease 1.3s;font-variation-settings:"wdth" 90}
+.wy .tag .now{font-family:var(--disp);font-weight:800;font-size:clamp(28px,3vw,54px);line-height:.95;letter-spacing:-.025em;color:var(--coral2);opacity:0;transform:translateY(10px);transition:opacity .5s ease 1.3s,transform .5s ease 1.3s;font-variation-settings:"wdth" 90}
 .wy .scan.done .tag .now{opacity:1;transform:none}
 .wy .scan.rest .tag .now{opacity:1;transform:none;transition:none}
 .wy .scan.rest .tag .was::after{transform:scaleX(1);transition:none}
@@ -208,7 +210,7 @@
 .wy .tag .bar{height:clamp(30px,3vw,48px);width:58%;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 9px,var(--ink) 9px 12px,transparent 12px 14px)}
 .wy .tag .sku{font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);text-align:right}
 .wy .scan .again{justify-self:start}
-.wy .loyal{position:relative;background:var(--pink);color:var(--paper);border-radius:18px;padding:clamp(20px,2.4vw,40px);display:grid;gap:clamp(16px,1.6vw,26px);transform:rotate(1.5deg);box-shadow:0 30px 70px rgba(0,0,0,.2)}
+.wy .loyal{position:relative;background:var(--pink);color:var(--paper);border-radius:18px;padding:clamp(20px,2.4vw,40px);display:grid;gap:clamp(16px,1.6vw,26px);align-content:space-between;min-height:100%;transform:rotate(1.5deg);box-shadow:0 30px 70px rgba(0,0,0,.2)}
 .wy .loyal .lt{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:clamp(10px,.8vw,13px);letter-spacing:.14em;text-transform:uppercase}
 .wy .loyal h3{font-size:clamp(28px,3vw,52px);color:var(--paper)}
 .wy .stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1vw,14px)}
@@ -393,7 +395,7 @@
       <div class="row">
         <div class="hcol">
           <h2>Every Aisle Is Stocked With Real Moments</h2>
-          <p class="lead">The campaign ran across broadcast television, digital, and social, highlighting relatable scenarios where the new app would make the things the audience loved most easier to access.</p>
+          <p class="lead">The campaign ran across broadcast television, digital, and social, highlighting relatable scenarios where the new app would make the things the audience loved easier to access.</p>
         </div>
         <div class="dir" aria-label="Store directory">
           <div class="dh"><span>WTYW</span><span>Inventory</span></div>
@@ -425,7 +427,7 @@
         </div>
         <div class="lf"><b>Core metric</b>Consumer perception, from mega-store to personalized partner.</div>
       </div>
-      <div style="display:grid;gap:clamp(24px,3vw,48px)">
+      <div>
         <div class="loyal rv" id="loyal">
           <div class="lt"><span>Loyalty card</span><span>Member: You</span></div>
           <h3>Consideration &amp; Long-Term Brand Love</h3>
@@ -537,7 +539,7 @@
   var travel=0, isRail=false;
   function layout(){
     isRail=window.innerWidth<=1000;
-    if(isRail){ run.style.height=''; strip.style.transform=''; return; }
+    if(isRail){ run.style.height=''; strip.style.transform=''; if(prog){var m=stage.scrollWidth-stage.clientWidth; prog.style.width=(m>0?stage.scrollLeft/m*100:0)+'%'} return; }
     var sw=strip.scrollWidth, vw=stage.clientWidth, vh=stage.clientHeight||window.innerHeight;
     travel=Math.max(0,sw-vw);
     run.style.height=(travel+vh)+'px';
@@ -551,6 +553,7 @@
     if(prog) prog.style.width=(travel?(x/travel*100):0)+'%';
   }
   window.addEventListener('scroll',onScroll,{passive:true});
+  stage.addEventListener('scroll',function(){ if(!isRail||!prog) return; var m=stage.scrollWidth-stage.clientWidth; prog.style.width=(m>0?stage.scrollLeft/m*100:0)+'%'; },{passive:true});
   window.addEventListener('resize',layout);
   window.addEventListener('load',layout);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(layout);
