@@ -44,11 +44,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .hm .card .dek{max-width:34em;font-size:calc(var(--u)*1.22);line-height:1.45;color:rgba(251,247,242,.86)}
 .hm .card .dek b{color:var(--lime);font-weight:600}
 .hm .card .cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.2)}
-.hm .phone{width:min(100%,calc(var(--u)*24));aspect-ratio:9/16;border-radius:calc(var(--u)*2.6);background:#0B0A0B;padding:calc(var(--u)*.55);box-shadow:0 0 0 calc(var(--u)*.3) #2B262A,0 calc(var(--u)*2) calc(var(--u)*4) rgba(0,0,0,.5);position:relative;transform:rotate(-3deg)}
-.hm .phone .scr{width:100%;height:100%;border-radius:calc(var(--u)*2.1);overflow:hidden;background:#000}
-.hm .phone .scr img{width:100%;height:100%;object-fit:cover}
-.hm .phone .notch{position:absolute;top:calc(var(--u)*1.1);left:50%;transform:translateX(-50%);width:28%;height:calc(var(--u)*.9);border-radius:999px;background:#0B0A0B}
-.hm .ph{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*1.6)}
+.hm .tile{width:min(100%,calc(var(--u)*34));aspect-ratio:1/1;border-radius:calc(var(--u)*2.2);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.6) rgba(0,0,0,.5);transform:rotate(-2deg)}
+.hm .tile img{width:100%;height:100%;object-fit:cover}
+.hm .ph{display:flex;justify-content:center}
 
 /* INTRO */
 .hm .intro{padding:calc(var(--u)*6) var(--pad) calc(var(--u)*5);text-align:center}
@@ -135,7 +133,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 @media (max-width:1000px){
  .hm{--u:clamp(10px,2.1vw,16px);--pad:calc(var(--u)*2.5)}
  .hm .card{grid-template-columns:1fr;padding:calc(var(--u)*3.2) calc(var(--u)*3) calc(var(--u)*4.5)}
- .hm .phone{margin-top:calc(var(--u)*1);width:min(78%,calc(var(--u)*25))}
+ .hm .tile{margin-top:calc(var(--u)*1);width:min(100%,calc(var(--u)*36))}
  .hm .www,.hm .wg{grid-template-columns:1fr}
  .hm .lg{grid-template-columns:repeat(2,1fr)}
  .hm .lines .head{grid-template-columns:1fr}
@@ -165,10 +163,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <div class="cta rv d3"><a class="pill g" href="#films">Watch The Films</a></div>
   </div>
   <div class="ph">
-   <div class="phone sl">
-    <div class="scr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-hero.gif?v=1" alt="" role="img" aria-label="Phone cut of the Phone Feast spot: a woman books a table five months ahead, then frames the perfect low light shot of her plate on a Moto G" width="340" height="605"></div>
-    <div class="notch" aria-hidden="true"></div>
-   </div>
+   <div class="tile sl"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-hero.gif?v=2" alt="" role="img" aria-label="Campaign cut across the four spots: a gamer holding his Moto G sideways, a plate framed in the camera, dinner in a candlelit restaurant, a window seat before takeoff, and a feed scrolled in the sun" width="480" height="480"></div>
   </div>
  </div>
 </section>
@@ -194,7 +189,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <p class="copy rv d2">A full flight's worth of entertainment before takeoff. <em>Remember last minute. Download just in time.</em></p>
    <div class="dev rv d3"><span class="lb">moto g53 5G</span><button class="pill o jp" type="button" data-for="f1">Play The Spot</button></div>
   </div>
-  <div class="vid rv" id="f1" data-vimeo="822311778" data-h="d67f0d7d3e"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=1" alt="" role="img" aria-label="A traveler in a yellow corduroy jacket and headphones smiles at his Moto G in a window seat" width="914" height="1000" loading="lazy"><button class="play" type="button" aria-label="Play Ready For Takeoff"><b></b></button></div>
+  <div class="vid rv" id="f1" data-vimeo="822311778" data-h="d67f0d7d3e"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=2" alt="" role="img" aria-label="A traveler in a yellow corduroy jacket and headphones smiles at his Moto G in a window seat" width="914" height="1000" loading="lazy"><button class="play" type="button" aria-label="Play Ready For Takeoff"><b></b></button></div>
  </article>
 
  <article class="film b">
@@ -204,7 +199,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <p class="copy rv d2">This one is for the weekend warriors who want to leave their charger at home and still come home with a phone full of memories. <em>Cut the chord. Catch a vibe.</em></p>
    <div class="dev rv d3"><span class="lb">moto g23</span><button class="pill o jp" type="button" data-for="f2">Play The Spot</button></div>
   </div>
-  <div class="vid rv" id="f2" data-vimeo="822311813" data-h="0f1f4e4c66"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=1" alt="" role="img" aria-label="A woman in a camel trench coat heads out the door with a rolling suitcase and a Moto G in hand" width="1044" height="940" loading="lazy"><button class="play" type="button" aria-label="Play Weekend Warrior"><b></b></button></div>
+  <div class="vid rv" id="f2" data-vimeo="822311813" data-h="0f1f4e4c66"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=2" alt="" role="img" aria-label="A woman in a camel trench coat heads out the door with a rolling suitcase and a Moto G in hand" width="1044" height="940" loading="lazy"><button class="play" type="button" aria-label="Play Weekend Warrior"><b></b></button></div>
  </article>
 
  <article class="film c">
@@ -214,7 +209,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <p class="copy rv d2">True foodies know the phone always has to eat first. <em>Enjoy the low-light ambiance. Always get the yummiest shot.</em></p>
    <div class="dev rv d3"><span class="lb">moto g73 5G</span><button class="pill o jp" type="button" data-for="f3">Play The Spot</button></div>
   </div>
-  <div class="vid rv" id="f3" data-vimeo="822311788" data-h="0270c9e091"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=1" alt="" role="img" aria-label="A woman in a patterned jacket and gold chain lines up a photo of her dinner on a Moto G in a candlelit restaurant" width="930" height="958" loading="lazy"><button class="play" type="button" aria-label="Play Phone Feast"><b></b></button></div>
+  <div class="vid rv" id="f3" data-vimeo="822311788" data-h="0270c9e091"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=2" alt="" role="img" aria-label="A woman in a patterned jacket and gold chain lines up a photo of her dinner on a Moto G in a candlelit restaurant" width="930" height="958" loading="lazy"><button class="play" type="button" aria-label="Play Phone Feast"><b></b></button></div>
  </article>
 
  <article class="film d">
@@ -224,7 +219,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
    <p class="copy rv d2">Game time is best wherever you get the most comfortable. <em>Charge into battle anywhere. Never lose battery.</em></p>
    <div class="dev rv d3"><span class="lb">moto g13</span><button class="pill o jp" type="button" data-for="f4">Play The Spot</button></div>
   </div>
-  <div class="vid rv" id="f4" data-vimeo="822311800" data-h="33c2f4450a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=1" alt="" role="img" aria-label="A gamer grins at the camera while holding a Moto G sideways in both hands" width="968" height="982" loading="lazy"><button class="play" type="button" aria-label="Play Game Time"><b></b></button></div>
+  <div class="vid rv" id="f4" data-vimeo="822311800" data-h="33c2f4450a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=2" alt="" role="img" aria-label="A gamer grins at the camera while holding a Moto G sideways in both hands" width="968" height="982" loading="lazy"><button class="play" type="button" aria-label="Play Game Time"><b></b></button></div>
  </article>
 </section>
 
@@ -244,10 +239,10 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
   <p class="rv d2">Every spot lands on a pair of lines: the everyday habit, then the Moto G feature that makes it effortless. Short enough to remember, specific enough to sell.</p>
  </div>
  <div class="lg">
-  <div class="ln a rv"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=1" alt="" role="img" aria-label="Still from Ready For Takeoff" width="914" height="1000" loading="lazy"></div><div class="bd"><span class="lb">Ready For Takeoff</span><p>Remember last minute. <em>Download just in time.</em></p><span class="dv">moto g53 5G</span></div></div>
-  <div class="ln b rv d1"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=1" alt="" role="img" aria-label="Still from Weekend Warrior" width="1044" height="940" loading="lazy"></div><div class="bd"><span class="lb">Weekend Warrior</span><p>Cut the chord. <em>Catch a vibe.</em></p><span class="dv">moto g23</span></div></div>
-  <div class="ln c rv d2"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=1" alt="" role="img" aria-label="Still from Phone Feast" width="930" height="958" loading="lazy"></div><div class="bd"><span class="lb">Phone Feast</span><p>Enjoy the low-light ambiance. <em>Always get the yummiest shot.</em></p><span class="dv">moto g73 5G</span></div></div>
-  <div class="ln d rv d3"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=1" alt="" role="img" aria-label="Still from Game Time" width="968" height="982" loading="lazy"></div><div class="bd"><span class="lb">Game Time</span><p>Charge into battle anywhere. <em>Never lose battery.</em></p><span class="dv">moto g13</span></div></div>
+  <div class="ln a rv"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=2" alt="" role="img" aria-label="Still from Ready For Takeoff" width="914" height="1000" loading="lazy"></div><div class="bd"><span class="lb">Ready For Takeoff</span><p>Remember last minute. <em>Download just in time.</em></p><span class="dv">moto g53 5G</span></div></div>
+  <div class="ln b rv d1"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=2" alt="" role="img" aria-label="Still from Weekend Warrior" width="1044" height="940" loading="lazy"></div><div class="bd"><span class="lb">Weekend Warrior</span><p>Cut the chord. <em>Catch a vibe.</em></p><span class="dv">moto g23</span></div></div>
+  <div class="ln c rv d2"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=2" alt="" role="img" aria-label="Still from Phone Feast" width="930" height="958" loading="lazy"></div><div class="bd"><span class="lb">Phone Feast</span><p>Enjoy the low-light ambiance. <em>Always get the yummiest shot.</em></p><span class="dv">moto g73 5G</span></div></div>
+  <div class="ln d rv d3"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=2" alt="" role="img" aria-label="Still from Game Time" width="968" height="982" loading="lazy"></div><div class="bd"><span class="lb">Game Time</span><p>Charge into battle anywhere. <em>Never lose battery.</em></p><span class="dv">moto g13</span></div></div>
  </div>
 </section>
 
