@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Never Through, detailed edition: the 2022 Under Armour global campaign from strategy to the three-phase rollout of films and brand actions.">
+<title>Nina Austin | Never Through (Detailed)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#0B0B0B}
+.nt{--u:clamp(11px,1.1111vw,28px);--g:calc(var(--u)*4);--bk:#0B0B0B;--bk2:#151515;--wh:#EDEBE6;--gy:#8F8D88;--rd:#E3261D;--ln:rgba(237,235,230,.16);--hd:Archivo,'Helvetica Neue',Arial,sans-serif;--mo:'Space Mono',ui-monospace,Menlo,monospace;--mk:'Permanent Marker',cursive;display:block;position:relative;width:100%;overflow:clip;background:var(--bk);color:var(--wh);font-family:var(--hd);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.nt *,.nt *::before,.nt *::after{box-sizing:border-box}
+.nt a{color:inherit;text-decoration:none}
+.nt h1,.nt h2,.nt h3{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;margin:0;color:inherit!important;line-height:.86;letter-spacing:-.035em}
+.nt p,.nt ul,.nt li,.nt figure{margin:0;padding:0;list-style:none}
+.nt img{display:block;max-width:100%;height:auto}
+.nt button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.nt .w{width:100%;padding-left:var(--g);padding-right:var(--g)}
+
+/* grain */
+.nt::after{content:"";position:absolute;inset:0;z-index:50;pointer-events:none;opacity:.075;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");background-size:220px 220px}
+
+/* type helpers */
+.nt .mo{font-family:var(--mo);font-size:calc(var(--u)*.86);line-height:1.5;letter-spacing:.04em;text-transform:uppercase;color:var(--gy)}
+.nt .mo b{font-weight:700;color:var(--wh)}
+.nt .lb{display:flex;align-items:baseline;gap:calc(var(--u)*1.4);font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--wh)}
+.nt .lb i{font-style:normal;color:var(--rd)}
+.nt .lb span{color:var(--gy)}
+.nt .mk{font-family:var(--mk);color:var(--rd);text-transform:none;letter-spacing:0;line-height:1.05;font-weight:400}
+.nt .bd{font-size:calc(var(--u)*1.42);line-height:1.55;color:var(--wh);max-width:calc(var(--u)*46)}
+.nt .bd+.bd{margin-top:1em}
+.nt .dim{color:var(--gy)}
+
+/* reveal */
+.nt .rv{opacity:0;transform:translate3d(0,calc(var(--u)*1.4),0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.nt .rv.on{opacity:1;transform:none}
+.nt .rv.d1{transition-delay:.1s}.nt .rv.d2{transition-delay:.2s}.nt .rv.d3{transition-delay:.3s}.nt .rv.d4{transition-delay:.4s}.nt .rv.d5{transition-delay:.5s}
+
+/* top row: static, clears the sitewide MENU on the right */
+.nt .tb{display:flex;align-items:center;justify-content:flex-start;gap:calc(var(--u)*3);min-height:90px;padding-right:calc(var(--g) + var(--u)*8);border-bottom:1px solid var(--ln)}
+.nt .tb .mo{font-size:calc(var(--u)*.82)}
+.nt .tb .sp{flex:1 1 auto;height:1px;background:var(--ln);min-width:calc(var(--u)*2)}
+
+/* hero */
+.nt .hero{padding-top:calc(var(--u)*4.5);padding-bottom:calc(var(--u)*6);border-bottom:1px solid var(--ln)}
+.nt .hero h1{margin-top:calc(var(--u)*1.6);font-size:calc(var(--u)*16.5);line-height:.82}
+.nt .hero h1 span{display:block;width:max-content;max-width:none;white-space:nowrap}
+.nt .hero h1 .l1{opacity:0;transform:translate3d(0,.25em,0);transition:opacity .7s ease .15s,transform .7s cubic-bezier(.2,.7,.2,1) .15s}
+.nt .hero h1 .l2{opacity:0;transform:translate3d(0,.25em,0);transition:opacity .7s ease .35s,transform .7s cubic-bezier(.2,.7,.2,1) .35s}
+.nt .hero.in h1 span{opacity:1;transform:none}
+.nt .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);align-items:end;margin-top:calc(var(--u)*4.5)}
+.nt .hero .dk{font-size:calc(var(--u)*1.9);line-height:1.35;font-weight:500;letter-spacing:-.01em;max-width:calc(var(--u)*40);text-wrap:balance}
+.nt .hero .dk .mk{display:block;font-size:calc(var(--u)*2.2);margin-top:calc(var(--u)*1.6);transform:rotate(-2.5deg);transform-origin:left center;width:max-content;max-width:100%}
+.nt .reel{position:relative;border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.8)}
+.nt .reel img{width:100%;aspect-ratio:739/415;object-fit:cover}
+.nt .reel .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--g);margin-top:calc(var(--u)*4.5);padding-top:calc(var(--u)*2);border-top:1px solid var(--ln)}
+.nt .meta div{font-size:calc(var(--u)*1.2);line-height:1.45}
+.nt .meta b{display:block;font-family:var(--mo);font-weight:400;font-size:calc(var(--u)*.8);letter-spacing:.08em;text-transform:uppercase;color:var(--gy);margin-bottom:.7em}
+
+/* sections */
+.nt .sc{padding-top:calc(var(--u)*7);padding-bottom:calc(var(--u)*7);border-bottom:1px solid var(--ln)}
+.nt .sh{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.8);margin-bottom:calc(var(--u)*4)}
+.nt .sh h2{font-size:calc(var(--u)*7.2);max-width:calc(var(--u)*78);text-wrap:balance}
+
+/* film */
+.nt .vl{position:relative;aspect-ratio:16/9;background:var(--bk2);overflow:hidden;border:1px solid var(--ln);isolation:isolate}
+.nt .vl .ps{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);transition:transform .9s ease,filter .9s ease}
+.nt .vl:hover .ps{transform:scale(1.02);filter:grayscale(.15) contrast(1.06)}
+.nt .vl .lk{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;transition:opacity .4s}
+.nt .vl .lk .pl{display:inline-flex;align-items:center;gap:.8em;background:var(--wh);color:var(--bk);padding:.95em 1.5em .85em;font-family:var(--mo);font-weight:700;font-size:calc(var(--u)*.95);letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s,transform .3s}
+.nt .vl .lk .pl::before{content:"";width:0;height:0;border-style:solid;border-width:.45em 0 .45em .75em;border-color:transparent transparent transparent currentColor}
+.nt .vl:hover .lk .pl{background:var(--rd);color:var(--wh);transform:scale(1.04)}
+.nt .vl.open .lk,.nt .vl.open .ps{opacity:0;pointer-events:none}
+.nt .vl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:ntfi .8s ease}
+@keyframes ntfi{from{opacity:0}to{opacity:1}}
+.nt .fcap{display:flex;justify-content:space-between;gap:calc(var(--u)*2);margin-top:calc(var(--u)*1.1)}
+
+/* contact sheet */
+.nt .cs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nt .fr{border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.7);display:flex;flex-direction:column}
+.nt .fr .im{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+.nt .fr .im img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);transition:filter .6s ease,transform .9s ease}
+.nt .fr:hover .im img{filter:grayscale(0) contrast(1.02);transform:scale(1.03)}
+.nt .fr .im.ct img{object-fit:contain}
+.nt .fr .cap{display:flex;align-items:baseline;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .fr .cap .mk{font-size:calc(var(--u)*1.35);transform:rotate(-2deg);transform-origin:right center}
+.nt .csn{display:flex;flex-wrap:wrap;justify-content:space-between;gap:calc(var(--u)*2);margin-top:calc(var(--u)*2.2);padding-top:calc(var(--u)*1.4);border-top:1px solid var(--ln)}
+
+/* brief */
+.nt .br{display:grid;grid-template-columns:minmax(0,1fr)}
+.nt .br .row{display:grid;grid-template-columns:calc(var(--u)*7) minmax(0,4fr) minmax(0,7fr);gap:var(--g);align-items:start;padding:calc(var(--u)*3) 0;border-top:1px solid var(--ln)}
+.nt .br .row:last-child{border-bottom:1px solid var(--ln)}
+.nt .br .n{font-family:var(--mo);font-size:calc(var(--u)*.95);letter-spacing:.06em;color:var(--rd);padding-top:.5em}
+.nt .br h3{font-size:calc(var(--u)*3.6)}
+.nt .br h3 small{display:block;margin-top:.5em;font-family:var(--mo);font-weight:400;font-size:calc(var(--u)*.82);letter-spacing:.08em;color:var(--gy);text-transform:uppercase}
+.nt .br p{font-size:calc(var(--u)*1.42);line-height:1.55;max-width:calc(var(--u)*52)}
+
+/* rollout */
+.nt .ro{position:relative}
+.nt .ro .tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4);position:relative}
+.nt .ro .tl::before{content:"";position:absolute;left:0;right:0;top:calc(var(--u)*2.9);height:2px;background:var(--ln)}
+.nt .ph{position:relative;padding-top:calc(var(--u)*4.6);display:flex;flex-direction:column}
+.nt .ph .q{position:absolute;left:0;top:0;font-family:var(--mo);font-size:calc(var(--u)*.86);letter-spacing:.06em;text-transform:uppercase;color:var(--gy);white-space:nowrap}
+.nt .ph .q b{font-weight:700;color:var(--wh)}
+.nt .ph .dot{position:absolute;left:0;top:calc(var(--u)*2.9 - var(--u)*.45 + 1px);width:calc(var(--u)*.9);height:calc(var(--u)*.9);border-radius:50%;background:var(--bk);border:2px solid var(--wh);transform:scale(.6);transition:transform .5s cubic-bezier(.2,.7,.2,1),background .5s,border-color .5s}
+.nt .ph.on .dot{transform:none;background:var(--rd);border-color:var(--rd)}
+.nt .ph .pn{font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--rd)}
+.nt .ph h3{font-size:calc(var(--u)*3.1);margin-top:calc(var(--u)*.7);min-height:2.1em}
+.nt .ph .mm{margin-top:calc(var(--u)*1.2);font-family:var(--mo);font-size:calc(var(--u)*.82);line-height:1.6;letter-spacing:.04em;text-transform:uppercase;color:var(--gy)}
+.nt .ph .fl{margin-top:calc(var(--u)*2);padding:calc(var(--u)*1.2) calc(var(--u)*1.3);border:1px solid var(--wh);display:flex;flex-direction:column;gap:.35em;min-height:calc(var(--u)*6.4)}
+.nt .ph .fl i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;color:var(--gy)}
+.nt .ph .fl b{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.5);line-height:1}
+.nt .ph .ba{margin-top:calc(var(--u)*1.6);border-top:1px solid var(--ln)}
+.nt .ph .ba li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1);padding:calc(var(--u)*1.1) 0;border-bottom:1px solid var(--ln);font-size:calc(var(--u)*1.1);line-height:1.45}
+.nt .ph .ba li i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.06em;color:var(--rd);padding-top:.25em}
+.nt .ph .ba li b{display:block;font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.35);line-height:1;margin-bottom:.35em}
+.nt .ph .ba li span{color:var(--gy)}
+.nt .ro .rings{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--g);align-items:center;margin-top:calc(var(--u)*5);padding-top:calc(var(--u)*2.6);border-top:1px solid var(--ln)}
+.nt .ro .rings .rk{display:flex;gap:calc(var(--u)*1);flex-wrap:wrap}
+.nt .ro .rings .rk span{display:inline-block;padding:.75em 1.1em .65em;border:1px solid var(--wh);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.01em;font-size:calc(var(--u)*1.2);line-height:1;white-space:nowrap}
+.nt .ro .rings .rk span:nth-child(2){background:var(--wh);color:var(--bk)}
+.nt .ro .rings .rk span:nth-child(3){background:var(--rd);border-color:var(--rd)}
+
+/* strategy */
+.nt .gtb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nt .gtb div{border:1px solid var(--ln);border-bottom:3px solid var(--rd);padding:calc(var(--u)*1.8) calc(var(--u)*1.6) calc(var(--u)*2.2);min-height:calc(var(--u)*13);display:flex;flex-direction:column;gap:calc(var(--u)*1.2)}
+.nt .gtb i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.08em;text-transform:uppercase;color:var(--rd)}
+.nt .gtb p{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 100;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.55);line-height:1.05;text-wrap:balance;overflow-wrap:anywhere}
+.nt .stx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);padding:calc(var(--u)*3) 0;border-top:1px solid var(--ln)}
+.nt .stx:first-of-type{border-top:0;padding-top:0}
+.nt .stx h3{font-size:calc(var(--u)*3)}
+.nt .stx .bd{max-width:none}
+.nt .vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*1.6)}
+.nt .vs div{border:1px solid var(--ln);padding:calc(var(--u)*1.6)}
+.nt .vs div:last-child{background:var(--wh);color:var(--bk)}
+.nt .vs b{display:block;font-family:var(--mo);font-size:calc(var(--u)*.86);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9em;color:var(--gy)}
+.nt .vs div:last-child b{color:var(--rd)}
+.nt .vs li{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.5);line-height:1.1;padding:.3em 0}
+.nt .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*1.6)}
+.nt .nums div{border-top:2px solid var(--wh);padding-top:calc(var(--u)*1.2)}
+.nt .nums b{display:block;font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;font-size:calc(var(--u)*5);line-height:.9;letter-spacing:-.03em;margin-bottom:.25em}
+.nt .nums p{font-size:calc(var(--u)*1.15);line-height:1.45;color:var(--wh)}
+.nt .nums p em{font-style:normal;color:var(--rd)}
+.nt .src{margin-top:calc(var(--u)*1.4)}
+
+/* detailed rollout */
+.nt .phd{padding:calc(var(--u)*5) 0 0;margin-top:calc(var(--u)*5);border-top:1px solid var(--ln)}
+.nt .phd:first-of-type{margin-top:0;padding-top:0;border-top:0}
+.nt .phd .hd{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);align-items:end}
+.nt .phd .hd .pn{display:block;font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--rd);margin-bottom:.8em}
+.nt .phd .hd h3{font-size:calc(var(--u)*5.4)}
+.nt .phd .hd .mm{margin-top:calc(var(--u)*1.2);font-family:var(--mo);font-size:calc(var(--u)*.82);line-height:1.6;letter-spacing:.04em;text-transform:uppercase;color:var(--gy)}
+.nt .phd .ui{border-left:3px solid var(--rd);padding-left:calc(var(--u)*1.6)}
+.nt .phd .ui b{display:block;font-family:var(--mo);font-weight:400;font-size:calc(var(--u)*.82);letter-spacing:.08em;text-transform:uppercase;color:var(--gy);margin-bottom:.8em}
+.nt .phd .ui p{font-size:calc(var(--u)*1.42);line-height:1.5}
+.nt .phd .ui .th{margin-top:calc(var(--u)*1.4);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.6);line-height:1}
+.nt .phd .ui .th i{font-style:normal;color:var(--rd)}
+.nt .acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*3.2)}
+.nt .ac{border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.2);display:flex;flex-direction:column}
+.nt .ac.film{grid-column:1/-1;background:var(--bk);border-color:var(--wh);flex-direction:row;align-items:center;justify-content:space-between;gap:var(--g);padding:calc(var(--u)*1.4) calc(var(--u)*2)}
+.nt .ac.film b{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*2.2);line-height:1}
+.nt .ac .no{font-family:var(--mo);font-size:calc(var(--u)*.82);letter-spacing:.08em;text-transform:uppercase;color:var(--rd)}
+.nt .ac h4{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.025em;font-size:calc(var(--u)*2.6);line-height:.95;margin:.4em 0 0}
+.nt .ac .cl2{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.3);line-height:1.45;color:var(--wh);font-weight:500}
+.nt .ac dl{margin:calc(var(--u)*1.6) 0 0;padding:0}
+.nt .ac dt{font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;color:var(--gy);margin-top:calc(var(--u)*1.2)}
+.nt .ac dd{margin:.4em 0 0;font-size:calc(var(--u)*1.12);line-height:1.5;color:var(--wh)}
+.nt .ac .hw{margin-top:calc(var(--u)*1.6);border-top:1px solid var(--ln)}
+.nt .ac .hw li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1);padding:calc(var(--u)*1) 0;border-bottom:1px solid var(--ln);font-size:calc(var(--u)*1.08);line-height:1.45;color:var(--gy)}
+.nt .ac .hw li i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.06em;color:var(--rd);padding-top:.25em}
+.nt .ac .hw li b{display:block;color:var(--wh);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.15);line-height:1.05;margin-bottom:.3em}
+.nt .ac .hw li.hdr{color:var(--wh);font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;grid-template-columns:minmax(0,1fr);padding:calc(var(--u)*1) 0 calc(var(--u)*.6)}
+
+/* the line */
+.nt .ln1{position:relative;display:block;width:max-content;max-width:none;white-space:nowrap;font-size:calc(var(--u)*6.2);color:var(--gy);line-height:.95}
+.nt .ln1 svg{position:absolute;left:-1.5%;top:0;width:103%;height:100%;overflow:visible;pointer-events:none}
+.nt .ln1 svg path{fill:none;stroke:var(--rd);stroke-width:calc(var(--u)*.75);vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s cubic-bezier(.3,.6,.2,1) .3s}
+.nt .ln1.on svg path{stroke-dashoffset:0}
+.nt .ln2{display:block;width:max-content;max-width:none;margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*13);line-height:.85;white-space:nowrap}
+.nt .ln2 .mk{display:inline-block;font-size:.3em;vertical-align:top;margin:.3em 0 0 .3em;transform:rotate(-6deg);opacity:0;transition:opacity .5s ease 1.3s}
+.nt .ln1.on+.ln2 .mk{opacity:1}
+.nt .role{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);margin-top:calc(var(--u)*5);padding-top:calc(var(--u)*2.6);border-top:1px solid var(--ln)}
+
+/* closer */
+.nt .cl{padding-top:calc(var(--u)*7);padding-bottom:calc(var(--u)*8)}
+.nt .cl .gx{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--g);align-items:end}
+.nt .cl h2{font-size:calc(var(--u)*7.2)}
+.nt .pill{display:inline-flex;align-items:center;gap:.8em;background:var(--wh);color:var(--bk);padding:1em 1.6em .9em;font-family:var(--mo);font-weight:700;font-size:calc(var(--u)*.95);letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s,transform .3s;white-space:nowrap}
+.nt .pill::before{content:"";width:.9em;height:.9em;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:.1em}
+.nt .pill:hover{background:var(--rd);color:var(--wh);transform:translateY(-2px)}
+
+@media (prefers-reduced-motion:reduce){.nt .rv,.nt .hero h1 span,.nt .ln1 svg path,.nt .ln2 .mk{transition:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}}
+
+@media (max-width:1000px){
+  .nt{--u:clamp(8px,2.1vw,14px);--g:1.75rem}
+  .nt .tb{padding-right:calc(1.75rem + 72px)}
+  .nt .hero .gx{grid-template-columns:minmax(0,1fr)}
+  .nt .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nt .cs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nt .br .row{grid-template-columns:calc(var(--u)*5) minmax(0,1fr)}
+  .nt .br .row p{grid-column:2}
+  .nt .role{grid-template-columns:minmax(0,1fr)}
+  .nt .gtb{grid-template-columns:minmax(0,1fr)}
+  .nt .gtb div{min-height:0}
+  .nt .gtb p{font-size:max(18px,calc(var(--u)*2.2))}
+  .nt .stx{grid-template-columns:minmax(0,1fr)}
+  .nt .vs,.nt .nums{grid-template-columns:minmax(0,1fr)}
+  .nt .vs li{font-size:max(16px,calc(var(--u)*1.5))}
+  .nt .nums p{font-size:max(14px,calc(var(--u)*1.15))}
+  .nt .phd .hd{grid-template-columns:minmax(0,1fr)}
+  .nt .phd .ui p{font-size:max(15px,calc(var(--u)*1.42))}
+  .nt .phd .ui .th{font-size:max(16px,calc(var(--u)*1.6))}
+  .nt .acts{grid-template-columns:minmax(0,1fr)}
+  .nt .ac.film{flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1)}
+  .nt .ac.film b{font-size:max(20px,calc(var(--u)*2.2))}
+  .nt .ac h4{font-size:max(22px,calc(var(--u)*2.6))}
+  .nt .ac .cl2{font-size:max(15px,calc(var(--u)*1.3))}
+  .nt .ac dd,.nt .ac .hw li{font-size:max(14px,calc(var(--u)*1.1))}
+  .nt .ac dt,.nt .ac .no,.nt .ac .hw li i,.nt .ac .hw li.hdr{font-size:max(10.5px,calc(var(--u)*.78))}
+  .nt .ac .hw li b{font-size:max(14px,calc(var(--u)*1.15))}
+  .nt .ro .tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:calc(var(--u)*5)}
+  .nt .ro .tl::before{display:none}
+  .nt .ph{padding-top:0;padding-left:calc(var(--u)*2.2);border-left:2px solid var(--ln)}
+  .nt .ph .q{position:static;display:block;margin-bottom:calc(var(--u)*1.2)}
+  .nt .ph .dot{top:0;left:calc(var(--u)*-.45 - 1px)}
+  .nt .ph h3{min-height:0}
+  .nt .ph .ba li,.nt .ph .mm{font-size:max(14px,calc(var(--u)*1.1))}
+  .nt .ph .mm{font-size:max(11px,calc(var(--u)*.82))}
+  .nt .ph .ba li b,.nt .ph .fl b{font-size:max(16px,calc(var(--u)*1.4))}
+  .nt .ph .ba li i,.nt .ph .fl i{font-size:max(10.5px,calc(var(--u)*.78))}
+  .nt .ro .rings{grid-template-columns:minmax(0,1fr)}
+  .nt .ro .rings .rk span{font-size:max(13px,calc(var(--u)*1.2))}
+  .nt .bd,.nt .br p{font-size:max(15px,calc(var(--u)*1.42))}
+  .nt .mo,.nt .lb{font-size:max(11px,calc(var(--u)*.86))}
+  .nt .meta div{font-size:max(14px,calc(var(--u)*1.2))}
+  .nt .meta b,.nt .br h3 small{font-size:max(10.5px,calc(var(--u)*.8))}
+}
+@media (max-width:700px){
+  .nt{--u:3.15vw;--g:1.5rem}
+  .nt .tb{min-height:76px;flex-wrap:wrap;row-gap:.3rem;padding-top:.8rem;padding-bottom:.8rem}
+  .nt .tb .sp{display:none}
+  .nt .hero{padding-top:calc(var(--u)*3)}
+  .nt .hero h1{font-size:calc(var(--u)*14)}
+  .nt .hero .dk{font-size:max(17px,calc(var(--u)*1.9))}
+  .nt .sh h2,.nt .cl h2{font-size:calc(var(--u)*4.8)}
+  .nt .br h3{font-size:calc(var(--u)*3)}
+  .nt .cs{grid-template-columns:minmax(0,1fr)}
+  .nt .ro .tl{grid-template-columns:minmax(0,1fr)}
+  .nt .ph h3{font-size:max(24px,calc(var(--u)*3.1))}
+  .nt .fr .cap .mk{font-size:max(15px,calc(var(--u)*1.35))}
+  .nt .ln1{font-size:calc(var(--u)*5)}
+  .nt .ln1 svg path{stroke-width:calc(var(--u)*.55)}
+  .nt .ln2{font-size:calc(var(--u)*11)}
+  .nt .cl .gx{grid-template-columns:minmax(0,1fr)}
+  .nt .pill{font-size:max(11px,calc(var(--u)*.95))}
+}
+</style>
+</head>
+<body>
+<div class="nt">
+
+  <div class="tb w" aria-label="Project">
+    <span class="mo"><b>Under Armour</b></span>
+    <span class="mo">Never Through</span>
+    <span class="sp" aria-hidden="true"></span>
+    <span class="mo">Global Campaign Film</span>
+    <span class="mo">2022</span>
+  </div>
+
+  <section class="hero w" id="top">
+    <div class="lb"><i>[ 01 ]</i><span>Frame 01: The Manifesto</span></div>
+    <h1 id="h1"><span class="l1">Never</span><span class="l2">Through</span></h1>
+    <div class="gx">
+      <div class="rv">
+        <p class="dk">A visual manifesto tapping into the collective urgency for better. Better selves, better systems, better futures.<span class="mk">the pursuit of better never ends</span></p>
+      </div>
+      <figure class="reel rv d1">
+        <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-sizzle.gif" alt="" role="img" aria-label="Sizzle cut of the Never Through film: a sprinter under floodlights, a soccer player after a hit, a football player in a red helmet, an athlete mid shout, and the line The Only Way Is Through" width="739" height="415">
+        <figcaption class="cap"><span class="mo">Sizzle cut</span><span class="mo">71 frames, loops</span></figcaption>
+      </figure>
+    </div>
+    <div class="meta rv d2">
+      <div><b>Client</b>Under Armour</div>
+      <div><b>Role</b>Senior Copywriter</div>
+      <div><b>Channels</b>Digital, social and experiential</div>
+      <div><b>Audience</b>Gen Z, global</div>
+    </div>
+  </section>
+
+  <section class="sc w" id="film">
+    <div class="sh">
+      <div class="lb rv"><i>[ 02 ]</i><span>Frame 02: The Hero Film</span></div>
+      <h2 class="rv d1">Through Failures. Through Restarts.</h2>
+    </div>
+    <div class="vl rv d2" data-src="https://player.vimeo.com/video/535084885?autoplay=1&title=0&byline=0&portrait=0" data-t="Never Through hero film">
+      <img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-poster.webp" alt="" role="img" aria-label="An athlete in a pink jersey mid shout on the field" width="689" height="387" loading="lazy">
+      <button class="lk" type="button" aria-label="Play the Never Through hero film"><span class="pl">Play Film</span></button>
+    </div>
+    <div class="fcap">
+      <span class="mo">Hero film, scripted for the 2022 global campaign</span>
+      <span class="mo">Click to play</span>
+    </div>
+  </section>
+
+  <section class="sc w" id="sheet">
+    <div class="sh">
+      <div class="lb rv"><i>[ 03 ]</i><span>Frame 03: The Contact Sheet</span></div>
+      <h2 class="rv d1">Frames From The Cut</h2>
+    </div>
+    <div class="cs">
+      <figure class="fr rv">
+        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-woman.webp" alt="" role="img" aria-label="A sprinter catches her breath under floodlights" width="695" height="337" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 14</span><span class="mk">breathe</span></figcaption>
+      </figure>
+      <figure class="fr rv d1">
+        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-soccer.webp" alt="" role="img" aria-label="A soccer player in a white jersey after taking a hit" width="528" height="282" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 28</span><span class="mk">take the hit</span></figcaption>
+      </figure>
+      <figure class="fr rv d2">
+        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-man.webp" alt="" role="img" aria-label="An athlete in a dark training shirt squares up" width="303" height="327" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 44</span><span class="mk">square up</span></figcaption>
+      </figure>
+      <figure class="fr rv">
+        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-helmet.webp" alt="" role="img" aria-label="A football player in a red helmet stares down the lens" width="438" height="289" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 56</span><span class="mk">restart</span></figcaption>
+      </figure>
+      <figure class="fr rv d1">
+        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-scream.webp" alt="" role="img" aria-label="An athlete in a pink jersey roars" width="689" height="335" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 65</span><span class="mk">again</span></figcaption>
+      </figure>
+      <figure class="fr rv d2">
+        <div class="im ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-title.webp" alt="" role="img" aria-label="Title card reading The Only Way Is Through" width="739" height="415" loading="lazy"></div>
+        <figcaption class="cap"><span class="mo">FR 68</span><span class="mk">never through</span></figcaption>
+      </figure>
+    </div>
+    <div class="csn rv">
+      <span class="mo">Stills pulled from the sizzle cut</span>
+      <span class="mo">Hover for color</span>
+    </div>
+  </section>
+
+  <section class="sc w" id="brief">
+    <div class="sh">
+      <div class="lb rv"><i>[ 04 ]</i><span>Frame 04: The Brief</span></div>
+      <h2 class="rv d1">Who, What, Where, And Why It Matters</h2>
+    </div>
+    <div class="br">
+      <div class="row rv">
+        <span class="n">01</span>
+        <h3>Who<small>The Client</small></h3>
+        <p>Under Armour, a global sportswear leader empowering active, competitive individuals, especially Gen Z, with the tools, products and guidance for peak performance amid post-pandemic challenges.</p>
+      </div>
+      <div class="row rv">
+        <span class="n">02</span>
+        <h3>What<small>What We Did</small></h3>
+        <p>Developed the film concept for the 2022 global campaign Never Through, celebrating how an athletic mindset carries you through failures and restarts, in the never-ending pursuit of better.</p>
+      </div>
+      <div class="row rv">
+        <span class="n">03</span>
+        <h3>Where<small>Channels</small></h3>
+        <p>Designed for global rollout across digital platforms, social media and experiential activations, engaging Gen Z audiences with relatable content.</p>
+      </div>
+      <div class="row rv">
+        <span class="n">04</span>
+        <h3>Why It Matters<small>Cultural Insight</small></h3>
+        <p>Addressed the persistent on- and off-field adversities of 2020 and 2021 by building momentum on athlete resilience, fostering empowerment and brand loyalty among an ad-savvy generation demanding genuine narratives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc w" id="strategy">
+    <div class="sh">
+      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Strategy</span></div>
+      <h2 class="rv d1">Heart, On And Off The Field</h2>
+    </div>
+    <div class="stx rv">
+      <h3>Cultural Context</h3>
+      <div>
+        <p class="bd">When it comes to sport, we tend to think of heart as something akin to grit and determination, but it's more than that. Athletes with heart break records and barriers. They change organizations and communities. They create dynasties and movements.</p>
+        <p class="bd">Heart is the intersection of humanity and human performance. Today's athletes are on the front lines of social justice movements, pandemic relief efforts and everything in between. Heart is the key to on-field performance, but its true measure is off-field progress.</p>
+      </div>
+    </div>
+    <div class="stx rv">
+      <h3>The Target: Focused Performers</h3>
+      <div>
+        <p class="bd">The Focused Performer is motivated and driven. They want to perform at their best, always, on and off the playing field. They want sportswear brands that operate with the same kind of heart as them, brands with values and the conviction to back it up. Brands that don't just deliver on their functional needs, but emotional needs too.</p>
+        <div class="nums">
+          <div><b>75%</b><p>of Gen Z sports fans believe <em>brands</em> should play a part in leading cultural change</p></div>
+          <div><b>78%</b><p>of Gen Z sports fans admire <em>pro athletes</em> who speak out in public about issues they're passionate about, even if they're controversial</p></div>
+          <div><b>77%</b><p>of Gen Z sports fans believe sports <em>leagues and teams</em> should play a leading role in social change</p></div>
+        </div>
+        <p class="mo src">Source: Sports Monitor Fan Engagement, December 2020</p>
+        <div class="vs">
+          <div><b>Jordan Generation</b><ul><li>Be like Mike.</li><li>Greed is good.</li><li>Color blind.</li><li>Boys will be boys.</li></ul></div>
+          <div><b>Gen Z Culture</b><ul><li>You do you.</li><li>Purpose over profits.</li><li>Color brave.</li><li>The future is female.</li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="stx rv">
+      <h3>Leading The Pulse</h3>
+      <div>
+        <p class="bd">2021 continues to show us the interconnectedness of sports and culture. There is no delineation, and there won't be in 2022. What happens off the playing field affects what happens on the playing field. If Under Armour helps athletes in their pursuit of making the world better, Under Armour makes sports better.</p>
+        <p class="bd">For Under Armour to truly be credible as a purpose-driven brand, we can't just tell Focused Performers how our brand will make them better. We also need them to emotionally invest and subscribe to why our brand will make their world better.</p>
+      </div>
+    </div>
+    <div class="stx rv" style="grid-template-columns:minmax(0,1fr)">
+      <h3>The Creative Challenge</h3>
+      <div class="gtb">
+        <div><i>Get</i><p>Focused Performers eager to make their mark on the world</p></div>
+        <div><i>To</i><p>See Under Armour as the sportswear brand that shares their values</p></div>
+        <div><i>By</i><p>Connecting heart to Under Armour's human performance system</p></div>
+      </div>
+    </div>
+    <div class="stx rv" style="grid-template-columns:minmax(0,1fr)">
+      <h3>The Platform</h3>
+      <div>
+        <p class="bd">Never Through is more than a campaign. It's a promise of progress. A promise that Under Armour is never through.</p>
+        <div class="gtb" style="margin-top:calc(var(--u)*1.6)">
+          <div><i>Making You Better</i><p style="text-transform:none;font-family:var(--bd);font-weight:400;font-size:calc(var(--u)*1.2);line-height:1.5;letter-spacing:0">Through supporting every Focused Performer by championing their relentless pursuit of progress.</p></div>
+          <div><i>Making Sport Better</i><p style="text-transform:none;font-family:var(--bd);font-weight:400;font-size:calc(var(--u)*1.2);line-height:1.5;letter-spacing:0">Through making sport more inclusive and accessible for every Focused Performer.</p></div>
+          <div><i>Making The World Better</i><p style="text-transform:none;font-family:var(--bd);font-weight:400;font-size:calc(var(--u)*1.2);line-height:1.5;letter-spacing:0">Through becoming a better brand supporting the whole Focused Performer in their progress on and off the field.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc w ro" id="rollout">
+    <div class="sh">
+      <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: The Rollout</span></div>
+      <h2 class="rv d1">Four Beats, January To June</h2>
+      <p class="bd rv d2">The film launched the platform in January. Then three themed phases followed through June, each one pairing a film with a set of brand actions so Under Armour could prove the line, not just say it. Every action below carries its insight, its idea and how it works.</p>
+    </div>
+    <div class="phd">
+      <div class="hd rv">
+        <div><span class="pn">Launch</span><h3>Never Through</h3><p class="mm">Jan 2022<br>Back To The Gym</p></div>
+        <div class="ui"><b>The Opening Beat</b><p>The hero film introduces the platform and the evolved line, with the first launch brand actions behind it. Media and buzz open together, so the promise and the proof arrive at the same time.</p></div>
+      </div>
+      <div class="acts">
+        <article class="ac film rv"><span class="no">Media</span><b>Launch Film</b><span class="mo">Buzz: Launch Brand Actions</span></article>
+      </div>
+    </div>
+    <div class="phd">
+      <div class="hd rv">
+        <div><span class="pn">Phase 01</span><h3>Diversity In Sport</h3><p class="mm">Q1<br>Black History Month, Super Bowl and Playoffs</p></div>
+        <div class="ui"><b>Universal Insight</b><p>Black and brown athletes contribute so much to sports culture, but don't receive support in their unique struggles on and off the court. As a result, players end up feeling exploited and out of place in the world of sports.</p><p class="th">Theme: <i>Challenging Racism</i></p></div>
+      </div>
+      <div class="acts">
+        <article class="ac film rv"><span class="no">Media</span><b>Diversity In Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
+      <article class="ac rv">
+        <span class="no">Brand Action 01</span>
+        <h4>Playing Fair</h4>
+        <p class="cl2">Under Armour levels the playing field for Black athletes with scholarships that alleviate the financial burden of getting in the game.</p>
+        <dl><dt>Insight</dt><dd>In 2019 the poverty rate was 18.8% for Black people and 15.7% for Hispanic people, against 9.6% for white people. Nearly 1 in 5 lower-income parents report costs forced their children to cut back on sports, and 86% of student athletes live in poverty. Cost acts as a major barrier to entry for athletes from minority groups.</dd><dt>Idea</dt><dd>A nontraditional scholarship program that covers non-academic, sports-related expenses, so financial obstacles don't interrupt our Focused Performers in their pursuit of progress.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Need-Based Scholarships</b>Work with campus partners around the country, maybe even globally, to offer need-based scholarships to an entire class of 2022 athletes.</div></li><li><i>02</i><div><b>Beyond Sport Stipends</b>In addition to tuition, offset non-academic costs like travel to and from games, uniforms and equipment, and general cost of living.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 02</span>
+        <h4>Playing Fair, Extended</h4>
+        <p class="cl2">Under Armour is challenging exploitative regulations in the NCAA with the backing of the California government.</p>
+        <dl><dt>Insight</dt><dd>56% of Division I men's college basketball players and 48% of football student-athletes are Black, yet the top 20 NCAA colleges collectively make over $3 billion a year from their athletic programs.</dd><dt>Idea</dt><dd>California's Fair Pay To Play Act, signed in 2019, lets college athletes profit from endorsements. We'll lobby to make it federal law so athletes in all 50 states benefit, and work with Overtime Elite to provide players a salary and benefits from high school on.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Collective For Change</b>An original team of lobbyists, lawyers, marketers and key athlete partners leading the charge for reform.</div></li><li><i>02</i><div><b>Crunching The Numbers</b>Calculate the total amount lost by the former student athletes on our roster and donate that amount to launch an awareness campaign around the issue.</div></li><li><i>03</i><div><b>Taking The Floor</b>Former NCAA athletes on our roster speak before Congress and advocate for the next generation.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 03</span>
+        <h4>Bridging The Gap</h4>
+        <p class="cl2">Under Armour launches an apprenticeship program to empower athletes from under-represented communities to change the makeup of sports.</p>
+        <dl><dt>Insight</dt><dd>In 2020 the 32 NFL teams started the season with only three Black head coaches and two Black general managers, in a league where the players are roughly 70% Black. The disparity leads athletes who don't make it professionally to drop out of sport altogether.</dd><dt>Idea</dt><dd>Address the racial disparity between Black players and Black leadership by creating a groundbreaking initiative exposing high school athletes to alternative career paths in the sports industry.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>See It. Be It.</b>An apprenticeship program with high schools across the country, in partnership with IMG Academy, exposing young sport enthusiasts to sports-adjacent careers.</div></li><li><i>02</i><div><b>Becoming A Major Player</b>Bring in the crucial team members who work for our athletes off the court, managers, agents, contract lawyers, as mentors.</div></li><li><i>03</i><div><b>Leaders In Training</b>Sponsor college curriculum on the path to these careers with special guest hosts like Deion Sanders from leadership positions in the industry.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 04</span>
+        <h4>Passing The Mic</h4>
+        <p class="cl2">In an industry that often tells athletes to shut up, Under Armour is giving them a platform to speak up about issues that matter.</p>
+        <dl><dt>Insight</dt><dd>People who thought kneeling during the anthem was appropriate rose from 32% in September 2016 to 41% in September 2017 to 48% in July 2020. There's a growing appetite, within the athlete community and among fans, for athletes to own their politics.</dd><dt>Idea</dt><dd>Organize a collective of the top athletes on our roster to ideate on ways Under Armour can change the systemic issues in the sports industry and push the game forward.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Speaking Out</b>Launch with a statement of purpose describing the goals the team will organize around and a list of demands to the industry.</div></li><li><i>02</i><div><b>A Seat At The Table</b>Live roundtable discussions moderated by sports journalists on the need for change in sport.</div></li><li><i>03</i><div><b>Teamwork Makes The Dream Work</b>The collective informs Under Armour's initiatives over five years, applying a collaborative product innovation strategy to athletes' needs.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 05</span>
+        <h4>Getting In The Game</h4>
+        <p class="cl2">Under Armour champions athletes from underrepresented groups as the new face of the most niche sports out there.</p>
+        <dl><dt>Insight</dt><dd>Certain overwhelmingly white sports often forcefully exclude non-white athletes from participating, reinforcing the idea that there are only certain sports Black and brown athletes can take part in. The MLB is almost 60% white.</dd><dt>Idea</dt><dd>Confront the lack of diverse representation in traditionally white sports by sponsoring young, star athletes from underrepresented groups paving their own way, starting with our inroads in baseball and expanding to sports of all kinds.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Star Player Spotlight</b>Sponsor a wave of up-and-coming BIPOC athletes in traditionally white sports and empower them as the new face of those sports.</div></li><li><i>02</i><div><b>Voices Of The Next Generation</b>An awareness campaign with content and a live speaker series at schools and community centers, where brand ambassadors speak about the exclusion they've faced.</div></li><li><i>03</i><div><b>Making Space</b>Partner with community centers in underserved neighborhoods to provide coaching, free equipment and safe spaces to explore more sports.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 06</span>
+        <h4>A Timeless Fight</h4>
+        <p class="cl2">Under Armour examines the longstanding history of sports in protest to empower the next generation to keep taking a stand.</p>
+        <dl><dt>Insight</dt><dd>Protest has always played a pivotal role in the world of sports, and Under Armour has a history of its athletes using their platform for change, including Steph Curry, Aisha Praught-Leer, Andy Murray and Natasha Hastings.</dd><dt>Idea</dt><dd>Honor the legacy of sports activism through an in-depth documentary, empowering the next generation of athletes and activists and highlighting the rich history of protest in sport, including the ongoing legacy of our own athletes.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Protest Through The Ages</b>An in-depth documentary on the ways sports activism has generated results and shifted the landscape of the industry over time.</div></li><li><i>02</i><div><b>Looking Back To Move Forward</b>Former sports activists and current leaders facilitate discussion and strategize for athletes looking to use their voice: how to engage your team in organized action, how to deal with backlash.</div></li><li><i>03</i><div><b>Funding The Future</b>Proceeds from the release go back to ongoing initiatives to reform the industry, with input from the athletes featured in the film.</div></li></ul>
+      </article>
+      </div>
+    </div>
+    <div class="phd">
+      <div class="hd rv">
+        <div><span class="pn">Phase 02</span><h3>Gender In Sport</h3><p class="mm">Q1 to Q2<br>International Women's Day, March Madness</p></div>
+        <div class="ui"><b>Universal Insight</b><p>In a recent study, 41% of Gen Z participants said they identify as neutral on the spectrum of masculinity and femininity. Outdated gender norms in sports exclude and limit today's generation of athletes from participating in and bettering themselves through sport.</p><p class="th">Theme: <i>Tackling Gender</i></p></div>
+      </div>
+      <div class="acts">
+        <article class="ac film rv"><span class="no">Media</span><b>Gender In Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
+      <article class="ac rv">
+        <span class="no">Brand Action 01</span>
+        <h4>Mom VP</h4>
+        <p class="cl2">Moms make some of the greatest athletes, and Under Armour is stepping up to make sure they can stay in the game.</p>
+        <dl><dt>Insight</dt><dd>NCAA experts suggest that pregnancy rates for female student-athletes are as high as 10% to 15%.</dd><dt>Idea</dt><dd>Show up for college athletes who are moms, and future moms, in a way that validates the value they bring to sport, helping them through pregnancy, postpartum recovery and the return to the game.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Providing Tools For Progress</b>Near Mother's Day, partner with major stadiums and brands like Medela to equip sporting facilities with nursing rooms and postpartum essentials.</div></li><li><i>02</i><div><b>Through It All Partnerships</b>Commit to financially sponsoring the new mom athletes on our roster during and post maternity leave.</div></li><li><i>03</i><div><b>Recovery Redefined</b>A maternity and postpartum athletic wear line that accommodates a new mother's needs and eases the transition back into being active.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 02</span>
+        <h4>Lifting The Weight</h4>
+        <p class="cl2">Under Armour is taking the pressure of being othered in the gym off the shoulders of non-binary athletes.</p>
+        <dl><dt>Insight</dt><dd>According to a 2015 study, nearly 1 in 5 transgender people said they were denied equal treatment or service, verbally harassed, or physically attacked at a gym within the past year because of being transgender.</dd><dt>Idea</dt><dd>Partner with and elevate gyms designed specifically to provide safe spaces for queer, trans and gender non-conforming college athletes.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Creating Community</b>In the days leading up to Pride, an event at The Queer Gym, the first dedicated LGBTQ gym in the U.S., with Steph Curry as host.</div></li><li><i>02</i><div><b>Transformation Toolkits</b>Partner with gyms across the country to transform them into more inclusive places for non-binary athletes.</div></li><li><i>03</i><div><b>Doing The Heavy Lifting</b>Guidance from sports D&amp;I experts like Athlete Ally to help with the transformation of these spaces.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 03</span>
+        <h4>Breaking The Binary</h4>
+        <p class="cl2">Under Armour creates the first-ever gender neutral locker room to start to break the gender binary for college athletes.</p>
+        <dl><dt>Insight</dt><dd>For nine years, transgender athletes at NCAA member universities have been able to compete on teams consistent with their gender identities. Despite that, accommodations haven't been made to empower trans athletes at the college level to succeed.</dd><dt>Idea</dt><dd>Support athletes across the gender spectrum by creating the first-ever gender neutral locker rooms in colleges across the country.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Starting The Conversation</b>A podcast featuring top athletes in conversation about the evolution of gender norms in sports.</div></li><li><i>02</i><div><b>Power In Numbers</b>Virtual support groups for gender non-conforming high school athletes to experience community and support each other.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 04</span>
+        <h4>Fit For Every Body</h4>
+        <p class="cl2">Under Armour removes all the labels from its clothes and empowers athletes to identify however they want while they shop.</p>
+        <dl><dt>Insight</dt><dd>56% of Gen Z consumers already shop outside of their gender, or cross-buy, ignoring clothing labels and gendered sections.</dd><dt>Idea</dt><dd>A major push to make sports more inclusive by making our products more accessible to those across the gender spectrum, pushing industry norms to serve all Focused Performers equally.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Beyond Labels</b>In the spirit of the Curry 6 and Riley Morrison in 2019, remove labels from our site and aisles, and add unisex products like jerseys and a non-gender-specific Meridian line.</div></li><li><i>02</i><div><b>Leading By Example</b>Compile a comprehensive research report and share it with competitors to create a new industry standard of gender inclusivity.</div></li><li><i>03</i><div><b>Designing A New Day</b>Work with gender non-conforming and non-binary designers on an intentional, informed product line: breathable chest binder tops, biker shorts with built-in tucking gaff, swim trunks without netting.</div></li></ul>
+      </article>
+      </div>
+    </div>
+    <div class="phd">
+      <div class="hd rv">
+        <div><span class="pn">Phase 03</span><h3>Beyond Sport</h3><p class="mm">Q2 to Jun 2022<br>Mother's Day, Pride</p></div>
+        <div class="ui"><b>Universal Insight</b><p>Athletes are multi-dimensional by nature and have more to offer the culture than just what they do on the court.</p><p class="th">Theme: <i>Beyond Sport</i></p></div>
+      </div>
+      <div class="acts">
+        <article class="ac film rv"><span class="no">Media</span><b>Beyond Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
+      <article class="ac rv">
+        <span class="no">Brand Action 01</span>
+        <h4>Off Court Excellence</h4>
+        <p class="cl2">Under Armour celebrates the off court excellence of Seahawks wide receiver and aspiring chef DK Metcalf.</p>
+        <dl><dt>Insight</dt><dd>Athletes are often looked at as one dimensional and perceived as less valuable off the court.</dd><dt>Idea</dt><dd>Celebrate the lives of professional athletes outside of their role as players through a content series that highlights their pursuits outside of sport.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Second Success Stories</b>Well-known, high-performance athletes discuss how they apply a Focused Performer mentality outside of sport in an ESPN 30 for 30 docuseries.</div></li><li><i>02</i><div><b>Bigger Than Sport Series</b>A recurring TikTok Live segment on athletes applying what they learned in sport to a new context, hosted by an athlete who embodies that journey, The Rock.</div></li><li><i>03</i><div><b>The Beginning Of Better</b>A Do Better, Be Better program that empowers and guides young athletes to do good in their communities off the field.</div></li></ul>
+      </article>
+      <article class="ac rv">
+        <span class="no">Brand Action 02</span>
+        <h4>Sport Scholars</h4>
+        <p class="cl2">Under Armour provides ten-year scholarships to competitive athletes that demonstrate excellence off the court.</p>
+        <dl><dt>Insight</dt><dd>Athletes are rewarded for an almost unhealthy obsession with sports, whereas athletes who shine in off-the-court pursuits aren't given the same opportunities.</dd><dt>Idea</dt><dd>Demonstrate a long-term commitment to the whole athlete by offering ten-year scholarships to up-and-coming athletes who demonstrate excellence in off-the-court pursuits.</dd></dl>
+        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Next Step Scholarships</b>Support up-and-coming athletes as they pursue the next phase of their education and athletic career, developing as well-rounded individuals.</div></li><li><i>02</i><div><b>Foundation For Success</b>A mentorship program pairing rising star athletes with pros at the top of their game, with resources to identify and realize off-the-court dreams.</div></li></ul>
+      </article>
+      </div>
+    </div>
+    <div class="rings rv">
+      <div class="lb"><i>The Promise</i><span>Under Armour Is Never Through</span></div>
+      <div class="rk"><span>Making You Better</span><span>Making Sport Better</span><span>Making The World Better</span></div>
+    </div>
+  </section>
+
+  <section class="sc w" id="line">
+    <div class="sh">
+      <div class="lb rv"><i>[ 07 ]</i><span>Frame 07: The Line</span></div>
+      <h2 class="rv d1">One Tagline, Evolved</h2>
+    </div>
+    <div class="rv">
+      <h3 class="ln1" id="ln1">The Only Way Is Through.<svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 10.2 C 20 8.6, 45 11.4, 62 9.2 S 90 8.3, 99 9.8"/></svg></h3>
+      <h3 class="ln2" id="ln2">Never Through.<span class="mk">evolved</span></h3>
+    </div>
+    <div class="role rv">
+      <div class="lb"><i>My Role</i><span>Senior Copywriter</span></div>
+      <div>
+        <p class="bd">As Senior Copywriter on the team, I crafted the Never Through evolution of the brand's "The Only Way Is Through" tagline. I also scripted the hero film, integrating top-of-mind cultural issues with themes of perseverance and defiance in sport.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cl w" id="next">
+    <div class="gx">
+      <div>
+        <div class="lb rv"><i>[ 08 ]</i><span>Frame 08: Next</span></div>
+        <h2 class="rv d1" style="margin-top:calc(var(--u)*1.8)">More Commercials</h2>
+      </div>
+      <a class="pill rv d2" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
+    </div>
+  </section>
+
+</div>
+<script>
+(function(){
+  var root=document.querySelector('.nt');if(!root)return;
+  var q=function(s,c){return (c||root).querySelector(s)},qa=function(s,c){return [].slice.call((c||root).querySelectorAll(s))};
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var od=host.ownerDocument,de=od.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var ok=function(){var r=host.getBoundingClientRect();return Math.abs(r.left+(window.pageXOffset||0))<=.5&&Math.abs(r.width-de.clientWidth)<=.5};
+    var fit=function(){
+      if(ok())return;
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(window.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      var r2=host.getBoundingClientRect(),e=r2.left+(window.pageXOffset||0);
+      if(Math.abs(e)>.5){set('margin-left',(-l-e)+'px')}
+      set('background','none');
+    };
+    var later=function(){clearTimeout(tm);tm=setTimeout(fit,120)};
+    fit();
+    window.addEventListener('resize',later);
+    if(window.ResizeObserver){var ro=new ResizeObserver(later);ro.observe(de);if(host.parentElement)ro.observe(host.parentElement)}
+    var n=0,iv=setInterval(function(){fit();if(++n>16)clearInterval(iv)},500);
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250)});
+    window.addEventListener('load',fit);
+    setTimeout(fit,700);
+  }
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* headline fitter: shrink until the longest line fits the gutter */
+  var fitters=[{el:q('#h1'),lines:qa('#h1 span')},{el:q('#ln1'),lines:[q('#ln1')]},{el:q('#ln2'),lines:[q('#ln2')]}];
+  var fitAll=function(){
+    fitters.forEach(function(f){
+      if(!f.el)return;
+      f.el.style.fontSize='';
+      var box=f.el.parentElement,cs=getComputedStyle(box),avail=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),size=parseFloat(getComputedStyle(f.el).fontSize),i=0;
+      var wide=function(){return f.lines.some(function(l){return l.scrollWidth>avail+1})};
+      while(wide()&&i<40){size*=.95;f.el.style.fontSize=size+'px';i++}
+    });
+    /* wrapped headlines: shrink until the longest word fits */
+    qa('.sh h2,.cl h2,.br h3,.ph h3,.phd h3,.ac h4,.stx h3').forEach(function(h){
+      h.style.fontSize='';
+      var size=parseFloat(getComputedStyle(h).fontSize),i=0;
+      while(h.scrollWidth>h.clientWidth+1&&i<30){size*=.95;h.style.fontSize=size+'px';i++}
+    });
+  };
+  fitAll();
+  window.addEventListener('resize',fitAll);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+  if(window.document&&window.document.fonts&&window.document.fonts.ready)window.document.fonts.ready.then(fitAll);
+  window.addEventListener('load',fitAll);
+  setTimeout(fitAll,600);setTimeout(fitAll,1600);
+
+  /* hero in */
+  var hero=q('.hero');
+  setTimeout(function(){hero.classList.add('in')},60);
+
+  /* reveal */
+  var rv=qa('.rv,#ln1');
+  var show=function(e){e.classList.add('on')};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.12});
+    rv.forEach(function(e){io.observe(e)});
+  }else{rv.forEach(show)}
+  setTimeout(function(){rv.forEach(show)},2500);
+
+  /* click to play */
+  qa('.vl').forEach(function(box){
+    var btn=q('.lk',box);if(!btn)return;
+    btn.addEventListener('click',function(){
+      if(box.classList.contains('open'))return;
+      box.insertAdjacentHTML('beforeend','<iframe src="'+box.getAttribute('data-src')+'" title="'+box.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>');
+      box.classList.add('open');btn.setAttribute('aria-disabled','true');
+    });
+  });
+})();
+</script>
+</body></html>
