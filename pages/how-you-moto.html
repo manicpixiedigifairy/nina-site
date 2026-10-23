@@ -34,14 +34,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .hm .sl.on{opacity:1;transform:none}
 .hm .rv.d1{transition-delay:.08s}.hm .rv.d2{transition-delay:.16s}.hm .rv.d3{transition-delay:.24s}
 
-/* BAR (static, scrolls with the page) */
-.hm .bar{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.5);padding:calc(var(--u)*1.4) var(--pad);border-bottom:1px solid rgba(18,18,18,.12)}
-.hm .bar .brand{display:flex;align-items:center;gap:.7em;font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*1.25);letter-spacing:-.03em;line-height:1}
-.hm .bar .brand i{width:.9em;height:.9em;border-radius:50%;background:var(--mag);box-shadow:0 0 0 .22em var(--lime);flex:none}
-.hm .bar nav{display:flex;gap:calc(var(--u)*1.6)}
-.hm .bar nav a{font-family:var(--lb);font-weight:500;font-size:calc(var(--u)*.78);letter-spacing:.02em;opacity:.75;transition:opacity .2s}
-.hm .bar nav a:hover{opacity:1}
-.hm .bar .pill{font-size:calc(var(--u)*.7);padding:.7em 1.2em}
 
 /* HERO: gradient frame around a dark card */
 .hm .hero{padding:var(--pad);background:linear-gradient(170deg,var(--lilac) 0%,#FFC9B3 48%,var(--mint) 100%)}
@@ -151,7 +143,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  .hm .lines .head{grid-template-columns:1fr}
  .hm .film{grid-template-columns:1fr;gap:calc(var(--u)*2)}
  .hm article.film:nth-of-type(even) .txt{order:0}
- .hm .bar nav{display:none}
 }
 @media (max-width:700px){
  .hm{--u:clamp(10px,3.15vw,14px);--pad:calc(var(--u)*1.6)}
@@ -159,7 +150,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  .hm .lg{grid-template-columns:1fr}
  .hm .band{justify-content:center;gap:calc(var(--u)*2.2) calc(var(--u)*1.8)}
  .hm .sk{width:calc(var(--u)*6);height:calc(var(--u)*6)}
- .hm .bar .pill{display:none}
 }
 @media (prefers-reduced-motion:reduce){
  .hm .rv,.hm .sl,.hm .sk,.hm .vid,.hm .ln,.hm .pill{transition:none}
@@ -168,13 +158,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 </style></head><body>
 <div class="hm" id="hm">
 
-<header class="bar" id="top">
- <a class="brand" href="#top"><i aria-hidden="true"></i>How You Moto</a>
- <nav aria-label="Page sections"><a href="#films">The Films</a><a href="#lines">The Lines</a><a href="#why">Why It Matters</a></nav>
- <a class="pill o" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a>
-</header>
-
-<section class="hero">
+<section class="hero" id="top">
  <div class="card">
   <div class="txt">
    <p class="lb rv">Motorola &middot; moto g series &middot; Global TVC + Digital Video</p>
