@@ -36,7 +36,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 
 
 /* HERO: gradient frame around a dark card */
-.hm .hero{padding:var(--pad);background:linear-gradient(170deg,var(--lilac) 0%,#FFC9B3 48%,var(--mint) 100%)}
+.hm .hero{padding:calc(var(--u)*7.5) var(--pad) var(--pad);background:linear-gradient(170deg,var(--lilac) 0%,#FFC9B3 48%,var(--mint) 100%)}
 .hm .card{background:var(--char);color:var(--paper);border-radius:calc(var(--r)*1.6);padding:calc(var(--u)*4.5) calc(var(--u)*4.5) calc(var(--u)*4);display:grid;grid-template-columns:1.25fr .9fr;gap:calc(var(--u)*3);align-items:center;position:relative;overflow:hidden;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.6) rgba(26,22,25,.28)}
 .hm .card .lb{color:var(--mint)}
 .hm .card h1{font-size:min(calc(var(--u)*8),15.5vw);margin:calc(var(--u)*1.4) 0 calc(var(--u)*1.6)}
@@ -44,9 +44,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .hm .card .dek{max-width:34em;font-size:calc(var(--u)*1.22);line-height:1.45;color:rgba(251,247,242,.86)}
 .hm .card .dek b{color:var(--lime);font-weight:600}
 .hm .card .cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.2)}
-.hm .tile{width:min(100%,calc(var(--u)*34));aspect-ratio:1/1;border-radius:calc(var(--u)*2.2);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.6) rgba(0,0,0,.5);transform:rotate(-2deg)}
+.hm .tile{width:min(100%,calc(var(--u)*34));margin:auto;aspect-ratio:1/1;border-radius:calc(var(--u)*2.2);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.6) rgba(0,0,0,.5);transform:rotate(-2deg)}
 .hm .tile img{width:100%;height:100%;object-fit:cover}
-.hm .ph{display:flex;justify-content:center}
+.hm .ph{display:flex;justify-content:center;align-items:center;align-self:stretch;min-height:100%}
 
 /* INTRO */
 .hm .intro{padding:calc(var(--u)*6) var(--pad) calc(var(--u)*5);text-align:center}
@@ -142,6 +142,7 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 }
 @media (max-width:700px){
  .hm{--u:clamp(10px,3.15vw,14px);--pad:calc(var(--u)*1.6)}
+ .hm .hero{padding-top:calc(var(--u)*5.5)}
  .hm .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.8) calc(var(--u)*4)}
  .hm .lg{grid-template-columns:1fr}
  .hm .band{justify-content:center;gap:calc(var(--u)*2.2) calc(var(--u)*1.8)}
