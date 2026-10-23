@@ -31,13 +31,14 @@ PAGES = {
     'experiential': 'pages/experiential-vertical.html',
     'the-footprint': 'pages/the-footprint-ebay.html',
     'silkpressconference': 'pages/silk-press-conference.html',
+    'never-through': 'pages/never-through.html',
 }
 
 # Pages that still only exist in Squarespace. Until they are rebuilt here,
 # the test site sends visitors to the live version.
 SQUARESPACE_ONLY = [
     'plan-for-the-best', 'ok-v-day', 'for-your-lifes-work', 'curls-just-wanna-have-fun',
-    'never-through', 'hbcu-tour', 'tiny-wins', 'people-not-profit', 'brunch-with-the-best',
+    'hbcu-tour', 'tiny-wins', 'people-not-profit', 'brunch-with-the-best',
     'the-85-shop', 'how-you-moto', 'wtyw',
 ]
 
