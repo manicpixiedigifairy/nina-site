@@ -109,13 +109,12 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
 .hm .ln .bd p{font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*1.55);letter-spacing:-.03em;line-height:1.05}
 .hm .ln .bd p em{font-style:normal;color:var(--acc)}
 .hm .ln.a{--acc:#4D8A00}.hm .ln.b{--acc:#C71A9E}.hm .ln.c{--acc:#D45700}.hm .ln.d{--acc:#6B3FC9}
+.hm .lines .bk{display:flex;justify-content:flex-start;margin-top:calc(var(--u)*3.4)}
+.hm .pill.wh{background:var(--paper);color:var(--ink)}
+.hm .pill.wh:hover{background:var(--lime)}
 .hm .ln .bd .dv{margin-top:auto;font-family:var(--lb);font-weight:500;font-size:calc(var(--u)*.68);letter-spacing:.06em;text-transform:uppercase;opacity:.55}
 
 
-/* END */
-.hm .end{padding:calc(var(--u)*2.2) var(--pad) calc(var(--u)*2.2);text-align:left;background:var(--paper)}
-.hm .end h2{font-size:min(calc(var(--u)*7.4),14.5vw);max-width:9.5em;margin:0 auto}
-.hm .end .ft{display:flex;justify-content:flex-start}
 
 @media (max-width:1000px){
  .hm{--u:clamp(10px,2.1vw,16px);--pad:calc(var(--u)*2.5)}
@@ -133,7 +132,6 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  .hm .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.8) calc(var(--u)*4)}
  .hm .lg{grid-template-columns:1fr}
  .hm .lines{padding-bottom:calc(var(--u)*4)}
- .hm .end{padding-top:calc(var(--u)*2)}
  .hm .band{justify-content:center;gap:calc(var(--u)*2.2) calc(var(--u)*1.8)}
  .hm .sk{width:calc(var(--u)*6);height:calc(var(--u)*6)}
 }
@@ -228,11 +226,9 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
   <div class="ln c rv d2"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=2" alt="" role="img" aria-label="Still from Phone Feast" width="930" height="958" loading="lazy"></div><div class="bd"><span class="lb">Phone Feast</span><p>Enjoy the low-light ambiance. <em>Always get the yummiest shot.</em></p><span class="dv">moto g73</span></div></div>
   <div class="ln d rv d3"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=2" alt="" role="img" aria-label="Still from Game Time" width="968" height="982" loading="lazy"></div><div class="bd"><span class="lb">Game Time</span><p>Charge into battle anywhere. <em>Never lose battery.</em></p><span class="dv">moto g13</span></div></div>
  </div>
+ <div class="bk rv"><a class="pill wh" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a></div>
 </section>
 
-<footer class="end">
- <div class="ft rv d1"><a class="pill" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a></div>
-</footer>
 
 </div>
 <script>
