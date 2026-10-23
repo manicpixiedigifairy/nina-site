@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="How You Moto: four creator led stories for the moto g series, the Jetsetter, the Weekend Warrior, the Foodie and the Gamer, proving the only right way to use a Moto G is yours.">
+<title>Motorola | How You Moto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500;12..96,75..100,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#FBF7F2}
+.hm{--u:clamp(11px,1.1111vw,27px);--pad:calc(var(--u)*4);
+--paper:#FBF7F2;--ink:#121212;--char:#1A1619;--char2:#241E23;--mag:#FF4FD8;--lime:#B8F23D;--tang:#FF7A1A;--lilac:#C9A7FF;--mint:#7FE3C8;--cream:#F6EEDC;--white:#FFFFFF;
+--ds:'Bricolage Grotesque',Helvetica,Arial,sans-serif;--lb:'Space Grotesk',Helvetica,Arial,sans-serif;--sa:'Instrument Sans',Helvetica,Arial,sans-serif;
+--spring:cubic-bezier(.3,1.5,.5,1);--r:calc(var(--u)*1.6);
+display:block;position:relative;overflow-x:clip;width:100%;background:var(--paper);color:var(--ink);font-family:var(--sa);font-size:calc(var(--u)*1.08);line-height:1.5;-webkit-font-smoothing:antialiased}
+.hm *,.hm *::before,.hm *::after{box-sizing:border-box}
+.hm a{color:inherit;text-decoration:none}
+.hm h1,.hm h2,.hm h3,.hm p,.hm ul,.hm li,.hm figure{margin:0;padding:0;list-style:none}
+.hm img{display:block;max-width:100%;height:auto}
+.hm button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+.hm .lb{font-family:var(--lb);font-weight:700;font-size:calc(var(--u)*.72);letter-spacing:.14em;text-transform:uppercase;line-height:1.5}
+.hm .ds{font-family:var(--ds);font-weight:800;font-variation-settings:"opsz" 96,"wdth" 100;line-height:.92;letter-spacing:-.035em}
+.hm .w{width:100%;padding:0 var(--pad);position:relative}
+/* sticker outline headlines: a ring of solid copies behind the ink */
+.hm .stk{--sc:var(--lime);color:var(--ink);text-shadow:0.160em 0.000em 0 var(--sc),0.158em 0.028em 0 var(--sc),0.150em 0.055em 0 var(--sc),0.139em 0.080em 0 var(--sc),0.123em 0.103em 0 var(--sc),0.103em 0.123em 0 var(--sc),0.080em 0.139em 0 var(--sc),0.055em 0.150em 0 var(--sc),0.028em 0.158em 0 var(--sc),0.000em 0.160em 0 var(--sc),-0.028em 0.158em 0 var(--sc),-0.055em 0.150em 0 var(--sc),-0.080em 0.139em 0 var(--sc),-0.103em 0.123em 0 var(--sc),-0.123em 0.103em 0 var(--sc),-0.139em 0.080em 0 var(--sc),-0.150em 0.055em 0 var(--sc),-0.158em 0.028em 0 var(--sc),-0.160em 0.000em 0 var(--sc),-0.158em -0.028em 0 var(--sc),-0.150em -0.055em 0 var(--sc),-0.139em -0.080em 0 var(--sc),-0.123em -0.103em 0 var(--sc),-0.103em -0.123em 0 var(--sc),-0.080em -0.139em 0 var(--sc),-0.055em -0.150em 0 var(--sc),-0.028em -0.158em 0 var(--sc),-0.000em -0.160em 0 var(--sc),0.028em -0.158em 0 var(--sc),0.055em -0.150em 0 var(--sc),0.080em -0.139em 0 var(--sc),0.103em -0.123em 0 var(--sc),0.123em -0.103em 0 var(--sc),0.139em -0.080em 0 var(--sc),0.150em -0.055em 0 var(--sc),0.158em -0.028em 0 var(--sc),0.080em 0.000em 0 var(--sc),0.075em 0.027em 0 var(--sc),0.061em 0.051em 0 var(--sc),0.040em 0.069em 0 var(--sc),0.014em 0.079em 0 var(--sc),-0.014em 0.079em 0 var(--sc),-0.040em 0.069em 0 var(--sc),-0.061em 0.051em 0 var(--sc),-0.075em 0.027em 0 var(--sc),-0.080em 0.000em 0 var(--sc),-0.075em -0.027em 0 var(--sc),-0.061em -0.051em 0 var(--sc),-0.040em -0.069em 0 var(--sc),-0.014em -0.079em 0 var(--sc),0.014em -0.079em 0 var(--sc),0.040em -0.069em 0 var(--sc),0.061em -0.051em 0 var(--sc),0.075em -0.027em 0 var(--sc);padding:.12em .2em .14em .2em;margin-left:-.2em;display:inline-block}
+.hm .stk.m{--sc:var(--mag)}.hm .stk.t{--sc:var(--tang)}.hm .stk.l{--sc:var(--lilac)}.hm .stk.n{--sc:var(--mint)}.hm .stk.k{--sc:var(--ink);color:var(--paper)}
+/* pills */
+.hm .pill{display:inline-flex;align-items:center;gap:.5em;font-family:var(--lb);font-weight:700;font-size:calc(var(--u)*.8);letter-spacing:.02em;padding:.85em 1.5em;border-radius:999px;background:var(--ink);color:var(--white);transition:transform .5s var(--spring),background .2s ease;white-space:nowrap}
+.hm .pill:hover{transform:translateY(-2px) scale(1.03)}
+.hm .pill.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.hm .pill.wh{background:var(--white);color:var(--ink)}
+.hm .pill.g{background:var(--lime);color:var(--ink)}
+/* motion */
+.hm .rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .8s var(--spring)}
+.hm .rv.on{opacity:1;transform:none}
+.hm .sl{opacity:0;transform:scale(.86) rotate(-5deg);transition:opacity .35s ease,transform .8s var(--spring)}
+.hm .sl.on{opacity:1;transform:none}
+.hm .rv.d1{transition-delay:.08s}.hm .rv.d2{transition-delay:.16s}.hm .rv.d3{transition-delay:.24s}
+
+/* BAR (static, scrolls with the page) */
+.hm .bar{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.5);padding:calc(var(--u)*1.4) var(--pad);border-bottom:1px solid rgba(18,18,18,.12)}
+.hm .bar .brand{display:flex;align-items:center;gap:.7em;font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*1.25);letter-spacing:-.03em;line-height:1}
+.hm .bar .brand i{width:.9em;height:.9em;border-radius:50%;background:var(--mag);box-shadow:0 0 0 .22em var(--lime);flex:none}
+.hm .bar nav{display:flex;gap:calc(var(--u)*1.6)}
+.hm .bar nav a{font-family:var(--lb);font-weight:500;font-size:calc(var(--u)*.78);letter-spacing:.02em;opacity:.75;transition:opacity .2s}
+.hm .bar nav a:hover{opacity:1}
+.hm .bar .pill{font-size:calc(var(--u)*.7);padding:.7em 1.2em}
+
+/* HERO: gradient frame around a dark card */
+.hm .hero{padding:var(--pad);background:linear-gradient(170deg,var(--lilac) 0%,#FFC9B3 48%,var(--mint) 100%)}
+.hm .card{background:var(--char);color:var(--paper);border-radius:calc(var(--r)*1.6);padding:calc(var(--u)*4.5) calc(var(--u)*4.5) calc(var(--u)*4);display:grid;grid-template-columns:1.25fr .9fr;gap:calc(var(--u)*3);align-items:center;position:relative;overflow:hidden;box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*3.6) rgba(26,22,25,.28)}
+.hm .card .lb{color:var(--mint)}
+.hm .card h1{font-size:min(calc(var(--u)*8),15.5vw);margin:calc(var(--u)*1.4) 0 calc(var(--u)*1.6)}
+.hm .card h1 .stk{color:var(--ink)}
+.hm .card .dek{max-width:34em;font-size:calc(var(--u)*1.22);line-height:1.45;color:rgba(251,247,242,.86)}
+.hm .card .dek b{color:var(--lime);font-weight:600}
+.hm .card .cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*2.2)}
+.hm .card .meta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6) calc(var(--u)*2);margin-top:calc(var(--u)*2.6);padding-top:calc(var(--u)*1.6);border-top:1px solid rgba(251,247,242,.16);font-family:var(--lb);font-size:calc(var(--u)*.72);letter-spacing:.08em;text-transform:uppercase;color:rgba(251,247,242,.6)}
+.hm .card .meta b{color:var(--paper);font-weight:700;display:block;margin-bottom:.25em}
+.hm .phone{width:min(100%,calc(var(--u)*21));aspect-ratio:9/16;border-radius:calc(var(--u)*2.6);background:#0B0A0B;padding:calc(var(--u)*.55);box-shadow:0 0 0 calc(var(--u)*.3) #2B262A,0 calc(var(--u)*2) calc(var(--u)*4) rgba(0,0,0,.5);position:relative;transform:rotate(-3deg)}
+.hm .phone .scr{width:100%;height:100%;border-radius:calc(var(--u)*2.1);overflow:hidden;background:#000}
+.hm .phone .scr img{width:100%;height:100%;object-fit:cover}
+.hm .phone .notch{position:absolute;top:calc(var(--u)*1.1);left:50%;transform:translateX(-50%);width:28%;height:calc(var(--u)*.9);border-radius:999px;background:#0B0A0B}
+.hm .ph{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*1.6)}
+.hm .ph .cap{transform:rotate(-2deg);white-space:nowrap}
+.hm .tagc{display:inline-block;background:var(--white);color:var(--ink);border-radius:999px;padding:.55em 1.1em;font-family:var(--lb);font-weight:700;font-size:calc(var(--u)*.72);letter-spacing:.08em;text-transform:uppercase;box-shadow:0 .4em 1em rgba(0,0,0,.25)}
+
+/* INTRO */
+.hm .intro{padding:calc(var(--u)*6) var(--pad) calc(var(--u)*5);text-align:center}
+.hm .intro h2{font-size:min(calc(var(--u)*6.4),14vw)}
+.hm .intro .big{max-width:34em;margin:calc(var(--u)*2.2) auto 0;font-size:calc(var(--u)*1.3);line-height:1.45}
+.hm .intro .big + .big{margin-top:calc(var(--u)*1)}
+.hm .www{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*1.4);margin-top:calc(var(--u)*4);text-align:left}
+.hm .www .bx{background:var(--white);border-radius:var(--r);padding:calc(var(--u)*1.8) calc(var(--u)*1.8) calc(var(--u)*2);box-shadow:0 1px 0 rgba(18,18,18,.06),0 calc(var(--u)*.8) calc(var(--u)*1.6) rgba(18,18,18,.06)}
+.hm .www .bx .lb{display:inline-block;padding:.35em .8em;border-radius:999px;margin-bottom:calc(var(--u)*1)}
+.hm .www .bx:nth-child(1) .lb{background:var(--lilac)}.hm .www .bx:nth-child(2) .lb{background:var(--mint)}.hm .www .bx:nth-child(3) .lb{background:var(--tang);color:var(--ink)}
+.hm .www .bx h3{font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*1.7);letter-spacing:-.03em;line-height:1;margin-bottom:.45em}
+.hm .www .bx p{font-size:calc(var(--u)*1);line-height:1.5;color:rgba(18,18,18,.82)}
+
+/* FILMS */
+.hm .films{padding:calc(var(--u)*3) var(--pad) calc(var(--u)*4)}
+.hm .films .head{display:flex;align-items:flex-end;justify-content:space-between;gap:1em;flex-wrap:wrap;margin-bottom:calc(var(--u)*2)}
+.hm .films .head h2{font-size:min(calc(var(--u)*4.2),12vw)}
+.hm .films .head .lb{opacity:.6}
+.hm .film{display:grid;grid-template-columns:1.1fr 1fr;gap:calc(var(--u)*3);align-items:center;padding:calc(var(--u)*3.6) 0;border-top:1px solid rgba(18,18,18,.1)}
+.hm article.film:nth-of-type(even) .txt{order:2}
+.hm .film .no{display:inline-flex;align-items:center;gap:.6em;margin-bottom:calc(var(--u)*1.2)}
+.hm .film .no i{width:calc(var(--u)*.9);height:calc(var(--u)*.9);border-radius:50%;display:inline-block}
+.hm .film h3{font-size:min(calc(var(--u)*5.8),13vw)}
+.hm .film .copy{margin-top:calc(var(--u)*1.6);max-width:30em;font-size:calc(var(--u)*1.12);line-height:1.5}
+.hm .film .copy em{font-style:normal;font-weight:600}
+.hm .film .dev{margin-top:calc(var(--u)*1.4);display:flex;align-items:center;gap:calc(var(--u)*1);flex-wrap:wrap}
+.hm .film .dev .lb{opacity:.6}
+.hm .vid{position:relative;border-radius:calc(var(--r)*1.2);overflow:hidden;aspect-ratio:16/9;background:#000;box-shadow:0 calc(var(--u)*1.2) calc(var(--u)*2.6) rgba(18,18,18,.22);transition:transform .7s var(--spring)}
+.hm .vid:hover{transform:translateY(-6px) rotate(-.6deg)}
+.hm .vid img{width:100%;height:100%;object-fit:cover;object-position:50% var(--fy,30%)}
+.hm .film.a .vid{--fy:28%}.hm .film.b .vid{--fy:45%}.hm .film.c .vid{--fy:22%}.hm .film.d .vid{--fy:18%}
+.hm .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hm .vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(var(--u)*5);height:calc(var(--u)*5);border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 .5em 1.4em rgba(0,0,0,.35);transition:transform .5s var(--spring),background .2s}
+.hm .vid .play b{width:0;height:0;border-left:calc(var(--u)*1.3) solid var(--ink);border-top:calc(var(--u)*.8) solid transparent;border-bottom:calc(var(--u)*.8) solid transparent;margin-left:.25em}
+.hm .vid .play:hover{transform:translate(-50%,-50%) scale(1.08)}
+.hm .film.a .play:hover{background:var(--lime)}.hm .film.b .play:hover{background:var(--mag)}.hm .film.c .play:hover{background:var(--tang)}.hm .film.d .play:hover{background:var(--lilac)}
+
+/* STICKER BAND (static row, no ticker) */
+.hm .band{padding:calc(var(--u)*4) var(--pad) calc(var(--u)*4.4);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*1.2);flex-wrap:wrap;background:var(--white);border-top:1px solid rgba(18,18,18,.08);border-bottom:1px solid rgba(18,18,18,.08)}
+.hm .sk{width:calc(var(--u)*7);height:calc(var(--u)*7);border-radius:32%;display:grid;place-items:center;flex:none;box-shadow:0 0 0 calc(var(--u)*.45) var(--white),0 0 0 calc(var(--u)*.9) var(--hl);transition:transform .6s var(--spring)}
+.hm .sk svg{width:66%;height:66%;fill:var(--ink)}
+.hm .sk.m{background:var(--mag);--hl:var(--lilac)}.hm .sk.l{background:var(--lime);--hl:var(--mint)}.hm .sk.t{background:var(--tang);--hl:var(--mag)}.hm .sk.p{background:var(--lilac);--hl:var(--lime)}.hm .sk.n{background:var(--mint);--hl:var(--tang)}.hm .sk.k{background:var(--ink);--hl:var(--lime);color:var(--paper)}.hm .sk.k svg{fill:var(--paper)}
+.hm .sk.on{transform:rotate(var(--rot,0deg))}
+.hm .sk:hover{transform:rotate(calc(var(--rot,0deg) * -1.6)) scale(1.1)}
+.hm .sk.g{font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*3.4);letter-spacing:-.04em;line-height:1}
+
+/* THE LINES (cards on charcoal) */
+.hm .lines{background:var(--char);color:var(--paper);padding:calc(var(--u)*6) var(--pad) calc(var(--u)*6)}
+.hm .lines .head{display:grid;grid-template-columns:1.1fr 1fr;gap:calc(var(--u)*3);align-items:end;margin-bottom:calc(var(--u)*3.4)}
+.hm .lines .head .lb{color:var(--mint)}
+.hm .lines h2{font-size:min(calc(var(--u)*6),13.5vw);margin-top:calc(var(--u)*1)}
+.hm .lines .head p{font-size:calc(var(--u)*1.15);line-height:1.5;color:rgba(251,247,242,.78);max-width:30em}
+.hm .lg{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*1.4)}
+.hm .ln{background:var(--cream);color:var(--ink);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .7s var(--spring)}
+.hm .ln:hover{transform:translateY(-8px) rotate(-1deg)}
+.hm .ln .th{aspect-ratio:1/1;overflow:hidden}
+.hm .ln .th img{width:100%;height:100%;object-fit:cover}
+.hm .ln .bd{padding:calc(var(--u)*1.4) calc(var(--u)*1.4) calc(var(--u)*1.6);display:flex;flex-direction:column;gap:calc(var(--u)*.9);flex:1}
+.hm .ln .bd .lb{font-size:calc(var(--u)*.62);opacity:.6}
+.hm .ln .bd p{font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*1.55);letter-spacing:-.03em;line-height:1.05}
+.hm .ln .bd p em{font-style:normal;color:var(--acc)}
+.hm .ln.a{--acc:#4D8A00}.hm .ln.b{--acc:#C71A9E}.hm .ln.c{--acc:#D45700}.hm .ln.d{--acc:#6B3FC9}
+.hm .ln .bd .dv{margin-top:auto;font-family:var(--lb);font-weight:500;font-size:calc(var(--u)*.68);letter-spacing:.06em;text-transform:uppercase;opacity:.55}
+
+/* WHY */
+.hm .why{padding:calc(var(--u)*6) var(--pad) calc(var(--u)*6)}
+.hm .why .head{max-width:52em;margin-bottom:calc(var(--u)*3)}
+.hm .why .head .lb{opacity:.6}
+.hm .why h2{font-size:min(calc(var(--u)*6),13.5vw);margin-top:calc(var(--u)*1)}
+.hm .wg{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*1.4)}
+.hm .wg .bx{border-radius:var(--r);padding:calc(var(--u)*2) calc(var(--u)*2) calc(var(--u)*2.2);display:flex;flex-direction:column;gap:calc(var(--u)*1)}
+.hm .wg .bx:nth-child(1){background:var(--lilac)}.hm .wg .bx:nth-child(2){background:var(--mint)}.hm .wg .bx:nth-child(3){background:var(--ink);color:var(--paper)}
+.hm .wg .bx h3{font-family:var(--ds);font-weight:800;font-size:calc(var(--u)*2);letter-spacing:-.035em;line-height:.95}
+.hm .wg .bx p{font-size:calc(var(--u)*1.02);line-height:1.5}
+.hm .wg .bx:nth-child(3) h3{color:var(--lime)}
+.hm .wg .bx .lb{opacity:.65}
+
+/* END */
+.hm .end{padding:calc(var(--u)*4) var(--pad) calc(var(--u)*6);text-align:center;background:linear-gradient(180deg,var(--paper) 0%,#FFE1D2 100%)}
+.hm .end h2{font-size:min(calc(var(--u)*7.4),14.5vw);max-width:9.5em;margin:0 auto}
+.hm .end .ft{display:flex;justify-content:center;gap:calc(var(--u)*.8);flex-wrap:wrap;margin-top:calc(var(--u)*3)}
+.hm .end .sm{margin-top:calc(var(--u)*2.4);font-family:var(--lb);font-size:calc(var(--u)*.7);letter-spacing:.1em;text-transform:uppercase;opacity:.55}
+
+@media (max-width:1000px){
+ .hm{--u:clamp(10px,2.1vw,16px);--pad:calc(var(--u)*2.5)}
+ .hm .card{grid-template-columns:1fr;padding:calc(var(--u)*3.2) calc(var(--u)*3) calc(var(--u)*4.5)}
+ .hm .phone{margin-top:calc(var(--u)*1);width:min(72%,calc(var(--u)*22))}
+ .hm .www,.hm .wg{grid-template-columns:1fr}
+ .hm .lg{grid-template-columns:repeat(2,1fr)}
+ .hm .lines .head{grid-template-columns:1fr}
+ .hm .film{grid-template-columns:1fr;gap:calc(var(--u)*2)}
+ .hm article.film:nth-of-type(even) .txt{order:0}
+ .hm .bar nav{display:none}
+}
+@media (max-width:700px){
+ .hm{--u:clamp(10px,3.15vw,14px);--pad:calc(var(--u)*1.6)}
+ .hm .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.8) calc(var(--u)*4)}
+ .hm .lg{grid-template-columns:1fr}
+ .hm .band{justify-content:center;gap:calc(var(--u)*2.2) calc(var(--u)*1.8)}
+ .hm .sk{width:calc(var(--u)*6);height:calc(var(--u)*6)}
+ .hm .bar .pill{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ .hm .rv,.hm .sl,.hm .sk,.hm .vid,.hm .ln,.hm .pill{transition:none}
+ .hm .rv,.hm .sl{opacity:1;transform:none}
+}
+</style></head><body>
+<div class="hm" id="hm">
+
+<header class="bar" id="top">
+ <a class="brand" href="#top"><i aria-hidden="true"></i>How You Moto</a>
+ <nav aria-label="Page sections"><a href="#films">The Films</a><a href="#lines">The Lines</a><a href="#why">Why It Matters</a></nav>
+ <a class="pill o" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a>
+</header>
+
+<section class="hero">
+ <div class="card">
+  <div class="txt">
+   <p class="lb rv">Motorola &middot; moto g series &middot; Global TVC + Digital Video</p>
+   <h1 class="ds rv d1"><span class="stk">How You Moto.</span></h1>
+   <p class="dek rv d2">With a unique combination of must-have features on each device, there are a million things you can do with the Moto G. <b>The only right way to use it is yours.</b></p>
+   <div class="cta rv d3"><a class="pill g" href="#films">Watch The Films</a><a class="pill wh" href="#why">The Idea</a></div>
+   <div class="meta rv d3"><span><b>Role</b>Freelance ACD, Copy</span><span><b>Format</b>Four creator led spots</span><span><b>Reach</b>Global, LATAM focus</span></div>
+  </div>
+  <div class="ph">
+   <div class="phone sl">
+    <div class="scr"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-hero.gif?v=1" alt="" role="img" aria-label="Phone cut of the Phone Feast spot: a woman books a table five months ahead, then frames the perfect low light shot of her plate on a Moto G" width="340" height="605"></div>
+    <div class="notch" aria-hidden="true"></div>
+   </div>
+   <span class="cap tagc sl">The Phone Always Eats First</span>
+  </div>
+ </div>
+</section>
+
+<section class="intro" id="intro">
+ <h2 class="ds rv">Four lives.<br>One phone.</h2>
+ <p class="big rv d1">A heritage mobile brand reentering the smartphone space, positioning technology as an extension of self. Innovation blended with personal expression, to stand apart in a saturated market.</p>
+ <p class="big rv d2">To demonstrate the unique benefits of the Moto G suite, we highlighted the extraordinarily ordinary use cases that matter most when choosing a phone: the Jetsetter, the Weekend Warrior, the Foodie and the Gamer.</p>
+ <div class="www">
+  <div class="bx rv"><span class="lb">Who</span><h3>The Client</h3><p>Motorola, bringing the moto g series back into the conversation by making the tech feel personal instead of purely technical.</p></div>
+  <div class="bx rv d1"><span class="lb">What</span><h3>The Campaign</h3><p>Four global creator led stories, each showing how an everyday lifestyle comes alive through Moto's expressive tech, reinforcing that the only right way to use a Moto G is yours.</p></div>
+  <div class="bx rv d2"><span class="lb">Where</span><h3>The Channels</h3><p>Deployed globally across digital video and TVC, with a strong focus on the LATAM market.</p></div>
+ </div>
+</section>
+
+<section class="films" id="films">
+ <div class="head"><h2 class="ds rv"><span class="stk k">The Films.</span></h2><p class="lb rv">Four spots &middot; Four ways to Moto &middot; Tap to play</p></div>
+
+ <article class="film a">
+  <div class="txt">
+   <p class="lb no rv"><i style="background:var(--lime)"></i>01 &middot; The Jetsetter</p>
+   <h3 class="ds rv d1"><span class="stk">Ready for takeoff.</span></h3>
+   <p class="copy rv d2">A full flight's worth of entertainment before takeoff. <em>Remember last minute. Download just in time.</em></p>
+   <div class="dev rv d3"><span class="lb">moto g53 5G</span><button class="pill o jp" type="button" data-for="f1">Play The Spot</button></div>
+  </div>
+  <div class="vid rv" id="f1" data-vimeo="822311778" data-h="d67f0d7d3e"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=1" alt="" role="img" aria-label="A traveler in a yellow corduroy jacket and headphones smiles at his Moto G in a window seat" width="914" height="1000" loading="lazy"><button class="play" type="button" aria-label="Play Ready For Takeoff"><b></b></button></div>
+ </article>
+
+ <article class="film b">
+  <div class="txt">
+   <p class="lb no rv"><i style="background:var(--mag)"></i>02 &middot; The Weekend Warrior</p>
+   <h3 class="ds rv d1"><span class="stk m">Weekend warrior.</span></h3>
+   <p class="copy rv d2">This one is for the weekend warriors who want to leave their charger at home and still come home with a phone full of memories. <em>Cut the chord. Catch a vibe.</em></p>
+   <div class="dev rv d3"><span class="lb">moto g23</span><button class="pill o jp" type="button" data-for="f2">Play The Spot</button></div>
+  </div>
+  <div class="vid rv" id="f2" data-vimeo="822311813" data-h="0f1f4e4c66"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=1" alt="" role="img" aria-label="A woman in a camel trench coat heads out the door with a rolling suitcase and a Moto G in hand" width="1044" height="940" loading="lazy"><button class="play" type="button" aria-label="Play Weekend Warrior"><b></b></button></div>
+ </article>
+
+ <article class="film c">
+  <div class="txt">
+   <p class="lb no rv"><i style="background:var(--tang)"></i>03 &middot; The Foodie</p>
+   <h3 class="ds rv d1"><span class="stk t">Phone feast.</span></h3>
+   <p class="copy rv d2">True foodies know the phone always has to eat first. <em>Enjoy the low-light ambiance. Always get the yummiest shot.</em></p>
+   <div class="dev rv d3"><span class="lb">moto g73 5G</span><button class="pill o jp" type="button" data-for="f3">Play The Spot</button></div>
+  </div>
+  <div class="vid rv" id="f3" data-vimeo="822311788" data-h="0270c9e091"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=1" alt="" role="img" aria-label="A woman in a patterned jacket and gold chain lines up a photo of her dinner on a Moto G in a candlelit restaurant" width="930" height="958" loading="lazy"><button class="play" type="button" aria-label="Play Phone Feast"><b></b></button></div>
+ </article>
+
+ <article class="film d">
+  <div class="txt">
+   <p class="lb no rv"><i style="background:var(--lilac)"></i>04 &middot; The Gamer</p>
+   <h3 class="ds rv d1"><span class="stk l">Game time.</span></h3>
+   <p class="copy rv d2">Game time is best wherever you get the most comfortable. <em>Charge into battle anywhere. Never lose battery.</em></p>
+   <div class="dev rv d3"><span class="lb">moto g13</span><button class="pill o jp" type="button" data-for="f4">Play The Spot</button></div>
+  </div>
+  <div class="vid rv" id="f4" data-vimeo="822311800" data-h="33c2f4450a"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=1" alt="" role="img" aria-label="A gamer grins at the camera while holding a Moto G sideways in both hands" width="968" height="982" loading="lazy"><button class="play" type="button" aria-label="Play Game Time"><b></b></button></div>
+ </article>
+</section>
+
+<section class="band" aria-label="Campaign stickers">
+ <span class="sk l sl" style="--rot:-7deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="7" y="0" width="2" height="1"/><rect x="7" y="1" width="2" height="1"/><rect x="6" y="2" width="4" height="1"/><rect x="6" y="3" width="4" height="1"/><rect x="6" y="4" width="4" height="1"/><rect x="5" y="5" width="6" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="4" y="6" width="8" height="1"/><rect x="15" y="6" width="1" height="1"/><rect x="0" y="7" width="16" height="1"/><rect x="0" y="8" width="16" height="1"/><rect x="5" y="9" width="6" height="1"/><rect x="6" y="10" width="4" height="1"/><rect x="6" y="11" width="4" height="1"/><rect x="4" y="12" width="8" height="1"/><rect x="3" y="13" width="10" height="1"/></svg></span>
+ <span class="sk m sl" style="--rot:5deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="7" y="1" width="2" height="1"/><rect x="6" y="2" width="4" height="1"/><rect x="5" y="3" width="6" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="9" y="4" width="3" height="1"/><rect x="3" y="5" width="3" height="1"/><rect x="10" y="5" width="3" height="1"/><rect x="2" y="6" width="3" height="1"/><rect x="11" y="6" width="3" height="1"/><rect x="1" y="7" width="3" height="1"/><rect x="7" y="7" width="2" height="1"/><rect x="12" y="7" width="3" height="1"/><rect x="0" y="8" width="3" height="1"/><rect x="6" y="8" width="4" height="1"/><rect x="13" y="8" width="3" height="1"/><rect x="0" y="9" width="2" height="1"/><rect x="5" y="9" width="6" height="1"/><rect x="14" y="9" width="2" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="4" y="10" width="8" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="3" y="11" width="10" height="1"/><rect x="2" y="12" width="12" height="1"/><rect x="1" y="13" width="14" height="1"/><rect x="0" y="14" width="16" height="1"/></svg></span>
+ <span class="sk t sl" style="--rot:-4deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="4" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/><rect x="10" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="10" y="1" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="4" y="3" width="8" height="1"/><rect x="5" y="4" width="6" height="1"/><rect x="6" y="5" width="4" height="1"/><rect x="7" y="6" width="2" height="1"/><rect x="7" y="7" width="2" height="1"/><rect x="7" y="8" width="2" height="1"/><rect x="7" y="9" width="2" height="1"/><rect x="7" y="10" width="2" height="1"/><rect x="7" y="11" width="2" height="1"/><rect x="7" y="12" width="2" height="1"/><rect x="7" y="13" width="2" height="1"/><rect x="6" y="14" width="4" height="1"/></svg></span>
+ <span class="sk p sl" style="--rot:6deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="3" y="2" width="10" height="1"/><rect x="2" y="3" width="12" height="1"/><rect x="1" y="4" width="2" height="1"/><rect x="4" y="4" width="8" height="1"/><rect x="13" y="4" width="2" height="1"/><rect x="0" y="5" width="2" height="1"/><rect x="4" y="5" width="2" height="1"/><rect x="7" y="5" width="4" height="1"/><rect x="13" y="5" width="3" height="1"/><rect x="0" y="6" width="2" height="1"/><rect x="3" y="6" width="3" height="1"/><rect x="7" y="6" width="3" height="1"/><rect x="11" y="6" width="1" height="1"/><rect x="13" y="6" width="3" height="1"/><rect x="0" y="7" width="2" height="1"/><rect x="4" y="7" width="2" height="1"/><rect x="7" y="7" width="3" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="7" width="3" height="1"/><rect x="1" y="8" width="2" height="1"/><rect x="4" y="8" width="4" height="1"/><rect x="9" y="8" width="3" height="1"/><rect x="13" y="8" width="2" height="1"/><rect x="1" y="9" width="14" height="1"/><rect x="1" y="10" width="5" height="1"/><rect x="10" y="10" width="5" height="1"/><rect x="1" y="11" width="4" height="1"/><rect x="11" y="11" width="4" height="1"/><rect x="2" y="12" width="2" height="1"/><rect x="12" y="12" width="2" height="1"/></svg></span>
+ <span class="sk n sl" style="--rot:-5deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="5" y="0" width="6" height="1"/><rect x="4" y="1" width="8" height="1"/><rect x="4" y="2" width="2" height="1"/><rect x="10" y="2" width="2" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="7" y="3" width="2" height="1"/><rect x="11" y="3" width="1" height="1"/><rect x="4" y="4" width="2" height="1"/><rect x="10" y="4" width="2" height="1"/><rect x="4" y="5" width="8" height="1"/><rect x="4" y="6" width="2" height="1"/><rect x="10" y="6" width="2" height="1"/><rect x="4" y="7" width="2" height="1"/><rect x="10" y="7" width="2" height="1"/><rect x="4" y="8" width="2" height="1"/><rect x="10" y="8" width="2" height="1"/><rect x="4" y="9" width="2" height="1"/><rect x="10" y="9" width="2" height="1"/><rect x="4" y="10" width="2" height="1"/><rect x="10" y="10" width="2" height="1"/><rect x="4" y="11" width="2" height="1"/><rect x="10" y="11" width="2" height="1"/><rect x="4" y="12" width="8" height="1"/><rect x="5" y="13" width="6" height="1"/></svg></span>
+ <span class="sk k sl g" style="--rot:4deg">G</span>
+ <span class="sk m sl" style="--rot:-6deg"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="2" y="1" width="4" height="1"/><rect x="10" y="1" width="4" height="1"/><rect x="1" y="2" width="6" height="1"/><rect x="9" y="2" width="6" height="1"/><rect x="0" y="3" width="16" height="1"/><rect x="0" y="4" width="16" height="1"/><rect x="0" y="5" width="16" height="1"/><rect x="0" y="6" width="16" height="1"/><rect x="1" y="7" width="14" height="1"/><rect x="2" y="8" width="12" height="1"/><rect x="3" y="9" width="10" height="1"/><rect x="4" y="10" width="8" height="1"/><rect x="5" y="11" width="6" height="1"/><rect x="6" y="12" width="4" height="1"/><rect x="7" y="13" width="2" height="1"/></svg></span>
+</section>
+
+<section class="lines" id="lines">
+ <div class="head">
+  <div><p class="lb rv">The Lines</p><h2 class="ds rv d1"><span class="stk n">Say it in two.</span></h2></div>
+  <p class="rv d2">Every spot lands on a pair of lines: the everyday habit, then the Moto G feature that makes it effortless. Short enough to remember, specific enough to sell.</p>
+ </div>
+ <div class="lg">
+  <div class="ln a rv"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-takeoff-still.webp?v=1" alt="" role="img" aria-label="Still from Ready For Takeoff" width="914" height="1000" loading="lazy"></div><div class="bd"><span class="lb">Ready For Takeoff</span><p>Remember last minute. <em>Download just in time.</em></p><span class="dv">moto g53 5G</span></div></div>
+  <div class="ln b rv d1"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-weekend-still.webp?v=1" alt="" role="img" aria-label="Still from Weekend Warrior" width="1044" height="940" loading="lazy"></div><div class="bd"><span class="lb">Weekend Warrior</span><p>Cut the chord. <em>Catch a vibe.</em></p><span class="dv">moto g23</span></div></div>
+  <div class="ln c rv d2"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-feast-still.webp?v=1" alt="" role="img" aria-label="Still from Phone Feast" width="930" height="958" loading="lazy"></div><div class="bd"><span class="lb">Phone Feast</span><p>Enjoy the low-light ambiance. <em>Always get the yummiest shot.</em></p><span class="dv">moto g73 5G</span></div></div>
+  <div class="ln d rv d3"><div class="th"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/moto-game-still.webp?v=1" alt="" role="img" aria-label="Still from Game Time" width="968" height="982" loading="lazy"></div><div class="bd"><span class="lb">Game Time</span><p>Charge into battle anywhere. <em>Never lose battery.</em></p><span class="dv">moto g13</span></div></div>
+ </div>
+</section>
+
+<section class="why" id="why">
+ <div class="head"><p class="lb rv">Why It Matters</p><h2 class="ds rv d1"><span class="stk t">Tech as an extension of self.</span></h2></div>
+ <div class="wg">
+  <div class="bx rv"><span class="lb">Cultural Impact</span><h3>A phone that reflects you.</h3><p>Addressed market fragmentation by positioning the Moto G as a versatile, self-expressive device, transforming tech into a reflection of individuality and driving renewed brand loyalty in a crowded smartphone market.</p></div>
+  <div class="bx rv d1"><span class="lb">How It Did</span><h3>A lifestyle brand, not just a tech player.</h3><p>The campaign rolled out globally, revitalizing the Moto G brand with a unified message that resonated across diverse audiences. By blending personality driven storytelling with sleek product design, it reintroduced Motorola as a modern lifestyle brand, built cultural buzz, strengthened community engagement and positioned Moto G as a symbol of individuality and expression.</p></div>
+  <div class="bx rv d2"><span class="lb">My Role</span><h3>Scripts, tagline, lens.</h3><p>As a freelance Associate Creative Director, I developed each script and coined the campaign's closing line, the only right way to use it is yours, to embody personalized storytelling. I partnered closely with directors to bring a fresh, modern lens that treats recreation as part of identity.</p></div>
+ </div>
+</section>
+
+<footer class="end">
+ <h2 class="ds rv"><span class="stk m">The only right way to use it is yours.</span></h2>
+ <div class="ft rv d1"><a class="pill" href="https://www.byninaaustin.com/commercials"><span aria-hidden="true">&larr;</span>Back To Commercials</a><a class="pill o" href="#films">Watch The Films Again</a></div>
+ <p class="sm rv d2">Motorola &middot; How You Moto</p>
+</footer>
+
+</div>
+<script>
+(function(){
+  var root=document.querySelector('.hm');if(!root)return;
+  var W=window,D=W.document;
+  var host=document.host;
+  if(host&&host.style&&host.ownerDocument){
+    var de=host.ownerDocument.documentElement,tm=0;
+    var set=function(k,v){host.style.setProperty(k,v,'important')};
+    var fit=function(){
+      set('padding','0');set('border','0');set('margin-left','0');set('margin-right','0');set('width','auto');set('max-width','none');set('box-sizing','border-box');
+      var r=host.getBoundingClientRect(),cw=de.clientWidth,l=r.left+(W.pageXOffset||0);
+      if(Math.abs(l)>.5||Math.abs(r.width-cw)>.5){set('margin-left',(-l)+'px');set('width',cw+'px')}
+      set('background','none');
+    };
+    fit();W.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});W.addEventListener('load',fit);setTimeout(fit,700);
+  }
+  var $$=function(s){return [].slice.call(root.querySelectorAll(s))};
+  var rv=$$('.rv,.sl'),show=function(e){e.classList.add('on')};
+  if('IntersectionObserver' in W){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){rv.forEach(show)},2500);
+  $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=root.querySelector(a.getAttribute('href'));if(!t)return;ev.preventDefault();var y=t.getBoundingClientRect().top+(W.pageYOffset||0)-24;try{W.scrollTo({top:y,behavior:'smooth'})}catch(e){W.scrollTo(0,y)}})});
+  var play=function(f){
+    if(!f||f.getAttribute('data-on'))return;f.setAttribute('data-on','1');
+    var id=f.getAttribute('data-vimeo'),h=f.getAttribute('data-h'),b=f.querySelector('.play');
+    var ifr=D.createElement('iframe');
+    ifr.src='https://player.vimeo.com/video/'+id+'?'+(h?'h='+h+'&':'')+'autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+    ifr.allow='autoplay; fullscreen; picture-in-picture';ifr.setAttribute('allowfullscreen','');ifr.title=(b&&b.getAttribute('aria-label'))||'Video';
+    f.innerHTML='';f.appendChild(ifr);
+  };
+  $$('.vid[data-vimeo]').forEach(function(f){var b=f.querySelector('.play');if(b)b.addEventListener('click',function(){play(f)})});
+  $$('.jp').forEach(function(b){b.addEventListener('click',function(){var f=root.querySelector('#'+b.getAttribute('data-for'));if(!f)return;play(f);var y=f.getBoundingClientRect().top+(W.pageYOffset||0)-40;try{W.scrollTo({top:y,behavior:'smooth'})}catch(e){W.scrollTo(0,y)}})});
+})();
+</script>
+</body></html>
