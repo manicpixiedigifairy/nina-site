@@ -132,6 +132,8 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
  .hm .hero{padding-top:calc(var(--u)*5.5)}
  .hm .card{padding:calc(var(--u)*2.6) calc(var(--u)*1.8) calc(var(--u)*4)}
  .hm .lg{grid-template-columns:1fr}
+ .hm .lines{padding-bottom:calc(var(--u)*4)}
+ .hm .end{padding-top:calc(var(--u)*2.5)}
  .hm .band{justify-content:center;gap:calc(var(--u)*2.2) calc(var(--u)*1.8)}
  .hm .sk{width:calc(var(--u)*6);height:calc(var(--u)*6)}
 }
@@ -250,6 +252,25 @@ display:block;position:relative;overflow-x:clip;width:100%;background:var(--pape
     fit();W.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});W.addEventListener('load',fit);setTimeout(fit,700);
   }
   var $$=function(s){return [].slice.call(root.querySelectorAll(s))};
+  /* clear the host's fixed or sticky MENU bar: pad the hero until the card sits below it */
+  (function(){
+    var hero=root.querySelector('.hero'),card=root.querySelector('.card');if(!hero||!card)return;
+    var hd=W.document;
+    function bar(){
+      var c=hd.querySelectorAll('.nlb, #header, header, .header, [data-nc-group="top"]');
+      for(var i=0;i<c.length;i++){var el=c[i];if(root.contains(el))continue;var cs=getComputedStyle(el);if(cs.position!=='fixed'&&cs.position!=='absolute'&&cs.position!=='sticky')continue;var r=el.getBoundingClientRect();if(r.height>20&&r.width>200&&r.top<=2)return el}
+      return null;
+    }
+    function clr(){
+      hero.style.paddingTop='';
+      var b=bar();if(!b)return;
+      var u=parseFloat(getComputedStyle(root).fontSize)||16,gap=Math.round(u*2.2);
+      var top=card.getBoundingClientRect().top+(W.pageYOffset||0);
+      var need=Math.ceil(b.getBoundingClientRect().bottom-top+gap);
+      if(need>0&&need<400){var cur=parseFloat(getComputedStyle(hero).paddingTop)||0;hero.style.paddingTop=(cur+need)+'px'}
+    }
+    clr();W.addEventListener('load',clr);W.addEventListener('resize',clr);setTimeout(clr,800);setTimeout(clr,2000);
+  })();
   var rv=$$('.rv,.sl'),show=function(e){e.classList.add('on')};
   if('IntersectionObserver' in W){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(e){io.observe(e)})}
   setTimeout(function(){rv.forEach(show)},2500);
