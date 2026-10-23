@@ -94,6 +94,32 @@ html,body{margin:0;background:#0B0B0B}
 .nt .br h3 small{display:block;margin-top:.5em;font-family:var(--mo);font-weight:400;font-size:calc(var(--u)*.82);letter-spacing:.08em;color:var(--gy);text-transform:uppercase}
 .nt .br p{font-size:calc(var(--u)*1.42);line-height:1.55;max-width:calc(var(--u)*52)}
 
+/* rollout */
+.nt .ro{position:relative}
+.nt .ro .tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4);position:relative}
+.nt .ro .tl::before{content:"";position:absolute;left:0;right:0;top:calc(var(--u)*2.9);height:2px;background:var(--ln)}
+.nt .ph{position:relative;padding-top:calc(var(--u)*4.6);display:flex;flex-direction:column}
+.nt .ph .q{position:absolute;left:0;top:0;font-family:var(--mo);font-size:calc(var(--u)*.86);letter-spacing:.06em;text-transform:uppercase;color:var(--gy);white-space:nowrap}
+.nt .ph .q b{font-weight:700;color:var(--wh)}
+.nt .ph .dot{position:absolute;left:0;top:calc(var(--u)*2.9 - var(--u)*.45 + 1px);width:calc(var(--u)*.9);height:calc(var(--u)*.9);border-radius:50%;background:var(--bk);border:2px solid var(--wh);transform:scale(.6);transition:transform .5s cubic-bezier(.2,.7,.2,1),background .5s,border-color .5s}
+.nt .ph.on .dot{transform:none;background:var(--rd);border-color:var(--rd)}
+.nt .ph .pn{font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--rd)}
+.nt .ph h3{font-size:calc(var(--u)*3.1);margin-top:calc(var(--u)*.7);min-height:2.1em}
+.nt .ph .mm{margin-top:calc(var(--u)*1.2);font-family:var(--mo);font-size:calc(var(--u)*.82);line-height:1.6;letter-spacing:.04em;text-transform:uppercase;color:var(--gy)}
+.nt .ph .fl{margin-top:calc(var(--u)*2);padding:calc(var(--u)*1.2) calc(var(--u)*1.3);border:1px solid var(--wh);display:flex;flex-direction:column;gap:.35em;min-height:calc(var(--u)*6.4)}
+.nt .ph .fl i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;color:var(--gy)}
+.nt .ph .fl b{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.5);line-height:1}
+.nt .ph .ba{margin-top:calc(var(--u)*1.6);border-top:1px solid var(--ln)}
+.nt .ph .ba li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1);padding:calc(var(--u)*1.1) 0;border-bottom:1px solid var(--ln);font-size:calc(var(--u)*1.1);line-height:1.45}
+.nt .ph .ba li i{font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.06em;color:var(--rd);padding-top:.25em}
+.nt .ph .ba li b{display:block;font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.35);line-height:1;margin-bottom:.35em}
+.nt .ph .ba li span{color:var(--gy)}
+.nt .ro .rings{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--g);align-items:center;margin-top:calc(var(--u)*5);padding-top:calc(var(--u)*2.6);border-top:1px solid var(--ln)}
+.nt .ro .rings .rk{display:flex;gap:calc(var(--u)*1);flex-wrap:wrap}
+.nt .ro .rings .rk span{display:inline-block;padding:.75em 1.1em .65em;border:1px solid var(--wh);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.01em;font-size:calc(var(--u)*1.2);line-height:1;white-space:nowrap}
+.nt .ro .rings .rk span:nth-child(2){background:var(--wh);color:var(--bk)}
+.nt .ro .rings .rk span:nth-child(3){background:var(--rd);border-color:var(--rd)}
+
 /* the line */
 .nt .ln1{position:relative;display:block;width:max-content;max-width:none;white-space:nowrap;font-size:calc(var(--u)*6.2);color:var(--gy);line-height:.95}
 .nt .ln1 svg{position:absolute;left:-1.5%;top:0;width:103%;height:100%;overflow:visible;pointer-events:none}
@@ -123,6 +149,18 @@ html,body{margin:0;background:#0B0B0B}
   .nt .br .row{grid-template-columns:calc(var(--u)*5) minmax(0,1fr)}
   .nt .br .row p{grid-column:2}
   .nt .role{grid-template-columns:minmax(0,1fr)}
+  .nt .ro .tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:calc(var(--u)*5)}
+  .nt .ro .tl::before{display:none}
+  .nt .ph{padding-top:0;padding-left:calc(var(--u)*2.2);border-left:2px solid var(--ln)}
+  .nt .ph .q{position:static;display:block;margin-bottom:calc(var(--u)*1.2)}
+  .nt .ph .dot{top:0;left:calc(var(--u)*-.45 - 1px)}
+  .nt .ph h3{min-height:0}
+  .nt .ph .ba li,.nt .ph .mm{font-size:max(14px,calc(var(--u)*1.1))}
+  .nt .ph .mm{font-size:max(11px,calc(var(--u)*.82))}
+  .nt .ph .ba li b,.nt .ph .fl b{font-size:max(16px,calc(var(--u)*1.4))}
+  .nt .ph .ba li i,.nt .ph .fl i{font-size:max(10.5px,calc(var(--u)*.78))}
+  .nt .ro .rings{grid-template-columns:minmax(0,1fr)}
+  .nt .ro .rings .rk span{font-size:max(13px,calc(var(--u)*1.2))}
   .nt .bd,.nt .br p{font-size:max(15px,calc(var(--u)*1.42))}
   .nt .mo,.nt .lb{font-size:max(11px,calc(var(--u)*.86))}
   .nt .meta div{font-size:max(14px,calc(var(--u)*1.2))}
@@ -138,6 +176,8 @@ html,body{margin:0;background:#0B0B0B}
   .nt .sh h2,.nt .cl h2{font-size:calc(var(--u)*4.8)}
   .nt .br h3{font-size:calc(var(--u)*3)}
   .nt .cs{grid-template-columns:minmax(0,1fr)}
+  .nt .ro .tl{grid-template-columns:minmax(0,1fr)}
+  .nt .ph h3{font-size:max(24px,calc(var(--u)*3.1))}
   .nt .fr .cap .mk{font-size:max(15px,calc(var(--u)*1.35))}
   .nt .ln1{font-size:calc(var(--u)*5)}
   .nt .ln1 svg path{stroke-width:calc(var(--u)*.55)}
@@ -259,9 +299,72 @@ html,body{margin:0;background:#0B0B0B}
     </div>
   </section>
 
+  <section class="sc w ro" id="rollout">
+    <div class="sh">
+      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Rollout</span></div>
+      <h2 class="rv d1">Four Beats, January To June</h2>
+      <p class="bd rv d2">More than a campaign, a promise of progress. The film launched the platform, then three themed phases followed, each one pairing a film with brand actions so Under Armour could prove the line, not just say it.</p>
+    </div>
+    <div class="tl">
+      <div class="ph rv">
+        <span class="q"><b>Jan 2022</b></span><span class="dot" aria-hidden="true"></span>
+        <span class="pn">Launch</span>
+        <h3>Never Through</h3>
+        <p class="mm">Back To The Gym</p>
+        <div class="fl"><i>Media</i><b>Launch Film</b></div>
+        <ul class="ba">
+          <li><i>01</i><div><b>Launch Brand Actions</b><span>The platform opens with the hero film and the first wave of actions behind it.</span></div></li>
+        </ul>
+      </div>
+      <div class="ph rv d1">
+        <span class="q"><b>Q1</b></span><span class="dot" aria-hidden="true"></span>
+        <span class="pn">Phase 01</span>
+        <h3>Diversity In Sport</h3>
+        <p class="mm">Black History Month<br>Super Bowl and Playoffs</p>
+        <div class="fl"><i>Media</i><b>Diversity In Sport Film</b></div>
+        <ul class="ba">
+          <li><i>01</i><div><b>Playing Fair</b><span>Need-based scholarships with Beyond Sport stipends, so cost never cuts an athlete out of the game.</span></div></li>
+          <li><i>02</i><div><b>Playing Fair, Extended</b><span>Lobbying to take California's Fair Pay To Play Act federal, with former NCAA athletes taking the floor.</span></div></li>
+          <li><i>03</i><div><b>Bridging The Gap</b><span>A high school apprenticeship program opening up careers off the court: managers, agents, coaches.</span></div></li>
+          <li><i>04</i><div><b>Passing The Mic</b><span>A collective of roster athletes with a statement of purpose, live roundtables and a seat at the table.</span></div></li>
+          <li><i>05</i><div><b>Getting In The Game</b><span>Sponsoring rising BIPOC athletes in traditionally white sports, plus community centers that make space.</span></div></li>
+          <li><i>06</i><div><b>A Timeless Fight</b><span>A documentary on the history of protest in sport, with proceeds funding the next generation of reform.</span></div></li>
+        </ul>
+      </div>
+      <div class="ph rv d2">
+        <span class="q"><b>Q1 to Q2</b></span><span class="dot" aria-hidden="true"></span>
+        <span class="pn">Phase 02</span>
+        <h3>Gender In Sport</h3>
+        <p class="mm">International Women's Day<br>March Madness</p>
+        <div class="fl"><i>Media</i><b>Gender In Sport Film</b></div>
+        <ul class="ba">
+          <li><i>01</i><div><b>Mom VP</b><span>Showing up for athlete moms: nursing rooms at stadiums, sponsorship through maternity leave, a postpartum line.</span></div></li>
+          <li><i>02</i><div><b>Lifting The Weight</b><span>Partnering with and transforming gyms into safe spaces for queer, trans and non-binary athletes.</span></div></li>
+          <li><i>03</i><div><b>Breaking The Binary</b><span>The first gender neutral college locker rooms, a podcast and virtual support groups.</span></div></li>
+          <li><i>04</i><div><b>Fit For Every Body</b><span>Labels off the clothes and the aisles, a new industry standard for gender inclusivity, a purpose-built line.</span></div></li>
+        </ul>
+      </div>
+      <div class="ph rv d3">
+        <span class="q"><b>Q2 to Jun 2022</b></span><span class="dot" aria-hidden="true"></span>
+        <span class="pn">Phase 03</span>
+        <h3>Beyond Sport</h3>
+        <p class="mm">Mother's Day<br>Pride</p>
+        <div class="fl"><i>Media</i><b>Beyond Sport Film</b></div>
+        <ul class="ba">
+          <li><i>01</i><div><b>Off Court Excellence</b><span>A content series on athletes' lives outside the game, plus a Do Better, Be Better program for young athletes.</span></div></li>
+          <li><i>02</i><div><b>Sport Scholars</b><span>Ten-year scholarships and pro mentorship for rising athletes who shine off the court.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rings rv">
+      <div class="lb"><i>The Promise</i><span>Under Armour Is Never Through</span></div>
+      <div class="rk"><span>Making You Better</span><span>Making Sport Better</span><span>Making The World Better</span></div>
+    </div>
+  </section>
+
   <section class="sc w" id="line">
     <div class="sh">
-      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Line</span></div>
+      <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: The Line</span></div>
       <h2 class="rv d1">One Tagline, Evolved</h2>
     </div>
     <div class="rv">
@@ -279,7 +382,7 @@ html,body{margin:0;background:#0B0B0B}
   <section class="cl w" id="next">
     <div class="gx">
       <div>
-        <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: Next</span></div>
+        <div class="lb rv"><i>[ 07 ]</i><span>Frame 07: Next</span></div>
         <h2 class="rv d1" style="margin-top:calc(var(--u)*1.8)">More Commercials</h2>
       </div>
       <a class="pill rv d2" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
@@ -327,7 +430,7 @@ html,body{margin:0;background:#0B0B0B}
       while(wide()&&i<40){size*=.95;f.el.style.fontSize=size+'px';i++}
     });
     /* wrapped headlines: shrink until the longest word fits */
-    qa('.sh h2,.cl h2,.br h3').forEach(function(h){
+    qa('.sh h2,.cl h2,.br h3,.ph h3').forEach(function(h){
       h.style.fontSize='';
       var size=parseFloat(getComputedStyle(h).fontSize),i=0;
       while(h.scrollWidth>h.clientWidth+1&&i<30){size*=.95;h.style.fontSize=size+'px';i++}
