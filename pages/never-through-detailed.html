@@ -34,21 +34,19 @@ html,body{margin:0;background:#0B0B0B}
 .nt .rv.on{opacity:1;transform:none}
 .nt .rv.d1{transition-delay:.1s}.nt .rv.d2{transition-delay:.2s}.nt .rv.d3{transition-delay:.3s}.nt .rv.d4{transition-delay:.4s}.nt .rv.d5{transition-delay:.5s}
 
-/* top row: static, clears the sitewide MENU on the right */
-.nt .tb{display:flex;align-items:center;justify-content:flex-start;gap:calc(var(--u)*3);min-height:90px;padding-right:calc(var(--g) + var(--u)*8);border-bottom:1px solid var(--ln)}
-.nt .tb .mo{font-size:calc(var(--u)*.82)}
-.nt .tb .sp{flex:1 1 auto;height:1px;background:var(--ln);min-width:calc(var(--u)*2)}
 
 /* hero */
-.nt .hero{padding-top:calc(var(--u)*4.5);padding-bottom:calc(var(--u)*6);border-bottom:1px solid var(--ln)}
+.nt .hero{padding-top:calc(90px + var(--u)*2);padding-bottom:calc(var(--u)*6);border-bottom:1px solid var(--ln)}
 .nt .hero h1{margin-top:calc(var(--u)*1.6);font-size:calc(var(--u)*16.5);line-height:.82}
 .nt .hero h1 span{display:block;width:max-content;max-width:none;white-space:nowrap}
 .nt .hero h1 .l1{opacity:0;transform:translate3d(0,.25em,0);transition:opacity .7s ease .15s,transform .7s cubic-bezier(.2,.7,.2,1) .15s}
 .nt .hero h1 .l2{opacity:0;transform:translate3d(0,.25em,0);transition:opacity .7s ease .35s,transform .7s cubic-bezier(.2,.7,.2,1) .35s}
 .nt .hero.in h1 span{opacity:1;transform:none}
-.nt .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);align-items:end;margin-top:calc(var(--u)*4.5)}
+.nt .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);align-items:center;margin-top:calc(var(--u)*4.5)}
 .nt .hero .dk{font-size:calc(var(--u)*1.9);line-height:1.35;font-weight:500;letter-spacing:-.01em;max-width:calc(var(--u)*40);text-wrap:balance}
-.nt .hero .dk .mk{display:block;font-size:calc(var(--u)*2.2);margin-top:calc(var(--u)*1.6);transform:rotate(-2.5deg);transform-origin:left center;width:max-content;max-width:100%}
+.nt .man p{font-size:calc(var(--u)*1.32);line-height:1.42;font-weight:500;letter-spacing:-.005em;max-width:calc(var(--u)*40)}
+.nt .man p+p{margin-top:calc(var(--u)*1.3)}
+.nt .man p.mk{font-size:calc(var(--u)*1.9);line-height:1.1;margin-top:calc(var(--u)*1.8);transform:rotate(-2deg);transform-origin:left center;width:max-content;max-width:100%}
 .nt .reel{position:relative;border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.8)}
 .nt .reel img{width:100%;aspect-ratio:739/415;object-fit:cover}
 .nt .reel .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
@@ -170,6 +168,52 @@ html,body{margin:0;background:#0B0B0B}
 .nt .ac .hw li b{display:block;color:var(--wh);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.15);line-height:1.05;margin-bottom:.3em}
 .nt .ac .hw li.hdr{color:var(--wh);font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;grid-template-columns:minmax(0,1fr);padding:calc(var(--u)*1) 0 calc(var(--u)*.6)}
 
+/* beats */
+.nt .pc{margin-top:calc(var(--u)*6);padding-top:calc(var(--u)*5);border-top:1px solid var(--ln)}
+.nt .pc:first-of-type{margin-top:0;padding-top:0;border-top:0}
+.nt .pc .top{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--g);align-items:end}
+.nt .pc .pn{display:block;font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--rd);margin-bottom:.8em}
+.nt .pc h3{font-size:calc(var(--u)*7)}
+.nt .pc .mm{margin-top:calc(var(--u)*1.4);font-family:var(--mo);font-size:calc(var(--u)*.82);line-height:1.6;letter-spacing:.04em;text-transform:uppercase;color:var(--gy)}
+.nt .pc .th{margin-top:calc(var(--u)*1.6);font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.7);line-height:1}
+.nt .pc .th i{font-style:normal;color:var(--rd)}
+.nt .pc .ui{font-size:calc(var(--u)*1.42);line-height:1.5;margin-top:calc(var(--u)*1.4);max-width:calc(var(--u)*40)}
+.nt .pc .pim{border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.7)}
+.nt .pc .pim img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.06)}
+.nt .pc .pim .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .pc .fb{display:flex;align-items:center;justify-content:space-between;gap:var(--g);margin-top:calc(var(--u)*3.2);padding:calc(var(--u)*1.4) calc(var(--u)*2);border:1px solid var(--wh)}
+.nt .pc .fb b{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*2.2);line-height:1}
+.nt .bt{margin-top:calc(var(--u)*4.5);padding-top:calc(var(--u)*3.5);border-top:1px solid var(--ln)}
+.nt .bt .bh{display:grid;grid-template-columns:calc(var(--u)*7) minmax(0,1fr);gap:var(--g);align-items:end}
+.nt .bt .bn{font-family:var(--mo);font-size:calc(var(--u)*.9);letter-spacing:.06em;text-transform:uppercase;color:var(--rd);padding-bottom:.6em}
+.nt .bt .bn small{display:block;color:var(--gy);margin-top:.5em;font-size:.9em}
+.nt .bt h4{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.03em;font-size:calc(var(--u)*5.2);line-height:.88;margin:0}
+.nt .bt .cl2{grid-column:2;margin-top:calc(var(--u)*1.4);font-size:calc(var(--u)*1.9);line-height:1.3;font-weight:500;letter-spacing:-.01em;max-width:calc(var(--u)*56);text-wrap:balance}
+.nt .bt .bx{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--g);align-items:start;margin-top:calc(var(--u)*2.6)}
+.nt .bt .him{border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.7)}
+.nt .bt .him img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.06);transition:filter .6s ease}
+.nt .bt .him:hover img{filter:grayscale(0) contrast(1.02)}
+.nt .bt .him .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .bt .tx dt{font-family:var(--mo);font-size:calc(var(--u)*.82);letter-spacing:.08em;text-transform:uppercase;color:var(--gy)}
+.nt .bt .tx dt i{font-style:normal;color:var(--rd)}
+.nt .bt .tx dd{margin:.6em 0 0;font-size:calc(var(--u)*1.25);line-height:1.5}
+.nt .bt .tx dd+dt{margin-top:calc(var(--u)*1.8)}
+.nt .bt .tx dl{margin:0;padding:calc(var(--u)*.4) 0 0}
+.nt .bt .sb{margin-top:calc(var(--u)*2.2)}
+.nt .bt .sb .lb{margin-bottom:calc(var(--u)*1.2)}
+.nt .bt .fr3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+.nt .bt .fr3.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nt .bt .f{border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.7);display:flex;flex-direction:column}
+.nt .bt .f .im{aspect-ratio:16/10;overflow:hidden;background:#000}
+.nt .bt .f .im img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);transition:filter .6s ease,transform .9s ease}
+.nt .bt .f:hover .im img{filter:grayscale(0) contrast(1.02);transform:scale(1.03)}
+.nt .bt .f .im.none{display:flex;align-items:center;justify-content:center;border:1px dashed var(--ln)}
+.nt .bt .f .im.none span{font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;font-size:calc(var(--u)*3.4);color:var(--rd);letter-spacing:-.03em}
+.nt .bt .f .ft{padding:calc(var(--u)*1) calc(var(--u)*.4) calc(var(--u)*.5)}
+.nt .bt .f .ft i{display:block;font-style:normal;font-family:var(--mo);font-size:calc(var(--u)*.78);letter-spacing:.08em;text-transform:uppercase;color:var(--rd);margin-bottom:.6em}
+.nt .bt .f .ft b{display:block;font-family:var(--hd);font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.02em;font-size:calc(var(--u)*1.5);line-height:1;margin-bottom:.5em}
+.nt .bt .f .ft p{font-size:calc(var(--u)*1.08);line-height:1.5;color:var(--gy)}
+
 /* the line */
 .nt .ln1{position:relative;display:block;width:max-content;max-width:none;white-space:nowrap;font-size:calc(var(--u)*6.2);color:var(--gy);line-height:.95}
 .nt .ln1 svg{position:absolute;left:-1.5%;top:0;width:103%;height:100%;overflow:visible;pointer-events:none}
@@ -192,7 +236,6 @@ html,body{margin:0;background:#0B0B0B}
 
 @media (max-width:1000px){
   .nt{--u:clamp(8px,2.1vw,14px);--g:1.75rem}
-  .nt .tb{padding-right:calc(1.75rem + 72px)}
   .nt .hero .gx{grid-template-columns:minmax(0,1fr)}
   .nt .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nt .cs{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -217,6 +260,22 @@ html,body{margin:0;background:#0B0B0B}
   .nt .ac dd,.nt .ac .hw li{font-size:max(14px,calc(var(--u)*1.1))}
   .nt .ac dt,.nt .ac .no,.nt .ac .hw li i,.nt .ac .hw li.hdr{font-size:max(10.5px,calc(var(--u)*.78))}
   .nt .ac .hw li b{font-size:max(14px,calc(var(--u)*1.15))}
+  .nt .pc .top{grid-template-columns:minmax(0,1fr)}
+  .nt .pc h3{font-size:calc(var(--u)*5.6)}
+  .nt .pc .ui{font-size:max(15px,calc(var(--u)*1.42));max-width:none}
+  .nt .pc .th{font-size:max(16px,calc(var(--u)*1.7))}
+  .nt .pc .fb{flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1)}
+  .nt .pc .fb b{font-size:max(20px,calc(var(--u)*2.2))}
+  .nt .bt .bh{grid-template-columns:minmax(0,1fr)}
+  .nt .bt .bn{padding-bottom:0}
+  .nt .bt h4{font-size:calc(var(--u)*4.6)}
+  .nt .bt .cl2{grid-column:1;font-size:max(17px,calc(var(--u)*1.9))}
+  .nt .bt .bx{grid-template-columns:minmax(0,1fr)}
+  .nt .bt .tx dd{font-size:max(15px,calc(var(--u)*1.25))}
+  .nt .bt .tx dt,.nt .bt .f .ft i,.nt .bt .bn{font-size:max(10.5px,calc(var(--u)*.82))}
+  .nt .bt .fr3,.nt .bt .fr3.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nt .bt .f .ft b{font-size:max(16px,calc(var(--u)*1.5))}
+  .nt .bt .f .ft p{font-size:max(14px,calc(var(--u)*1.08))}
   .nt .ro .tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:calc(var(--u)*5)}
   .nt .ro .tl::before{display:none}
   .nt .ph{padding-top:0;padding-left:calc(var(--u)*2.2);border-left:2px solid var(--ln)}
@@ -236,15 +295,17 @@ html,body{margin:0;background:#0B0B0B}
 }
 @media (max-width:700px){
   .nt{--u:3.15vw;--g:1.5rem}
-  .nt .tb{min-height:76px;flex-wrap:wrap;row-gap:.3rem;padding-top:.8rem;padding-bottom:.8rem}
-  .nt .tb .sp{display:none}
-  .nt .hero{padding-top:calc(var(--u)*3)}
+  .nt .hero{padding-top:calc(76px + var(--u)*1.5)}
   .nt .hero h1{font-size:calc(var(--u)*14)}
-  .nt .hero .dk{font-size:max(17px,calc(var(--u)*1.9))}
+  .nt .man p{font-size:max(15px,calc(var(--u)*1.32))}
+  .nt .man p.mk{font-size:max(18px,calc(var(--u)*1.9))}
   .nt .sh h2,.nt .cl h2{font-size:calc(var(--u)*4.8)}
   .nt .br h3{font-size:calc(var(--u)*3)}
   .nt .cs{grid-template-columns:minmax(0,1fr)}
   .nt .ro .tl{grid-template-columns:minmax(0,1fr)}
+  .nt .bt .fr3,.nt .bt .fr3.two{grid-template-columns:minmax(0,1fr)}
+  .nt .bt h4{font-size:max(30px,calc(var(--u)*4.6))}
+  .nt .pc h3{font-size:max(32px,calc(var(--u)*5.6))}
   .nt .ph h3{font-size:max(24px,calc(var(--u)*3.1))}
   .nt .fr .cap .mk{font-size:max(15px,calc(var(--u)*1.35))}
   .nt .ln1{font-size:calc(var(--u)*5)}
@@ -258,24 +319,21 @@ html,body{margin:0;background:#0B0B0B}
 <body>
 <div class="nt">
 
-  <div class="tb w" aria-label="Project">
-    <span class="mo"><b>Under Armour</b></span>
-    <span class="mo">Never Through</span>
-    <span class="sp" aria-hidden="true"></span>
-    <span class="mo">Global Campaign Film</span>
-    <span class="mo">2022</span>
-  </div>
 
   <section class="hero w" id="top">
     <div class="lb"><i>[ 01 ]</i><span>Frame 01: The Manifesto</span></div>
     <h1 id="h1"><span class="l1">Never</span><span class="l2">Through</span></h1>
     <div class="gx">
       <div class="rv">
-        <p class="dk">A visual manifesto tapping into the collective urgency for better. Better selves, better systems, better futures.<span class="mk">the pursuit of better never ends</span></p>
+        <div class="man">
+          <p>Taking a knee was the beginning<br>Of a movement<br>Generations in the making<br>Now it's time we take a stand</p>
+          <p>Pass the baton to today's changemakers<br>To change the makeup of sport<br>So it finally reflects the people<br>Who put their heart and soul in the game</p>
+          <p>To keep pushing<br>For a better, more inclusive culture<br>Because making sports better<br>For ALL athletes is our mission</p>
+          <p class="mk">And we'll never be through fighting<br>To push the game forward</p>
+        </div>
       </div>
       <figure class="reel rv d1">
         <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-sizzle.gif" alt="" role="img" aria-label="Sizzle cut of the Never Through film: a sprinter under floodlights, a soccer player after a hit, a football player in a red helmet, an athlete mid shout, and the line The Only Way Is Through" width="739" height="415">
-        <figcaption class="cap"><span class="mo">Sizzle cut</span><span class="mo">71 frames, loops</span></figcaption>
       </figure>
     </div>
     <div class="meta rv d2">
@@ -301,46 +359,9 @@ html,body{margin:0;background:#0B0B0B}
     </div>
   </section>
 
-  <section class="sc w" id="sheet">
-    <div class="sh">
-      <div class="lb rv"><i>[ 03 ]</i><span>Frame 03: The Contact Sheet</span></div>
-      <h2 class="rv d1">Frames From The Cut</h2>
-    </div>
-    <div class="cs">
-      <figure class="fr rv">
-        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-woman.webp" alt="" role="img" aria-label="A sprinter catches her breath under floodlights" width="695" height="337" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 14</span><span class="mk">breathe</span></figcaption>
-      </figure>
-      <figure class="fr rv d1">
-        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-soccer.webp" alt="" role="img" aria-label="A soccer player in a white jersey after taking a hit" width="528" height="282" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 28</span><span class="mk">take the hit</span></figcaption>
-      </figure>
-      <figure class="fr rv d2">
-        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-man.webp" alt="" role="img" aria-label="An athlete in a dark training shirt squares up" width="303" height="327" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 44</span><span class="mk">square up</span></figcaption>
-      </figure>
-      <figure class="fr rv">
-        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-helmet.webp" alt="" role="img" aria-label="A football player in a red helmet stares down the lens" width="438" height="289" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 56</span><span class="mk">restart</span></figcaption>
-      </figure>
-      <figure class="fr rv d1">
-        <div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-scream.webp" alt="" role="img" aria-label="An athlete in a pink jersey roars" width="689" height="335" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 65</span><span class="mk">again</span></figcaption>
-      </figure>
-      <figure class="fr rv d2">
-        <div class="im ct"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-still-title.webp" alt="" role="img" aria-label="Title card reading The Only Way Is Through" width="739" height="415" loading="lazy"></div>
-        <figcaption class="cap"><span class="mo">FR 68</span><span class="mk">never through</span></figcaption>
-      </figure>
-    </div>
-    <div class="csn rv">
-      <span class="mo">Stills pulled from the sizzle cut</span>
-      <span class="mo">Hover for color</span>
-    </div>
-  </section>
-
   <section class="sc w" id="brief">
     <div class="sh">
-      <div class="lb rv"><i>[ 04 ]</i><span>Frame 04: The Brief</span></div>
+      <div class="lb rv"><i>[ 03 ]</i><span>Frame 03: The Brief</span></div>
       <h2 class="rv d1">Who, What, Where, And Why It Matters</h2>
     </div>
     <div class="br">
@@ -369,7 +390,7 @@ html,body{margin:0;background:#0B0B0B}
 
   <section class="sc w" id="strategy">
     <div class="sh">
-      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Strategy</span></div>
+      <div class="lb rv"><i>[ 04 ]</i><span>Frame 04: The Strategy</span></div>
       <h2 class="rv d1">Heart, On And Off The Field</h2>
     </div>
     <div class="stx rv">
@@ -425,128 +446,261 @@ html,body{margin:0;background:#0B0B0B}
 
   <section class="sc w ro" id="rollout">
     <div class="sh">
-      <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: The Rollout</span></div>
+      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Rollout</span></div>
       <h2 class="rv d1">Four Beats, January To June</h2>
-      <p class="bd rv d2">The film launched the platform in January. Then three themed phases followed through June, each one pairing a film with a set of brand actions so Under Armour could prove the line, not just say it. Every action below carries its insight, its idea and how it works.</p>
+      <p class="bd rv d2">The film opens the platform in January. Three themed phases follow through June, each one a film plus a run of brand actions, so Under Armour proves the line instead of saying it. Every action below plays out beat by beat: the tension, the move, the storyboard.</p>
     </div>
-    <div class="phd">
-      <div class="hd rv">
-        <div><span class="pn">Launch</span><h3>Never Through</h3><p class="mm">Jan 2022<br>Back To The Gym</p></div>
-        <div class="ui"><b>The Opening Beat</b><p>The hero film introduces the platform and the evolved line, with the first launch brand actions behind it. Media and buzz open together, so the promise and the proof arrive at the same time.</p></div>
+    <div class="pc">
+      <div class="top">
+        <div class="rv"><span class="pn">Launch</span><h3>Never Through</h3><p class="mm">Jan 2022<br>Back To The Gym</p><p class="th">Theme: <i>The Promise</i></p><p class="ui">The hero film opens the platform and lands the evolved line. The first brand actions arrive with it, so the promise and the proof show up on the same day.</p></div>
+        <figure class="pim rv d1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-poster.webp" alt="" role="img" aria-label="An athlete in a pink jersey mid shout on the field" width="689" height="387" loading="lazy"><figcaption class="cap"><span class="mo">Hero film</span><span class="mo">Launch</span></figcaption></figure>
       </div>
-      <div class="acts">
-        <article class="ac film rv"><span class="no">Media</span><b>Launch Film</b><span class="mo">Buzz: Launch Brand Actions</span></article>
+      <div class="fb rv"><span class="mo">Media</span><b>Launch Film</b><span class="mo">Buzz: Launch Brand Actions</span></div>
+    </div>
+    <div class="pc">
+      <div class="top">
+        <div class="rv"><span class="pn">Phase 01</span><h3>Diversity In Sport</h3><p class="mm">Q1<br>Black History Month, Super Bowl and Playoffs</p><p class="th">Theme: <i>Challenging Racism</i></p><p class="ui">Black and brown athletes carry sports culture and get no support in their unique struggles on and off the court. Players end up feeling exploited and out of place in the world of sports.</p></div>
+        <figure class="pim rv d1"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-p1.webp" alt="" role="img" aria-label="Five soccer players kneeling in Black Lives Matter shirts" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Phase film still</span><span class="mo">Phase 01</span></figcaption></figure>
+      </div>
+      <div class="fb rv"><span class="mo">Media</span><b>Diversity In Sport Film</b><span class="mo">Buzz: 6 brand actions</span></div>
+      <div class="bt" id="pf">
+        <div class="bh rv">
+          <span class="bn">Beat<br>01 / 06</span>
+          <h4>Playing Fair</h4>
+          <p class="cl2">Under Armour levels the playing field for Black athletes with scholarships that take the cost out of getting in the game.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pf.webp" alt="" role="img" aria-label="A young man in headphones reading between library stacks" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Playing Fair</span><span class="mo">Beat 01</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Nearly 1 in 5 lower-income parents say costs forced their kids to cut back on sports, and 86% of student athletes live in poverty. For athletes from minority groups, price is the first opponent.</dd><dt><i>The Move</i></dt><dd>A nontraditional scholarship that covers the non-academic, sports-related expenses, so money never interrupts a Focused Performer mid-pursuit.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 two">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pf-1.webp" alt="" role="img" aria-label="Students crossing a campus quad under a clock tower" width="980" height="551" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Need-Based Scholarships</b><p>Campus partners across the country, maybe the world, fund an entire class of 2022 athletes.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pf-2.webp" alt="" role="img" aria-label="A student carrying textbooks across campus" width="1000" height="662" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Beyond Sport Stipends</b><p>Tuition, then everything tuition misses: travel to games, uniforms, equipment, laundry, food.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="pfx">
+        <div class="bh rv">
+          <span class="bn">Beat<br>02 / 06</span>
+          <h4>Playing Fair, Extended</h4>
+          <p class="cl2">Under Armour takes on exploitative NCAA regulations with the California government at its back.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pfx.webp" alt="" role="img" aria-label="The U.S. Capitol dome against storm clouds" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Playing Fair, Extended</span><span class="mo">Beat 02</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>56% of Division I men's basketball players and 48% of football student-athletes are Black. The top 20 NCAA colleges clear over $3 billion a year from their programs.</dd><dt><i>The Move</i></dt><dd>Push California's Fair Pay To Play Act into federal law so athletes in all 50 states can profit from their name, and work with Overtime Elite to pay players a salary from high school on.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pfx-1.webp" alt="" role="img" aria-label="A group of young men in suits walking together" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Collective For Change</b><p>Lobbyists, lawyers, marketers and key athlete partners, assembled as one team for reform.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pfx-2.webp" alt="" role="img" aria-label="A penny and a quarter in close up" width="1000" height="669" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Crunching The Numbers</b><p>Total up what the former student athletes on the roster lost, and spend that exact figure on the awareness campaign.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-pfx-3.webp" alt="" role="img" aria-label="The floor of the U.S. House in session" width="1000" height="562" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Taking The Floor</b><p>Former NCAA athletes on the roster speak before Congress for the next generation.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="btg">
+        <div class="bh rv">
+          <span class="bn">Beat<br>03 / 06</span>
+          <h4>Bridging The Gap</h4>
+          <p class="cl2">Under Armour launches an apprenticeship that empowers athletes from under-represented communities to change the makeup of sports.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btg.webp" alt="" role="img" aria-label="A college football coach on the sideline in a headset" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Bridging The Gap</span><span class="mo">Beat 03</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>In 2020 the NFL opened the season with three Black head coaches and two Black general managers, in a league whose players are roughly 70% Black. Athletes who don't go pro drop out of sport entirely.</dd><dt><i>The Move</i></dt><dd>A groundbreaking initiative that shows high school athletes every career the industry holds beyond the field.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btg-1.webp" alt="" role="img" aria-label="A referee signaling on the field" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>See It. Be It.</b><p>A nationwide high school apprenticeship with IMG Academy, opening up sports-adjacent careers.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btg-2.webp" alt="" role="img" aria-label="An agent in a suit in front of framed jerseys" width="350" height="342" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Becoming A Major Player</b><p>The people who work for athletes off the court, managers, agents, contract lawyers, step in as mentors.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btg-3.webp" alt="" role="img" aria-label="A coach in a red hoodie and headset on the sideline" width="890" height="534" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Leaders In Training</b><p>College curriculum on the path to coaching, managing, training, with guest hosts like Deion Sanders.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="ptm">
+        <div class="bh rv">
+          <span class="bn">Beat<br>04 / 06</span>
+          <h4>Passing The Mic</h4>
+          <p class="cl2">In an industry that tells athletes to shut up, Under Armour hands them the platform to speak up.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ptm.webp" alt="" role="img" aria-label="A vintage microphone lit in blue haze" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Passing The Mic</span><span class="mo">Beat 04</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Approval of kneeling during the anthem rose from 32% in 2016 to 48% in 2020. Fans and athletes alike want athletes to own their politics.</dd><dt><i>The Move</i></dt><dd>A collective of the top athletes on the roster, convened to rewrite the systemic issues in sport and push the game forward.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ptm-1.webp" alt="" role="img" aria-label="Hands signing a document at a table" width="1000" height="750" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Speaking Out</b><p>A statement of purpose and a list of demands to the industry, signed on day one.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ptm-2.webp" alt="" role="img" aria-label="Four people in conversation on couches in a loft" width="1000" height="665" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>A Seat At The Table</b><p>Live roundtables moderated by sports journalists on the need for change.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ptm-3.webp" alt="" role="img" aria-label="A man working through sticky notes on a glass wall" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Teamwork Makes The Dream Work</b><p>The collective steers Under Armour's initiatives for five years, product innovation included.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="gig">
+        <div class="bh rv">
+          <span class="bn">Beat<br>05 / 06</span>
+          <h4>Getting In The Game</h4>
+          <p class="cl2">Under Armour champions athletes from underrepresented groups as the new face of the most niche sports out there.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-gig.webp" alt="" role="img" aria-label="A softball player in a ready stance fielding a ball" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Getting In The Game</span><span class="mo">Beat 05</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Overwhelmingly white sports forcefully exclude non-white athletes, reinforcing the idea that there are only certain sports Black and brown athletes belong in. The MLB is almost 60% white.</dd><dt><i>The Move</i></dt><dd>Sponsor young star athletes paving their own way into traditionally white sports, starting from the brand's inroads in baseball and expanding outward.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-gig-1.webp" alt="" role="img" aria-label="A rugby player breaking through a tackle" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Star Player Spotlight</b><p>A wave of up-and-coming BIPOC athletes, sponsored and made the face of their sports.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-gig-2.webp" alt="" role="img" aria-label="A speaker addressing a packed school auditorium" width="1000" height="562" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Voices Of The Next Generation</b><p>A content series and live speaker tour at schools and community centers, told by the ambassadors who lived the exclusion.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-gig-3.webp" alt="" role="img" aria-label="A pile of sports equipment: helmet, gloves, balls, boxing gloves" width="612" height="299" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Making Space</b><p>Community centers in underserved neighborhoods get coaching, free equipment and safe places to try more sports.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="atf">
+        <div class="bh rv">
+          <span class="bn">Beat<br>06 / 06</span>
+          <h4>A Timeless Fight</h4>
+          <p class="cl2">Under Armour examines the long history of sports in protest to empower the next generation to keep taking a stand.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-atf.webp" alt="" role="img" aria-label="The 1968 Olympic podium salute" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">A Timeless Fight</span><span class="mo">Beat 06</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Protest has always played a pivotal role in sport, and the roster already carries it: Steph Curry, Aisha Praught-Leer, Andy Murray, Natasha Hastings.</dd><dt><i>The Move</i></dt><dd>An in-depth documentary honoring the legacy of sports activism, built to hand the next generation of athletes and activists the playbook.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-atf-1.webp" alt="" role="img" aria-label="Muhammad Ali surrounded by press" width="1000" height="563" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Protest Through The Ages</b><p>The film: how sports activism got results and shifted the industry over time.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-atf-2.webp" alt="" role="img" aria-label="A woman speaking into a microphone on a panel" width="300" height="200" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Looking Back To Move Forward</b><p>Former activists and current leaders coach athletes on organized action and handling backlash.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-atf-3.webp" alt="" role="img" aria-label="Drivers in End Racism shirts kneeling on a race grid" width="1000" height="523" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Funding The Future</b><p>Every dollar the release earns goes back into reform, directed by the athletes in the film.</p></div></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="phd">
-      <div class="hd rv">
-        <div><span class="pn">Phase 01</span><h3>Diversity In Sport</h3><p class="mm">Q1<br>Black History Month, Super Bowl and Playoffs</p></div>
-        <div class="ui"><b>Universal Insight</b><p>Black and brown athletes contribute so much to sports culture, but don't receive support in their unique struggles on and off the court. As a result, players end up feeling exploited and out of place in the world of sports.</p><p class="th">Theme: <i>Challenging Racism</i></p></div>
+    <div class="pc">
+      <div class="top">
+        <div class="rv"><span class="pn">Phase 02</span><h3>Gender In Sport</h3><p class="mm">Q1 to Q2<br>International Women's Day, March Madness</p><p class="th">Theme: <i>Tackling Gender</i></p><p class="ui">41% of Gen Z identify as neutral on the spectrum of masculinity and femininity. Outdated gender norms in sport lock this generation out of participating and bettering themselves through it.</p></div>
+        
       </div>
-      <div class="acts">
-        <article class="ac film rv"><span class="no">Media</span><b>Diversity In Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
-      <article class="ac rv">
-        <span class="no">Brand Action 01</span>
-        <h4>Playing Fair</h4>
-        <p class="cl2">Under Armour levels the playing field for Black athletes with scholarships that alleviate the financial burden of getting in the game.</p>
-        <dl><dt>Insight</dt><dd>In 2019 the poverty rate was 18.8% for Black people and 15.7% for Hispanic people, against 9.6% for white people. Nearly 1 in 5 lower-income parents report costs forced their children to cut back on sports, and 86% of student athletes live in poverty. Cost acts as a major barrier to entry for athletes from minority groups.</dd><dt>Idea</dt><dd>A nontraditional scholarship program that covers non-academic, sports-related expenses, so financial obstacles don't interrupt our Focused Performers in their pursuit of progress.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Need-Based Scholarships</b>Work with campus partners around the country, maybe even globally, to offer need-based scholarships to an entire class of 2022 athletes.</div></li><li><i>02</i><div><b>Beyond Sport Stipends</b>In addition to tuition, offset non-academic costs like travel to and from games, uniforms and equipment, and general cost of living.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 02</span>
-        <h4>Playing Fair, Extended</h4>
-        <p class="cl2">Under Armour is challenging exploitative regulations in the NCAA with the backing of the California government.</p>
-        <dl><dt>Insight</dt><dd>56% of Division I men's college basketball players and 48% of football student-athletes are Black, yet the top 20 NCAA colleges collectively make over $3 billion a year from their athletic programs.</dd><dt>Idea</dt><dd>California's Fair Pay To Play Act, signed in 2019, lets college athletes profit from endorsements. We'll lobby to make it federal law so athletes in all 50 states benefit, and work with Overtime Elite to provide players a salary and benefits from high school on.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Collective For Change</b>An original team of lobbyists, lawyers, marketers and key athlete partners leading the charge for reform.</div></li><li><i>02</i><div><b>Crunching The Numbers</b>Calculate the total amount lost by the former student athletes on our roster and donate that amount to launch an awareness campaign around the issue.</div></li><li><i>03</i><div><b>Taking The Floor</b>Former NCAA athletes on our roster speak before Congress and advocate for the next generation.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 03</span>
-        <h4>Bridging The Gap</h4>
-        <p class="cl2">Under Armour launches an apprenticeship program to empower athletes from under-represented communities to change the makeup of sports.</p>
-        <dl><dt>Insight</dt><dd>In 2020 the 32 NFL teams started the season with only three Black head coaches and two Black general managers, in a league where the players are roughly 70% Black. The disparity leads athletes who don't make it professionally to drop out of sport altogether.</dd><dt>Idea</dt><dd>Address the racial disparity between Black players and Black leadership by creating a groundbreaking initiative exposing high school athletes to alternative career paths in the sports industry.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>See It. Be It.</b>An apprenticeship program with high schools across the country, in partnership with IMG Academy, exposing young sport enthusiasts to sports-adjacent careers.</div></li><li><i>02</i><div><b>Becoming A Major Player</b>Bring in the crucial team members who work for our athletes off the court, managers, agents, contract lawyers, as mentors.</div></li><li><i>03</i><div><b>Leaders In Training</b>Sponsor college curriculum on the path to these careers with special guest hosts like Deion Sanders from leadership positions in the industry.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 04</span>
-        <h4>Passing The Mic</h4>
-        <p class="cl2">In an industry that often tells athletes to shut up, Under Armour is giving them a platform to speak up about issues that matter.</p>
-        <dl><dt>Insight</dt><dd>People who thought kneeling during the anthem was appropriate rose from 32% in September 2016 to 41% in September 2017 to 48% in July 2020. There's a growing appetite, within the athlete community and among fans, for athletes to own their politics.</dd><dt>Idea</dt><dd>Organize a collective of the top athletes on our roster to ideate on ways Under Armour can change the systemic issues in the sports industry and push the game forward.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Speaking Out</b>Launch with a statement of purpose describing the goals the team will organize around and a list of demands to the industry.</div></li><li><i>02</i><div><b>A Seat At The Table</b>Live roundtable discussions moderated by sports journalists on the need for change in sport.</div></li><li><i>03</i><div><b>Teamwork Makes The Dream Work</b>The collective informs Under Armour's initiatives over five years, applying a collaborative product innovation strategy to athletes' needs.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 05</span>
-        <h4>Getting In The Game</h4>
-        <p class="cl2">Under Armour champions athletes from underrepresented groups as the new face of the most niche sports out there.</p>
-        <dl><dt>Insight</dt><dd>Certain overwhelmingly white sports often forcefully exclude non-white athletes from participating, reinforcing the idea that there are only certain sports Black and brown athletes can take part in. The MLB is almost 60% white.</dd><dt>Idea</dt><dd>Confront the lack of diverse representation in traditionally white sports by sponsoring young, star athletes from underrepresented groups paving their own way, starting with our inroads in baseball and expanding to sports of all kinds.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Star Player Spotlight</b>Sponsor a wave of up-and-coming BIPOC athletes in traditionally white sports and empower them as the new face of those sports.</div></li><li><i>02</i><div><b>Voices Of The Next Generation</b>An awareness campaign with content and a live speaker series at schools and community centers, where brand ambassadors speak about the exclusion they've faced.</div></li><li><i>03</i><div><b>Making Space</b>Partner with community centers in underserved neighborhoods to provide coaching, free equipment and safe spaces to explore more sports.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 06</span>
-        <h4>A Timeless Fight</h4>
-        <p class="cl2">Under Armour examines the longstanding history of sports in protest to empower the next generation to keep taking a stand.</p>
-        <dl><dt>Insight</dt><dd>Protest has always played a pivotal role in the world of sports, and Under Armour has a history of its athletes using their platform for change, including Steph Curry, Aisha Praught-Leer, Andy Murray and Natasha Hastings.</dd><dt>Idea</dt><dd>Honor the legacy of sports activism through an in-depth documentary, empowering the next generation of athletes and activists and highlighting the rich history of protest in sport, including the ongoing legacy of our own athletes.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Protest Through The Ages</b>An in-depth documentary on the ways sports activism has generated results and shifted the landscape of the industry over time.</div></li><li><i>02</i><div><b>Looking Back To Move Forward</b>Former sports activists and current leaders facilitate discussion and strategize for athletes looking to use their voice: how to engage your team in organized action, how to deal with backlash.</div></li><li><i>03</i><div><b>Funding The Future</b>Proceeds from the release go back to ongoing initiatives to reform the industry, with input from the athletes featured in the film.</div></li></ul>
-      </article>
+      <div class="fb rv"><span class="mo">Media</span><b>Gender In Sport Film</b><span class="mo">Buzz: 4 brand actions</span></div>
+      <div class="bt" id="mvp">
+        <div class="bh rv">
+          <span class="bn">Beat<br>01 / 04</span>
+          <h4>Mom VP</h4>
+          <p class="cl2">Moms make some of the greatest athletes, and Under Armour steps up to make sure they can stay in the game.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-mvp.webp" alt="" role="img" aria-label="A pregnant swimmer standing poolside under floodlights" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Mom VP</span><span class="mo">Beat 01</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>NCAA experts put pregnancy rates for female student-athletes as high as 10% to 15%.</dd><dt><i>The Move</i></dt><dd>Show up for college athletes who are moms, and future moms, through pregnancy, postpartum recovery and the return to play.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-mvp-1.webp" alt="" role="img" aria-label="A mother in a helmet holding a baby" width="819" height="1024" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Providing Tools For Progress</b><p>Around Mother's Day, stadiums and brands like Medela fit sporting facilities with nursing rooms and postpartum essentials.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-mvp-2.webp" alt="" role="img" aria-label="A sprinter in blue driving off the line" width="1000" height="626" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Through It All Partnerships</b><p>Sponsorship for the new mom athletes on the roster continues during and after maternity leave.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-mvp-3.webp" alt="" role="img" aria-label="Players on a basketball court with a child watching" width="1000" height="563" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Recovery Redefined</b><p>A maternity and postpartum athletic line that eases the transition back into being active.</p></div></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="phd">
-      <div class="hd rv">
-        <div><span class="pn">Phase 02</span><h3>Gender In Sport</h3><p class="mm">Q1 to Q2<br>International Women's Day, March Madness</p></div>
-        <div class="ui"><b>Universal Insight</b><p>In a recent study, 41% of Gen Z participants said they identify as neutral on the spectrum of masculinity and femininity. Outdated gender norms in sports exclude and limit today's generation of athletes from participating in and bettering themselves through sport.</p><p class="th">Theme: <i>Tackling Gender</i></p></div>
+      <div class="bt" id="ltw">
+        <div class="bh rv">
+          <span class="bn">Beat<br>02 / 04</span>
+          <h4>Lifting The Weight</h4>
+          <p class="cl2">Under Armour takes the pressure of being othered in the gym off the shoulders of non-binary athletes.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ltw.webp" alt="" role="img" aria-label="A crowded CrossFit gym mid session" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Lifting The Weight</span><span class="mo">Beat 02</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Nearly 1 in 5 transgender people reported being denied service, verbally harassed or physically attacked at a gym in the past year because of who they are.</dd><dt><i>The Move</i></dt><dd>Partner with and elevate the gyms built as safe spaces for queer, trans and gender non-conforming college athletes.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ltw-1.webp" alt="" role="img" aria-label="Steph Curry dribbling on a spotlit court" width="1000" height="510" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Creating Community</b><p>In the days before Pride, an event at The Queer Gym, the first dedicated LGBTQ gym in the U.S., hosted by Steph Curry.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ltw-2.webp" alt="" role="img" aria-label="A lifter resting a barbell across his shoulders in front of pride and trans flags" width="768" height="512" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Transformation Toolkits</b><p>Gyms across the country get the kit to become inclusive places for non-binary athletes.</p></div></div>
+          <div class="f rv"><!--im--><div class="im none"><span>AA</span></div><div class="ft"><i>Frame 03</i><b>Doing The Heavy Lifting</b><p>Sports D&amp;I experts like Athlete Ally guide the transformation of these spaces.</p></div></div>
+          </div>
+        </div>
       </div>
-      <div class="acts">
-        <article class="ac film rv"><span class="no">Media</span><b>Gender In Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
-      <article class="ac rv">
-        <span class="no">Brand Action 01</span>
-        <h4>Mom VP</h4>
-        <p class="cl2">Moms make some of the greatest athletes, and Under Armour is stepping up to make sure they can stay in the game.</p>
-        <dl><dt>Insight</dt><dd>NCAA experts suggest that pregnancy rates for female student-athletes are as high as 10% to 15%.</dd><dt>Idea</dt><dd>Show up for college athletes who are moms, and future moms, in a way that validates the value they bring to sport, helping them through pregnancy, postpartum recovery and the return to the game.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Providing Tools For Progress</b>Near Mother's Day, partner with major stadiums and brands like Medela to equip sporting facilities with nursing rooms and postpartum essentials.</div></li><li><i>02</i><div><b>Through It All Partnerships</b>Commit to financially sponsoring the new mom athletes on our roster during and post maternity leave.</div></li><li><i>03</i><div><b>Recovery Redefined</b>A maternity and postpartum athletic wear line that accommodates a new mother's needs and eases the transition back into being active.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 02</span>
-        <h4>Lifting The Weight</h4>
-        <p class="cl2">Under Armour is taking the pressure of being othered in the gym off the shoulders of non-binary athletes.</p>
-        <dl><dt>Insight</dt><dd>According to a 2015 study, nearly 1 in 5 transgender people said they were denied equal treatment or service, verbally harassed, or physically attacked at a gym within the past year because of being transgender.</dd><dt>Idea</dt><dd>Partner with and elevate gyms designed specifically to provide safe spaces for queer, trans and gender non-conforming college athletes.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Creating Community</b>In the days leading up to Pride, an event at The Queer Gym, the first dedicated LGBTQ gym in the U.S., with Steph Curry as host.</div></li><li><i>02</i><div><b>Transformation Toolkits</b>Partner with gyms across the country to transform them into more inclusive places for non-binary athletes.</div></li><li><i>03</i><div><b>Doing The Heavy Lifting</b>Guidance from sports D&amp;I experts like Athlete Ally to help with the transformation of these spaces.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 03</span>
-        <h4>Breaking The Binary</h4>
-        <p class="cl2">Under Armour creates the first-ever gender neutral locker room to start to break the gender binary for college athletes.</p>
-        <dl><dt>Insight</dt><dd>For nine years, transgender athletes at NCAA member universities have been able to compete on teams consistent with their gender identities. Despite that, accommodations haven't been made to empower trans athletes at the college level to succeed.</dd><dt>Idea</dt><dd>Support athletes across the gender spectrum by creating the first-ever gender neutral locker rooms in colleges across the country.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Starting The Conversation</b>A podcast featuring top athletes in conversation about the evolution of gender norms in sports.</div></li><li><i>02</i><div><b>Power In Numbers</b>Virtual support groups for gender non-conforming high school athletes to experience community and support each other.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 04</span>
-        <h4>Fit For Every Body</h4>
-        <p class="cl2">Under Armour removes all the labels from its clothes and empowers athletes to identify however they want while they shop.</p>
-        <dl><dt>Insight</dt><dd>56% of Gen Z consumers already shop outside of their gender, or cross-buy, ignoring clothing labels and gendered sections.</dd><dt>Idea</dt><dd>A major push to make sports more inclusive by making our products more accessible to those across the gender spectrum, pushing industry norms to serve all Focused Performers equally.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Beyond Labels</b>In the spirit of the Curry 6 and Riley Morrison in 2019, remove labels from our site and aisles, and add unisex products like jerseys and a non-gender-specific Meridian line.</div></li><li><i>02</i><div><b>Leading By Example</b>Compile a comprehensive research report and share it with competitors to create a new industry standard of gender inclusivity.</div></li><li><i>03</i><div><b>Designing A New Day</b>Work with gender non-conforming and non-binary designers on an intentional, informed product line: breathable chest binder tops, biker shorts with built-in tucking gaff, swim trunks without netting.</div></li></ul>
-      </article>
+      <div class="bt" id="btb">
+        <div class="bh rv">
+          <span class="bn">Beat<br>03 / 04</span>
+          <h4>Breaking The Binary</h4>
+          <p class="cl2">Under Armour creates the first-ever gender neutral locker room and starts to break the binary for college athletes.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btb.webp" alt="" role="img" aria-label="A row of lockers in faded red, orange and teal" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Breaking The Binary</span><span class="mo">Beat 03</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Trans athletes have competed on NCAA teams consistent with their gender identity for nine years. The buildings never caught up.</dd><dt><i>The Move</i></dt><dd>The first gender neutral locker rooms in colleges across the country, with the conversation and the community to match.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 two">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btb-1.webp" alt="" role="img" aria-label="A studio microphone against a white wall" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Starting The Conversation</b><p>A podcast of top athletes on the evolution of gender norms in sport.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-btb-2.webp" alt="" role="img" aria-label="Two people laughing on a video call" width="1000" height="700" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Power In Numbers</b><p>Virtual support groups where gender non-conforming high school athletes find each other.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="ffe">
+        <div class="bh rv">
+          <span class="bn">Beat<br>04 / 04</span>
+          <h4>Fit For Every Body</h4>
+          <p class="cl2">Under Armour pulls the labels off its clothes and lets athletes identify however they want while they shop.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ffe.webp" alt="" role="img" aria-label="A hand browsing a rack of clothes" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Fit For Every Body</span><span class="mo">Beat 04</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>56% of Gen Z already shop outside their gender, ignoring the labels and the gendered aisles.</dd><dt><i>The Move</i></dt><dd>A major push to make product accessible across the gender spectrum, and to drag the industry's norms along with it.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ffe-1.webp" alt="" role="img" aria-label="A plain white t-shirt with a small tag" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Beyond Labels</b><p>In the spirit of the Curry 6 and Riley Morrison, labels come off the site and the aisles, and unisex jerseys and the non-gender-specific Meridian line go in.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ffe-2.webp" alt="" role="img" aria-label="A laptop showing a chart" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Leading By Example</b><p>A research report, shared with competitors, to set a new industry standard for gender inclusivity.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ffe-3.webp" alt="" role="img" aria-label="Fabric swatches and a tape measure" width="1000" height="1500" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>Designing A New Day</b><p>Gender non-conforming and non-binary designers build the line: breathable chest binder tops, biker shorts with built-in tucking gaff, swim trunks without netting.</p></div></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="phd">
-      <div class="hd rv">
-        <div><span class="pn">Phase 03</span><h3>Beyond Sport</h3><p class="mm">Q2 to Jun 2022<br>Mother's Day, Pride</p></div>
-        <div class="ui"><b>Universal Insight</b><p>Athletes are multi-dimensional by nature and have more to offer the culture than just what they do on the court.</p><p class="th">Theme: <i>Beyond Sport</i></p></div>
+    <div class="pc">
+      <div class="top">
+        <div class="rv"><span class="pn">Phase 03</span><h3>Beyond Sport</h3><p class="mm">Q2 to Jun 2022<br>Mother's Day, Pride</p><p class="th">Theme: <i>Beyond Sport</i></p><p class="ui">Athletes are multi-dimensional by nature and have more to offer the culture than what they do on the court.</p></div>
+        
       </div>
-      <div class="acts">
-        <article class="ac film rv"><span class="no">Media</span><b>Beyond Sport Film</b><span class="mo">Buzz: the brand actions below</span></article>
-      <article class="ac rv">
-        <span class="no">Brand Action 01</span>
-        <h4>Off Court Excellence</h4>
-        <p class="cl2">Under Armour celebrates the off court excellence of Seahawks wide receiver and aspiring chef DK Metcalf.</p>
-        <dl><dt>Insight</dt><dd>Athletes are often looked at as one dimensional and perceived as less valuable off the court.</dd><dt>Idea</dt><dd>Celebrate the lives of professional athletes outside of their role as players through a content series that highlights their pursuits outside of sport.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Second Success Stories</b>Well-known, high-performance athletes discuss how they apply a Focused Performer mentality outside of sport in an ESPN 30 for 30 docuseries.</div></li><li><i>02</i><div><b>Bigger Than Sport Series</b>A recurring TikTok Live segment on athletes applying what they learned in sport to a new context, hosted by an athlete who embodies that journey, The Rock.</div></li><li><i>03</i><div><b>The Beginning Of Better</b>A Do Better, Be Better program that empowers and guides young athletes to do good in their communities off the field.</div></li></ul>
-      </article>
-      <article class="ac rv">
-        <span class="no">Brand Action 02</span>
-        <h4>Sport Scholars</h4>
-        <p class="cl2">Under Armour provides ten-year scholarships to competitive athletes that demonstrate excellence off the court.</p>
-        <dl><dt>Insight</dt><dd>Athletes are rewarded for an almost unhealthy obsession with sports, whereas athletes who shine in off-the-court pursuits aren't given the same opportunities.</dd><dt>Idea</dt><dd>Demonstrate a long-term commitment to the whole athlete by offering ten-year scholarships to up-and-coming athletes who demonstrate excellence in off-the-court pursuits.</dd></dl>
-        <ul class="hw"><li class="hdr">How It Works</li><li><i>01</i><div><b>Next Step Scholarships</b>Support up-and-coming athletes as they pursue the next phase of their education and athletic career, developing as well-rounded individuals.</div></li><li><i>02</i><div><b>Foundation For Success</b>A mentorship program pairing rising star athletes with pros at the top of their game, with resources to identify and realize off-the-court dreams.</div></li></ul>
-      </article>
+      <div class="fb rv"><span class="mo">Media</span><b>Beyond Sport Film</b><span class="mo">Buzz: 2 brand actions</span></div>
+      <div class="bt" id="oce">
+        <div class="bh rv">
+          <span class="bn">Beat<br>01 / 02</span>
+          <h4>Off Court Excellence</h4>
+          <p class="cl2">Under Armour celebrates the off court excellence of Seahawks wide receiver and aspiring chef DK Metcalf.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-oce.webp" alt="" role="img" aria-label="DK Metcalf tasting a dish in a kitchen" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Off Court Excellence</span><span class="mo">Beat 01</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Athletes get looked at as one dimensional, and valued less the moment they step off the court.</dd><dt><i>The Move</i></dt><dd>A content series on the lives athletes build outside the game.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 ">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-oce-1.webp" alt="" role="img" aria-label="A football player standing on the field after a game" width="775" height="465" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Second Success Stories</b><p>High-performance athletes on applying the Focused Performer mentality beyond sport, as an ESPN 30 for 30 docuseries.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-oce-2.webp" alt="" role="img" aria-label="The Rock in a Chase Greatness tank top" width="969" height="476" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Bigger Than Sport Series</b><p>A recurring TikTok Live segment on athletes who carried what sport taught them somewhere new, hosted by The Rock.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-oce-3.webp" alt="" role="img" aria-label="A young girl raising her fist at a march" width="1000" height="562" loading="lazy"></div><div class="ft"><i>Frame 03</i><b>The Beginning Of Better</b><p>A Do Better, Be Better program that guides young athletes to do good in their communities off the field.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bt" id="ss">
+        <div class="bh rv">
+          <span class="bn">Beat<br>02 / 02</span>
+          <h4>Sport Scholars</h4>
+          <p class="cl2">Under Armour funds ten-year scholarships for competitive athletes who show excellence off the court.</p>
+        </div>
+        <div class="bx">
+          <figure class="him rv"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ss.webp" alt="" role="img" aria-label="High school football players running drills under grey skies" width="1600" height="900" loading="lazy"><figcaption class="cap"><span class="mo">Sport Scholars</span><span class="mo">Beat 02</span></figcaption></figure>
+          <div class="tx rv d1"><dl><dt><i>The Tension</i></dt><dd>Athletes are rewarded for an almost unhealthy obsession with sport. The ones who shine off the court get no such reward.</dd><dt><i>The Move</i></dt><dd>A decade-long commitment to the whole athlete, for the rising talent whose best work happens off the field.</dd></dl></div>
+        </div>
+        <div class="sb">
+          <div class="lb rv"><i>Storyboard</i><span>How it plays out</span></div>
+          <div class="fr3 two">
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ss-1.webp" alt="" role="img" aria-label="A curved library wall of books" width="1000" height="667" loading="lazy"></div><div class="ft"><i>Frame 01</i><b>Next Step Scholarships</b><p>Support through the next phase of education and athletic career, so athletes develop as whole people.</p></div></div>
+          <div class="f rv"><!--im--><div class="im"><img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-b-ss-2.webp" alt="" role="img" aria-label="Two athletes sitting together on stadium bleachers" width="780" height="438" loading="lazy"></div><div class="ft"><i>Frame 02</i><b>Foundation For Success</b><p>Rising stars paired with pros at the top of their game, with the resources to realize off-the-court dreams.</p></div></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="rings rv">
@@ -557,7 +711,7 @@ html,body{margin:0;background:#0B0B0B}
 
   <section class="sc w" id="line">
     <div class="sh">
-      <div class="lb rv"><i>[ 07 ]</i><span>Frame 07: The Line</span></div>
+      <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: The Line</span></div>
       <h2 class="rv d1">One Tagline, Evolved</h2>
     </div>
     <div class="rv">
@@ -575,7 +729,7 @@ html,body{margin:0;background:#0B0B0B}
   <section class="cl w" id="next">
     <div class="gx">
       <div>
-        <div class="lb rv"><i>[ 08 ]</i><span>Frame 08: Next</span></div>
+        <div class="lb rv"><i>[ 07 ]</i><span>Frame 07: Next</span></div>
         <h2 class="rv d1" style="margin-top:calc(var(--u)*1.8)">More Commercials</h2>
       </div>
       <a class="pill rv d2" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
@@ -623,7 +777,7 @@ html,body{margin:0;background:#0B0B0B}
       while(wide()&&i<40){size*=.95;f.el.style.fontSize=size+'px';i++}
     });
     /* wrapped headlines: shrink until the longest word fits */
-    qa('.sh h2,.cl h2,.br h3,.ph h3,.phd h3,.ac h4,.stx h3').forEach(function(h){
+    qa('.sh h2,.cl h2,.br h3,.pc h3,.bt h4,.stx h3').forEach(function(h){
       h.style.fontSize='';
       var size=parseFloat(getComputedStyle(h).fontSize),i=0;
       while(h.scrollWidth>h.clientWidth+1&&i<30){size*=.95;h.style.fontSize=size+'px';i++}
