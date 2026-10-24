@@ -44,12 +44,18 @@ html,body{margin:0;background:#0B0B0B}
 .nt .hero.in h1 span{opacity:1;transform:none}
 .nt .hero .gx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--g);align-items:center;margin-top:calc(var(--u)*4.5)}
 .nt .hero .dk{font-size:calc(var(--u)*1.9);line-height:1.35;font-weight:500;letter-spacing:-.01em;max-width:calc(var(--u)*40);text-wrap:balance}
-.nt .man p{font-size:calc(var(--u)*1.32);line-height:1.42;font-weight:500;letter-spacing:-.005em;max-width:calc(var(--u)*40)}
-.nt .man p+p{margin-top:calc(var(--u)*1.3)}
-.nt .man p.mk{font-size:calc(var(--u)*1.9);line-height:1.1;margin-top:calc(var(--u)*1.8);transform:rotate(-2deg);transform-origin:left center;width:max-content;max-width:100%}
+.nt .man p.dk{font-size:calc(var(--u)*2.4);line-height:1.15;font-weight:700;letter-spacing:-.02em;max-width:calc(var(--u)*34);text-wrap:balance}
+.nt .man p.mk{font-size:calc(var(--u)*1.75);line-height:1.1;margin-top:calc(var(--u)*1.8);transform:rotate(-2deg);transform-origin:left center;width:max-content;max-width:100%}
+.nt .man p.mk span{display:block;white-space:nowrap}
 .nt .reel{position:relative;border:1px solid var(--ln);background:var(--bk2);padding:calc(var(--u)*.8)}
-.nt .reel img{width:100%;aspect-ratio:739/415;object-fit:cover}
-.nt .reel .cap{display:flex;justify-content:space-between;gap:1em;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .reel .fm{position:relative;aspect-ratio:739/415;background:#000;overflow:hidden}
+.nt .reel img{width:100%;height:100%;object-fit:cover;display:block}
+.nt .reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0;animation:ntfi .8s ease}
+.nt .reel.open img{display:none}
+.nt .reel .cap{display:flex;justify-content:flex-end;padding:calc(var(--u)*.9) calc(var(--u)*.2) calc(var(--u)*.2)}
+.nt .reel .play{font-family:var(--mo);font-weight:700;font-size:calc(var(--u)*.95);letter-spacing:.1em;text-transform:uppercase;color:var(--wh);border-bottom:1px solid var(--rd);padding-bottom:.25em;transition:color .2s}
+.nt .reel .play:hover{color:var(--rd)}
+.nt .reel.open .play{display:none}
 .nt .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--g);margin-top:calc(var(--u)*4.5);padding-top:calc(var(--u)*2);border-top:1px solid var(--ln)}
 .nt .meta div{font-size:calc(var(--u)*1.2);line-height:1.45}
 .nt .meta b{display:block;font-family:var(--mo);font-weight:400;font-size:calc(var(--u)*.8);letter-spacing:.08em;text-transform:uppercase;color:var(--gy);margin-bottom:.7em}
@@ -60,17 +66,7 @@ html,body{margin:0;background:#0B0B0B}
 .nt .sh h2{font-size:calc(var(--u)*7.2);max-width:calc(var(--u)*78);text-wrap:balance}
 
 /* film */
-.nt .vl{position:relative;aspect-ratio:16/9;background:var(--bk2);overflow:hidden;border:1px solid var(--ln);isolation:isolate}
-.nt .vl .ps{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);transition:transform .9s ease,filter .9s ease}
-.nt .vl:hover .ps{transform:scale(1.02);filter:grayscale(.15) contrast(1.06)}
-.nt .vl .lk{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;transition:opacity .4s}
-.nt .vl .lk .pl{display:inline-flex;align-items:center;gap:.8em;background:var(--wh);color:var(--bk);padding:.95em 1.5em .85em;font-family:var(--mo);font-weight:700;font-size:calc(var(--u)*.95);letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s,transform .3s}
-.nt .vl .lk .pl::before{content:"";width:0;height:0;border-style:solid;border-width:.45em 0 .45em .75em;border-color:transparent transparent transparent currentColor}
-.nt .vl:hover .lk .pl{background:var(--rd);color:var(--wh);transform:scale(1.04)}
-.nt .vl.open .lk,.nt .vl.open .ps{opacity:0;pointer-events:none}
-.nt .vl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;animation:ntfi .8s ease}
 @keyframes ntfi{from{opacity:0}to{opacity:1}}
-.nt .fcap{display:flex;justify-content:space-between;gap:calc(var(--u)*2);margin-top:calc(var(--u)*1.1)}
 
 /* contact sheet */
 .nt .cs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
@@ -167,8 +163,8 @@ html,body{margin:0;background:#0B0B0B}
   .nt{--u:3.15vw;--g:1.5rem}
   .nt .hero{padding-top:calc(76px + var(--u)*1.5)}
   .nt .hero h1{font-size:calc(var(--u)*14)}
-  .nt .man p{font-size:max(15px,calc(var(--u)*1.32))}
-  .nt .man p.mk{font-size:max(18px,calc(var(--u)*1.9))}
+  .nt .man p.dk{font-size:max(20px,calc(var(--u)*2.4))}
+  .nt .man p.mk{font-size:max(16px,calc(var(--u)*1.75))}
   .nt .sh h2,.nt .cl h2{font-size:calc(var(--u)*4.8)}
   .nt .br h3{font-size:calc(var(--u)*3)}
   .nt .cs{grid-template-columns:minmax(0,1fr)}
@@ -188,19 +184,20 @@ html,body{margin:0;background:#0B0B0B}
 
 
   <section class="hero w" id="top">
-    <div class="lb"><i>[ 01 ]</i><span>Frame 01: The Manifesto</span></div>
+    <div class="lb"><i>Under Armour</i></div>
     <h1 id="h1"><span class="l1">Never</span><span class="l2">Through</span></h1>
     <div class="gx">
       <div class="rv">
         <div class="man">
-          <p>Taking a knee was the beginning<br>Of a movement<br>Generations in the making<br>Now it's time we take a stand</p>
-          <p>Pass the baton to today's changemakers<br>To change the makeup of sport<br>So it finally reflects the people<br>Who put their heart and soul in the game</p>
-          <p>To keep pushing<br>For a better, more inclusive culture<br>Because making sports better<br>For ALL athletes is our mission</p>
-          <p class="mk">And we'll never be through fighting<br>To push the game forward</p>
+          <p class="dk">Through Failures. Through Restarts.</p>
+          <p class="mk"><span>We'll never be through fighting</span><span>To push the game forward</span></p>
         </div>
       </div>
-      <figure class="reel rv d1">
+      <figure class="reel rv d1" id="reel" data-src="https://player.vimeo.com/video/535084885?autoplay=1&title=0&byline=0&portrait=0" data-t="Never Through hero film">
+        <div class="fm">
         <img src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-sizzle.gif" alt="" role="img" aria-label="Sizzle cut of the Never Through film: a sprinter under floodlights, a soccer player after a hit, a football player in a red helmet, an athlete mid shout, and the line The Only Way Is Through" width="739" height="415">
+        </div>
+        <figcaption class="cap"><a class="play" href="#" role="button">Play Film</a></figcaption>
       </figure>
     </div>
     <div class="meta rv d2">
@@ -211,24 +208,9 @@ html,body{margin:0;background:#0B0B0B}
     </div>
   </section>
 
-  <section class="sc w" id="film">
-    <div class="sh">
-      <div class="lb rv"><i>[ 02 ]</i><span>Frame 02: The Hero Film</span></div>
-      <h2 class="rv d1">Through Failures. Through Restarts.</h2>
-    </div>
-    <div class="vl rv d2" data-src="https://player.vimeo.com/video/535084885?autoplay=1&title=0&byline=0&portrait=0" data-t="Never Through hero film">
-      <img class="ps" src="https://raw.githubusercontent.com/manicpixiedigifairy/nina-site/main/assets/nt-poster.webp" alt="" role="img" aria-label="An athlete in a pink jersey mid shout on the field" width="689" height="387" loading="lazy">
-      <button class="lk" type="button" aria-label="Play the Never Through hero film"><span class="pl">Play Film</span></button>
-    </div>
-    <div class="fcap">
-      <span class="mo">Hero film, scripted for the 2022 global campaign</span>
-      <span class="mo">Click to play</span>
-    </div>
-  </section>
-
   <section class="sc w" id="brief">
     <div class="sh">
-      <div class="lb rv"><i>[ 03 ]</i><span>Frame 03: The Brief</span></div>
+      <div class="lb rv"><i>[ 01 ]</i><span>Frame 01: The Brief</span></div>
       <h2 class="rv d1">Who, What, Where, And Why It Matters</h2>
     </div>
     <div class="br">
@@ -255,72 +237,9 @@ html,body{margin:0;background:#0B0B0B}
     </div>
   </section>
 
-  <section class="sc w ro" id="rollout">
-    <div class="sh">
-      <div class="lb rv"><i>[ 04 ]</i><span>Frame 04: The Rollout</span></div>
-      <h2 class="rv d1">Four Beats, January To June</h2>
-      <p class="bd rv d2">More than a campaign, a promise of progress. The film launched the platform, then three themed phases followed, each one pairing a film with brand actions so Under Armour could prove the line, not just say it.</p>
-    </div>
-    <div class="tl">
-      <div class="ph rv">
-        <span class="q"><b>Jan 2022</b></span><span class="dot" aria-hidden="true"></span>
-        <span class="pn">Launch</span>
-        <h3>Never Through</h3>
-        <p class="mm">Back To The Gym</p>
-        <div class="fl"><i>Media</i><b>Launch Film</b></div>
-        <ul class="ba">
-          <li><i>01</i><div><b>Launch Brand Actions</b><span>The platform opens with the hero film and the first wave of actions behind it.</span></div></li>
-        </ul>
-      </div>
-      <div class="ph rv d1">
-        <span class="q"><b>Q1</b></span><span class="dot" aria-hidden="true"></span>
-        <span class="pn">Phase 01</span>
-        <h3>Diversity In Sport</h3>
-        <p class="mm">Black History Month<br>Super Bowl and Playoffs</p>
-        <div class="fl"><i>Media</i><b>Diversity In Sport Film</b></div>
-        <ul class="ba">
-          <li><i>01</i><div><b>Playing Fair</b><span>Need-based scholarships with Beyond Sport stipends, so cost never cuts an athlete out of the game.</span></div></li>
-          <li><i>02</i><div><b>Playing Fair, Extended</b><span>Lobbying to take California's Fair Pay To Play Act federal, with former NCAA athletes taking the floor.</span></div></li>
-          <li><i>03</i><div><b>Bridging The Gap</b><span>A high school apprenticeship program opening up careers off the court: managers, agents, coaches.</span></div></li>
-          <li><i>04</i><div><b>Passing The Mic</b><span>A collective of roster athletes with a statement of purpose, live roundtables and a seat at the table.</span></div></li>
-          <li><i>05</i><div><b>Getting In The Game</b><span>Sponsoring rising BIPOC athletes in traditionally white sports, plus community centers that make space.</span></div></li>
-          <li><i>06</i><div><b>A Timeless Fight</b><span>A documentary on the history of protest in sport, with proceeds funding the next generation of reform.</span></div></li>
-        </ul>
-      </div>
-      <div class="ph rv d2">
-        <span class="q"><b>Q1 to Q2</b></span><span class="dot" aria-hidden="true"></span>
-        <span class="pn">Phase 02</span>
-        <h3>Gender In Sport</h3>
-        <p class="mm">International Women's Day<br>March Madness</p>
-        <div class="fl"><i>Media</i><b>Gender In Sport Film</b></div>
-        <ul class="ba">
-          <li><i>01</i><div><b>Mom VP</b><span>Showing up for athlete moms: nursing rooms at stadiums, sponsorship through maternity leave, a postpartum line.</span></div></li>
-          <li><i>02</i><div><b>Lifting The Weight</b><span>Partnering with and transforming gyms into safe spaces for queer, trans and non-binary athletes.</span></div></li>
-          <li><i>03</i><div><b>Breaking The Binary</b><span>The first gender neutral college locker rooms, a podcast and virtual support groups.</span></div></li>
-          <li><i>04</i><div><b>Fit For Every Body</b><span>Labels off the clothes and the aisles, a new industry standard for gender inclusivity, a purpose-built line.</span></div></li>
-        </ul>
-      </div>
-      <div class="ph rv d3">
-        <span class="q"><b>Q2 to Jun 2022</b></span><span class="dot" aria-hidden="true"></span>
-        <span class="pn">Phase 03</span>
-        <h3>Beyond Sport</h3>
-        <p class="mm">Mother's Day<br>Pride</p>
-        <div class="fl"><i>Media</i><b>Beyond Sport Film</b></div>
-        <ul class="ba">
-          <li><i>01</i><div><b>Off Court Excellence</b><span>A content series on athletes' lives outside the game, plus a Do Better, Be Better program for young athletes.</span></div></li>
-          <li><i>02</i><div><b>Sport Scholars</b><span>Ten-year scholarships and pro mentorship for rising athletes who shine off the court.</span></div></li>
-        </ul>
-      </div>
-    </div>
-    <div class="rings rv">
-      <div class="lb"><i>The Promise</i><span>Under Armour Is Never Through</span></div>
-      <div class="rk"><span>Making You Better</span><span>Making Sport Better</span><span>Making The World Better</span></div>
-    </div>
-  </section>
-
   <section class="sc w" id="line">
     <div class="sh">
-      <div class="lb rv"><i>[ 05 ]</i><span>Frame 05: The Line</span></div>
+      <div class="lb rv"><i>[ 02 ]</i><span>Frame 02: The Line</span></div>
       <h2 class="rv d1">One Tagline, Evolved</h2>
     </div>
     <div class="rv">
@@ -338,7 +257,7 @@ html,body{margin:0;background:#0B0B0B}
   <section class="cl w" id="next">
     <div class="gx">
       <div>
-        <div class="lb rv"><i>[ 06 ]</i><span>Frame 06: Next</span></div>
+        <div class="lb rv"><i>[ 03 ]</i><span>Frame 03: Next</span></div>
         <h2 class="rv d1" style="margin-top:calc(var(--u)*1.8)">More Commercials</h2>
       </div>
       <a class="pill rv d2" href="https://www.byninaaustin.com/commercials">Back To Commercials</a>
@@ -376,7 +295,7 @@ html,body{margin:0;background:#0B0B0B}
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
   /* headline fitter: shrink until the longest line fits the gutter */
-  var fitters=[{el:q('#h1'),lines:qa('#h1 span')},{el:q('#ln1'),lines:[q('#ln1')]},{el:q('#ln2'),lines:[q('#ln2')]}];
+  var fitters=[{el:q('#h1'),lines:qa('#h1 span')},{el:q('#ln1'),lines:[q('#ln1')]},{el:q('#ln2'),lines:[q('#ln2')]},{el:q('.man .mk'),lines:qa('.man .mk span')}];
   var fitAll=function(){
     fitters.forEach(function(f){
       if(!f.el)return;
@@ -412,14 +331,12 @@ html,body{margin:0;background:#0B0B0B}
   }else{rv.forEach(show)}
   setTimeout(function(){rv.forEach(show)},2500);
 
-  /* click to play */
-  qa('.vl').forEach(function(box){
-    var btn=q('.lk',box);if(!btn)return;
-    btn.addEventListener('click',function(){
-      if(box.classList.contains('open'))return;
-      box.insertAdjacentHTML('beforeend','<iframe src="'+box.getAttribute('data-src')+'" title="'+box.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>');
-      box.classList.add('open');btn.setAttribute('aria-disabled','true');
-    });
+  /* play film in the reel frame */
+  var reel=q('#reel'),play=q('#reel .play');
+  if(reel&&play)play.addEventListener('click',function(e){
+    e.preventDefault();if(reel.classList.contains('open'))return;
+    q('.fm',reel).insertAdjacentHTML('beforeend','<iframe src="'+reel.getAttribute('data-src')+'" title="'+reel.getAttribute('data-t')+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe>');
+    reel.classList.add('open');
   });
 })();
 </script>
