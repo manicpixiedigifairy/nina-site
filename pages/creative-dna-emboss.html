@@ -73,7 +73,7 @@ p{margin:0}
 .p-cover .mark h1{display:flex;align-items:flex-start;position:relative;isolation:isolate;font-size:clamp(22px,7.2vw,150px)}
 .p-cover .mark h1 .cv-2{font-size:1.9em}
 .p-cover .mark h1 .cv-1{font-variation-settings:"wdth" 99.4;margin-left:.3em}
-.p-cover .mark h1 .cv-a{display:inline-block;transform:scaleX(1.13);transform-origin:0 50%;margin-right:.1em}
+.p-cover .mark h1 .cv-a{display:inline-block;transform:scaleX(1.72);transform-origin:0 50%;margin-right:.69em}
 .mark .my{flex:none;font-family:var(--script);font-variation-settings:normal;font-weight:400;text-transform:none;letter-spacing:0;color:var(--red);text-shadow:none;font-size:3.11em;line-height:1;margin:-.004em -.12em 0 0;position:relative;z-index:-1;transform:skewX(24deg);transform-origin:50% 72%;-webkit-text-stroke:.02em currentColor;paint-order:stroke fill}
 .p-back{align-items:center;text-align:center;min-height:62svh}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--red);background:transparent;color:var(--red);cursor:pointer}
@@ -145,7 +145,7 @@ p{margin:0}
 
   .p-cover,.p-back{width:calc(100vw - var(--spine));align-items:center;min-height:0}
   .mark h1{font-size:min(17vh,10.4vw)}
-  .p-cover .mark h1{font-size:min(14.4vh,8vw)}
+  .p-cover .mark h1{font-size:min(14.4vh,calc((100vw - 112px) / 12.2))}
   .p-cover{padding-left:24px;padding-right:24px}
   .mark h2{font-size:min(19vh,11vw)}
 
@@ -404,6 +404,27 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:#F5D98A;poi
  </div>
 </main>
 
+<script>
+/* cover: stretch the A of DNA so the right end of its flat top (the shelf) lands exactly under the end of the E in CREATIVE.
+   Glyph geometry for Archivo Black: the plateau's right end sits at 64.7% of the A's advance; the E's ink ends .034em before its box. */
+(function(){
+  var a=document.querySelector('.cv-a'), c=document.querySelector('.cv-1'); if(!a||!c) return;
+  var D=window.document, tm=0, PLATEAU_R=.6466, E_BEARING=.0336;
+  function fit(){
+    a.style.transform='none'; a.style.marginRight='0';
+    var t=c.firstChild; if(!t||t.nodeType!==3) return;
+    var rg=D.createRange(); rg.setStart(t,t.length-1); rg.setEnd(t,t.length);
+    var eInk=rg.getBoundingClientRect().right-E_BEARING*parseFloat(getComputedStyle(c).fontSize);
+    var r=a.getBoundingClientRect(); if(!r.width) return;
+    var s=Math.max(1,Math.min(2.6,(eInk-r.left)/(PLATEAU_R*r.width)));
+    a.style.transform='scaleX('+s.toFixed(4)+')'; a.style.marginRight=((s-1)*r.width).toFixed(2)+'px';
+  }
+  fit();
+  window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,80)});
+  if(D.fonts&&D.fonts.ready)D.fonts.ready.then(fit);
+  window.addEventListener('load',fit);
+})();
+</script>
 <script>
 /* site only: stretch the code block full width and clear Squarespace wrappers that would break the fixed spine and sticky book */
 (function(){
